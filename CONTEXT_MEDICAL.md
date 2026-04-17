@@ -273,11 +273,11 @@ Efectuată concomitent cu endoscopia la Genesis Medical Clinic Arad (Dr. Noufal 
 
 **Istoric creatinină (funcție renală în timp):**
 
-| Data | Valoare | Interval ref | Sursă |
-|---|---|---|---|
-| 2025-06-17 | 0.95 mg/dL | 0.8-1.3 | Buletin analize complet |
-| 2025-11-28 | 0.66 mg/dL | — | Analize preop chirurgie (Spital) |
-| **2026-04-17** | **0.83 mg/dL** | 0.67-1.17 | ✅ **Buletin Bioclinica (VALID pentru CT 20.04)** |
+| Data           | Valoare        | Interval ref | Sursă                                             |
+| -------------- | -------------- | ------------ | ------------------------------------------------- |
+| 2025-06-17     | 0.95 mg/dL     | 0.8-1.3      | Buletin analize complet                           |
+| 2025-11-28     | 0.66 mg/dL     | —            | Analize preop chirurgie (Spital)                  |
+| **2026-04-17** | **0.83 mg/dL** | 0.67-1.17    | ✅ **Buletin Bioclinica (VALID pentru CT 20.04)** |
 
 **Sursă curentă:** `Dosar_Medical/2026-04-17_buletin_bioclinica_uree_creatinina.json` (buletin nr. 26417A0362, Dr. Statnic Maria Luminița, Bioclinica Arad).
 
