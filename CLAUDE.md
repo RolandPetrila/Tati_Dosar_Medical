@@ -274,6 +274,22 @@ Pentru fiecare cercetare web care produce conținut introdus în dosar, log în 
 
    Format: `✅ Commit <hash> pushed → origin/main (N files changed)`
 
+7. **Timestamp-uri narative — OBLIGATORIU `date` înainte de scriere** (incident 2026-04-18 02:51):
+
+   Înainte de a scrie orice timestamp într-un `SESSION_LOG.md`, `CHANGELOG.md`, `CONTEXT_MEDICAL.md` sau alt fișier narativ de referință, **rulează `date` în Bash** pentru a obține ora exactă a sistemului.
+
+   ```bash
+   date +"%Y-%m-%d %H:%M:%S %z"    # ex: 2026-04-18 14:32:17 +0300
+   ```
+
+   **NU presupune ora din context.** Sistemul îți dă data (`Today's date is YYYY-MM-DD`), dar NU ora. Fără verificare, tendința modelului e să invente timestamp-uri „plauzibile" (ex: 15:00, 17:30) → halucinație directă, violare R3 + Regula 8 + Regula 11.
+
+   **Excepție:** commit-urile git au timestamp propriu automat (`git log --format=%ai`). Nu trebuie inclus manual în mesajul de commit — e deja în metadata git.
+
+   **Cross-check:** dacă în sesiune apar ore intermediar (ex: user menționează „acum e 14:00"), verifică și cu `date` — sistemul e sursa de adevăr, nu afirmația din context.
+
+   **Dacă observi discrepanță între un timestamp deja scris și `date` real → oprește și corectează imediat** (audit trail transparent în `CHANGELOG.md`, ca în erata din 02:51).
+
 **Excepții (NU commit automat):**
 
 - Sesiuni pur de citire/audit fără modificări
