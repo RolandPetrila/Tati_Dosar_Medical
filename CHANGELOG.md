@@ -4,6 +4,40 @@
 
 ---
 
+## 2026-04-18 (sesiune Claude_Opus_4.7, continuare 3) — Integrare buletin Bioclinica 17.04
+
+**Tip:** ADAUGARE DOCUMENT NOU + ACTUALIZARE
+
+**Fișiere afectate:**
+
+- `Dosar_Medical/2026-04-17_buletin_bioclinica_uree_creatinina.json` (nou, schema v2.0)
+- `Dosar_Medical/documente_sursa/05_analize_laborator/2026-04-17_buletin_bioclinica_uree_creatinina.jpeg` (nou — scan original)
+- `Dosar_Medical/documente_sursa/05_analize_laborator/2026-04-17_buletin_bioclinica_uree_creatinina.jpeg.meta.json` (nou — chain of custody)
+- `CONTEXT_MEDICAL.md` — tabel creatinină actualizat + notă despre localizarea biopsiei
+- `TODO.md` — `[P0] Analize prealabile CT` marcat COMPLET
+- `CHANGELOG.md` + `SESSION_LOG.md`
+
+**Descriere:**
+
+Integrat buletinul Bioclinica nr. 26417A0362 din 17.04.2026 (recoltat 14:21, emis 17:07, medic primar Dr. Statnic Maria Luminița). Conține uree (33.4 mg/dL, normal) + creatinină (0.83 mg/dL, normal; eGFR CKD-EPI ~95 → stadiu G1).
+
+**Consecințe pentru CT 20.04.2026:**
+
+- Funcție renală confirmată NORMALĂ cu valoare recentă (3 zile vechime)
+- Nu se impune repetarea analizelor înainte de CT
+- Protocol contrast standard — fără prehidratare IV sau ajustări
+- Risc nefropatie post-contrast — scăzut
+
+**Consecință suplimentară (observație critică):**
+
+Pe buletin apare mențiunea „Examen histopatologic în curs de execuție" → **biopsia esofagiană este procesată la Bioclinica Arad** (nu la Genesis, cum se presupunea inițial). Contact urmărire: arad@bioclinica.ro.
+
+**Sursă informație:** utilizator (Roland Petrilă) — a trimis scanul buletinului.
+
+**Făcut de:** Claude Code (Opus 4.7, 1M context).
+
+---
+
 ## 2026-04-18 (sesiune Claude_Opus_4.7, continuare 2) — Confirmare CT 20.04 + plan pregătire
 
 **Tip:** ACTUALIZARE DATE MEDICALE

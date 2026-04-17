@@ -265,10 +265,23 @@ Efectuată concomitent cu endoscopia la Genesis Medical Clinic Arad (Dr. Noufal 
 
 **⚠️ Pregătire critică:**
 
-- **Oprire Jamesi (sitagliptin + metformin) cu 48h înainte** (componenta metformin → risc acidoză lactică)
-- Verificare creatinină și uree — ultima valoare creatinină disponibilă: 0.95 mg/dL (17.06.2025, normală). Valoare mai recentă: 0.66 mg/dL (28.11.2025)
-- Confirmare absență alergii la iod / fructe de mare — **STATUS: neconfirmat, P0**
-- Hidratare în ziua dinaintea examinării
+- **Oprire Jamesi (sitagliptin + metformin) cu 48h înainte** — sâmbătă 18.04 ora 17:00 (componenta metformin → risc acidoză lactică cu contrast iodat)
+- ✅ **Funcție renală recent verificată** — buletin Bioclinica 17.04.2026: creatinină 0.83 mg/dL (ref 0.67-1.17, NORMALĂ), uree 33.4 mg/dL (NORMALĂ). eGFR ~95 mL/min/1.73m² (stadiu G1). **Nu necesită repetare.**
+- **Confirmare absență alergii la iod / fructe de mare / contrast anterior** — **STATUS: neconfirmat, P0 critic**
+- **Triplixam** (indapamidă diuretic + perindopril IECA) — de întrebat radiologul la confirmare dacă păstrez integral
+- Hidratare activă duminică 19.04: 1.5-2 L apă plată (atent la tolerabilitatea cardiacă)
+
+**Istoric creatinină (funcție renală în timp):**
+
+| Data | Valoare | Interval ref | Sursă |
+|---|---|---|---|
+| 2025-06-17 | 0.95 mg/dL | 0.8-1.3 | Buletin analize complet |
+| 2025-11-28 | 0.66 mg/dL | — | Analize preop chirurgie (Spital) |
+| **2026-04-17** | **0.83 mg/dL** | 0.67-1.17 | ✅ **Buletin Bioclinica (VALID pentru CT 20.04)** |
+
+**Sursă curentă:** `Dosar_Medical/2026-04-17_buletin_bioclinica_uree_creatinina.json` (buletin nr. 26417A0362, Dr. Statnic Maria Luminița, Bioclinica Arad).
+
+**Observație-cheie pentru urmărire biopsie:** același buletin Bioclinica menționează „Examen histopatologic în curs de execuție" → **biopsia esofagiană se procesează la Bioclinica Arad** (nu la Genesis, cum s-ar presupune). Contact urmărire rezultat: `arad@bioclinica.ro`.
 
 ---
 

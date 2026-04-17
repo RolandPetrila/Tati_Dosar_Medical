@@ -8,16 +8,17 @@
 
 ## Calendar — date cheie
 
-| Data                         | Eveniment                                                       | Status          |
-| ---------------------------- | --------------------------------------------------------------- | --------------- |
-| 17.04.2026                   | Endoscopie + colonoscopie efectuate                             | ✅ Finalizat    |
-| 17.04.2026                   | Bilet trimitere CT emis                                         | ✅ Finalizat    |
-| **18.04.2026 17:00**         | **STOP Jamesi (H-48 pre-CT)**                                   | 🔴 DE EXECUTAT  |
-| 19.04.2026                   | Hidratare activă + analize creatinină                           | 🔴 DE EXECUTAT  |
-| **20.04.2026 17:00**         | **CT torace + abdomen + pelvis cu contrast (Genesis Micălaca)** | 📅 PROGRAMAT    |
-| **22.04.2026 17:00**         | Reluare Jamesi (H+48 post-CT, după creatinină OK)               | 🟡 Follow-up    |
-| {17.04.2026 + 7-14 zile}     | Rezultat biopsie (estimat 24.04-01.05)                          | 🟡 În așteptare |
-| {după primirea rezultatelor} | Consult oncolog digestiv                                        | 🟡 De programat |
+| Data                                | Eveniment                                                       | Status          |
+| ----------------------------------- | --------------------------------------------------------------- | --------------- |
+| 17.04.2026                          | Endoscopie + colonoscopie efectuate                             | ✅ Finalizat    |
+| 17.04.2026                          | Bilet trimitere CT emis                                         | ✅ Finalizat    |
+| **18.04.2026 17:00**                | **STOP Jamesi (H-48 pre-CT)**                                   | 🔴 DE EXECUTAT  |
+| ~~19.04.2026 — analize creatinină~~ | ~~de efectuat~~ → ✅ ACOPERIT (buletin Bioclinica 17.04.2026)   | ✅ Finalizat    |
+| 19.04.2026                          | Hidratare activă                                                | 🔴 DE EXECUTAT  |
+| **20.04.2026 17:00**                | **CT torace + abdomen + pelvis cu contrast (Genesis Micălaca)** | 📅 PROGRAMAT    |
+| **22.04.2026 17:00**                | Reluare Jamesi (H+48 post-CT, după creatinină OK)               | 🟡 Follow-up    |
+| {17.04.2026 + 7-14 zile}            | Rezultat biopsie (estimat 24.04-01.05)                          | 🟡 În așteptare |
+| {după primirea rezultatelor}        | Consult oncolog digestiv                                        | 🟡 De programat |
 
 ---
 
@@ -36,25 +37,21 @@
 - [ ] Întrebare explicită radiologului: „Triplixam — mențin integral sau omit doza duminică/luni?"
 - [ ] Întrebare: cât durează raportul? Se primește CD cu DICOM?
 
-### [P0] Obținere analize prealabile pentru CT
+### [P0] ✅ Analize prealabile pentru CT — COMPLET pentru funcția renală
 
-**Context:** CT cu contrast iodat necesită verificarea funcției renale.
-**Deadline:** înainte de CT.
-**Sub-task-uri:**
+**Status (18.04.2026):** Buletin Bioclinica nr. 26417A0362 din 17.04.2026 integrat în dosar.
 
-- [ ] Creatinină serică (recent sau nou-efectuată)
-- [ ] Uree
-- [ ] Hemoleucogramă completă
-- [ ] Glicemie à jeun
+- [x] **Creatinină serică:** 0.83 mg/dL (normală, eGFR ~95) ✅
+- [x] **Uree serică:** 33.4 mg/dL (normală) ✅
+- [ ] Hemoleucogramă completă — opțional, ultima e din 28.11.2025; nu e blocant pentru CT
+- [ ] Glicemie à jeun — opțional, ultima 136 mg/dL (17.06.2025); nu e blocant
 
-**Dacă nu există analize recente:**
+**Concluzie:** funcția renală OK pentru contrast iodat, protocol CT standard. Nu se mai impune obținerea de alte analize înainte de luni.
 
-- [ ] Solicitare bilet de trimitere pentru analize (medic de familie) SAU efectuare privat
-- [ ] Efectuare analize
-- [ ] Obținere rezultate
+**Notă bonus:** același buletin Bioclinica menționează „examen histopatologic în curs" — **biopsia esofagiană se procesează la Bioclinica Arad**.
 
-**Generat din:** `CONTEXT_MEDICAL.md`, secțiunea 8 — pregătire CT
-**Data creării:** 17.04.2026
+**Sursă:** `Dosar_Medical/2026-04-17_buletin_bioclinica_uree_creatinina.json`
+**Data închiderii:** 18.04.2026
 
 ### [P0] Pregătire pacient pentru CT luni 20.04.2026 ora 17:00
 
@@ -62,7 +59,7 @@
 **Sub-task-uri cu deadline:**
 
 - [ ] **SÂMBĂTĂ 18.04 ORA 17:00: STOP Jamesi** (H-48 înainte de CT) — acțiune critică
-- [ ] **AZI/MÂINE: analize creatinină + uree** (ultima din 28.11.2025 e STALE)
+- [x] ✅ **Analize creatinină + uree** — Bioclinica 17.04.2026: creatinină 0.83 (normală), uree 33.4 (normală). **VALID pentru CT 20.04.**
 - [ ] Duminică: hidratare activă 1.5-2 L apă plată
 - [ ] Duminică seara ~20:00: ultima masă mai consistentă
 - [ ] Luni ~11:00: gustare ușoară — ultima înainte de CT

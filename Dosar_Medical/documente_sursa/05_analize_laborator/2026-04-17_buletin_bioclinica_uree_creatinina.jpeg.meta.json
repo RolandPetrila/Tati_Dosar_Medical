@@ -1,0 +1,20 @@
+{
+  "source_document": "2026-04-17_buletin_bioclinica_uree_creatinina.jpeg",
+  "received_date": "2026-04-18",
+  "received_from": "pacient / familia Petrilă",
+  "digitized_by": "fotografie / scan original de la Bioclinica",
+  "digitized_date": "2026-04-17",
+  "transcriber": "Claude_Opus_4.7",
+  "transcription_date": "2026-04-18",
+  "ocr_quality": "good",
+  "content_type": "buletin_analize_medicale_Bioclinica",
+  "json_extras": "2026-04-17_buletin_bioclinica_uree_creatinina.json",
+  "chain_notes": "Buletin emis de Bioclinica SRL Arad (punct recoltare 00003 Bioclinica Vlaicu). Recoltat în aceeași zi cu endoscopia (17.04.2026), emis tot pe 17.04.2026 ora 17:07. Acoperă uree + creatinină, relevante pentru pregătirea CT cu contrast din 20.04.2026. Ambele valori NORMALE. De asemenea, pe buletin apare mențiunea 'Examen histopatologic în curs de execuție' → biopsia esofagiană se procesează la Bioclinica.",
+  "privacy_level": "SENSIBIL — conține CNP, adresă, date medicale",
+  "related_files": [
+    "2026-04-17_buletin_bioclinica_uree_creatinina.json",
+    "2026-04-17_buletin_gastroenterologie.json"
+  ],
+  "original_scan_location_temp": "Fișierul original `bioclinica.jpeg` rămâne temporar în rădăcina `.Tati/` (atașament sesiune). Recomandare: user sau Claude mutare / ștergere după validare.",
+  "numar_buletin": "26417A0362"
+}

@@ -6,6 +6,23 @@
 
 ---
 
+## 2026-04-18 ~18:30 — [Claude_Opus_4.7] integrare-buletin-bioclinica-17-04
+
+**Scop:** integrare buletin analize Bioclinica (uree + creatinină) din 17.04.2026, relevant pentru pregătirea CT 20.04.2026.
+
+**Operații:**
+
+- Scan original `bioclinica.jpeg` copiat în `documente_sursa/05_analize_laborator/2026-04-17_buletin_bioclinica_uree_creatinina.jpeg`
+- Scris JSON canonic `2026-04-17_buletin_bioclinica_uree_creatinina.json` la schema v2.0
+- Scris `.meta.json` chain-of-custody
+- Actualizare `CONTEXT_MEDICAL.md` — tabel creatinină + notă biopsie la Bioclinica
+- Actualizare `TODO.md` — task P0 „Analize prealabile CT" închis (acoperit)
+- Șters `bioclinica.jpeg` din rădăcina `.Tati/` (dublura din subfolder e canonică)
+
+**Descoperire importantă:** biopsia esofagiană se procesează la Bioclinica Arad (nu la Genesis).
+
+---
+
 ## 2026-04-18 ~18:00 — [Claude_Opus_4.7] confirmare-CT-20-04 + plan-pregatire
 
 **Scop:** răspuns la cererea utilizatorului pentru rezumat + plan alimentație + verificare medicație pre-CT. CT programat luni 20.04.2026 ora 17:00.

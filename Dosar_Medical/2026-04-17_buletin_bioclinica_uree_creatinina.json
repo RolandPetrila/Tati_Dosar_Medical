@@ -1,0 +1,105 @@
+{
+  "_metadata": {
+    "schema_version": "2.0",
+    "nume_fisier": "2026-04-17_buletin_bioclinica_uree_creatinina.json",
+    "tip_document": "buletin_analize_laborator_functie_renala",
+    "specialitate": "Laborator Clinic / Medicină de Laborator",
+    "data_document": "2026-04-17",
+    "data_recoltare": "2026-04-17T14:21:00",
+    "data_generare_buletin": "2026-04-17T17:07:00",
+    "numar_buletin": "26417A0362",
+    "sursa_pdf": "2026-04-17_buletin_bioclinica_uree_creatinina.jpeg",
+    "sursa_locatie": "documente_sursa/05_analize_laborator/",
+    "procesat_de": "Claude_Opus_4.7",
+    "data_procesare": "2026-04-18",
+    "ocr_quality": "good",
+    "confidence_overall": "high",
+    "flags": ["pre_CT_2026_04_20", "functie_renala_confirmata_normala"],
+    "notes": "Buletin emis de Bioclinica SRL Arad, punct recoltare 00003 Bioclinica Vlaicu. Recoltare în aceeași zi cu endoscopia (17.04.2026). Medic primar medicină de laborator: Dr. Statnic Maria Luminița (cod A08064). RELEVANȚĂ CRITICĂ: valori recente (3 zile) pentru pregătirea CT cu contrast din 20.04.2026 — creatinina e OK pentru contrast, nu necesită repetare. De asemenea, pe buletin apare mențiunea 'Analize în curs de execuție: Examen histopatologic' — confirmă că BIOPSIA esofagiană este procesată la Bioclinica, nu la Genesis. Contact urmărire rezultat biopsie: arad@bioclinica.ro."
+  },
+  "pacient": {
+    "nume": "PETRILĂ",
+    "prenume": "VIOREL-MIHAI",
+    "cnp": "1590518024486",
+    "data_nasterii": "1959-05-18",
+    "varsta_la_data_document": 66,
+    "sex": "M",
+    "confidence_identificare": "high"
+  },
+  "diagnostic": [],
+  "analize_laborator": [
+    {
+      "nume": "Uree serică",
+      "nume_original": "Uree serică",
+      "valoare_numerica": 33.4,
+      "valoare_text": "33,4",
+      "unitate": "mg/dL",
+      "interval_referinta_min": 16.6,
+      "interval_referinta_max": 48.5,
+      "interval_referinta_text": "16,6 - 48,5",
+      "flag": "normal",
+      "confidence_ocr": "high",
+      "note": "Valoare în mijlocul intervalului normal."
+    },
+    {
+      "nume": "Uree serică (unități SI)",
+      "nume_original": "Uree (mmol/L)",
+      "valoare_numerica": 5.6,
+      "valoare_text": "5,6",
+      "unitate": "mmol/L",
+      "interval_referinta_min": 2.8,
+      "interval_referinta_max": 8.1,
+      "interval_referinta_text": "2,8 - 8,1",
+      "flag": "normal",
+      "confidence_ocr": "high",
+      "note": "Aceeași analiză, exprimată în unități SI."
+    },
+    {
+      "nume": "Creatinină serică",
+      "nume_original": "Creatinină serică",
+      "valoare_numerica": 0.83,
+      "valoare_text": "0,83",
+      "unitate": "mg/dL",
+      "interval_referinta_min": 0.67,
+      "interval_referinta_max": 1.17,
+      "interval_referinta_text": "0,67 - 1,17",
+      "flag": "normal",
+      "confidence_ocr": "high",
+      "note": "Valoare în interval normal, partea joasă. eGFR estimat CKD-EPI ≈ 95 mL/min/1.73m² (stadiu G1 = funcție renală normală). CRITIC: OK pentru CT cu contrast iodat fără protocol special; risc nefropatie induse de contrast — scăzut."
+    },
+    {
+      "nume": "Creatinină serică (unități SI)",
+      "nume_original": "Creatinină (µmol/L)",
+      "valoare_numerica": 73.37,
+      "valoare_text": "73,37",
+      "unitate": "µmol/L",
+      "interval_referinta_min": 59.23,
+      "interval_referinta_max": 103.43,
+      "interval_referinta_text": "59,23 - 103,43",
+      "flag": "normal",
+      "confidence_ocr": "high",
+      "note": "Aceeași analiză, exprimată în unități SI."
+    }
+  ],
+  "tratament": [],
+  "recomandari": [],
+  "medici_unitati": {
+    "medic_primar_laborator": "Dr. Statnic Maria Luminița",
+    "cod_medic": "A08064",
+    "unitate": "Bioclinica SRL Arad",
+    "sectie": "Laborator medical",
+    "punct_recoltare": "00003 Bioclinica Vlaicu",
+    "adresa_laborator": "STR Dreptății 23, ap. 17, Arad",
+    "acreditare": "RENAR, SR EN ISO 15189:2023, certificat LM 207"
+  },
+  "analize_in_curs": [
+    {
+      "tip": "Examen histopatologic",
+      "cod": "s (subcontractat)",
+      "relevanta": "BIOPSIE ESOFAGIANĂ — prelevată la endoscopia din 17.04.2026, procesată la Bioclinica Arad. De urmărit cu arad@bioclinica.ro."
+    }
+  ],
+  "numere_referinta": {
+    "numar_buletin": "26417A0362"
+  }
+}
