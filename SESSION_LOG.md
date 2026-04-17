@@ -6,6 +6,19 @@
 
 ---
 
+## 2026-04-18 ~18:00 — [Claude_Opus_4.7] confirmare-CT-20-04 + plan-pregatire
+
+**Scop:** răspuns la cererea utilizatorului pentru rezumat + plan alimentație + verificare medicație pre-CT. CT programat luni 20.04.2026 ora 17:00.
+
+**Operații:**
+
+- Actualizare `CONTEXT_MEDICAL.md` secțiunea 8 (pregătire CT) cu deadline-uri exacte
+- Actualizare `TODO.md` cu cronologia pre-CT
+- Actualizare `CHANGELOG.md` + acest `SESSION_LOG.md`
+- Elaborare plan alimentație ad-hoc (în mesajul de răspuns; nu creat fișier separat — info pe conversație)
+
+---
+
 ## 2026-04-18 17:30 — [Claude_Opus_4.7] git-init-push + Regula-16
 
 **Scop:** inițializare repo Git local, creare repo privat pe GitHub, primul push, adăugare Regula 16 (git auto-commit + push la finalul sesiunilor).

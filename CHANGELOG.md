@@ -4,6 +4,27 @@
 
 ---
 
+## 2026-04-18 (sesiune Claude_Opus_4.7, continuare 2) — Confirmare CT 20.04 + plan pregătire
+
+**Tip:** ACTUALIZARE DATE MEDICALE
+
+**Fișiere afectate:** `CONTEXT_MEDICAL.md`, `TODO.md`.
+
+**Descriere:**
+
+- Confirmată programarea CT torace+abdomen+pelvis cu contrast pentru **LUNI 20.04.2026 ora 17:00** la Genesis Medical Clinic Micălaca.
+- Recalculate deadline-urile pentru pregătirea medicației: STOP Jamesi sâmbătă 18.04 ora 17:00 (H-48); reluare miercuri 22.04 ora 17:00 (H+48) după creatinină normală.
+- Adăugat plan alimentație pre-CT (cină duminică 20:00, gustare luni 11:00, doar apă până la CT).
+- Semnalat STALE al creatininei (ultima 28.11.2025 — 5 luni vechime) — necesare analize actualizate.
+- Atenționare Triplixam (indapamidă diuretic + perindopril IECA) — de clarificat cu radiologul la confirmare telefonică.
+- Confirmare absență alergii — P0 critic, încă neconfirmat.
+
+**Sursă informație:** utilizator (Roland Petrilă) — a confirmat programarea CT.
+
+**Făcut de:** Claude Code (Opus 4.7, 1M context).
+
+---
+
 ## 2026-04-18 (sesiune Claude_Opus_4.7, continuare) — Git init + push + Regula 16
 
 **Tip:** ADAUGARE + MODIFICARE

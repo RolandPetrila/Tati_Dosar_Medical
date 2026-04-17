@@ -248,7 +248,20 @@ Efectuată concomitent cu endoscopia la Genesis Medical Clinic Arad (Dr. Noufal 
 **Prioritate:** URGENȚĂ
 **Diagnostic trimitere:** Proces proliferativ esofagian (cod 95)
 **Medic trimițător:** Dr. Noufal Abdul Vahab
-**Status programare:** de confirmat
+**Status programare:** ✅ **PROGRAMAT LUNI 20.04.2026, ORA 17:00** (confirmat 18.04.2026)
+
+**Cronologie pregătire (deadline-uri exacte):**
+
+| Data/ora                       | Acțiune                                                               |
+| ------------------------------ | --------------------------------------------------------------------- |
+| **Sâmbătă 18.04.2026, 17:00**  | STOP Jamesi (H-48 înainte de CT)                                      |
+| Duminică 19.04.2026            | Hidratare activă cu apă plată (1.5-2 L/zi dacă tolerat cardiologic)   |
+| Duminică 19.04.2026, ~20:00    | Cină ușoară — ultima masă mai consistentă                             |
+| Luni 20.04.2026, ~11:00        | Gustare ușoară — ultima masă înainte de CT                            |
+| Luni 20.04.2026, dimineața     | Aspenter + Concor + Triplixam — DA (normal)                           |
+| Luni 20.04.2026, 17:00         | **CT**                                                                |
+| Luni 20.04.2026, seara         | Glicemie de control; NU relua Jamesi încă                             |
+| **Miercuri 22.04.2026, 17:00** | Reluare Jamesi (H+48 după CT) DOAR după confirmare creatinină normală |
 
 **⚠️ Pregătire critică:**
 

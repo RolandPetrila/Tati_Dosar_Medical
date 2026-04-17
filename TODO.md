@@ -8,30 +8,33 @@
 
 ## Calendar — date cheie
 
-| Data                         | Eveniment                           | Status          |
-| ---------------------------- | ----------------------------------- | --------------- |
-| 17.04.2026                   | Endoscopie + colonoscopie efectuate | ✅ Finalizat    |
-| 17.04.2026                   | Bilet trimitere CT emis             | ✅ Finalizat    |
-| {de confirmat}               | Efectuare CT stadializare           | 🟡 De programat |
-| {17.04.2026 + 7-14 zile}     | Rezultat biopsie (estimat)          | 🟡 În așteptare |
-| {după primirea rezultatelor} | Consult oncolog digestiv            | 🟡 De programat |
+| Data                         | Eveniment                                                       | Status          |
+| ---------------------------- | --------------------------------------------------------------- | --------------- |
+| 17.04.2026                   | Endoscopie + colonoscopie efectuate                             | ✅ Finalizat    |
+| 17.04.2026                   | Bilet trimitere CT emis                                         | ✅ Finalizat    |
+| **18.04.2026 17:00**         | **STOP Jamesi (H-48 pre-CT)**                                   | 🔴 DE EXECUTAT  |
+| 19.04.2026                   | Hidratare activă + analize creatinină                           | 🔴 DE EXECUTAT  |
+| **20.04.2026 17:00**         | **CT torace + abdomen + pelvis cu contrast (Genesis Micălaca)** | 📅 PROGRAMAT    |
+| **22.04.2026 17:00**         | Reluare Jamesi (H+48 post-CT, după creatinină OK)               | 🟡 Follow-up    |
+| {17.04.2026 + 7-14 zile}     | Rezultat biopsie (estimat 24.04-01.05)                          | 🟡 În așteptare |
+| {după primirea rezultatelor} | Consult oncolog digestiv                                        | 🟡 De programat |
 
 ---
 
 ## P0 — Critic, de efectuat IMEDIAT
 
-### [P0] Programare CT de stadializare
+### [P0] ✅ Programare CT de stadializare — COMPLET
 
-**Context:** Bilet URGENȚĂ emis pe 17.04.2026. Cu cât se face mai repede, cu atât stadializarea este mai rapidă.
-**Deadline:** în maxim 3-5 zile de la emitere.
-**Sub-task-uri:**
+**Status:** confirmat LUNI 20.04.2026 ora 17:00 la Genesis Medical Clinic Micălaca (confirmat 18.04.2026).
 
-- [ ] Sunat la Genesis Medical Clinic Micălaca pentru programare
-- [ ] Verificat disponibilitatea pe zilele următoare
-- [ ] Rezervare confirmată + data + ora
+- [x] Sunat la Genesis Medical Clinic Micălaca pentru programare
+- [x] Rezervare confirmată: 20.04.2026, 17:00
 
-**Generat din:** bilet trimitere BCTAP 0631727
-**Data creării:** 17.04.2026
+**Follow-up deschis:**
+
+- [ ] Confirmare telefonică cu 24h înainte
+- [ ] Întrebare explicită radiologului: „Triplixam — mențin integral sau omit doza duminică/luni?"
+- [ ] Întrebare: cât durează raportul? Se primește CD cu DICOM?
 
 ### [P0] Obținere analize prealabile pentru CT
 
@@ -53,19 +56,23 @@
 **Generat din:** `CONTEXT_MEDICAL.md`, secțiunea 8 — pregătire CT
 **Data creării:** 17.04.2026
 
-### [P0] Pregătire pacient pentru CT cu contrast
+### [P0] Pregătire pacient pentru CT luni 20.04.2026 ora 17:00
 
-**Context:** Pacientul are diabet tratat cu Metformin — oprire obligatorie 48h înainte.
-**Sub-task-uri:**
+**Context:** Deadline-uri exacte pentru medicație și pregătire.
+**Sub-task-uri cu deadline:**
 
-- [ ] **Oprire Metformin cu 48h înainte de CT** (acțiune critică)
-- [ ] Hidratare abundentă cu apă în ziua dinaintea CT
-- [ ] Repaus alimentar 4-6 ore înainte de examinare
-- [ ] Verificare alergii (iod, fructe de mare) — de confirmat cu familia
-- [ ] Pregătire documente de dus: buletin, card sănătate, bilet trimitere original, analize recente, buletin endoscopie
+- [ ] **SÂMBĂTĂ 18.04 ORA 17:00: STOP Jamesi** (H-48 înainte de CT) — acțiune critică
+- [ ] **AZI/MÂINE: analize creatinină + uree** (ultima din 28.11.2025 e STALE)
+- [ ] Duminică: hidratare activă 1.5-2 L apă plată
+- [ ] Duminică seara ~20:00: ultima masă mai consistentă
+- [ ] Luni ~11:00: gustare ușoară — ultima înainte de CT
+- [ ] Luni dimineață: ia NORMAL Aspenter + Concor + Triplixam (cu excepție dacă radiologul spune altfel pentru Triplixam)
+- [ ] **Confirmare alergii** (iod, fructe de mare, contrast anterior) — întrebare directă pacient + familie
+- [ ] Pregătire documente: CI, card CAS, bilet BCTAP 0631727, analize recente, buletin endoscopie 17.04
+- [ ] Miercuri 22.04 ora 17:00 (H+48): reluare Jamesi DOAR după creatinină normală post-CT
 
-**Generat din:** `CONTEXT_MEDICAL.md`, `REGULAMENT.md` (siguranța medicală)
-**Data creării:** 17.04.2026
+**Generat din:** `CONTEXT_MEDICAL.md`, `REGULAMENT.md` (siguranța medicală), confirmare programare CT 20.04.2026
+**Data creării:** 17.04.2026 | **Actualizare:** 18.04.2026
 
 ---
 
