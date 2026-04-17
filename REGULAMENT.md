@@ -144,6 +144,12 @@ Pentru modificări mici incrementale, actualizezi fișierul curent și logezi sc
 - Pentru modificări în `CONTEXT_MEDICAL.md` (date medicale), actualizează automat `CHANGELOG.md`.
 - Niciodată nu rescrii silent un fișier important.
 
+### 4.5 Git auto-commit + push (Regula 16 din CLAUDE.md)
+
+Proiectul este versionat pe GitHub în repo **privat** `RolandPetrila/Tati_Dosar_Medical`. La finalul fiecărei sesiuni care a modificat fișiere de referință, Claude execută automat `git add + commit + push` — pre-autorizat de user.
+
+Detalii complete + excepții + format mesaj commit: vezi **Regula 16** din `CLAUDE.md` de la rădăcina proiectului.
+
 ## 5. Reguli de interacțiune cu utilizatorul
 
 ### 5.1 Folosirea ask_user_input

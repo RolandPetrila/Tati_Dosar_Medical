@@ -234,6 +234,59 @@ Pentru fiecare cercetare web care produce conținut introdus în dosar, log în 
 
 ---
 
+## Regula 16 — Git auto-commit + push la finalul fiecărei sesiuni
+
+**Context:** proiectul este versionat pe GitHub în repo-ul privat `RolandPetrila/Tati_Dosar_Medical` (creat 2026-04-18, sincronizat cu `origin/main`). User a pre-autorizat Claude să facă `git add + commit + push` automat fără confirmare individuală pe sesiune.
+
+**Protocol obligatoriu:**
+
+1. La finalul oricărei sesiuni care a modificat fișiere de referință (`CONTEXT_MEDICAL.md`, JSON-uri din `Dosar_Medical/`, documente configurare, `.meta.json`-uri, documente sursă adăugate), execuți secvența:
+
+   ```bash
+   cd "C:\Users\ALIENWARE\Desktop\Roly\.Tati"
+   git status --short         # verificare ce e modificat
+   git add .                  # stage toate modificările
+   git commit -m "<mesaj>"    # mesaj descriptiv
+   git push                   # către origin/main
+   ```
+
+2. **Mesajul de commit** urmează convenția din `CHANGELOG.md`:
+   - Prima linie (max 72 caractere): rezumat acțiune principală (ex. `"Adaugare rezultat biopsie esofagiana + reconciliere CONTEXT_MEDICAL"`)
+   - Corp: bullet-uri cu modificările concrete
+   - Footer: `Co-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>`
+
+3. **Actualizare obligatorie înainte de commit:**
+   - `CHANGELOG.md` — intrare nouă cu modificările sesiunii
+   - `SESSION_LOG.md` — linie nouă conform Regulii 9
+
+4. **Verificări obligatorii înainte de push:**
+   - `git status` confirmă că niciun fișier secret (`.env`, `*.key`, credențiale) nu e staged
+   - Repo rămâne **privat** (nu modifici visibility)
+   - Nu faci `--force` push fără confirmare explicită user
+   - Nu faci `--amend` pe commit-uri deja push-uite
+
+5. **Dacă push eșuează:**
+   - `fetch-and-merge` conflicte simple → rezolvare locală + retry push
+   - Conflicte complexe → STOP, raportare la user, nu `--force`
+   - Permisiune refuzată → verifică `gh auth status`, raportează
+
+6. **Raportare la final:** ultima linie a răspunsului confirmă hash-ul commit-ului și status-ul push-ului.
+
+   Format: `✅ Commit <hash> pushed → origin/main (N files changed)`
+
+**Excepții (NU commit automat):**
+
+- Sesiuni pur de citire/audit fără modificări
+- Când există conflicte nerezolvate în working tree
+- Când user solicită explicit "nu face push" / "doar local"
+- Când working tree conține artefacte temporare (fișiere `.tmp`, `.bak`, experimente) — atunci faci commit selectiv (nu `git add .`)
+
+**Why:** proiectul are două sisteme de backup paralele — Google Drive (sync continuu al folderului) și Git (snapshot-uri discrete cu istoric). Git oferă rollback granular, diff între versiuni, colaborare structurată cu medicii / alte instanțe AI. Pierderea unui snapshot la o sesiune importantă = pierdere de istoric trasabil pentru un dosar medical cu relevanță legală.
+
+**How to apply:** după ultima operație de scriere din sesiune, înainte de raportul final către user, rulează secvența de commit + push. Nu aștepta ca user-ul să ceară explicit.
+
+---
+
 ## Relația cu celelalte regulamente
 
 Regulile de aici **extind** (nu înlocuiesc):
@@ -248,5 +301,6 @@ La conflict direct pentru lucrul în `G:\My Drive\Roly\.Tati`, regulile din aces
 
 ## Changelog
 
+- **2026-04-18 v3:** adăugată Regula 16 (git auto-commit + push la finalul fiecărei sesiuni, după crearea repo-ului privat `RolandPetrila/Tati_Dosar_Medical`).
 - **2026-04-17 v2:** adăugate regulile 8-15 (OCR anti-halucinație, coordonare Gemini, backup pre-modificare, valabilitate clinică, conflict surse, manuscrise, chain of custody, web queries log); scoped regulile 6-7 pentru a elimina overhead pe decizii triviale.
 - **2026-04-17 v1:** prima versiune — regulile 6 și 7 preluate din `REGULAMENT.md` al dosarului paralel.

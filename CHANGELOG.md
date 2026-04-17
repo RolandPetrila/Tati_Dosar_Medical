@@ -4,6 +4,28 @@
 
 ---
 
+## 2026-04-18 (sesiune Claude_Opus_4.7, continuare) — Git init + push + Regula 16
+
+**Tip:** ADAUGARE + MODIFICARE
+
+**Fișiere afectate:** `CLAUDE.md` (proiect), `REGULAMENT.md`, `.gitignore` (nou), `CHANGELOG.md`, `SESSION_LOG.md`.
+
+**Descriere:**
+
+- Inițializat Git local (`git init -b main`)
+- Creat `.gitignore` minimal (OS artifacts + safety net secrete)
+- Primul commit `ee642d2`: 81 fișiere, +10.207 linii
+- Creat repo privat `RolandPetrila/Tati_Dosar_Medical` pe GitHub (de către user manual)
+- Remote `origin` configurat + `main` pushed cu tracking
+- **Regula 16** adăugată în `CLAUDE.md` (proiect): git auto-commit + push la finalul fiecărei sesiuni cu modificări de referință
+- Cross-reference Regula 16 adăugat în `REGULAMENT.md` secțiunea 4.5
+
+**Motiv:** versionare structurată, rollback granular, backup paralel cu Google Drive, trasabilitate pe istoric dosar medical.
+
+**Făcut de:** Claude Code (Opus 4.7, 1M context).
+
+---
+
 ## 2026-04-18 (sesiune Claude_Opus_4.7) — Audit + migrare v2 + reorganizare structurală
 
 **Tip:** MIGRARE_MAJORĂ

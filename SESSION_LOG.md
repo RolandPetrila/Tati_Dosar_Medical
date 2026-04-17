@@ -6,6 +6,23 @@
 
 ---
 
+## 2026-04-18 17:30 — [Claude_Opus_4.7] git-init-push + Regula-16
+
+**Scop:** inițializare repo Git local, creare repo privat pe GitHub, primul push, adăugare Regula 16 (git auto-commit + push la finalul sesiunilor).
+
+**Operații:**
+
+- `git init -b main` pe `C:\Users\ALIENWARE\Desktop\Roly\.Tati\`
+- Creat `.gitignore` minimal (conform STRUCTURA_PROIECT.md)
+- Primul commit: `ee642d2` (81 fișiere, +10.207 linii)
+- Repo privat `RolandPetrila/Tati_Dosar_Medical` creat de user pe GitHub (gh token fără permisiuni createRepository)
+- `git remote add origin https://github.com/RolandPetrila/Tati_Dosar_Medical.git`
+- `git push -u origin main` — succes, tracking setup
+
+**Fișiere modificate:** `CLAUDE.md` (Regula 16 + changelog v3), `REGULAMENT.md` (secțiunea 4.5 cross-reference), `CHANGELOG.md` (intrare nouă), `SESSION_LOG.md` (această intrare), `.gitignore` (nou).
+
+---
+
 ## 2026-04-18 15:00 — [Claude_Opus_4.7] audit-complet-migrare-v2
 
 **Scop:** audit complet al JSON-urilor Gemini + migrare la schema v2.0 + remediere erori critice + aducerea structurii de proiect în conformitate cu `STRUCTURA_PROIECT.md`.
