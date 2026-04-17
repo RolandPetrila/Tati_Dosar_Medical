@@ -1,0 +1,53 @@
+{
+  "_metadata": {
+    "nume_fisier_recomandat": "Dosar_Cardiologie_Vichy_2012.json",
+    "tip_document": "Raport de spitalizare (Internare) / Angioplastie",
+    "specialitate": "Cardiologie Interventionala",
+    "data_document": "17.02.2012"
+  },
+  "pacient": {
+    "nume": "PETRILA",
+    "prenume": "VIOREL MIHAI",
+    "cnp": null,
+    "data_nasterii": "18.05.1959",
+    "varsta": null,
+    "sex": "M"
+  },
+  "diagnostic": [
+    {
+      "cod_icd10": null,
+      "descriere_oficiala": "Sindrom coronarian acut ST + în antero-septo-apical"
+    },
+    {
+      "cod_icd10": null,
+      "descriere_oficiala": "Stenoză a arterei interventriculare anterioare proximale și mijlocii"
+    },
+    {
+      "cod_icd10": null,
+      "descriere_oficiala": "Obezitate"
+    },
+    {
+      "cod_icd10": null,
+      "descriere_oficiala": "Tabagism activ"
+    }
+  ],
+  "analize_laborator": [],
+  "tratament": [
+    {
+      "medicament_sau_procedura": "Fibrinoliza prin metaliză",
+      "detalii": null
+    },
+    {
+      "medicament_sau_procedura": "Tratament adjuvant",
+      "detalii": "PLAVIX, ASPEGIC, LOVENOX"
+    },
+    {
+      "medicament_sau_procedura": "Coronarografie si Angioplastie (19.02.2012)",
+      "detalii": "Implantare stent RX VISION 3.5 x 28 mm pe IVA"
+    }
+  ],
+  "recomandari": [
+    "Repatriere la Timisoara cu asistenta",
+    "Transfer la cardiologie, mobilizare"
+  ]
+}

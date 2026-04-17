@@ -1,0 +1,15 @@
+{
+  "source_document": "2026-04-17_buletin_endoscopie_colonoscopie.pdf",
+  "received_date": "2026-04-17",
+  "received_from": "Genesis Medical Clinic Arad (prin pacient/familie)",
+  "digitized_by": "probabil export PDF din sistemul clinicii",
+  "digitized_date": "2026-04-17",
+  "transcriber": "Gemini (v1) + Claude_Opus_4.7 (v2 revizuit)",
+  "transcription_date": "2026-04-18",
+  "ocr_quality": "good",
+  "content_type": "buletin_endoscopie_digestiva_superioara + colonoscopie",
+  "json_extras": "2026-04-17_buletin_gastroenterologie.json",
+  "chain_notes": "DOCUMENT-CHEIE: conține diagnosticul de suspiciune 'proces proliferativ esofagian'. A declanșat biletul BCTAP 0631727 pentru CT de stadializare urgentă. Medic emitent: Dr. Noufal Abdul Vahab (medic primar gastroenterologie).",
+  "privacy_level": "SENSIBIL — diagnostic oncologic suspectat",
+  "related_files": ["2026-04-17_buletin_gastroenterologie.json"]
+}

@@ -1,0 +1,64 @@
+{
+  "_metadata": {
+    "schema_version": "2.0",
+    "nume_fisier": "2023-06-12_carte_identitate.json",
+    "tip_document": "carte_identitate",
+    "specialitate": "Administrativ / Identitate",
+    "data_document": "2023-06-12",
+    "data_emitere": "2023-06-12",
+    "data_expirare": "2031-08-03",
+    "sursa_pdf": "2023-06-12_carte_identitate.pdf",
+    "sursa_locatie": "documente_sursa/01_identitate/",
+    "procesat_de": "Claude_Opus_4.7",
+    "data_procesare": "2026-04-18",
+    "ocr_quality": "good",
+    "confidence_overall": "high",
+    "flags": ["primary_identity_source", "verification_anchor"],
+    "notes": "Acest document e ANCORA de verificare pentru identitate — orice alt document cu discrepanță (nume, CNP, data nașterii) se validează contra acestui JSON. Valabilitate C.I.: până la 03.08.2031 (8 ani de la emitere). MRZ linia 2 verificată: 'ZR089382<4ROU5905188M310803310244861<5' — checksum CNP 02448 + cifră control 6 coerent cu CNP complet '1590518024486'."
+  },
+  "pacient": {
+    "nume": "PETRILĂ",
+    "prenume": "VIOREL-MIHAI",
+    "cnp": "1590518024486",
+    "data_nasterii": "1959-05-18",
+    "varsta_la_data_document": 64,
+    "sex": "M",
+    "cetatenie": "Română",
+    "cod_iso_cetatenie": "ROU",
+    "confidence_identificare": "high"
+  },
+  "diagnostic": [],
+  "analize_laborator": [],
+  "tratament": [],
+  "recomandari": [],
+  "identitate": {
+    "serie": "ZR",
+    "numar": "089382",
+    "cod_intern": "34T80",
+    "organ_emitent": "SPCLEP Nădlac",
+    "cod_organ_emitent": "031",
+    "judet_emitere": "AR (Arad)",
+    "data_emitere": "2023-06-12",
+    "data_expirare": "2031-08-03",
+    "valabilitate_ani": 8,
+    "loc_nastere": {
+      "judet": "TM (Timiș)",
+      "localitate": "Sat Igriș",
+      "comuna": "Com. Sânpetru Mare",
+      "text_complet": "Jud. TM, Sat Igriș (Com. Sânpetru Mare)"
+    },
+    "domiciliu": {
+      "judet": "AR (Arad)",
+      "localitate": "Orș. Nădlac",
+      "strada": "Str. Vasile Goldiș",
+      "numar": "42",
+      "text_complet": "Jud. AR, Orș. Nădlac, Str. Vasile Goldiș nr. 42"
+    },
+    "mrz": {
+      "linia_1": "IDROUPETRILA<<VIOREL<MIHAI<<<<<<<<<<",
+      "linia_2": "ZR089382<4ROU5905188M310803310244861<5",
+      "checksum_verificat": true,
+      "note": "MRZ TD1 standard. Ordinea: serie+nr+check / data_nasterii (YYMMDD) + sex + data_expirare (YYMMDD) + CNP-segment + check general."
+    }
+  }
+}

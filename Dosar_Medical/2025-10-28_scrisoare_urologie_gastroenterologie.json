@@ -1,0 +1,90 @@
+{
+  "_metadata": {
+    "schema_version": "2.0",
+    "nume_fisier": "2025-10-28_scrisoare_urologie_gastroenterologie.json",
+    "tip_document": "scrisoare_medicala_consult",
+    "specialitate": "Urologie / Gastroenterologie",
+    "data_document": "2025-10-28",
+    "sursa_pdf": "de_identificat_din_Apr17_Doc*.pdf",
+    "sursa_locatie": "documente_sursa/06_urologie_gastro_2025/",
+    "procesat_de": "Gemini",
+    "data_procesare": "2026-04-17",
+    "revizuit_de": "Claude_Opus_4.7",
+    "data_revizuire": "2026-04-18",
+    "ocr_quality": "good",
+    "confidence_overall": "high",
+    "flags": [
+      "migrated_from_v1",
+      "corrected_data_nasterii",
+      "corrected_icd10_format"
+    ],
+    "notes": "Corecturi v1→v2: (1) data_nasterii a fost '28-10-1959' (Gemini confundase data documentului cu data nașterii). Corectat la 1959-05-18 conform C.I. + CNP. (2) Codurile ICD-10 aveau prefix intern spital (ex. '702-N43.3'). Separat în 'cod_icd10' (standard) și 'cod_intern_spital'."
+  },
+  "pacient": {
+    "nume": "PETRILĂ",
+    "prenume": "VIOREL-MIHAI",
+    "cnp": "1590518024486",
+    "data_nasterii": "1959-05-18",
+    "varsta_la_data_document": 66,
+    "sex": "M",
+    "confidence_identificare": "high"
+  },
+  "diagnostic": [
+    {
+      "cod_icd10": "N43.3",
+      "cod_intern_spital": "702",
+      "descriere_oficiala": "Hidrocel, nespecificat",
+      "descriere_originala": "HIDROCEL DREPT",
+      "tip": "principal",
+      "confidence_ocr": "high"
+    },
+    {
+      "cod_icd10": "N45.9",
+      "cod_intern_spital": "703",
+      "descriere_oficiala": "Orhită și epididimită, nespecificate (aici: chiste epididimare bilaterale)",
+      "descriere_originala": "CHISTE EPIDIDIMARE BILATERALE",
+      "tip": "principal",
+      "confidence_ocr": "high",
+      "note": "Codul ICD-10 exact pentru chist epididimar e N50.89 (alte afecțiuni specifice ale organelor genitale masculine); N45.9 din document e aproximare spital."
+    },
+    {
+      "cod_icd10": "K40.90",
+      "cod_intern_spital": "564",
+      "descriere_oficiala": "Hernie inghinală unilaterală sau nespecificată, fără obstrucție/gangrenă",
+      "descriere_originala": "HERNIE INGHINALA DREAPTA",
+      "tip": "principal",
+      "confidence_ocr": "high"
+    },
+    {
+      "cod_icd10": null,
+      "descriere_oficiala": "Proces proliferativ esofagian",
+      "descriere_originala": "PROCES PROLIFERATIV ESOFAGIAN",
+      "tip": "asociat",
+      "confidence_ocr": "high",
+      "note": "Prezent ca antecedent menționat în scrisoare (anterior endoscopiei din 17.04.2026)."
+    },
+    {
+      "cod_icd10": "K63.5",
+      "descriere_oficiala": "Polip al colonului",
+      "descriere_originala": "POLIP COLON DESCENDENT",
+      "tip": "asociat",
+      "confidence_ocr": "high"
+    },
+    {
+      "cod_icd10": "K64",
+      "descriere_oficiala": "Hemoroizi și tromboză venoasă perianală",
+      "descriere_originala": "BOALA HEMOROIDA",
+      "tip": "asociat",
+      "confidence_ocr": "high"
+    }
+  ],
+  "analize_laborator": [],
+  "tratament": [],
+  "recomandari": [
+    "Cură chirurgicală hernie inghinală + cură chirurgicală hidrocel + excizie chiste epididimare"
+  ],
+  "medici_unitati": {
+    "unitate": "de identificat din documentul original",
+    "sectie": "Urologie / Gastroenterologie"
+  }
+}

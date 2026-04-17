@@ -1,0 +1,16 @@
+{
+  "source_document": "2025-11-01_talon_pensie_scan.jpeg",
+  "received_date": "2026-04-18",
+  "received_from": "pacient / familia Petrilă",
+  "digitized_by": "fotografie telefon",
+  "digitized_date": "2026-04-18",
+  "transcriber": "Claude_Opus_4.7",
+  "transcription_date": "2026-04-18",
+  "ocr_quality": "partial",
+  "ocr_quality_note": "Imagine rotită 90° pe axa verticală, parțial mototolită. Citibilă vizual, dar OCR-ul automat (Gemini v1) pe un document similar conținea eroare de CNP.",
+  "content_type": "talon_pensie_romania_Casa_Judeteana",
+  "json_extras": "2025-11-01_talon_pensie_asigurare.json",
+  "chain_notes": "Talon mandat plată pensie emis de CJP Arad, luna 11/2025, dosar 42/355336. Complementar cu Talon_Pensie_Asigurare_2025.json (v1) — v2 fuzionat date din ambele surse.",
+  "privacy_level": "CRITIC — CNP parțial vizibil, număr dosar pensie",
+  "related_files": ["2025-11-01_talon_pensie_asigurare.json"]
+}

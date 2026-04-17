@@ -1,0 +1,457 @@
+{
+  "_metadata": {
+    "schema_version": "2.0",
+    "nume_fisier": "2025-11-28_externare_chirurgie_hernie.json",
+    "tip_document": "externare_spital_cura_chirurgicala",
+    "specialitate": "Chirurgie Generală II",
+    "data_document": "2025-11-28",
+    "data_internare": "de_identificat_din_documentul_original",
+    "sursa_pdf": "2025-11-28_externare_chirurgie_hernie.pdf",
+    "sursa_locatie": "documente_sursa/07_hernie_2025_11/",
+    "procesat_de": "Gemini (v1, 3 exporturi) + Claude_Opus_4.7 (fuziune v2)",
+    "data_procesare": "2026-04-18",
+    "ocr_quality": "good",
+    "confidence_overall": "high",
+    "flags": [
+      "fuziune_surse_multiple",
+      "migrated_from_v1",
+      "canonical_for_externare_28_11_2025"
+    ],
+    "surse_v1_fuzionate": [
+      "arhiva/backup_pre-migrare_v2_2026-04-18/Bilet_Iesire_Chirurgie_28_11_2025.json",
+      "arhiva/backup_pre-migrare_v2_2026-04-18/Iesire_Din_Spital_Chirurgie_28_11_2025.json",
+      "arhiva/backup_pre-migrare_v2_2026-04-18/Scrisoare_Chirurgie_28_11_2025.json"
+    ],
+    "notes": "Fuziune a 3 JSON-uri Gemini care reprezintă același eveniment de externare (cura chirurgicală hernie + aderențe, 28.11.2025). Conservat: unități lab din 'Bilet_' și 'Scrisoare_' (complete), detaliile dozelor din 'Iesire_' (ambalaje+concentrații). PDF-ul sursă primar (probabil unul singur — 'Ieșire din spital.pdf') a generat multiple exporturi; după inspecția PDF-ului original se poate valida care sunt documente distincte (bilet vs. scrisoare medicală) vs. duplicate pure. Datele clinice sunt 100% identice între cele 3."
+  },
+  "pacient": {
+    "nume": "PETRILĂ",
+    "prenume": "VIOREL-MIHAI",
+    "cnp": "1590518024486",
+    "data_nasterii": "1959-05-18",
+    "varsta_la_data_document": 66,
+    "sex": "M",
+    "confidence_identificare": "high"
+  },
+  "diagnostic": [
+    {
+      "cod_icd10": "K40.90",
+      "descriere_oficiala": "Hernia inghinală unilaterală sau nespecificată, fără obstrucție sau gangrenă, nespecificată ca recidivantă",
+      "descriere_originala": "Hernia inghinala unilaterala sau nespecificata, fara obstructie sau gangrena, nespecificata ca recidivanta",
+      "tip": "principal",
+      "confidence_ocr": "high"
+    },
+    {
+      "cod_icd10": "K66.0",
+      "descriere_oficiala": "Aderențe peritoneale",
+      "descriere_originala": "Aderente peritoneale",
+      "tip": "principal",
+      "confidence_ocr": "high"
+    },
+    {
+      "cod_icd10": "K40.90",
+      "descriere_oficiala": "Hernie inghinală dreaptă",
+      "descriere_originala": "HERNIE INGHINALA DREAPTA",
+      "tip": "detaliere_lateralitate",
+      "confidence_ocr": "high"
+    },
+    {
+      "cod_icd10": "K66.0",
+      "descriere_oficiala": "Aderențe peritoneale (mențiune majuscule)",
+      "descriere_originala": "ADERENTE PERITONEALE",
+      "tip": "detaliere_majuscule",
+      "confidence_ocr": "high"
+    }
+  ],
+  "analize_laborator": [
+    {
+      "nume": "INR",
+      "nume_original": "INR",
+      "valoare_numerica": 1.06,
+      "valoare_text": "1.06",
+      "unitate": null,
+      "interval_referinta_text": "normale (document spital)",
+      "flag": "normal",
+      "confidence_ocr": "high",
+      "note": "Spitalul raportează doar 'valori normale' ca text, fără interval numeric."
+    },
+    {
+      "nume": "AST (TGO)",
+      "nume_original": "AST(TGO)",
+      "valoare_numerica": 15.5,
+      "valoare_text": "15.5",
+      "unitate": "U/L",
+      "interval_referinta_text": "normale (document spital)",
+      "flag": "normal",
+      "confidence_ocr": "high"
+    },
+    {
+      "nume": "Timp Quick / Indice Quick",
+      "nume_original": "TQ - IQ",
+      "valoare_numerica": 92,
+      "valoare_text": "92",
+      "unitate": "%",
+      "interval_referinta_text": "normale (document spital)",
+      "flag": "normal",
+      "confidence_ocr": "high"
+    },
+    {
+      "nume": "APTT",
+      "nume_original": "APTT",
+      "valoare_numerica": 28.0,
+      "valoare_text": "28.00",
+      "unitate": "sec",
+      "interval_referinta_text": "normale (document spital)",
+      "flag": "normal",
+      "confidence_ocr": "high"
+    },
+    {
+      "nume": "Leucocite (WBC)",
+      "nume_original": "Leucocite (WBC)",
+      "valoare_numerica": 7.3,
+      "valoare_text": "7.30",
+      "unitate": "x10^3/µL",
+      "interval_referinta_text": "normale (document spital)",
+      "flag": "normal",
+      "confidence_ocr": "high"
+    },
+    {
+      "nume": "Eritrocite (RBC)",
+      "nume_original": "Eritrocite (RBC)",
+      "valoare_numerica": 5.02,
+      "valoare_text": "5.02",
+      "unitate": "x10^6/µL",
+      "interval_referinta_text": "normale (document spital)",
+      "flag": "normal",
+      "confidence_ocr": "high"
+    },
+    {
+      "nume": "Hemoglobina (HGB)",
+      "nume_original": "Hemoglobina (HGB)",
+      "valoare_numerica": 15.0,
+      "valoare_text": "15.00",
+      "unitate": "g/dL",
+      "interval_referinta_text": "normale (document spital)",
+      "flag": "normal",
+      "confidence_ocr": "high"
+    },
+    {
+      "nume": "Hematocrit (HCT)",
+      "nume_original": "Hematocrit (HCT)",
+      "valoare_numerica": 42.9,
+      "valoare_text": "42.90",
+      "unitate": "%",
+      "interval_referinta_text": "normale (document spital)",
+      "flag": "normal",
+      "confidence_ocr": "high"
+    },
+    {
+      "nume": "Trombocite (PLT)",
+      "nume_original": "Trombocite (PLT)",
+      "valoare_numerica": 208.0,
+      "valoare_text": "208.00",
+      "unitate": "x10^3/µL",
+      "interval_referinta_text": "normale (document spital)",
+      "flag": "normal",
+      "confidence_ocr": "high"
+    },
+    {
+      "nume": "Volum eritrocitar mediu (MCV)",
+      "nume_original": "Volum eritrocitar mediu (MCV)",
+      "valoare_numerica": 85.5,
+      "valoare_text": "85.50",
+      "unitate": "fL",
+      "interval_referinta_text": "normale (document spital)",
+      "flag": "normal",
+      "confidence_ocr": "high"
+    },
+    {
+      "nume": "Hemoglobina eritrocitară medie (MCH)",
+      "nume_original": "Hemoglobina eritrocitara medie (MCH)",
+      "valoare_numerica": 29.9,
+      "valoare_text": "29.90",
+      "unitate": "pg",
+      "interval_referinta_text": "normale (document spital)",
+      "flag": "normal",
+      "confidence_ocr": "high"
+    },
+    {
+      "nume": "Concentrația medie Hb/Eritrocite (MCHC)",
+      "nume_original": "Conc medie a Hb/Eritrocite (MCHC)",
+      "valoare_numerica": 35.0,
+      "valoare_text": "35.00",
+      "unitate": "g/dL",
+      "interval_referinta_text": "normale (document spital)",
+      "flag": "normal",
+      "confidence_ocr": "high"
+    },
+    {
+      "nume": "RDW-SD",
+      "nume_original": "RDW-SD",
+      "valoare_numerica": 39.9,
+      "valoare_text": "39.90",
+      "unitate": "fL",
+      "interval_referinta_text": "normale (document spital)",
+      "flag": "normal",
+      "confidence_ocr": "high"
+    },
+    {
+      "nume": "RDW-CV",
+      "nume_original": "RDW-CV",
+      "valoare_numerica": 13.1,
+      "valoare_text": "13.10",
+      "unitate": "%",
+      "interval_referinta_text": "normale (document spital)",
+      "flag": "normal",
+      "confidence_ocr": "high"
+    },
+    {
+      "nume": "Neutrofile procentual",
+      "nume_original": "Neutrofile (NE%)",
+      "valoare_numerica": 56.8,
+      "valoare_text": "56.80",
+      "unitate": "%",
+      "interval_referinta_text": "normale (document spital)",
+      "flag": "normal",
+      "confidence_ocr": "high"
+    },
+    {
+      "nume": "Limfocite procentual",
+      "nume_original": "Limfocite (LY%)",
+      "valoare_numerica": 26.2,
+      "valoare_text": "26.20",
+      "unitate": "%",
+      "interval_referinta_text": "normale (document spital)",
+      "flag": "normal",
+      "confidence_ocr": "high"
+    },
+    {
+      "nume": "Monocite procentual",
+      "nume_original": "Monocite (MO%)",
+      "valoare_numerica": 8.8,
+      "valoare_text": "8.80",
+      "unitate": "%",
+      "interval_referinta_text": "normale (document spital)",
+      "flag": "normal",
+      "confidence_ocr": "high"
+    },
+    {
+      "nume": "Bazofile procentual",
+      "nume_original": "Bazofile (BA%)",
+      "valoare_numerica": 0.7,
+      "valoare_text": "0.70",
+      "unitate": "%",
+      "interval_referinta_text": "normale (document spital)",
+      "flag": "normal",
+      "confidence_ocr": "high"
+    },
+    {
+      "nume": "Neutrofile absolute",
+      "nume_original": "Neutrofile (NE#)",
+      "valoare_numerica": 4.15,
+      "valoare_text": "4.15",
+      "unitate": "x10^3/µL",
+      "interval_referinta_text": "normale (document spital)",
+      "flag": "normal",
+      "confidence_ocr": "high"
+    },
+    {
+      "nume": "Limfocite absolute",
+      "nume_original": "Limfocite (LY#)",
+      "valoare_numerica": 1.91,
+      "valoare_text": "1.91",
+      "unitate": "x10^3/µL",
+      "interval_referinta_text": "normale (document spital)",
+      "flag": "normal",
+      "confidence_ocr": "high"
+    },
+    {
+      "nume": "Monocite absolute",
+      "nume_original": "Monocite (MO#)",
+      "valoare_numerica": 0.64,
+      "valoare_text": "0.64",
+      "unitate": "x10^3/µL",
+      "interval_referinta_text": "normale (document spital)",
+      "flag": "normal",
+      "confidence_ocr": "high"
+    },
+    {
+      "nume": "Eozinofile absolute",
+      "nume_original": "Eozinofile (EO#)",
+      "valoare_numerica": 0.55,
+      "valoare_text": "0.55",
+      "unitate": "x10^3/µL",
+      "interval_referinta_text": "normale (document spital)",
+      "flag": "normal",
+      "confidence_ocr": "high"
+    },
+    {
+      "nume": "Bazofile absolute",
+      "nume_original": "Bazofile (BA#)",
+      "valoare_numerica": 0.05,
+      "valoare_text": "0.05",
+      "unitate": "x10^3/µL",
+      "interval_referinta_text": "normale (document spital)",
+      "flag": "normal",
+      "confidence_ocr": "high"
+    },
+    {
+      "nume": "Uree",
+      "nume_original": "UREA",
+      "valoare_numerica": 31.7,
+      "valoare_text": "31.70",
+      "unitate": "mg/dL",
+      "interval_referinta_text": "normale (document spital)",
+      "flag": "normal",
+      "confidence_ocr": "high"
+    },
+    {
+      "nume": "ALT (TGP)",
+      "nume_original": "ALT(TGP)",
+      "valoare_numerica": 14.2,
+      "valoare_text": "14.2",
+      "unitate": "U/L",
+      "interval_referinta_text": "normale (document spital)",
+      "flag": "normal",
+      "confidence_ocr": "high"
+    },
+    {
+      "nume": "Eozinofile procentual",
+      "nume_original": "Eozinofile (EO%)",
+      "valoare_numerica": 7.5,
+      "valoare_text": "7.50",
+      "unitate": "%",
+      "interval_referinta_text": "patologice (document spital) — peste limita 0-5%",
+      "flag": "crescut",
+      "confidence_ocr": "high",
+      "note": "Eozinofilie ușoară — pattern similar cu buletinul din 17.06.2025. Consistent în timp."
+    },
+    {
+      "nume": "Creatinină serică",
+      "nume_original": "CREATININA serica",
+      "valoare_numerica": 0.66,
+      "valoare_text": "0.66",
+      "unitate": "mg/dL",
+      "interval_referinta_text": "patologice (document spital)",
+      "flag": "patologic",
+      "confidence_ocr": "high",
+      "note": "Valoarea 0.66 e sub intervalul uzual 0.8-1.3 — ar putea fi 'scăzut' nu 'patologic'; documentul spital nu specifică direcția. Nu e clinic alarmant izolat."
+    },
+    {
+      "nume": "Glucoză",
+      "nume_original": "GLUCOZA",
+      "valoare_numerica": 129.0,
+      "valoare_text": "129.00",
+      "unitate": "mg/dL",
+      "interval_referinta_text": "patologice (document spital)",
+      "flag": "crescut",
+      "confidence_ocr": "high",
+      "note": "Consistent cu diabetul cunoscut (vezi și 136.1 la 17.06.2025)."
+    }
+  ],
+  "tratament": [
+    {
+      "medicament_sau_procedura": "ALGOCALMIN",
+      "substanta_activa": "metamizol sodic",
+      "detalii_originale": "1 g/2 ml X 5 SOL. INJ.",
+      "doza": "1 g / 2 mL",
+      "forma": "soluție injectabilă",
+      "confidence_ocr": "high"
+    },
+    {
+      "medicament_sau_procedura": "BIOSUN SYMBIO SPOR",
+      "substanta_activa": "probiotic multispecies",
+      "detalii_originale": "SWP x 15cps",
+      "forma": "capsule",
+      "confidence_ocr": "high"
+    },
+    {
+      "medicament_sau_procedura": "BRAUNOL",
+      "substanta_activa": "povidon-iod",
+      "detalii_originale": "X 10 CUTIE CU 10 FLAC.",
+      "indicatie": "antiseptic cutanat",
+      "confidence_ocr": "high"
+    },
+    {
+      "medicament_sau_procedura": "BUPIVACAINĂ SPINAL HEAVY PANPHARMA",
+      "substanta_activa": "bupivacaină",
+      "detalii_originale": "5 mg/ml X 5",
+      "indicatie": "anestezie rahidiană intraoperatorie",
+      "confidence_ocr": "high"
+    },
+    {
+      "medicament_sau_procedura": "CLEXANE",
+      "substanta_activa": "enoxaparină sodică",
+      "detalii_originale": "6000 UI (60 mg)/0,6 ml X 50 SOL. INJ.",
+      "indicatie": "profilaxie trombotică post-operatorie",
+      "confidence_ocr": "high"
+    },
+    {
+      "medicament_sau_procedura": "CLORURĂ DE SODIU",
+      "substanta_activa": "NaCl",
+      "detalii_originale": "0,9% X 10 SOL. PERF.",
+      "indicatie": "perfuzie",
+      "confidence_ocr": "high"
+    },
+    {
+      "medicament_sau_procedura": "FAMODIN",
+      "substanta_activa": "famotidină",
+      "detalii_originale": "40 mg X 30 COMPR. FILM.",
+      "indicatie": "antisecretor gastric",
+      "confidence_ocr": "high"
+    },
+    {
+      "medicament_sau_procedura": "GLUCOZĂ 10%",
+      "substanta_activa": "glucoză",
+      "detalii_originale": "10% X 10 SOL. PERF.",
+      "indicatie": "perfuzie",
+      "confidence_ocr": "high"
+    },
+    {
+      "medicament_sau_procedura": "MIDAZOLAM HYPERICUM",
+      "substanta_activa": "midazolam",
+      "detalii_originale": "5 mg/ml X 10 CUTIE",
+      "indicatie": "sedare",
+      "confidence_ocr": "high"
+    },
+    {
+      "medicament_sau_procedura": "PANTOPRAZOL TERAPIA",
+      "substanta_activa": "pantoprazol",
+      "detalii_originale": "40 mg X 30 COMPR. GASTROREZ.",
+      "indicatie": "inhibitor pompă de protoni",
+      "confidence_ocr": "high"
+    },
+    {
+      "medicament_sau_procedura": "PROPOFOL MCT/LCT FRESENIUS",
+      "substanta_activa": "propofol",
+      "detalii_originale": "10 mg/ml X 5 CUTIE",
+      "indicatie": "anestezie intravenoasă",
+      "confidence_ocr": "high"
+    },
+    {
+      "medicament_sau_procedura": "ZOLINEF",
+      "substanta_activa": "cefazolin",
+      "detalii_originale": "1 g X 10 CUTIE CU 10 FLAC.",
+      "indicatie": "antibioprofilaxie perioperatorie",
+      "confidence_ocr": "high"
+    },
+    {
+      "medicament_sau_procedura": "Cură chirurgicală cu grefon",
+      "tip": "procedură",
+      "detalii_originale": "conform PO nr.1476 din 26.11.2025",
+      "note": "Presupune plasă sintetică pentru repararea peretelui abdominal — de clarificat tipul exact al grefonului cu medicul operator.",
+      "confidence_ocr": "high"
+    }
+  ],
+  "recomandari": [
+    "Control chirurgical",
+    "Evitarea eforturilor fizice mari",
+    "Prevenirea tromboemboliei",
+    "RADIOGRAFIA TORACICĂ: PA/Cord cu schiță aortică, fără leziuni active pulmonare (preoperator)"
+  ],
+  "medici_unitati": {
+    "sectie": "Chirurgie Generală II",
+    "unitate": "de identificat din documentul original",
+    "procedura_interna_spital": "PO nr. 1476 din 26.11.2025"
+  }
+}

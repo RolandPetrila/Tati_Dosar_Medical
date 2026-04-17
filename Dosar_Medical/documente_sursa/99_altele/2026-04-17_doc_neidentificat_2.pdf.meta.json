@@ -1,0 +1,17 @@
+{
+  "source_document": "2026-04-17_doc_neidentificat_2.pdf",
+  "received_date": "2026-04-17",
+  "received_from": "pacient/familie (canal de transfer neclarificat)",
+  "digitized_by": "export/scan existent",
+  "digitized_date": "2026-04-17",
+  "transcriber": "Gemini (probabil) — de verificat",
+  "transcription_date": "neverificat",
+  "ocr_quality": "n/a",
+  "ocr_quality_note": "PDF-ul sursă NU a fost citit direct de Claude în sesiunea de audit. Este unul din 6 fișiere 'Apr 17, Doc 2-7.pdf' care probabil sunt sursele din care Gemini a generat parte din JSON-urile v1. Corelarea exactă 1-la-1 între aceste PDF-uri și JSON-urile existente rămâne de confirmat — propun ca Roland să deschidă fiecare și să anunțe ce conține.",
+  "content_type": "neconfirmat",
+  "json_extras": "neconfirmat",
+  "chain_notes": "Nume de fișier generic ('Apr 17, Doc 2.pdf') sugerează export consecutiv dintr-o aplicație mobilă de scanare pe 17 aprilie. Candidați probabili: Dosar_Urologie_Gastro, Buletin_Analize_Sange, Buletin_Analize_Infectioase, Dosar_Cardiologie_Vichy, Schema_Medicamente, Talon_Pensie. De verificat vizual.",
+  "privacy_level": "NEDETERMINAT — tratează ca SENSIBIL până la verificare",
+  "related_files": [],
+  "TODO": "Deschis de Roland, tag corect în meta."
+}

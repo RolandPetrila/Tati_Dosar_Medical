@@ -1,0 +1,17 @@
+{
+  "source_document": "2025-11-10_schema_medicamente_manuscris.jpeg",
+  "received_date": "2026-04-17",
+  "received_date_note": "Data filesystem create. Data documentului manuscris = 10.11.2025.",
+  "received_from": "pacient / familia Petrilă",
+  "digitized_by": "fotografie telefon",
+  "digitized_date": "2026-04-17",
+  "transcriber": "Gemini (v1) + Claude_Opus_4.7 (v2 reconciliat)",
+  "transcription_date": "2026-04-18",
+  "ocr_quality": "partial",
+  "ocr_quality_note": "Documentul conține: (a) talon de recomandare scris de mână (Regula 13 — manuscris), (b) fotografie cu 4 cutii de medicamente (Aspenter, Concor, Triplixam, Jamesi) care confirmă tipurile. Manuscrisul conține eroare medic: nume scris 'PETRICĂ' în loc de 'PETRILĂ'. Medic: Dr. LAZĂR [nume parțial ilizibil]. O recomandare tăiată cu marker albastru e anulată.",
+  "content_type": "schema_tratament_manuscris + foto_cutii_medicamente",
+  "json_extras": "2025-11-10_schema_medicamente.json",
+  "chain_notes": "Prescriere cardiologică (post-stent + HTA + diabet). Se încadrează în profilul clinic al pacientului — medicația e consistentă cu istoricul.",
+  "privacy_level": "STANDARD — nume, semnătură medic",
+  "related_files": ["2025-11-10_schema_medicamente.json"]
+}

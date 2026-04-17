@@ -1,0 +1,94 @@
+{
+  "_metadata": {
+    "schema_version": "2.0",
+    "nume_fisier": "2025-11-10_schema_medicamente.json",
+    "tip_document": "schema_tratament_manuscris",
+    "specialitate": "Cardiologie / Medicină Internă",
+    "data_document": "2025-11-10",
+    "sursa_pdf": "2025-11-10_schema_medicamente_manuscris.jpeg",
+    "sursa_locatie": "documente_sursa/08_schema_tratament/",
+    "procesat_de": "Gemini",
+    "data_procesare": "2026-04-18",
+    "revizuit_de": "Claude_Opus_4.7",
+    "data_revizuire": "2026-04-18",
+    "ocr_quality": "partial",
+    "confidence_overall": "medium",
+    "flags": [
+      "migrated_from_v1",
+      "contains_manuscript",
+      "corrected_patient_name",
+      "ocr_errors_documented"
+    ],
+    "notes": "Sursa: talonul de recomandare scris de mână (foto) + foto cutii medicamente Aspenter, Concor, Triplixam, Jamesi. Pe manuscris medicul a scris numele pacientului ca 'PETRICĂ VIOREL' (transcriere eronată de medic — Regula 13). Corectat la 'PETRILĂ VIOREL-MIHAI' conform C.I. + restul dosarului (concordanță perfectă a medicației cu istoricul pacientului: Aspenter post-stent 2012 + Concor/Triplixam HTA + Jamesi=sitagliptin+metformin pentru diabet). Medic: Dr. LAZĂR [...nume parțial ilizibil]. O recomandare suplimentară (linia 4 pe talon) e tăiată cu marker albastru = anulată."
+  },
+  "pacient": {
+    "nume": "PETRILĂ",
+    "prenume": "VIOREL-MIHAI",
+    "cnp": "1590518024486",
+    "data_nasterii": "1959-05-18",
+    "varsta_la_data_document": 66,
+    "sex": "M",
+    "confidence_identificare": "high",
+    "note_identificare": "Manuscrisul original scrie 'PETRICĂ VIOREL'. Corectat prin cross-reference cu C.I. și context clinic (medicația se potrivește istoricului pacientului)."
+  },
+  "diagnostic": [],
+  "analize_laborator": [],
+  "tratament": [
+    {
+      "medicament_sau_procedura": "ASPENTER",
+      "substanta_activa": "acid acetilsalicilic",
+      "doza": "75 mg",
+      "frecventa": "0-1-0",
+      "moment_administrare": "prânz",
+      "indicatie": "antiagregant plachetar (post-stent coronarian 2012)",
+      "detalii_ambalaj": "28 comprimate gastrorezistente (conform foto cutie)",
+      "producator": "Terapia",
+      "confidence_ocr": "high"
+    },
+    {
+      "medicament_sau_procedura": "CONCOR",
+      "substanta_activa": "fumarat de bisoprolol",
+      "doza": "5 mg",
+      "frecventa": "1-0-0",
+      "moment_administrare": "dimineața",
+      "indicatie": "beta-blocant (cardioprotecție / HTA / frecvență cardiacă)",
+      "detalii_ambalaj": "60 comprimate filmate (conform foto cutie)",
+      "producator": "Merck",
+      "confidence_ocr": "high"
+    },
+    {
+      "medicament_sau_procedura": "TRIPLIXAM",
+      "substanta_activa": "perindopril arginine + indapamidă + amlodipină",
+      "doza": "10 mg / 2,5 mg / 5 mg",
+      "frecventa": "1-0-0",
+      "moment_administrare": "dimineața",
+      "indicatie": "antihipertensiv combinație triplă",
+      "detalii_ambalaj": "30 comprimate filmate (conform foto cutie)",
+      "confidence_ocr": "high"
+    },
+    {
+      "medicament_sau_procedura": "JAMESI",
+      "substanta_activa": "sitagliptin + clorhidrat de metformin",
+      "doza": "50 mg / 1000 mg",
+      "frecventa": "1-0-1",
+      "moment_administrare": "dimineața și seara",
+      "indicatie": "antidiabetic oral combinație (inhibitor DPP-4 + biguanidă)",
+      "detalii_ambalaj": "56 comprimate filmate (conform foto cutie)",
+      "producator": "Zentiva",
+      "confidence_ocr": "high",
+      "note": "CRITIC pentru pregătire CT cu contrast: componenta metformin trebuie oprită 48h înainte (risc acidoză lactică)."
+    },
+    {
+      "medicament_sau_procedura": "[MEDICAMENT_ANULAT]",
+      "detalii_originale": "linia 4 a talonului — tăiată cu marker albastru",
+      "confidence_ocr": "low",
+      "note": "Recomandare anulată de medic. Conținutul nu e lizibil sub tăieturi."
+    }
+  ],
+  "recomandari": [],
+  "medici_unitati": {
+    "medic_curant": "Dr. LAZĂR [...nume parțial ilizibil pe manuscris]",
+    "confidence_medic": "low",
+    "unitate": "de identificat"
+  }
+}

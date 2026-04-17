@@ -1,0 +1,51 @@
+{
+  "_metadata": {
+    "schema_version": "2.0",
+    "nume_fisier": "2025-11-01_talon_pensie_asigurare.json",
+    "tip_document": "talon_pensie_dovada_asigurare",
+    "specialitate": "Administrativ / Asigurări",
+    "data_document": "2025-11-01",
+    "luna_referinta": "2025-11",
+    "sursa_pdf": "2025-11-01_talon_pensie_scan.jpeg",
+    "sursa_locatie": "documente_sursa/10_administrativ_pensie/",
+    "procesat_de": "Gemini + Claude_Opus_4.7 (complementar foto talon)",
+    "data_procesare": "2026-04-18",
+    "ocr_quality": "partial",
+    "confidence_overall": "medium",
+    "flags": [
+      "migrated_from_v1",
+      "corrected_cnp",
+      "complemented_from_jpeg_scan"
+    ],
+    "notes": "Corecturi v1→v2: (1) CNP a fost '1590518244861' (Gemini OCR eronat pe cifre mici). Corectat la '1590518024486' conform C.I. + MRZ + 6 alte JSON-uri. (2) Îmbogățit cu date din Casa_judeteana_de_pensii.jpeg (scan talon original): CJP Arad, dosar 42/355336, total drepturi 3166, pensie 3204, impozit 18, CASS 20, puncte 39.54844, VPR 81.00. Confirmă statut de asigurat CASS pentru luna noiembrie 2025."
+  },
+  "pacient": {
+    "nume": "PETRILĂ",
+    "prenume": "VIOREL-MIHAI",
+    "cnp": "1590518024486",
+    "data_nasterii": "1959-05-18",
+    "varsta_la_data_document": 66,
+    "sex": "M",
+    "confidence_identificare": "high",
+    "note_identificare": "CNP parțial vizibil pe scan ('1590518...'); completat din C.I."
+  },
+  "diagnostic": [],
+  "analize_laborator": [],
+  "tratament": [],
+  "recomandari": [],
+  "administrativ": {
+    "casa_pensii": "Casa Județeană de Pensii Arad (CJP 021)",
+    "numar_dosar_pensie": "42/355336",
+    "luna_an_referinta": "11/2025",
+    "localitate_plata": "Nădlac, jud. Arad",
+    "total_drepturi_lei": 3166,
+    "pensie_bruta_lei": 3204,
+    "cass_lei": 20,
+    "impozit_lei": 18,
+    "total_puncte": 39.54844,
+    "vpr_lei": 81.0,
+    "legi_speciale": null,
+    "retineri_totale_lei": 38,
+    "categorie": "Pensionar — asigurat CASS"
+  }
+}

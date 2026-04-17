@@ -1,0 +1,39 @@
+{
+  "_metadata": {
+    "nume_fisier_recomandat": "Buletin_Gastroenterologie_17_04_2026.json",
+    "tip_document": "Buletin pentru examen gastroscopic si colonoscopic",
+    "specialitate": "Gastroenterologie",
+    "data_document": "17.04.2026"
+  },
+  "pacient": {
+    "nume": "PETRILA",
+    "prenume": "VIOREL MIHAI",
+    "cnp": null,
+    "data_nasterii": null,
+    "varsta": 66,
+    "sex": "M"
+  },
+  "diagnostic": [
+    {
+      "cod_icd10": null,
+      "descriere_oficiala": "PROCES PROLIFERATIV ESOFAGIAN"
+    },
+    {
+      "cod_icd10": null,
+      "descriere_oficiala": "POLIP COLON DESCENDENT"
+    },
+    {
+      "cod_icd10": null,
+      "descriere_oficiala": "BOALA HEMOROIDA"
+    },
+    {
+      "cod_icd10": null,
+      "descriere_oficiala": "Hemoroizi interni II"
+    }
+  ],
+  "analize_laborator": [],
+  "tratament": [],
+  "recomandari": [
+    "Revine pentru polipectomie"
+  ]
+}

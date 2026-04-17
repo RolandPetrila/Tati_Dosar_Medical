@@ -1,0 +1,175 @@
+{
+  "_manifest_metadata": {
+    "schema_version": "1.0",
+    "descriere": "Index cronologic al întregului dosar medical. Este punctul de intrare pentru orice AI care deschide dosarul — oferă harta completă a documentelor în 1 singur Read.",
+    "data_creare": "2026-04-18",
+    "data_ultima_actualizare": "2026-04-18",
+    "creat_de": "Claude_Opus_4.7",
+    "locatie_proiect": "C:\\Users\\ALIENWARE\\Desktop\\Roly\\.Tati\\",
+    "locatie_sincronizare": "G:\\My Drive\\Roly\\.Tati\\"
+  },
+  "pacient": {
+    "nume": "PETRILĂ",
+    "prenume": "VIOREL-MIHAI",
+    "cnp": "1590518024486",
+    "data_nasterii": "1959-05-18",
+    "sex": "M",
+    "ancora_identitate": "2023-06-12_carte_identitate.json"
+  },
+  "timeline": [
+    {
+      "data": "2012-02-17",
+      "eveniment": "Sindrom coronarian acut ST+ antero-septo-apical; tromboliza + angioplastie cu stent IVA la Vichy (Franța).",
+      "json_canonic": "2012-02-17_cardiologie_vichy_stent.json",
+      "document_sursa": "de_obtinut_din_arhiva_pacient",
+      "specialitate": "Cardiologie Intervențională",
+      "impact_continuu": "Aspirină pe termen lung post-stent"
+    },
+    {
+      "data": "2023-06-12",
+      "eveniment": "Emitere Carte de Identitate (SPCLEP Nădlac, seria ZR nr. 089382, valabilă până 2031-08-03).",
+      "json_canonic": "2023-06-12_carte_identitate.json",
+      "document_sursa": "documente_sursa/01_identitate/2023-06-12_carte_identitate.pdf",
+      "specialitate": "Administrativ"
+    },
+    {
+      "data": "2024-05-30",
+      "eveniment": "Episod clinic H. pylori cu internare și tratament (antibiotic + IPP). Raportat în CONTEXT_MEDICAL.md, fără document digitizat încă.",
+      "json_canonic": null,
+      "document_sursa": "de_obtinut_din_arhiva_spital",
+      "specialitate": "Medicină Internă / Gastroenterologie",
+      "status": "documentație incompletă"
+    },
+    {
+      "data": "2024-09-06",
+      "eveniment": "Serologie Anti-Helicobacter pylori IgG — rezultat >100 U/mL (referință 0-20). Semnifică expunere anterioară.",
+      "json_canonic": "2024-09-06_anti_helicobacter_pylori_igg.json",
+      "document_sursa": "neidentificat_in_Apr17_Doc",
+      "specialitate": "Laborator"
+    },
+    {
+      "data": "2025-06-17",
+      "eveniment": "Panel complet analize sânge (hemoleucogramă, biochimie, lipidogramă, electroliți, TSH, FT4, PSA). Glicemie crescută (136 mg/dL), HDL sub prag, eozinofile ușor crescute. Creatinină normală.",
+      "json_canonic": "2025-06-17_buletin_analize_sange.json",
+      "document_sursa": "neidentificat_in_Apr17_Doc",
+      "specialitate": "Laborator Clinic"
+    },
+    {
+      "data": "2025-10-28",
+      "eveniment": "Scrisoare medicală urologie/gastroenterologie: hidrocel drept, chiste epididimare bilaterale, hernie inghinală dreaptă, polip colon descendent, boală hemoroidală, mențiune proces proliferativ esofagian.",
+      "json_canonic": "2025-10-28_scrisoare_urologie_gastroenterologie.json",
+      "document_sursa": "neidentificat_in_Apr17_Doc",
+      "specialitate": "Urologie / Gastroenterologie"
+    },
+    {
+      "data": "2025-11-01",
+      "eveniment": "Talon pensie CJP Arad (luna 11/2025, dosar 42/355336, total drepturi 3166 lei). Dovadă status asigurat CASS.",
+      "json_canonic": "2025-11-01_talon_pensie_asigurare.json",
+      "document_sursa": "documente_sursa/10_administrativ_pensie/2025-11-01_talon_pensie_scan.jpeg",
+      "specialitate": "Administrativ / Asigurări"
+    },
+    {
+      "data": "2025-11-10",
+      "eveniment": "Schemă de tratament cardiovascular + diabet: Aspenter 75mg (post-stent), Concor 5mg (beta-blocant), Triplixam 10/2.5/5mg (HTA), Jamesi 50/1000mg (sitagliptin+metformin, diabet).",
+      "json_canonic": "2025-11-10_schema_medicamente.json",
+      "document_sursa": "documente_sursa/08_schema_tratament/2025-11-10_schema_medicamente_manuscris.jpeg",
+      "specialitate": "Cardiologie / Medicină Internă",
+      "critic_pre_CT": "Jamesi (conține metformin) — oprire 48h înainte de CT cu contrast."
+    },
+    {
+      "data": "2025-11-28",
+      "eveniment": "Externare Chirurgie Generală II: cură chirurgicală hernie inghinală dreaptă + aderențe peritoneale (+ probabil hidrocel și chiste epididimare conform scrisorii din 28.10.2025).",
+      "json_canonic": "2025-11-28_externare_chirurgie_hernie.json",
+      "document_sursa": "documente_sursa/07_hernie_2025_11/2025-11-28_externare_chirurgie_hernie.pdf",
+      "specialitate": "Chirurgie Generală",
+      "nota_dedup": "3 JSON-uri Gemini v1 fuzionate — originale în arhiva/duplicate_chirurgie_28_11_2025/"
+    },
+    {
+      "data": "2026-04-14",
+      "eveniment": "Ecografie abdominală — fără modificări vizibile. Nu vizualizează esofagul.",
+      "json_canonic": null,
+      "document_sursa": "de_obtinut",
+      "specialitate": "Imagistică / Ecografie",
+      "status": "documentație incompletă"
+    },
+    {
+      "data": "2026-04-17",
+      "eveniment": "KEY EVENT — Endoscopie digestivă superioară + colonoscopie la Genesis Medical Clinic Arad. Identificat PROCES PROLIFERATIV ESOFAGIAN. Biopsie prelevată. Polip colon descendent. Hemoroizi interni II. Bilet URGENȚĂ pentru CT stadializare (BCTAP 0631727).",
+      "json_canonic": "2026-04-17_buletin_gastroenterologie.json",
+      "document_sursa": "documente_sursa/09_endoscopie_2026_04/2026-04-17_buletin_endoscopie_colonoscopie.pdf",
+      "specialitate": "Gastroenterologie",
+      "medic": "Dr. Noufal Abdul Vahab",
+      "status": "biopsie în lucru"
+    }
+  ],
+  "evenimente_asteptate": [
+    {
+      "data_estimata": "2026-04-24 — 2026-05-01",
+      "eveniment": "Rezultat biopsie esofagiană (estimat 7-14 zile lucrătoare de la prelevare)",
+      "status": "în așteptare",
+      "actiune_declansata": "consult oncolog digestiv după primire"
+    },
+    {
+      "data_estimata": "maxim 2026-04-22",
+      "eveniment": "Efectuare CT torace+abdomen+pelvis cu contrast (Genesis Micălaca, URGENȚĂ)",
+      "status": "de programat",
+      "pregatire": "oprire Jamesi (metformin) 48h înainte, hidratare, verificare alergii iod"
+    }
+  ],
+  "index_fisiere_json_canonice": [
+    "2012-02-17_cardiologie_vichy_stent.json",
+    "2023-06-12_carte_identitate.json",
+    "2024-09-06_anti_helicobacter_pylori_igg.json",
+    "2025-06-17_buletin_analize_sange.json",
+    "2025-10-28_scrisoare_urologie_gastroenterologie.json",
+    "2025-11-01_talon_pensie_asigurare.json",
+    "2025-11-10_schema_medicamente.json",
+    "2025-11-28_externare_chirurgie_hernie.json",
+    "2026-04-17_buletin_gastroenterologie.json"
+  ],
+  "index_documente_sursa": [
+    "documente_sursa/01_identitate/2023-06-12_carte_identitate.pdf",
+    "documente_sursa/09_endoscopie_2026_04/2026-04-17_buletin_endoscopie_colonoscopie.pdf",
+    "documente_sursa/07_hernie_2025_11/2025-11-28_externare_chirurgie_hernie.pdf",
+    "documente_sursa/08_schema_tratament/2025-11-10_schema_medicamente_manuscris.jpeg",
+    "documente_sursa/10_administrativ_pensie/2025-11-01_talon_pensie_scan.jpeg",
+    "documente_sursa/99_altele/2026-04-17_doc_neidentificat_2.pdf",
+    "documente_sursa/99_altele/2026-04-17_doc_neidentificat_3.pdf",
+    "documente_sursa/99_altele/2026-04-17_doc_neidentificat_4.pdf",
+    "documente_sursa/99_altele/2026-04-17_doc_neidentificat_5.pdf",
+    "documente_sursa/99_altele/2026-04-17_doc_neidentificat_6.pdf",
+    "documente_sursa/99_altele/2026-04-17_doc_neidentificat_7.pdf"
+  ],
+  "lacune_cunoscute": [
+    {
+      "domeniu": "Cardiologie 2012",
+      "lacuna": "Document PDF original pentru dosarul Vichy 2012 nedigitizat; tipul exact al stentului (activ medicamentos vs. pasiv metalic) necunoscut.",
+      "prioritate": "P1"
+    },
+    {
+      "domeniu": "Helicobacter pylori 2024-05",
+      "lacuna": "Document externare pentru episodul din 30.05.2024 (internare) nedigitizat; schema de tratament exactă necunoscută.",
+      "prioritate": "P1"
+    },
+    {
+      "domeniu": "Ecografie 2026-04-14",
+      "lacuna": "Buletinul ecografic nu e încă în dosar.",
+      "prioritate": "P2"
+    },
+    {
+      "domeniu": "Antecedente hernie anterioară",
+      "lacuna": "O hernie operată anterior lui 2025, dată și documente necunoscute.",
+      "prioritate": "P2"
+    },
+    {
+      "domeniu": "Alergii",
+      "lacuna": "Status alergii iod / fructe de mare / medicamente — NECONFIRMAT. Critic pentru CT cu contrast.",
+      "prioritate": "P0"
+    },
+    {
+      "domeniu": "HbA1c",
+      "lacuna": "Valoare HbA1c recentă necunoscută; util pentru control diabet.",
+      "prioritate": "P1"
+    }
+  ]
+}

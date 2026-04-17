@@ -1,0 +1,35 @@
+# .gitignore — Dosar medical Petrilă Viorel-Mihai
+#
+# NOTA: conform STRUCTURA_PROIECT.md § "Git remote", .gitignore nu e
+# necesar funcțional (toate fișierele de proiect trebuie incluse).
+# Ignorăm doar artefactele OS / IDE care nu aparțin dosarului.
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Linux
+*~
+.Trash-*
+
+# Editor temp
+*.swp
+*.swo
+*~.tmp
+
+# IDE local
+.vscode/
+.idea/
+
+# Secrete (safety net — niciun fișier .env planificat, dar previne accidente)
+.env
+.env.*
+*.secret
+credentials.json

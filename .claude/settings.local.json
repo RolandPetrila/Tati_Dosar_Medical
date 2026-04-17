@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(cp ~/.claude/settings.json ~/.claude/backups/settings_pre-remote-control-fix_2026-04-18.json)",
+      "Read(//c/Users/ALIENWARE/.claude/backups/**)"
+    ]
+  }
+}

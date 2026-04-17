@@ -1,0 +1,16 @@
+{
+  "source_document": "2023-06-12_carte_identitate.pdf",
+  "received_date": "2025-06-22",
+  "received_date_note": "Data filesystem create/modify — poate fi diferită de data reală a primirii fotografiei.",
+  "received_from": "pacient (Petrilă Viorel-Mihai) prin familia / Roland Petrilă",
+  "digitized_by": "scanner/fotografie (singură pagină)",
+  "digitized_date": "2025-06-22",
+  "transcriber": "Claude_Opus_4.7",
+  "transcription_date": "2026-04-18",
+  "ocr_quality": "good",
+  "content_type": "carte_identitate_romana",
+  "json_extras": "2023-06-12_carte_identitate.json",
+  "chain_notes": "Document oficial de identitate. Ancora de verificare pentru toate celelalte documente din dosar (nume, CNP, data nașterii, domiciliu). Valabilitate până la 2031-08-03.",
+  "privacy_level": "CRITIC — conține CNP, serie CI, domiciliu",
+  "related_files": ["2023-06-12_carte_identitate.json"]
+}
