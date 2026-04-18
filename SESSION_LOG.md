@@ -6,6 +6,29 @@
 
 ---
 
+## 2026-04-18 03:11-03:31 — [Claude_Opus_4.7] cercetare-reactii-adverse + Regula-17
+
+**Scop:** răspuns la cererea utilizatorului pentru un raport detaliat despre reacțiile adverse la Jamesi (sitagliptin/metformin) și Triplixam (perindopril/indapamidă/amlodipină), livrat în format `.docx`, pentru un cititor fără pregătire medicală, cu marcaj explicit al certitudinii fiecărei afirmații.
+
+**Declanșator:** user a cerut raport + a solicitat adăugarea unei reguli care să impună marcarea informațiilor nesigure în outputul medical.
+
+**Operații:**
+
+- **Cercetare web (WEB_QUERIES.md Regula 15):** 3 query-uri WebSearch + 3 WebFetch + citire OCR PDF (pages 1-25). Surse primare folosite: SmPC Janumet (EMC UK), SmPC Triplixam (Servier 06.2021 + Rwanda FDA 2023), plus cross-check FDA / DailyMed / PMC review.
+- **Generare `.docx`:** scris un script Python (`generate_reactii_adverse_docx.py`, 700 linii) care folosește `python-docx 1.1.2` pentru a construi documentul programatic — cu titluri, tabele colorate, callout-uri de avertisment, marcaj certitudine colorat. Rulat → output `2026-04-18_raport_reactii_adverse_jamesi_triplixam.docx` (47 KB, ~30 pagini A4).
+- **Regula 17 în `CLAUDE.md`:** adăugată regulă nouă cu 4 marcaje ([CERT]/[PROBABIL]/[INCERT]/[NEGASIT]), 10 reguli operaționale, exemple corect/greșit. Operaționalizează R3 global pentru outputul medical al dosarului.
+- **Changelog `CLAUDE.md`:** intrare `v4` cu rezumatul Regulii 17.
+- **`WEB_QUERIES.md`:** intrare completă cu query-uri exacte, surse acceptate, surse respinse, date publicare, marcaje certitudine aplicate.
+- **Backup pre-modificare CLAUDE.md:** `Dosar_Medical/arhiva/versiuni_config/CLAUDE_pre-regula17_2026-04-18_0328.md` (Regula 10).
+
+**Fișiere modificate:** `CLAUDE.md`, `WEB_QUERIES.md`, `SESSION_LOG.md`, `CHANGELOG.md`, `Dosar_Medical/rapoarte_generate/generate_reactii_adverse_docx.py` (nou), `Dosar_Medical/rapoarte_generate/2026-04-18_raport_reactii_adverse_jamesi_triplixam.docx` (nou), `Dosar_Medical/arhiva/versiuni_config/CLAUDE_pre-regula17_2026-04-18_0328.md` (nou).
+
+**Observație cheie identificată:** combinația Jamesi (sitagliptin) + Triplixam (perindopril) are o interacțiune cunoscută — sitagliptin blochează DPP-4 (enzima care degradează substanța P), perindopril blochează ECA (care degradează bradikinina); acumularea ambelor crește riscul de angioedem. RCP Triplixam menționează explicit această interacțiune la secțiunea 4.5 „Gliptins". Raportul evidențiază această observație la Partea III.A ca atenționare critică pentru familie, fără a recomanda oprirea medicamentelor (decizia aparține medicului).
+
+**Fără impact asupra programului pre-CT.** Recomandările existente rămân valide: STOP Jamesi sâmbătă 18.04 ora 17:00; confirmare telefonică + întrebare Triplixam la radiolog duminică ~17:00.
+
+---
+
 ## 2026-04-18 03:10-03:15 — [Claude_Opus_4.7] remediere-audit-subclauza7
 
 **Scop:** remediere două probleme găsite de utilizator în audit paralel (info_tati.txt):

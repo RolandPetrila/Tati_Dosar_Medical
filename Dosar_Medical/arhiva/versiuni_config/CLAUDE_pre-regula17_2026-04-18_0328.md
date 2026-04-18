@@ -311,58 +311,6 @@ Pentru fiecare cercetare web care produce conținut introdus în dosar, log în 
 
 ---
 
-## Regula 17 — Marcaj certitudine pentru informații medicale în documente generate
-
-Pentru orice **document de ieșire** (raport, rezumat, interpretare, traducere prospect, comunicare pentru medici/familie, document destinat pacientului) care conține afirmații medicale factuale, **TOATE afirmațiile trebuie marcate cu nivel de certitudine**.
-
-**Cele 4 marcaje obligatorii:**
-
-| Marcaj         | Când se aplică                                                                                                                                                                                         |
-| -------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| **[CERT]**     | Confirmat din sursă primară autoritară: RCP ANMDMR / SmPC EMA, ghid clinic major (ESMO, NCCN, AJCC, AHA/ESC), studiu peer-reviewed major cu citare. Fiecare [CERT] are obligatoriu sursa identificată. |
-| **[PROBABIL]** | Susținut de literatura medicală generală (review articles, UpToDate, farmacologie standard), dar **nu explicit** în sursa primară relevantă. Se declară motivul.                                       |
-| **[INCERT]**   | Date conflictuale între surse, mecanism ipotezat, extrapolare de la studii pe populație diferită, sau lipsă de date specifice. Se declară ce anume e incert.                                           |
-| **[NEGASIT]**  | Am căutat în surse autoritare (cel puțin 2) și **nu am găsit** informația. Se declară **unde** s-a căutat.                                                                                             |
-
-**Reguli operaționale:**
-
-1. **Cifre, procente, frecvențe → [CERT] obligatoriu + sursă citată cu URL/referință + data versiunii documentului.** Fără sursă → nu se citează cifra.
-2. **Nume proprii de medicamente, doze exacte, intervale de referință → [CERT] obligatoriu.**
-3. **Mecanisme de acțiune și explicații farmacologice generale → [PROBABIL] acceptabil** dacă sunt din cunoașterea medicală standard.
-4. **La [PROBABIL] și [INCERT]:** declară motivul — ce anume lipsește sau ce anume e incert.
-5. **La [NEGASIT]:** declară **ce** surse ai consultat (ex: „verificat SmPC Servier 06.2021 + RCP ANMDMR + literatura EMA — fără rezultate").
-6. **Secțiune obligatorie „Surse citate"** la finalul fiecărui document medical, cu URL + data accesării + versiunea sursei.
-7. **Secțiune obligatorie „Ce NU am găsit" (transparență)** — listează întrebările pe care documentul nu le acoperă și ar trebui puse medicului curant.
-8. **Atenționare finală obligatorie** pentru documente destinate pacienților/familiei: „NU înlocuiește consultul medical."
-9. **Limită temporală (coroborează cu Regula 11):** SmPC / ghid clinic / studiu cu vechime > 12 luni → marchează „verificare versiune curentă recomandată" lângă sursă.
-10. **Sursă primară > sursă secundară.** Dacă Wikipedia / site comercial / blog / AI tool (inclusiv alt Claude / ChatGPT / Gemini) contrazic o sursă primară (SmPC / ghid), **sursa primară câștigă**. Nu se citează AI-ul ca sursă.
-
-**Bonus — format intern în document:**
-
-- Marcajele se scriu **la începutul paragrafului sau al afirmației** (nu la sfârșit).
-- Un paragraf care combină afirmații de certitudini diferite → se împarte în sub-paragrafe, fiecare cu propriul marcaj.
-- În tabele → coloană dedicată „Sursă" sau „Certitudine" dacă sunt multe rânduri.
-
-**Why:** o afirmație medicală incorectă într-un document destinat familiei poate influența o decizie clinică (ex: „nu-i mai dăm medicamentul, am citit că e periculos") fără validare medicală. Marcajul explicit forțează atât autorul (Claude/Gemini) cât și cititorul (familie/medic) să distingă fapte verificate de ipoteze / extrapolări. Regula supremă R3 a regulamentului global acoperă principiul general de „nu inventezi"; Regula 17 îl **operaționalizează** specific pentru outputul medical al acestui dosar.
-
-**How to apply:** la fiecare afirmație factuală dintr-un document medical de ieșire, rulează mental întrebarea: „Am sursă primară citabilă pentru asta?". Dacă da → [CERT] + citare. Dacă nu → [PROBABIL] / [INCERT] / [NEGASIT]. Niciodată nu lăsa afirmația neadnotată.
-
-**Exemplu corect:**
-
-> [CERT] Metforminul trebuie oprit cu 48h înainte de CT cu contrast iodat (RCP Janumet, secțiunea 4.4, Electronic Medicines Compendium UK, consultat 18.04.2026).
->
-> [PROBABIL] La pacienții vârstnici cu funcție renală la limită, pauza poate fi prelungită la 72h, deși RCP nu specifică explicit — convenție clinică.
->
-> [NEGASIT] Rata exactă a acidozei lactice la pacienții care au ignorat pauza de 48h — verificat SmPC + FDA label + nu există date consolidate dincolo de case reports.
-
-**Exemplu GREȘIT (nu se face):**
-
-> Metforminul se oprește 48h înainte. (fără marcaj, fără sursă)
->
-> Metforminul cauzează acidoza lactică la aproximativ 5% din pacienți. (cifră fără [CERT] + sursă — dacă nu e în RCP, cifra nu se folosește)
-
----
-
 ## Relația cu celelalte regulamente
 
 Regulile de aici **extind** (nu înlocuiesc):
@@ -377,7 +325,6 @@ La conflict direct pentru lucrul în `G:\My Drive\Roly\.Tati`, regulile din aces
 
 ## Changelog
 
-- **2026-04-18 v4:** adăugată Regula 17 (marcaj certitudine [CERT]/[PROBABIL]/[INCERT]/[NEGASIT] pentru informații medicale în documente generate). Trigger: user a cerut un raport despre reacții adverse Jamesi + Triplixam și a solicitat explicit ca informațiile nesigure să fie marcate ca atare; Regula 17 operaționalizează R3 global pentru outputul medical al dosarului.
 - **2026-04-18 v3.1:** clarificări Regula 16 sub-clauza 7 (timestamp narativ): adăugat câmp `_metadata.data_procesare` în lista fișierelor afectate; fix typo „intermediar" → „intermediare"; specificat frecvența rulării `date` (refresh >15 min); tabel format per fișier (SESSION_LOG/CHANGELOG trunchiat la `HH:MM`, JSON ISO 8601 complet). Trigger: audit utilizator care a detectat ambiguitățile și commit-ul 478048f nelogat în SESSION_LOG/CHANGELOG (remediat simultan).
 - **2026-04-18 v3:** adăugată Regula 16 (git auto-commit + push la finalul fiecărei sesiuni, după crearea repo-ului privat `RolandPetrila/Tati_Dosar_Medical`).
 - **2026-04-17 v2:** adăugate regulile 8-15 (OCR anti-halucinație, coordonare Gemini, backup pre-modificare, valabilitate clinică, conflict surse, manuscrise, chain of custody, web queries log); scoped regulile 6-7 pentru a elimina overhead pe decizii triviale.

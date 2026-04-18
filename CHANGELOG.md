@@ -4,6 +4,51 @@
 
 ---
 
+## 2026-04-18 03:31 — Raport reacții adverse Jamesi + Triplixam + Regula 17 (marcaj certitudine info medicală)
+
+**Tip:** ADAUGARE DOCUMENT NOU + MODIFICARE REGULAMENT
+
+**Fișiere afectate:**
+
+- `CLAUDE.md` — adăugată **Regula 17** (marcaj certitudine [CERT]/[PROBABIL]/[INCERT]/[NEGASIT] obligatoriu pentru outputul medical) + changelog intern `v4`
+- `WEB_QUERIES.md` — prima intrare reală: cercetare reacții adverse (Regula 15 aplicată integral)
+- `Dosar_Medical/rapoarte_generate/generate_reactii_adverse_docx.py` (nou) — generator Python-docx, ~700 linii
+- `Dosar_Medical/rapoarte_generate/2026-04-18_raport_reactii_adverse_jamesi_triplixam.docx` (nou) — raport final 47 KB, ~30 pagini
+- `Dosar_Medical/arhiva/versiuni_config/CLAUDE_pre-regula17_2026-04-18_0328.md` (nou) — backup Regula 10
+- `SESSION_LOG.md` + `CHANGELOG.md`
+
+**Declanșator:** utilizator a cerut raport detaliat despre reacțiile adverse la Jamesi și Triplixam, livrat în `.docx`, pentru un cititor fără pregătire medicală, cu exemple clare. A cerut explicit să fie marcate informațiile nesigure și să fie adăugată o regulă dedicată în regulament pentru acest aspect.
+
+**Operații aplicate:**
+
+1. **Cercetare web** (Regula 15) — 3 WebSearch + 3 WebFetch + citire PDF SmPC cu 25 pagini. Surse primare: SmPC Janumet 50/1000 (Electronic Medicines Compendium UK, 2024), SmPC Triplixam (Servier, versiunea 06.2021, plus copia Rwanda FDA 2023). Surse secundare de cross-check: FDA label Janumet 2017, DailyMed, PMC peer-reviewed review pe perindopril/indapamidă/amlodipină.
+2. **Observație clinică identificată:** interacțiune gliptin + IECA → risc angioedem crescut. Documentată explicit în RCP Triplixam secțiunea 4.5. Evidențiată la Partea III.A a raportului ca punct critic de urmărit de familie — fără recomandare de oprire (nu e contraindicație).
+3. **Generare `.docx`** — script Python autoexecutabil (`generate_reactii_adverse_docx.py`) folosind `python-docx 1.1.2`. Rulare reușită → 47 KB, ~30 pagini. Structură: copertă, rezumat 5 puncte, Partea I (Jamesi detaliat), Partea II (Triplixam detaliat), Partea III (interacțiuni specifice pacientului), Partea IV (checklist familie + când sună 112), Partea V (transparență: ce nu s-a găsit), Partea VI (surse citate cu URL + data accesării).
+4. **Regula 17 adăugată în `CLAUDE.md`:**
+   - 4 marcaje obligatorii ([CERT], [PROBABIL], [INCERT], [NEGASIT]) cu definiții precise
+   - 10 reguli operaționale (cifre obligatoriu [CERT] + sursă, secțiune „Ce NU am găsit", limită temporală > 12 luni, atenționare „nu înlocuiește consult medical", etc.)
+   - Exemple corect/greșit concrete
+   - Operaționalizează R3 din regulamentul global („nu inventezi nimic") specific pentru outputul medical
+5. **Backup pre-modificare** `CLAUDE.md` (Regula 10).
+6. **Logare în `WEB_QUERIES.md`** (Regula 15 — prima utilizare reală de la creare).
+
+**Marcaje certitudine în raport:**
+
+- [CERT]: ~75% din afirmații (citate direct din SmPC)
+- [PROBABIL]: ~10% "farmacologie standard nemensionată în SmPC"
+- [INCERT]: ~10% "ex: riscul cardiovascular al sitagliptin vs. saxagliptin — date mixte între TECOS și SAVOR-TIMI"
+- [NEGASIT]: ~5% "ex: rata numerică exactă a angioedemului la combinația sitagliptin + perindopril — semnalat ca întrebare pentru medicul curant"
+
+**Motiv generare documentului:** pacient + familie au nevoie de informații medicale înainte de CT luni 20.04 și înainte de eventual tratament post-biopsie; raportul îi ajută să recunoască simptomele care necesită intervenție (inclusiv urgențe 112) și reduce confuzia când medicul menționează termeni tehnici.
+
+**Atenționări incluse în raport:** secțiunea finală explicit „NU înlocuiește consultul medical"; fiecare pagină relevantă are callout colorat cu avertizare.
+
+**Sursă informație:** utilizator a cerut cercetarea; conținutul factual vine exclusiv din surse primare autoritare (SmPC Janumet + SmPC Triplixam + FDA + DailyMed + PMC).
+
+**Făcut de:** Claude Code (Opus 4.7, 1M context).
+
+---
+
 ## 2026-04-18 03:10 — Clarificări Regula 16 sub-clauza 7 + logare retroactivă commit 478048f
 
 **Tip:** CORECTIE + MODIFICARE
