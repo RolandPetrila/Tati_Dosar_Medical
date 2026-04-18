@@ -6,6 +6,30 @@
 
 ---
 
+## 2026-04-18 17:26 — [Claude_Opus_4.7] ghid-alimentatie
+
+**Scop:** creare `ALIMENTATIE.md` — ghid de inspirație pentru gătit acasă, cu 3 liste (recomandate / limitate / de evitat) + idei de mâncăruri, centrat pe produse locale Arad.
+
+**Declanșator:** user — `doresc sa stabilim si apoi sa intocmim o documentare informativa legata de alimentatia pe care trebuie sa o aiba...` (sesiune iterativă cu 3 runde de clarificare pentru structură + 1 rundă pentru regimul lactatelor).
+
+**Operații:**
+
+- `ALIMENTATIE.md` — generare inițială (ghid practic, nu medical), FĂRĂ timing de masă, FĂRĂ diagnoze/analize, FĂRĂ duplicare cu CONTEXT_MEDICAL
+- `CHANGELOG.md` — intrare 2026-04-18 17:26
+- `SESSION_LOG.md` — intrare curentă
+
+**Constraint-uri aplicate:**
+
+- Lactate: lapte dulce EXCLUS (directivă medic); unt/smântână puțin la gătit OK; iaurt/kefir/brânzeturi marcate ca „de clarificat cu medicul"
+- Specificitate regională: produse din zona Arad (pescării locale, livezi Peregu/Pâncota, miere Chișineu-Criș, piețe Mihai Viteazul/Podgoria)
+- Cauze explicate la „de evitat" — fără limbaj clinic excesiv, focus pe ce se întâmplă cu leziunea esofagiană / refluxul
+
+**Fișiere:** `ALIMENTATIE.md`, `CHANGELOG.md`, `SESSION_LOG.md`.
+
+**Făcut de:** Claude Code (Opus 4.7, 1M context).
+
+---
+
 ## 2026-04-18 14:12 — [Claude_Opus_4.7] pwa-minimal-dashboard
 
 **Scop:** adăugare suport PWA minimal (manifest + icons + meta tags) pentru `DASHBOARD.html` — permite „Add to Home Screen" cu icon și nume dedicate pe Android / iOS.
@@ -17,7 +41,7 @@
 - `manifest.webmanifest` — manifest PWA (start_url DASHBOARD.html, standalone, theme #1e40af)
 - `assets/icon-192.png` + `assets/icon-512.png` + `assets/icon-maskable-512.png` — generate prin `assets/generate_icons.py` (Pillow)
 - `assets/generate_icons.py` — script idempotent pentru regenerare
-- `DASHBOARD.html` — meta tags PWA în `<head>` (link manifest, theme-color, apple-mobile-web-app-*, icon, msapplication)
+- `DASHBOARD.html` — meta tags PWA în `<head>` (link manifest, theme-color, apple-mobile-web-app-\*, icon, msapplication)
 
 **Fișiere:** `manifest.webmanifest`, `assets/icon-192.png`, `assets/icon-512.png`, `assets/icon-maskable-512.png`, `assets/generate_icons.py`, `DASHBOARD.html`, `CHANGELOG.md`, `SESSION_LOG.md`.
 

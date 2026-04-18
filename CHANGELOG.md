@@ -4,6 +4,30 @@
 
 ---
 
+## 2026-04-18 17:26 — Ghid alimentație — `ALIMENTATIE.md`
+
+**Tip:** CREARE (fișier nou — ghid de inspirație pentru gătit)
+
+**Fișiere afectate:**
+
+- `ALIMENTATIE.md` — **NOU** — ghid practic de gătit grupat pe 3 liste (recomandate / limitate / de evitat) + idei concrete de mâncăruri, centrat pe produse locale Arad
+
+**Descriere:**
+
+- Document concis, focal pe alimentație (NU document medical)
+- 3 liste principale: 🟢 Recomandate · 🟡 Limitate · 🔴 De evitat
+- La „De evitat" — grupe cu cauză scurtă (iritante chimice, acide, pro-reflux, textură traumatică, carbogazoase, temperaturi extreme, mezeluri procesate, prăjeli, zahăr/făină rafinată, exces sare, interacțiuni medicație)
+- Secțiune „Idei de mâncăruri" — supe, carne și pește, garnituri, legume, tradiționale românești adaptate, mic dejun, gustări, dulciuri naturale
+- Specific Arad: pești de la pescăriile locale (șalău, biban, păstrăv), livezi Peregu/Pâncota/Ghioroc (mere Ionathan), miere de salcâm Chișineu-Criș, piețe Mihai Viteazul/Podgoria, brutării Aradul Nou
+- Respectă directiva medic (lapte EXCLUS), menționează iaurt/kefir/brânzeturi ca fiind de clarificat
+- FĂRĂ timing (ore de masă, prânz/cină), FĂRĂ diagnoze/analize, FĂRĂ duplicare cu CONTEXT_MEDICAL
+
+**Context cerere:** user a cerut explicit un ghid de inspirație pentru gătit, nu document medical. Structura finală a fost stabilită printr-un ciclu de clarificare (4 runde AskUserQuestion + feedback iterativ), cu 3 versiuni succesive de outline până la aprobarea formatului final.
+
+**Făcut de:** Claude Code (Opus 4.7, 1M context).
+
+---
+
 ## 2026-04-18 14:12 — PWA minimal pentru DASHBOARD.html (Add-to-Home-Screen)
 
 **Tip:** ADAUGARE (manifest + icons + meta tags PWA)
