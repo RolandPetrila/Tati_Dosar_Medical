@@ -4,6 +4,25 @@
 
 ---
 
+## 2026-04-18 17:43 — Secțiune menținere greutate în `ALIMENTATIE.md` + greutate ~79 kg în `CONTEXT_MEDICAL.md`
+
+**Tip:** EXTENSIE + ACTUALIZARE DATE PACIENT
+
+**Fișiere afectate:**
+
+- `ALIMENTATIE.md` — secțiune nouă `⚖️ Menținerea greutății (reper actual: ~79 kg)` adăugată între preambul și `🟢 Produse recomandate`; conține 4 sub-secțiuni: „Ce se întâmplă dacă scade în greutate", „Strategii pentru menținere", „Semnale de atenție (contact medic)", „Cum cântărim corect"
+- `CONTEXT_MEDICAL.md` — câmpul `Greutate` la secțiunea 1 (Date pacient) actualizat de la „De completat" la „~79 kg (aproximativ, declarat de familie 2026-04-18 — reper pentru monitorizare scădere)"
+
+**Context cerere:** user a cerut completarea ghidului cu referire la menținerea greutății, efecte adverse ale scăderii și cum reacționează corpul. Greutatea actuală (~79 kg) furnizată de familie. Restul structurii din `ALIMENTATIE.md` rămâne nemodificată („în rest îmi place cum arată").
+
+**Prag clinic calculat:** scădere peste 4 kg față de 79 kg ≈ 5% din greutatea de reper (prag standard pentru scădere ponderală semnificativă).
+
+**Notă despre dashboard:** secțiunea „Date pacient" din `DASHBOARD.html` conține acum valoare expirată pentru greutate (afișa „De completat"). De regenerat cu ocazia următoarei actualizări medicale sau la cerere explicită.
+
+**Făcut de:** Claude Code (Opus 4.7, 1M context).
+
+---
+
 ## 2026-04-18 17:26 — Ghid alimentație — `ALIMENTATIE.md`
 
 **Tip:** CREARE (fișier nou — ghid de inspirație pentru gătit)

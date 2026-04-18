@@ -6,6 +6,45 @@
 
 ---
 
+## ⚖️ Menținerea greutății (reper actual: ~79 kg)
+
+Obiectiv principal în perioada asta: **să nu scadă în greutate**. Motivul e simplu — corpul are nevoie de mai multă energie pentru vindecare și rezistență, iar apetitul scăzut plus simptomele esofagiene îl pot face să mănânce mai puțin decât ar trebui.
+
+### Ce se întâmplă dacă scade în greutate
+
+- Scade forța musculară → oboseală mai mare, mai puțină putere pentru lucruri simple de zi cu zi
+- Scade imunitatea → riscă mai ușor infecții (răceli, viroze, complicații)
+- Vindecarea țesutului merge mai lent
+- Mai greu de tolerat un eventual tratament după consultul oncolog
+- Corpul începe să consume întâi grăsimea, apoi masa musculară (cel mai rău lucru de pierdut la vârsta lui — forța se recuperează greu)
+
+### Strategii pentru menținerea greutății
+
+- **Mese mici și dese** — 5-6 mese mici sunt mai ușor de acceptat când apetitul e scăzut decât 3 mari
+- **Densitate calorică** — alimente care dau energie fără volum mare: avocado, ulei de măsline în mâncare, cartofi, paste, orez moale, banane bine coapte, ouă, miere puțin
+- **Proteine la fiecare masă** — fundamentale pentru păstrarea masei musculare: pește, pui, curcan, ouă, leguminoase pasate (linte fină, mazăre)
+- **Gustări programate, nu la foame** — nu aștepta să îi fie foame, poate să nu vină niciodată. Oferă o felie de pâine cu pate de avocado, banană pasată, compot cu biscuite moale, supă cremă
+- **Lichide hrănitoare în loc de apă simplă** — smoothie banană + lapte vegetal + ovăz + puțin ulei, supă cremă de dovleac, bulion de oase. Mai ușor de înghițit + multe calorii într-un volum mic
+- **Adaugă grăsimi bune discret** — 1 linguriță de ulei măsline în supă, puțin unt în piure, avocado pasat pe pâine, ulei măsline peste orez fiert. Calorii ascunse fără să modifice gustul major
+- **Gust peste cantitate** — dacă mănâncă mai puțin, măcar cu plăcere. Preparatele care îi plăceau înainte, adaptate la texturile permise
+
+### Semnale de atenție — contact medic
+
+- Scădere peste 2 kg în 2 săptămâni
+- Scădere peste 4 kg față de reperul de ~79 kg (aprox. 5% din greutate — prag clinic semnificativ)
+- Pierderea totală a poftei de mâncare mai mult de 3-4 zile la rând
+- Slăbiciune nouă, mai severă decât oboseala obișnuită de până acum
+- Imposibilitatea de a termina nici măcar mese mici
+
+### Cum cântărim corect
+
+- O dată pe săptămână, aceeași zi, aceeași oră
+- Dimineața după toaletă, înainte de micul dejun
+- Notare undeva simplu (telefon, foaie pe frigider)
+- **NU cântări zilnic** — fluctuațiile normale de 0.5-1 kg te pot speria inutil
+
+---
+
 ## 🟢 Produse recomandate
 
 ### Carne și pește

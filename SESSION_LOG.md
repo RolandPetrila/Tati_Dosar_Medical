@@ -6,6 +6,30 @@
 
 ---
 
+## 2026-04-18 17:43 — [Claude_Opus_4.7] extensie-mentinere-greutate
+
+**Scop:** completare `ALIMENTATIE.md` cu secțiune dedicată menținerii greutății (efecte adverse la scădere, strategii, semnale de atenție, cum cântărim) + reper antropometric (~79 kg) integrat în `CONTEXT_MEDICAL.md`.
+
+**Declanșator:** user — `poti sa faci referire si la incercarea mentinerii/pastrarii kilogramelor... acum are 79 kg aproximativ. in rest imi place cum arata.`
+
+**Operații:**
+
+- `ALIMENTATIE.md` — secțiune nouă `⚖️ Menținerea greutății` între preambul și listele de produse
+- `CONTEXT_MEDICAL.md` — câmp `Greutate` completat cu ~79 kg
+- `CHANGELOG.md` + `SESSION_LOG.md` — intrare 2026-04-18 17:43
+
+**Constraint-uri respectate:**
+
+- Structura `ALIMENTATIE.md` nemodificată în rest (user a zis „îmi place cum arată")
+- Fără diagnoze sau duplicare cu alte fișiere
+- Focal pe alimentație și monitorizare greutate
+
+**Fișiere:** `ALIMENTATIE.md`, `CONTEXT_MEDICAL.md`, `CHANGELOG.md`, `SESSION_LOG.md`.
+
+**Făcut de:** Claude Code (Opus 4.7, 1M context).
+
+---
+
 ## 2026-04-18 17:26 — [Claude_Opus_4.7] ghid-alimentatie
 
 **Scop:** creare `ALIMENTATIE.md` — ghid de inspirație pentru gătit acasă, cu 3 liste (recomandate / limitate / de evitat) + idei de mâncăruri, centrat pe produse locale Arad.
