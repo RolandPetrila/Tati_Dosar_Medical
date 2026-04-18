@@ -6,26 +6,24 @@
 
 ---
 
-## 2026-04-18 09:20-09:37 — [Claude_Opus_4.7] unificare-rapoarte-cercetare-pentru-CT
+## 2026-04-18 09:50 — [Claude_Opus_4.7] revert-stergere-cercetari-halucinate
 
-**Scop:** unificarea celor 4 rapoarte din `Cercetare/` (Claude, Gemini, ChatGPT, Grok — toate despre reactiile adverse Jamesi + Triplixam) intr-un singur document Word .docx detaliat, defalcat, explicat pentru un necunoscator. User a cerut explicit (in raspuns la AskUserQuestion) ca scope-ul sa fie STRICT Jamesi+Triplixam in contextul analizei CT din 20.04.2026 — fara structura suplimentara, fara digresiuni.
+**Scop:** stergerea folderului `Cercetare/` (decisa de user — cele 4 rapoarte AI au halucinat detalii) + retragere intrari log asociate sesiunii anterioare 09:20-09:37.
 
-**Declanșator:** user — `unifica documentatia din c:\Users\ALIENWARE\Desktop\Roly\.Tati\Cercetare si livreaza in word docx detaliat clar, defalcat, explicat ca pt un necunoscator, sa inteleg complet tot ce inseamna. intocmeste cercetare aprofundata suplimentara in toate sursele posibile.`
+**Declanșator:** user — `am sters folderul cu acele cercetari. am observat ca ai-urile au halucinat si au adaugat detalii pe care eu nu le-am mentionat. sterge din documentatie, ultimele actualizari pe care le-ai adaugat referitor la acele cercetari.`
 
 **Operații:**
 
-- **Citire 4 surse:** 2 .docx (Claude raport + Gemini) convertite cu python-docx; 2 PDF (ChatGPT 9 pag + Grok 5 pag) cu Read PDF nativ. ~150 KB text total procesat.
-- **Identificare 5 gap-uri pentru CT:** ghidurile ACR 2024 / ESUR 2025, protocol IECA+diuretic pre-CT, prag eGFR reluare metformin, PC-AKI factori risc, alergie contrast iodat (P0 inca neresolvat).
-- **Cercetare web suplimentara (4 WebSearch):** ACR Manual 2024, ESUR v10.0/2025, ACE-I pre-CT, PC-AKI prevention. Surse primare confirmate.
-- **Descoperire cheie:** ACR 2024 + ESUR 2025 NU mai cer oprirea metforminului la pacient cu eGFR ≥30 fara AKI. Pacientul are eGFR ~95 → conform ghidurilor actuale, oprirea NU ar fi necesara. Discrepanta SmPC vs ghid documentata transparent.
-- **Generare .docx (51 KB, ~25 pagini, 25 tabele):** script Python autoexecutabil cu python-docx 1.1.2; marcaje certitudine colorate ([CERT]/[PROBABIL]/[INCERT]/[NEGASIT]) conform Regula 17; structura cu Cronologie operationala, 7 intrebari pentru radiolog cu loc de scris raspuns, semne alarma 112, surse citate, ce NU am gasit.
-- **Logare in WEB_QUERIES.md** (a doua intrare reala dupa cea din 03:11).
+- Confirmat ca user a sters local folderul `Cercetare/` (5 fisiere D in git status).
+- Sters intrarea 09:20-09:37 din `SESSION_LOG.md` (sesiunea anterioara despre unificarea rapoartelor).
+- Sters intrarea 09:37 din `CHANGELOG.md`.
+- Sters intrarea 09:25-09:30 din `WEB_QUERIES.md` (cercetarea web suplimentara pe ghiduri ACR/ESUR).
+- Adaugat aceasta intrare scurta in cele 3 fisiere ca audit trail al stergerii.
+- Commit + push reflectand toate stergerile.
 
-**Fișiere modificate:** `Cercetare/2026-04-18_RAPORT_UNIFICAT_Jamesi_Triplixam_pentru_CT.docx` (nou), `WEB_QUERIES.md`, `SESSION_LOG.md`, `CHANGELOG.md`.
+**Fișiere modificate:** `Cercetare/` (5 fisiere sterse), `CHANGELOG.md`, `SESSION_LOG.md`, `WEB_QUERIES.md`.
 
-**Observatie cheie:** documentul unificat NU dubleaza raportul anterior din `Dosar_Medical/rapoarte_generate/`. Acela este raport general despre reactiile adverse pentru familie. Documentul unificat este utilitar specific pentru ziua CT — focus pe protocol pre/post CT, intrebari pentru radiolog, semne alarma post-CT, hidratare. Cele doua sunt complementare.
-
-**Fără impact asupra cronologiei pre-CT.** Recomandarile existente (STOP Jamesi sambata 18.04 ora 17:00, hidratare duminica, reluare miercuri 22.04 ora 17:00 dupa creatinina normala) raman valide.
+**NU s-a sters:** `Dosar_Medical/rapoarte_generate/2026-04-18_raport_reactii_adverse_jamesi_triplixam.docx` (sesiunea 03:11-03:31). Acel raport e generat direct din surse primare RCP/SmPC, nu din cele 4 rapoarte AI halucinate. Daca user va cere si stergerea, operatie separata.
 
 ---
 

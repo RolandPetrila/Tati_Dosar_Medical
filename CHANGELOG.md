@@ -4,41 +4,20 @@
 
 ---
 
-## 2026-04-18 09:37 — Raport unificat Jamesi + Triplixam pentru CT 20.04.2026
+## 2026-04-18 09:50 — REVERT: stergere folder Cercetare/ + retragere intrari log
 
-**Tip:** ADAUGARE DOCUMENT NOU (unificare 4 rapoarte AI + cercetare web suplimentara)
+**Tip:** STERGERE FISIERE + REVERT INTRARI LOG (la cererea explicita a user-ului)
 
 **Fișiere afectate:**
 
-- `Cercetare/2026-04-18_RAPORT_UNIFICAT_Jamesi_Triplixam_pentru_CT.docx` (nou) — document Word, 51 KB, ~25 pagini A4, 25 tabele, focus strict pe contextul CT cu contrast iodat 20.04.2026
-- `WEB_QUERIES.md` — intrare noua: cercetare web pe ghiduri internationale (ACR 2024, ESUR 2025, IECA/diuretic pre-CT, PC-AKI prevention)
-- `SESSION_LOG.md` + `CHANGELOG.md`
+- `Cercetare/` (folder) — STERS de user; commit reflectat: 5 fisiere D (4 rapoarte AI sursa + raportul unificat generat la 09:37)
+- `CHANGELOG.md`, `SESSION_LOG.md`, `WEB_QUERIES.md` — sterse intrarile asociate sesiunii 09:20-09:37
 
-**Declanșator:** utilizator a cerut unificarea documentatiei din `Cercetare/` (4 rapoarte AI: Claude `2026-04-18_raport_reactii_adverse_jamesi_triplixam.docx`, Gemini `gemini tati.docx`, ChatGPT `Raport asupra reactiilor adverse...pdf`, Grok `grok_report.pdf`) intr-un document Word detaliat, defalcat, explicat pentru un necunoscator + cercetare aprofundata suplimentara. La intrebarile de clarificare (AskUserQuestion), a precizat: scope strict Jamesi+Triplixam, doar ce e relevant pentru CT, fara structura suplimentara.
+**Declanșator:** user — `am sters folderul cu acele cercetari. am observat ca ai-urile au halucinat si au adaugat detalii pe care eu nu le-am mentionat. sterge din documentatie, ultimele actualizari pe care le-ai adaugat referitor la acele cercetari.`
 
-**Operații aplicate:**
+**Motiv:** cele 4 rapoarte AI din `Cercetare/` (Claude/Gemini/ChatGPT/Grok) au inclus detalii halucinate / neverificate. Documentul unificat generat la 09:37 s-a bazat partial pe acele surse. User a decis sa renunte complet la materialul respectiv.
 
-1. **Citire integrala 4 rapoarte sursa** — extragere text din 2 .docx (python-docx) + 2 .pdf (Read PDF nativ). Total: ~150 KB text procesat.
-2. **Identificare gap-uri pentru CT** — sintetizat 5 gap-uri reale fata de continutul existent: (a) ghidurile ACR 2024 / ESUR 2025 (rapoartele citeaza doar SmPC 2021), (b) protocol IECA + diuretic pre-CT, (c) prag eGFR exact pentru reluare metformin, (d) PC-AKI factori de risc actuali, (e) status alergie contrast iodat (P0 din CONTEXT_MEDICAL).
-3. **Cercetare web suplimentara (4 WebSearch)** — surse primare: ACR Manual on Contrast Media 2024 (Geisel/Dartmouth disponibil online), ESUR Guidelines on Contrast Agents v10.0 + 2025, Frontiers in Medicine meta-analiza 2025, PMC3925541 (ACE-I/ARB pre-contrast), PMC11229940 (CIN prevention 2024). Detalii in WEB_QUERIES.md.
-4. **Descoperire critica neacoperita in cele 4 rapoarte:** ACR 2024 + ESUR 2025 NU mai cer oprirea metforminului la pacient cu eGFR ≥30 si fara AKI. Pacientul are eGFR ~95 (CKD G1) → conform ghidurilor internationale actuale, oprirea NU ar fi necesara. DAR medicul curant a indicat oprirea (decizie conservatoare, respectata) — documentat transparent in raport ca discrepanta SmPC vs ghid actual.
-5. **Generare .docx** — script Python (python-docx 1.1.2), 25 pagini, 25 tabele, marcaje certitudine colorate ([CERT]/[PROBABIL]/[INCERT]/[NEGASIT]) conform Regula 17. Structura: Cover + atentionare, Cum se citeste, Rezumat 5 puncte, Cronologie operationala (cea mai importanta pagina), Partea I (Jamesi: metformin + sitagliptin), Partea II (Triplixam: perindopril + indapamida + amlodipina), Partea III (interactiuni critice — 3 mecanisme cumulate), Partea IV (hidratare optima), Partea V (7 intrebari obligatorii pentru radiolog cu loc de scris raspuns), Partea VI (semne alarma 112 post-CT), Partea VII (surse citate cu URL), Partea VIII (ce NU am gasit — transparenta), Atentionare finala.
-6. **Logare in WEB_QUERIES.md** (Regula 15 — a doua intrare reala).
-
-**Marcaje certitudine in raport:**
-
-- [CERT] dominant — fiecare cifra/doza/frecventa cu sursa primara explicit citata (RCP/SmPC/ACR/ESUR/PMC).
-- [PROBABIL] minim — extrapolari farmacologice acceptate (ex: angioedem mediat bradikinina raspunde la icatibant).
-- [INCERT] specific — decizia individuala oprire/continuare Triplixam in ziua CT (apartine radiologului); pragul exact creatinina post-CT.
-- [NEGASIT] explicit — alergie contrast (P0 neresolvat), tipul exact al contrastului iodat care va fi folosit, RCP-ul ANMDMR Janumet curent in romana.
-
-**Observatii cheie:**
-
-- Cele 4 rapoarte sursa au fost complementare, NU contradictorii: Claude — clinic structurat cu marcaje, Gemini — pedagogic cu analogii excelente, ChatGPT — comprehensiv tehnic, Grok — sinteza scurta cu ciclul Cori. Documentul unificat extrage ce e RELEVANT pentru CT din toate.
-- Document NU e un nou „raport de reactii adverse" — e un document specific pentru pregatirea CT-ului din 20.04.2026. Documentul anterior (din Dosar_Medical/rapoarte_generate/) ramane valid ca raport general; documentul unificat este utilitar pentru ziua CT.
-- Includerea celor 7 intrebari pentru radiolog cu loc de scris raspuns transforma documentul intr-un instrument practic pentru luni dimineata, nu doar informativ.
-
-**Sursă informație:** 4 rapoarte AI existente in Cercetare/ + cercetare web suplimentara pe ghiduri actuale.
+**NU s-a sters:** raportul `Dosar_Medical/rapoarte_generate/2026-04-18_raport_reactii_adverse_jamesi_triplixam.docx` (sesiunea 03:11-03:31) — acela e generat direct din surse primare RCP/SmPC, NU se baza pe cele 4 rapoarte AI halucinate. Daca user va cere si stergerea acelui raport — operatie separata.
 
 **Făcut de:** Claude Code (Opus 4.7, 1M context).
 

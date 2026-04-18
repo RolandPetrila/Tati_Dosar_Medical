@@ -26,50 +26,9 @@
 
 ## Intrări
 
-## 2026-04-18 09:25-09:30 — ghiduri-internationale-CT-contrast-pacient-pe-metformin-IECA-diuretic
+## 2026-04-18 09:50 — RETRAGERE intrare 09:25-09:30
 
-- **Scop:** identificarea gap-urilor in cele 4 rapoarte AI existente despre Jamesi+Triplixam, prin verificarea ghidurilor internationale actuale (ACR 2024, ESUR 2025) — pentru a putea adauga in raportul unificat informatiile lipsa relevante CT-ului din 20.04.2026.
-- **Instrumente folosite:** `WebSearch` (4 query-uri).
-- **Queries exacte:**
-  1. `"ESUR guidelines contrast media 2024 metformin recommendation eGFR"` — WebSearch
-  2. `"ACR manual contrast media 2024 metformin discontinuation iodinated contrast"` — WebSearch
-  3. `"ACE inhibitor diuretic continue or hold before iodinated contrast CT scan 2024"` — WebSearch
-  4. `"post-contrast acute kidney injury PC-AKI prevention 2024 hydration protocol"` — WebSearch
-- **Surse acceptate (CERT, sursă primară):**
-  - https://www.esur.org/wp-content/uploads/2025/12/Guidelines-2025-ESUR-vf-1.pdf — **ESUR Contrast Media Safety Committee Guidelines 2025**. Motiv: ghidul european oficial al European Society of Urogenital Radiology, versiune cea mai recenta. Data publicarii: decembrie 2025.
-  - https://adus-radiologie.ch/files/ESUR_Guidelines_10.0.pdf — **ESUR Guidelines on Contrast Agents v10.0**. Motiv: copie oficiala accesibila a ghidului ESUR v10.0. Data: anterioara versiunii 2025, complementara.
-  - https://geiselmed.dartmouth.edu/radiology/wp-content/uploads/sites/47/2024/08/ACR-contrast-2024.pdf — **ACR Manual on Contrast Media versiunea 2024**. Motiv: ghidul american oficial al American College of Radiology, publicat iulie 2024. Cea mai recenta versiune comprehensiva.
-  - https://www.acr.org/Clinical-Resources/Clinical-Tools-and-Reference/Contrast-Manual — **ACR Manual on Contrast Media (oficial portal)**. Motiv: confirma versiunea curenta.
-- **Surse acceptate (CERT, peer-reviewed):**
-  - https://www.frontiersin.org/journals/medicine/articles/10.3389/fmed.2025.1547725/full — **Frontiers in Medicine: Systematic review and meta-analysis of guidelines on metformin + contrast media in diabetic patients**. Motiv: meta-analiza recenta 2025, peer-reviewed open access.
-  - https://pmc.ncbi.nlm.nih.gov/articles/PMC3925541 — **PMC: ACE-I/ARB Therapy prior to Contrast Exposure: What Should the Clinician Do?**. Motiv: review clinical relevant.
-  - https://pmc.ncbi.nlm.nih.gov/articles/PMC5986837 — **PMC: Post-contrast acute kidney injury Part 2 (ESUR recommendations)**. Motiv: documentul de referinta pentru PC-AKI prevention.
-  - https://pmc.ncbi.nlm.nih.gov/articles/PMC11229940 — **PMC: Comprehensive overview of CIN prevention 2024**. Motiv: review actual.
-  - https://www.jacc.org/doi/10.1016/j.jcin.2023.03.025 — **JACC Cardiovascular Interventions 2023: Simplified Rapid Hydration**. Motiv: studiu randomizat.
-  - https://pubmed.ncbi.nlm.nih.gov/22322819/ — **PubMed: ACE inhibitor or ARB use as risk factor for CIN**. Motiv: cross-check evidenta.
-- **Surse respinse:**
-  - https://www.contrast-connect.com/blog-post/acr-manual-on-contrast-media-2025-guidelines-explained — blog comercial / agregator, nu sursa primara.
-  - https://www.scribd.com/... — agregator de PDF-uri.
-  - https://emedicine.medscape.com/article/246751-treatment — bibliografie tertiara, doar pentru cross-check informational, nu sursa citabila.
-  - https://www.fellahealth.com/... — site comercial.
-  - https://www.stroke-manual.com/... — manual specializat stroke, nu pertinent CT general.
-- **Concluzii integrate in document:**
-  - **Descoperire principala:** ACR 2024 + ESUR 2025 nu mai cer oprirea metforminului la pacient cu eGFR ≥30 si fara AKI. Pacientul are eGFR ~95 (CKD G1, calculat din creatinina 0.83 mg/dL la varsta 66 ani). Conform ghidurilor actuale → oprirea NU ar fi necesara. Documentat in raport ca DISCREPANTA intre RCP Janumet (cere 48h pauza) si ghidurile internationale 2024-2025. Decizia medicului curant (oprire conservatoare) este RESPECTATA si JUSTIFICATA prin combinatia particulara cu Triplixam (indapamida = diuretic care potenteaza nefrotoxicitatea contrastului).
-  - **IECA si diuretic pre-CT:** dovezi MIXTE — practica curenta este continuare cu hidratare adecvata. Decizia individuala apartine radiologului. Documentat in raport ca [INCERT] cu intrebare explicita pentru radiolog (Sectiunea V).
-  - **PC-AKI prevention 2024:** singura profilaxie dovedita = hidratare. Pacientii cu eGFR ≥30 NU necesita hidratare IV obligatorie. Hidratarea orala (1.5-2 L apa plata) este la fel de eficienta ca cea IV pentru pacientii cu functie renala buna. Pentru pacientul Petrila → hidratarea orala duminica 19.04 este suficienta.
-- **Concluzie integrata in:** `Cercetare/2026-04-18_RAPORT_UNIFICAT_Jamesi_Triplixam_pentru_CT.docx` (Partea I.1 Metformin, Partea II.4 Indapamida, Partea III.3 PC-AKI, Partea IV Hidratare).
-- **Marcaje certitudine folosite:** [CERT] dominant pentru recomandarile ghidurilor; [INCERT] pentru deciziile individuale (oprire/continuare Triplixam ziua CT, prag exact creatinina reluare metformin).
-- **Data publicării materialelor sursă:**
-  - ACR Manual: iulie 2024
-  - ESUR Guidelines: v10.0 + decembrie 2025
-  - Frontiers meta-analiza: 2025
-  - PMC reviews: 2014-2024
-  - JACC: 2023
-- **Încredere concluzie:** high (surse primare ghiduri oficiale + cross-check meta-analize peer-reviewed).
-- **Observații:**
-  - Niciuna din cele 4 rapoarte AI sursa (Claude, Gemini, ChatGPT, Grok) NU mentiona ACR 2024 sau ESUR 2025. Toate citau SmPC Janumet (varianta clasica cu 48h). Aceasta cercetare web suplimentara a adus o informatie cu impact clinic real (modernizarea ghidurilor face oprirea de 48h o decizie conservatoare, nu o cerinta absoluta).
-  - Pacientul are functie renala excelenta (eGFR 95 = CKD G1). Asta inseamna risc PC-AKI MIC. Documentat in raport ca RISC MIC, fara minimizare a precautiei pre-CT (hidratare ramane obligatorie).
-  - SmPC-ul Janumet ramane sursa primara pentru pacient — daca prospectul cere 48h, asta urmeaza. Ghidurile internationale sunt informative, nu prescriptive direct catre pacient.
+Intrarea anterioara (cercetare web pe ghiduri ACR 2024 / ESUR 2025) a fost RETRASA la cererea user-ului dupa ce a sters folderul `Cercetare/` (rapoartele AI care au alimentat acea cercetare au halucinat). Cercetarea respectiva nu mai are output activ in proiect — documentul unificat care o folosea a fost si el sters.
 
 ---
 
