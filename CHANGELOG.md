@@ -4,6 +4,35 @@
 
 ---
 
+## 2026-04-18 14:12 — PWA minimal pentru DASHBOARD.html (Add-to-Home-Screen)
+
+**Tip:** ADAUGARE (manifest + icons + meta tags PWA)
+
+**Fișiere afectate:**
+
+- `manifest.webmanifest` — **NOU** — manifest PWA minimal (nume, short_name, start_url DASHBOARD.html, display standalone, theme_color #1e40af, 3 icons)
+- `assets/icon-192.png` — **NOU** — icon 192×192 (cruce medicală albă pe fond albastru, colțuri rotunjite)
+- `assets/icon-512.png` — **NOU** — icon 512×512 (același design)
+- `assets/icon-maskable-512.png` — **NOU** — icon 512×512 cu safe-zone pentru Android maskable
+- `assets/generate_icons.py` — **NOU** — script Python (Pillow) pentru regenerarea iconurilor; idempotent, rulabil la nevoie
+- `DASHBOARD.html` — adăugate meta tag-uri PWA în `<head>`: link manifest, theme-color, apple-mobile-web-app-\*, apple-touch-icon, icon generic, msapplication-TileColor
+
+**Descriere:**
+
+- PWA „adevărat" (service worker, install prompt, offline cache dedicat) NU funcționează din Google Drive / `file://` — cere origine HTTPS
+- Implementare minimală (opțiunea A din discuție): când user face „Add to Home Screen" manual din Chrome / Safari, scurtătura are nume corect („Dosar .Tati"), icon rotunjit cu cruce medicală, bară de sus albastră în standalone
+- Hosting-ul medical pe web (opțiunea B) refuzat — compromis privacy inacceptabil pentru dosar medical real
+- Design icon: cruce medicală albă pe albastru primary (#1e40af) — coerent cu paleta dashboardului
+
+**Utilizare:**
+
+- Android: deschide `DASHBOARD.html` în Chrome → meniu (⋮) → „Add to Home screen" / „Adaugă la ecranul de pornire" → apare iconul
+- iOS: Safari → share → „Add to Home Screen" → apare iconul
+
+**Făcut de:** Claude Code (Opus 4.7, 1M context).
+
+---
+
 ## 2026-04-18 14:01 — Generare DASHBOARD.html + Regula 18 (sincronizare dashboard)
 
 **Tip:** CREARE (DASHBOARD.html) + MODIFICARE REGULAMENT (CLAUDE.md — Regula 18)

@@ -6,6 +6,25 @@
 
 ---
 
+## 2026-04-18 14:12 — [Claude_Opus_4.7] pwa-minimal-dashboard
+
+**Scop:** adăugare suport PWA minimal (manifest + icons + meta tags) pentru `DASHBOARD.html` — permite „Add to Home Screen" cu icon și nume dedicate pe Android / iOS.
+
+**Declanșator:** user — `adauga pwa` (confirmare opțiunea A după R-COLLAB: hosting web refuzat pentru confidențialitate date medicale).
+
+**Operații:**
+
+- `manifest.webmanifest` — manifest PWA (start_url DASHBOARD.html, standalone, theme #1e40af)
+- `assets/icon-192.png` + `assets/icon-512.png` + `assets/icon-maskable-512.png` — generate prin `assets/generate_icons.py` (Pillow)
+- `assets/generate_icons.py` — script idempotent pentru regenerare
+- `DASHBOARD.html` — meta tags PWA în `<head>` (link manifest, theme-color, apple-mobile-web-app-*, icon, msapplication)
+
+**Fișiere:** `manifest.webmanifest`, `assets/icon-192.png`, `assets/icon-512.png`, `assets/icon-maskable-512.png`, `assets/generate_icons.py`, `DASHBOARD.html`, `CHANGELOG.md`, `SESSION_LOG.md`.
+
+**Făcut de:** Claude Code (Opus 4.7, 1M context).
+
+---
+
 ## 2026-04-18 14:01 — [Claude_Opus_4.7] generare-dashboard-html-si-regula-18
 
 **Scop:** adăugare `DASHBOARD.html` (vizualizare rapidă a dosarului pentru familie) + codificare Regula 18 în CLAUDE.md (sincronizare dashboard la fiecare actualizare medicală relevantă).
