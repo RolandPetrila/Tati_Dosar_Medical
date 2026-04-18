@@ -6,6 +6,26 @@
 
 ---
 
+## 2026-04-18 18:22 — [Claude_Opus_4.7] optimizare-mobile-dashboard
+
+**Scop:** optimizare `DASHBOARD.html` pentru Android + iOS conform iOS HIG + Android Material. Rezolvare confuzie user despre „update-ul nu apare pe telefon" (cauză: fișier snapshot trimis pe WhatsApp, nu din Drive).
+
+**Declanșator:** user — `vreau sa adaptezi acest dashbord pt utilizare pe android in mod special si pe iphone... deocamdata nu imi apare actualizarea pe telefon. aveam trimis dashbord-ul pe whatsapp...`
+
+**Operații:**
+
+- `DASHBOARD.html` — viewport-fit=cover, status-bar=black-translucent, safe-area padding, font-smoothing, tap-highlight, @media 768px extins, @media 380px nou, touch feedback, PWA standalone overrides; timestamp „Ultima generare" + `lastRegen` actualizate
+- `manifest.webmanifest` — `display_override` + `categories`
+- `CHANGELOG.md` + `SESSION_LOG.md` — intrare 2026-04-18 18:22
+
+**Explicație pentru user (problema WhatsApp):** fișierul trimis pe WhatsApp e un snapshot static; modificările pe Drive nu se propagă acolo. Soluție recomandată: acces direct prin Google Drive app → Add-to-Home-Screen pentru PWA standalone.
+
+**Fișiere:** `DASHBOARD.html`, `manifest.webmanifest`, `CHANGELOG.md`, `SESSION_LOG.md`.
+
+**Făcut de:** Claude Code (Opus 4.7, 1M context).
+
+---
+
 ## 2026-04-18 17:58 — [Claude_Opus_4.7] tab-alimentatie-dashboard
 
 **Scop:** adăugare tab „Alimentație" dedicat în `DASHBOARD.html`, separat de conținutul medical existent; conținut populat din `ALIMENTATIE.md` cu strategie hibridă fetch live + fallback embedded; extindere Regula 18 cu declanșator #9.

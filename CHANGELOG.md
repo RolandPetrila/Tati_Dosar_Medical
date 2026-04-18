@@ -4,6 +4,58 @@
 
 ---
 
+## 2026-04-18 18:22 — Optimizare `DASHBOARD.html` pentru Android + iOS
+
+**Tip:** OPTIMIZARE MOBILE (prezentare, fără schimbări conținut)
+
+**Fișiere afectate:**
+
+- `DASHBOARD.html` — optimizare cu standardele iOS HIG + Android Material
+- `manifest.webmanifest` — `display_override` (fallback chain) + `categories` (medical/health/productivity)
+
+**Modificări tehnice:**
+
+1. **Viewport + meta tags:**
+   - `viewport-fit=cover` (iPhone notch / Dynamic Island edge-to-edge)
+   - `apple-mobile-web-app-status-bar-style=black-translucent` (iOS overlap sub status bar)
+   - `color-scheme=light`, `format-detection=telephone=yes`, `mobile-web-app-capable` (Android)
+2. **Safe-area CSS (`env(safe-area-inset-*)`):**
+   - Padding `.wrap` folosește `max(base, env(...))` pe toate 4 laturile
+   - Funcționează pe iPhone X+, iPad, dispozitive Android cu cutout
+3. **Font smoothing + touch behavior:**
+   - `-webkit-font-smoothing: antialiased` (render mai curat pe Retina/AMOLED)
+   - `-webkit-tap-highlight-color: transparent` (elimină flash-ul galben la tap iOS/Android)
+   - `scroll-behavior: smooth`, `-webkit-text-size-adjust: 100%` (previne auto-resize iOS Safari)
+   - `overflow-x: hidden` pe body (previne scroll orizontal accidental)
+   - `min-height: 100dvh` (dynamic viewport — corectează problema URL bar Safari)
+4. **Mobile breakpoint extins (max-width: 768px):**
+   - Grid single-column, gap 14px
+   - Header compact: padding 18px, h1 19px, sub 12.5px, meta vertical
+   - Countdown-bar: stacked vertical, timer 26px aliniat dreapta
+   - Tabs sticky top cu shadow (navigare rapidă în scroll lung)
+   - Tab-btn min-height 48px (Material touch target) + flex:1 (spațiu egal)
+   - Carduri overflow-x auto cu `-webkit-overflow-scrolling: touch` (tabele scrollable orizontal pe telefon)
+   - KV layout single-column cu label uppercase minuscul deasupra valorii
+   - Font-size ajustat pe md-content, alert, timeline, footer
+5. **Breakpoint secundar (max-width: 380px):** iPhone SE, Android compact — h1 17px, timer 22px
+6. **Touch device pseudo-class (`hover: none, pointer: coarse`):** feedback vizual la `.tab-btn:active` (scale 0.98 + bg)
+7. **PWA standalone mode (`display-mode: standalone`):**
+   - `user-select: none` pe body (simulează nativ app)
+   - Excepție: `.md-content`, tabele — text selectabil pentru copy
+8. **manifest.webmanifest:**
+   - `display_override`: fallback chain standalone → minimal-ui → browser
+   - `categories`: clasificare pentru app stores / search
+
+**Notă despre actualizare pe telefon:**
+
+- Fișierul trimis pe WhatsApp e SNAPSHOT static — nu reflectă modificările ulterioare
+- Recomandare user: acces prin Google Drive app → tap `DASHBOARD.html` → deschide cu Chrome/Safari → (opțional) Add-to-Home-Screen
+- În standalone mode (după Add-to-Home), aplicația pornește full-screen cu icon dedicat
+
+**Făcut de:** Claude Code (Opus 4.7, 1M context).
+
+---
+
 ## 2026-04-18 17:58 — Tab „Alimentație" în `DASHBOARD.html` + Regula 18 extinsă (v6)
 
 **Tip:** EXTENSIE DASHBOARD + EXTENSIE REGULAMENT
