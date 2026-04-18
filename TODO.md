@@ -213,6 +213,8 @@ Pentru evaluare mai precisă a expunerii (calculul „pachete-an”).
 
 ## Acțiuni finalizate (arhivă recentă)
 
+- ✅ **18.04.2026 03:31**: Raport reacții adverse Jamesi + Triplixam generat în format `.docx` — `Dosar_Medical/rapoarte_generate/2026-04-18_raport_reactii_adverse_jamesi_triplixam.docx` (47 KB, ~30 pagini). Marcaj certitudine conform Regula 17 nouă. Observație clinică documentată: combinație sitagliptin + perindopril → risc crescut angioedem (RCP Triplixam 4.5). De prezentat familiei + medicului curant.
+- ✅ **18.04.2026 03:10**: Remediere audit Regula 16 sub-clauza 7 (clarificări + logare retroactivă commit `478048f`). Detalii în `CHANGELOG.md`.
 - ✅ **18.04.2026**: Audit complet Dosar_Medical — migrare JSON la schema v2.0, corecturi date (CNP talon, data nașterii urologie, nume manuscris, unități lab), dedup chirurgie 3→1, creare JSON identitate, `.meta.json`-uri chain-of-custody, reorganizare subfoldere tematice, reconciliere CONTEXT_MEDICAL.md. Detalii în `CHANGELOG.md`.
 - ✅ 17.04.2026: Endoscopie digestivă superioară efectuată
 - ✅ 17.04.2026: Colonoscopie efectuată
@@ -253,6 +255,26 @@ Pentru evaluare mai precisă a expunerii (calculul „pachete-an”).
 ### [P2] HbA1c recent
 
 **Context:** monitorizare control diabet cu Jamesi; ultima HbA1c necunoscută.
+
+### [P2] Prezentare raport reacții adverse familiei + medic
+
+**Context:** raport generat 18.04.2026 — `Dosar_Medical/rapoarte_generate/2026-04-18_raport_reactii_adverse_jamesi_triplixam.docx`.
+
+- [ ] Printare/trimitere familie (pregătire înainte de CT)
+- [ ] Atenționare către medicul curant despre interacțiunea sitagliptin + perindopril (risc angioedem) — de întrebat dacă e utilă monitorizare adițională sau dacă combinația trebuie reevaluată post-CT
+
+### [P2] Verificare versiune curentă SmPC Triplixam pe ANMDMR
+
+**Context:** SmPC-ul Servier folosit pentru raport e versiunea 06.2021 (vechime ~5 ani). Pentru decizii terapeutice majore, se verifică versiunea curentă pe anm.ro.
+
+- [ ] Căutare „Triplixam 10/2.5/5" pe nomenclator.anm.ro
+- [ ] Comparare cu conținutul raportului — actualizare dacă există diferențe semnificative
+
+### [P2] Clarificare conținut arhivă `2025-11-01_talon_pensie_asigurare.zip`
+
+**Context:** fișier apărut la rădăcina `Dosar_Medical/` cu nume care sugerează doar talon pensie, dar conține backup complet al tuturor JSON-urilor canonice + MANIFEST + documentație (13 fișiere, ~76 KB). Origine necunoscută — posibil bundle creat pre-audit de Gemini sau user.
+
+- [ ] Decizie: redenumire (ex: `arhiva/backup_complet_pre-audit_2026-04-18.zip`) sau ștergere (git-ul păstrează istoricul canonic)
 
 ### [P2] Clarificare rezolvare simultană hidrocel + chiste epididimare
 
