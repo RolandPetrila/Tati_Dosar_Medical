@@ -4,6 +4,76 @@
 
 ---
 
+## 2026-04-18 03:10 — Clarificări Regula 16 sub-clauza 7 + logare retroactivă commit 478048f
+
+**Tip:** CORECTIE + MODIFICARE
+
+**Fișiere afectate:** `CLAUDE.md`, `SESSION_LOG.md`, `CHANGELOG.md` (acest fișier).
+
+**Declanșator:** utilizator a rulat audit paralel (`info_tati.txt`) care a găsit două probleme:
+
+1. Commit-ul `478048f` (02:54:47, „Extinde Regula 16 cu sub-clauza 7…") nu era logat în SESSION_LOG.md / CHANGELOG.md — violare directă Regula 16 pct. 3 („actualizare obligatorie înainte de commit").
+2. Sub-clauza 7 avea 4 ambiguități minore: (a) neclaritate pe ce alte fișiere narative intră în scope, (b) typo „intermediar", (c) frecvența rulării `date` neprecizată, (d) format timestamp per fișier nespecificat.
+
+**Operații aplicate (în ordine):**
+
+1. **Backup pre-modificare** `CLAUDE.md` → `Dosar_Medical/arhiva/versiuni_config/CLAUDE_pre-clarificare-subclauza7_2026-04-18_0310.md` (Regula 10).
+2. **Modificare `CLAUDE.md`** — sub-clauza 7 extinsă cu toate 4 clarificările:
+   - Adăugat `_metadata.data_procesare` din JSON-urile `Dosar_Medical/` la lista fișierelor care necesită `date` înainte de scriere
+   - Fix typo: „ore intermediar" → „ore intermediare"
+   - Specificată frecvența: refresh per bloc de modificări >15 min (o rulare inițială insuficientă la sesiuni lungi)
+   - Tabel format per fișier: `SESSION_LOG.md` + `CHANGELOG.md` trunchiat la `YYYY-MM-DD HH:MM` fără timezone (timezone implicit = ora locală România); `CONTEXT_MEDICAL.md` text narativ; JSON-uri `_metadata.data_procesare` format ISO 8601 complet cu `+03:00`
+   - Notă în antet: „clarificări 2026-04-18 03:10"
+3. **Changelog intern `CLAUDE.md`** — intrare nouă `v3.1` cu rezumatul clarificărilor.
+4. **Logare retroactivă `SESSION_LOG.md`** — adăugată intrare pentru commit `478048f` la timestamp-ul real git `2026-04-18 02:53-02:54`, cu marcajul `[RETROACTIV — logat 03:10]`.
+5. **Logare sesiune curentă** — această intrare + intrare corespunzătoare în `SESSION_LOG.md`.
+
+**Verificare cronologie (git vs log):**
+
+| Intrare                              | Git timestamp    | SESSION_LOG status      |
+| ------------------------------------ | ---------------- | ----------------------- |
+| Audit + migrare v2                   | 02:23:36         | ✅ logat                |
+| Git init + Regula 16                 | 02:35:12         | ✅ logat                |
+| CT 20.04                             | 02:43:31         | ✅ logat                |
+| Bioclinica                           | 02:50:01         | ✅ logat                |
+| ERATĂ timestamp                      | 02:52:53         | ✅ logat                |
+| Sub-clauza 7 (commit `478048f`)      | 02:54:47         | ✅ **logat retroactiv** |
+| Remediere audit (sesiunea curentă)   | ~03:15 (estimat) | ✅ logat                |
+
+**Consecință operațională:** toate commit-urile din 2026-04-18 au acum corespondent în SESSION_LOG.md și CHANGELOG.md. Regula 16 pct. 3 e satisfăcută.
+
+**Fără modificări la date medicale.** Regulile procedurale clarificate nu schimbă starea dosarului. Pregătirea pacientului pentru CT (sâmbătă 17:00 STOP Jamesi → luni 17:00 CT) rămâne neafectată.
+
+**Sursă:** audit extern user (`info_tati.txt`), 2026-04-18 ~03:00.
+
+**Făcut de:** Claude Code (Opus 4.7, 1M context).
+
+---
+
+## 2026-04-18 02:54 — [RETROACTIV] Extindere Regula 16 cu sub-clauza 7 (timestamp narativ)
+
+> **[LOGAT RETROACTIV 2026-04-18 03:10]** — intrare absentă la momentul commit-ului; adăugată ulterior în urma auditului user care a comparat `git log --format=%ai` cu jurnalele narative. Commit-ul real `478048f` confirmat la timestamp-ul `2026-04-18 02:54:47 +0300`.
+
+**Tip:** MODIFICARE (regulament)
+
+**Fișiere afectate:** `CLAUDE.md` (+16 linii, -0).
+
+**Context:** la 02:51 aceeași sesiune, Claude corectase timestamp-uri halucinate din SESSION_LOG/CHANGELOG (ERATĂ). Imediat după, a adăugat o sub-clauză preventivă la Regula 16 pentru a forța rularea `date` în Bash înainte de scrierea oricărui timestamp narativ, ca să nu se mai repete incidentul.
+
+**Descriere modificare:**
+
+- Adăugat punctul 7 la „Protocol obligatoriu" al Regula 16 — bloc de ~16 linii cu: comandă exactă (`date +"%Y-%m-%d %H:%M:%S %z"`), lista fișierelor afectate (SESSION_LOG, CHANGELOG, CONTEXT_MEDICAL), excepție pentru commit-urile git (au timestamp automat), cross-check (dacă user menționează ora, verifică cu `date`), protocol corectare la discrepanță.
+
+**Motiv:** prevenire repetare halucinație timestamp. Sistemul dă data în context (`Today's date is…`), dar nu ora; modelul are tendință să inventeze ore „plauzibile".
+
+**Commit:** `478048f` (push direct pe `origin/main`).
+
+**Observație:** această intrare a lipsit inițial din CHANGELOG + SESSION_LOG, ceea ce a constituit însuși o încălcare a Regula 16 pct. 3 (ironie). Remediat 2026-04-18 03:10 — vezi intrarea de mai sus.
+
+**Făcut de:** Claude Code (Opus 4.7, 1M context).
+
+---
+
 ## 2026-04-18 02:51 — [ERATĂ] Corectură timestamp halucinate în sesiunea anterioară
 
 **Tip:** CORECTIE
@@ -19,12 +89,12 @@
 
 **Realitatea (confirmată prin `git log --format=%ai`):**
 
-| Etapă sesiune | Timestamp real (git) | Ce scrisese Claude (halucinat) |
-|---|---|---|
-| Audit + migrare v2 (prim commit) | **02:23:36** | `15:00` |
-| Regula 16 (al doilea commit) | **02:35:12** | `17:30` |
-| Confirmare CT 20.04 (al treilea commit) | **02:43:31** | `~18:00` |
-| Integrare Bioclinica (al patrulea commit) | **02:50:01** | `~18:30` |
+| Etapă sesiune                             | Timestamp real (git) | Ce scrisese Claude (halucinat) |
+| ----------------------------------------- | -------------------- | ------------------------------ |
+| Audit + migrare v2 (prim commit)          | **02:23:36**         | `15:00`                        |
+| Regula 16 (al doilea commit)              | **02:35:12**         | `17:30`                        |
+| Confirmare CT 20.04 (al treilea commit)   | **02:43:31**         | `~18:00`                       |
+| Integrare Bioclinica (al patrulea commit) | **02:50:01**         | `~18:30`                       |
 
 **Cauza [PROBABIL]:** Claude-ul sesiunii anterioare nu avea ora curentă în system context (doar data — `Today's date is 2026-04-18`), și a inventat ore „plauzibile" în loc să ruleze `date` și să verifice. Violare directă:
 

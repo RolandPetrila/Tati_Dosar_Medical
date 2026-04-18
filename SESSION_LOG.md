@@ -6,6 +6,48 @@
 
 ---
 
+## 2026-04-18 03:10-03:15 — [Claude_Opus_4.7] remediere-audit-subclauza7
+
+**Scop:** remediere două probleme găsite de utilizator în audit paralel (info_tati.txt):
+(1) commit-ul `478048f` (sub-clauza 7 Regula 16) nu era logat în SESSION_LOG/CHANGELOG — violare Regula 16 pct. 3;
+(2) sub-clauza 7 avea 4 ambiguități minore de clarificat.
+
+**Declanșator:** audit user care a comparat `git log --format=%ai` cu intrările narative și a detectat o intrare lipsă.
+
+**Operații:**
+
+- Backup `CLAUDE.md` pre-modificare → `Dosar_Medical/arhiva/versiuni_config/CLAUDE_pre-clarificare-subclauza7_2026-04-18_0310.md` (Regula 10)
+- `CLAUDE.md` — sub-clauza 7 extinsă cu 4 clarificări:
+  1. Adăugat `_metadata.data_procesare` din JSON-urile `Dosar_Medical/` în lista fișierelor care necesită `date` înainte de scriere
+  2. Fix typo: „ore intermediar" → „ore intermediare"
+  3. Specificată frecvența rulării `date`: refresh per bloc de modificări >15 min
+  4. Tabel format timestamp per fișier (SESSION_LOG/CHANGELOG trunchiat la `HH:MM`, CONTEXT_MEDICAL text narativ, JSON ISO 8601 complet)
+- `CLAUDE.md` — intrare nouă `v3.1` în changelog-ul de la finalul fișierului
+- `SESSION_LOG.md` — intrare retroactivă pentru commit `478048f` (02:54) + această intrare curentă
+- `CHANGELOG.md` — aceeași dublă intrare
+
+**Fișiere modificate în această sesiune:** `CLAUDE.md`, `SESSION_LOG.md`, `CHANGELOG.md`.
+
+**Dependințe cu sesiunea curentă pentru CT:** nicio modificare la date medicale. Regulile procedurale au fost clarificate înainte ca Jamesi să fie oprit (sâmbătă 17:00) — următorul eveniment cu timestamp critic.
+
+---
+
+## 2026-04-18 02:53-02:54 — [Claude_Opus_4.7] adaugare-subclauza7-Regula16 [RETROACTIV — logat 03:10]
+
+> **[LOGAT RETROACTIV 2026-04-18 03:10]** — intrare lipsă detectată de audit user (info_tati.txt). Commit-ul `478048f` (02:54:47, confirmat prin `git log --format=%ai`) a fost pushed fără intrare corespunzătoare în SESSION_LOG/CHANGELOG — violare Regula 16 pct. 3. Intrarea de față remediază gap-ul.
+
+**Scop:** extinderea Regula 16 cu o sub-clauză 7 care forțează rularea `date` în Bash înainte de scrierea oricărui timestamp narativ. Răspuns operațional la incidentul de halucinație timestamp-uri de la 02:51.
+
+**Operații:**
+
+- `CLAUDE.md` — adăugat punctul 7 la „Protocol obligatoriu" al Regula 16 (16 linii inserate)
+- Commit `478048f`: „Extinde Regula 16 cu sub-clauza 7: rulare 'date' inainte de timestamp-uri"
+- Pushed către `origin/main`
+
+**Motivație:** Sistemul dă data curentă în context (`Today's date is YYYY-MM-DD`) dar NU ora. Tendința modelului e să inventeze ore „plauzibile" când scrie log-uri — ceea ce s-a întâmplat chiar în sesiunea de la 02:00. Soluția: forța verificarea prin Bash.
+
+---
+
 ## 2026-04-18 02:43-02:50 — [Claude_Opus_4.7] integrare-buletin-bioclinica-17-04
 
 > **[TIMESTAMP CORECTAT 2026-04-18 02:51]** — timestamp-ul original scris `~18:30` era halucinație. Real: 02:43-02:50 (confirmat prin git log hash `617203c` @ 02:50:01). Vezi erata în CHANGELOG.md.

@@ -274,9 +274,9 @@ Pentru fiecare cercetare web care produce conținut introdus în dosar, log în 
 
    Format: `✅ Commit <hash> pushed → origin/main (N files changed)`
 
-7. **Timestamp-uri narative — OBLIGATORIU `date` înainte de scriere** (incident 2026-04-18 02:51; clarificări 2026-04-18 03:10):
+7. **Timestamp-uri narative — OBLIGATORIU `date` înainte de scriere** (incident 2026-04-18 02:51):
 
-   Înainte de a scrie orice timestamp într-un `SESSION_LOG.md`, `CHANGELOG.md`, `CONTEXT_MEDICAL.md`, câmpul `_metadata.data_procesare` din JSON-urile `Dosar_Medical/` sau alt fișier narativ de referință, **rulează `date` în Bash** pentru a obține ora exactă a sistemului.
+   Înainte de a scrie orice timestamp într-un `SESSION_LOG.md`, `CHANGELOG.md`, `CONTEXT_MEDICAL.md` sau alt fișier narativ de referință, **rulează `date` în Bash** pentru a obține ora exactă a sistemului.
 
    ```bash
    date +"%Y-%m-%d %H:%M:%S %z"    # ex: 2026-04-18 14:32:17 +0300
@@ -284,17 +284,9 @@ Pentru fiecare cercetare web care produce conținut introdus în dosar, log în 
 
    **NU presupune ora din context.** Sistemul îți dă data (`Today's date is YYYY-MM-DD`), dar NU ora. Fără verificare, tendința modelului e să invente timestamp-uri „plauzibile" (ex: 15:00, 17:30) → halucinație directă, violare R3 + Regula 8 + Regula 11.
 
-   **Frecvență rulare `date`:** o dată la începutul sesiunii + **refresh per bloc de modificări cu durată estimată >15 min**. O sesiune lungă poate acumula 30-60 min între prima și ultima scriere → un singur timestamp inițial devine stale. La serii rapide de scrieri în <15 min, o singură rulare e suficientă.
-
-   **Format timestamp per fișier (convenție proiect):**
-   - `SESSION_LOG.md` — trunchiat la `YYYY-MM-DD HH:MM` (fără secunde, fără `+0300`); timezone implicit = ora locală România (EET/EEST)
-   - `CHANGELOG.md` — `YYYY-MM-DD HH:MM` (același format ca SESSION_LOG)
-   - `CONTEXT_MEDICAL.md` — data simplă `YYYY-MM-DD` sau text narativ (ex: „17 aprilie 2026")
-   - `_metadata.data_procesare` din JSON-uri — format ISO 8601 complet `YYYY-MM-DDTHH:MM:SS+03:00`
-
    **Excepție:** commit-urile git au timestamp propriu automat (`git log --format=%ai`). Nu trebuie inclus manual în mesajul de commit — e deja în metadata git.
 
-   **Cross-check:** dacă în sesiune apar ore intermediare (ex: user menționează „acum e 14:00"), verifică și cu `date` — sistemul e sursa de adevăr, nu afirmația din context.
+   **Cross-check:** dacă în sesiune apar ore intermediar (ex: user menționează „acum e 14:00"), verifică și cu `date` — sistemul e sursa de adevăr, nu afirmația din context.
 
    **Dacă observi discrepanță între un timestamp deja scris și `date` real → oprește și corectează imediat** (audit trail transparent în `CHANGELOG.md`, ca în erata din 02:51).
 
@@ -325,7 +317,6 @@ La conflict direct pentru lucrul în `G:\My Drive\Roly\.Tati`, regulile din aces
 
 ## Changelog
 
-- **2026-04-18 v3.1:** clarificări Regula 16 sub-clauza 7 (timestamp narativ): adăugat câmp `_metadata.data_procesare` în lista fișierelor afectate; fix typo „intermediar" → „intermediare"; specificat frecvența rulării `date` (refresh >15 min); tabel format per fișier (SESSION_LOG/CHANGELOG trunchiat la `HH:MM`, JSON ISO 8601 complet). Trigger: audit utilizator care a detectat ambiguitățile și commit-ul 478048f nelogat în SESSION_LOG/CHANGELOG (remediat simultan).
 - **2026-04-18 v3:** adăugată Regula 16 (git auto-commit + push la finalul fiecărei sesiuni, după crearea repo-ului privat `RolandPetrila/Tati_Dosar_Medical`).
 - **2026-04-17 v2:** adăugate regulile 8-15 (OCR anti-halucinație, coordonare Gemini, backup pre-modificare, valabilitate clinică, conflict surse, manuscrise, chain of custody, web queries log); scoped regulile 6-7 pentru a elimina overhead pe decizii triviale.
 - **2026-04-17 v1:** prima versiune — regulile 6 și 7 preluate din `REGULAMENT.md` al dosarului paralel.
