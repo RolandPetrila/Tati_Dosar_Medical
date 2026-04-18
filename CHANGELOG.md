@@ -4,6 +4,30 @@
 
 ---
 
+## 2026-04-18 13:28 — Confirmare pregătire CT 20.04: alergii + STOP Jamesi + hidratare
+
+**Tip:** MODIFICARE (actualizare status pregătire CT)
+
+**Fișiere afectate:**
+
+- `CONTEXT_MEDICAL.md` — secțiunea 8 (pregătire critică) actualizată cu status executat; secțiunea 11 (alergii) populată — fără alergii la iod / fructe de mare / contrast anterior
+- `TODO.md` — Calendar + P0 pregătire pacient: 3 sub-task-uri marcate finalizate (STOP Jamesi, confirmare alergii, plan hidratare)
+- `Dosar_Medical/2025-11-01_talon_pensie_asigurare.zip` — ȘTERS (backup redundant; JSON-urile canonice sunt în dosar, istoricul în git)
+
+**Descriere:**
+
+- Familia a confirmat: pacientul NU are alergii la iod, fructe de mare sau contrast iodat anterior → cale liberă pentru CT cu substanță de contrast
+- Jamesi oprit conform protocolului H-48 pre-CT (18.04.2026), reluare programată 22.04.2026 după verificarea creatininei post-CT
+- Plan hidratare duminică 19.04 confirmat (1.5-2 L apă plată)
+
+**Sursă informație:** declarație familie — Roland Petrilă (fiu), 18.04.2026 13:28 (conversație chat).
+
+**Marcaj certitudine (Regula 17):** informații [CERT] pentru status acțiune (confirmat de responsabilul dosar) cu sursă declarație familie citată; NU document medical — rămâne valabil să se confirme verbal la radiolog înainte de injectare contrast.
+
+**Făcut de:** Claude Code (Opus 4.7, 1M context).
+
+---
+
 ## 2026-04-18 09:50 — REVERT: stergere folder Cercetare/ + retragere intrari log
 
 **Tip:** STERGERE FISIERE + REVERT INTRARI LOG (la cererea explicita a user-ului)

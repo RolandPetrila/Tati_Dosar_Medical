@@ -4,7 +4,7 @@
 
 ---
 
-**Ultima actualizare:** 18 aprilie 2026 (reconciliere cu JSON-uri Dosar_Medical/)
+**Ultima actualizare:** 18 aprilie 2026 13:28 (confirmare alergii + STOP Jamesi executat + plan hidratare)
 **Responsabil dosar:** Roland Petrilă (fiul pacientului)
 **Versiune structură:** 1.1 (post-reconciliere Claude_Opus_4.7)
 **Versiune anterioară arhivată:** `Dosar_Medical/arhiva/context_medical_versiuni/CONTEXT_MEDICAL_v1_2026-04-17.md`
@@ -275,11 +275,11 @@ Efectuată concomitent cu endoscopia la Genesis Medical Clinic Arad (Dr. Noufal 
 
 **⚠️ Pregătire critică:**
 
-- **Oprire Jamesi (sitagliptin + metformin) cu 48h înainte** — sâmbătă 18.04 ora 17:00 (componenta metformin → risc acidoză lactică cu contrast iodat)
+- ✅ **Oprire Jamesi (sitagliptin + metformin) cu 48h înainte** — **EXECUTAT sâmbătă 18.04.2026** (confirmat de familie, sursă: Roland Petrilă 18.04.2026 13:28). Reluare programată miercuri 22.04.2026 după confirmare creatinină normală post-CT.
 - ✅ **Funcție renală recent verificată** — buletin Bioclinica 17.04.2026: creatinină 0.83 mg/dL (ref 0.67-1.17, NORMALĂ), uree 33.4 mg/dL (NORMALĂ). eGFR ~95 mL/min/1.73m² (stadiu G1). **Nu necesită repetare.**
-- **Confirmare absență alergii la iod / fructe de mare / contrast anterior** — **STATUS: neconfirmat, P0 critic**
+- ✅ **Absență alergii la iod / fructe de mare / contrast anterior — CONFIRMAT** (sursă: declarație familie Roland Petrilă 18.04.2026 13:28). Fără contraindicații cunoscute pentru contrast iodat.
 - **Triplixam** (indapamidă diuretic + perindopril IECA) — de întrebat radiologul la confirmare dacă păstrez integral
-- Hidratare activă duminică 19.04: 1.5-2 L apă plată (atent la tolerabilitatea cardiacă)
+- ✅ **Plan hidratare activă duminică 19.04.2026** — 1.5-2 L apă plată (confirmat de familie 18.04.2026, atent la tolerabilitatea cardiacă)
 
 **Istoric creatinină (funcție renală în timp):**
 
@@ -346,13 +346,17 @@ Pe baza informațiilor disponibile la data actualizării acestui fișier:
 
 ## 11. Alergii cunoscute
 
-**Status:** de verificat cu familia.
+**Status:** fără alergii cunoscute relevante pentru CT cu contrast iodat (confirmat de familie 18.04.2026 13:28, sursă: Roland Petrilă).
 
-| Categoria                                         | Alergie      | Reacție |
-| ------------------------------------------------- | ------------ | ------- |
-| Medicamente                                       | De verificat | —       |
-| Alimente (iod, fructe de mare — CRITIC pentru CT) | De verificat | —       |
-| Alte                                              | De verificat | —       |
+| Categoria                               | Alergie                           | Reacție |
+| --------------------------------------- | --------------------------------- | ------- |
+| Medicamente                             | Niciuna declarată                 | —       |
+| Iod (contrast iodat) — CRITIC pentru CT | **Fără alergie** (confirmat)      | —       |
+| Fructe de mare — CRITIC pentru CT       | **Fără alergie** (confirmat)      | —       |
+| Contrast iodat anterior                 | Fără reacții anterioare raportate | —       |
+| Alte                                    | Niciuna declarată                 | —       |
+
+**Notă:** confirmarea este declarație familie (nu document medical). Rămâne valabil să i se confirme din nou verbal la radiolog înainte de injectarea contrastului.
 
 ---
 

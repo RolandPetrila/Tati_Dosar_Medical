@@ -6,6 +6,26 @@
 
 ---
 
+## 2026-04-18 13:28 — [Claude_Opus_4.7] confirmare-pregatire-CT-alergii-jamesi-hidratare
+
+**Scop:** actualizare dosar cu confirmări familie pre-CT (20.04.2026): fără alergii iod / fructe de mare / contrast, Jamesi oprit 18.04, reluare 22.04, hidratare confirmată; ștergere backup zip redundant.
+
+**Declanșator:** user — `1. nu are alergie la iod/fructe de mare, a oprit Jamesi, va relua in 22.04.2026, se va hidrata corespunzator - actualizeaza cu aceste aspecte. 2. info_tati.txt este un fisier personal ... lasa-l asa. 3. poti sterge Dosar_Medical/2025-11-01_talon_pensie_asigurare.zip`
+
+**Operații:**
+
+- `CONTEXT_MEDICAL.md` — antet „Ultima actualizare" + secțiunea 8 (pregătire critică) + secțiunea 11 (alergii)
+- `TODO.md` — Calendar + P0 pregătire pacient (3 sub-task-uri finalizate)
+- `CHANGELOG.md` — intrare 2026-04-18 13:28
+- `Dosar_Medical/2025-11-01_talon_pensie_asigurare.zip` — STERS
+- `info_tati.txt` — NEATINS (fișier personal al user-ului)
+
+**Fișiere:** `CONTEXT_MEDICAL.md`, `TODO.md`, `CHANGELOG.md`, `SESSION_LOG.md`, `Dosar_Medical/2025-11-01_talon_pensie_asigurare.zip` (șters).
+
+**Făcut de:** Claude Code (Opus 4.7, 1M context).
+
+---
+
 ## 2026-04-18 09:50 — [Claude_Opus_4.7] revert-stergere-cercetari-halucinate
 
 **Scop:** stergerea folderului `Cercetare/` (decisa de user — cele 4 rapoarte AI au halucinat detalii) + retragere intrari log asociate sesiunii anterioare 09:20-09:37.

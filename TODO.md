@@ -2,7 +2,7 @@
 
 **Fișier de evidență a tuturor acțiunilor de făcut. Se actualizează continuu — la adăugarea și completarea fiecărei acțiuni.**
 
-**Ultima actualizare:** 17 aprilie 2026.
+**Ultima actualizare:** 18 aprilie 2026 13:28.
 
 ---
 
@@ -12,11 +12,11 @@
 | ----------------------------------- | --------------------------------------------------------------- | --------------- |
 | 17.04.2026                          | Endoscopie + colonoscopie efectuate                             | ✅ Finalizat    |
 | 17.04.2026                          | Bilet trimitere CT emis                                         | ✅ Finalizat    |
-| **18.04.2026 17:00**                | **STOP Jamesi (H-48 pre-CT)**                                   | 🔴 DE EXECUTAT  |
+| **18.04.2026**                      | **STOP Jamesi (H-48 pre-CT)**                                   | ✅ Finalizat    |
 | ~~19.04.2026 — analize creatinină~~ | ~~de efectuat~~ → ✅ ACOPERIT (buletin Bioclinica 17.04.2026)   | ✅ Finalizat    |
-| 19.04.2026                          | Hidratare activă                                                | 🔴 DE EXECUTAT  |
+| 19.04.2026                          | Hidratare activă (plan confirmat de familie)                    | 📅 PROGRAMAT    |
 | **20.04.2026 17:00**                | **CT torace + abdomen + pelvis cu contrast (Genesis Micălaca)** | 📅 PROGRAMAT    |
-| **22.04.2026 17:00**                | Reluare Jamesi (H+48 post-CT, după creatinină OK)               | 🟡 Follow-up    |
+| **22.04.2026**                      | Reluare Jamesi (H+48 post-CT, după creatinină OK)               | 🟡 Follow-up    |
 | {17.04.2026 + 7-14 zile}            | Rezultat biopsie (estimat 24.04-01.05)                          | 🟡 În așteptare |
 | {după primirea rezultatelor}        | Consult oncolog digestiv                                        | 🟡 De programat |
 
@@ -58,15 +58,15 @@
 **Context:** Deadline-uri exacte pentru medicație și pregătire.
 **Sub-task-uri cu deadline:**
 
-- [ ] **SÂMBĂTĂ 18.04 ORA 17:00: STOP Jamesi** (H-48 înainte de CT) — acțiune critică
+- [x] ✅ **SÂMBĂTĂ 18.04: STOP Jamesi** (H-48 înainte de CT) — EXECUTAT (confirmat de familie 18.04.2026 13:28)
 - [x] ✅ **Analize creatinină + uree** — Bioclinica 17.04.2026: creatinină 0.83 (normală), uree 33.4 (normală). **VALID pentru CT 20.04.**
-- [ ] Duminică: hidratare activă 1.5-2 L apă plată
+- [x] ✅ **Plan hidratare duminică 1.5-2 L apă plată** — confirmat de familie 18.04.2026
 - [ ] Duminică seara ~20:00: ultima masă mai consistentă
 - [ ] Luni ~11:00: gustare ușoară — ultima înainte de CT
 - [ ] Luni dimineață: ia NORMAL Aspenter + Concor + Triplixam (cu excepție dacă radiologul spune altfel pentru Triplixam)
-- [ ] **Confirmare alergii** (iod, fructe de mare, contrast anterior) — întrebare directă pacient + familie
+- [x] ✅ **Confirmare alergii** — fără alergii la iod / fructe de mare / contrast anterior (confirmat de familie 18.04.2026 13:28)
 - [ ] Pregătire documente: CI, card CAS, bilet BCTAP 0631727, analize recente, buletin endoscopie 17.04
-- [ ] Miercuri 22.04 ora 17:00 (H+48): reluare Jamesi DOAR după creatinină normală post-CT
+- [ ] Miercuri 22.04: reluare Jamesi DOAR după creatinină normală post-CT
 
 **Generat din:** `CONTEXT_MEDICAL.md`, `REGULAMENT.md` (siguranța medicală), confirmare programare CT 20.04.2026
 **Data creării:** 17.04.2026 | **Actualizare:** 18.04.2026
@@ -227,12 +227,14 @@ Pentru evaluare mai precisă a expunerii (calculul „pachete-an”).
 
 ## Acțiuni noi deschise de audit (18.04.2026)
 
-### [P0] Confirmare status alergii pacient (pre-CT)
+### [P0] ✅ Confirmare status alergii pacient (pre-CT) — FINALIZAT
 
-**Context:** CT cu contrast iodat iminent; niciun document nu menționează explicit alergii.
+**Rezultat (18.04.2026 13:28):** Pacientul NU are alergii la iod, fructe de mare sau contrast iodat anterior. Fără alergii medicamentoase cunoscute. Confirmat de Roland Petrilă (familie).
 
-- [ ] Interogare directă pacient + familia: alergii la medicamente, iod, fructe de mare
-- [ ] Notare în `CONTEXT_MEDICAL.md`, secțiunea 11
+- [x] Interogare directă pacient + familia: alergii la medicamente, iod, fructe de mare → negative
+- [x] Notare în `CONTEXT_MEDICAL.md`, secțiunea 11
+
+**Notă:** confirmarea rămâne valabil să fie repetată verbal la radiolog înainte de injectarea contrastului.
 
 ### [P1] Identificare conținut PDF-uri nedigitizate
 
@@ -270,11 +272,9 @@ Pentru evaluare mai precisă a expunerii (calculul „pachete-an”).
 - [ ] Căutare „Triplixam 10/2.5/5" pe nomenclator.anm.ro
 - [ ] Comparare cu conținutul raportului — actualizare dacă există diferențe semnificative
 
-### [P2] Clarificare conținut arhivă `2025-11-01_talon_pensie_asigurare.zip`
+### [P2] ✅ Clarificare conținut arhivă `2025-11-01_talon_pensie_asigurare.zip` — FINALIZAT
 
-**Context:** fișier apărut la rădăcina `Dosar_Medical/` cu nume care sugerează doar talon pensie, dar conține backup complet al tuturor JSON-urilor canonice + MANIFEST + documentație (13 fișiere, ~76 KB). Origine necunoscută — posibil bundle creat pre-audit de Gemini sau user.
-
-- [ ] Decizie: redenumire (ex: `arhiva/backup_complet_pre-audit_2026-04-18.zip`) sau ștergere (git-ul păstrează istoricul canonic)
+**Decizie (18.04.2026 13:28):** ȘTERS la cererea user-ului. JSON-urile canonice sunt în `Dosar_Medical/`, iar git-ul păstrează istoricul complet — backup-ul zip era redundant.
 
 ### [P2] Clarificare rezolvare simultană hidrocel + chiste epididimare
 
