@@ -4,6 +4,35 @@
 
 ---
 
+## 2026-04-18 18:49 — Ghid deploy `DEPLOY_CLOUDFLARE.md` (distribuție cu live sync)
+
+**Tip:** CREARE GHID (fără cod, fără modificare dashboard)
+
+**Fișiere afectate:**
+
+- `DEPLOY_CLOUDFLARE.md` — **NOU** — ghid pas-cu-pas pentru deploy Cloudflare Pages + Access (protecție email OTP)
+
+**Problemă adresată:** fișierul `DASHBOARD.html` trimis pe WhatsApp e snapshot static — nu se sincronizează cu versiunea actualizată din Drive. User a ales distribuție prin Cloudflare Pages + Access (URL fix + auth email OTP).
+
+**Conținut ghid (6 faze, ~30 min setup one-time):**
+
+- FAZA 1: Creare cont Cloudflare
+- FAZA 2: Connect repo GitHub + configurare build (project `tati-dosar`, build command filtrează DOAR fișierele publice, output dir `public`)
+- FAZA 3: Activare Zero Trust (team name `roland-petrila`, plan Free 50 utilizatori)
+- FAZA 4: Access Application (`Dosar Tati`, session 24h) + Policy (`Familie aprobată`, email include list)
+- FAZA 5: Testare (incognito + cod OTP + test negativ cu email ne-aprobat)
+- FAZA 6: Trimitere URL familiei + adaos Add-to-Home-Screen
+
+**Securitate:** build command servește DOAR `DASHBOARD.html` (ca `index.html`), `ALIMENTATIE.md`, `manifest.webmanifest`, `assets/`. Restul fișierelor (CONTEXT_MEDICAL, Dosar_Medical JSON-uri, logs) NU sunt expuse — Cloudflare are acces read la repo dar servește doar output dir.
+
+**Întreținere:** ghid inclus pentru management utilizatori (adăugare/scoatere email-uri), troubleshooting, alternative, recenzie semi-anuală.
+
+**Acțiune user:** urmare manuală ghid (eu nu pot crea cont Cloudflare pentru user).
+
+**Făcut de:** Claude Code (Opus 4.7, 1M context).
+
+---
+
 ## 2026-04-18 18:22 — Optimizare `DASHBOARD.html` pentru Android + iOS
 
 **Tip:** OPTIMIZARE MOBILE (prezentare, fără schimbări conținut)

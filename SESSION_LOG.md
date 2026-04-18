@@ -6,6 +6,27 @@
 
 ---
 
+## 2026-04-18 18:49 — [Claude_Opus_4.7] ghid-deploy-cloudflare
+
+**Scop:** creare `DEPLOY_CLOUDFLARE.md` — ghid complet pentru deploy Cloudflare Pages + Access cu auth email OTP. Adresează problema distribuției fișierului HTML (WhatsApp = snapshot static, nu sync cu versiunea curentă).
+
+**Declanșator:** user — `eu vreau ca oricine detine acest html sa vada orice actualizare fac eu in pagina, sa nu trebuiasca sa retrimit in permaneneta tot alt fisier nou` + alegere opțiunea „Cloudflare Pages + Access" din AskUserQuestion.
+
+**Operații:**
+
+- `DEPLOY_CLOUDFLARE.md` — ghid 6 faze + troubleshooting + management users + alternative
+- `CHANGELOG.md` + `SESSION_LOG.md` — intrare 2026-04-18 18:49
+
+**Securitate by design:** build command `cp` filtrează DOAR fișierele publice (DASHBOARD.html → index.html, ALIMENTATIE.md, manifest, assets). Restul (date medicale sensibile) NU e servit.
+
+**Nu am făcut deploy-ul eu:** Cloudflare cere cont + autorizare GitHub care trebuie făcute de user. Eu am pregătit doar ghidul și structura repo.
+
+**Fișiere:** `DEPLOY_CLOUDFLARE.md`, `CHANGELOG.md`, `SESSION_LOG.md`.
+
+**Făcut de:** Claude Code (Opus 4.7, 1M context).
+
+---
+
 ## 2026-04-18 18:22 — [Claude_Opus_4.7] optimizare-mobile-dashboard
 
 **Scop:** optimizare `DASHBOARD.html` pentru Android + iOS conform iOS HIG + Android Material. Rezolvare confuzie user despre „update-ul nu apare pe telefon" (cauză: fișier snapshot trimis pe WhatsApp, nu din Drive).
