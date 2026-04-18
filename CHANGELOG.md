@@ -4,6 +4,30 @@
 
 ---
 
+## 2026-04-18 21:04 — GitHub Pages — setup distribuție live-sync `DASHBOARD.html`
+
+**Tip:** CONFIGURARE DISTRIBUȚIE
+
+**Fișiere afectate:**
+
+- `index.html` — **NOU** — redirect automat (meta refresh) de la rădăcina repo-ului către `DASHBOARD.html`
+- `CLAUDE.md` — Regula 16.4 actualizată (repo public intenționat); Regula 18 completată cu URL GitHub Pages + context distribuție; versiune v7; backup `arhiva/versiuni_config/CLAUDE_pre-github-pages_2026-04-18_2104.md`
+- `TODO.md` — GitHub Pages marcat ca finalizat în „Acțiuni finalizate"; P3 git versionare + Google Drive marcat `[x]`
+
+**URL live:** https://rolandpetrila.github.io/Tati_Dosar_Medical/
+
+**Flux auto-deploy:** modificare fișiere → `git push` (Regula 16) → GitHub Pages redeploy automat → URL actualizat pe orice device.
+
+**Pas rămas pentru user:** GitHub → repo `Tati_Dosar_Medical` → Settings → Pages → Source: `main` / `/ (root)` → Save (un singur click).
+
+**Context decizie:** Vercel CLI v50.17.1 a eșuat în mod non-interactiv (bug scope în subprocess fără TTY); GitHub Pages ales ca alternativă — repo deja public, gratis, fără limite, zero dependențe externe.
+
+**Notă securitate:** repo public → fișierele din `Dosar_Medical/` sunt tehnic accesibile prin URL direct. Riscul practic e redus (URL neindexat, nelinkat), dar familia și user-ul trebuie să fie conștienți.
+
+**Făcut de:** Claude Code (Sonnet 4.6).
+
+---
+
 ## 2026-04-18 20:33 — Eliminare `DEPLOY_CLOUDFLARE.md` — abandon rută Cloudflare
 
 **Tip:** ȘTERGERE FIȘIER (abandon rută tehnică)

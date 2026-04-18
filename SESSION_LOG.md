@@ -6,6 +6,27 @@
 
 ---
 
+## 2026-04-18 21:04 — [Claude_Sonnet_4.6] github-pages-setup-distributie-live
+
+**Scop:** configurare GitHub Pages pentru distribuție live-sync a `DASHBOARD.html` familiei — auto-deploy la fiecare `git push`.
+
+**Declanșator:** user — a ales opțiunea B (GitHub Pages, gratis, zero intervenție manuală) după ce Vercel CLI a eșuat în subprocess non-interactiv (bug scope v50.17.1). Repo mutat public intenționat de user pentru a permite GitHub Pages gratuit.
+
+**Operații:**
+
+- `index.html` — creat redirect meta-refresh (`/ → DASHBOARD.html`) pentru rădăcina GitHub Pages
+- `CLAUDE.md` — Regula 16.4 actualizată (repo public intenționat); Regula 18 completată (URL + context distribuție); versiune v7; backup Regula 10
+- `TODO.md` — GitHub Pages în „Acțiuni finalizate"; P3 git + Drive `[x]`
+- `CHANGELOG.md` + `SESSION_LOG.md` — intrare 2026-04-18 21:04
+
+**Pas rămas pentru user:** activare GitHub Pages în Settings repo (un click).
+
+**Fișiere:** `index.html` (nou), `CLAUDE.md`, `TODO.md`, `CHANGELOG.md`, `SESSION_LOG.md`.
+
+**Făcut de:** Claude Code (Sonnet 4.6).
+
+---
+
 ## 2026-04-18 20:33 — [Claude_Opus_4.7] eliminare-cloudflare-abandon-ruta
 
 **Scop:** ștergere `DEPLOY_CLOUDFLARE.md` conform deciziei user de abandonare a rutei Cloudflare pentru distribuție. Păstrare intactă a dashboardului și asset-urilor pentru orice altă metodă ulterioară.

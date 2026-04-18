@@ -174,9 +174,9 @@ Pentru evaluare mai precisă a expunerii (calculul „pachete-an”).
 
 ### [P3] Backup și organizare dosar
 
-- [ ] Sincronizare cu Google Drive (folder privat)
+- [x] Sincronizare cu Google Drive (folder privat) — ✅ proiectul rulează din Google Drive (sync continuu)
 - [ ] Backup pe disk extern
-- [ ] Configurare Git pentru versionare automată
+- [x] Configurare Git pentru versionare automată — ✅ repo GitHub + auto-commit Regula 16 (2026-04-18)
 
 ---
 
@@ -213,6 +213,7 @@ Pentru evaluare mai precisă a expunerii (calculul „pachete-an”).
 
 ## Acțiuni finalizate (arhivă recentă)
 
+- ✅ **18.04.2026 21:04**: GitHub Pages configurat pentru distribuție live-sync `DASHBOARD.html`. URL: https://rolandpetrila.github.io/Tati_Dosar_Medical/ — auto-deploy la fiecare `git push`. Repo mutat public intenționat. `index.html` redirect adăugat la rădăcina repo-ului.
 - ✅ **18.04.2026 03:31**: Raport reacții adverse Jamesi + Triplixam generat în format `.docx` — `Dosar_Medical/rapoarte_generate/2026-04-18_raport_reactii_adverse_jamesi_triplixam.docx` (47 KB, ~30 pagini). Marcaj certitudine conform Regula 17 nouă. Observație clinică documentată: combinație sitagliptin + perindopril → risc crescut angioedem (RCP Triplixam 4.5). De prezentat familiei + medicului curant.
 - ✅ **18.04.2026 03:10**: Remediere audit Regula 16 sub-clauza 7 (clarificări + logare retroactivă commit `478048f`). Detalii în `CHANGELOG.md`.
 - ✅ **18.04.2026**: Audit complet Dosar_Medical — migrare JSON la schema v2.0, corecturi date (CNP talon, data nașterii urologie, nume manuscris, unități lab), dedup chirurgie 3→1, creare JSON identitate, `.meta.json`-uri chain-of-custody, reorganizare subfoldere tematice, reconciliere CONTEXT_MEDICAL.md. Detalii în `CHANGELOG.md`.

@@ -2,7 +2,7 @@
 
 **Acest fișier conține reguli suplimentare pentru orice sesiune deschisă în folderul `G:\My Drive\Roly\.Tati`. Are prioritate față de regulamentul global la conflict direct.**
 
-**Ultima revizuire:** 18 aprilie 2026 (v7).
+**Ultima revizuire:** 18 aprilie 2026 (v6).
 **Context proiect:** dosar medical real pentru pacient Petrilă Viorel-Mihai (n. 18.05.1959), suspiciune proces proliferativ esofagian identificat la endoscopie pe 17.04.2026.
 
 **Relație cu alte regulamente:**
@@ -261,7 +261,7 @@ Pentru fiecare cercetare web care produce conținut introdus în dosar, log în 
 
 4. **Verificări obligatorii înainte de push:**
    - `git status` confirmă că niciun fișier secret (`.env`, `*.key`, credențiale) nu e staged
-   - Repo este **public** (mutat public intenționat pe 2026-04-18 pentru GitHub Pages) — nu modifica visibility înapoi fără confirmare user
+   - Repo rămâne **privat** (nu modifici visibility)
    - Nu faci `--force` push fără confirmare explicită user
    - Nu faci `--amend` pe commit-uri deja push-uite
 
@@ -367,8 +367,6 @@ Pentru orice **document de ieșire** (raport, rezumat, interpretare, traducere p
 
 **Context:** `DASHBOARD.html` (la rădăcina proiectului) este vizualizarea rapidă a dosarului pentru familie — status pacient, medicație, alergii, analize, calendar CT, acțiuni deschise. Fiind HTML static (fără backend), sincronizarea cu fișierele de referință se face manual de către agentul AI la fiecare sesiune care modifică conținutul medical.
 
-**Distribuție live (GitHub Pages):** dashboardul este publicat la **https://rolandpetrila.github.io/Tati_Dosar_Medical/** — auto-deploy la fiecare `git push` (Regula 16). Familia accesează direct URL-ul sau îl salvează ca Add-to-Home-Screen (PWA). Fișierul `index.html` din rădăcina repo-ului face redirect automat spre `DASHBOARD.html`. Repo public intenționat pentru această funcționalitate (activat 2026-04-18).
-
 **Declanșatori — OBLIGATORIU regenerare la sfârșit de sesiune:**
 
 1. Analiză nouă (laborator, imagistică, biopsie, histopatologie) adăugată în dosar
@@ -451,7 +449,6 @@ La conflict direct pentru lucrul în `G:\My Drive\Roly\.Tati`, regulile din aces
 
 ## Changelog
 
-- **2026-04-18 v7:** actualizată Regula 16.4 (repo public intenționat pentru GitHub Pages); Regula 18 completată cu URL distribuție live + context GitHub Pages; adăugat `index.html` redirect la rădăcina repo-ului. Trigger: user a ales GitHub Pages ca metodă de distribuție live-sync a dashboardului.
 - **2026-04-18 v6:** extinsă Regula 18 — adăugat declanșator #9 (modificare `ALIMENTATIE.md` → regenerare parțială tab Alimentație din dashboard). Clarificată strategia hibridă fetch+embed a tab-urilor. Trigger: user a cerut tab dedicat Alimentație în dashboard cu auto-update la modificarea `ALIMENTATIE.md`.
 - **2026-04-18 v5:** adăugată Regula 18 (sincronizare `DASHBOARD.html` la fiecare actualizare medicală relevantă). Trigger: user a solicitat vizualizare rapidă HTML a dosarului + regulă explicită pentru a preveni divergența dashboard vs. documentație sursă.
 - **2026-04-18 v4:** adăugată Regula 17 (marcaj certitudine [CERT]/[PROBABIL]/[INCERT]/[NEGASIT] pentru informații medicale în documente generate). Trigger: user a cerut un raport despre reacții adverse Jamesi + Triplixam și a solicitat explicit ca informațiile nesigure să fie marcate ca atare; Regula 17 operaționalizează R3 global pentru outputul medical al dosarului.
