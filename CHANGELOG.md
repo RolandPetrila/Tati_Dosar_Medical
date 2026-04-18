@@ -30,15 +30,15 @@
 
 **Verificare cronologie (git vs log):**
 
-| Intrare                              | Git timestamp    | SESSION_LOG status      |
-| ------------------------------------ | ---------------- | ----------------------- |
-| Audit + migrare v2                   | 02:23:36         | ✅ logat                |
-| Git init + Regula 16                 | 02:35:12         | ✅ logat                |
-| CT 20.04                             | 02:43:31         | ✅ logat                |
-| Bioclinica                           | 02:50:01         | ✅ logat                |
-| ERATĂ timestamp                      | 02:52:53         | ✅ logat                |
-| Sub-clauza 7 (commit `478048f`)      | 02:54:47         | ✅ **logat retroactiv** |
-| Remediere audit (sesiunea curentă)   | ~03:15 (estimat) | ✅ logat                |
+| Intrare                            | Git timestamp    | SESSION_LOG status      |
+| ---------------------------------- | ---------------- | ----------------------- |
+| Audit + migrare v2                 | 02:23:36         | ✅ logat                |
+| Git init + Regula 16               | 02:35:12         | ✅ logat                |
+| CT 20.04                           | 02:43:31         | ✅ logat                |
+| Bioclinica                         | 02:50:01         | ✅ logat                |
+| ERATĂ timestamp                    | 02:52:53         | ✅ logat                |
+| Sub-clauza 7 (commit `478048f`)    | 02:54:47         | ✅ **logat retroactiv** |
+| Remediere audit (sesiunea curentă) | ~03:15 (estimat) | ✅ logat                |
 
 **Consecință operațională:** toate commit-urile din 2026-04-18 au acum corespondent în SESSION_LOG.md și CHANGELOG.md. Regula 16 pct. 3 e satisfăcută.
 
