@@ -2,7 +2,7 @@
 
 **Acest fișier conține reguli suplimentare pentru orice sesiune deschisă în folderul `G:\My Drive\Roly\.Tati`. Are prioritate față de regulamentul global la conflict direct.**
 
-**Ultima revizuire:** 18 aprilie 2026 (v5).
+**Ultima revizuire:** 18 aprilie 2026 (v6).
 **Context proiect:** dosar medical real pentru pacient Petrilă Viorel-Mihai (n. 18.05.1959), suspiciune proces proliferativ esofagian identificat la endoscopie pe 17.04.2026.
 
 **Relație cu alte regulamente:**
@@ -377,6 +377,7 @@ Pentru orice **document de ieșire** (raport, rezumat, interpretare, traducere p
 6. Document medical sursă nou procesat în `Dosar_Medical/` (PDF / foto / manuscris)
 7. Modificare status acțiuni **P0** în `TODO.md` (critice pentru pacient)
 8. Schimbare simptomatologie sau status clinic relevant
+9. Modificare `ALIMENTATIE.md` → regenerare **parțială** a dashboardului: actualizează **DOAR** blocul `<script type="text/markdown" id="md-alimentatie">…</script>` + variabila `lastRegen` din JS (tab-ul Alimentație). Nu necesită regenerare integrală — doar sincronizare embed pentru browser-ele care blochează `fetch()` pe `file://`. Timing: la finalul sesiunii, înainte de commit.
 
 **NU declanșează regenerare:**
 
@@ -428,7 +429,9 @@ Pentru orice **document de ieșire** (raport, rezumat, interpretare, traducere p
 
 **Why:** familia vrea o vizualizare rapidă fără să navigheze prin 370 de rânduri de markdown. Un dashboard HTML static offline e formatul cel mai accesibil (click în Google Drive → deschide în browser, fără instalare). Fiind manual sincronizat, singura garanție că nu devine obsolet este regula explicită de regenerare la fiecare adăugare relevantă. Fără regulă, dashboardul devine o sursă paralelă de adevăr care diverge de documentație — anti-pattern.
 
-**How to apply:** la finalul oricărei sesiuni cu un declanșator din lista de mai sus, regenerezi integral `DASHBOARD.html` înainte de commit. Dacă sesiunea nu are declanșator (doar citire / audit / log-uri), nu regenerezi.
+**How to apply:** la finalul oricărei sesiuni cu un declanșator din lista de mai sus, regenerezi integral `DASHBOARD.html` înainte de commit. Excepție: declanșatorul #9 (modificare `ALIMENTATIE.md`) cere doar regenerare parțială a blocului embedded, nu a întregului dashboard. Dacă sesiunea nu are niciun declanșator (doar citire / audit / log-uri), nu regenerezi.
+
+**Tab-uri dashboard:** începând cu v6, dashboardul are 2 tab-uri — `medical` (default, conținutul clinic) și `alimentatie` (ghidul culinar). Tab-ul Alimentație folosește strategie hibridă: încearcă `fetch('ALIMENTATIE.md')` la încărcare (vizualizare live pe browserele care permit) + fallback pe conținutul embedded în `<script type="text/markdown" id="md-alimentatie">` (pentru Chrome/Edge care blochează `fetch()` pe `file://`). Parser Markdown minimal inline, fără dependențe externe.
 
 ---
 
@@ -446,6 +449,7 @@ La conflict direct pentru lucrul în `G:\My Drive\Roly\.Tati`, regulile din aces
 
 ## Changelog
 
+- **2026-04-18 v6:** extinsă Regula 18 — adăugat declanșator #9 (modificare `ALIMENTATIE.md` → regenerare parțială tab Alimentație din dashboard). Clarificată strategia hibridă fetch+embed a tab-urilor. Trigger: user a cerut tab dedicat Alimentație în dashboard cu auto-update la modificarea `ALIMENTATIE.md`.
 - **2026-04-18 v5:** adăugată Regula 18 (sincronizare `DASHBOARD.html` la fiecare actualizare medicală relevantă). Trigger: user a solicitat vizualizare rapidă HTML a dosarului + regulă explicită pentru a preveni divergența dashboard vs. documentație sursă.
 - **2026-04-18 v4:** adăugată Regula 17 (marcaj certitudine [CERT]/[PROBABIL]/[INCERT]/[NEGASIT] pentru informații medicale în documente generate). Trigger: user a cerut un raport despre reacții adverse Jamesi + Triplixam și a solicitat explicit ca informațiile nesigure să fie marcate ca atare; Regula 17 operaționalizează R3 global pentru outputul medical al dosarului.
 - **2026-04-18 v3.1:** clarificări Regula 16 sub-clauza 7 (timestamp narativ): adăugat câmp `_metadata.data_procesare` în lista fișierelor afectate; fix typo „intermediar" → „intermediare"; specificat frecvența rulării `date` (refresh >15 min); tabel format per fișier (SESSION_LOG/CHANGELOG trunchiat la `HH:MM`, JSON ISO 8601 complet). Trigger: audit utilizator care a detectat ambiguitățile și commit-ul 478048f nelogat în SESSION_LOG/CHANGELOG (remediat simultan).

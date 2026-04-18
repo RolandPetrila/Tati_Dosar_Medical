@@ -6,6 +6,26 @@
 
 ---
 
+## 2026-04-18 17:58 — [Claude_Opus_4.7] tab-alimentatie-dashboard
+
+**Scop:** adăugare tab „Alimentație" dedicat în `DASHBOARD.html`, separat de conținutul medical existent; conținut populat din `ALIMENTATIE.md` cu strategie hibridă fetch live + fallback embedded; extindere Regula 18 cu declanșator #9.
+
+**Declanșator:** user — `poti sa adaugi in dashbordul existent un tab nou, separat de partea medicala existenta, in care sa incluzi documentatia din ALIMENTATIE.md? as mai vrea ca acel tab sa se actualizeze in permanenta in mod automat daca modificam ceva in fisierul .md dedicat.` + clarificare tehnică în 3 variante (hibrid selectat).
+
+**Operații:**
+
+- `DASHBOARD.html` — refactor în 2 tab-uri (medical default, alimentatie nou); CSS nou pentru `.tabs`, `.tab-btn`, `.tab-panel`, `.md-content`, `.md-meta`; parser Markdown inline; loader hibrid (fetch + embedded fallback); wrap conținut existent în `<section id="panel-medical">`
+- `CLAUDE.md` — Regula 18 extinsă (declanșator #9 ALIMENTATIE.md; nouă secțiune „Tab-uri dashboard"); versiune v6; changelog nou
+- `CHANGELOG.md` + `SESSION_LOG.md` — intrare 2026-04-18 17:58
+
+**Notă tehnică:** strategia hibridă rezolvă conflictul între cerința user-ului („auto-update în permanență") și restricția Chrome/Edge care blochează `fetch()` pe `file://`. Pe Firefox/Safari = live; pe Chrome = embedded fresh din regenerare agent.
+
+**Fișiere:** `DASHBOARD.html`, `CLAUDE.md`, `CHANGELOG.md`, `SESSION_LOG.md`.
+
+**Făcut de:** Claude Code (Opus 4.7, 1M context).
+
+---
+
 ## 2026-04-18 17:43 — [Claude_Opus_4.7] extensie-mentinere-greutate
 
 **Scop:** completare `ALIMENTATIE.md` cu secțiune dedicată menținerii greutății (efecte adverse la scădere, strategii, semnale de atenție, cum cântărim) + reper antropometric (~79 kg) integrat în `CONTEXT_MEDICAL.md`.

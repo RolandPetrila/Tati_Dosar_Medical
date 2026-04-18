@@ -4,6 +4,33 @@
 
 ---
 
+## 2026-04-18 17:58 — Tab „Alimentație" în `DASHBOARD.html` + Regula 18 extinsă (v6)
+
+**Tip:** EXTENSIE DASHBOARD + EXTENSIE REGULAMENT
+
+**Fișiere afectate:**
+
+- `DASHBOARD.html` — adăugare tab navigation (Medical / Alimentație), CSS dedicat (tabs + markdown rendering), parser Markdown minimal inline (fără dependențe externe), loader hibrid cu fetch live + fallback embedded. Conținutul `ALIMENTATIE.md` embedat integral într-un `<script type="text/markdown" id="md-alimentatie">` ca backup offline
+- `CLAUDE.md` — Regula 18 extinsă la v6: declanșator #9 (modificare `ALIMENTATIE.md` → regenerare parțială doar a blocului embedded), secțiune nouă „Tab-uri dashboard" cu descrierea strategiei hibride, changelog v6
+
+**Strategia hibridă implementată:**
+
+1. La deschiderea dashboardului, JS încearcă `fetch('ALIMENTATIE.md?t=' + Date.now())` → dacă succes (Firefox, Safari, unele Edge), randează LIVE din fișier → user vede orice modificare la F5
+2. Dacă fetch eșuează (Chrome/Edge blochează `file://` fetch prin default), afișează conținutul embeded din `<script type="text/markdown">` → backup întotdeauna proaspăt (regenerat de agent la fiecare modificare ALIMENTATIE.md)
+3. Banner vizual în tab indică sursa: verde „LIVE" / gri „embedded + data ultimei regenerări"
+
+**Parser Markdown inline:** ~50 linii JS, suportă headers (h1-h4), liste, blockquote, hr, bold/italic/code, paragrafe. Fără librării externe (respectă regula offline-first din Regula 18).
+
+**Cum se menține auto-update:**
+
+- Declanșator #9 din Regula 18 obligă agentul să actualizeze blocul `<script id="md-alimentatie">` + variabila `lastRegen` în JS la fiecare modificare a `ALIMENTATIE.md`
+- Regenerare parțială, nu integrală (rest-ul dashboardului rămâne neschimbat)
+- Commit automat în aceeași sesiune conform Regulii 16
+
+**Făcut de:** Claude Code (Opus 4.7, 1M context).
+
+---
+
 ## 2026-04-18 17:43 — Secțiune menținere greutate în `ALIMENTATIE.md` + greutate ~79 kg în `CONTEXT_MEDICAL.md`
 
 **Tip:** EXTENSIE + ACTUALIZARE DATE PACIENT

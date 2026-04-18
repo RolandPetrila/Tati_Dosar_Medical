@@ -402,6 +402,142 @@
         border-radius: 4px;
         color: #fecaca;
       }
+
+      /* ===== TABS ===== */
+      .tabs {
+        display: flex;
+        gap: 4px;
+        margin-bottom: 22px;
+        border-bottom: 2px solid var(--border);
+        flex-wrap: wrap;
+      }
+      .tab-btn {
+        padding: 12px 22px;
+        background: transparent;
+        border: none;
+        cursor: pointer;
+        font-size: 14px;
+        font-weight: 600;
+        color: var(--text-muted);
+        border-bottom: 3px solid transparent;
+        margin-bottom: -2px;
+        transition:
+          color 0.15s,
+          background 0.15s,
+          border-color 0.15s;
+        font-family: inherit;
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        border-radius: 6px 6px 0 0;
+      }
+      .tab-btn:hover {
+        color: var(--primary);
+        background: var(--primary-light);
+      }
+      .tab-btn.active {
+        color: var(--primary);
+        border-bottom-color: var(--primary);
+        background: var(--primary-light);
+      }
+      .tab-panel {
+        display: none;
+      }
+      .tab-panel.active {
+        display: block;
+        animation: fadein 0.2s ease;
+      }
+      @keyframes fadein {
+        from {
+          opacity: 0;
+          transform: translateY(4px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      /* ===== MARKDOWN CONTENT ===== */
+      .md-meta {
+        font-size: 12px;
+        color: var(--text-muted);
+        padding: 8px 12px;
+        background: #f8fafc;
+        border-radius: 6px;
+        margin-bottom: 18px;
+        border-left: 3px solid var(--border);
+      }
+      .md-meta.live {
+        color: var(--ok);
+        border-left-color: var(--ok);
+        background: var(--ok-light);
+      }
+      .md-content {
+        font-size: 14px;
+        line-height: 1.65;
+        color: var(--text);
+      }
+      .md-content h1 {
+        display: none;
+      }
+      .md-content h2 {
+        color: var(--primary);
+        font-size: 20px;
+        font-weight: 700;
+        margin: 28px 0 12px;
+        padding-bottom: 10px;
+        border-bottom: 2px solid var(--primary-light);
+      }
+      .md-content h2:first-child {
+        margin-top: 0;
+      }
+      .md-content h3 {
+        font-size: 16px;
+        font-weight: 600;
+        color: var(--text);
+        margin: 22px 0 8px;
+      }
+      .md-content h4 {
+        font-size: 14px;
+        font-weight: 600;
+        margin: 14px 0 6px;
+      }
+      .md-content p {
+        margin: 8px 0;
+      }
+      .md-content ul {
+        padding-left: 22px;
+        margin: 8px 0 12px;
+      }
+      .md-content li {
+        padding: 3px 0;
+      }
+      .md-content blockquote {
+        border-left: 3px solid var(--info);
+        padding: 12px 16px;
+        background: var(--info-light);
+        border-radius: 0 6px 6px 0;
+        margin: 14px 0;
+        color: #155e75;
+      }
+      .md-content strong {
+        color: var(--text);
+        font-weight: 700;
+      }
+      .md-content hr {
+        border: none;
+        border-top: 1px solid var(--border);
+        margin: 24px 0;
+      }
+      .md-content code {
+        background: #f1f5f9;
+        padding: 2px 6px;
+        border-radius: 4px;
+        font-size: 12.5px;
+        font-family: "Consolas", "Monaco", monospace;
+      }
+
       @media (max-width: 700px) {
         .grid {
           grid-template-columns: 1fr;
@@ -459,7 +595,10 @@
           investigare
         </div>
         <div class="meta">
-          <span><strong>Ultima generare:</strong> 18 aprilie 2026, 14:01</span>
+          <span
+            ><strong>Ultima generare:</strong> 18 aprilie 2026, 17:58 (tab
+            Alimentație adăugat)</span
+          >
           <span
             ><strong>Sursă date:</strong> CONTEXT_MEDICAL.md + TODO.md +
             Dosar_Medical/*.json</span
@@ -480,649 +619,681 @@
         <div class="timer" id="countdown">—</div>
       </div>
 
-      <div class="grid">
-        <!-- IDENTITATE -->
-        <div class="card">
-          <h2>Identitate pacient</h2>
-          <dl class="kv">
-            <dt>Nume complet</dt>
-            <dd>Petrilă Viorel-Mihai</dd>
-            <dt>Data nașterii</dt>
-            <dd>18 mai 1959</dd>
-            <dt>Vârsta</dt>
-            <dd>66 ani</dd>
-            <dt>Sex</dt>
-            <dd>Masculin</dd>
-            <dt>CNP</dt>
-            <dd>1590518024486</dd>
-            <dt>C.I.</dt>
-            <dd>ZR 089382 (val. 03.08.2031)</dd>
-            <dt>Locul nașterii</dt>
-            <dd>Igriș (Sânpetru Mare), jud. Timiș</dd>
-            <dt>Domiciliu</dt>
-            <dd>Str. Vasile Goldiș nr. 42, Nădlac, jud. Arad</dd>
-            <dt>Asigurare</dt>
-            <dd>Pensionar — CJP Arad (021), dosar 42/355336</dd>
-            <dt>Grupa sanguină</dt>
-            <dd><span class="badge neutral">De completat</span></dd>
-            <dt>Greutate / Înălțime</dt>
-            <dd><span class="badge neutral">De completat</span></dd>
-          </dl>
-        </div>
+      <nav class="tabs" role="tablist">
+        <button class="tab-btn active" data-tab="medical" role="tab">
+          🏥 Medical
+        </button>
+        <button class="tab-btn" data-tab="alimentatie" role="tab">
+          🍽️ Alimentație
+        </button>
+      </nav>
 
-        <!-- STATUS CLINIC -->
-        <div class="card">
-          <h2>Status clinic curent</h2>
-          <dl class="kv">
-            <dt>Suspiciune principală</dt>
-            <dd>
-              <span class="badge crit">Proces proliferativ esofagian</span>
-            </dd>
-            <dt>Cod diagnostic</dt>
-            <dd>Cod 95 (bilet BCTAP 0631727)</dd>
-            <dt>Data identificării</dt>
-            <dd>17.04.2026 — endoscopie digestivă superioară</dd>
-            <dt>Medic curant</dt>
-            <dd>Dr. Noufal Abdul Vahab — Genesis Medical Clinic Arad</dd>
-            <dt>Biopsie</dt>
-            <dd>
-              <span class="badge warn">În așteptare rezultat</span> — Bioclinica
-              Arad, estimat 24.04 – 01.05.2026
-            </dd>
-            <dt>Stadializare</dt>
-            <dd><span class="badge info">CT programat 20.04.2026</span></dd>
-            <dt>Consult oncolog</dt>
-            <dd>
-              <span class="badge neutral">De programat după rezultate</span>
-            </dd>
-          </dl>
-          <div class="alert info">
-            <strong>Elemente pozitive:</strong> absența disfagiei progresive,
-            scădere ponderală absentă, fără hematemeză / melenă, fără răgușeală,
-            fără durere toracică persistentă.
+      <section class="tab-panel active" id="panel-medical" role="tabpanel">
+        <div class="grid">
+          <!-- IDENTITATE -->
+          <div class="card">
+            <h2>Identitate pacient</h2>
+            <dl class="kv">
+              <dt>Nume complet</dt>
+              <dd>Petrilă Viorel-Mihai</dd>
+              <dt>Data nașterii</dt>
+              <dd>18 mai 1959</dd>
+              <dt>Vârsta</dt>
+              <dd>66 ani</dd>
+              <dt>Sex</dt>
+              <dd>Masculin</dd>
+              <dt>CNP</dt>
+              <dd>1590518024486</dd>
+              <dt>C.I.</dt>
+              <dd>ZR 089382 (val. 03.08.2031)</dd>
+              <dt>Locul nașterii</dt>
+              <dd>Igriș (Sânpetru Mare), jud. Timiș</dd>
+              <dt>Domiciliu</dt>
+              <dd>Str. Vasile Goldiș nr. 42, Nădlac, jud. Arad</dd>
+              <dt>Asigurare</dt>
+              <dd>Pensionar — CJP Arad (021), dosar 42/355336</dd>
+              <dt>Grupa sanguină</dt>
+              <dd><span class="badge neutral">De completat</span></dd>
+              <dt>Greutate / Înălțime</dt>
+              <dd><span class="badge neutral">De completat</span></dd>
+            </dl>
+          </div>
+
+          <!-- STATUS CLINIC -->
+          <div class="card">
+            <h2>Status clinic curent</h2>
+            <dl class="kv">
+              <dt>Suspiciune principală</dt>
+              <dd>
+                <span class="badge crit">Proces proliferativ esofagian</span>
+              </dd>
+              <dt>Cod diagnostic</dt>
+              <dd>Cod 95 (bilet BCTAP 0631727)</dd>
+              <dt>Data identificării</dt>
+              <dd>17.04.2026 — endoscopie digestivă superioară</dd>
+              <dt>Medic curant</dt>
+              <dd>Dr. Noufal Abdul Vahab — Genesis Medical Clinic Arad</dd>
+              <dt>Biopsie</dt>
+              <dd>
+                <span class="badge warn">În așteptare rezultat</span> —
+                Bioclinica Arad, estimat 24.04 – 01.05.2026
+              </dd>
+              <dt>Stadializare</dt>
+              <dd><span class="badge info">CT programat 20.04.2026</span></dd>
+              <dt>Consult oncolog</dt>
+              <dd>
+                <span class="badge neutral">De programat după rezultate</span>
+              </dd>
+            </dl>
+            <div class="alert info">
+              <strong>Elemente pozitive:</strong> absența disfagiei progresive,
+              scădere ponderală absentă, fără hematemeză / melenă, fără
+              răgușeală, fără durere toracică persistentă.
+            </div>
+          </div>
+
+          <!-- MEDICAȚIE -->
+          <div class="card wide">
+            <h2>Medicație activă zilnică</h2>
+            <table>
+              <thead>
+                <tr>
+                  <th>Medicament</th>
+                  <th>Substanță activă</th>
+                  <th>Doză</th>
+                  <th>Ritm</th>
+                  <th>Indicație</th>
+                  <th>Status</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>Aspenter</strong></td>
+                  <td>acid acetilsalicilic</td>
+                  <td>75 mg</td>
+                  <td>0-1-0 (prânz)</td>
+                  <td>Antiagregant post-stent 2012</td>
+                  <td><span class="pill-status active">ACTIV</span></td>
+                </tr>
+                <tr>
+                  <td><strong>Concor</strong></td>
+                  <td>fumarat de bisoprolol</td>
+                  <td>5 mg</td>
+                  <td>1-0-0 (dimineață)</td>
+                  <td>Beta-blocant (cardioprotecție + HTA)</td>
+                  <td><span class="pill-status active">ACTIV</span></td>
+                </tr>
+                <tr>
+                  <td><strong>Triplixam</strong></td>
+                  <td>perindopril + indapamidă + amlodipină</td>
+                  <td>10 / 2.5 / 5 mg</td>
+                  <td>1-0-0 (dimineață)</td>
+                  <td>Antihipertensiv triplu</td>
+                  <td><span class="pill-status active">ACTIV</span></td>
+                </tr>
+                <tr>
+                  <td><strong>Jamesi</strong></td>
+                  <td>sitagliptin + metformin</td>
+                  <td>50 / 1000 mg</td>
+                  <td>1-0-1</td>
+                  <td>Antidiabetic oral (DPP-4 + biguanidă)</td>
+                  <td>
+                    <span class="pill-status stop"
+                      >OPRIT pre-CT (18.04 → 22.04)</span
+                    >
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            <div class="alert warn">
+              <strong>Interacțiune de urmărit:</strong> sitagliptin (Jamesi) +
+              perindopril (Triplixam) → risc crescut de angioedem [SmPC
+              Triplixam 4.5]. La umflare bruscă față/buze/limbă sau dificultate
+              respirație → <strong>112 IMEDIAT</strong>.
+            </div>
+            <div class="alert info">
+              <strong>Sursă schemă:</strong> prescriere Dr. LAZĂR (nume parțial
+              ilizibil), 10.11.2025 — manuscris + foto cutii.
+            </div>
+          </div>
+
+          <!-- ALERGII -->
+          <div class="card">
+            <h2>Alergii cunoscute</h2>
+            <table>
+              <tbody>
+                <tr>
+                  <td>Iod (contrast iodat)</td>
+                  <td><span class="badge ok">Fără alergie</span></td>
+                </tr>
+                <tr>
+                  <td>Fructe de mare</td>
+                  <td><span class="badge ok">Fără alergie</span></td>
+                </tr>
+                <tr>
+                  <td>Contrast iodat anterior</td>
+                  <td><span class="badge ok">Fără reacții</span></td>
+                </tr>
+                <tr>
+                  <td>Medicamente</td>
+                  <td><span class="badge ok">Niciuna declarată</span></td>
+                </tr>
+                <tr>
+                  <td>Alimente / alte</td>
+                  <td><span class="badge ok">Niciuna declarată</span></td>
+                </tr>
+              </tbody>
+            </table>
+            <div class="alert info">
+              Confirmat de familie (Roland Petrilă, 18.04.2026).
+              <strong>A se reconfirma verbal la radiolog</strong> înainte de
+              injectarea contrastului.
+            </div>
+          </div>
+
+          <!-- ANALIZE -->
+          <div class="card wide">
+            <h2>Analize și investigații recente</h2>
+            <table>
+              <thead>
+                <tr>
+                  <th>Data</th>
+                  <th>Parametru / Test</th>
+                  <th>Valoare</th>
+                  <th>Referință</th>
+                  <th>Status</th>
+                  <th>Sursă</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>17.04.2026</td>
+                  <td>Creatinină serică</td>
+                  <td><strong>0.83 mg/dL</strong></td>
+                  <td>0.67 – 1.17</td>
+                  <td><span class="badge ok">Normală</span></td>
+                  <td>Bioclinica Arad 26417A0362</td>
+                </tr>
+                <tr>
+                  <td>17.04.2026</td>
+                  <td>Uree serică</td>
+                  <td><strong>33.4 mg/dL</strong></td>
+                  <td>&lt; 50</td>
+                  <td><span class="badge ok">Normală</span></td>
+                  <td>Bioclinica Arad 26417A0362</td>
+                </tr>
+                <tr>
+                  <td>17.04.2026</td>
+                  <td>eGFR estimat</td>
+                  <td>~95 mL/min/1.73m²</td>
+                  <td>&gt; 90</td>
+                  <td><span class="badge ok">Stadiu G1</span></td>
+                  <td>Calcul CKD-EPI</td>
+                </tr>
+                <tr>
+                  <td>17.04.2026</td>
+                  <td>Endoscopie digestivă superioară</td>
+                  <td>Leziune esofagiană + biopsie prelevată</td>
+                  <td>—</td>
+                  <td><span class="badge crit">Proces proliferativ</span></td>
+                  <td>Dr. Noufal — Genesis Arad</td>
+                </tr>
+                <tr>
+                  <td>17.04.2026</td>
+                  <td>Colonoscopie</td>
+                  <td>Polip colon descendent + hemoroizi interni grad II</td>
+                  <td>—</td>
+                  <td>
+                    <span class="badge warn">Polipectomie planificată</span>
+                  </td>
+                  <td>Dr. Noufal — Genesis Arad</td>
+                </tr>
+                <tr>
+                  <td>14.04.2026</td>
+                  <td>Ecografie abdominală</td>
+                  <td>Fără modificări vizibile</td>
+                  <td>—</td>
+                  <td><span class="badge ok">Normală</span></td>
+                  <td>—</td>
+                </tr>
+                <tr>
+                  <td>28.11.2025</td>
+                  <td>Creatinină (preop hernie)</td>
+                  <td>0.66 mg/dL</td>
+                  <td>—</td>
+                  <td><span class="badge ok">Normală</span></td>
+                  <td>Analize preop chirurgie</td>
+                </tr>
+                <tr>
+                  <td>28.11.2025</td>
+                  <td>Glicemie</td>
+                  <td>129 mg/dL</td>
+                  <td>70 – 115</td>
+                  <td>
+                    <span class="badge warn">Ușor crescută (diabet)</span>
+                  </td>
+                  <td>Analize preop chirurgie</td>
+                </tr>
+                <tr>
+                  <td>06.09.2024</td>
+                  <td>Anti-H. pylori IgG</td>
+                  <td>&gt; 100 U/mL</td>
+                  <td>0 – 20</td>
+                  <td><span class="badge info">Expunere confirmată</span></td>
+                  <td>Serologie control</td>
+                </tr>
+                <tr>
+                  <td>17.06.2025</td>
+                  <td>Glicemie à jeun</td>
+                  <td>136.1 mg/dL</td>
+                  <td>70 – 115</td>
+                  <td><span class="badge warn">Crescută (diabet)</span></td>
+                  <td>Buletin analize complet</td>
+                </tr>
+              </tbody>
+            </table>
+            <div class="alert warn">
+              <strong>Lipsesc:</strong> HbA1c recent (monitorizare diabet),
+              hemoleucogramă &lt; 6 luni, profil lipidic actual, TA uzuală
+              documentată.
+            </div>
+          </div>
+
+          <!-- ANTECEDENTE TIMELINE -->
+          <div class="card">
+            <h2>Timeline antecedente</h2>
+            <div class="timeline">
+              <div class="timeline-item">
+                <div class="date">2026-04-17</div>
+                <div class="title">Endoscopie + colonoscopie + biopsie</div>
+                <div class="desc">
+                  Leziune esofagiană identificată, biopsie trimisă la
+                  anatomopatologie.
+                </div>
+              </div>
+              <div class="timeline-item">
+                <div class="date">2026-04-14</div>
+                <div class="title">Ecografie abdominală</div>
+                <div class="desc">Fără modificări vizibile.</div>
+              </div>
+              <div class="timeline-item">
+                <div class="date">2025-11-28</div>
+                <div class="title">
+                  Cură chirurgicală hernie inghinală dreaptă
+                </div>
+                <div class="desc">
+                  K40.90 + aderențe peritoneale (K66.0). Plasă sintetică,
+                  rahianestezie. NU a fost hernie hiatală.
+                </div>
+              </div>
+              <div class="timeline-item">
+                <div class="date">2025-11-10</div>
+                <div class="title">Schema medicație actualizată</div>
+                <div class="desc">
+                  Prescriere Dr. LAZĂR: Aspenter + Concor + Triplixam + Jamesi.
+                </div>
+              </div>
+              <div class="timeline-item">
+                <div class="date">2024-05-30</div>
+                <div class="title">Infecție H. pylori — tratament</div>
+                <div class="desc">
+                  Antibiotice + IPP. Fără recidivă simptomatică ulterior.
+                </div>
+              </div>
+              <div class="timeline-item">
+                <div class="date">2012-02-17</div>
+                <div class="title">STEMI antero-septo-apical — stent IVA</div>
+                <div class="desc">
+                  Vichy (Franța): fibrinoliză + angioplastie stent RX Vision
+                  3.5×28 mm. Antiagregare pe termen lung.
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- ECHIPA MEDICALA -->
+          <div class="card">
+            <h2>Echipă medicală</h2>
+            <table>
+              <thead>
+                <tr>
+                  <th>Specialitate</th>
+                  <th>Medic</th>
+                  <th>Unitate</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Gastroenterologie</td>
+                  <td>Dr. Noufal Abdul Vahab</td>
+                  <td>Genesis Medical Clinic Arad</td>
+                </tr>
+                <tr>
+                  <td>Cardiologie / Medicină internă</td>
+                  <td>
+                    Dr. LAZĂR <span class="badge warn">nume parțial</span>
+                  </td>
+                  <td>De identificat</td>
+                </tr>
+                <tr>
+                  <td>Diabetologie (prescriere Jamesi)</td>
+                  <td>Dr. LAZĂR (probabil)</td>
+                  <td>De identificat</td>
+                </tr>
+                <tr>
+                  <td>Cardiologie 2012 (stent)</td>
+                  <td>Echipa Vichy — France</td>
+                  <td>CH de Vichy (de confirmat)</td>
+                </tr>
+                <tr>
+                  <td>Chirurgie Generală II (hernie)</td>
+                  <td>De identificat</td>
+                  <td>De identificat</td>
+                </tr>
+                <tr>
+                  <td>Medic de familie</td>
+                  <td><span class="badge neutral">De identificat</span></td>
+                  <td>—</td>
+                </tr>
+                <tr>
+                  <td>Oncologie digestivă</td>
+                  <td><span class="badge warn">De programat</span></td>
+                  <td>Arad / Timișoara / Cluj</td>
+                </tr>
+                <tr>
+                  <td>Radiologie (CT 20.04)</td>
+                  <td>—</td>
+                  <td>Genesis Medical Clinic Micălaca</td>
+                </tr>
+                <tr>
+                  <td>Anatomopatologie (biopsie)</td>
+                  <td>—</td>
+                  <td>Bioclinica Arad — arad@bioclinica.ro</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <!-- FACTORI DE RISC -->
+          <div class="card">
+            <h2>Factori de risc și stil de viață</h2>
+            <table>
+              <tbody>
+                <tr>
+                  <td>Fumat</td>
+                  <td>
+                    Fost fumător 1977 – 2012 (≈35 ani);
+                    <strong>14 ani abstinență</strong>
+                  </td>
+                </tr>
+                <tr>
+                  <td>Alcool</td>
+                  <td>Rar, ocazional — cantități mici</td>
+                </tr>
+                <tr>
+                  <td>Activitate fizică</td>
+                  <td>
+                    Uzual activ, energic (până la debutul simptomelor actuale)
+                  </td>
+                </tr>
+                <tr>
+                  <td>Antecedente oncologice familiale</td>
+                  <td>Niciunul raportat</td>
+                </tr>
+              </tbody>
+            </table>
+            <div class="alert info">
+              <strong>Simptome noi (ultimele 2-3 săptămâni):</strong> oboseală
+              marcată, somnolență, apetit diminuat, senzație „nod în gât"
+              intermitent postprandial, reflux reapărut.
+            </div>
+          </div>
+
+          <!-- CALENDAR CT -->
+          <div class="card wide">
+            <h2>Calendar pregătire CT 20.04.2026</h2>
+            <table>
+              <thead>
+                <tr>
+                  <th>Data / ora</th>
+                  <th>Acțiune</th>
+                  <th>Status</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Sâmbătă 18.04.2026</td>
+                  <td><strong>STOP Jamesi</strong> (H-48 pre-CT)</td>
+                  <td><span class="badge ok">✓ Executat</span></td>
+                </tr>
+                <tr>
+                  <td>Duminică 19.04.2026</td>
+                  <td>Hidratare activă 1.5-2 L apă plată</td>
+                  <td><span class="badge primary">Programat</span></td>
+                </tr>
+                <tr>
+                  <td>Duminică 19.04, ~20:00</td>
+                  <td>Cină ușoară — ultima masă consistentă</td>
+                  <td><span class="badge primary">Programat</span></td>
+                </tr>
+                <tr>
+                  <td>Luni 20.04, ~11:00</td>
+                  <td>Gustare ușoară — ultima masă înainte de CT</td>
+                  <td><span class="badge primary">Programat</span></td>
+                </tr>
+                <tr>
+                  <td>Luni 20.04, dimineața</td>
+                  <td>
+                    Aspenter + Concor + Triplixam — NORMAL (dacă radiologul nu
+                    cere altfel)
+                  </td>
+                  <td><span class="badge primary">Programat</span></td>
+                </tr>
+                <tr>
+                  <td><strong>Luni 20.04, 17:00</strong></td>
+                  <td>
+                    <strong>CT torace + abdomen + pelvis cu contrast</strong>
+                    (Genesis Micălaca)
+                  </td>
+                  <td><span class="badge crit">CT</span></td>
+                </tr>
+                <tr>
+                  <td>Luni 20.04, seara</td>
+                  <td>Glicemie control — NU relua Jamesi încă</td>
+                  <td><span class="badge primary">Programat</span></td>
+                </tr>
+                <tr>
+                  <td>Miercuri 22.04.2026</td>
+                  <td>
+                    Reluare Jamesi (H+48 post-CT, după confirmare creatinină OK)
+                  </td>
+                  <td><span class="badge warn">Follow-up</span></td>
+                </tr>
+                <tr>
+                  <td>24.04 – 01.05.2026</td>
+                  <td>Rezultat biopsie esofagiană (Bioclinica Arad)</td>
+                  <td><span class="badge warn">În așteptare</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <!-- ACTIUNI DESCHISE -->
+          <div class="card wide">
+            <h2>Acțiuni deschise (din TODO.md)</h2>
+
+            <div class="actions-group p0">
+              <h3>🔴 P0 — Critic</h3>
+              <ul class="clean">
+                <li>
+                  <span class="icon crit-icon">•</span>
+                  <div>
+                    <strong>Confirmare telefonică Genesis Micălaca</strong> — cu
+                    24h înainte de CT
+                  </div>
+                </li>
+                <li>
+                  <span class="icon crit-icon">•</span>
+                  <div>
+                    <strong>Întrebare radiolog:</strong> Triplixam — mențin
+                    integral sau omit doza duminică/luni?
+                  </div>
+                </li>
+                <li>
+                  <span class="icon crit-icon">•</span>
+                  <div>
+                    <strong>Pregătire documente pentru CT:</strong> CI, card
+                    CAS, bilet BCTAP 0631727, analize recente, buletin
+                    endoscopie 17.04
+                  </div>
+                </li>
+              </ul>
+            </div>
+
+            <div class="actions-group p1">
+              <h3>🟡 P1 — Important</h3>
+              <ul class="clean">
+                <li>
+                  <span class="icon warn-icon">•</span>
+                  <div>
+                    <strong>Colectare informații medicale</strong>: medicamente
+                    (confirmare completă), grupa sanguină, greutate, înălțime,
+                    HbA1c recent, TA uzuală
+                  </div>
+                </li>
+                <li>
+                  <span class="icon warn-icon">•</span>
+                  <div>
+                    <strong>Documente istorice de obținut:</strong> bilet
+                    externare Vichy 2012, externare H. pylori 2024, raport
+                    operator hernie 2025, buletin endoscopie 17.04, buletin
+                    colonoscopie 17.04
+                  </div>
+                </li>
+                <li>
+                  <span class="icon warn-icon">•</span>
+                  <div>
+                    <strong>Identificare Dr. LAZĂR</strong> — nume parțial
+                    ilizibil pe manuscris prescriere
+                  </div>
+                </li>
+                <li>
+                  <span class="icon warn-icon">•</span>
+                  <div>
+                    <strong>Digitizare documente lipsă:</strong> 6 PDF-uri
+                    neidentificate în <code>99_altele/</code> + PDF original
+                    cardiologie Vichy + bilet ecografie 14.04
+                  </div>
+                </li>
+              </ul>
+            </div>
+
+            <div class="actions-group p2">
+              <h3>🟢 P2 — Util</h3>
+              <ul class="clean">
+                <li>
+                  <span class="icon ok-icon">•</span>
+                  <div>
+                    Identificare și contactare oncolog digestiv (Arad /
+                    Timișoara / Cluj)
+                  </div>
+                </li>
+                <li>
+                  <span class="icon ok-icon">•</span>
+                  <div>HbA1c — monitorizare control diabet cu Jamesi</div>
+                </li>
+                <li>
+                  <span class="icon ok-icon">•</span>
+                  <div>
+                    Prezentare raport reacții adverse Jamesi + Triplixam
+                    familiei + medicului curant
+                  </div>
+                </li>
+                <li>
+                  <span class="icon ok-icon">•</span>
+                  <div>
+                    Verificare versiune curentă SmPC Triplixam (actuală:
+                    v06.2021, vechime ~5 ani)
+                  </div>
+                </li>
+                <li>
+                  <span class="icon ok-icon">•</span>
+                  <div>Jurnal simptome — început pentru consult oncolog</div>
+                </li>
+                <li>
+                  <span class="icon ok-icon">•</span>
+                  <div>
+                    Clarificare hidrocel + chiste epididimare (indicate preop,
+                    dar absente din externare)
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- INTREBARI PREGATITE -->
+          <div class="card wide">
+            <h2>Întrebări pregătite pentru consulturi viitoare</h2>
+
+            <div class="q-block">
+              <h3>Pentru Dr. Noufal Abdul Vahab (gastroenterolog)</h3>
+              <ul>
+                <li>În ce segment al esofagului este leziunea?</li>
+                <li>
+                  Dimensiunea aproximativă? Aspect (ulcerativ / vegetant /
+                  stenozant)?
+                </li>
+                <li>Circumferențială sau parțială?</li>
+                <li>A fost observat esofag Barrett?</li>
+                <li>
+                  Ce a arătat colonoscopia — dincolo de polip și hemoroizi?
+                </li>
+                <li>Când sunt gata rezultatele biopsiei?</li>
+                <li>Ne recomandă un oncolog anume?</li>
+              </ul>
+            </div>
+
+            <div class="q-block">
+              <h3>Pentru centrul CT (Genesis Micălaca)</h3>
+              <ul>
+                <li>Cât durează până la raportul radiologului?</li>
+                <li>Se primește CD cu imagini DICOM?</li>
+                <li>
+                  Costul dacă facem privat (dacă CAS nu acoperă integral)?
+                </li>
+                <li>Triplixam dimineața — mențin integral sau omit doza?</li>
+              </ul>
+            </div>
+
+            <div class="q-block">
+              <h3>Pentru viitorul oncolog digestiv</h3>
+              <ul>
+                <li>Stadiul TNM exact?</li>
+                <li>Tipul histologic?</li>
+                <li>Opțiuni de tratament — ordonate după eficacitate?</li>
+                <li>Prognostic realist?</li>
+                <li>Trialuri clinice disponibile? Imunoterapie?</li>
+                <li>
+                  Gestionarea comorbidităților (diabet, stent coronarian) în
+                  timpul tratamentului oncologic?
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
+      </section>
+      <!-- /panel-medical -->
 
-        <!-- MEDICAȚIE -->
+      <section class="tab-panel" id="panel-alimentatie" role="tabpanel">
         <div class="card wide">
-          <h2>Medicație activă zilnică</h2>
-          <table>
-            <thead>
-              <tr>
-                <th>Medicament</th>
-                <th>Substanță activă</th>
-                <th>Doză</th>
-                <th>Ritm</th>
-                <th>Indicație</th>
-                <th>Status</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td><strong>Aspenter</strong></td>
-                <td>acid acetilsalicilic</td>
-                <td>75 mg</td>
-                <td>0-1-0 (prânz)</td>
-                <td>Antiagregant post-stent 2012</td>
-                <td><span class="pill-status active">ACTIV</span></td>
-              </tr>
-              <tr>
-                <td><strong>Concor</strong></td>
-                <td>fumarat de bisoprolol</td>
-                <td>5 mg</td>
-                <td>1-0-0 (dimineață)</td>
-                <td>Beta-blocant (cardioprotecție + HTA)</td>
-                <td><span class="pill-status active">ACTIV</span></td>
-              </tr>
-              <tr>
-                <td><strong>Triplixam</strong></td>
-                <td>perindopril + indapamidă + amlodipină</td>
-                <td>10 / 2.5 / 5 mg</td>
-                <td>1-0-0 (dimineață)</td>
-                <td>Antihipertensiv triplu</td>
-                <td><span class="pill-status active">ACTIV</span></td>
-              </tr>
-              <tr>
-                <td><strong>Jamesi</strong></td>
-                <td>sitagliptin + metformin</td>
-                <td>50 / 1000 mg</td>
-                <td>1-0-1</td>
-                <td>Antidiabetic oral (DPP-4 + biguanidă)</td>
-                <td>
-                  <span class="pill-status stop"
-                    >OPRIT pre-CT (18.04 → 22.04)</span
-                  >
-                </td>
-              </tr>
-            </tbody>
-          </table>
-          <div class="alert warn">
-            <strong>Interacțiune de urmărit:</strong> sitagliptin (Jamesi) +
-            perindopril (Triplixam) → risc crescut de angioedem [SmPC Triplixam
-            4.5]. La umflare bruscă față/buze/limbă sau dificultate respirație →
-            <strong>112 IMEDIAT</strong>.
+          <h2>🍽️ Alimentație — ghid de inspirație pentru gătit</h2>
+          <div class="md-meta" id="alimentatie-meta">
+            Se încarcă conținutul din <code>ALIMENTATIE.md</code>…
           </div>
-          <div class="alert info">
-            <strong>Sursă schemă:</strong> prescriere Dr. LAZĂR (nume parțial
-            ilizibil), 10.11.2025 — manuscris + foto cutii.
-          </div>
+          <div class="md-content" id="alimentatie-content"></div>
         </div>
-
-        <!-- ALERGII -->
-        <div class="card">
-          <h2>Alergii cunoscute</h2>
-          <table>
-            <tbody>
-              <tr>
-                <td>Iod (contrast iodat)</td>
-                <td><span class="badge ok">Fără alergie</span></td>
-              </tr>
-              <tr>
-                <td>Fructe de mare</td>
-                <td><span class="badge ok">Fără alergie</span></td>
-              </tr>
-              <tr>
-                <td>Contrast iodat anterior</td>
-                <td><span class="badge ok">Fără reacții</span></td>
-              </tr>
-              <tr>
-                <td>Medicamente</td>
-                <td><span class="badge ok">Niciuna declarată</span></td>
-              </tr>
-              <tr>
-                <td>Alimente / alte</td>
-                <td><span class="badge ok">Niciuna declarată</span></td>
-              </tr>
-            </tbody>
-          </table>
-          <div class="alert info">
-            Confirmat de familie (Roland Petrilă, 18.04.2026).
-            <strong>A se reconfirma verbal la radiolog</strong> înainte de
-            injectarea contrastului.
-          </div>
-        </div>
-
-        <!-- ANALIZE -->
-        <div class="card wide">
-          <h2>Analize și investigații recente</h2>
-          <table>
-            <thead>
-              <tr>
-                <th>Data</th>
-                <th>Parametru / Test</th>
-                <th>Valoare</th>
-                <th>Referință</th>
-                <th>Status</th>
-                <th>Sursă</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>17.04.2026</td>
-                <td>Creatinină serică</td>
-                <td><strong>0.83 mg/dL</strong></td>
-                <td>0.67 – 1.17</td>
-                <td><span class="badge ok">Normală</span></td>
-                <td>Bioclinica Arad 26417A0362</td>
-              </tr>
-              <tr>
-                <td>17.04.2026</td>
-                <td>Uree serică</td>
-                <td><strong>33.4 mg/dL</strong></td>
-                <td>&lt; 50</td>
-                <td><span class="badge ok">Normală</span></td>
-                <td>Bioclinica Arad 26417A0362</td>
-              </tr>
-              <tr>
-                <td>17.04.2026</td>
-                <td>eGFR estimat</td>
-                <td>~95 mL/min/1.73m²</td>
-                <td>&gt; 90</td>
-                <td><span class="badge ok">Stadiu G1</span></td>
-                <td>Calcul CKD-EPI</td>
-              </tr>
-              <tr>
-                <td>17.04.2026</td>
-                <td>Endoscopie digestivă superioară</td>
-                <td>Leziune esofagiană + biopsie prelevată</td>
-                <td>—</td>
-                <td><span class="badge crit">Proces proliferativ</span></td>
-                <td>Dr. Noufal — Genesis Arad</td>
-              </tr>
-              <tr>
-                <td>17.04.2026</td>
-                <td>Colonoscopie</td>
-                <td>Polip colon descendent + hemoroizi interni grad II</td>
-                <td>—</td>
-                <td>
-                  <span class="badge warn">Polipectomie planificată</span>
-                </td>
-                <td>Dr. Noufal — Genesis Arad</td>
-              </tr>
-              <tr>
-                <td>14.04.2026</td>
-                <td>Ecografie abdominală</td>
-                <td>Fără modificări vizibile</td>
-                <td>—</td>
-                <td><span class="badge ok">Normală</span></td>
-                <td>—</td>
-              </tr>
-              <tr>
-                <td>28.11.2025</td>
-                <td>Creatinină (preop hernie)</td>
-                <td>0.66 mg/dL</td>
-                <td>—</td>
-                <td><span class="badge ok">Normală</span></td>
-                <td>Analize preop chirurgie</td>
-              </tr>
-              <tr>
-                <td>28.11.2025</td>
-                <td>Glicemie</td>
-                <td>129 mg/dL</td>
-                <td>70 – 115</td>
-                <td><span class="badge warn">Ușor crescută (diabet)</span></td>
-                <td>Analize preop chirurgie</td>
-              </tr>
-              <tr>
-                <td>06.09.2024</td>
-                <td>Anti-H. pylori IgG</td>
-                <td>&gt; 100 U/mL</td>
-                <td>0 – 20</td>
-                <td><span class="badge info">Expunere confirmată</span></td>
-                <td>Serologie control</td>
-              </tr>
-              <tr>
-                <td>17.06.2025</td>
-                <td>Glicemie à jeun</td>
-                <td>136.1 mg/dL</td>
-                <td>70 – 115</td>
-                <td><span class="badge warn">Crescută (diabet)</span></td>
-                <td>Buletin analize complet</td>
-              </tr>
-            </tbody>
-          </table>
-          <div class="alert warn">
-            <strong>Lipsesc:</strong> HbA1c recent (monitorizare diabet),
-            hemoleucogramă &lt; 6 luni, profil lipidic actual, TA uzuală
-            documentată.
-          </div>
-        </div>
-
-        <!-- ANTECEDENTE TIMELINE -->
-        <div class="card">
-          <h2>Timeline antecedente</h2>
-          <div class="timeline">
-            <div class="timeline-item">
-              <div class="date">2026-04-17</div>
-              <div class="title">Endoscopie + colonoscopie + biopsie</div>
-              <div class="desc">
-                Leziune esofagiană identificată, biopsie trimisă la
-                anatomopatologie.
-              </div>
-            </div>
-            <div class="timeline-item">
-              <div class="date">2026-04-14</div>
-              <div class="title">Ecografie abdominală</div>
-              <div class="desc">Fără modificări vizibile.</div>
-            </div>
-            <div class="timeline-item">
-              <div class="date">2025-11-28</div>
-              <div class="title">
-                Cură chirurgicală hernie inghinală dreaptă
-              </div>
-              <div class="desc">
-                K40.90 + aderențe peritoneale (K66.0). Plasă sintetică,
-                rahianestezie. NU a fost hernie hiatală.
-              </div>
-            </div>
-            <div class="timeline-item">
-              <div class="date">2025-11-10</div>
-              <div class="title">Schema medicație actualizată</div>
-              <div class="desc">
-                Prescriere Dr. LAZĂR: Aspenter + Concor + Triplixam + Jamesi.
-              </div>
-            </div>
-            <div class="timeline-item">
-              <div class="date">2024-05-30</div>
-              <div class="title">Infecție H. pylori — tratament</div>
-              <div class="desc">
-                Antibiotice + IPP. Fără recidivă simptomatică ulterior.
-              </div>
-            </div>
-            <div class="timeline-item">
-              <div class="date">2012-02-17</div>
-              <div class="title">STEMI antero-septo-apical — stent IVA</div>
-              <div class="desc">
-                Vichy (Franța): fibrinoliză + angioplastie stent RX Vision
-                3.5×28 mm. Antiagregare pe termen lung.
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- ECHIPA MEDICALA -->
-        <div class="card">
-          <h2>Echipă medicală</h2>
-          <table>
-            <thead>
-              <tr>
-                <th>Specialitate</th>
-                <th>Medic</th>
-                <th>Unitate</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>Gastroenterologie</td>
-                <td>Dr. Noufal Abdul Vahab</td>
-                <td>Genesis Medical Clinic Arad</td>
-              </tr>
-              <tr>
-                <td>Cardiologie / Medicină internă</td>
-                <td>Dr. LAZĂR <span class="badge warn">nume parțial</span></td>
-                <td>De identificat</td>
-              </tr>
-              <tr>
-                <td>Diabetologie (prescriere Jamesi)</td>
-                <td>Dr. LAZĂR (probabil)</td>
-                <td>De identificat</td>
-              </tr>
-              <tr>
-                <td>Cardiologie 2012 (stent)</td>
-                <td>Echipa Vichy — France</td>
-                <td>CH de Vichy (de confirmat)</td>
-              </tr>
-              <tr>
-                <td>Chirurgie Generală II (hernie)</td>
-                <td>De identificat</td>
-                <td>De identificat</td>
-              </tr>
-              <tr>
-                <td>Medic de familie</td>
-                <td><span class="badge neutral">De identificat</span></td>
-                <td>—</td>
-              </tr>
-              <tr>
-                <td>Oncologie digestivă</td>
-                <td><span class="badge warn">De programat</span></td>
-                <td>Arad / Timișoara / Cluj</td>
-              </tr>
-              <tr>
-                <td>Radiologie (CT 20.04)</td>
-                <td>—</td>
-                <td>Genesis Medical Clinic Micălaca</td>
-              </tr>
-              <tr>
-                <td>Anatomopatologie (biopsie)</td>
-                <td>—</td>
-                <td>Bioclinica Arad — arad@bioclinica.ro</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-
-        <!-- FACTORI DE RISC -->
-        <div class="card">
-          <h2>Factori de risc și stil de viață</h2>
-          <table>
-            <tbody>
-              <tr>
-                <td>Fumat</td>
-                <td>
-                  Fost fumător 1977 – 2012 (≈35 ani);
-                  <strong>14 ani abstinență</strong>
-                </td>
-              </tr>
-              <tr>
-                <td>Alcool</td>
-                <td>Rar, ocazional — cantități mici</td>
-              </tr>
-              <tr>
-                <td>Activitate fizică</td>
-                <td>
-                  Uzual activ, energic (până la debutul simptomelor actuale)
-                </td>
-              </tr>
-              <tr>
-                <td>Antecedente oncologice familiale</td>
-                <td>Niciunul raportat</td>
-              </tr>
-            </tbody>
-          </table>
-          <div class="alert info">
-            <strong>Simptome noi (ultimele 2-3 săptămâni):</strong> oboseală
-            marcată, somnolență, apetit diminuat, senzație „nod în gât"
-            intermitent postprandial, reflux reapărut.
-          </div>
-        </div>
-
-        <!-- CALENDAR CT -->
-        <div class="card wide">
-          <h2>Calendar pregătire CT 20.04.2026</h2>
-          <table>
-            <thead>
-              <tr>
-                <th>Data / ora</th>
-                <th>Acțiune</th>
-                <th>Status</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>Sâmbătă 18.04.2026</td>
-                <td><strong>STOP Jamesi</strong> (H-48 pre-CT)</td>
-                <td><span class="badge ok">✓ Executat</span></td>
-              </tr>
-              <tr>
-                <td>Duminică 19.04.2026</td>
-                <td>Hidratare activă 1.5-2 L apă plată</td>
-                <td><span class="badge primary">Programat</span></td>
-              </tr>
-              <tr>
-                <td>Duminică 19.04, ~20:00</td>
-                <td>Cină ușoară — ultima masă consistentă</td>
-                <td><span class="badge primary">Programat</span></td>
-              </tr>
-              <tr>
-                <td>Luni 20.04, ~11:00</td>
-                <td>Gustare ușoară — ultima masă înainte de CT</td>
-                <td><span class="badge primary">Programat</span></td>
-              </tr>
-              <tr>
-                <td>Luni 20.04, dimineața</td>
-                <td>
-                  Aspenter + Concor + Triplixam — NORMAL (dacă radiologul nu
-                  cere altfel)
-                </td>
-                <td><span class="badge primary">Programat</span></td>
-              </tr>
-              <tr>
-                <td><strong>Luni 20.04, 17:00</strong></td>
-                <td>
-                  <strong>CT torace + abdomen + pelvis cu contrast</strong>
-                  (Genesis Micălaca)
-                </td>
-                <td><span class="badge crit">CT</span></td>
-              </tr>
-              <tr>
-                <td>Luni 20.04, seara</td>
-                <td>Glicemie control — NU relua Jamesi încă</td>
-                <td><span class="badge primary">Programat</span></td>
-              </tr>
-              <tr>
-                <td>Miercuri 22.04.2026</td>
-                <td>
-                  Reluare Jamesi (H+48 post-CT, după confirmare creatinină OK)
-                </td>
-                <td><span class="badge warn">Follow-up</span></td>
-              </tr>
-              <tr>
-                <td>24.04 – 01.05.2026</td>
-                <td>Rezultat biopsie esofagiană (Bioclinica Arad)</td>
-                <td><span class="badge warn">În așteptare</span></td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-
-        <!-- ACTIUNI DESCHISE -->
-        <div class="card wide">
-          <h2>Acțiuni deschise (din TODO.md)</h2>
-
-          <div class="actions-group p0">
-            <h3>🔴 P0 — Critic</h3>
-            <ul class="clean">
-              <li>
-                <span class="icon crit-icon">•</span>
-                <div>
-                  <strong>Confirmare telefonică Genesis Micălaca</strong> — cu
-                  24h înainte de CT
-                </div>
-              </li>
-              <li>
-                <span class="icon crit-icon">•</span>
-                <div>
-                  <strong>Întrebare radiolog:</strong> Triplixam — mențin
-                  integral sau omit doza duminică/luni?
-                </div>
-              </li>
-              <li>
-                <span class="icon crit-icon">•</span>
-                <div>
-                  <strong>Pregătire documente pentru CT:</strong> CI, card CAS,
-                  bilet BCTAP 0631727, analize recente, buletin endoscopie 17.04
-                </div>
-              </li>
-            </ul>
-          </div>
-
-          <div class="actions-group p1">
-            <h3>🟡 P1 — Important</h3>
-            <ul class="clean">
-              <li>
-                <span class="icon warn-icon">•</span>
-                <div>
-                  <strong>Colectare informații medicale</strong>: medicamente
-                  (confirmare completă), grupa sanguină, greutate, înălțime,
-                  HbA1c recent, TA uzuală
-                </div>
-              </li>
-              <li>
-                <span class="icon warn-icon">•</span>
-                <div>
-                  <strong>Documente istorice de obținut:</strong> bilet
-                  externare Vichy 2012, externare H. pylori 2024, raport
-                  operator hernie 2025, buletin endoscopie 17.04, buletin
-                  colonoscopie 17.04
-                </div>
-              </li>
-              <li>
-                <span class="icon warn-icon">•</span>
-                <div>
-                  <strong>Identificare Dr. LAZĂR</strong> — nume parțial
-                  ilizibil pe manuscris prescriere
-                </div>
-              </li>
-              <li>
-                <span class="icon warn-icon">•</span>
-                <div>
-                  <strong>Digitizare documente lipsă:</strong> 6 PDF-uri
-                  neidentificate în <code>99_altele/</code> + PDF original
-                  cardiologie Vichy + bilet ecografie 14.04
-                </div>
-              </li>
-            </ul>
-          </div>
-
-          <div class="actions-group p2">
-            <h3>🟢 P2 — Util</h3>
-            <ul class="clean">
-              <li>
-                <span class="icon ok-icon">•</span>
-                <div>
-                  Identificare și contactare oncolog digestiv (Arad / Timișoara
-                  / Cluj)
-                </div>
-              </li>
-              <li>
-                <span class="icon ok-icon">•</span>
-                <div>HbA1c — monitorizare control diabet cu Jamesi</div>
-              </li>
-              <li>
-                <span class="icon ok-icon">•</span>
-                <div>
-                  Prezentare raport reacții adverse Jamesi + Triplixam familiei
-                  + medicului curant
-                </div>
-              </li>
-              <li>
-                <span class="icon ok-icon">•</span>
-                <div>
-                  Verificare versiune curentă SmPC Triplixam (actuală: v06.2021,
-                  vechime ~5 ani)
-                </div>
-              </li>
-              <li>
-                <span class="icon ok-icon">•</span>
-                <div>Jurnal simptome — început pentru consult oncolog</div>
-              </li>
-              <li>
-                <span class="icon ok-icon">•</span>
-                <div>
-                  Clarificare hidrocel + chiste epididimare (indicate preop, dar
-                  absente din externare)
-                </div>
-              </li>
-            </ul>
-          </div>
-        </div>
-
-        <!-- INTREBARI PREGATITE -->
-        <div class="card wide">
-          <h2>Întrebări pregătite pentru consulturi viitoare</h2>
-
-          <div class="q-block">
-            <h3>Pentru Dr. Noufal Abdul Vahab (gastroenterolog)</h3>
-            <ul>
-              <li>În ce segment al esofagului este leziunea?</li>
-              <li>
-                Dimensiunea aproximativă? Aspect (ulcerativ / vegetant /
-                stenozant)?
-              </li>
-              <li>Circumferențială sau parțială?</li>
-              <li>A fost observat esofag Barrett?</li>
-              <li>Ce a arătat colonoscopia — dincolo de polip și hemoroizi?</li>
-              <li>Când sunt gata rezultatele biopsiei?</li>
-              <li>Ne recomandă un oncolog anume?</li>
-            </ul>
-          </div>
-
-          <div class="q-block">
-            <h3>Pentru centrul CT (Genesis Micălaca)</h3>
-            <ul>
-              <li>Cât durează până la raportul radiologului?</li>
-              <li>Se primește CD cu imagini DICOM?</li>
-              <li>Costul dacă facem privat (dacă CAS nu acoperă integral)?</li>
-              <li>Triplixam dimineața — mențin integral sau omit doza?</li>
-            </ul>
-          </div>
-
-          <div class="q-block">
-            <h3>Pentru viitorul oncolog digestiv</h3>
-            <ul>
-              <li>Stadiul TNM exact?</li>
-              <li>Tipul histologic?</li>
-              <li>Opțiuni de tratament — ordonate după eficacitate?</li>
-              <li>Prognostic realist?</li>
-              <li>Trialuri clinice disponibile? Imunoterapie?</li>
-              <li>
-                Gestionarea comorbidităților (diabet, stent coronarian) în
-                timpul tratamentului oncologic?
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
+      </section>
+      <!-- /panel-alimentatie -->
 
       <footer class="bottom">
         <div>
@@ -1172,6 +1343,557 @@
         }
         tick();
         setInterval(tick, 1000);
+      })();
+    </script>
+
+    <!--
+      ALIMENTATIE.md embedded ca fallback. Regenerat automat de agent
+      (Claude/Gemini) la fiecare modificare a ALIMENTATIE.md — vezi Regula 18
+      din CLAUDE.md proiect. Nu modifica manual aici; editează fișierul .md.
+    -->
+    <script type="text/markdown" id="md-alimentatie">
+      # Alimentație — ghid de inspirație pentru gătit
+
+      > Sursă de inspirație pentru gătit acasă, în perioada actuală. Produse grupate simplu: recomandate / limitate / de evitat + idei concrete de mâncăruri, centrate pe ce se găsește și se gătește în zona Aradului.
+      >
+      > Nu este document medical — este o listă de gătit.
+
+      ---
+
+      ## ⚖️ Menținerea greutății (reper actual: ~79 kg)
+
+      Obiectiv principal în perioada asta: **să nu scadă în greutate**. Motivul e simplu — corpul are nevoie de mai multă energie pentru vindecare și rezistență, iar apetitul scăzut plus simptomele esofagiene îl pot face să mănânce mai puțin decât ar trebui.
+
+      ### Ce se întâmplă dacă scade în greutate
+
+      - Scade forța musculară → oboseală mai mare, mai puțină putere pentru lucruri simple de zi cu zi
+      - Scade imunitatea → riscă mai ușor infecții (răceli, viroze, complicații)
+      - Vindecarea țesutului merge mai lent
+      - Mai greu de tolerat un eventual tratament după consultul oncolog
+      - Corpul începe să consume întâi grăsimea, apoi masa musculară (cel mai rău lucru de pierdut la vârsta lui — forța se recuperează greu)
+
+      ### Strategii pentru menținerea greutății
+
+      - **Mese mici și dese** — 5-6 mese mici sunt mai ușor de acceptat când apetitul e scăzut decât 3 mari
+      - **Densitate calorică** — alimente care dau energie fără volum mare: avocado, ulei de măsline în mâncare, cartofi, paste, orez moale, banane bine coapte, ouă, miere puțin
+      - **Proteine la fiecare masă** — fundamentale pentru păstrarea masei musculare: pește, pui, curcan, ouă, leguminoase pasate (linte fină, mazăre)
+      - **Gustări programate, nu la foame** — nu aștepta să îi fie foame, poate să nu vină niciodată. Oferă o felie de pâine cu pate de avocado, banană pasată, compot cu biscuite moale, supă cremă
+      - **Lichide hrănitoare în loc de apă simplă** — smoothie banană + lapte vegetal + ovăz + puțin ulei, supă cremă de dovleac, bulion de oase. Mai ușor de înghițit + multe calorii într-un volum mic
+      - **Adaugă grăsimi bune discret** — 1 linguriță de ulei măsline în supă, puțin unt în piure, avocado pasat pe pâine, ulei măsline peste orez fiert. Calorii ascunse fără să modifice gustul major
+      - **Gust peste cantitate** — dacă mănâncă mai puțin, măcar cu plăcere. Preparatele care îi plăceau înainte, adaptate la texturile permise
+
+      ### Semnale de atenție — contact medic
+
+      - Scădere peste 2 kg în 2 săptămâni
+      - Scădere peste 4 kg față de reperul de ~79 kg (aprox. 5% din greutate — prag clinic semnificativ)
+      - Pierderea totală a poftei de mâncare mai mult de 3-4 zile la rând
+      - Slăbiciune nouă, mai severă decât oboseala obișnuită de până acum
+      - Imposibilitatea de a termina nici măcar mese mici
+
+      ### Cum cântărim corect
+
+      - O dată pe săptămână, aceeași zi, aceeași oră
+      - Dimineața după toaletă, înainte de micul dejun
+      - Notare undeva simplu (telefon, foaie pe frigider)
+      - **NU cântări zilnic** — fluctuațiile normale de 0.5-1 kg te pot speria inutil
+
+      ---
+
+      ## 🟢 Produse recomandate
+
+      ### Carne și pește
+
+      - **Piept de pui** — fiert, înăbușit, rasol
+      - **Piept de curcan** — fiert, înăbușit
+      - **Ficat de pui** — înăbușit cu ceapă călită moale (nu rumenită)
+      - **Vițel moale** — rasol cu zarzavat
+      - **Miel tânăr** (primăvara, Paște) — înăbușit la cuptor cu capac
+      - **Șalău** (din Mureș / pescării Arad) — la abur, fiert cu zeamă de lămâie
+      - **Păstrăv** (crescătorii locale) — fiert, la abur
+      - **Biban, crap tânăr** — înăbușit, fiert
+      - **Cod, merluciu** (supermarket) — la abur
+
+      ### Ouă
+
+      - **Ou fiert moale** (3-4 minute)
+      - **Ochi în apă** (ou poșat)
+      - **Omletă pe abur** (fără prăjire în ulei)
+      - **Ouă de la piață locală** — proaspete, textură mai plăcută
+
+      ### Cereale și amidonoase
+
+      - **Cartof** — fiert, piure, copt la cuptor înăbușit
+      - **Orez** — bine fiert, moale (tip pilaf umezit)
+      - **Paste** — fierte mai mult decât „al dente", moi
+      - **Griș** — fiert pe apă sau lapte vegetal
+      - **Mămăligă moale** — făină de porumb fină, cu apă multă
+      - **Ovăz** — fiert pe apă sau lapte vegetal (migdale, ovăz, orez)
+      - **Tăiței de casă** — bine fierți
+      - **Cușcuș** — fiert moale
+
+      ### Legume (mereu bine fierte)
+
+      - **Morcov** — fiert, la abur, piure
+      - **Dovlecel** — înăbușit, la abur
+      - **Dovleac** — copt la cuptor
+      - **Cartof** — fiert, piure
+      - **Conopidă** — fiartă bine, piure
+      - **Fasole verde** — fiartă moale
+      - **Mazăre** — fiartă, mâncare de mazăre
+      - **Spanac** — călit moale (fără rumenire)
+      - **Țelină rădăcină** — fiartă, pasată
+      - **Pătrunjel rădăcină** — fiert, în supă
+      - **Vinete coapte** — salată cu puțin ulei măsline (fără usturoi mult)
+
+      ### Fructe (coapte, fierte, pasate — mai ușor de tolerat)
+
+      - **Mere Ionathan / Golden** (livezi Arad) — coapte la cuptor
+      - **Pere coapte** — cu scorțișoară
+      - **Gutui** — coapte, dulceață casnică (cantitate mică)
+      - **Banane bine coapte** — pasate dacă textura e dificilă
+      - **Pepene roșu** (vara) — apos, trece ușor
+      - **Piersici, caise** — coapte, fără coajă
+      - **Compot fără zahăr** — din orice fruct de sezon
+      - **Prune uscate înmuiate** — cantitate mică (ajută tranzitul)
+
+      ### Grăsimi bune
+
+      - **Ulei măsline extravirgin** — crud, peste mâncare
+      - **Avocado** — pasat, pe pâine proaspătă
+      - **Puțin unt proaspăt** — la gătit (în piure, în supă la final)
+
+      ### Lichide
+
+      - **Apă plată** — între mese
+      - **Ceai slab** — mușețel, gălbenele, tei, mentă NU
+      - **Supe și ciorbe limpezi** — hidratează și hrănesc
+      - **Bulion de oase** — hrănitor, ușor de digerat
+
+      ---
+
+      ## 🟡 Produse limitate
+
+      - **Cafea** — max 1 ceașcă/zi, slabă, nu dimineața pe stomacul gol
+      - **Miere** (salcâm de la Peregu / Chișineu-Criș) — cantitate mică
+      - **Dulceață casnică, gem** — 1 linguriță pe felie, nu mai mult
+      - **Pâine** — doar proaspătă din ziua coacerii, nu crocantă, preferabil înmuiată în supă sau ceai
+      - **Smântână** — puțin, doar la gătit (final de supă, piure) — nu direct
+      - **Unt** — puțin, la gătit
+      - **Carne roșie slabă** (vițel, porc slab) — rar, foarte bine gătită, moale
+      - **Nuci, migdale** — doar măcinate fin sau pisate (nu întregi, nu cu coajă)
+      - **Iaurt, kefir, brânzeturi proaspete** — de clarificat cu medicul înainte de consum (directiva actuală este doar pentru lapte)
+      - **Ciocolată neagră** — eventual 1-2 pătrățele rar, nu frecvent
+      - **Ouă ochiuri în ulei** — grăsime mai multă, ocazional
+
+      ---
+
+      ## 🔴 Produse de evitat
+
+      ### Iritante chimice directe
+
+      **Ce provoacă:** contact direct iritant pe leziunea esofagiană — arsură, inflamație amplificată, dureri la înghițire. Întârzie vindecarea țesutului și pot agrava senzația de „nod în gât".
+
+      - Picant puternic (boia iute, sosuri iuți)
+      - Ardei iute proaspăt / uscat
+      - Piper în cantitate mare
+      - Ceapă crudă multă (în salate)
+      - Usturoi crud mult (salată de vinete cu mult usturoi, mujdei)
+      - Oțet pur / concentrat
+      - Muștar iute
+      - Hrean
+
+      ### Alimente acide
+
+      **Ce provoacă:** aciditate directă pe esofag. Contact repetat pe zonă iritată = micro-leziuni suplimentare, arsură, reflux amplificat.
+
+      - Suc de lămâie, suc de portocale concentrat
+      - Roșii crude în cantitate mare (mai ales pe stomacul gol)
+      - Sos concentrat de roșii (ketchup, bulion industrial concentrat)
+      - Murături în cantitate mare (castraveți murați, gogoșari, varză murată)
+      - Oțet în salate concentrate
+      - Iaurt cu fructe acide (fructe de pădure acrii)
+
+      ### Alimente care favorizează refluxul
+
+      **Ce provoacă:** slăbesc valva (sfincterul) dintre stomac și esofag. Consecința: acidul gastric urcă înapoi pe esofag de mai multe ori pe zi și atacă leziunea. Acid frecvent pe leziune = vindecare întârziată și iritație cronică.
+
+      - Ciocolată (inclusiv neagră, cremă de ciocolată, tort cu ciocolată)
+      - Mentă și ceai de mentă (slăbește direct sfincterul)
+      - Grăsimi prăjite (cartofi prăjiți, șnițel, chiftele prăjite)
+      - Mese foarte grase (slană, caltaboș, tobă, untură multă)
+      - Cafea tare (mai ales pe stomacul gol)
+      - Alcool de orice fel (vin, bere, țuică, palincă, vișinată) — toate relaxează sfincterul
+      - Sucuri de fructe dimineața (mai ales citrice)
+
+      ### Textură dură / traumatică
+
+      **Ce provoacă:** zgâriere fizică a leziunii la înghițire. Micro-traume repetate, posibile mici sângerări, senzație de „nod" amplificată. Ca și cum ai freca o rană cu un burete aspru.
+
+      - Pâine foarte prăjită, toast ars, pâine uscată veche
+      - Pesmet uscat, crackers, biscuiți uscați
+      - Covrigi uscați, sticks-uri
+      - Nuci întregi necoapte (la fel migdale, alune întregi)
+      - Semințe cu coajă (floarea-soarelui, dovleac, susan întreg)
+      - Carne uscată: pastramă, kaizer, salam uscat, cabanos, ghiudem, babic
+      - Bacon crocant
+      - Chipsuri
+      - Șnițel pane cu coajă tare
+      - Pizza cu margine foarte prăjită
+
+      ### Băuturi carbogazoase
+
+      **Ce provoacă:** dilatarea stomacului cu gaz → presiune pe sfincterul esofagian → reflux acid garantat după fiecare pahar. Eructații cu acid.
+
+      - Apă minerală cu bule (Borsec, Bucovina cu bule, etc.)
+      - Cola, Pepsi, Fanta, Sprite, Schweppes
+      - Bere (dublă problemă — gaz + alcool)
+      - Cidru
+      - Șampanie, vin spumant
+      - Limonadă industrială cu bule
+
+      ### Temperaturi extreme
+
+      **Ce provoacă:** șoc termic direct pe leziune. Fierbinte = arsură peste arsură. Foarte rece = contractare bruscă + iritație. Amplifică inflamația.
+
+      - Supă clocotită (așteptare 10 min până scade la temperatura corpului)
+      - Ceai proaspăt fiert fierbinte (se lasă până e călduț)
+      - Cafea fierbinte
+      - Înghețată direct din congelator
+      - Băuturi cu multă gheață
+      - Apă foarte rece din frigider
+
+      ### Mezeluri procesate și afumate
+
+      **Ce provoacă:** combinație toxică pe termen lung — nitriți/nitrați (conservanți transformați în compuși iritanți pentru mucoasa digestivă), sare multă, hidrocarburi din afumare (benzopireni). Consum frecvent = iritație cronică a tubului digestiv și factor de risc documentat pentru leziuni noi în stomac, esofag și colon. De evitat mai ales acum, cu leziune esofagiană activă și polip la colon.
+
+      - Salam uscat, kaizer, chorizo
+      - Cabanos, ghiudem, babic
+      - Cârnați afumați (semi-afumat Sibiu, de plescoi afumat)
+      - Șuncă afumată, slănină afumată
+      - Pește afumat (heringi, scrumbie afumată, macrou afumat)
+      - Pastramă
+      - Hot-dog, parizer, crenvurști
+      - Conserve de carne
+
+      ### Prăjeli puternice și rumenire excesivă
+
+      **Ce provoacă:** temperatura mare pe ulei produce compuși iritanți (acroleină) și cancerigeni (benzopireni). Grăsimi oxidate greu de digerat. Coji tari = micro-traume. Dublă problemă: iritație + reflux din cauza grăsimii.
+
+      - Cartofi prăjiți
+      - Șnițel prăjit în baie de ulei
+      - Gogoși, langoși, clătite foarte rumene
+      - Pește prăjit cu pesmet tare
+      - Legume pane (ciuperci pane, brocoli pane, conopidă pane prăjită)
+      - Friptură arsă / rumenită tare pe grătar
+      - Mici arși la grătar
+      - Cotlet prăjit crocant
+
+      ### Zahăr rafinat și făină albă în cantitate mare
+
+      **Ce provoacă:** amplifică refluxul după mesele dulci. Digestie mai grea. Inflamație sistemică când consumul e frecvent. Scăderea bruscă a energiei după consum (mai ales când apetitul oricum e scăzut).
+
+      - Prăjituri de cofetărie (tort, crème, ecleruri, savarine)
+      - Biscuiți cu cremă industrială
+      - Cereale de mic dejun îndulcite (Nesquik, Chocapic)
+      - Dulciuri cu glazură, bomboane
+      - Cozonac comercial industrial
+      - Pâine albă industrială ultra-prelucrată
+      - Sucuri de fructe din comerț cu zahăr adăugat
+      - Băuturi energizante, sucuri îndulcite
+
+      ### Exces de sare
+
+      **Ce provoacă:** retenție de apă, presiune crescută pe sistem, iritație digestivă în cantitate mare.
+
+      - Murături în cantitate mare
+      - Pastă concentrată de roșii industrială
+      - Conserve (pește în ulei, carne în conservă)
+      - Chipsuri, snacksuri sărate
+      - Brânzeturi foarte sărate (burduf sărat, telemea veche sărată dur)
+      - Supe instant Knorr / Maggi
+      - Cuburi concentrate de supă
+
+      ### Interacțiuni cu medicația curentă
+
+      **Ce provoacă:** modifică efectul medicamentelor pe care le ia zilnic. Risc real, nu teoretic.
+
+      - **Suc de grapefruit, grapefruit întreg, grepfrut** — interacționează cu amlodipina din Triplixam. Efect: crește concentrația medicamentului în sânge, poate scădea tensiunea prea mult. EXCLUS cât timp ia Triplixam.
+      - **Lapte dulce** — directivă directă a medicului gastroenterolog în perioada actuală. EXCLUS.
+      - **Ceai / tinctură de sunătoare** — interacționează cu Aspenter și alte medicamente. EVITAT.
+
+      ---
+
+      ## Idei de mâncăruri (inspirație pentru bucătărie)
+
+      ### Supe și ciorbe — cele mai utile (umezesc, hrănesc, ușor de înghițit)
+
+      - Ciorbă de pui cu zarzavat mărunt și găluște moi
+      - Supă cremă de dovleac copt cu puțină smântână la final
+      - Ciorbă rădăuțeană (pui + gălbenuș de ou + puțină smântână, fără ardei iute)
+      - Supă de pui cu tăiței moi bine fierți
+      - Ciorbă de perișoare moi (fără iute, verdeață multă)
+      - Ciorbă de cartofi cu leuștean
+      - Ciorbă de miel (primăvara, miel tânăr)
+      - Bulion de legume pasat
+      - Supă cremă de conopidă cu puțin unt
+      - Supă cremă de morcov cu ghimbir puțin
+      - Ciorbă de loboda / ștevie / urzici (primăvara)
+
+      ### Mâncăruri cu carne și pește
+
+      - Șalău la abur cu zeamă de lămâie și pătrunjel
+      - Păstrăv fiert cu cartofi noi și ulei măsline
+      - Biban înăbușit cu morcov și dovlecel
+      - Cod la abur cu mărar
+      - Piept de pui fiert cu legume rădăcinoase
+      - Piept de pui înăbușit cu morcov, dovlecel, ceapă călită moale
+      - Rasol de vită cu zarzavat (clasic)
+      - Rasol de pui cu sos alb de legume pasate
+      - Iahnie de curcan cu cartofi (totul înăbușit, fără rumenire)
+      - Ficat de pui înăbușit cu ceapă moale
+      - Miel tânăr la cuptor cu capac, cu cartofi și morcov
+      - Perișoare moi în sos de roșii diluat (nu concentrat)
+      - Tocăniță de pui cu cartofi (fără rumenire, doar înăbușit)
+
+      ### Garnituri
+
+      - Piure de cartofi cu puțin unt sau ulei măsline
+      - Cartofi natur cu pătrunjel
+      - Cartofi copți înăbușiți în pungă de hârtie la cuptor
+      - Mămăligă moale (apă multă, textură aproape ca o cremă)
+      - Orez fiert moale cu pătrunjel
+      - Pilaf moale cu pui
+      - Paste bine fierte cu ulei măsline și verdeață
+      - Griș pe apă cu puțin unt
+      - Cușcuș fiert moale
+      - Piure de conopidă
+      - Piure de mazăre
+      - Piure de țelină rădăcină
+      - Tăiței de casă fierți cu puțin ulei
+
+      ### Legume ca preparate principale
+
+      - Mâncare de mazăre cu pui
+      - Mâncare de fasole verde cu pui
+      - Ghiveci de legume la cuptor înăbușit
+      - Iahnie de fasole albă (bine fiartă)
+      - Salată de vinete cu puțin ulei măsline (fără mult usturoi)
+      - Dovlecei înăbușiți cu mărar
+      - Spanac cu pui (călit moale, nu prăjit)
+
+      ### Mâncăruri tradiționale românești — versiuni adaptate
+
+      - Sarmale în foi de varză dulce (nu murată), fără slănină afumată, fără ardei iute
+      - Tocăniță de pui cu cartofi, totul înăbușit
+      - Iahnie de fasole cu morcov
+      - Ghiveci de legume
+      - Rasol de vită sau pui
+      - Piftie de pui (mai ușor decât cea de porc)
+      - Ostropel de pui (fără ardei iute, cu puțin usturoi)
+
+      ### Mic dejun — variante
+
+      - Griș pe apă cu banană coaptă pasată și scorțișoară
+      - Ovăz pe lapte vegetal cu pere coapte
+      - Omletă pe abur cu pâine proaspătă
+      - Mămăligă moale cu un ou fiert moale
+      - Piure de avocado pe pâine proaspătă
+      - Ou fiert moale cu pâine proaspătă înmuiată în supă
+      - Smoothie: banană + lapte vegetal + ovăz + puțin ulei măsline
+
+      ### Gustări — variante
+
+      - Banană bine coaptă pasată
+      - Compot de mere fără zahăr cu biscuite moale înmuiat
+      - Pere fierte la cuptor
+      - Piure de banană cu puțină miere
+      - Felie mică de pâine proaspătă cu pate vegetal (avocado, humus diluat)
+      - Pepene roșu bine copt (vara)
+      - Caise / piersici coapte fără coajă
+
+      ### Dulciuri naturale (moderat)
+
+      - Compot de fructe de sezon fără zahăr
+      - Mere coapte cu miere puțin și scorțișoară
+      - Pere coapte
+      - Budincă de griș cu compot
+      - Gutui coapte
+      - Ovăz fiert cu banană și scorțișoară
+      - Dulceață casnică în cantitate foarte mică pe felie de pâine proaspătă
+
+      ### Din produsele locale Arad (merită alegerea lor)
+
+      - Pâine proaspătă de la brutăriile din Podgoria / Aurel Vlaicu / Aradul Nou
+      - Legume de sezon din piețele Mihai Viteazul și Podgoria
+      - Mere din livezile de la Peregu / Pâncota / Ghioroc
+      - Miere de salcâm de la apicultorii din Chișineu-Criș și zona Peregu
+      - Ouă de la piață (mai gustoase, mai proaspete)
+      - Păstrăv din crescătoriile locale
+      - Șalău și biban — pescării Arad
+      - Carne de pui / curcan — măcelăriile locale vs. supermarket
+
+      ---
+
+      ## De unde vin recomandările
+
+      - Directivă medic curant (Genesis Medical Clinic Arad) — restricție lapte dulce
+      - Principii generale de alimentație pentru leziuni esofagiene și reflux: ghiduri ESMO (Societatea Europeană de Oncologie Medicală) și ESPEN (Societatea Europeană de Nutriție Clinică)
+      - Interacțiunea grapefruit ↔ amlodipină: prospectul oficial Triplixam
+      - Mezeluri procesate ca factor de risc digestiv: raport IARC (Agenția Internațională pentru Cercetarea Cancerului), 2015
+      - Produse locale Arad: cunoaștere directă a zonei (piețe, livezi, pescării)
+
+      **Lista de mai sus este un ghid de inspirație pentru gătit. La orice nelămurire punctuală (iaurt, kefir, brânzeturi, cantitate de miere), se clarifică direct cu medicul curant la următorul consult.**
+    </script>
+
+    <script>
+      // === TAB SWITCHING ===
+      (function () {
+        var btns = document.querySelectorAll(".tab-btn");
+        var panels = document.querySelectorAll(".tab-panel");
+        btns.forEach(function (btn) {
+          btn.addEventListener("click", function () {
+            var tab = btn.dataset.tab;
+            btns.forEach(function (b) {
+              b.classList.toggle("active", b.dataset.tab === tab);
+            });
+            panels.forEach(function (p) {
+              p.classList.toggle("active", p.id === "panel-" + tab);
+            });
+            window.scrollTo({ top: 0, behavior: "smooth" });
+          });
+        });
+      })();
+
+      // === MARKDOWN PARSER (minimal, self-contained) ===
+      function parseMarkdown(md) {
+        var lines = md.split(/\r?\n/);
+        var out = [];
+        var inUl = false,
+          inBq = false;
+        var para = [];
+        function esc(s) {
+          return s.replace(/[&<>]/g, function (c) {
+            return { "&": "&amp;", "<": "&lt;", ">": "&gt;" }[c];
+          });
+        }
+        function inline(s) {
+          s = esc(s);
+          s = s.replace(/\*\*([^*]+)\*\*/g, "<strong>$1</strong>");
+          s = s.replace(/(^|[^*])\*([^*\n]+)\*(?!\*)/g, "$1<em>$2</em>");
+          s = s.replace(/`([^`]+)`/g, "<code>$1</code>");
+          return s;
+        }
+        function closeUl() {
+          if (inUl) {
+            out.push("</ul>");
+            inUl = false;
+          }
+        }
+        function closeBq() {
+          if (inBq) {
+            out.push("</blockquote>");
+            inBq = false;
+          }
+        }
+        function flush() {
+          if (para.length) {
+            out.push("<p>" + inline(para.join(" ")) + "</p>");
+            para = [];
+          }
+        }
+        for (var i = 0; i < lines.length; i++) {
+          var line = lines[i];
+          var mh = line.match(/^(#{1,4})\s+(.+)$/);
+          if (mh) {
+            flush();
+            closeUl();
+            closeBq();
+            var lv = mh[1].length;
+            out.push("<h" + lv + ">" + inline(mh[2]) + "</h" + lv + ">");
+            continue;
+          }
+          if (line.trim() === "---") {
+            flush();
+            closeUl();
+            closeBq();
+            out.push("<hr>");
+            continue;
+          }
+          var mli = line.match(/^\s*[-*]\s+(.+)$/);
+          if (mli) {
+            flush();
+            closeBq();
+            if (!inUl) {
+              out.push("<ul>");
+              inUl = true;
+            }
+            out.push("<li>" + inline(mli[1]) + "</li>");
+            continue;
+          }
+          var mbq = line.match(/^>\s?(.*)$/);
+          if (mbq) {
+            flush();
+            closeUl();
+            if (!inBq) {
+              out.push("<blockquote>");
+              inBq = true;
+            }
+            if (mbq[1].trim()) out.push(inline(mbq[1]) + "<br>");
+            continue;
+          }
+          if (line.trim() === "") {
+            flush();
+            closeUl();
+            closeBq();
+            continue;
+          }
+          para.push(line.trim());
+        }
+        flush();
+        closeUl();
+        closeBq();
+        return out.join("\n");
+      }
+
+      // === LOADER: fetch live + fallback embedded ===
+      (function () {
+        var contentEl = document.getElementById("alimentatie-content");
+        var metaEl = document.getElementById("alimentatie-meta");
+        var embeddedEl = document.getElementById("md-alimentatie");
+        var embedded = embeddedEl ? embeddedEl.textContent : "";
+        var lastRegen = "2026-04-18 17:58";
+
+        function render(md, source) {
+          contentEl.innerHTML = parseMarkdown(md);
+          if (source === "live") {
+            metaEl.classList.add("live");
+            metaEl.innerHTML =
+              "● Încărcat <strong>LIVE</strong> din <code>ALIMENTATIE.md</code> — reflectă orice modificare a fișierului la reîmprospătare (F5).";
+          } else {
+            metaEl.classList.remove("live");
+            metaEl.innerHTML =
+              "● Conținut <strong>embedded</strong> (ultima regenerare agent: " +
+              lastRegen +
+              "). Browser-ul blochează <code>fetch()</code> pe <code>file://</code> — modificările la fișier se reflectă la următoarea sesiune Claude/Gemini.";
+          }
+        }
+
+        try {
+          fetch("ALIMENTATIE.md?t=" + Date.now())
+            .then(function (res) {
+              if (!res.ok) throw new Error("HTTP " + res.status);
+              return res.text();
+            })
+            .then(function (md) {
+              if (md && md.trim().length > 0) render(md, "live");
+              else render(embedded, "embedded");
+            })
+            .catch(function () {
+              render(embedded, "embedded");
+            });
+        } catch (e) {
+          render(embedded, "embedded");
+        }
       })();
     </script>
   </body>
