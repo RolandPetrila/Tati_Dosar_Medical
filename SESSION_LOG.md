@@ -6,6 +6,40 @@
 
 ---
 
+## 2026-04-19 02:27 — [Claude_Opus_4.7] monitor-bioclinica-migrat-in-hub-separat
+
+**Scop:** migrare monitor Bioclinica din folder experimental Desktop (`.Tati_Notificare_Bioclinica`) într-un hub reutilizabil de notificări automate, pe infrastructură GitHub Actions (rulare 24/7 fără laptop pornit).
+
+**Declanșator:** user — a solicitat ca monitor-ul pentru rezultatul histopatologic să ruleze permanent, independent de laptop, și să fie generalizat pentru monitoare viitoare (facturi, colete, financiar, etc).
+
+**Operații pe `.Tati`:**
+
+- `TODO.md` — adăugat bloc „🔔 Monitor automat rezultat biopsie — ACTIV"; actualizat Calendar (status „Rezultat biopsie" cu notă monitor); „Ultima actualizare" → 19.04.2026 02:27
+- `CHANGELOG.md` — intrare nouă 2026-04-19 02:27
+- `SESSION_LOG.md` — această intrare
+
+**Operații pe hub nou (repo privat `RolandPetrila/Sistem_Notificari`, folder local `Desktop\Roly\Sistem_Notificari_Telefon`):**
+
+- Sanitizare completă — zero valori hardcodate (cod buletin, cod acces, CNP, topic ntfy → toate ca GitHub Secrets)
+- Structură: `common/ntfy.py` (sender reutilizabil), `bioclinica_histopatologic/` (monitor #1), `.github/workflows/`, `.claude/` (reguli + memorie hub)
+- Workflow cron `*/30 * * * *` cu one-shot `.DETECTED` anti-spam
+- Commit inițial `cf675ec`, push reușit
+
+**Izolare strictă:** nicio date medicale mutate din `.Tati` în hub; nicio dată tehnică din hub mutată în `.Tati`. Singura legătură = blocul informativ din `TODO.md` cu URL repo + explicație.
+
+**Observație de securitate (pre-existentă, nu introdusă de această sesiune):** codul buletin Bioclinica `26417A0362` apare deja în 14+ fișiere din `.Tati` (repo public). Combinat cu CNP (și el în dosar) + codul de acces = acces potențial la rezultatele Bioclinica dacă sunt toate găsite. De discutat separat dacă vrem remediere.
+
+**Pași manuali efectuați de user:**
+
+- Creare repo privat `Sistem_Notificari` pe GitHub (PAT-ul Claude nu are drept de creare)
+- Setare 5 GitHub Secrets prin UI (PAT-ul nu are drept Secrets:Write pe repo nou)
+
+**Fișiere afectate în `.Tati`:** `TODO.md`, `CHANGELOG.md`, `SESSION_LOG.md`.
+
+**Făcut de:** Claude Code (Opus 4.7, 1M context).
+
+---
+
 ## 2026-04-18 21:04 — [Claude_Sonnet_4.6] github-pages-setup-distributie-live
 
 **Scop:** configurare GitHub Pages pentru distribuție live-sync a `DASHBOARD.html` familiei — auto-deploy la fiecare `git push`.

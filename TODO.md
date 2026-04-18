@@ -2,23 +2,37 @@
 
 **Fișier de evidență a tuturor acțiunilor de făcut. Se actualizează continuu — la adăugarea și completarea fiecărei acțiuni.**
 
-**Ultima actualizare:** 18 aprilie 2026 13:28.
+**Ultima actualizare:** 19 aprilie 2026 02:27.
 
 ---
 
 ## Calendar — date cheie
 
-| Data                                | Eveniment                                                       | Status          |
-| ----------------------------------- | --------------------------------------------------------------- | --------------- |
-| 17.04.2026                          | Endoscopie + colonoscopie efectuate                             | ✅ Finalizat    |
-| 17.04.2026                          | Bilet trimitere CT emis                                         | ✅ Finalizat    |
-| **18.04.2026**                      | **STOP Jamesi (H-48 pre-CT)**                                   | ✅ Finalizat    |
-| ~~19.04.2026 — analize creatinină~~ | ~~de efectuat~~ → ✅ ACOPERIT (buletin Bioclinica 17.04.2026)   | ✅ Finalizat    |
-| 19.04.2026                          | Hidratare activă (plan confirmat de familie)                    | 📅 PROGRAMAT    |
-| **20.04.2026 17:00**                | **CT torace + abdomen + pelvis cu contrast (Genesis Micălaca)** | 📅 PROGRAMAT    |
-| **22.04.2026**                      | Reluare Jamesi (H+48 post-CT, după creatinină OK)               | 🟡 Follow-up    |
-| {17.04.2026 + 7-14 zile}            | Rezultat biopsie (estimat 24.04-01.05)                          | 🟡 În așteptare |
-| {după primirea rezultatelor}        | Consult oncolog digestiv                                        | 🟡 De programat |
+| Data                                | Eveniment                                                       | Status                                    |
+| ----------------------------------- | --------------------------------------------------------------- | ----------------------------------------- |
+| 17.04.2026                          | Endoscopie + colonoscopie efectuate                             | ✅ Finalizat                              |
+| 17.04.2026                          | Bilet trimitere CT emis                                         | ✅ Finalizat                              |
+| **18.04.2026**                      | **STOP Jamesi (H-48 pre-CT)**                                   | ✅ Finalizat                              |
+| ~~19.04.2026 — analize creatinină~~ | ~~de efectuat~~ → ✅ ACOPERIT (buletin Bioclinica 17.04.2026)   | ✅ Finalizat                              |
+| 19.04.2026                          | Hidratare activă (plan confirmat de familie)                    | 📅 PROGRAMAT                              |
+| **20.04.2026 17:00**                | **CT torace + abdomen + pelvis cu contrast (Genesis Micălaca)** | 📅 PROGRAMAT                              |
+| **22.04.2026**                      | Reluare Jamesi (H+48 post-CT, după creatinină OK)               | 🟡 Follow-up                              |
+| {17.04.2026 + 7-14 zile}            | Rezultat biopsie (estimat 24.04-01.05)                          | 🟡 În așteptare · monitor automat activ ↓ |
+| {după primirea rezultatelor}        | Consult oncolog digestiv                                        | 🟡 De programat                           |
+
+---
+
+## 🔔 Monitor automat rezultat biopsie — ACTIV
+
+**Sistem independent** care verifică automat portalul Bioclinica la fiecare 30 min, 24/7, și notifică instant pe telefonul Roland (ntfy.sh, prioritate urgentă) când apare rezultatul histopatologic. **Nu depinde de laptop pornit** — rulează pe GitHub Actions.
+
+- **Repo privat:** `RolandPetrila/Sistem_Notificari` (nu e parte din dosarul `.Tati`, e hub separat pentru notificări reutilizabile)
+- **Folder local:** `C:\Users\ALIENWARE\Desktop\Roly\Sistem_Notificari_Telefon\`
+- **Mecanism:** Playwright headless → login Bioclinica (credențialele — cod buletin, cod acces, CNP — stocate ca GitHub Secrets în repo-ul privat, **nu** în acest dosar) → detecție text „histopatologic" în afara secțiunii „în curs de execuție" → ntfy.sh priority 5 → se oprește automat după prima notificare (flag `.DETECTED`)
+- **Abonament telefon ntfy:** topicul folosit de monitor trăiește doar în Secrets privat + aplicația ntfy pe telefon (nu e scris aici în dosarul public)
+- **Activat:** 2026-04-19 02:27 (commit `cf675ec`)
+
+**Acțiune așteptată:** niciuna din partea ta; primești notificare pe telefon când e cazul.
 
 ---
 

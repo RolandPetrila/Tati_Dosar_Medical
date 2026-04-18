@@ -4,6 +4,28 @@
 
 ---
 
+## 2026-04-19 02:27 — Monitor automat rezultat biopsie — migrat în hub dedicat, rulează 24/7 pe GitHub Actions
+
+**Tip:** INFRASTRUCTURĂ AUTOMATIZARE (external — impact zero asupra conținutului medical)
+
+**Scop:** mutare monitor Bioclinica din `.Tati_Notificare_Bioclinica/` (prototip local pe Desktop) într-un hub reutilizabil de notificări, separat complet de acest dosar. Obiectiv: rulare permanentă 24/7 fără dependență de laptop pornit, plus generalizare pentru monitoare viitoare (facturi, colete, alte rezultate medicale, etc).
+
+**Fișiere afectate în `.Tati` (minime, doar referințe):**
+
+- `TODO.md` — **ADĂUGAT** bloc „🔔 Monitor automat rezultat biopsie — ACTIV" imediat după Calendar; actualizat Calendar (status „Rezultat biopsie" cu notă monitor activ ↓); „Ultima actualizare" → 19.04.2026 02:27
+- `SESSION_LOG.md` — intrare nouă 2026-04-19 02:27
+- `CHANGELOG.md` — această intrare
+
+**Ce rulează acum:** la fiecare 30 min, un workflow GitHub Actions pe repo-ul privat `RolandPetrila/Sistem_Notificari` verifică portalul Bioclinica. Când apare „histopatologic" în afara secțiunii „în curs de execuție", trimite instant notificare pe telefonul Roland prin ntfy.sh (priority 5, sună ca alarmă), apoi se oprește automat (flag `.DETECTED`, anti-spam).
+
+**Izolare:** nicio date medicală din `.Tati` nu a fost mutată în hub. Nicio valoare de cod/configurare din hub nu e scrisă în `.Tati`. Credențialele Bioclinica trăiesc EXCLUSIV ca GitHub Secrets în repo-ul privat.
+
+**Observație securitate (pre-existentă):** codul buletin Bioclinica `26417A0362` e deja publicat în 14+ fișiere ale acestui dosar public (sesiuni anterioare). Combinat cu CNP (publicat și el) + codul de acces ar permite acces la rezultate. **De discutat dacă vrem remediere separată** (ex: redactare coduri + regenerare acces la Bioclinica).
+
+**Făcut de:** Claude Code (Opus 4.7, 1M context).
+
+---
+
 ## 2026-04-18 21:04 — GitHub Pages — setup distribuție live-sync `DASHBOARD.html`
 
 **Tip:** CONFIGURARE DISTRIBUȚIE
