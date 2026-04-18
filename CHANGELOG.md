@@ -4,6 +4,30 @@
 
 ---
 
+## 2026-04-18 14:01 — Generare DASHBOARD.html + Regula 18 (sincronizare dashboard)
+
+**Tip:** CREARE (DASHBOARD.html) + MODIFICARE REGULAMENT (CLAUDE.md — Regula 18)
+
+**Fișiere afectate:**
+
+- `DASHBOARD.html` — **NOU** — vizualizare HTML single-page a dosarului medical (identitate pacient, status clinic, medicație, alergii, analize, timeline antecedente, echipă medicală, factori risc, calendar CT, acțiuni deschise P0/P1/P2, întrebări consulturi). CSS inline, offline-first, countdown live JavaScript la CT 20.04.2026, responsive + print-friendly.
+- `CLAUDE.md` — **Regula 18 adăugată** (sincronizare DASHBOARD.html la actualizări medicale relevante); antet actualizat la v5; changelog intern actualizat.
+- `Dosar_Medical/arhiva/versiuni_config/CLAUDE_pre-regula-18-dashboard_2026-04-18_1401.md` — backup CLAUDE.md pre-modificare (Regula 10).
+
+**Descriere:**
+
+- User a solicitat un dashboard HTML pentru vizualizare rapidă a dosarului (decizie finală variantă A din propunere) + regulă explicită de sincronizare
+- Regula 18 definește declanșatorii obligatorii de regenerare (analize noi, medicație modificată, alergii, investigații, antecedente, documente sursă procesate, modificări P0 TODO, schimbare simptomatologie) și excepțiile (typo-uri, log-uri proces, meta-uri, P1/P2/P3)
+- Timing: o singură regenerare per sesiune, înainte de commit-ul final (integrat cu Regula 16)
+- Dashboardul respectă regulile de conținut (Regula 11 vechime analize + Regula 17 marcaj certitudine)
+- CSS: palette medical profesional (albastru + verde OK + galben atenție + roșu critic), fără dependențe externe, UTF-8
+
+**Sursă informație:** `CONTEXT_MEDICAL.md` (v1.1 post-reconciliere), `TODO.md`, JSON-urile canonice din `Dosar_Medical/` (schemă v2.0).
+
+**Făcut de:** Claude Code (Opus 4.7, 1M context).
+
+---
+
 ## 2026-04-18 13:28 — Confirmare pregătire CT 20.04: alergii + STOP Jamesi + hidratare
 
 **Tip:** MODIFICARE (actualizare status pregătire CT)

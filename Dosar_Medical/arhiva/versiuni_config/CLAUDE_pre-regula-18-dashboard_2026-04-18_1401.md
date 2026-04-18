@@ -2,7 +2,7 @@
 
 **Acest fișier conține reguli suplimentare pentru orice sesiune deschisă în folderul `G:\My Drive\Roly\.Tati`. Are prioritate față de regulamentul global la conflict direct.**
 
-**Ultima revizuire:** 18 aprilie 2026 (v5).
+**Ultima revizuire:** 17 aprilie 2026 (v2).
 **Context proiect:** dosar medical real pentru pacient Petrilă Viorel-Mihai (n. 18.05.1959), suspiciune proces proliferativ esofagian identificat la endoscopie pe 17.04.2026.
 
 **Relație cu alte regulamente:**
@@ -363,75 +363,6 @@ Pentru orice **document de ieșire** (raport, rezumat, interpretare, traducere p
 
 ---
 
-## Regula 18 — Sincronizare `DASHBOARD.html` la actualizări medicale
-
-**Context:** `DASHBOARD.html` (la rădăcina proiectului) este vizualizarea rapidă a dosarului pentru familie — status pacient, medicație, alergii, analize, calendar CT, acțiuni deschise. Fiind HTML static (fără backend), sincronizarea cu fișierele de referință se face manual de către agentul AI la fiecare sesiune care modifică conținutul medical.
-
-**Declanșatori — OBLIGATORIU regenerare la sfârșit de sesiune:**
-
-1. Analiză nouă (laborator, imagistică, biopsie, histopatologie) adăugată în dosar
-2. Medicație modificată — doză nouă, medicament nou, oprire, reluare, schimbare
-3. Alergie nouă documentată sau invalidată
-4. Investigație nouă — programată, efectuată sau cu rezultat primit
-5. Antecedent medical nou adăugat (consult, spitalizare, diagnostic)
-6. Document medical sursă nou procesat în `Dosar_Medical/` (PDF / foto / manuscris)
-7. Modificare status acțiuni **P0** în `TODO.md` (critice pentru pacient)
-8. Schimbare simptomatologie sau status clinic relevant
-
-**NU declanșează regenerare:**
-
-- Corectare typo în fișiere de referință fără modificare de conținut medical
-- Update la `SESSION_LOG.md` / `CHANGELOG.md` (log-uri de proces)
-- Reorganizare secțiuni, formatare markdown, whitespace
-- Modificări la `TODO.md` pe P1/P2/P3 (non-critic pentru pacient)
-- Update la `.meta.json`-uri (chain-of-custody)
-
-**Timing:** o singură regenerare per sesiune, la final, imediat **ÎNAINTE** de `git add + commit + push` din Regula 16. Dashboardul intră în commit împreună cu modificările care l-au declanșat.
-
-**Ce trebuie să conțină dashboardul (secțiuni obligatorii):**
-
-1. **Header** — nume pacient, vârstă, data ultimei actualizări a dashboardului
-2. **Countdown CT** / următorul eveniment medical major (JavaScript live)
-3. **Status clinic curent** — suspiciune + faza investigațiilor
-4. **Medicație activă** — tabel cu schema zilnică + marcaje STOP temporar / pauză
-5. **Alergii** — verde dacă free, roșu dacă confirmate
-6. **Analize recente** — valori + unități + interval referință + trend + flag normal/anormal
-7. **Timeline antecedente** — cronologic, din 2012 până azi
-8. **Echipă medicală** — specialitate, nume, unitate, contact
-9. **Acțiuni deschise** — P0 (roșu), P1 (galben), P2/P3 (verde)
-10. **Întrebări pregătite pentru consulturi** — grupate pe specialist
-11. **Footer** — sursă date (link la `CONTEXT_MEDICAL.md`), atenționare „nu înlocuiește consultul medical"
-
-**Reguli de conținut (coroborate cu Regulile 11 + 17):**
-
-- Orice cifră din dashboard citează data sursei (data analizei, nu data dashboardului)
-- Afirmațiile medicale factuale din dashboard respectă marcajul de certitudine (Regula 17) — atunci când nu e evident, indicație textuală scurtă
-- Datele volatile (analize > 6 luni) primesc marcaj `[POTENȚIAL STALE]` conform Regulei 11
-- NU se inventează valori lipsă — câmpurile goale se marchează „De completat"
-
-**Reguli tehnice:**
-
-- CSS inline în `<style>`, **fără dependențe externe** (offline-first, funcționează direct din Google Drive)
-- Limbă: română, ton profesional dar accesibil familiei
-- Palette culoare: albastru medical + verde OK + galben atenție + roșu critic
-- Font: system fonts (Segoe UI / -apple-system / sans-serif) — fără web fonts
-- Responsiv pentru desktop + imprimare A4 (`@media print`)
-- Encoding UTF-8, declarat explicit în `<head>`
-
-**La fiecare regenerare:**
-
-1. Citește `CONTEXT_MEDICAL.md` + `TODO.md` + JSON-urile relevante din `Dosar_Medical/`
-2. Suprascrie complet `DASHBOARD.html` (nu patch parțial)
-3. Actualizează câmpul „Ultima generare" din header cu timestamp-ul obținut via `date` (Regula 16.7)
-4. Logează generarea în `CHANGELOG.md` + `SESSION_LOG.md`
-5. Include în commit-ul final al sesiunii
-
-**Why:** familia vrea o vizualizare rapidă fără să navigheze prin 370 de rânduri de markdown. Un dashboard HTML static offline e formatul cel mai accesibil (click în Google Drive → deschide în browser, fără instalare). Fiind manual sincronizat, singura garanție că nu devine obsolet este regula explicită de regenerare la fiecare adăugare relevantă. Fără regulă, dashboardul devine o sursă paralelă de adevăr care diverge de documentație — anti-pattern.
-
-**How to apply:** la finalul oricărei sesiuni cu un declanșator din lista de mai sus, regenerezi integral `DASHBOARD.html` înainte de commit. Dacă sesiunea nu are declanșator (doar citire / audit / log-uri), nu regenerezi.
-
----
-
 ## Relația cu celelalte regulamente
 
 Regulile de aici **extind** (nu înlocuiesc):
@@ -446,7 +377,6 @@ La conflict direct pentru lucrul în `G:\My Drive\Roly\.Tati`, regulile din aces
 
 ## Changelog
 
-- **2026-04-18 v5:** adăugată Regula 18 (sincronizare `DASHBOARD.html` la fiecare actualizare medicală relevantă). Trigger: user a solicitat vizualizare rapidă HTML a dosarului + regulă explicită pentru a preveni divergența dashboard vs. documentație sursă.
 - **2026-04-18 v4:** adăugată Regula 17 (marcaj certitudine [CERT]/[PROBABIL]/[INCERT]/[NEGASIT] pentru informații medicale în documente generate). Trigger: user a cerut un raport despre reacții adverse Jamesi + Triplixam și a solicitat explicit ca informațiile nesigure să fie marcate ca atare; Regula 17 operaționalizează R3 global pentru outputul medical al dosarului.
 - **2026-04-18 v3.1:** clarificări Regula 16 sub-clauza 7 (timestamp narativ): adăugat câmp `_metadata.data_procesare` în lista fișierelor afectate; fix typo „intermediar" → „intermediare"; specificat frecvența rulării `date` (refresh >15 min); tabel format per fișier (SESSION_LOG/CHANGELOG trunchiat la `HH:MM`, JSON ISO 8601 complet). Trigger: audit utilizator care a detectat ambiguitățile și commit-ul 478048f nelogat în SESSION_LOG/CHANGELOG (remediat simultan).
 - **2026-04-18 v3:** adăugată Regula 16 (git auto-commit + push la finalul fiecărei sesiuni, după crearea repo-ului privat `RolandPetrila/Tati_Dosar_Medical`).

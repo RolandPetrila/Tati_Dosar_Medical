@@ -6,6 +6,25 @@
 
 ---
 
+## 2026-04-18 14:01 — [Claude_Opus_4.7] generare-dashboard-html-si-regula-18
+
+**Scop:** adăugare `DASHBOARD.html` (vizualizare rapidă a dosarului pentru familie) + codificare Regula 18 în CLAUDE.md (sincronizare dashboard la fiecare actualizare medicală relevantă).
+
+**Declanșator:** user — `doresc doar html, dar cu mentiunea ca trebuie sa fie actualizat la fiecare adaugare noua de informatii si analize medicale in documentatia existenta. aceasta regula trebuie adaptata in memoria proiectului langa celelalte reguli de actualizare documentatie.`
+
+**Operații:**
+
+- `CLAUDE.md` — backup creat + Regula 18 adăugată + antet v5 + changelog intern
+- `DASHBOARD.html` — generare nouă (single-page, CSS inline, countdown JS la CT 20.04.2026)
+- `CHANGELOG.md` — intrare 2026-04-18 14:01
+- `Dosar_Medical/arhiva/versiuni_config/CLAUDE_pre-regula-18-dashboard_2026-04-18_1401.md` — backup
+
+**Fișiere:** `CLAUDE.md`, `DASHBOARD.html` (nou), `CHANGELOG.md`, `SESSION_LOG.md`, `Dosar_Medical/arhiva/versiuni_config/CLAUDE_pre-regula-18-dashboard_2026-04-18_1401.md` (nou).
+
+**Făcut de:** Claude Code (Opus 4.7, 1M context).
+
+---
+
 ## 2026-04-18 13:28 — [Claude_Opus_4.7] confirmare-pregatire-CT-alergii-jamesi-hidratare
 
 **Scop:** actualizare dosar cu confirmări familie pre-CT (20.04.2026): fără alergii iod / fructe de mare / contrast, Jamesi oprit 18.04, reluare 22.04, hidratare confirmată; ștergere backup zip redundant.

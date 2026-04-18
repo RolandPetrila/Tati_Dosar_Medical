@@ -1,0 +1,1148 @@
+<!doctype html>
+<html lang="ro">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dosar medical — Petrilă Viorel-Mihai</title>
+    <style>
+      :root {
+        --bg: #f4f6f9;
+        --card: #ffffff;
+        --border: #dde4ec;
+        --text: #1e293b;
+        --text-muted: #64748b;
+        --primary: #1e40af;
+        --primary-light: #dbeafe;
+        --ok: #16a34a;
+        --ok-light: #dcfce7;
+        --warn: #d97706;
+        --warn-light: #fef3c7;
+        --crit: #dc2626;
+        --crit-light: #fee2e2;
+        --info: #0891b2;
+        --info-light: #cffafe;
+      }
+      * {
+        box-sizing: border-box;
+      }
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+        font-family:
+          "Segoe UI",
+          -apple-system,
+          BlinkMacSystemFont,
+          "Helvetica Neue",
+          Arial,
+          sans-serif;
+        background: var(--bg);
+        color: var(--text);
+        line-height: 1.5;
+      }
+      .wrap {
+        max-width: 1300px;
+        margin: 0 auto;
+        padding: 24px;
+      }
+      header.top {
+        background: linear-gradient(135deg, #1e3a8a 0%, #1e40af 100%);
+        color: #fff;
+        padding: 28px 32px;
+        border-radius: 12px;
+        box-shadow: 0 4px 14px rgba(30, 58, 138, 0.15);
+        margin-bottom: 24px;
+      }
+      header.top h1 {
+        margin: 0 0 8px 0;
+        font-size: 26px;
+        letter-spacing: 0.3px;
+      }
+      header.top .sub {
+        opacity: 0.9;
+        font-size: 14px;
+        margin-top: 4px;
+      }
+      header.top .meta {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        margin-top: 12px;
+        font-size: 13px;
+        opacity: 0.92;
+      }
+      header.top .meta span {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+      }
+      .countdown-bar {
+        background: var(--crit);
+        color: #fff;
+        padding: 18px 24px;
+        border-radius: 10px;
+        margin-bottom: 24px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 14px;
+        box-shadow: 0 3px 10px rgba(220, 38, 38, 0.2);
+      }
+      .countdown-bar .label {
+        font-weight: 600;
+        font-size: 15px;
+      }
+      .countdown-bar .event {
+        font-size: 13px;
+        opacity: 0.92;
+      }
+      .countdown-bar .timer {
+        font-size: 22px;
+        font-weight: 700;
+        font-variant-numeric: tabular-nums;
+      }
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(420px, 1fr));
+        gap: 18px;
+      }
+      .card {
+        background: var(--card);
+        border: 1px solid var(--border);
+        border-radius: 10px;
+        padding: 20px 22px;
+        box-shadow: 0 1px 3px rgba(15, 23, 42, 0.04);
+      }
+      .card h2 {
+        margin: 0 0 14px 0;
+        font-size: 16px;
+        font-weight: 600;
+        color: var(--primary);
+        padding-bottom: 10px;
+        border-bottom: 2px solid var(--primary-light);
+        display: flex;
+        align-items: center;
+        gap: 8px;
+      }
+      .card.wide {
+        grid-column: 1 / -1;
+      }
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        font-size: 13.5px;
+      }
+      table th,
+      table td {
+        text-align: left;
+        padding: 9px 10px;
+        border-bottom: 1px solid var(--border);
+        vertical-align: top;
+      }
+      table th {
+        background: #f8fafc;
+        font-weight: 600;
+        color: var(--text-muted);
+        font-size: 12px;
+        text-transform: uppercase;
+        letter-spacing: 0.4px;
+      }
+      table tr:last-child td {
+        border-bottom: none;
+      }
+      .kv {
+        display: grid;
+        grid-template-columns: 1fr 1.4fr;
+        gap: 8px 14px;
+        font-size: 13.5px;
+      }
+      .kv dt {
+        color: var(--text-muted);
+        font-weight: 500;
+      }
+      .kv dd {
+        margin: 0;
+        font-weight: 500;
+      }
+      .badge {
+        display: inline-block;
+        padding: 2px 9px;
+        border-radius: 999px;
+        font-size: 11.5px;
+        font-weight: 600;
+        letter-spacing: 0.2px;
+      }
+      .badge.ok {
+        background: var(--ok-light);
+        color: var(--ok);
+      }
+      .badge.warn {
+        background: var(--warn-light);
+        color: var(--warn);
+      }
+      .badge.crit {
+        background: var(--crit-light);
+        color: var(--crit);
+      }
+      .badge.info {
+        background: var(--info-light);
+        color: var(--info);
+      }
+      .badge.primary {
+        background: var(--primary-light);
+        color: var(--primary);
+      }
+      .badge.neutral {
+        background: #e2e8f0;
+        color: var(--text-muted);
+      }
+      .pill-status {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        padding: 4px 10px;
+        border-radius: 6px;
+        font-size: 12px;
+        font-weight: 600;
+      }
+      .pill-status.stop {
+        background: var(--crit-light);
+        color: var(--crit);
+      }
+      .pill-status.active {
+        background: var(--ok-light);
+        color: var(--ok);
+      }
+      .alert {
+        padding: 12px 14px;
+        border-radius: 8px;
+        font-size: 13px;
+        margin-top: 10px;
+        border-left: 4px solid;
+      }
+      .alert.warn {
+        background: var(--warn-light);
+        border-color: var(--warn);
+        color: #7c2d12;
+      }
+      .alert.info {
+        background: var(--info-light);
+        border-color: var(--info);
+        color: #155e75;
+      }
+      .alert.crit {
+        background: var(--crit-light);
+        border-color: var(--crit);
+        color: #7f1d1d;
+      }
+      .alert strong {
+        font-weight: 700;
+      }
+      ul.clean {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+      ul.clean li {
+        padding: 7px 0;
+        border-bottom: 1px solid #f1f5f9;
+        font-size: 13.5px;
+        display: flex;
+        align-items: flex-start;
+        gap: 10px;
+      }
+      ul.clean li:last-child {
+        border-bottom: none;
+      }
+      ul.clean li .icon {
+        flex-shrink: 0;
+        font-size: 14px;
+        font-weight: 700;
+        width: 22px;
+        text-align: center;
+      }
+      .ok-icon {
+        color: var(--ok);
+      }
+      .warn-icon {
+        color: var(--warn);
+      }
+      .crit-icon {
+        color: var(--crit);
+      }
+      .timeline {
+        position: relative;
+        padding-left: 24px;
+      }
+      .timeline::before {
+        content: "";
+        position: absolute;
+        left: 6px;
+        top: 0;
+        bottom: 0;
+        width: 2px;
+        background: var(--border);
+      }
+      .timeline-item {
+        position: relative;
+        padding-bottom: 16px;
+      }
+      .timeline-item::before {
+        content: "";
+        position: absolute;
+        left: -24px;
+        top: 4px;
+        width: 14px;
+        height: 14px;
+        border-radius: 50%;
+        background: var(--primary);
+        border: 3px solid #fff;
+        box-shadow: 0 0 0 2px var(--primary-light);
+      }
+      .timeline-item .date {
+        font-size: 12px;
+        font-weight: 600;
+        color: var(--primary);
+      }
+      .timeline-item .title {
+        font-size: 14px;
+        font-weight: 600;
+        margin: 2px 0 3px;
+      }
+      .timeline-item .desc {
+        font-size: 13px;
+        color: var(--text-muted);
+      }
+      .actions-group {
+        margin-bottom: 16px;
+      }
+      .actions-group h3 {
+        margin: 10px 0 8px;
+        font-size: 13px;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+      }
+      .actions-group.p0 h3 {
+        color: var(--crit);
+      }
+      .actions-group.p1 h3 {
+        color: var(--warn);
+      }
+      .actions-group.p2 h3 {
+        color: var(--info);
+      }
+      .q-block {
+        margin-bottom: 16px;
+      }
+      .q-block h3 {
+        margin: 0 0 8px;
+        font-size: 13.5px;
+        color: var(--primary);
+        font-weight: 600;
+      }
+      .q-block ul {
+        margin: 0;
+        padding-left: 20px;
+        font-size: 13px;
+        color: var(--text-muted);
+      }
+      .q-block li {
+        padding: 3px 0;
+      }
+      footer.bottom {
+        margin-top: 32px;
+        padding: 20px;
+        background: #0f172a;
+        color: #cbd5e1;
+        border-radius: 10px;
+        font-size: 12.5px;
+      }
+      footer.bottom strong {
+        color: #fff;
+      }
+      footer.bottom .disclaimer {
+        margin-top: 14px;
+        padding: 10px;
+        background: rgba(220, 38, 38, 0.12);
+        border-left: 3px solid var(--crit);
+        border-radius: 4px;
+        color: #fecaca;
+      }
+      @media (max-width: 700px) {
+        .grid {
+          grid-template-columns: 1fr;
+        }
+        .wrap {
+          padding: 14px;
+        }
+        header.top {
+          padding: 20px;
+        }
+        header.top h1 {
+          font-size: 20px;
+        }
+        .countdown-bar {
+          flex-direction: column;
+          align-items: flex-start;
+        }
+      }
+      @media print {
+        body {
+          background: #fff;
+        }
+        .wrap {
+          max-width: 100%;
+          padding: 10px;
+        }
+        .card {
+          box-shadow: none;
+          break-inside: avoid;
+        }
+        header.top {
+          background: #1e40af !important;
+          -webkit-print-color-adjust: exact;
+          print-color-adjust: exact;
+        }
+        .countdown-bar {
+          background: #dc2626 !important;
+          -webkit-print-color-adjust: exact;
+          print-color-adjust: exact;
+        }
+        footer.bottom {
+          background: #0f172a !important;
+          -webkit-print-color-adjust: exact;
+          print-color-adjust: exact;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <header class="top">
+        <h1>Dosar medical — Petrilă Viorel-Mihai</h1>
+        <div class="sub">
+          66 ani • Nădlac (Arad) • Suspiciune proces proliferativ esofagian — în
+          investigare
+        </div>
+        <div class="meta">
+          <span><strong>Ultima generare:</strong> 18 aprilie 2026, 14:01</span>
+          <span
+            ><strong>Sursă date:</strong> CONTEXT_MEDICAL.md + TODO.md +
+            Dosar_Medical/*.json</span
+          >
+          <span><strong>Responsabil dosar:</strong> Roland Petrilă (fiu)</span>
+        </div>
+      </header>
+
+      <div class="countdown-bar">
+        <div>
+          <div class="label">
+            ⚕ Următorul eveniment: CT torace + abdomen + pelvis cu contrast
+          </div>
+          <div class="event">
+            Luni 20 aprilie 2026, ora 17:00 • Genesis Medical Clinic Micălaca
+          </div>
+        </div>
+        <div class="timer" id="countdown">—</div>
+      </div>
+
+      <div class="grid">
+        <!-- IDENTITATE -->
+        <div class="card">
+          <h2>Identitate pacient</h2>
+          <dl class="kv">
+            <dt>Nume complet</dt>
+            <dd>Petrilă Viorel-Mihai</dd>
+            <dt>Data nașterii</dt>
+            <dd>18 mai 1959</dd>
+            <dt>Vârsta</dt>
+            <dd>66 ani</dd>
+            <dt>Sex</dt>
+            <dd>Masculin</dd>
+            <dt>CNP</dt>
+            <dd>1590518024486</dd>
+            <dt>C.I.</dt>
+            <dd>ZR 089382 (val. 03.08.2031)</dd>
+            <dt>Locul nașterii</dt>
+            <dd>Igriș (Sânpetru Mare), jud. Timiș</dd>
+            <dt>Domiciliu</dt>
+            <dd>Str. Vasile Goldiș nr. 42, Nădlac, jud. Arad</dd>
+            <dt>Asigurare</dt>
+            <dd>Pensionar — CJP Arad (021), dosar 42/355336</dd>
+            <dt>Grupa sanguină</dt>
+            <dd><span class="badge neutral">De completat</span></dd>
+            <dt>Greutate / Înălțime</dt>
+            <dd><span class="badge neutral">De completat</span></dd>
+          </dl>
+        </div>
+
+        <!-- STATUS CLINIC -->
+        <div class="card">
+          <h2>Status clinic curent</h2>
+          <dl class="kv">
+            <dt>Suspiciune principală</dt>
+            <dd>
+              <span class="badge crit">Proces proliferativ esofagian</span>
+            </dd>
+            <dt>Cod diagnostic</dt>
+            <dd>Cod 95 (bilet BCTAP 0631727)</dd>
+            <dt>Data identificării</dt>
+            <dd>17.04.2026 — endoscopie digestivă superioară</dd>
+            <dt>Medic curant</dt>
+            <dd>Dr. Noufal Abdul Vahab — Genesis Medical Clinic Arad</dd>
+            <dt>Biopsie</dt>
+            <dd>
+              <span class="badge warn">În așteptare rezultat</span> — Bioclinica
+              Arad, estimat 24.04 – 01.05.2026
+            </dd>
+            <dt>Stadializare</dt>
+            <dd><span class="badge info">CT programat 20.04.2026</span></dd>
+            <dt>Consult oncolog</dt>
+            <dd>
+              <span class="badge neutral">De programat după rezultate</span>
+            </dd>
+          </dl>
+          <div class="alert info">
+            <strong>Elemente pozitive:</strong> absența disfagiei progresive,
+            scădere ponderală absentă, fără hematemeză / melenă, fără răgușeală,
+            fără durere toracică persistentă.
+          </div>
+        </div>
+
+        <!-- MEDICAȚIE -->
+        <div class="card wide">
+          <h2>Medicație activă zilnică</h2>
+          <table>
+            <thead>
+              <tr>
+                <th>Medicament</th>
+                <th>Substanță activă</th>
+                <th>Doză</th>
+                <th>Ritm</th>
+                <th>Indicație</th>
+                <th>Status</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Aspenter</strong></td>
+                <td>acid acetilsalicilic</td>
+                <td>75 mg</td>
+                <td>0-1-0 (prânz)</td>
+                <td>Antiagregant post-stent 2012</td>
+                <td><span class="pill-status active">ACTIV</span></td>
+              </tr>
+              <tr>
+                <td><strong>Concor</strong></td>
+                <td>fumarat de bisoprolol</td>
+                <td>5 mg</td>
+                <td>1-0-0 (dimineață)</td>
+                <td>Beta-blocant (cardioprotecție + HTA)</td>
+                <td><span class="pill-status active">ACTIV</span></td>
+              </tr>
+              <tr>
+                <td><strong>Triplixam</strong></td>
+                <td>perindopril + indapamidă + amlodipină</td>
+                <td>10 / 2.5 / 5 mg</td>
+                <td>1-0-0 (dimineață)</td>
+                <td>Antihipertensiv triplu</td>
+                <td><span class="pill-status active">ACTIV</span></td>
+              </tr>
+              <tr>
+                <td><strong>Jamesi</strong></td>
+                <td>sitagliptin + metformin</td>
+                <td>50 / 1000 mg</td>
+                <td>1-0-1</td>
+                <td>Antidiabetic oral (DPP-4 + biguanidă)</td>
+                <td>
+                  <span class="pill-status stop"
+                    >OPRIT pre-CT (18.04 → 22.04)</span
+                  >
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="alert warn">
+            <strong>Interacțiune de urmărit:</strong> sitagliptin (Jamesi) +
+            perindopril (Triplixam) → risc crescut de angioedem [SmPC Triplixam
+            4.5]. La umflare bruscă față/buze/limbă sau dificultate respirație →
+            <strong>112 IMEDIAT</strong>.
+          </div>
+          <div class="alert info">
+            <strong>Sursă schemă:</strong> prescriere Dr. LAZĂR (nume parțial
+            ilizibil), 10.11.2025 — manuscris + foto cutii.
+          </div>
+        </div>
+
+        <!-- ALERGII -->
+        <div class="card">
+          <h2>Alergii cunoscute</h2>
+          <table>
+            <tbody>
+              <tr>
+                <td>Iod (contrast iodat)</td>
+                <td><span class="badge ok">Fără alergie</span></td>
+              </tr>
+              <tr>
+                <td>Fructe de mare</td>
+                <td><span class="badge ok">Fără alergie</span></td>
+              </tr>
+              <tr>
+                <td>Contrast iodat anterior</td>
+                <td><span class="badge ok">Fără reacții</span></td>
+              </tr>
+              <tr>
+                <td>Medicamente</td>
+                <td><span class="badge ok">Niciuna declarată</span></td>
+              </tr>
+              <tr>
+                <td>Alimente / alte</td>
+                <td><span class="badge ok">Niciuna declarată</span></td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="alert info">
+            Confirmat de familie (Roland Petrilă, 18.04.2026).
+            <strong>A se reconfirma verbal la radiolog</strong> înainte de
+            injectarea contrastului.
+          </div>
+        </div>
+
+        <!-- ANALIZE -->
+        <div class="card wide">
+          <h2>Analize și investigații recente</h2>
+          <table>
+            <thead>
+              <tr>
+                <th>Data</th>
+                <th>Parametru / Test</th>
+                <th>Valoare</th>
+                <th>Referință</th>
+                <th>Status</th>
+                <th>Sursă</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>17.04.2026</td>
+                <td>Creatinină serică</td>
+                <td><strong>0.83 mg/dL</strong></td>
+                <td>0.67 – 1.17</td>
+                <td><span class="badge ok">Normală</span></td>
+                <td>Bioclinica Arad 26417A0362</td>
+              </tr>
+              <tr>
+                <td>17.04.2026</td>
+                <td>Uree serică</td>
+                <td><strong>33.4 mg/dL</strong></td>
+                <td>&lt; 50</td>
+                <td><span class="badge ok">Normală</span></td>
+                <td>Bioclinica Arad 26417A0362</td>
+              </tr>
+              <tr>
+                <td>17.04.2026</td>
+                <td>eGFR estimat</td>
+                <td>~95 mL/min/1.73m²</td>
+                <td>&gt; 90</td>
+                <td><span class="badge ok">Stadiu G1</span></td>
+                <td>Calcul CKD-EPI</td>
+              </tr>
+              <tr>
+                <td>17.04.2026</td>
+                <td>Endoscopie digestivă superioară</td>
+                <td>Leziune esofagiană + biopsie prelevată</td>
+                <td>—</td>
+                <td><span class="badge crit">Proces proliferativ</span></td>
+                <td>Dr. Noufal — Genesis Arad</td>
+              </tr>
+              <tr>
+                <td>17.04.2026</td>
+                <td>Colonoscopie</td>
+                <td>Polip colon descendent + hemoroizi interni grad II</td>
+                <td>—</td>
+                <td>
+                  <span class="badge warn">Polipectomie planificată</span>
+                </td>
+                <td>Dr. Noufal — Genesis Arad</td>
+              </tr>
+              <tr>
+                <td>14.04.2026</td>
+                <td>Ecografie abdominală</td>
+                <td>Fără modificări vizibile</td>
+                <td>—</td>
+                <td><span class="badge ok">Normală</span></td>
+                <td>—</td>
+              </tr>
+              <tr>
+                <td>28.11.2025</td>
+                <td>Creatinină (preop hernie)</td>
+                <td>0.66 mg/dL</td>
+                <td>—</td>
+                <td><span class="badge ok">Normală</span></td>
+                <td>Analize preop chirurgie</td>
+              </tr>
+              <tr>
+                <td>28.11.2025</td>
+                <td>Glicemie</td>
+                <td>129 mg/dL</td>
+                <td>70 – 115</td>
+                <td><span class="badge warn">Ușor crescută (diabet)</span></td>
+                <td>Analize preop chirurgie</td>
+              </tr>
+              <tr>
+                <td>06.09.2024</td>
+                <td>Anti-H. pylori IgG</td>
+                <td>&gt; 100 U/mL</td>
+                <td>0 – 20</td>
+                <td><span class="badge info">Expunere confirmată</span></td>
+                <td>Serologie control</td>
+              </tr>
+              <tr>
+                <td>17.06.2025</td>
+                <td>Glicemie à jeun</td>
+                <td>136.1 mg/dL</td>
+                <td>70 – 115</td>
+                <td><span class="badge warn">Crescută (diabet)</span></td>
+                <td>Buletin analize complet</td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="alert warn">
+            <strong>Lipsesc:</strong> HbA1c recent (monitorizare diabet),
+            hemoleucogramă &lt; 6 luni, profil lipidic actual, TA uzuală
+            documentată.
+          </div>
+        </div>
+
+        <!-- ANTECEDENTE TIMELINE -->
+        <div class="card">
+          <h2>Timeline antecedente</h2>
+          <div class="timeline">
+            <div class="timeline-item">
+              <div class="date">2026-04-17</div>
+              <div class="title">Endoscopie + colonoscopie + biopsie</div>
+              <div class="desc">
+                Leziune esofagiană identificată, biopsie trimisă la
+                anatomopatologie.
+              </div>
+            </div>
+            <div class="timeline-item">
+              <div class="date">2026-04-14</div>
+              <div class="title">Ecografie abdominală</div>
+              <div class="desc">Fără modificări vizibile.</div>
+            </div>
+            <div class="timeline-item">
+              <div class="date">2025-11-28</div>
+              <div class="title">
+                Cură chirurgicală hernie inghinală dreaptă
+              </div>
+              <div class="desc">
+                K40.90 + aderențe peritoneale (K66.0). Plasă sintetică,
+                rahianestezie. NU a fost hernie hiatală.
+              </div>
+            </div>
+            <div class="timeline-item">
+              <div class="date">2025-11-10</div>
+              <div class="title">Schema medicație actualizată</div>
+              <div class="desc">
+                Prescriere Dr. LAZĂR: Aspenter + Concor + Triplixam + Jamesi.
+              </div>
+            </div>
+            <div class="timeline-item">
+              <div class="date">2024-05-30</div>
+              <div class="title">Infecție H. pylori — tratament</div>
+              <div class="desc">
+                Antibiotice + IPP. Fără recidivă simptomatică ulterior.
+              </div>
+            </div>
+            <div class="timeline-item">
+              <div class="date">2012-02-17</div>
+              <div class="title">STEMI antero-septo-apical — stent IVA</div>
+              <div class="desc">
+                Vichy (Franța): fibrinoliză + angioplastie stent RX Vision
+                3.5×28 mm. Antiagregare pe termen lung.
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ECHIPA MEDICALA -->
+        <div class="card">
+          <h2>Echipă medicală</h2>
+          <table>
+            <thead>
+              <tr>
+                <th>Specialitate</th>
+                <th>Medic</th>
+                <th>Unitate</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Gastroenterologie</td>
+                <td>Dr. Noufal Abdul Vahab</td>
+                <td>Genesis Medical Clinic Arad</td>
+              </tr>
+              <tr>
+                <td>Cardiologie / Medicină internă</td>
+                <td>Dr. LAZĂR <span class="badge warn">nume parțial</span></td>
+                <td>De identificat</td>
+              </tr>
+              <tr>
+                <td>Diabetologie (prescriere Jamesi)</td>
+                <td>Dr. LAZĂR (probabil)</td>
+                <td>De identificat</td>
+              </tr>
+              <tr>
+                <td>Cardiologie 2012 (stent)</td>
+                <td>Echipa Vichy — France</td>
+                <td>CH de Vichy (de confirmat)</td>
+              </tr>
+              <tr>
+                <td>Chirurgie Generală II (hernie)</td>
+                <td>De identificat</td>
+                <td>De identificat</td>
+              </tr>
+              <tr>
+                <td>Medic de familie</td>
+                <td><span class="badge neutral">De identificat</span></td>
+                <td>—</td>
+              </tr>
+              <tr>
+                <td>Oncologie digestivă</td>
+                <td><span class="badge warn">De programat</span></td>
+                <td>Arad / Timișoara / Cluj</td>
+              </tr>
+              <tr>
+                <td>Radiologie (CT 20.04)</td>
+                <td>—</td>
+                <td>Genesis Medical Clinic Micălaca</td>
+              </tr>
+              <tr>
+                <td>Anatomopatologie (biopsie)</td>
+                <td>—</td>
+                <td>Bioclinica Arad — arad@bioclinica.ro</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- FACTORI DE RISC -->
+        <div class="card">
+          <h2>Factori de risc și stil de viață</h2>
+          <table>
+            <tbody>
+              <tr>
+                <td>Fumat</td>
+                <td>
+                  Fost fumător 1977 – 2012 (≈35 ani);
+                  <strong>14 ani abstinență</strong>
+                </td>
+              </tr>
+              <tr>
+                <td>Alcool</td>
+                <td>Rar, ocazional — cantități mici</td>
+              </tr>
+              <tr>
+                <td>Activitate fizică</td>
+                <td>
+                  Uzual activ, energic (până la debutul simptomelor actuale)
+                </td>
+              </tr>
+              <tr>
+                <td>Antecedente oncologice familiale</td>
+                <td>Niciunul raportat</td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="alert info">
+            <strong>Simptome noi (ultimele 2-3 săptămâni):</strong> oboseală
+            marcată, somnolență, apetit diminuat, senzație „nod în gât"
+            intermitent postprandial, reflux reapărut.
+          </div>
+        </div>
+
+        <!-- CALENDAR CT -->
+        <div class="card wide">
+          <h2>Calendar pregătire CT 20.04.2026</h2>
+          <table>
+            <thead>
+              <tr>
+                <th>Data / ora</th>
+                <th>Acțiune</th>
+                <th>Status</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Sâmbătă 18.04.2026</td>
+                <td><strong>STOP Jamesi</strong> (H-48 pre-CT)</td>
+                <td><span class="badge ok">✓ Executat</span></td>
+              </tr>
+              <tr>
+                <td>Duminică 19.04.2026</td>
+                <td>Hidratare activă 1.5-2 L apă plată</td>
+                <td><span class="badge primary">Programat</span></td>
+              </tr>
+              <tr>
+                <td>Duminică 19.04, ~20:00</td>
+                <td>Cină ușoară — ultima masă consistentă</td>
+                <td><span class="badge primary">Programat</span></td>
+              </tr>
+              <tr>
+                <td>Luni 20.04, ~11:00</td>
+                <td>Gustare ușoară — ultima masă înainte de CT</td>
+                <td><span class="badge primary">Programat</span></td>
+              </tr>
+              <tr>
+                <td>Luni 20.04, dimineața</td>
+                <td>
+                  Aspenter + Concor + Triplixam — NORMAL (dacă radiologul nu
+                  cere altfel)
+                </td>
+                <td><span class="badge primary">Programat</span></td>
+              </tr>
+              <tr>
+                <td><strong>Luni 20.04, 17:00</strong></td>
+                <td>
+                  <strong>CT torace + abdomen + pelvis cu contrast</strong>
+                  (Genesis Micălaca)
+                </td>
+                <td><span class="badge crit">CT</span></td>
+              </tr>
+              <tr>
+                <td>Luni 20.04, seara</td>
+                <td>Glicemie control — NU relua Jamesi încă</td>
+                <td><span class="badge primary">Programat</span></td>
+              </tr>
+              <tr>
+                <td>Miercuri 22.04.2026</td>
+                <td>
+                  Reluare Jamesi (H+48 post-CT, după confirmare creatinină OK)
+                </td>
+                <td><span class="badge warn">Follow-up</span></td>
+              </tr>
+              <tr>
+                <td>24.04 – 01.05.2026</td>
+                <td>Rezultat biopsie esofagiană (Bioclinica Arad)</td>
+                <td><span class="badge warn">În așteptare</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- ACTIUNI DESCHISE -->
+        <div class="card wide">
+          <h2>Acțiuni deschise (din TODO.md)</h2>
+
+          <div class="actions-group p0">
+            <h3>🔴 P0 — Critic</h3>
+            <ul class="clean">
+              <li>
+                <span class="icon crit-icon">•</span>
+                <div>
+                  <strong>Confirmare telefonică Genesis Micălaca</strong> — cu
+                  24h înainte de CT
+                </div>
+              </li>
+              <li>
+                <span class="icon crit-icon">•</span>
+                <div>
+                  <strong>Întrebare radiolog:</strong> Triplixam — mențin
+                  integral sau omit doza duminică/luni?
+                </div>
+              </li>
+              <li>
+                <span class="icon crit-icon">•</span>
+                <div>
+                  <strong>Pregătire documente pentru CT:</strong> CI, card CAS,
+                  bilet BCTAP 0631727, analize recente, buletin endoscopie 17.04
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <div class="actions-group p1">
+            <h3>🟡 P1 — Important</h3>
+            <ul class="clean">
+              <li>
+                <span class="icon warn-icon">•</span>
+                <div>
+                  <strong>Colectare informații medicale</strong>: medicamente
+                  (confirmare completă), grupa sanguină, greutate, înălțime,
+                  HbA1c recent, TA uzuală
+                </div>
+              </li>
+              <li>
+                <span class="icon warn-icon">•</span>
+                <div>
+                  <strong>Documente istorice de obținut:</strong> bilet
+                  externare Vichy 2012, externare H. pylori 2024, raport
+                  operator hernie 2025, buletin endoscopie 17.04, buletin
+                  colonoscopie 17.04
+                </div>
+              </li>
+              <li>
+                <span class="icon warn-icon">•</span>
+                <div>
+                  <strong>Identificare Dr. LAZĂR</strong> — nume parțial
+                  ilizibil pe manuscris prescriere
+                </div>
+              </li>
+              <li>
+                <span class="icon warn-icon">•</span>
+                <div>
+                  <strong>Digitizare documente lipsă:</strong> 6 PDF-uri
+                  neidentificate în <code>99_altele/</code> + PDF original
+                  cardiologie Vichy + bilet ecografie 14.04
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <div class="actions-group p2">
+            <h3>🟢 P2 — Util</h3>
+            <ul class="clean">
+              <li>
+                <span class="icon ok-icon">•</span>
+                <div>
+                  Identificare și contactare oncolog digestiv (Arad / Timișoara
+                  / Cluj)
+                </div>
+              </li>
+              <li>
+                <span class="icon ok-icon">•</span>
+                <div>HbA1c — monitorizare control diabet cu Jamesi</div>
+              </li>
+              <li>
+                <span class="icon ok-icon">•</span>
+                <div>
+                  Prezentare raport reacții adverse Jamesi + Triplixam familiei
+                  + medicului curant
+                </div>
+              </li>
+              <li>
+                <span class="icon ok-icon">•</span>
+                <div>
+                  Verificare versiune curentă SmPC Triplixam (actuală: v06.2021,
+                  vechime ~5 ani)
+                </div>
+              </li>
+              <li>
+                <span class="icon ok-icon">•</span>
+                <div>Jurnal simptome — început pentru consult oncolog</div>
+              </li>
+              <li>
+                <span class="icon ok-icon">•</span>
+                <div>
+                  Clarificare hidrocel + chiste epididimare (indicate preop, dar
+                  absente din externare)
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- INTREBARI PREGATITE -->
+        <div class="card wide">
+          <h2>Întrebări pregătite pentru consulturi viitoare</h2>
+
+          <div class="q-block">
+            <h3>Pentru Dr. Noufal Abdul Vahab (gastroenterolog)</h3>
+            <ul>
+              <li>În ce segment al esofagului este leziunea?</li>
+              <li>
+                Dimensiunea aproximativă? Aspect (ulcerativ / vegetant /
+                stenozant)?
+              </li>
+              <li>Circumferențială sau parțială?</li>
+              <li>A fost observat esofag Barrett?</li>
+              <li>Ce a arătat colonoscopia — dincolo de polip și hemoroizi?</li>
+              <li>Când sunt gata rezultatele biopsiei?</li>
+              <li>Ne recomandă un oncolog anume?</li>
+            </ul>
+          </div>
+
+          <div class="q-block">
+            <h3>Pentru centrul CT (Genesis Micălaca)</h3>
+            <ul>
+              <li>Cât durează până la raportul radiologului?</li>
+              <li>Se primește CD cu imagini DICOM?</li>
+              <li>Costul dacă facem privat (dacă CAS nu acoperă integral)?</li>
+              <li>Triplixam dimineața — mențin integral sau omit doza?</li>
+            </ul>
+          </div>
+
+          <div class="q-block">
+            <h3>Pentru viitorul oncolog digestiv</h3>
+            <ul>
+              <li>Stadiul TNM exact?</li>
+              <li>Tipul histologic?</li>
+              <li>Opțiuni de tratament — ordonate după eficacitate?</li>
+              <li>Prognostic realist?</li>
+              <li>Trialuri clinice disponibile? Imunoterapie?</li>
+              <li>
+                Gestionarea comorbidităților (diabet, stent coronarian) în
+                timpul tratamentului oncologic?
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <footer class="bottom">
+        <div>
+          <strong>Dosar:</strong> <code>G:\My Drive\Roly\.Tati</code> •
+          versionat privat pe GitHub
+          (<code>RolandPetrila/Tati_Dosar_Medical</code>)
+        </div>
+        <div style="margin-top: 6px">
+          <strong>Surse principale:</strong> <code>CONTEXT_MEDICAL.md</code>,
+          <code>TODO.md</code>, <code>Dosar_Medical/*.json</code>, buletine
+          Bioclinica + Genesis.
+        </div>
+        <div style="margin-top: 6px">
+          <strong>Regulament actualizare:</strong> Regula 18 din
+          <code>CLAUDE.md</code> proiect — dashboardul se regenerează la fiecare
+          sesiune care modifică conținut medical relevant.
+        </div>
+        <div class="disclaimer">
+          <strong
+            >⚠ Acest dashboard este un instrument intern de vizualizare a
+            dosarului familiei.</strong
+          >
+          Informațiile prezentate nu înlocuiesc consultul medical. Orice decizie
+          terapeutică se ia exclusiv împreună cu medicii curanți, pe baza
+          documentelor medicale originale. Unele detalii pot fi necomplete sau
+          în curs de clarificare.
+        </div>
+      </footer>
+    </div>
+
+    <script>
+      (function () {
+        var target = new Date("2026-04-20T17:00:00+03:00").getTime();
+        var el = document.getElementById("countdown");
+        function tick() {
+          var now = Date.now();
+          var diff = target - now;
+          if (diff <= 0) {
+            el.textContent = "În desfășurare / finalizat";
+            return;
+          }
+          var d = Math.floor(diff / 86400000);
+          var h = Math.floor((diff % 86400000) / 3600000);
+          var m = Math.floor((diff % 3600000) / 60000);
+          var s = Math.floor((diff % 60000) / 1000);
+          el.textContent = d + "z " + h + "h " + m + "m " + s + "s";
+        }
+        tick();
+        setInterval(tick, 1000);
+      })();
+    </script>
+  </body>
+</html>
