@@ -18,7 +18,7 @@
 
 **Flux auto-deploy:** modificare fișiere → `git push` (Regula 16) → GitHub Pages redeploy automat → URL actualizat pe orice device.
 
-**Pas rămas pentru user:** GitHub → repo `Tati_Dosar_Medical` → Settings → Pages → Source: `main` / `/ (root)` → Save (un singur click).
+**Pas rămas pentru user:** ~~GitHub → repo `Tati_Dosar_Medical` → Settings → Pages → Source: `main` / `/ (root)` → Save~~ ✅ **ACTIVAT și TESTAT de user (2026-04-18 21:34)** — URL live confirmat.
 
 **Context decizie:** Vercel CLI v50.17.1 a eșuat în mod non-interactiv (bug scope în subprocess fără TTY); GitHub Pages ales ca alternativă — repo deja public, gratis, fără limite, zero dependențe externe.
 

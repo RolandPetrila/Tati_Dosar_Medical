@@ -19,7 +19,7 @@
 - `TODO.md` — GitHub Pages în „Acțiuni finalizate"; P3 git + Drive `[x]`
 - `CHANGELOG.md` + `SESSION_LOG.md` — intrare 2026-04-18 21:04
 
-**Pas rămas pentru user:** activare GitHub Pages în Settings repo (un click).
+**Pas rămas pentru user:** ~~activare GitHub Pages în Settings repo~~ ✅ **ACTIVAT și TESTAT de user (2026-04-18 21:34)**.
 
 **Fișiere:** `index.html` (nou), `CLAUDE.md`, `TODO.md`, `CHANGELOG.md`, `SESSION_LOG.md`.
 
