@@ -6,6 +6,25 @@
 
 ---
 
+## 2026-04-18 20:33 — [Claude_Opus_4.7] eliminare-cloudflare-abandon-ruta
+
+**Scop:** ștergere `DEPLOY_CLOUDFLARE.md` conform deciziei user de abandonare a rutei Cloudflare pentru distribuție. Păstrare intactă a dashboardului și asset-urilor pentru orice altă metodă ulterioară.
+
+**Declanșator:** user — `elimina cloudflare din documentatie si salveaza progresul, incep terminal nou cu care voi stabili o alta metoda prin care sa actualizez html-ul pt toti utilizatorii care il au`.
+
+**Operații:**
+
+- `DEPLOY_CLOUDFLARE.md` — `git rm` + delete din working tree
+- `CHANGELOG.md` + `SESSION_LOG.md` — intrare 2026-04-18 20:33 (log abandon rută)
+
+**Notă:** `DASHBOARD.html`, `ALIMENTATIE.md`, `manifest.webmanifest`, `assets/` rămân neatinse — sunt independente de ruta distribuției și pot fi folosite cu orice soluție ulterioară (Vercel, Netlify, GitHub Pages, Firebase, etc.).
+
+**Fișiere:** `DEPLOY_CLOUDFLARE.md` (șters), `CHANGELOG.md`, `SESSION_LOG.md`.
+
+**Făcut de:** Claude Code (Opus 4.7, 1M context).
+
+---
+
 ## 2026-04-18 18:49 — [Claude_Opus_4.7] ghid-deploy-cloudflare
 
 **Scop:** creare `DEPLOY_CLOUDFLARE.md` — ghid complet pentru deploy Cloudflare Pages + Access cu auth email OTP. Adresează problema distribuției fișierului HTML (WhatsApp = snapshot static, nu sync cu versiunea curentă).

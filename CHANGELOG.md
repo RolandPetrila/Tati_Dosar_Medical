@@ -4,6 +4,27 @@
 
 ---
 
+## 2026-04-18 20:33 — Eliminare `DEPLOY_CLOUDFLARE.md` — abandon rută Cloudflare
+
+**Tip:** ȘTERGERE FIȘIER (abandon rută tehnică)
+
+**Fișiere afectate:**
+
+- `DEPLOY_CLOUDFLARE.md` — **ȘTERS** (git rm) — ghid deploy Cloudflare Pages + Access pregătit pe 2026-04-18 18:49, neutilizat
+
+**Motiv:** user a decis să abandoneze ruta Cloudflare pentru distribuție live-sync a `DASHBOARD.html` și să exploreze o metodă alternativă într-un terminal nou. Ghidul era pregătit complet (6 faze) dar nu s-a executat Pasul 1 (creare cont + token). R-MINIMAL: prefer ștergere față de arhivare — git păstrează istoricul la `bb3db12`.
+
+**Ce rămâne din context istoric (nu modificat):**
+
+- Intrările CHANGELOG / SESSION_LOG din 2026-04-18 18:49 și 18:22 menționează Cloudflare ca ipoteză de lucru — log istoric legitim, NU se falsifică
+- `DASHBOARD.html` + `ALIMENTATIE.md` + manifest + assets rămân intact — pot fi distribuite prin orice altă metodă pe care o alegi ulterior
+
+**Next step (alt terminal):** user va stabili separat o metodă alternativă de distribuție live-sync a dashboardului.
+
+**Făcut de:** Claude Code (Opus 4.7, 1M context).
+
+---
+
 ## 2026-04-18 18:49 — Ghid deploy `DEPLOY_CLOUDFLARE.md` (distribuție cu live sync)
 
 **Tip:** CREARE GHID (fără cod, fără modificare dashboard)
