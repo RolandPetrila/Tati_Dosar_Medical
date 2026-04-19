@@ -13,6 +13,7 @@
 **Declanșator:** conversație pe parcurs a întrebat în 3 iterații despre boală, statistici, extinderi, tratamente; user a cerut explicit document DOCX cuprinzător.
 
 **Metodă:** 4 sub-agenți paraleli (general-purpose, background=true):
+
 1. Research tratament esofagian complet (protocoale NCCN/ESMO, imunoterapie, FLOT vs CROSS, chirurgie, nutriție, efecte adverse)
 2. Research centre oncologice România + UE (adrese, telefoane, email, proceduri S2)
 3. Research trial-uri clinice active (clinicaltrials.gov API v2, NCT-uri specifice, criterii, contact sponsor)
@@ -29,6 +30,7 @@ Rezultatele celor 4 agenți compilate într-un script Python (python-docx 1.1.2)
 - `SESSION_LOG.md` — această intrare
 
 **Conformitate reguli:**
+
 - Regula 17 aplicată: marcaje certitudine pe fiecare afirmație factuală medicală
 - Regula 11 aplicată: data accesării surselor (2026-04-19) marcată la fiecare URL
 - Regula 14 aplicată: .meta.json cu chain-of-custody
