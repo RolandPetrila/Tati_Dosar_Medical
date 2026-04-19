@@ -1,0 +1,33 @@
+{
+  "source_document": "2026-04-19_ghid_cancer_esofagian_complet.docx",
+  "received_date": "2026-04-19",
+  "received_from": "compilat de Claude Opus 4.7 din 4 agenti de cercetare paralela",
+  "digitized_by": "generat nativ din Python (python-docx 1.1.2)",
+  "digitized_date": "2026-04-19",
+  "transcriber": "Claude Opus 4.7 (1M context)",
+  "ocr_quality": "n/a - document generat nativ, nu scanat",
+  "chain_notes": "Ghid informativ comprehensive despre cancerul esofagian, destinat familiei pacientului Petrila Viorel-Mihai. Compilat din surse primare NCCN V1.2025, ESMO 2022, studii pivot peer-reviewed (CROSS, FLOT4, ESOPEC, CheckMate-577/648, KEYNOTE-590/811, MATTERHORN, SPOTLIGHT), SEER, EMA, clinicaltrials.gov, CNAS, surse oficiale Romania si UE. Document condițional pe rezultate (biopsie si CT in lucru la data intocmirii). NU inlocuieste consultul medical. Conform Regulii 17 (marcaje certitudine [CERT]/[PROBABIL]/[INCERT]/[NEGASIT]) si Regulii 11 (valabilitate temporala). Sursa script: generate_ghid_cancer_esofagian.py in acelasi folder.",
+  "topics_covered": [
+    "Stadializare TNM editia 8 AJCC",
+    "Tratament pe stadii (benign, precanceros, stadii 1-4 malign)",
+    "Protocoale CROSS vs FLOT (inclusiv studiul ESOPEC 2024)",
+    "Imunoterapie pembrolizumab, nivolumab, trastuzumab, zolbetuximab",
+    "Chirurgie esofagectomie (Ivor Lewis, McKeown, MIE, RAMIE)",
+    "Evaluare cardiologica preoperatorie (pacient cu stent)",
+    "Trial-uri clinice active in Romania (NCT06644781, NCT06532006 + 3 not_yet_recruiting)",
+    "Centre oncologice Romania (SCJU Arad, IOB, ICF, IOCN, OncoHelp, Ponderas, SANADOR)",
+    "Centre UE accesibile prin S2 (WPK Viena, Charite Berlin, Heidelberg, Gustave Roussy)",
+    "Second opinion international (Dana-Farber, Cleveland, MSK)",
+    "Programul National de Oncologie CNAS",
+    "Drepturi pacient (grad handicap, indemnizatie, transport)",
+    "Nutritie perioperatorie (ESPEN)",
+    "Suport psihologic si paliatie",
+    "Logistica tratament Bucuresti (cazare gratuita Sus Inima)",
+    "Intrebari concrete pentru fiecare specialist",
+    "Plan de actiune pe saptamani"
+  ],
+  "applicable_patient": "Petrila Viorel-Mihai (66 ani, STEMI+stent 2012, Triplixam, suspiciune proces proliferativ esofagian endoscopie 17.04.2026)",
+  "document_pages_approx": 40,
+  "document_size_bytes": 63629,
+  "next_review_trigger": "dupa primirea rezultatelor biopsie + CT"
+}

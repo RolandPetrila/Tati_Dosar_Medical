@@ -4,6 +4,28 @@
 
 ---
 
+## 2026-04-19 04:07 — Ghid complet cancer esofagian (DOCX) — document informativ pentru familie
+
+**Tip:** DOCUMENT GENERAT pentru familie (Regula 17 aplicată sistematic, marcaje certitudine pe fiecare afirmație factuală).
+
+**Scop:** răspuns la cererea explicită a user-ului (Roland) pentru „research detaliat cu toate tool si skill disponibile" + „intocmeste document docx detaliat" despre boala tatălui. Document cuprinzător de ~40 pagini, 24 secțiuni, acoperă: stadializarea TNM editia 8 AJCC, tratamente pe toate stadiile (benign/precanceros/stadii 1-4), CROSS vs FLOT (inclusiv ESOPEC 2024), imunoterapie (pembrolizumab, nivolumab, trastuzumab, zolbetuximab), chirurgie (inclusiv RAMIE pentru pacient cardiac), trial-uri clinice active în România (2 RECRUITING + 3 NOT_YET_RECRUITING), centre oncologice România + UE (S2/E112), second opinion internațional, Programul Național de Oncologie CNAS, drepturi pacient (grad handicap, indemnizație), nutriție ESPEN, suport psihologic, paliație, logistică București (cazare gratuită Sus Inima), întrebări concrete pentru fiecare specialist, plan de acțiune pe săptămâni.
+
+**Metodă:** 4 sub-agenți de cercetare lansați în paralel (tratament aprofundat, centre oncologice, trial-uri clinice, suport practic), rezultatele compilate într-un script Python (python-docx 1.1.2) care generează DOCX nativ cu stiluri profesionale (tabele, callout-uri colorate, marcaje certitudine [CERT]/[PROBABIL]/[INCERT]/[NEGASIT]).
+
+**Surse primare citate:** NCCN Esophageal V1.2025, ESMO 2022, AJCC 8th Ed, ESPEN 2021-2023, SEER Database, EMA EPAR, clinicaltrials.gov API v2, CNAS PNO 2024 + protocoale mai 2025, studii pivot (CROSS, FLOT4, ESOPEC, CheckMate-577/648, KEYNOTE-590/811, MATTERHORN, SPOTLIGHT, DESTINY-Gastric01, MIRO, ROBOT).
+
+**Fișiere create:**
+
+- `Dosar_Medical/rapoarte_generate/generate_ghid_cancer_esofagian.py` — script Python generator (script-as-source-of-truth, conform convenției proiectului)
+- `Dosar_Medical/rapoarte_generate/2026-04-19_ghid_cancer_esofagian_complet.docx` — document final ~64 KB, ~40 pagini
+- `Dosar_Medical/rapoarte_generate/2026-04-19_ghid_cancer_esofagian_complet.meta.json` — metadata chain-of-custody (Regula 14)
+
+**Limitări transparente (Regula 17):** document condițional pe rezultate biopsie + CT (ambele în lucru la 19.04.2026). Stadializarea definitivă și deciziile terapeutice aparțin exclusiv echipei oncologice curante. Informațiile nu înlocuiesc consult medical. Secțiune dedicată „Ce NU am găsit" listează 10+ întrebări legitime pentru echipa medicală.
+
+**Făcut de:** Claude Code (Opus 4.7, 1M context).
+
+---
+
 ## 2026-04-19 02:27 — Monitor automat rezultat biopsie — migrat în hub dedicat, rulează 24/7 pe GitHub Actions
 
 **Tip:** INFRASTRUCTURĂ AUTOMATIZARE (external — impact zero asupra conținutului medical)
