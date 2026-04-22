@@ -148,8 +148,8 @@ Confirmați pe roster oficial `oncohelp.ro/echipa-oncohelp`:
 
 - **Prof. Dr. Negru Șerban** — Președinte Asociația OncoHelp + Medic Primar Oncolog (expert recunoscut pe cancere digestive) `[INCERT]` titlul între `Prof. Dr.` și `Conf. Dr.` (sursele alternează; pe site-ul oficial e listat ca medic primar)
 - Conf. Dr. Popovici Dorel (Director Medical)
-- **Dr. Sîrbu Daniela** — Medic Primar Oncolog (rol intern de coordonare spitalizare continuă — `[INCERT]` neconfirmat pe site oficial, preluat din sinteza anterioară)
-- **Dr. Oprean Cristina** — Medic Primar Oncolog cu dublă specializare farmacologie clinică (25+ ani experiență) — relevant pentru verificarea interacțiunilor chimioterapiei cu schema cardiacă a pacientului
+- **Dr. Sîrbu Daniela** — Medic Primar Oncolog, **Șef Secția Spitalizare Continuă** în Secția de Oncologie OncoHelp `[CERT]` (sursa: timpolis.ro + roster oncohelp.ro). Vice-președinte Asociația OncoHelp. Coordonează grupul de suport Violeta pentru persoane diagnosticate cu cancer mamar. **Relevant pentru cazul nostru:** rolul ei facilitează direct accesul la paturi și perfuzii pentru susținerea nutrițională a pacientului stenozat
+- **Dr. Oprean Cristina** — Medic Primar Oncolog + **Specialist Farmacologie Clinică** `[CERT]` (dublă specializare confirmată — sursa: medical-virtual.ro + oncohelp.ro). **Șef Spitalizare de Zi** la OncoHelp `[CERT]` (sursa: medichub.ro + medical-virtual.ro). 17 ani practică în oncologie medicală + aproape 20 ani experiență în studii clinice (fază II, III, IV) — co-autor 3 cărți oncologie, autor principal/co-autor 20 articole internaționale. Membru fondator Asociația OncoHelp (unul din 3). **Relevant pentru cazul nostru:** (a) dubla specializare farmacologie clinică = verificare profesională a interacțiunilor chimioterapiei cu schema cardiacă (Jamesi + Triplixam + Concor + Aspenter); (b) OncoHelp este **primul centru din Timișoara unde pacienții pot participa la studii clinice de fază 1** — util ca opțiune de rezervă dacă FLOT nu funcționează sau dacă există un trial aplicabil pentru cancer eso-gastric (sursa: medichub.ro, renasterea.ro)
 - Dr. Căprariu Cristina — Medic Primar Oncolog
 - Dr. Macra Norina — Medic Primar Oncolog
 - As. Univ. Dr. Pașca Feneșan Mihaela — Medic Primar Oncolog
@@ -432,11 +432,16 @@ Medicover Cluj confirmă comisie multidisciplinară cu: oncologie medicală + ra
 - [oncohelp.ro — pagina de contact](https://oncohelp.ro/contact/)
 - [oncohelp.ro — echipa completă](https://oncohelp.ro/echipa-oncohelp/)
 - [oncohelp.ro — secția oncologie](https://oncohelp.ro/centrul-de-oncologie/oncologie/)
+- [oncohelp.ro — profil Dr. Cristina Oprean](https://oncohelp.ro/echipa-oncohelp/dr-cristina-oprean-medic-primar-oncolog-1/)
 - [Buletin Timișoara — Tumor Board MDT](https://buletindetimisoara.ro/in-cadrul-oncohelp-timisoara-functioneaza-tumor-board-comisia-oncologica-multidisciplinara-care-creste-sansele-de-supravietuire-ale-bolnavilor-de-cancer/)
 - [spatiulmedical.ro — Conf. Dr. Șerban Negru](https://spatiulmedical.ro/doctor-serban-negru-presedinte-centru-oncologie-oncohelp-timisoara-program-de-screening/)
 - [LinkedIn — Conf. Dr. Dorel Popovici](https://www.linkedin.com/in/dorel-popovici-b33190134/)
 - [UMFT — Departamentul IX Chirurgie I / Oncologie](https://www.umft.ro/en/medicine/departments-of-the-medicine-faculty/department-ix-surgery-i/oncology/)
 - [CASPA — OncoHelp 10.000 pacienți](https://www.caspa.ro/oncohelp-timisoara-10-000-de-pacienti-ingrijiti-gratuit-anul-trecut-aici-aproape-o-jumatate-cazuri-noi/)
+- [timpolis.ro — Dr. Daniela Sîrbu Șef Spitalizare Continuă + secția paliație](https://timpolis.ro/la-oncohelp-timisoara-functioneaza-cea-mai-mare-sectie-de-paliatie-dintr-un-spital-din-vestul-tarii/)
+- [medical-virtual.ro — profil Dr. Cristina Oprean (farmacologie clinică + studii clinice)](https://medical-virtual.ro/speaker/dr-cristina-oprean/)
+- [medichub.ro — OncoHelp primul centru Timișoara studii clinice fază 1](https://www.medichub.ro/stiri/premiera-la-timisoara-pacientii-cu-cancer-pot-participa-la-studii-clinice-de-faza-1-in-cadrul-centrului-oncohelp-id-9227-cmsid-2)
+- [renasterea.ro — Premieră Timișoara studii clinice OncoHelp](https://renasterea.ro/premiera-intr-un-spital-din-timisoara/)
 
 ### 11.2. IOCN Cluj
 
@@ -489,11 +494,10 @@ Medicover Cluj confirmă comisie multidisciplinară cu: oncologie medicală + ra
 
 - Costul exact al consultului privat (nu apare pe site; de întrebat telefonic)
 - Timpul mediu de așteptare între prima programare și primul consult (privat vs CNAS)
-- Dacă Dr. Sîrbu Daniela are în prezent rolul de „Șef Spitalizare Continuă" (preluat din sinteza anterioară, nu confirmat pe site oficial)
-- Dacă Dr. Oprean Cristina are în prezent rolul de „Șef Spitalizare de Zi"
 - Dacă se fac markerii moleculari (HER2, PD-L1, Claudin-18.2, MSI) intern sau se externalizează
 - Dacă OncoHelp are acces la trastuzumab, pembrolizumab, zolbetuximab prin Programul Național
 - Titlul exact al Prof./Conf. Șerban Negru (sursele alternează)
+- Dacă există trial-uri clinice active în 2026 pentru adenocarcinom gastric/eso-gastric (OncoHelp are studii de fază 1 — dar pentru ce tipuri de cancer, nu e clar pe surse publice)
 
 ### 12.2. La IOCN Cluj
 

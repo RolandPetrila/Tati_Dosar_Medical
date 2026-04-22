@@ -2,7 +2,7 @@
 
 **Acest fișier conține reguli suplimentare pentru orice sesiune deschisă în folderul `G:\My Drive\Roly\.Tati`. Are prioritate față de regulamentul global la conflict direct.**
 
-**Ultima revizuire:** 23 aprilie 2026 (v10).
+**Ultima revizuire:** 23 aprilie 2026 (v11).
 **Context proiect:** dosar medical real pentru pacient Petrilă Viorel-Mihai (n. 18.05.1959), suspiciune proces proliferativ eso-gastric (Siewert II probabil) identificat la endoscopie pe 17.04.2026, CT de stadializare 20.04.2026 (T3-T4 N0-N1 M0 probabil + ascită de elucidat), biopsie în așteptare.
 
 **Relație cu alte regulamente:**
@@ -543,6 +543,54 @@ Arhivarea în `Dosar_Medical/arhiva/` rămâne validă și obligatorie (Regula 1
 
 ---
 
+## Regula 22 — Verificare proactivă + eliminare informații neverificate (în tot proiectul)
+
+**Context:** user a solicitat explicit pe 2026-04-23 acest principiu ca politică generală aplicabilă pe TOATE fișierele de referință ale proiectului, după ce a constatat că sinteza anterioară Gemini conținea afirmații marcate `[INCERT]` preluate din surse nedocumentate. Principiul extinde Regula 17 (marcaje certitudine) și Regula 21 (zero ciorne) cu o componentă activă: verificare + decizie explicită de păstrare/ștergere.
+
+**Principii:**
+
+1. **Zero afirmații fără sursă validă în documentele validate.** Orice afirmație factuală dintr-un fișier de referință (CONTEXT*MEDICAL.md, SINTEZA*\*.md, TODO.md, CHANGELOG.md, documente pentru medici/familie, JSON-uri structurate) trebuie să aibă una dintre următoarele:
+   - Sursă primară citată explicit (Regula 17 `[CERT]`)
+   - Marcaj `[PROBABIL]` cu justificare (de ce e rezonabil fără sursă primară)
+   - Marcaj `[INCERT]` cu destinație clară („de verificat la X")
+   - Marcaj `[NEGASIT]` cu declararea surselor consultate fără rezultat
+2. **Afirmațiile `[INCERT]` nu sunt stare de repaus.** Sunt task-uri de verificare. La fiecare sesiune relevantă, verifici dacă `[INCERT]`-urile vechi pot fi soluționate.
+3. **Verificare obligatorie la audit / review / integrare.** La orice operație de audit (review propus, integrare info nouă, preluare din alt fișier), fiecare afirmație `[INCERT]` / `[PROBABIL]` se verifică activ pe surse primare.
+4. **Decizie explicită după verificare:**
+   - **Confirmat** → upgrade marcaj la `[CERT]` + adaugă sursa + data verificării
+   - **Infirmat** → șterge afirmația + loghează ștergerea și motivul în `CHANGELOG.md`
+   - **Imposibil de verificat** → lași `[INCERT]` dar menționezi explicit sursele consultate fără rezultat
+5. **Surse acceptabile (ierarhie):**
+   - Sursa primară oficială (site instituțional, registru oficial, SmPC/RCP, ghid clinic peer-reviewed)
+   - Sursa secundară reputabilă (PubMed, CASPA pentru date asociații, Ministerul Sănătății)
+   - Media medicală recunoscută (MediChub, Medichub, Viață Medicală) — doar cu confirmare cross-referenced
+   - **NU acceptabile:** Wikipedia (terțiar), forumuri, blog-uri, site-uri comerciale (agregatori de clinici), alt AI (Gemini, ChatGPT) ca sursă primară
+6. **Propagare:** dacă în timpul verificării găsești că un marcaj `[CERT]` existent conținea de fapt date incorecte / outdated, corectezi imediat + loghezi în `CHANGELOG.md` cu tag-ul `corectie-retroactiva`.
+
+**Excepții (nu necesită re-verificare la fiecare sesiune):**
+
+- Afirmații statice confirmate în trecut pe surse stabile (ex: date nașterii pacient, CNP, adresă) — rămân `[CERT]` fără re-verificare, decât dacă user semnalează că s-au schimbat
+- Afirmații derivate din documente medicale originale scanate (OCR marcat cu `[ILIZIBIL]` conform Regula 8) — rămân marcate conform transcrierii inițiale
+- Citate din ghiduri clinice ediții anterioare, marcate cu data ediției (Regula 11) — rămân valide până la publicarea unei ediții noi
+
+**Protocol concret pentru o afirmație `[INCERT]`:**
+
+1. **Identifică întrebarea factuală exactă** (ex: „rolul Dr. X la instituția Y")
+2. **Caută pe surse primare** (WebFetch pe pagina oficială profil medic, WebSearch pe nume + rol)
+3. **Evaluează rezultatele:**
+   - Confirmare pe sursă oficială → `[CERT]` + citare URL + data
+   - Confirmare pe sursă secundară reputabilă → `[CERT]` cu precizarea sursei (secundară) + data
+   - Doar pe surse neutralizabile → `[PROBABIL]` cu explicație
+   - Nimic → `[NEGASIT]` cu enumerarea surselor consultate
+   - Contrazicere explicită → **șterge afirmația** + log `CHANGELOG.md`
+4. **Loghează decizia** în `CHANGELOG.md` dacă a implicat modificare semnificativă
+
+**Why:** un dosar medical nu tolerează informații vagi marcate permanent „incert" — ori e adevărat (și atunci trebuie demonstrat), ori e fals (și atunci trebuie scos). Între cele două, un `[INCERT]` stagnant devine o dezinformare care se transmite mai departe, cu potențial impact clinic sau decizional (ex: alegerea unei clinici pentru tratament). Principiul se aplică pe întreg proiectul — nu doar pe sinteze, ci și pe CONTEXT_MEDICAL.md, TODO.md, JSON-uri structurate, documente pentru medici/familie.
+
+**How to apply:** la orice citire a unui fișier de referință, observi marcaje `[INCERT]` / `[PROBABIL]` și le tratezi ca obligații deschise. Nu propaga info neverificată între documente. La compunere document nou, NU copiezi afirmații `[INCERT]` din alte surse decât să le marchezi explicit „preluat neverificat din X, de verificat".
+
+---
+
 ## Relația cu celelalte regulamente
 
 Regulile de aici **extind** (nu înlocuiesc):
@@ -557,6 +605,7 @@ La conflict direct pentru lucrul în `G:\My Drive\Roly\.Tati`, regulile din aces
 
 ## Changelog
 
+- **2026-04-23 v11:** adăugată Regula 22 (verificare proactivă + eliminare informații neverificate; aplicabilă pe tot proiectul, nu doar sinteze). Trigger: user a constatat în review Obs 2 că rolurile interne ale Dr. Sîrbu „Șef Spitalizare Continuă" și Dr. Oprean „Șef Spitalizare de Zi" erau marcate `[INCERT]` „preluat din sinteza anterioară" — sursă explicit ștearsă ca neverificată. Verificarea suplimentară efectuată (WebSearch + WebFetch pe oncohelp.ro + timpolis.ro + medichub.ro + medical-virtual.ro) a **confirmat ambele roluri** + info nouă (Dr. Oprean membru fondator + studii clinice fază 1 la OncoHelp). Marcajele upgrade-ate la `[CERT]` + surse adăugate. Principiul codificat ca Regula 22 pentru aplicare permanentă în tot proiectul: `[INCERT]` = task de verificare, nu stare de repaus; verificare la audit/review/integrare; decizie explicită confirmat/infirmat/imposibil + log `CHANGELOG.md`.
 - **2026-04-23 v10:** adăugată Regula 21 (curățenie fluidă folder; zero ciorne; o singură sursă de adevăr per subiect). Trigger: user a solicitat explicit protocol de curățenie în timpul integrării sintezei Gemini `SINTEZA_ONCOHELP_TIMISOARA.md`. Principii: orice fișier extra se auditează, se extrag informațiile utile, apoi se șterge (fără arhivare în `arhiva/` pentru ciorne — git păstrează istoric). Excepții clare pentru arhivare rămân: versiuni anterioare ale fișierelor de referință modificate structural, rapoarte DOCX istorice.
 - **2026-04-23 v9:** adăugată Regula 20 (mod de lucru: cercetare → status → AskUserQuestion → confirmare → execuție). Trigger: user a solicitat explicit acest protocol pentru orice sarcină care implică integrare de informații noi în documentație, cerut în timpul auditului sinteza `SINTEZA_ONCOHELP_TIMISOARA.md`. Include protocol în 5 pași + cerință semnalare proactivă nereguli cu sugestii documentate + cerință stop-and-ask în timpul execuției pentru decizii neacoperite în meniul inițial.
 - **2026-04-22 v8:** adăugată Regula 19 (documente informative se salvează în `Documente_Informative/`, nu la rădăcina proiectului). Trigger: user a cerut explicit separarea materialelor operaționale (ghiduri pentru familie/consulturi) de fișierele structurale ale dosarului. Folder `Documente_Informative/` creat simultan + `GHID_CONSULT_ONCOLOG.md` mutat acolo + `GHID_PREZENTARE_CT_FAMILIE.md` șters (la cerere).

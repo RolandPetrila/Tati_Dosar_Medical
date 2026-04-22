@@ -35,6 +35,9 @@ $RECYCLE.BIN/
 .vscode/
 .idea/
 
+# Claude Code output folders (rapoarte temporare skill-uri ca /review --full)
+.claude-outputs/
+
 # Secrete (safety net — niciun fișier .env planificat, dar previne accidente)
 .env
 .env.*

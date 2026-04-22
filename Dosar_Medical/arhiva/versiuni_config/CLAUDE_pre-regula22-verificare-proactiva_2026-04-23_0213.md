@@ -2,8 +2,8 @@
 
 **Acest fișier conține reguli suplimentare pentru orice sesiune deschisă în folderul `G:\My Drive\Roly\.Tati`. Are prioritate față de regulamentul global la conflict direct.**
 
-**Ultima revizuire:** 17 aprilie 2026 (v2).
-**Context proiect:** dosar medical real pentru pacient Petrilă Viorel-Mihai (n. 18.05.1959), suspiciune proces proliferativ esofagian identificat la endoscopie pe 17.04.2026.
+**Ultima revizuire:** 23 aprilie 2026 (v10).
+**Context proiect:** dosar medical real pentru pacient Petrilă Viorel-Mihai (n. 18.05.1959), suspiciune proces proliferativ eso-gastric (Siewert II probabil) identificat la endoscopie pe 17.04.2026, CT de stadializare 20.04.2026 (T3-T4 N0-N1 M0 probabil + ascită de elucidat), biopsie în așteptare.
 
 **Relație cu alte regulamente:**
 
@@ -261,7 +261,7 @@ Pentru fiecare cercetare web care produce conținut introdus în dosar, log în 
 
 4. **Verificări obligatorii înainte de push:**
    - `git status` confirmă că niciun fișier secret (`.env`, `*.key`, credențiale) nu e staged
-   - Repo rămâne **privat** (nu modifici visibility)
+   - Repo este **public** (mutat public intenționat pe 2026-04-18 pentru GitHub Pages) — nu modifica visibility înapoi fără confirmare user
    - Nu faci `--force` push fără confirmare explicită user
    - Nu faci `--amend` pe commit-uri deja push-uite
 
@@ -363,6 +363,186 @@ Pentru orice **document de ieșire** (raport, rezumat, interpretare, traducere p
 
 ---
 
+## Regula 18 — Sincronizare `DASHBOARD.html` la actualizări medicale
+
+**Context:** `DASHBOARD.html` (la rădăcina proiectului) este vizualizarea rapidă a dosarului pentru familie — status pacient, medicație, alergii, analize, calendar CT, acțiuni deschise. Fiind HTML static (fără backend), sincronizarea cu fișierele de referință se face manual de către agentul AI la fiecare sesiune care modifică conținutul medical.
+
+**Distribuție live (GitHub Pages):** dashboardul este publicat la **https://rolandpetrila.github.io/Tati_Dosar_Medical/** — auto-deploy la fiecare `git push` (Regula 16). Familia accesează direct URL-ul sau îl salvează ca Add-to-Home-Screen (PWA). Fișierul `index.html` din rădăcina repo-ului face redirect automat spre `DASHBOARD.html`. Repo public intenționat pentru această funcționalitate (activat 2026-04-18).
+
+**Declanșatori — OBLIGATORIU regenerare la sfârșit de sesiune:**
+
+1. Analiză nouă (laborator, imagistică, biopsie, histopatologie) adăugată în dosar
+2. Medicație modificată — doză nouă, medicament nou, oprire, reluare, schimbare
+3. Alergie nouă documentată sau invalidată
+4. Investigație nouă — programată, efectuată sau cu rezultat primit
+5. Antecedent medical nou adăugat (consult, spitalizare, diagnostic)
+6. Document medical sursă nou procesat în `Dosar_Medical/` (PDF / foto / manuscris)
+7. Modificare status acțiuni **P0** în `TODO.md` (critice pentru pacient)
+8. Schimbare simptomatologie sau status clinic relevant
+9. Modificare `ALIMENTATIE.md` → regenerare **parțială** a dashboardului: actualizează **DOAR** blocul `<script type="text/markdown" id="md-alimentatie">…</script>` + variabila `lastRegen` din JS (tab-ul Alimentație). Nu necesită regenerare integrală — doar sincronizare embed pentru browser-ele care blochează `fetch()` pe `file://`. Timing: la finalul sesiunii, înainte de commit.
+
+**NU declanșează regenerare:**
+
+- Corectare typo în fișiere de referință fără modificare de conținut medical
+- Update la `SESSION_LOG.md` / `CHANGELOG.md` (log-uri de proces)
+- Reorganizare secțiuni, formatare markdown, whitespace
+- Modificări la `TODO.md` pe P1/P2/P3 (non-critic pentru pacient)
+- Update la `.meta.json`-uri (chain-of-custody)
+
+**Timing:** o singură regenerare per sesiune, la final, imediat **ÎNAINTE** de `git add + commit + push` din Regula 16. Dashboardul intră în commit împreună cu modificările care l-au declanșat.
+
+**Ce trebuie să conțină dashboardul (secțiuni obligatorii):**
+
+1. **Header** — nume pacient, vârstă, data ultimei actualizări a dashboardului
+2. **Countdown CT** / următorul eveniment medical major (JavaScript live)
+3. **Status clinic curent** — suspiciune + faza investigațiilor
+4. **Medicație activă** — tabel cu schema zilnică + marcaje STOP temporar / pauză
+5. **Alergii** — verde dacă free, roșu dacă confirmate
+6. **Analize recente** — valori + unități + interval referință + trend + flag normal/anormal
+7. **Timeline antecedente** — cronologic, din 2012 până azi
+8. **Echipă medicală** — specialitate, nume, unitate, contact
+9. **Acțiuni deschise** — P0 (roșu), P1 (galben), P2/P3 (verde)
+10. **Întrebări pregătite pentru consulturi** — grupate pe specialist
+11. **Footer** — sursă date (link la `CONTEXT_MEDICAL.md`), atenționare „nu înlocuiește consultul medical"
+
+**Reguli de conținut (coroborate cu Regulile 11 + 17):**
+
+- Orice cifră din dashboard citează data sursei (data analizei, nu data dashboardului)
+- Afirmațiile medicale factuale din dashboard respectă marcajul de certitudine (Regula 17) — atunci când nu e evident, indicație textuală scurtă
+- Datele volatile (analize > 6 luni) primesc marcaj `[POTENȚIAL STALE]` conform Regulei 11
+- NU se inventează valori lipsă — câmpurile goale se marchează „De completat"
+
+**Reguli tehnice:**
+
+- CSS inline în `<style>`, **fără dependențe externe** (offline-first, funcționează direct din Google Drive)
+- Limbă: română, ton profesional dar accesibil familiei
+- Palette culoare: albastru medical + verde OK + galben atenție + roșu critic
+- Font: system fonts (Segoe UI / -apple-system / sans-serif) — fără web fonts
+- Responsiv pentru desktop + imprimare A4 (`@media print`)
+- Encoding UTF-8, declarat explicit în `<head>`
+
+**La fiecare regenerare:**
+
+1. Citește `CONTEXT_MEDICAL.md` + `TODO.md` + JSON-urile relevante din `Dosar_Medical/`
+2. Suprascrie complet `DASHBOARD.html` (nu patch parțial)
+3. Actualizează câmpul „Ultima generare" din header cu timestamp-ul obținut via `date` (Regula 16.7)
+4. Logează generarea în `CHANGELOG.md` + `SESSION_LOG.md`
+5. Include în commit-ul final al sesiunii
+
+**Why:** familia vrea o vizualizare rapidă fără să navigheze prin 370 de rânduri de markdown. Un dashboard HTML static offline e formatul cel mai accesibil (click în Google Drive → deschide în browser, fără instalare). Fiind manual sincronizat, singura garanție că nu devine obsolet este regula explicită de regenerare la fiecare adăugare relevantă. Fără regulă, dashboardul devine o sursă paralelă de adevăr care diverge de documentație — anti-pattern.
+
+**How to apply:** la finalul oricărei sesiuni cu un declanșator din lista de mai sus, regenerezi integral `DASHBOARD.html` înainte de commit. Excepție: declanșatorul #9 (modificare `ALIMENTATIE.md`) cere doar regenerare parțială a blocului embedded, nu a întregului dashboard. Dacă sesiunea nu are niciun declanșator (doar citire / audit / log-uri), nu regenerezi.
+
+**Tab-uri dashboard:** începând cu v6, dashboardul are 2 tab-uri — `medical` (default, conținutul clinic) și `alimentatie` (ghidul culinar). Tab-ul Alimentație folosește strategie hibridă: încearcă `fetch('ALIMENTATIE.md')` la încărcare (vizualizare live pe browserele care permit) + fallback pe conținutul embedded în `<script type="text/markdown" id="md-alimentatie">` (pentru Chrome/Edge care blochează `fetch()` pe `file://`). Parser Markdown minimal inline, fără dependențe externe.
+
+---
+
+## Regula 19 — Documente informative în `Documente_Informative/` (NU la rădăcină)
+
+**Context:** user a solicitat explicit pe 2026-04-22 să nu se mai salveze documente operaționale/informative (ghiduri, explicații, materiale pentru familie) direct la rădăcina proiectului — acea zonă e rezervată fișierelor structurale (`CLAUDE.md`, `CONTEXT_MEDICAL.md`, `TODO.md`, `CHANGELOG.md`, `DASHBOARD.html`, etc.).
+
+**Locație canonică:** `Documente_Informative/` (rădăcina proiectului, CamelCase consistent cu `Documentatie_Initiala/` și `Dosar_Medical/`).
+
+**Tip conținut destinat:**
+
+- Ghiduri acționabile pentru Roland sau familie (`GHID_*.md`)
+- Explicații simplificate ale unor termeni medicali / protocoale
+- Materiale de pregătire pentru consulturi / intervenții
+- Checklist-uri operaționale care nu sunt parte din structura dosarului medical propriu-zis
+- Orice alt material informativ care NU e:
+  - date structurate medicale (→ `Dosar_Medical/*.json`)
+  - documente sursă digitizate (→ `Dosar_Medical/documente_sursa/`)
+  - rapoarte DOCX generate pentru medici (→ `Dosar_Medical/rapoarte_generate/`)
+  - fișiere de stare proiect (→ rădăcină)
+
+**Format denumire:** `GHID_SUBIECT.md` sau `EXPLICATIE_SUBIECT.md` sau `MATERIAL_SUBIECT_YYYY-MM-DD.md` — UPPERCASE pentru titlul principal, descriptiv pentru scanare rapidă de familie.
+
+**Why:** rădăcina proiectului aglomerată cu documente operaționale face navigarea dificilă și amestecă fișierele de configurare (care nu se ating) cu materialele de lucru zilnice (care se multiplică în timp).
+
+**How to apply:** la orice cerere viitoare de creare ghid / explicație / material pentru familie / medic → destinația e `Documente_Informative/`, NU rădăcina. Fișiere informative existente incorect plasate se pot muta cu ocazie, cu confirmarea user.
+
+---
+
+## Regula 20 — Mod de lucru: cercetare → status → AskUserQuestion → confirmare → execuție
+
+**Context:** user a solicitat explicit pe 2026-04-23 acest mod de lucru ca protocol standard pentru orice sarcină care implică cercetare, audit sau integrare de informații noi în documentația dosarului. Sensibilitatea clinică și legală a dosarului medical nu permite integrarea de informații neverificate sau luarea de decizii unilaterale în numele user-ului.
+
+**Protocolul în 5 pași:**
+
+1. **Cercetare / audit**: execuți verificările necesare (WebSearch, WebFetch, Read, cross-referencing surse primare) și compilezi rezultatele.
+2. **Semnalare proactivă nereguli**: dacă sesizezi erori factuale, omisiuni critice, formulări problematice sau contradicții în sursele existente / de referință (ex: sinteza altui AI, documente anterioare), le menționezi IMEDIAT în raportul de status, cu:
+   - Identificarea problemei (citat exact)
+   - Documentarea (sursă primară care contrazice)
+   - Sugestia concretă de corecție
+   - Marcaj [CERT]/[PROBABIL]/[INCERT]/[NEGASIT] (Regula 17)
+3. **Status raport**: prezinți user-ului un raport structurat cu:
+   - Ce s-a verificat (surse acceptate, surse respinse)
+   - Tablou comparativ / distilat pe criterii relevante
+   - Nereguli semnalate (pasul 2)
+   - Recomandare preliminară (dacă ai)
+   - Puncte nesoluționate care necesită decizie user
+4. **AskUserQuestion (meniu interactiv)**: pentru toate deciziile deschise, folosești tool-ul `AskUserQuestion` cu variante A/B/C/D clar formulate. NU ceri răspuns prin text liber — folosești meniul interactiv.
+5. **Confirmare → execuție**: nu începi nicio modificare scrisă (Write / Edit / move / delete / commit) pe fișiere de referință sau documente generate până user-ul nu răspunde în meniul interactiv. După confirmare, execuți fix ce s-a confirmat, raportezi rezultatul și, dacă apar sub-decizii, repeti ciclul.
+
+**Excepții — nu necesită AskUserQuestion:**
+
+- Comenzi de citire/audit pure (Read, Grep, Glob, WebSearch, WebFetch) — sunt implicite în pasul 1
+- Backup-uri automate cerute de Regula 10 — se fac proactiv înainte de orice edit
+- Fix-uri de erori evidente (typo, path greșit) pe care user le cere explicit cu context complet
+- Log în `SESSION_LOG.md`, `CHANGELOG.md`, `WEB_QUERIES.md`, `MEMORY.md` conform regulilor existente — sunt auxiliare trasabilității
+
+**Stop-and-ask în timpul execuției:**
+
+Dacă după confirmare, în timpul execuției, descoperi o neregulă suplimentară, un conflict cu date existente în dosar, sau o decizie care nu a fost acoperită în meniul inițial → **STOP**, raportezi, deschizi nou `AskUserQuestion`. NU iei decizia singur „ca să nu încetinești".
+
+**Why:** user dorește control total pe fiecare decizie care atinge documentația medicală; lucrul implementat fără confirmare poate produce documentație incorectă, greu de reconstituit în Google Drive (fără istoric fin), și poate influența decizii clinice pe un dosar cu relevanță legală. Modul cu `AskUserQuestion` + variante menține ritmul fără text lung de răspuns și lasă urmă clară în conversație pentru audit ulterior.
+
+**How to apply:** la fiecare rundă majoră de lucru (cercetare, audit, integrare informații noi, rescriere fișier de referință, curățare, restructurare), la finalul etapei de cercetare oprești la decizii deschise și pui întrebări cu variante prin `AskUserQuestion`. Nu presupui preferința user-ului. Nu integrezi informații în documentația dosarului fără validare explicită.
+
+---
+
+## Regula 21 — Curățenie fluidă folder. Zero ciorne.
+
+**Context:** user a solicitat explicit pe 2026-04-23 această regulă în timpul auditului sintezelor produse de alte AI-uri (Gemini). Folderul proiectului trebuie menținut fluid, curat, fără poluare sau aglomerare inutilă. Documentele neverificate / ciornele / rapoartele parțial halucinate creează confuzie directă pe un dosar medical cu relevanță clinică și legală.
+
+**Principii:**
+
+1. **O singură sursă de adevăr per subiect.** Nu păstrăm variante multiple de documente. Fiecare subiect are exact un fișier validat (de referință).
+2. **Zero fișiere-ciornă.** Un fișier în proiect = un document verificat și validat. Ciornele se procesează în conversație, nu pe disc.
+3. **Audit + extracție + ștergere.** Orice document extra întâlnit (produs de alt AI, raport neverificat, încercare intermediară) se auditează → se extrag informațiile utile (dacă există) → se șterge. Nu se arhivează „ca să avem" — git păstrează istoricul oricum.
+4. **Nume descriptiv și corect.** Dacă conținutul unui fișier s-a extins dincolo de scope-ul inițial, fișierul se redenumește (nu se lasă sub un titlu înșelător).
+
+**Protocolul pentru un fișier extra identificat:**
+
+1. Identifică rolul fișierului (ciornă / backup / raport intermediar / document dubios ca sursă)
+2. Audit conținut: ce e verificat, ce e halucinat, ce e util de păstrat
+3. Dacă există informații utile, le integrezi într-un document validat existent sau nou
+4. După integrare confirmată de user, ștergi fișierul sursă (fără arhivare în `arhiva/` — arhivarea unei ciorne ar polua chiar folderul arhivă)
+5. Loghezi în `CHANGELOG.md` și `SESSION_LOG.md` ce s-a șters și de ce
+
+**Excepție pentru arhivare:**
+
+Arhivarea în `Dosar_Medical/arhiva/` rămâne validă și obligatorie (Regula 10) pentru:
+
+- Versiuni anterioare ale fișierelor de referință modificate structural (ex: `CONTEXT_MEDICAL_pre-adaugare-CT_*.md`)
+- Versiuni anterioare ale `CLAUDE.md` modificate major (ex: `CLAUDE_pre-regula21_*.md`)
+- Rapoarte DOCX generate cu valoare istorică
+
+**NU se arhivează:** ciorne de la alte AI-uri, fișiere-schiță, sinteze parțial halucinate, încercări intermediare. Acestea se șterg direct.
+
+**Beneficii așteptate:**
+
+- Folder scanabil rapid, cu nume de fișiere care reflectă exact ce conțin
+- AI-urile care deschid proiectul nu risc să fie confundate de documente conflictuale
+- Git-ul păstrează istoric complet al ștergerilor (nu se pierde informație)
+- User găsește rapid ce caută fără să se întrebe „care e versiunea corectă"
+
+**Why:** un dosar medical se consultă la momente critice (înaintea unui consult, înaintea unei decizii terapeutice). Confuzia cauzată de un fișier învechit sau conflictual poate întârzia sau distorsiona o decizie clinică. Curățenia fluidă e o măsură de siguranță, nu o chestiune estetică.
+
+**How to apply:** la fiecare sesiune, după execuția unei modificări majore, verifici dacă există fișiere colaterale care pot fi curățate. La orice fișier nou propus, te întrebi „există deja un document unde acest conținut poate fi integrat?" înainte de a crea fișier separat.
+
+---
+
 ## Relația cu celelalte regulamente
 
 Regulile de aici **extind** (nu înlocuiesc):
@@ -377,6 +557,12 @@ La conflict direct pentru lucrul în `G:\My Drive\Roly\.Tati`, regulile din aces
 
 ## Changelog
 
+- **2026-04-23 v10:** adăugată Regula 21 (curățenie fluidă folder; zero ciorne; o singură sursă de adevăr per subiect). Trigger: user a solicitat explicit protocol de curățenie în timpul integrării sintezei Gemini `SINTEZA_ONCOHELP_TIMISOARA.md`. Principii: orice fișier extra se auditează, se extrag informațiile utile, apoi se șterge (fără arhivare în `arhiva/` pentru ciorne — git păstrează istoric). Excepții clare pentru arhivare rămân: versiuni anterioare ale fișierelor de referință modificate structural, rapoarte DOCX istorice.
+- **2026-04-23 v9:** adăugată Regula 20 (mod de lucru: cercetare → status → AskUserQuestion → confirmare → execuție). Trigger: user a solicitat explicit acest protocol pentru orice sarcină care implică integrare de informații noi în documentație, cerut în timpul auditului sinteza `SINTEZA_ONCOHELP_TIMISOARA.md`. Include protocol în 5 pași + cerință semnalare proactivă nereguli cu sugestii documentate + cerință stop-and-ask în timpul execuției pentru decizii neacoperite în meniul inițial.
+- **2026-04-22 v8:** adăugată Regula 19 (documente informative se salvează în `Documente_Informative/`, nu la rădăcina proiectului). Trigger: user a cerut explicit separarea materialelor operaționale (ghiduri pentru familie/consulturi) de fișierele structurale ale dosarului. Folder `Documente_Informative/` creat simultan + `GHID_CONSULT_ONCOLOG.md` mutat acolo + `GHID_PREZENTARE_CT_FAMILIE.md` șters (la cerere).
+- **2026-04-18 v7:** actualizată Regula 16.4 (repo public intenționat pentru GitHub Pages); Regula 18 completată cu URL distribuție live + context GitHub Pages; adăugat `index.html` redirect la rădăcina repo-ului. Trigger: user a ales GitHub Pages ca metodă de distribuție live-sync a dashboardului.
+- **2026-04-18 v6:** extinsă Regula 18 — adăugat declanșator #9 (modificare `ALIMENTATIE.md` → regenerare parțială tab Alimentație din dashboard). Clarificată strategia hibridă fetch+embed a tab-urilor. Trigger: user a cerut tab dedicat Alimentație în dashboard cu auto-update la modificarea `ALIMENTATIE.md`.
+- **2026-04-18 v5:** adăugată Regula 18 (sincronizare `DASHBOARD.html` la fiecare actualizare medicală relevantă). Trigger: user a solicitat vizualizare rapidă HTML a dosarului + regulă explicită pentru a preveni divergența dashboard vs. documentație sursă.
 - **2026-04-18 v4:** adăugată Regula 17 (marcaj certitudine [CERT]/[PROBABIL]/[INCERT]/[NEGASIT] pentru informații medicale în documente generate). Trigger: user a cerut un raport despre reacții adverse Jamesi + Triplixam și a solicitat explicit ca informațiile nesigure să fie marcate ca atare; Regula 17 operaționalizează R3 global pentru outputul medical al dosarului.
 - **2026-04-18 v3.1:** clarificări Regula 16 sub-clauza 7 (timestamp narativ): adăugat câmp `_metadata.data_procesare` în lista fișierelor afectate; fix typo „intermediar" → „intermediare"; specificat frecvența rulării `date` (refresh >15 min); tabel format per fișier (SESSION_LOG/CHANGELOG trunchiat la `HH:MM`, JSON ISO 8601 complet). Trigger: audit utilizator care a detectat ambiguitățile și commit-ul 478048f nelogat în SESSION_LOG/CHANGELOG (remediat simultan).
 - **2026-04-18 v3:** adăugată Regula 16 (git auto-commit + push la finalul fiecărei sesiuni, după crearea repo-ului privat `RolandPetrila/Tati_Dosar_Medical`).

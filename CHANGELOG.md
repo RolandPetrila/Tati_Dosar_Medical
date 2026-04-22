@@ -4,6 +4,59 @@
 
 ---
 
+## 2026-04-23 02:16 — Remedieri post-review: verificare roluri interne OncoHelp + curățare backup-uri + Regula 22 nouă + .gitignore
+
+**Tip:** REMEDIERE POST-REVIEW + VERIFICARE PROACTIVĂ + REGULĂ NOUĂ + CURĂȚARE FOLDER.
+
+**Declanșator:** user (Roland Petrilă) a solicitat `/review` pe commit-ul `1d4eb4f`, a primit 3 observații minore (Obs 1/2/3) și a cerut executarea remedierilor. Specific pentru Obs 2 (roluri interne OncoHelp marcate `[INCERT]`), user a cerut verificare suplimentară cu principiul generalizat „confirmi → păstrezi; nu confirmi → ștergi" — aplicabil în tot proiectul. Rezultat codificat ca Regula 22 nouă.
+
+**Verificare suplimentară efectuată (Obs 2):**
+
+Pentru `[INCERT]` Dr. Sîrbu Daniela „Șef Spitalizare Continuă" și `[INCERT]` Dr. Oprean Cristina „Șef Spitalizare de Zi":
+
+- WebFetch × 2 pe pagini individuale medici la `oncohelp.ro/echipa-oncohelp/dr-*-medic-primar-oncolog/` — ambele 404 (pagini individuale nu există separat de pagina echipei)
+- WebSearch × 2 pe nume + rol specific — **CONFIRMARE PE SURSE PRIMARE/REPUTABILE:**
+  - Dr. Sîrbu Daniela: confirmată `Șef Spitalizare Continuă` în Secția Oncologie OncoHelp (sursa: timpolis.ro + roster oncohelp.ro). Info nouă: vice-președinte Asociația OncoHelp + coordonator grup suport Violeta cancer mamar
+  - Dr. Oprean Cristina: confirmată `Șef Spitalizare de Zi` + **dublă specializare farmacologie clinică** (sursa: medical-virtual.ro + oncohelp.ro + medichub.ro). Info nouă: membru fondator Asociația OncoHelp (unul din 3), 17 ani practică oncologie + ~20 ani studii clinice fază II-III-IV, co-autor 3 cărți oncologie + 20 articole internaționale
+
+- Rezultat decizie: **AMBELE ROLURI PĂSTRATE** + upgrade marcaj `[INCERT]` → `[CERT]` + adăugate surse. Informațiile noi integrate în sinteză.
+- Descoperire colaterală importantă: **OncoHelp Timișoara este primul centru din Timișoara unde pacienții pot participa la studii clinice de fază 1** (sursa: medichub.ro, renasterea.ro). Relevant pentru cazul pacientului ca opțiune de rezervă dacă FLOT nu funcționează.
+
+**Fișiere modificate:**
+
+- `Dosar_Medical/cercetari/SINTEZA_CLINICI_ONCOLOGIE.md` — §4.5 update marcaj Dr. Sîrbu + Dr. Oprean la `[CERT]` + info nouă + §11.1 surse adăugate (5 URL-uri noi: oncohelp.ro profil Oprean, timpolis.ro, medical-virtual.ro, medichub.ro, renasterea.ro) + §12.1 scoase 2 puncte rezolvate din „ce NU am verificat"
+- `.gitignore` — adăugat `.claude-outputs/` (pentru skill-uri care creează rapoarte temporare ca `/review --full`)
+- `CLAUDE.md` — adăugată **Regula 22** (verificare proactivă + eliminare info neverificate, aplicabilă în tot proiectul; principiu codificat + surse acceptabile/respinse + protocol concret `[INCERT]` → `[CERT]`/șters/`[NEGASIT]`); changelog extins la v11; header actualizat la v11. Backup pre-modificare: `Dosar_Medical/arhiva/versiuni_config/CLAUDE_pre-regula22-verificare-proactiva_2026-04-23_0213.md`
+- `CHANGELOG.md` — această intrare
+- `SESSION_LOG.md` — intrare nouă Regula 9
+- `WEB_QUERIES.md` — log cele 4 queries de verificare (2 WebFetch + 2 WebSearch)
+
+**Fișiere șterse (curățare backup-uri vechi — Obs 3):**
+
+Politică aplicată: păstrez ultimele 3 backup-uri CLAUDE.md; cele mai vechi șterse (git păstrează istoric complet). Backup-urile CHANGELOG + SESSION_LOG singulare păstrate.
+
+- `Dosar_Medical/arhiva/versiuni_config/CLAUDE_pre-clarificare-subclauza7_2026-04-18_0310.md` — șters (vechi)
+- `Dosar_Medical/arhiva/versiuni_config/CLAUDE_pre-regula17_2026-04-18_0328.md` — șters (vechi)
+- `Dosar_Medical/arhiva/versiuni_config/CLAUDE_pre-regula-18-dashboard_2026-04-18_1401.md` — șters (vechi)
+
+Backup-uri CLAUDE.md păstrate după curățare (3 cele mai recente):
+
+- `CLAUDE_pre-github-pages_2026-04-18_2104.md`
+- `CLAUDE_pre-regula20-askuserq_2026-04-23_1900.md`
+- `CLAUDE_pre-regula22-verificare-proactiva_2026-04-23_0213.md`
+
+**Conformitate reguli:**
+
+- Regula 3 global + Regula 17: marcaje upgrade la `[CERT]` cu surse pentru afirmațiile verificate
+- Regula 10 + Regula 21 excepție arhivare: backup efectuat pentru CLAUDE.md înainte de Regula 22
+- Regula 15: log complet 4 queries verificare
+- Regula 16 auto-commit + push
+- Regula 16.7 timestamp verificat via `date` (02:13)
+- Regula 20: user a dat autorizare explicită — fără AskUserQuestion suplimentar necesar; decizia de „3 backup-uri" e judecată profesională (Regula 7)
+- Regula 22 (nou): aplicată retroactiv pe Dr. Sîrbu + Dr. Oprean (primele 2 `[INCERT]` rezolvate conform protocolului noii reguli)
+
+---
+
 ## 2026-04-23 01:45 — Audit + validare surse + rescriere sinteză clinici oncologie + 2 reguli noi în regulament
 
 **Tip:** AUDIT CERCETARE + INTEGRARE VALIDATĂ + REGULI DE PROCES + CURĂȚARE CIORNĂ.

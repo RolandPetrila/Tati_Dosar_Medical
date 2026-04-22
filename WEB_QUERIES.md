@@ -26,6 +26,37 @@
 
 ## Intrări
 
+## 2026-04-23 02:05-02:13 — verificare-roluri-interne-OncoHelp-Dr-Sirbu-Dr-Oprean
+
+- **Scop:** verificare independentă pe surse primare/reputabile a rolurilor interne la OncoHelp Timișoara pentru Dr. Sîrbu Daniela (Șef Spitalizare Continuă) și Dr. Oprean Cristina (Șef Spitalizare de Zi) — afirmații marcate `[INCERT]` în `SINTEZA_CLINICI_ONCOLOGIE.md` §4.5 preluate neverificate din sinteza anterioară Gemini (ștearsă). Aplicare Regula 22 nouă (verificare proactivă + decizie explicită păstrez/șterg).
+- **Instrumente folosite:** WebFetch × 2, WebSearch × 2.
+- **Queries exacte:**
+  1. WebFetch `https://oncohelp.ro/echipa-oncohelp/dr-sirbu-daniela-medic-primar-oncolog/` — pagină individuală Dr. Sîrbu (404)
+  2. WebFetch `https://oncohelp.ro/echipa-oncohelp/dr-oprean-cristina-medic-primar-oncolog/` — pagină individuală Dr. Oprean (404)
+  3. WebSearch `""Daniela Sirbu" OR "Sirbu Daniela" OncoHelp Timisoara "sef sectie" OR "spitalizare continua" coordonator"` — rezultat pozitiv
+  4. WebSearch `""Cristina Oprean" OR "Oprean Cristina" OncoHelp Timisoara "farmacologie clinica" OR "spitalizare de zi" sef"` — rezultat pozitiv
+- **Surse acceptate (primare/reputabile):**
+  - https://timpolis.ro/la-oncohelp-timisoara-functioneaza-cea-mai-mare-sectie-de-paliatie-dintr-un-spital-din-vestul-tarii/ — confirmă Dr. Sîrbu Șef Spitalizare Continuă în Secția Oncologie OncoHelp
+  - https://oncohelp.ro/echipa-oncohelp/ — roster oficial cu ambii medici listați
+  - https://oncohelp.ro/echipa-oncohelp/dr-cristina-oprean-medic-primar-oncolog-1/ — pagină oficială Dr. Oprean (nume URL diferit de încercarea inițială)
+  - https://medical-virtual.ro/speaker/dr-cristina-oprean/ — profil profesional Dr. Oprean (dublă specializare farmacologie clinică + detalii carieră)
+  - https://www.medichub.ro/stiri/premiera-la-timisoara-pacientii-cu-cancer-pot-participa-la-studii-clinice-de-faza-1-in-cadrul-centrului-oncohelp-id-9227-cmsid-2 — confirmare OncoHelp primul centru Timișoara cu studii fază 1 (descoperire colaterală)
+  - https://renasterea.ro/premiera-intr-un-spital-din-timisoara/ — confirmare secundară studii fază 1 OncoHelp
+  - https://oncohelp.ro/asociatia-oncohelp/membri/ — confirmă Dr. Sîrbu vice-președinte Asociație + Dr. Oprean membru fondator
+- **Surse respinse:**
+  - Forumuri și recenzii pacienți (doctorbun.ro, ghidulmedical.com) — non-primare, doar orientativ
+  - Wikipedia — necăutat (regulă Regula 22)
+- **Concluzie integrată în:** `Dosar_Medical/cercetari/SINTEZA_CLINICI_ONCOLOGIE.md` §4.5 (upgrade marcaje `[INCERT]` → `[CERT]` + info nouă) + §11.1 (surse noi) + §12.1 (scoase puncte rezolvate)
+- **Marcaje certitudine folosite:** `[CERT]` cu surse primare + secundare reputabile
+- **Data verificării surselor:** 23.04.2026 02:05-02:13
+- **Încredere concluzie:** high (rol Dr. Sîrbu confirmat pe timpolis.ro + roster oficial; rol Dr. Oprean confirmat pe medical-virtual.ro + medichub.ro + pagină profil oncohelp.ro)
+- **Observații:**
+  - Încercarea inițială de a accesa pagini individuale la `oncohelp.ro/echipa-oncohelp/dr-*-medic-primar-oncolog/` a dat 404 pentru ambele — URL-urile efective pe site nu respectă acest pattern. Dr. Oprean are URL propriu (`dr-cristina-oprean-medic-primar-oncolog-1/`), Dr. Sîrbu nu pare să aibă pagină individuală pe site
+  - Descoperire colaterală importantă: OncoHelp primul centru din Timișoara cu studii clinice fază 1. Relevant pentru pacient ca opțiune de rezervă pentru cancer eso-gastric dacă FLOT nu funcționează sau dacă există trial aplicabil
+  - Principiul Regula 22 aplicat: 2 afirmații `[INCERT]` → ambele confirmate → upgrade la `[CERT]` + surse. Dacă nu s-ar fi confirmat, ambele ar fi fost șterse
+
+---
+
 ## 2026-04-23 01:10-01:40 — audit-clinici-oncologie-multi-regiune
 
 - **Scop:** audit + reverificare din surse primare oficiale a clinicilor oncologice pentru tratamentul pacientului Petrilă Viorel-Mihai (suspiciune adenocarcinom eso-gastric Siewert II). Rezultat integrat în `Dosar_Medical/cercetari/SINTEZA_CLINICI_ONCOLOGIE.md`.

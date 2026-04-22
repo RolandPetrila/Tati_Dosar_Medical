@@ -6,6 +6,38 @@
 
 ---
 
+## 2026-04-23 02:16 — [Claude_Opus_4.7] remedieri-post-review + verificare-roluri-OncoHelp-confirmate + Regula-22-adaugata + curatare-backup-uri
+
+**Scop:** user (Roland) a cerut executarea remedierilor din review-ul commit-ului `1d4eb4f`: (1) adăugare `.claude-outputs/` în `.gitignore`; (2) verificare suplimentară roluri interne OncoHelp marcate `[INCERT]` cu decizie explicită păstrez/șterg bazat pe rezultat verificării; (3) curățare backup-uri CLAUDE.md vechi cu politică retenție „ultimele 3". User a extins (2) la principiu general aplicabil în tot proiectul — codificat ca Regula 22.
+
+**Operații pe `.Tati`:**
+
+- **Verificare suplimentară** (WebFetch × 2 + WebSearch × 2): confirmare roluri Dr. Sîrbu Daniela (Șef Spitalizare Continuă) + Dr. Oprean Cristina (Șef Spitalizare de Zi) pe surse primare/reputabile (timpolis.ro, oncohelp.ro profil Oprean, medical-virtual.ro, medichub.ro, renasterea.ro). **Ambele confirmate.** Info nouă relevantă: OncoHelp primul centru Timișoara cu studii clinice fază 1 + Dr. Oprean cu dublă specializare farmacologie clinică + membru fondator Asociație.
+- `Dosar_Medical/cercetari/SINTEZA_CLINICI_ONCOLOGIE.md` — MODIFICAT: §4.5 upgrade marcaje `[INCERT]` → `[CERT]` pentru Dr. Sîrbu + Dr. Oprean + info nouă integrată; §11.1 adăugate 5 URL-uri surse noi; §12.1 scoase 2 puncte rezolvate
+- `.gitignore` — MODIFICAT: adăugat `.claude-outputs/`
+- `CLAUDE.md` — MODIFICAT: adăugată Regula 22 (verificare proactivă + eliminare info neverificate, aplicabilă pe tot proiectul); changelog extins la v11; header actualizat la v11. Backup pre-modificare: `Dosar_Medical/arhiva/versiuni_config/CLAUDE_pre-regula22-verificare-proactiva_2026-04-23_0213.md`
+- Backup-uri vechi ȘTERSE (3 fișiere, păstrez ultimele 3):
+  - `Dosar_Medical/arhiva/versiuni_config/CLAUDE_pre-clarificare-subclauza7_2026-04-18_0310.md`
+  - `Dosar_Medical/arhiva/versiuni_config/CLAUDE_pre-regula17_2026-04-18_0328.md`
+  - `Dosar_Medical/arhiva/versiuni_config/CLAUDE_pre-regula-18-dashboard_2026-04-18_1401.md`
+- `CHANGELOG.md` — intrare nouă detaliată
+- `SESSION_LOG.md` — această intrare
+- `WEB_QUERIES.md` — log cele 4 queries de verificare (2 WebFetch + 2 WebSearch)
+
+**Conformitate reguli:**
+
+- Regula 3 + Regula 17: marcaje upgrade la `[CERT]` cu surse citate pentru afirmațiile verificate
+- Regula 10: backup `CLAUDE.md` pre-modificare Regula 22
+- Regula 15: log complet web queries
+- Regula 16 + 16.7: timestamp verificat via `date` (02:13)
+- Regula 20: user a autorizat execuția explicit în mesaj; decizia retenție „3 backup-uri" = judecată profesională procedurală (Regula 7)
+- Regula 21: ștergerea backup-urilor vechi respectă principiul folder curat (git păstrează istoric)
+- Regula 22 (nouă): aplicată retroactiv pe Dr. Sîrbu + Dr. Oprean (primele 2 `[INCERT]` rezolvate prin protocolul noii reguli)
+
+**Rezultat net:** 2 roluri verificate + confirmate + documentate cu surse, 1 descoperire colaterală valoroasă (studii clinice fază 1 la OncoHelp), 1 regulă generală nouă adăugată în regulament, 3 backup-uri vechi curățate, `.gitignore` completat.
+
+---
+
 ## 2026-04-23 01:45 — [Claude_Opus_4.7] audit-sinteza-gemini-inlocuire-cu-SINTEZA_CLINICI_ONCOLOGIE-validata + reguli-20-21-adaugate
 
 **Scop:** user (Roland) a cerut audit + reverificare completă din surse primare a sintezei `SINTEZA_ONCOHELP_TIMISOARA.md` (produsă anterior de Gemini cu surse neverificate), extindere scope la 5 clinici alternative (OncoHelp TM + IOCN CJ + Medicover CJ + Medisprof CJ + MedEuropa OR), integrare într-un document unic validat, ștergere ciornă Gemini, și codificare în regulament a modului de lucru (AskUserQuestion + confirmare) + a politicii de curățenie fluidă (zero ciorne).
