@@ -6,6 +6,27 @@
 
 ---
 
+## 2026-04-22 18:09 — [Claude_Opus_4.7] document-explicativ-scenarii-ascita-biopsie-pentru-familie
+
+**Scop:** user (Roland) a cerut document explicativ extins care să răspundă la 4 întrebări specifice despre consultul oncolog URGENT + să dezvolte cele 4 scenarii combinatorii rezultat biopsie × rezultat ascită, în același stil narativ (poveste casă/arhitect) ca răspunsul anterior în chat.
+
+**Operații pe `.Tati`:**
+
+- `Documente_Informative/EXPLICATIE_CONSULT_ONCOLOG_SCENARII.md` — CREAT (document ~5500 cuvinte: povestea casei + răspunsuri 4 întrebări + 4 scenarii cu plan tratament + tabel sumarizat + checklist Roland + mesaj 30 secunde)
+- `TODO.md` — MODIFICAT (antet 18:09 + intrare finalizări nouă)
+- `CHANGELOG.md` — intrare nouă 2026-04-22 18:09
+- `SESSION_LOG.md` — această intrare
+
+**Conformitate reguli:**
+
+- Regula 16 aplicată: commit + push la final
+- Regula 17 aplicată: marcaje certitudine peste tot (probabilități scenarii marcate [PROBABIL])
+- Regula 19 aplicată (a doua oară după activare): fișier creat în `Documente_Informative/`, NU la rădăcină
+
+**Făcut de:** Claude Code (Opus 4.7, 1M context).
+
+---
+
 ## 2026-04-22 17:41 — [Claude_Opus_4.7] restructurare-organizare-folder-documente-informative-plus-regula-19
 
 **Scop:** user (Roland) a cerut:

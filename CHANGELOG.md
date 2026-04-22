@@ -4,6 +4,52 @@
 
 ---
 
+## 2026-04-22 18:09 — Document explicativ extins: EXPLICATIE_CONSULT_ONCOLOG_SCENARII.md (4 scenarii biopsie+ascită)
+
+**Tip:** DOCUMENT INFORMATIV NOU (non-structural, non-medical — material explicativ pentru familie).
+
+**Declanșator:** user (Roland Petrilă) a cerut un document extins care să explice:
+
+1. De ce mergem la oncolog ACUM, înainte de biopsie
+2. Dacă ascita poate fi „cancerigenă" indiferent de origine
+3. Ce poate oncologul stabili fără analize suplimentare
+4. Dacă e obligatoriu oncologului să facă analize noi
+5. **4 scenarii combinatorii** între rezultatul biopsiei (malign/benign) × rezultatul ascitei (malign/benign) cu plan de tratament pentru fiecare
+
+**Fișier creat:**
+
+- `Documente_Informative/EXPLICATIE_CONSULT_ONCOLOG_SCENARII.md` — document explicativ ~5500 cuvinte, structurat în 6 secțiuni:
+  1. **Povestea casei** (reluare narativă extinsă din răspunsul anterior — analogia casei + meșterul + drona + subsolul cu apă)
+  2. **Răspunsuri directe la 4 întrebări Roland** — cu tabel probabilități surse posibile carcinomatoză peritoneală
+  3. **4 scenarii combinatorii detaliate** — Scenariu A (malign+benign = stadiu III FLOT curativ ~60-70%), B (malign+malign = stadiu IV chimio+imunoterapie paliativ ~15-25%), C (benign+benign = non-oncologic ~5-10%), D (benign+malign = rebiopsie obligatoriu + căutare tumoră primară ~1-3%). Fiecare cu diagrame de plan tratament în blocuri ASCII
+  4. **Tabel sumarizat** — 4 scenarii cu probabilitate + strategie + obiectiv
+  5. **Checklist acțiune concret pentru Roland** — acum, la primul consult, după investigații complete
+  6. **Mesajul principal** în 30 secunde + surse + transparență despre ce NU am inclus
+
+**Surse citate în document:**
+
+- Raport CT 20.04.2026 (JSON + PDF)
+- Studiul FLOT4 (Al-Batran et al., Lancet 2019) — bazele protocolului preferat
+- Studii imunoterapie Keynote-590 (pembrolizumab + chemo), Keynote-811 (pembrolizumab + trastuzumab + chemo), SPOTLIGHT (zolbetuximab pentru claudin-18.2+)
+- Ghidul DOCX cancer esofagian 19.04.2026 (referențiat pentru statistici supraviețuire)
+
+**Fișiere modificate:**
+
+- `TODO.md` — antet + intrare finalizări nouă
+- `CHANGELOG.md` — această intrare
+- `SESSION_LOG.md` — intrare nouă
+
+**Conformitate reguli:**
+
+- Regula 16 aplicată: commit + push la final
+- Regula 17 aplicată: marcaje [CERT]/[PROBABIL]/[INCERT]/[NEGASIT] pe toate afirmațiile medicale; probabilitățile celor 4 scenarii explicit marcate [PROBABIL] cu justificare; ce NU se poate preciza fără datele complete marcat [NEGASIT]
+- Regula 18 NU aplicabilă: documentul nu modifică date medicale, e document informativ
+- Regula 19 aplicată: documentul salvat direct în `Documente_Informative/`, NU la rădăcină
+
+**Făcut de:** Claude Code (Opus 4.7, 1M context).
+
+---
+
 ## 2026-04-22 17:41 — Restructurare organizare: folder `Documente_Informative/` creat + ghiduri mutate/curățate + Regula 19
 
 **Tip:** RESTRUCTURARE ORGANIZARE PROIECT (non-medical; structural).

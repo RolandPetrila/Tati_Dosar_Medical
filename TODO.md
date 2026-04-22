@@ -2,7 +2,7 @@
 
 **Fișier de evidență a tuturor acțiunilor de făcut. Se actualizează continuu — la adăugarea și completarea fiecărei acțiuni.**
 
-**Ultima actualizare:** 22 aprilie 2026 17:41 (folder `Documente_Informative/` creat + ghid consult oncolog mutat acolo + GHID_PREZENTARE_CT_FAMILIE.md șters la cerere).
+**Ultima actualizare:** 22 aprilie 2026 18:09 (creat `Documente_Informative/EXPLICATIE_CONSULT_ONCOLOG_SCENARII.md` cu povestea casei + răspunsuri întrebări + 4 scenarii combinatorii ascită vs biopsie).
 
 ---
 
@@ -277,6 +277,7 @@ Pentru evaluare mai precisă a expunerii (calculul „pachete-an”).
 
 ## Acțiuni finalizate (arhivă recentă)
 
+- ✅ **22.04.2026 18:09**: Creat `Documente_Informative/EXPLICATIE_CONSULT_ONCOLOG_SCENARII.md` — document explicativ extins (poveste casă/arhitect + răspunsuri la 4 întrebări Roland: trebuie merge la oncolog acum, apa poate fi cancerigenă indiferent de origine, ce poate oncolog fără analize, e obligatoriu analize suplimentare) + **4 scenarii combinatorii** biopsie/ascită cu plan tratament detaliat pentru fiecare (Scenariu A: malign + benignă = stadiu III FLOT curativ ~60-70% prob.; B: malign + malign = stadiu IV chimio + imunoterapie paliativ ~15-25%; C: benignă + benignă = non-oncologic ~5-10%; D: benignă + malign = rebiopsie + căutare tumoră primară ~1-3%). Surse: studii FLOT4, Keynote-590/811, SPOTLIGHT. Marcaje certitudine R17 aplicate.
 - ✅ **22.04.2026 17:41**: Restructurare organizare proiect — creat folder `Documente_Informative/` pentru documente informative/ghiduri, mutat `GHID_CONSULT_ONCOLOG.md` în acesta (locație nouă: `Documente_Informative/GHID_CONSULT_ONCOLOG.md`), șters `GHID_PREZENTARE_CT_FAMILIE.md` (la cererea user). Adăugată Regula 19 în `CLAUDE.md` (v8): documente informative NU la rădăcina proiectului, ci în folderul dedicat. `STRUCTURA_PROIECT.md` + `DASHBOARD.html` actualizate cu noua locație.
 - ✅ **22.04.2026 17:00**: Jamesi reluat seara conform schemei standard (1-0-1, 50/1000 mg), fără complicații post-CT — pauza H-48h → H+48h respectată corect, creatinină pre-CT normală (0.83 mg/dL).
 - ✅ **22.04.2026 17:00**: Creat `GHID_PREZENTARE_CT_FAMILIE.md` — document operațional pentru Roland cu structură detaliată de prezentare rezultat CT familiei (4 blocuri, scripturi sugerate, Q&A, materiale printat, semnale escaladare).
