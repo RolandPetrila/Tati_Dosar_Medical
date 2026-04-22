@@ -4,6 +4,34 @@
 
 ---
 
+## 2026-04-23 02:30 — Document operațional: Ghid apel OncoHelp pentru programare urgentă
+
+**Tip:** DOCUMENT INFORMATIV OPERAȚIONAL (material pentru Roland — efectuarea apelului telefonic).
+
+**Declanșator:** user (Roland Petrilă) a cerut document cu: (1) toate datele de contact OncoHelp Timișoara; (2) text / scenariu de apel telefonic pentru programare urgentă a tatălui. Confirmare prin `AskUserQuestion` (Regula 20): regim privat inițial → CNAS pentru tratament; medic oricare din top 3 (Prof. Negru / Conf. Popovici / Dr. Sîrbu); conținut concentrat pe elementele clinice vitale + Q&A anticipate pentru operator (user note explicită).
+
+**Fișier creat:**
+
+- `Documente_Informative/GHID_APEL_ONCOHELP.md` — 7 secțiuni:
+  1. Date de contact complete (adresă + 4 telefoane + 2 emailuri + orar + ore optime apel)
+  2. Pregătire rapidă pre-apel (5 elemente la îndemână)
+  3. Scenariu apel detaliat (deschidere + argumentare urgență + medic preferat + confirmare + întrebări user la operator)
+  4. Q&A anticipate pe elementele clinice vitale (simptome, imagistică, biopsie, investigații, medicație cronică, alergii, antecedente chirurgicale, domiciliu, comunicare cu pacient)
+  5. Pași post-apel (imediat + până la consult + ziua consultului)
+  6. Strategie escaladare dacă operatorul spune „nu avem loc" (frază cheie + listă de așteptare la anulare)
+  7. Protecție intimitate (date pe care NU le divulgi decât la cerere explicită)
+
+**Justificare plasare:** conform Regula 19, documentele informative operaționale pentru familie se plasează în `Documente_Informative/`.
+
+**Conformitate reguli:**
+
+- Regula 17: disclaimer „NU înlocuiește consultul medical" inclus + date factuale marcate implicit `[CERT]` (toate confirmate în sinteza validată anterior)
+- Regula 19: plasat în `Documente_Informative/` (nu rădăcină)
+- Regula 20: `AskUserQuestion` cu 3 întrebări înainte de execuție — confirmare explicită obținută
+- Regula 22: toate datele factuale sunt validate în `SINTEZA_CLINICI_ONCOLOGIE.md` (sesiune 02:16 anterioară) — zero afirmații neverificate
+
+---
+
 ## 2026-04-23 02:16 — Remedieri post-review: verificare roluri interne OncoHelp + curățare backup-uri + Regula 22 nouă + .gitignore
 
 **Tip:** REMEDIERE POST-REVIEW + VERIFICARE PROACTIVĂ + REGULĂ NOUĂ + CURĂȚARE FOLDER.

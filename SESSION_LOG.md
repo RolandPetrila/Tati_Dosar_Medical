@@ -6,6 +6,24 @@
 
 ---
 
+## 2026-04-23 02:30 — [Claude_Opus_4.7] ghid-apel-oncohelp-programare-urgenta-pentru-Roland
+
+**Scop:** user (Roland) a cerut generare document operațional pentru efectuarea apelului telefonic la OncoHelp Timișoara în vederea programării urgente a tatălui. Conținut: date de contact complete + scenariu de apel + Q&A anticipate pe elementele clinice vitale.
+
+**Operații pe `.Tati`:**
+
+- `Documente_Informative/GHID_APEL_ONCOHELP.md` — CREAT (~200 linii, 7 secțiuni): contact OncoHelp (adresă + 4 telefoane + 2 emailuri), pregătire pre-apel (5 elemente), scenariu apel (deschidere + argumentare + medic + confirmare + întrebări tale), Q&A anticipate pe elementele clinice vitale (simptome + imagistică + biopsie + medicație + alergii + antecedente + comunicare pacient), pași post-apel, strategie escaladare „nu avem loc", protecție intimitate
+- `CHANGELOG.md` — intrare nouă 02:30 detaliată
+- `SESSION_LOG.md` — această intrare
+
+**Conformitate reguli:**
+
+- Regula 17 + 19 + 20 + 22 aplicate integral
+- Regula 20: confirmare user prin `AskUserQuestion` cu 3 întrebări (regim plată, medic preferat, conținut suplimentar) + notes explicite de user „doar elementele vitale"
+- Regula 16: va urma commit + push
+
+---
+
 ## 2026-04-23 02:16 — [Claude_Opus_4.7] remedieri-post-review + verificare-roluri-OncoHelp-confirmate + Regula-22-adaugata + curatare-backup-uri
 
 **Scop:** user (Roland) a cerut executarea remedierilor din review-ul commit-ului `1d4eb4f`: (1) adăugare `.claude-outputs/` în `.gitignore`; (2) verificare suplimentară roluri interne OncoHelp marcate `[INCERT]` cu decizie explicită păstrez/șterg bazat pe rezultat verificării; (3) curățare backup-uri CLAUDE.md vechi cu politică retenție „ultimele 3". User a extins (2) la principiu general aplicabil în tot proiectul — codificat ca Regula 22.
