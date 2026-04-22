@@ -4,6 +4,49 @@
 
 ---
 
+## 2026-04-22 17:00 — Ghiduri operaționale familie + consult oncolog + Jamesi reluat + cleanup duplicat imagine
+
+**Tip:** DOCUMENTE OPERAȚIONALE NOI + ACTUALIZARE STATUS MEDICAȚIE (non-structural medical).
+
+**Declanșatori:** user (Roland Petrilă) a cerut:
+
+1. Verificare + ștergere `Gastroscopic.jpeg` (preluat în rădăcină) — confirmat duplicat al PDF-ului endoscopic deja în `Dosar_Medical/documente_sursa/09_endoscopie_2026_04/2026-04-17_buletin_endoscopie_colonoscopie.pdf` → șters
+2. Detalierea operațională a acțiunilor P0 „Analiză și prezentare rezultat CT familiei" + „Consult oncolog digestiv URGENT" → 2 ghiduri dedicate create la rădăcina proiectului
+3. Status Jamesi: user a confirmat că diseara 22.04 se reia conform schemei, CT a decurs fără complicații → actualizare status din „AZI în curs" în „✅ finalizat fără complicații" pe toate fișierele relevante
+
+**Fișiere NOI create:**
+
+- `GHID_PREZENTARE_CT_FAMILIE.md` — document operațional pentru Roland cu structura detaliată de prezentare a rezultatului CT familiei (aproximativ 10 secțiuni principale): cadrul discuției (cine/când/unde/pregătire mentală), mesajul de ancoră, structura 4 blocuri ~30-45 min (ce s-a făcut și de ce → vești BUNE → vești CE NECESITĂ ATENȚIE → ce urmează), Q&A pentru 7 întrebări tipice (incl. „câte șanse sunt", „pot muri"), materiale de printat, post-discuție 24-48h, semnale discuție bună/rău, ce NU face. Marcaje certitudine conform Regulei 17. Scope: uz intern familie, nu document medical pentru medic.
+- `GHID_CONSULT_ONCOLOG.md` — checklist acțiune concret pentru programare consult oncolog URGENT (10 secțiuni + rezumat top 5): de ce URGENT (context CT + ascită + alternative ascită), pas 1 recomandare Dr. Noufal, pas 2 centre oncologice (Arad, Timișoara OncoHelp + SCJU/IOCN, Cluj IOCN Chiricuță, București Fundeni/SanaDor/Medicover, S2 internațional), pas 3 programare concretă (când suni, script telefonic, ce întrebi înainte), pas 4 pregătire dosar fizic (pachet A obligatoriu + B util + C sintetic), pas 5 întrebări pregătite (22 întrebări în 5 pachete), costuri estimative cu drepturi pacient, timeline realist, checklist 3-zile + ziua consultului + post-consult, escaladare dacă lucrurile merg prost.
+
+**Fișiere modificate:**
+
+- `TODO.md` — antet actualizat la 17:00; Calendar: reluare Jamesi 22.04 marcată ✅ Finalizat; P0 „Reluare Jamesi" rescrisă ca ✅ COMPLET (Jamesi reluat seara 22.04 fără complicații); Acțiuni finalizate: 3 intrări noi pentru sesiunea 17:00 (reluare Jamesi + 2 ghiduri create)
+- `CONTEXT_MEDICAL.md` v1.2 → v1.2.1 — antet actualizat; secțiunea 2 (Acțiuni în curs): „🟡 Reluare Jamesi AZI" → „✅ Jamesi reluat 22.04 seara fără complicații"; secțiunea 8.2 rescrisă ca FINALIZAT cu detalii; secțiunea 12 (Rezumat 3 linii) actualizată cu Jamesi reluat (înlocuind „reluare AZI")
+- `DASHBOARD.html` — actualizări țintite (NU regenerare integrală, e micro-update status): header „Ultima generare" → 22.04.2026 17:00; tabel medicație — status Jamesi „RELUAT AZI" → „ACTIV (reluat 22.04 seara, fără complicații)"; Calendar evenimente — reluare Jamesi „În curs AZI" → „✓ Efectuat"; Acțiuni P0 — eliminat Jamesi din lista critică (finalizat), adăugate referințe la cele 2 ghiduri operaționale noi
+
+**Fișiere șterse:**
+
+- `Gastroscopic.jpeg` (rădăcină) — verificat ca duplicat neformalizat al buletinului endoscopic din `Dosar_Medical/documente_sursa/09_endoscopie_2026_04/2026-04-17_buletin_endoscopie_colonoscopie.pdf` (conținut text identic: „La 2/3 inferioara esofagului prezinta proces proliferativ circumferential ne depasibila endoscopica(Bio)" — confirmă interpretarea „NE-depășibilă" cu spațiu clar între „ne" și „depasibila") + extras structurat în `Dosar_Medical/2026-04-17_buletin_gastroenterologie.json`
+
+**Backup-uri create (Regula 10):**
+
+- `Dosar_Medical/arhiva/TODO_pre-status-jamesi-reluat_2026-04-22_1658.md`
+- `Dosar_Medical/arhiva/context_medical_versiuni/CONTEXT_MEDICAL_pre-status-jamesi-reluat_2026-04-22_1658.md`
+
+**Conformitate reguli:**
+
+- Regula 6 aplicată: listare fișiere modificate la finalul acestui commit (vezi SESSION_LOG + raport final)
+- Regula 10 aplicată: 2 backup-uri pre-modificare create
+- Regula 16 aplicată: commit + push la finalul sesiunii
+- Regula 16.7 aplicată: `date` rulat pentru timestamp fresh (17:00 EEST)
+- Regula 17 aplicată: ambele ghiduri au marcaje certitudine [CERT]/[PROBABIL]/[INCERT]/[NEGASIT] pe afirmațiile factuale medicale
+- Regula 18 aplicată: DASHBOARD.html actualizat cu micro-edit pentru status medicație (declanșator activ: status Jamesi modificat)
+
+**Făcut de:** Claude Code (Opus 4.7, 1M context).
+
+---
+
 ## 2026-04-22 16:00 — Rezultat CT 20.04.2026 integrat + clarificare leziune esofag „circumferențial nedepășibil endoscopic"
 
 **Tip:** ACTUALIZARE MEDICALĂ MAJORĂ (rezultat investigație cheie + clarificare interpretare document sursă).

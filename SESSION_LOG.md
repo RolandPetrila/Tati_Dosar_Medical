@@ -6,6 +6,43 @@
 
 ---
 
+## 2026-04-22 17:00 — [Claude_Opus_4.7] ghiduri-operationale-familie-oncolog-plus-jamesi-reluat-plus-cleanup-gastroscopic
+
+**Scop:** user (Roland) a cerut:
+
+1. Verificare + ștergere `Gastroscopic.jpeg` dacă e deja în documentație (era duplicat al PDF-ului endoscopic) → confirmat + șters
+2. Detalierea operațională a acțiunilor P0 „Analiză și prezentare rezultat CT familiei" + „Consult oncolog digestiv URGENT" → 2 ghiduri dedicate create
+3. Status Jamesi actualizat — reluat seara 22.04 fără complicații
+4. Actualizare documentație + commit + push
+
+**Operații pe `.Tati`:**
+
+- `GHID_PREZENTARE_CT_FAMILIE.md` (rădăcină) — CREAT (document operațional ~10 secțiuni: cadru discuție, mesaj ancoră, structură 4 blocuri, Q&A 7 întrebări, materiale, post-discuție, semnale, ce NU face)
+- `GHID_CONSULT_ONCOLOG.md` (rădăcină) — CREAT (checklist acțiune 10 secțiuni: context URGENT, pas 1 Dr. Noufal, pas 2 centre oncologice cu telefoane, pas 3 programare, pas 4 dosar fizic, pas 5 22 întrebări în 5 pachete, costuri, timeline, checklists, escaladare)
+- `Gastroscopic.jpeg` (rădăcină) — ȘTERS (duplicat neformalizat al `Dosar_Medical/documente_sursa/09_endoscopie_2026_04/2026-04-17_buletin_endoscopie_colonoscopie.pdf` + JSON structurat)
+- `Dosar_Medical/arhiva/TODO_pre-status-jamesi-reluat_2026-04-22_1658.md` — BACKUP (Regula 10)
+- `Dosar_Medical/arhiva/context_medical_versiuni/CONTEXT_MEDICAL_pre-status-jamesi-reluat_2026-04-22_1658.md` — BACKUP (Regula 10)
+- `TODO.md` — MODIFICAT (antet + Calendar + P0 reluare Jamesi închisă + Acțiuni finalizate extinse cu 3 intrări)
+- `CONTEXT_MEDICAL.md` — MODIFICAT (v1.2 → v1.2.1 — antet + secțiunea 2 status + secțiunea 8.2 rescrisă ca FINALIZAT + secțiunea 12 rezumat actualizat)
+- `DASHBOARD.html` — MODIFICAT (micro-edit țintit: Ultima generare 17:00, pill-status Jamesi → ACTIV post-reluare, calendar Jamesi → ✓ Efectuat, Acțiuni P0 — Jamesi eliminat + referințe la ghiduri noi)
+- `CHANGELOG.md` — intrare nouă 2026-04-22 17:00 detaliată
+- `SESSION_LOG.md` — această intrare
+
+**Conformitate reguli:**
+
+- Regula 6 aplicată: listare fișiere modificate la final
+- Regula 10 aplicată: 2 backup-uri create
+- Regula 16 aplicată: commit + push la finalul sesiunii
+- Regula 16.7 aplicată: `date` rulat pentru timestamp fresh (16:58 EEST; sesiune scurtă <15 min, o rulare suficient)
+- Regula 17 aplicată: ambele ghiduri au marcaje [CERT]/[PROBABIL]/[INCERT]/[NEGASIT] pe afirmațiile factuale medicale
+- Regula 18 aplicată: DASHBOARD.html actualizat (declanșator: status medicație modificat)
+
+**Confirmări clinice user:** Jamesi reluat seara 22.04 conform schemei (1-0-1, 50/1000 mg), fără complicații raportate post-CT.
+
+**Făcut de:** Claude Code (Opus 4.7, 1M context).
+
+---
+
 ## 2026-04-22 16:00 — [Claude_Opus_4.7] rezultat-CT-20.04-integrat-plus-clarificare-nedepasibil
 
 **Scop:** user (Roland) a cerut:

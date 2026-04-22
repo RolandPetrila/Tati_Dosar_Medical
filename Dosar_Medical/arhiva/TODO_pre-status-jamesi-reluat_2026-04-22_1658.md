@@ -2,24 +2,24 @@
 
 **Fișier de evidență a tuturor acțiunilor de făcut. Se actualizează continuu — la adăugarea și completarea fiecărei acțiuni.**
 
-**Ultima actualizare:** 22 aprilie 2026 17:00 (Jamesi reluat fără complicații + ghiduri operaționale familie/oncolog create).
+**Ultima actualizare:** 22 aprilie 2026 16:00 (rezultat CT integrat + clarificare „nedepășibil endoscopic").
 
 ---
 
 ## Calendar — date cheie
 
-| Data                                | Eveniment                                                       | Status                                                  |
-| ----------------------------------- | --------------------------------------------------------------- | ------------------------------------------------------- |
-| 17.04.2026                          | Endoscopie + colonoscopie efectuate                             | ✅ Finalizat                                            |
-| 17.04.2026                          | Bilet trimitere CT emis                                         | ✅ Finalizat                                            |
-| **18.04.2026**                      | **STOP Jamesi (H-48 pre-CT)**                                   | ✅ Finalizat                                            |
-| ~~19.04.2026 — analize creatinină~~ | ~~de efectuat~~ → ✅ ACOPERIT (buletin Bioclinica 17.04.2026)   | ✅ Finalizat                                            |
-| 19.04.2026                          | Hidratare activă (plan confirmat de familie)                    | ✅ Finalizat                                            |
-| **20.04.2026 17:00**                | **CT torace + abdomen + pelvis cu contrast (Genesis Micălaca)** | ✅ **Finalizat** — raport integrat 22.04.2026           |
-| **22.04.2026**                      | Reluare Jamesi (H+48 post-CT, creatinină pre-CT normală)        | ✅ **Finalizat** — reluat seara 22.04, fără complicații |
-| {17.04.2026 + 7-14 zile}            | Rezultat biopsie (estimat 24.04-01.05)                          | 🟡 În așteptare · monitor automat activ ↓               |
-| **Post-CT, URGENT**                 | **Consult oncolog digestiv** (nu se așteaptă biopsia)           | 🔴 **De programat URGENT** (ascită de elucidat)         |
-| Post-consult oncolog                | Evaluare endocrinologică (glandă suprarenală stângă)            | 🟡 De programat                                         |
+| Data                                | Eveniment                                                       | Status                                          |
+| ----------------------------------- | --------------------------------------------------------------- | ----------------------------------------------- |
+| 17.04.2026                          | Endoscopie + colonoscopie efectuate                             | ✅ Finalizat                                    |
+| 17.04.2026                          | Bilet trimitere CT emis                                         | ✅ Finalizat                                    |
+| **18.04.2026**                      | **STOP Jamesi (H-48 pre-CT)**                                   | ✅ Finalizat                                    |
+| ~~19.04.2026 — analize creatinină~~ | ~~de efectuat~~ → ✅ ACOPERIT (buletin Bioclinica 17.04.2026)   | ✅ Finalizat                                    |
+| 19.04.2026                          | Hidratare activă (plan confirmat de familie)                    | ✅ Finalizat                                    |
+| **20.04.2026 17:00**                | **CT torace + abdomen + pelvis cu contrast (Genesis Micălaca)** | ✅ **Finalizat** — raport integrat 22.04.2026   |
+| **22.04.2026 (AZI)**                | Reluare Jamesi (H+48 post-CT, creatinină pre-CT normală)        | 🟡 **AZI** — reluare conform schemei            |
+| {17.04.2026 + 7-14 zile}            | Rezultat biopsie (estimat 24.04-01.05)                          | 🟡 În așteptare · monitor automat activ ↓       |
+| **Post-CT, URGENT**                 | **Consult oncolog digestiv** (nu se așteaptă biopsia)           | 🔴 **De programat URGENT** (ascită de elucidat) |
+| Post-consult oncolog                | Evaluare endocrinologică (glandă suprarenală stângă)            | 🟡 De programat                                 |
 
 ---
 
@@ -63,14 +63,14 @@
 - [ ] Discuție 15-30 min: ce înseamnă T3-T4, N0-N1, M0 probabil; de ce ascita e un semnal de urmărit; ce urmează
 - [ ] Actualizare DOCX ghid cancer esofagian cu informațiile noi (opțional — sesiune separată)
 
-### [P0] ✅ Reluare Jamesi 22.04.2026 (H+48 post-CT) — COMPLET
+### [P0] 🟡 Reluare Jamesi AZI 22.04.2026 (H+48 post-CT)
 
-**Status (22.04.2026 seara):** ✅ Jamesi reluat conform schemei (1-0-1, 50/1000 mg). **Fără complicații** post-CT (toleranță bună contrast, fără simptome renale raportate).
+**Status:** schema standard se reia AZI (1-0-1, 50/1000 mg). Creatinina pre-CT (17.04.2026) a fost 0.83 mg/dL (normală).
 
 - [x] ✅ Pauză 48h finalizată (18.04 → 22.04)
-- [x] ✅ Reluare seara 22.04 confirmată de familie
-- [ ] Glicemie de control (în zilele următoare, de rutină)
-- [ ] Semnale de urmărit (pentru familie): scădere diureză, edeme, senzație vertij, gust metalic → STOP imediat + consult medic familie
+- [ ] Reluare normală: doză dimineață + doză seară
+- [ ] Glicemie de control
+- [ ] Dacă apar simptome renale post-CT (scădere urinat, edeme, vertij, gust metalic) → STOP imediat + consult
 
 ### [P0] ✅ Programare CT de stadializare — COMPLET
 
@@ -277,9 +277,6 @@ Pentru evaluare mai precisă a expunerii (calculul „pachete-an”).
 
 ## Acțiuni finalizate (arhivă recentă)
 
-- ✅ **22.04.2026 17:00**: Jamesi reluat seara conform schemei standard (1-0-1, 50/1000 mg), fără complicații post-CT — pauza H-48h → H+48h respectată corect, creatinină pre-CT normală (0.83 mg/dL).
-- ✅ **22.04.2026 17:00**: Creat `GHID_PREZENTARE_CT_FAMILIE.md` — document operațional pentru Roland cu structură detaliată de prezentare rezultat CT familiei (4 blocuri, scripturi sugerate, Q&A, materiale printat, semnale escaladare).
-- ✅ **22.04.2026 17:00**: Creat `GHID_CONSULT_ONCOLOG.md` — checklist acțiune concret pentru programare consult oncolog URGENT (recomandare Dr. Noufal, centre oncologice Arad/Timișoara/Cluj/București cu telefoane și informații, dosar fizic, 22 întrebări pregătite, costuri estimative, timeline realist, checklist 3-zile + ziua consultului + post-consult).
 - ✅ **22.04.2026 16:00**: Rezultat CT 20.04.2026 integrat în dosar (JSON structurat + .meta.json + actualizare CONTEXT_MEDICAL.md + DASHBOARD.html). Clarificare interpretare endoscopie confirmată de user: „circumferențial nedepășibil endoscopic". Stadializare imagistică preliminară T3-T4, N0-N1, M0 probabil, Siewert II probabil. Ascită perihepatică + intrapelvină de evaluat cu oncolog.
 - ✅ **20.04.2026 17:00**: CT torace + abdomen + pelvis efectuat la Genesis Medical Clinic Micălaca (Dr. Buie Florian-Laurențiu + Dr. Candea Florin-Vasile, medici primari radiologie).
 - ✅ **18.04.2026 21:04**: GitHub Pages configurat pentru distribuție live-sync `DASHBOARD.html`. URL: https://rolandpetrila.github.io/Tati_Dosar_Medical/ — auto-deploy la fiecare `git push`. Repo mutat public intenționat. `index.html` redirect adăugat la rădăcina repo-ului.

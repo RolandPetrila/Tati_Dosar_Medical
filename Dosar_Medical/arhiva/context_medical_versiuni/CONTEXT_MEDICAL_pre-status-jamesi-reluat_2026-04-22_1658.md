@@ -4,10 +4,10 @@
 
 ---
 
-**Ultima actualizare:** 22 aprilie 2026 17:00 (Jamesi reluat fără complicații + ghiduri operaționale create pentru prezentare CT familie și programare consult oncolog)
+**Ultima actualizare:** 22 aprilie 2026 16:00 (rezultat CT stadializare integrat + clarificare leziune esofag „circumferențial nedepășibil endoscopic" confirmată de user)
 **Responsabil dosar:** Roland Petrilă (fiul pacientului)
-**Versiune structură:** 1.2.1 (micro-update status medicație; v1.2 post-CT reconciliere Claude_Opus_4.7 rămâne valabil)
-**Versiune anterioară arhivată:** `Dosar_Medical/arhiva/context_medical_versiuni/CONTEXT_MEDICAL_pre-status-jamesi-reluat_2026-04-22_1658.md` + `Dosar_Medical/arhiva/context_medical_versiuni/CONTEXT_MEDICAL_pre-CT-stadializare_2026-04-22_1600.md` (v1.1 pre-CT) + `Dosar_Medical/arhiva/context_medical_versiuni/CONTEXT_MEDICAL_v1_2026-04-17.md`
+**Versiune structură:** 1.2 (post-CT, reconciliere Claude_Opus_4.7)
+**Versiune anterioară arhivată:** `Dosar_Medical/arhiva/context_medical_versiuni/CONTEXT_MEDICAL_pre-CT-stadializare_2026-04-22_1600.md` (v1.1 pre-CT) + `Dosar_Medical/arhiva/context_medical_versiuni/CONTEXT_MEDICAL_v1_2026-04-17.md`
 
 ---
 
@@ -63,7 +63,7 @@
 - 🟡 **Rezultat biopsie esofagiană** — așteptat la Bioclinica Arad, monitor automat activ 24/7 (GitHub Actions)
 - 🔴 **Consult oncolog digestiv URGENT** — de programat (stadiul infiltrativ + ascită modifică abordarea terapeutică)
 - 🟡 **Evaluare endocrinologică** glanda suprarenală stângă — de programat post-consult oncolog
-- ✅ **Jamesi reluat** 22.04.2026 seara, conform schemei standard (1-0-1, 50/1000 mg), **fără complicații** — pauza H-48h → H+48h a funcționat corect, fără simptome renale post-contrast raportate de familie
+- 🟡 **Reluare Jamesi** AZI 22.04.2026 (H+48 post-CT, creatinină pre-CT normală)
 
 ---
 
@@ -301,11 +301,11 @@ Efectuată concomitent cu endoscopia la Genesis Medical Clinic Arad (Dr. Noufal 
 
 **Decizie:** la familie + recomandare Dr. Noufal Abdul Vahab (de solicitat).
 
-### 8.2 Reluare Jamesi (H+48 post-CT) — 22.04.2026 ✅ FINALIZAT
+### 8.2 Reluare Jamesi (H+48 post-CT) — 22.04.2026 AZI
 
-**Status:** ✅ **FINALIZAT seara 22.04.2026.** Jamesi reluat conform schemei standard (1-0-1, 50/1000 mg), **fără complicații** raportate de familie. Pauza H-48h → H+48h a fost respectată corect; creatinina pre-CT era 0.83 mg/dL (normală), iar pacientul a tolerat contrastul iodat fără reacție alergică sau simptome renale post-CT.
+**Status:** **AZI**. Creatinina pre-CT era 0.83 mg/dL (normală). În absența unei deteriorări suspecte a funcției renale post-CT (care necesită test de control), Jamesi se reia conform schemei zilnice (1-0-1, 50/1000 mg).
 
-**Continuă monitorizare (de rutină):** glicemie de control în zilele următoare, vigilență pentru semne de afectare renală (scădere diureză, edeme, senzație de vertij, gust metalic) — la orice apariție → STOP medicament + consult medic familie.
+**De monitorizat:** glicemie de control, orice semn de afectare renală (scădere diureză, edeme, senzație de vertij).
 
 ### 8.3 Evaluare endocrinologică (glanda suprarenală stângă)
 
@@ -410,7 +410,7 @@ Efectuată concomitent cu endoscopia la Genesis Medical Clinic Arad (Dr. Noufal 
 
 1. Pacient masculin, 66 ani, diabetic, post-stent cardiac 2012, ex-fumător 35 ani. CNP 1590518024486.
 2. Proces proliferativ **circumferențial nedepășibil endoscopic** la joncțiunea eso-gastrică (Siewert II probabil); CT 20.04.2026 arată **T3-T4, N0-N1, M0 probabil**, cu ASCITĂ de elucidat (posibilă carcinomatoză peritoneală).
-3. Biopsia în lucru (Bioclinica, estimat 24.04-01.05); **consult oncolog URGENT** de programat — posibil protocol FLOT; Jamesi reluat seara 22.04 post-CT fără complicații.
+3. Biopsia în lucru (Bioclinica, estimat 24.04-01.05); **consult oncolog URGENT** de programat — posibil protocol FLOT; reluare Jamesi AZI 22.04 H+48 post-CT.
 
 ---
 
