@@ -2,8 +2,8 @@
 
 **Acest fișier conține reguli suplimentare pentru orice sesiune deschisă în folderul `G:\My Drive\Roly\.Tati`. Are prioritate față de regulamentul global la conflict direct.**
 
-**Ultima revizuire:** 23 aprilie 2026 (v10).
-**Context proiect:** dosar medical real pentru pacient Petrilă Viorel-Mihai (n. 18.05.1959), suspiciune proces proliferativ eso-gastric (Siewert II probabil) identificat la endoscopie pe 17.04.2026, CT de stadializare 20.04.2026 (T3-T4 N0-N1 M0 probabil + ascită de elucidat), biopsie în așteptare.
+**Ultima revizuire:** 18 aprilie 2026 (v7).
+**Context proiect:** dosar medical real pentru pacient Petrilă Viorel-Mihai (n. 18.05.1959), suspiciune proces proliferativ esofagian identificat la endoscopie pe 17.04.2026.
 
 **Relație cu alte regulamente:**
 
@@ -463,86 +463,6 @@ Pentru orice **document de ieșire** (raport, rezumat, interpretare, traducere p
 
 ---
 
-## Regula 20 — Mod de lucru: cercetare → status → AskUserQuestion → confirmare → execuție
-
-**Context:** user a solicitat explicit pe 2026-04-23 acest mod de lucru ca protocol standard pentru orice sarcină care implică cercetare, audit sau integrare de informații noi în documentația dosarului. Sensibilitatea clinică și legală a dosarului medical nu permite integrarea de informații neverificate sau luarea de decizii unilaterale în numele user-ului.
-
-**Protocolul în 5 pași:**
-
-1. **Cercetare / audit**: execuți verificările necesare (WebSearch, WebFetch, Read, cross-referencing surse primare) și compilezi rezultatele.
-2. **Semnalare proactivă nereguli**: dacă sesizezi erori factuale, omisiuni critice, formulări problematice sau contradicții în sursele existente / de referință (ex: sinteza altui AI, documente anterioare), le menționezi IMEDIAT în raportul de status, cu:
-   - Identificarea problemei (citat exact)
-   - Documentarea (sursă primară care contrazice)
-   - Sugestia concretă de corecție
-   - Marcaj [CERT]/[PROBABIL]/[INCERT]/[NEGASIT] (Regula 17)
-3. **Status raport**: prezinți user-ului un raport structurat cu:
-   - Ce s-a verificat (surse acceptate, surse respinse)
-   - Tablou comparativ / distilat pe criterii relevante
-   - Nereguli semnalate (pasul 2)
-   - Recomandare preliminară (dacă ai)
-   - Puncte nesoluționate care necesită decizie user
-4. **AskUserQuestion (meniu interactiv)**: pentru toate deciziile deschise, folosești tool-ul `AskUserQuestion` cu variante A/B/C/D clar formulate. NU ceri răspuns prin text liber — folosești meniul interactiv.
-5. **Confirmare → execuție**: nu începi nicio modificare scrisă (Write / Edit / move / delete / commit) pe fișiere de referință sau documente generate până user-ul nu răspunde în meniul interactiv. După confirmare, execuți fix ce s-a confirmat, raportezi rezultatul și, dacă apar sub-decizii, repeti ciclul.
-
-**Excepții — nu necesită AskUserQuestion:**
-
-- Comenzi de citire/audit pure (Read, Grep, Glob, WebSearch, WebFetch) — sunt implicite în pasul 1
-- Backup-uri automate cerute de Regula 10 — se fac proactiv înainte de orice edit
-- Fix-uri de erori evidente (typo, path greșit) pe care user le cere explicit cu context complet
-- Log în `SESSION_LOG.md`, `CHANGELOG.md`, `WEB_QUERIES.md`, `MEMORY.md` conform regulilor existente — sunt auxiliare trasabilității
-
-**Stop-and-ask în timpul execuției:**
-
-Dacă după confirmare, în timpul execuției, descoperi o neregulă suplimentară, un conflict cu date existente în dosar, sau o decizie care nu a fost acoperită în meniul inițial → **STOP**, raportezi, deschizi nou `AskUserQuestion`. NU iei decizia singur „ca să nu încetinești".
-
-**Why:** user dorește control total pe fiecare decizie care atinge documentația medicală; lucrul implementat fără confirmare poate produce documentație incorectă, greu de reconstituit în Google Drive (fără istoric fin), și poate influența decizii clinice pe un dosar cu relevanță legală. Modul cu `AskUserQuestion` + variante menține ritmul fără text lung de răspuns și lasă urmă clară în conversație pentru audit ulterior.
-
-**How to apply:** la fiecare rundă majoră de lucru (cercetare, audit, integrare informații noi, rescriere fișier de referință, curățare, restructurare), la finalul etapei de cercetare oprești la decizii deschise și pui întrebări cu variante prin `AskUserQuestion`. Nu presupui preferința user-ului. Nu integrezi informații în documentația dosarului fără validare explicită.
-
----
-
-## Regula 21 — Curățenie fluidă folder. Zero ciorne.
-
-**Context:** user a solicitat explicit pe 2026-04-23 această regulă în timpul auditului sintezelor produse de alte AI-uri (Gemini). Folderul proiectului trebuie menținut fluid, curat, fără poluare sau aglomerare inutilă. Documentele neverificate / ciornele / rapoartele parțial halucinate creează confuzie directă pe un dosar medical cu relevanță clinică și legală.
-
-**Principii:**
-
-1. **O singură sursă de adevăr per subiect.** Nu păstrăm variante multiple de documente. Fiecare subiect are exact un fișier validat (de referință).
-2. **Zero fișiere-ciornă.** Un fișier în proiect = un document verificat și validat. Ciornele se procesează în conversație, nu pe disc.
-3. **Audit + extracție + ștergere.** Orice document extra întâlnit (produs de alt AI, raport neverificat, încercare intermediară) se auditează → se extrag informațiile utile (dacă există) → se șterge. Nu se arhivează „ca să avem" — git păstrează istoricul oricum.
-4. **Nume descriptiv și corect.** Dacă conținutul unui fișier s-a extins dincolo de scope-ul inițial, fișierul se redenumește (nu se lasă sub un titlu înșelător).
-
-**Protocolul pentru un fișier extra identificat:**
-
-1. Identifică rolul fișierului (ciornă / backup / raport intermediar / document dubios ca sursă)
-2. Audit conținut: ce e verificat, ce e halucinat, ce e util de păstrat
-3. Dacă există informații utile, le integrezi într-un document validat existent sau nou
-4. După integrare confirmată de user, ștergi fișierul sursă (fără arhivare în `arhiva/` — arhivarea unei ciorne ar polua chiar folderul arhivă)
-5. Loghezi în `CHANGELOG.md` și `SESSION_LOG.md` ce s-a șters și de ce
-
-**Excepție pentru arhivare:**
-
-Arhivarea în `Dosar_Medical/arhiva/` rămâne validă și obligatorie (Regula 10) pentru:
-
-- Versiuni anterioare ale fișierelor de referință modificate structural (ex: `CONTEXT_MEDICAL_pre-adaugare-CT_*.md`)
-- Versiuni anterioare ale `CLAUDE.md` modificate major (ex: `CLAUDE_pre-regula21_*.md`)
-- Rapoarte DOCX generate cu valoare istorică
-
-**NU se arhivează:** ciorne de la alte AI-uri, fișiere-schiță, sinteze parțial halucinate, încercări intermediare. Acestea se șterg direct.
-
-**Beneficii așteptate:**
-
-- Folder scanabil rapid, cu nume de fișiere care reflectă exact ce conțin
-- AI-urile care deschid proiectul nu risc să fie confundate de documente conflictuale
-- Git-ul păstrează istoric complet al ștergerilor (nu se pierde informație)
-- User găsește rapid ce caută fără să se întrebe „care e versiunea corectă"
-
-**Why:** un dosar medical se consultă la momente critice (înaintea unui consult, înaintea unei decizii terapeutice). Confuzia cauzată de un fișier învechit sau conflictual poate întârzia sau distorsiona o decizie clinică. Curățenia fluidă e o măsură de siguranță, nu o chestiune estetică.
-
-**How to apply:** la fiecare sesiune, după execuția unei modificări majore, verifici dacă există fișiere colaterale care pot fi curățate. La orice fișier nou propus, te întrebi „există deja un document unde acest conținut poate fi integrat?" înainte de a crea fișier separat.
-
----
-
 ## Relația cu celelalte regulamente
 
 Regulile de aici **extind** (nu înlocuiesc):
@@ -557,8 +477,6 @@ La conflict direct pentru lucrul în `G:\My Drive\Roly\.Tati`, regulile din aces
 
 ## Changelog
 
-- **2026-04-23 v10:** adăugată Regula 21 (curățenie fluidă folder; zero ciorne; o singură sursă de adevăr per subiect). Trigger: user a solicitat explicit protocol de curățenie în timpul integrării sintezei Gemini `SINTEZA_ONCOHELP_TIMISOARA.md`. Principii: orice fișier extra se auditează, se extrag informațiile utile, apoi se șterge (fără arhivare în `arhiva/` pentru ciorne — git păstrează istoric). Excepții clare pentru arhivare rămân: versiuni anterioare ale fișierelor de referință modificate structural, rapoarte DOCX istorice.
-- **2026-04-23 v9:** adăugată Regula 20 (mod de lucru: cercetare → status → AskUserQuestion → confirmare → execuție). Trigger: user a solicitat explicit acest protocol pentru orice sarcină care implică integrare de informații noi în documentație, cerut în timpul auditului sinteza `SINTEZA_ONCOHELP_TIMISOARA.md`. Include protocol în 5 pași + cerință semnalare proactivă nereguli cu sugestii documentate + cerință stop-and-ask în timpul execuției pentru decizii neacoperite în meniul inițial.
 - **2026-04-22 v8:** adăugată Regula 19 (documente informative se salvează în `Documente_Informative/`, nu la rădăcina proiectului). Trigger: user a cerut explicit separarea materialelor operaționale (ghiduri pentru familie/consulturi) de fișierele structurale ale dosarului. Folder `Documente_Informative/` creat simultan + `GHID_CONSULT_ONCOLOG.md` mutat acolo + `GHID_PREZENTARE_CT_FAMILIE.md` șters (la cerere).
 - **2026-04-18 v7:** actualizată Regula 16.4 (repo public intenționat pentru GitHub Pages); Regula 18 completată cu URL distribuție live + context GitHub Pages; adăugat `index.html` redirect la rădăcina repo-ului. Trigger: user a ales GitHub Pages ca metodă de distribuție live-sync a dashboardului.
 - **2026-04-18 v6:** extinsă Regula 18 — adăugat declanșator #9 (modificare `ALIMENTATIE.md` → regenerare parțială tab Alimentație din dashboard). Clarificată strategia hibridă fetch+embed a tab-urilor. Trigger: user a cerut tab dedicat Alimentație în dashboard cu auto-update la modificarea `ALIMENTATIE.md`.

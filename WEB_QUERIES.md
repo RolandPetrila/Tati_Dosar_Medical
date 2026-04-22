@@ -26,6 +26,58 @@
 
 ## Intrări
 
+## 2026-04-23 01:10-01:40 — audit-clinici-oncologie-multi-regiune
+
+- **Scop:** audit + reverificare din surse primare oficiale a clinicilor oncologice pentru tratamentul pacientului Petrilă Viorel-Mihai (suspiciune adenocarcinom eso-gastric Siewert II). Rezultat integrat în `Dosar_Medical/cercetari/SINTEZA_CLINICI_ONCOLOGIE.md`.
+- **Instrumente folosite:** WebSearch × 7, WebFetch × 3.
+- **Queries exacte:**
+  1. `"OncoHelp Timisoara Centru Oncologie adresa contact 2026"` — WebSearch
+  2. `""Serban Negru" OncoHelp Timisoara medic oncolog presedinte"` — WebSearch
+  3. `""Dorel Popovici" OncoHelp Timisoara medic oncolog UMF"` — WebSearch
+  4. `"Amethyst Radiotherapy Timisoara adresa contact oncologi medici 2026"` — WebSearch
+  5. `"Amethyst Radiotherapy Cluj-Napoca medici oncologi "Carmen Bodale" OR "Kacso" contact"` — WebSearch
+  6. `"Institutul Oncologic Cluj "Prof Dr Ion Chiricuta" IOCN oncologi digestivi cancer gastric esofagian CNAS 2026"` — WebSearch
+  7. `"oncologie medicala Oradea clinici private CNAS "program national oncologie" cancer digestiv"` — WebSearch
+  8. `"clinici private oncologie Cluj Timisoara CNAS decontare cancer esofagian adenocarcinom FLOT tratament gratuit"` — WebSearch
+  9. `"IOCN Cluj Chiricuta programare pacient nou trimitere procedura adresa telefon contact"` — WebSearch
+  10. `"Medisprof Cluj oncologie "program national" CNAS medici specialisti cancer digestiv contact"` — WebSearch
+  11. `"chirurgie oncologica digestiva Cluj Timisoara Oradea esofagectomie gastrectomie Siewert medici renumit 2026"` — WebSearch
+  12. `https://oncohelp.ro/echipa-oncohelp/` — WebFetch (prompt: echipa completă + specialități)
+  13. `https://oncohelp.ro/centrul-de-oncologie/oncologie/` — WebFetch (prompt: servicii + CNAS + markeri moleculari)
+  14. `https://amethyst-radiotherapy.ro/en/amethyst-centre-timisoara/` — WebFetch (prompt: contact + echipă + servicii + lipsuri)
+  15. `https://amethyst-radiotherapy.ro/en/amethyst-cluj-radiotherapy-centre/` — WebFetch (prompt: contact + echipă + servicii + lipsuri)
+- **Surse acceptate (primare, oficiale):**
+  - https://oncohelp.ro/contact/ — OncoHelp contact oficial (adresă, telefoane, orar)
+  - https://oncohelp.ro/echipa-oncohelp/ — roster complet medici OncoHelp
+  - https://oncohelp.ro/centrul-de-oncologie/oncologie/ — servicii OncoHelp + contract CNAS
+  - https://iocn.ro/ + https://ms.ro/ro/unitati-sanitare/institutul-oncologic-prof-dr-ion-chiricuta-cluj-napoca/ — IOCN Cluj oficial + MS
+  - https://iocn.ro/sectia_chirurgie_oncologica_i/ + https://iocn.ro/sectia-oncologie-medicala/ — secții IOCN relevante
+  - https://www.uicc.org/membership/institutul-oncologic-prof-dr-ion-chiricuta-cluj-napoca-iocn — acreditare UICC
+  - https://iroca.eu/center/the-oncology-institute-prof-dr-ion-chiricuta-cluj-napoca-iocn/ — acreditare OECI
+  - https://www.medicover.ro/spital-cluj/oncologie-medicala/ + https://www.medicover.ro/spital-cluj/chirurgia-oncologica/ + https://programare.medicover.ro/centrul-de-excelenta-chirurgie-robotica-onco-digestiva — Medicover Cluj Chirurgie Robotică
+  - https://medisprof.ro/ + https://medisprof.ro/servicii/servicii-decontate-cas/ + https://oncopedia.ro/medisprof-cancer-center-cluj-accesibil-asiguratilor-cnas/ — Medisprof
+  - https://www.medeuropa.ro/medeuropa-oradea + https://www.medeuropa.ro/oncologie-medicala — MedEuropa Oradea
+  - https://amethyst-radiotherapy.ro/en/amethyst-centre-timisoara/ + https://amethyst-radiotherapy.ro/en/amethyst-cluj-radiotherapy-centre/ — Amethyst TM + CJ
+  - https://amethyst-radiotherapy.ro/dr-carmen-bodale-medic-specialist-oncologie-medicala-amethyst/ — profil Dr. Carmen Bodale
+  - https://buletindetimisoara.ro/in-cadrul-oncohelp-timisoara-functioneaza-tumor-board-comisia-oncologica-multidisciplinara-care-creste-sansele-de-supravietuire-ale-bolnavilor-de-cancer/ — confirmare Tumor Board zilnic OncoHelp
+  - https://spatiulmedical.ro/doctor-serban-negru-presedinte-centru-oncologie-oncohelp-timisoara-program-de-screening/ — profil Șerban Negru
+  - https://www.caspa.ro/oncohelp-timisoara-10-000-de-pacienti-ingrijiti-gratuit-anul-trecut-aici-aproape-o-jumatate-cazuri-noi/ — statistici OncoHelp
+  - http://www.casan.ro/page/programul-national-de-oncologie.html + http://cas.cnas.ro/cjastm/page/program-national-de-oncologie.html — CNAS oficial
+- **Surse respinse:**
+  - Wikipedia (sursă terțiară, nu primară) — neutilizat
+  - Google reviews / doctorbun.ro / agregatori comerciali — doar citire orientativă, nu citat
+  - medscape / rxlist — nu relevante pentru clinici RO
+- **Concluzie introdusă în:** `Dosar_Medical/cercetari/SINTEZA_CLINICI_ONCOLOGIE.md` (integrare completă)
+- **Marcaje certitudine folosite în document:** `[CERT]` = 70%+, `[PROBABIL]` = 20%, `[INCERT]` = 8%, `[NEGASIT]` = 2% (pentru elemente de contact / costuri / pozițiii interne neclare pe site-uri oficiale)
+- **Data verificării surselor:** 23.04.2026 (toate URL-urile consultate în intervalul 01:10-01:40)
+- **Încredere concluzie:** high pentru date de contact + echipă + servicii listate oficial; medium pentru roluri interne neconfirmate pe site (Dr. Sîrbu „Șef Spitalizare Continuă" / Dr. Oprean „Șef Spitalizare de Zi") — marcate `[INCERT]` în document; low pentru afirmații reputaționale (timp așteptare Prof. Negru) — marcate `[INCERT]` în document.
+- **Observații:**
+  - Sinteza anterioară produsă de Gemini (`SINTEZA_ONCOHELP_TIMISOARA.md`) conținea 8 nereguli documentabile (inclusiv afirmații potențial defăimătoare fără sursă). Listate în `CHANGELOG.md` intrarea 2026-04-23 01:45.
+  - Identificate 2 clinici complet omise de Gemini: Medicover Cluj (Centru Excelență Chirurgie Robotică Onco-Digestivă) + Medisprof Cluj (privat CNAS).
+  - Contact OncoHelp suplimentar identificat: `0752 01 05 08` (programări pacienți noi, recomandat pe site) + email `programari@oncohelp.ro` + orar L-V 08:00-16:00.
+
+---
+
 ## 2026-04-18 09:50 — RETRAGERE intrare 09:25-09:30
 
 Intrarea anterioara (cercetare web pe ghiduri ACR 2024 / ESUR 2025) a fost RETRASA la cererea user-ului dupa ce a sters folderul `Cercetare/` (rapoartele AI care au alimentat acea cercetare au halucinat). Cercetarea respectiva nu mai are output activ in proiect — documentul unificat care o folosea a fost si el sters.

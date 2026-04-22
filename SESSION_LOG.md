@@ -6,6 +6,40 @@
 
 ---
 
+## 2026-04-23 01:45 — [Claude_Opus_4.7] audit-sinteza-gemini-inlocuire-cu-SINTEZA_CLINICI_ONCOLOGIE-validata + reguli-20-21-adaugate
+
+**Scop:** user (Roland) a cerut audit + reverificare completă din surse primare a sintezei `SINTEZA_ONCOHELP_TIMISOARA.md` (produsă anterior de Gemini cu surse neverificate), extindere scope la 5 clinici alternative (OncoHelp TM + IOCN CJ + Medicover CJ + Medisprof CJ + MedEuropa OR), integrare într-un document unic validat, ștergere ciornă Gemini, și codificare în regulament a modului de lucru (AskUserQuestion + confirmare) + a politicii de curățenie fluidă (zero ciorne).
+
+**Operații pe `.Tati`:**
+
+- `Dosar_Medical/cercetari/SINTEZA_CLINICI_ONCOLOGIE.md` — CREAT (~530 linii, 12 secțiuni, toate afirmațiile cu marcaj certitudine Regula 17, 12 criterii evaluare, matrice comparativă, fișe detaliate 5 clinici TOP + motivație respingere Amethyst, surse citate cu URL + data accesării, secțiune transparență „ce nu am verificat")
+- `Dosar_Medical/cercetari/SINTEZA_ONCOHELP_TIMISOARA.md` — ȘTERS (ciornă Gemini neverificată; informațiile utile integrate în documentul nou validat; fără arhivare conform Regula 21)
+- `CLAUDE.md` — MODIFICAT: adăugate Regula 20 (mod de lucru `AskUserQuestion` + confirmare) și Regula 21 (curățenie fluidă folder, zero ciorne); changelog extins la v9 apoi v10; header actualizat la v10. Backup: `Dosar_Medical/arhiva/versiuni_config/CLAUDE_pre-regula20-askuserq_2026-04-23_1900.md`
+- `CHANGELOG.md` — intrare nouă detaliată 2026-04-23 01:45
+- `SESSION_LOG.md` — această intrare
+- `WEB_QUERIES.md` — log cele 10 queries (7 WebSearch + 3 WebFetch) conform Regula 15
+
+**Cercetare web efectuată:**
+
+- WebSearch × 7: OncoHelp + Negru + Popovici + Amethyst TM + Amethyst CJ + IOCN + MedEuropa + chirurgie oncologică digestivă zonă
+- WebFetch × 3: oncohelp.ro/echipa + oncohelp.ro/oncologie + amethyst-radiotherapy.ro Timișoara + Cluj
+
+**Conformitate reguli:**
+
+- Regula 3 global + Regula 17: toate afirmațiile marcate `[CERT]/[PROBABIL]/[INCERT]/[NEGASIT]`
+- Regula 10: backup `CLAUDE.md` înainte de modificare majoră
+- Regula 15: log complet web queries
+- Regula 16.7: timestamp verificat de 2 ori via `date` (01:44 + 01:49)
+- Regula 20 (nouă): `AskUserQuestion` cu meniu înainte de integrare + confirmare
+- Regula 21 (nouă): ștergere directă ciornă Gemini fără arhivare poluantă
+- Regula 9: lucru defensiv pe fișier produs de Gemini
+
+**Surse primare validate:** oncohelp.ro, iocn.ro, ms.ro, medicover.ro, medisprof.ro, medeuropa.ro, amethyst-radiotherapy.ro, buletindetimisoara.ro, caspa.ro, UICC, IROCA.
+
+**Nereguli semnalate proactiv (în sinteza Gemini):** 8 nereguli / omisiuni critice — listate în detalii în `CHANGELOG.md` (intrarea 2026-04-23 01:45).
+
+---
+
 ## 2026-04-22 18:30 — [Claude_Opus_4.7] extindere-masiva-scenarii-plus-DOCX-profesional-generat
 
 **Scop:** user (Roland) a cerut extinderea cercetării și documentării fișierului `EXPLICATIE_CONSULT_ONCOLOG_SCENARII.md` cu explicații suplimentare (termeni simpli, exemple clare, analogii), apoi generarea unui DOCX cu aceeași documentație în format profesional pentru citire/printare.

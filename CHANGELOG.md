@@ -4,6 +4,69 @@
 
 ---
 
+## 2026-04-23 01:45 — Audit + validare surse + rescriere sinteză clinici oncologie + 2 reguli noi în regulament
+
+**Tip:** AUDIT CERCETARE + INTEGRARE VALIDATĂ + REGULI DE PROCES + CURĂȚARE CIORNĂ.
+
+**Declanșator:** user (Roland Petrilă) a cerut verificarea corectitudinii sintezei `SINTEZA_ONCOHELP_TIMISOARA.md` produsă de Gemini (surse neverificate) și a solicitat:
+
+1. Reverificare toate informațiile din surse primare oficiale
+2. Extindere scope la alternative de tratament (Amethyst Timișoara, Amethyst Cluj + identificare proactivă clinici private cu CNAS în Timișoara / Oradea / Cluj)
+3. Documentație unică și adevărată (fără variante multiple)
+4. Protocol permanent: `AskUserQuestion` + confirmare înainte de execuție (Regula 20)
+5. Protocol permanent: curățenie fluidă folder, zero ciorne (Regula 21)
+
+**Cercetare efectuată:** 10 queries web (WebSearch + WebFetch) pe surse oficiale — oncohelp.ro, iocn.ro, ms.ro, medicover.ro, medisprof.ro, medeuropa.ro, amethyst-radiotherapy.ro, Buletin Timișoara, CASPA, UICC, IROCA — log complet în `WEB_QUERIES.md` sub data de azi.
+
+**Nereguli identificate și semnalate proactiv în sinteza Gemini originală:**
+
+1. Numărul medicilor primari OncoHelp (afirmat „cel puțin 10"; real 8 + 9 specialiști + 7 rezidenți)
+2. Titlul Prof./Conf. Șerban Negru — surse alternează (rămas marcat `[INCERT]`)
+3. Formulare potențial defăimătoare „zero mită" fără sursă citată — reformulată ca „reputație etică profesională"
+4. Omisiune critică: OncoHelp NU are chirurg oncolog intern
+5. Omisiune critică: markerii moleculari obligatori pentru 2026 (HER2, PD-L1 CPS, Claudin-18.2, MSI/dMMR) lipseau complet
+6. Omisiune critică: paracenteza diagnostică ascita + citologie — neabordată
+7. Contact incomplet: număr programări pacienți noi `0752 01 05 08` + email `programari@oncohelp.ro` lipseau
+8. Subevaluare IOCN Cluj (referință națională, acreditare OECI, chirurgie oncologică digestivă internă)
+9. Opțiuni lipsă: Medicover Cluj (Centru de Excelență Chirurgie Robotică Onco-Digestivă) + Medisprof Cluj (privat CNAS) + MedEuropa Oradea (backup geografic intermediar) — neanvansate
+
+**Fișiere create:**
+
+- `Dosar_Medical/cercetari/SINTEZA_CLINICI_ONCOLOGIE.md` — document nou validat, ~530 linii, 12 secțiuni structurate (recomandare strategică + 12 criterii evaluare + matrice comparativă + fișe detaliate pentru cele 5 clinici TOP + motivație respingere Amethyst + acțiuni operaționale + surse citate cu URL + transparență „ce nu am verificat")
+
+**Fișiere șterse (cu motivare):**
+
+- `Dosar_Medical/cercetari/SINTEZA_ONCOHELP_TIMISOARA.md` — ciornă neverificată produsă de Gemini. Informațiile utile au fost extrase și integrate în noul document validat. Șters direct (fără arhivare, conform Regula 21 — arhivarea unei ciorne ar polua folderul arhivă). Git păstrează istoricul.
+
+**Fișiere modificate:**
+
+- `CLAUDE.md` — adăugate **Regula 20** (mod de lucru: cercetare → status → `AskUserQuestion` → confirmare → execuție; 5 pași + semnalare proactivă nereguli + stop-and-ask în timpul execuției) și **Regula 21** (curățenie fluidă folder; zero ciorne; o singură sursă de adevăr per subiect; protocol audit + extracție + ștergere pentru fișiere extra; excepții clare pentru arhivare). Backup pre-modificare: `Dosar_Medical/arhiva/versiuni_config/CLAUDE_pre-regula20-askuserq_2026-04-23_1900.md`. Changelog CLAUDE.md extins la v9 (Regula 20) → v10 (Regula 21). Header „Ultima revizuire" actualizat la v10 + update context proiect cu CT stadializare 20.04.2026.
+- `CHANGELOG.md` — această intrare
+- `SESSION_LOG.md` — intrare nouă conform Regula 9
+- `WEB_QUERIES.md` — log complet al celor 10 queries (7 WebSearch + 3 WebFetch) conform Regula 15
+
+**Recomandare strategică rezultată (rezumat pentru consultare rapidă):**
+
+- **P0 — tratament oncologic de bază:** OncoHelp Timișoara (~50 km, 131 paturi internare, Tumor Board zilnic, CNAS confirmat)
+- **P1 — second opinion + chirurgie publică:** IOCN Cluj „Chiricuță" (OECI-accredited, chirurgie oncologică digestivă internă)
+- **P1 — opțiune chirurgie robotică:** Medicover Cluj (Centru Excelență Chirurgie Robotică Onco-Digestivă, CNAS)
+- **P2 — backup privat CNAS Cluj:** Medisprof Cancer Center
+- **P2 — backup geografic intermediar:** MedEuropa Oradea (~135 km, oncologie + radioterapie ambulator CNAS)
+- **RESPINS ca locație principală:** Amethyst Timișoara (doar ambulator, echipă mică) + Amethyst Cluj (distanță + fără spitalizare); Amethyst Cluj util doar ca second opinion online cu Dr. Carmen Bodale / Prof. Dr. Gabriel Kacsó.
+
+**Conformitate reguli aplicate:**
+
+- R3 global (informații reale) + Regula 17 (marcaje certitudine `[CERT]/[PROBABIL]/[INCERT]/[NEGASIT]`) — toate afirmațiile din document sunt marcate
+- Regula 10 (backup) — aplicat pentru `CLAUDE.md` înainte de adăugarea Regulilor 20+21
+- Regula 15 (log cercetări web) — toate 10 queries loggate în `WEB_QUERIES.md`
+- Regula 16 (git auto-commit + push) — va fi aplicată la finalul sesiunii
+- Regula 16.7 (timestamp narativ via `date`) — verificat de 2 ori pe parcurs (ora sistemului 01:44 → 01:49)
+- Regula 20 (nou — AskUserQuestion + confirmare) — aplicată pentru deciziile de integrare
+- Regula 21 (nou — curățenie fluidă) — aplicată pentru ștergerea sintezei Gemini
+- Regula 9 (coordonare Gemini) — sinteza veche produsă de Gemini a fost tratată defensiv cu audit complet înainte de înlocuire
+
+---
+
 ## 2026-04-22 18:30 — Extindere masivă document explicativ + generare DOCX 64 KB cu design profesional
 
 **Tip:** EXTINDERE DOCUMENT INFORMATIV + DOCUMENT GENERAT NOU (material pentru familie).
