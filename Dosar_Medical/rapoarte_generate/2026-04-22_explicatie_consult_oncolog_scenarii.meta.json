@@ -1,0 +1,87 @@
+{
+  "schema_version": "2.0",
+  "tip_document": "document_informativ_generat",
+  "nume_fisier": "2026-04-22_explicatie_consult_oncolog_scenarii.docx",
+  "format": "docx",
+  "dimensiune_kb": 64,
+  "numar_sectiuni": 16,
+  "numar_pagini_estimat": 35,
+  "numar_cuvinte_estimat": 15000,
+  "data_generare": "2026-04-22",
+  "ora_generare_locala": "18:30 EEST",
+  "generat_de": "Claude Code (Opus 4.7, 1M context)",
+  "script_generator": "generate_explicatie_scenarii.py",
+  "dependinte_tehnice": {
+    "python": "3.x",
+    "python-docx": "1.x+"
+  },
+  "sursa_continut_markdown": "Documente_Informative/EXPLICATIE_CONSULT_ONCOLOG_SCENARII.md",
+  "scop": "Material explicativ extins pentru familia Petrilă (mamă, pacient, rude) despre consultul oncolog URGENT, investigațiile necesare, markerii moleculari, protocolul FLOT, imunoterapie, nutriție, semnale de alarmă, 4 scenarii combinatorii biopsie+ascită, FAQ, timeline, glossar simplu",
+  "destinatar": "Roland Petrilă (fiul pacientului) + familia extinsă",
+  "utilizare_destinata": [
+    "Printare pentru citire acasă",
+    "Preluare la consulturi medicale ca referință pentru întrebări",
+    "Partajare cu rude pentru aliniere înțelegere situație",
+    "Baza pentru discuții cu pacientul despre opțiuni"
+  ],
+  "stil_continut": "Analogii simple (casa veche, arhitect, dronă, subsol cu apă), exemple concrete, fără jargon nejustificat, marcaje certitudine vizibile",
+  "sectiuni_continut": [
+    "1. Povestea - casa veche cu probleme",
+    "2. Ascita - ce e de fapt apa din subsol (cu 4 cauze + analogii)",
+    "3. Întrebările tale - 4 răspunsuri directe",
+    "4. Investigațiile posibile - paracenteza, laparoscopia, PET-CT, EUS",
+    "5. Markerii moleculari - HER2, PD-L1, MSI, Claudin-18.2",
+    "6. Cele 4 scenarii combinatorii cu plan detaliat",
+    "7. Protocolul FLOT - 4 medicamente explicate",
+    "8. Imunoterapia - pembrolizumab, trastuzumab, zolbetuximab",
+    "9. Nutriția - alimente recomandate/evitate, suplimente ESPEN",
+    "10. Semnale de alarmă - 112 vs urgent vs rutină",
+    "11. FAQ familie - 10 întrebări frecvente",
+    "12. Tabel sumarizat scenarii",
+    "13. Ce trebuie să faci TU - acțiuni concrete",
+    "14. Timeline vizual aprilie 2026 - mai 2027",
+    "15. Mesaj 30 secunde",
+    "16. Glossar - 39 termeni explicați simplu"
+  ],
+  "surse_stiintifice_citate": [
+    "FLOT4 - Al-Batran et al., Lancet 2019",
+    "Keynote-590 - Sun et al., Lancet 2021",
+    "Keynote-811 - Janjigian et al., Lancet 2023",
+    "SPOTLIGHT - Shitara et al., Lancet 2023",
+    "ESPEN Guidelines 2021-2023",
+    "AJCC Cancer Staging Manual 8th Ed",
+    "NCCN V1.2025",
+    "ESMO 2022"
+  ],
+  "marcaje_certitudine_aplicate": {
+    "regula_17_aplicata": true,
+    "[CERT]": "Date din studii pivot + ghiduri ESMO/NCCN/AJCC",
+    "[PROBABIL]": "Probabilități scenarii bazate pe context clinic tipic",
+    "[INCERT]": "Elemente variabile individual (supraviețuire exactă, răspuns la FLOT)",
+    "[NEGASIT]": "Informații neverificabile fără consult oncolog (eligibilitate trialuri, costuri 2026, proceduri PNO curente)"
+  },
+  "regula_19_aplicata": true,
+  "regula_19_nota": "Document destinat familiei -> locație canonică Documente_Informative/. DOCX-ul însă e salvat în Dosar_Medical/rapoarte_generate/ conform convenției pentru documente generate (script-as-source-of-truth)",
+  "flags": [
+    "material_informativ_familie",
+    "stil_narativ_cu_analogii",
+    "marcaje_certitudine",
+    "4_scenarii_detaliate",
+    "glossar_inclus",
+    "referinte_studii_pivot"
+  ],
+  "limitari_transparente": [
+    "Probabilitățile scenariilor sunt estimări statistice, nu calcul specific pe cazul pacientului",
+    "Durata de supraviețuire variază individual, nu se poate prezice cu precizie",
+    "Disponibilitatea trialurilor clinice + costurilor actualizate se verifică la consult oncolog",
+    "Detalii PNO pentru imunoterapie se schimbă anual"
+  ],
+  "relatii_cu_alte_fisiere": {
+    "document_markdown_sursa": "Documente_Informative/EXPLICATIE_CONSULT_ONCOLOG_SCENARII.md",
+    "ghid_operational_complementar": "Documente_Informative/GHID_CONSULT_ONCOLOG.md",
+    "ghid_complet_cancer_esofagian": "Dosar_Medical/rapoarte_generate/2026-04-19_ghid_cancer_esofagian_complet.docx",
+    "context_medical": "CONTEXT_MEDICAL.md v1.2.1",
+    "raport_CT_sursa": "Dosar_Medical/2026-04-20_ct_torace_abdomen_pelvis.json"
+  },
+  "disclaimer": "NU înlocuiește consultul medical. Material explicativ pentru înțelegere. Deciziile terapeutice aparțin EXCLUSIV oncologului digestiv cu toate datele clinice."
+}

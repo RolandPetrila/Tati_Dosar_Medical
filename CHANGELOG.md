@@ -4,6 +4,59 @@
 
 ---
 
+## 2026-04-22 18:30 — Extindere masivă document explicativ + generare DOCX 64 KB cu design profesional
+
+**Tip:** EXTINDERE DOCUMENT INFORMATIV + DOCUMENT GENERAT NOU (material pentru familie).
+
+**Declanșator:** user (Roland Petrilă) a cerut:
+
+1. Extinderea cercetării și documentării `EXPLICATIE_CONSULT_ONCOLOG_SCENARII.md` cu explicații suplimentare în același stil narativ (analogii, exemple simple)
+2. Generarea unui DOCX profesional cu aceeași documentație, structurat clar pentru citire rapidă
+
+**Fișiere create/modificate:**
+
+- `Documente_Informative/EXPLICATIE_CONSULT_ONCOLOG_SCENARII.md` — EXTINS MASIV de la 5500 la ~15000 cuvinte (16 secțiuni totale vs 6 inițiale). Secțiuni noi adăugate:
+  - Secțiunea 2 nouă: „Ascita — ce e de fapt apa din subsol" cu explicația celor 4 cauze folosind analogii (conductă care picură = inflamație locală; filtre înfundate = hipoalbuminemie; drenaj blocat = obstrucție venoasă/limfatică; mucegai invizibil = carcinomatoză peritoneală). Include explicația celor 2 locații ale apei (perihepatic + intrapelvin)
+  - Secțiunea 4 nouă: „Investigațiile posibile — explicate simplu" — paracenteza (pipeta care testează apa), laparoscopia diagnostică (camera care vede direct subsolul), PET-CT (drona termică), EUS (urechea lipită de perete interior). Fiecare cu pași procedurali, durată, riscuri, locație, costuri
+  - Secțiunea 5 nouă: „Markerii moleculari — cheile care deschid tratamente" — HER2 (antenă de multiplicare + Herceptin), PD-L1 (steagul alb + Pembrolizumab), MSI (fotocopiator stricat), Claudin-18.2 (stigmat vizibil + Zolbetuximab). Include frecvență, impact pe supraviețuire, tabel recapitulativ
+  - Secțiunea 7 nouă: „Protocolul FLOT — explicat în detaliu" — fiecare din cele 4 medicamente cu analogie (Terminator ADN, Amplificator, Legător ADN, Paralizator diviziune), calendar 2 săpt per ciclu cu pași concreți (spital/acasă/pompă portabilă), tabel efecte secundare cu frecvență + gestionare, alternative dacă nu se tolerează
+  - Secțiunea 8 nouă: „Imunoterapia — o categorie nouă de tratament" — pembrolizumab (Keynote-590), trastuzumab (Keynote-811 pentru HER2+), zolbetuximab (SPOTLIGHT 2024 pentru Claudin-18.2+), accesibilitate PNO România 2026
+  - Secțiunea 9 nouă: „Nutriția — cum trebuie să mănânce tata acum" — principii, alimente recomandate tabelat, alimente de evitat, suplimente ESPEN, monitorizare greutate (obiectiv nu scade > 5%/lună), semnale escaladare disfagie
+  - Secțiunea 10 nouă: „Semnale de alarmă — când suni 112, când aștepți" — URGENȚĂ 112 (angioedem, infecție severă, semne cardiace, hemoragie, ocluzie) vs CONTACT ONCOLOG 24h vs monitorizare rutină
+  - Secțiunea 11 nouă: „Întrebări frecvente ale familiei" — 10 Q&A pregătite cu răspunsuri model (cât trăiește, va suferi, mutăm la Cluj, îngrijire acasă, căderea părului, rolul rudelor, mâncare post-tratament, ereditate, biopsie negativă, ce NU ascundem tatei)
+  - Secțiunea 14 nouă: „Timeline vizual" — cronologia realistă aprilie 2026 → mai 2027 în format calendar ASCII
+  - Secțiunea 16 nouă: „Glossar — termeni medicali explicați simplu" — 39 termeni cu explicație simplă + analogie
+- `Dosar_Medical/rapoarte_generate/generate_explicatie_scenarii.py` — CREAT (~1100 linii script Python cu python-docx): helpers stilizare (heading_bar, paragraph, callout, quote, table cu zebra), configurare document (margini, fonturi), build_document() cu 16 secțiuni + cover page + cuprins + surse + transparență + disclaimer
+- `Dosar_Medical/rapoarte_generate/2026-04-22_explicatie_consult_oncolog_scenarii.docx` — GENERAT (~64 KB, ~35 pagini estimat): cover page cu date pacient + disclaimer, cuprins, 16 secțiuni cu heading-uri colorate, tabele cu zebra stripes + header albastru, quotes cu border lateral pentru analogii (fundal cyan deschis), callouts colorate diferit pentru URGENT (roșu) / OK (verde) / WARN (portocaliu) / INFO (cyan), design responsive cu margini 2 cm, font Calibri 11pt
+- `Dosar_Medical/rapoarte_generate/2026-04-22_explicatie_consult_oncolog_scenarii.meta.json` — CREAT (chain-of-custody Regula 14 cu toate detaliile sursei, stilului, scopului, utilizării, surselor științifice citate, marcajelor certitudine, limitărilor transparente, relațiilor cu alte fișiere)
+- `TODO.md` — antet + 2 intrări finalizări noi
+- `CHANGELOG.md` — această intrare
+- `SESSION_LOG.md` — intrare nouă
+
+**Surse științifice citate în document:**
+
+- FLOT4 (Al-Batran et al., Lancet 2019) — bazele protocolului FLOT pentru cancer eso-gastric
+- Keynote-590 (Sun et al., Lancet 2021) — pembrolizumab + chemo în cancer esofagian avansat
+- Keynote-811 (Janjigian et al., Lancet 2023) — trastuzumab + pembrolizumab + chemo în HER2+
+- SPOTLIGHT (Shitara et al., Lancet 2023) — zolbetuximab pentru claudin-18.2+
+- ESPEN Guidelines 2021–2023 — recomandări nutriție pacient oncologic
+- AJCC Cancer Staging Manual 8th Edition — stadializare TNM
+- NCCN V1.2025 Esophageal and Esophagogastric Junction Cancers
+- ESMO 2022 Esophageal Cancer Guidelines
+
+**Conformitate reguli:**
+
+- Regula 6 aplicată: listare fișiere modificate
+- Regula 14 aplicată: `.meta.json` pentru DOCX cu chain-of-custody complet
+- Regula 16 aplicată: commit + push
+- Regula 17 aplicată sistematic: marcaje [CERT]/[PROBABIL]/[INCERT]/[NEGASIT] pe toate afirmațiile factuale medicale
+- Regula 18 NU aplicabilă: documentul nu e dashboard-ul
+- Regula 19 aplicată: markdown în `Documente_Informative/`; DOCX în `Dosar_Medical/rapoarte_generate/` (convenție specifică documente generate cu script)
+
+**Făcut de:** Claude Code (Opus 4.7, 1M context).
+
+---
+
 ## 2026-04-22 18:09 — Document explicativ extins: EXPLICATIE_CONSULT_ONCOLOG_SCENARII.md (4 scenarii biopsie+ascită)
 
 **Tip:** DOCUMENT INFORMATIV NOU (non-structural, non-medical — material explicativ pentru familie).
