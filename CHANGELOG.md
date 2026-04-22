@@ -4,6 +4,40 @@
 
 ---
 
+## 2026-04-22 17:41 — Restructurare organizare: folder `Documente_Informative/` creat + ghiduri mutate/curățate + Regula 19
+
+**Tip:** RESTRUCTURARE ORGANIZARE PROIECT (non-medical; structural).
+
+**Declanșator:** user (Roland Petrilă) a cerut explicit să nu se mai salveze documente informative / ghiduri operaționale direct la rădăcina proiectului — rădăcina e rezervată fișierelor structurale. Solicită:
+
+1. Creare folder dedicat pentru documente informative
+2. Ștergere `GHID_PREZENTARE_CT_FAMILIE.md` (creat în sesiunea precedentă 17:00) — nu-i mai e util
+3. Mutare `GHID_CONSULT_ONCOLOG.md` în folderul nou
+4. Actualizare documentație
+
+**Fișiere modificate:**
+
+- `GHID_CONSULT_ONCOLOG.md` — MUTAT de la rădăcină → `Documente_Informative/GHID_CONSULT_ONCOLOG.md` (git rename — conținut neschimbat)
+- `GHID_PREZENTARE_CT_FAMILIE.md` — ȘTERS (la cererea user, nu-i mai e util documentul)
+- `Documente_Informative/` — FOLDER NOU creat la rădăcina proiectului
+- `CLAUDE.md` v7 → v8 — adăugată Regula 19 („Documente informative în `Documente_Informative/` — NU la rădăcină") cu secțiuni Why + How to apply + exemple + tipul conținutului destinat; changelog actualizat
+- `STRUCTURA_PROIECT.md` — adăugat folderul `Documente_Informative/` în arborele structurii + secțiune nouă „Documente informative (ghiduri, explicații, materiale pentru familie)" sub Convenții de denumire, cu format denumire + exemple + clarificarea că NU se salvează la rădăcină
+- `DASHBOARD.html` — antet „Ultima generare" actualizat la 17:41; Acțiuni P0 — rută fișier ghid actualizată la `Documente_Informative/GHID_CONSULT_ONCOLOG.md`; eliminată referința la `GHID_PREZENTARE_CT_FAMILIE.md` (șters)
+- `TODO.md` — antet actualizat la 17:41; secțiunea „Acțiuni finalizate" extinsă cu intrare nouă despre restructurarea organizării
+
+**Conformitate reguli:**
+
+- Regula 6 aplicată: listare fișiere modificate la final
+- Regula 10 NU aplicabilă: modificările structurale nu sunt la date medicale (doar la organizare)
+- Regula 16 aplicată: commit + push la finalul sesiunii
+- Regula 16.7 aplicată: `date` rulat (17:41 EEST, aceeași sesiune cu cea anterioară care a rulat la 16:58 — <15 min, nu necesită refresh nou)
+- Regula 18 aplicată: DASHBOARD.html actualizat (declanșator 18.#9 secundar: modificare locație ghid referit; micro-edit, nu regenerare)
+- Regula 19 (nouă): intrată în vigoare imediat pentru această sesiune și toate viitoarele
+
+**Făcut de:** Claude Code (Opus 4.7, 1M context).
+
+---
+
 ## 2026-04-22 17:00 — Ghiduri operaționale familie + consult oncolog + Jamesi reluat + cleanup duplicat imagine
 
 **Tip:** DOCUMENTE OPERAȚIONALE NOI + ACTUALIZARE STATUS MEDICAȚIE (non-structural medical).

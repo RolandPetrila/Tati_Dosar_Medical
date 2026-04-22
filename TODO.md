@@ -2,7 +2,7 @@
 
 **Fișier de evidență a tuturor acțiunilor de făcut. Se actualizează continuu — la adăugarea și completarea fiecărei acțiuni.**
 
-**Ultima actualizare:** 22 aprilie 2026 17:00 (Jamesi reluat fără complicații + ghiduri operaționale familie/oncolog create).
+**Ultima actualizare:** 22 aprilie 2026 17:41 (folder `Documente_Informative/` creat + ghid consult oncolog mutat acolo + GHID_PREZENTARE_CT_FAMILIE.md șters la cerere).
 
 ---
 
@@ -277,6 +277,7 @@ Pentru evaluare mai precisă a expunerii (calculul „pachete-an”).
 
 ## Acțiuni finalizate (arhivă recentă)
 
+- ✅ **22.04.2026 17:41**: Restructurare organizare proiect — creat folder `Documente_Informative/` pentru documente informative/ghiduri, mutat `GHID_CONSULT_ONCOLOG.md` în acesta (locație nouă: `Documente_Informative/GHID_CONSULT_ONCOLOG.md`), șters `GHID_PREZENTARE_CT_FAMILIE.md` (la cererea user). Adăugată Regula 19 în `CLAUDE.md` (v8): documente informative NU la rădăcina proiectului, ci în folderul dedicat. `STRUCTURA_PROIECT.md` + `DASHBOARD.html` actualizate cu noua locație.
 - ✅ **22.04.2026 17:00**: Jamesi reluat seara conform schemei standard (1-0-1, 50/1000 mg), fără complicații post-CT — pauza H-48h → H+48h respectată corect, creatinină pre-CT normală (0.83 mg/dL).
 - ✅ **22.04.2026 17:00**: Creat `GHID_PREZENTARE_CT_FAMILIE.md` — document operațional pentru Roland cu structură detaliată de prezentare rezultat CT familiei (4 blocuri, scripturi sugerate, Q&A, materiale printat, semnale escaladare).
 - ✅ **22.04.2026 17:00**: Creat `GHID_CONSULT_ONCOLOG.md` — checklist acțiune concret pentru programare consult oncolog URGENT (recomandare Dr. Noufal, centre oncologice Arad/Timișoara/Cluj/București cu telefoane și informații, dosar fizic, 22 întrebări pregătite, costuri estimative, timeline realist, checklist 3-zile + ziua consultului + post-consult).

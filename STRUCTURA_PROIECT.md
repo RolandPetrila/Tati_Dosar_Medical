@@ -71,6 +71,10 @@ dosar_medical_petrila/
 │   ├── 2026-04-18_oncolog_intrebari.md
 │   └── ...
 │
+├── Documente_Informative/            Ghiduri operaționale + documente informative pentru familie
+│   ├── GHID_CONSULT_ONCOLOG.md       (ex: checklist acțiune programare consult oncolog)
+│   └── ...                           (orice alt ghid / explicație / material informativ viitor)
+│
 ├── arhiva/                           Versiuni anterioare ale fișierelor
 │   ├── CONTEXT_MEDICAL_v1_2026-04-17.md
 │   └── versiuni_config/              Modificările fișierelor de configurare
@@ -81,16 +85,20 @@ dosar_medical_petrila/
 ## Convenții de denumire
 
 ### Fișiere de configurare și structură
+
 **Format:** `MAJUSCULE.md`
 **Exemple:** `CLAUDE.md`, `REGULAMENT.md`, `CONTEXT_MEDICAL.md`
 
 ### Fișiere de date generate
+
 **Format:** `snake_case.md`
 **Exemple:** `carcinom_esofagian_tratament.md`, `intrebari_oncolog.md`
 
 ### Documente sursă (scanuri, PDF-uri)
+
 **Format:** `YYYY-MM-DD_descriere_scurta.ext`
 **Exemple:**
+
 - `2026-04-17_bilet_trimitere_CT.pdf`
 - `2024-05-30_bilet_externare.pdf`
 - `2012-03-15_raport_coronarografie.pdf`
@@ -98,14 +106,30 @@ dosar_medical_petrila/
 Dacă data exactă nu se cunoaște, folosește `YYYY-MM_descriere.ext` sau `YYYY_descriere.ext`.
 
 ### Rapoarte generate pentru download
+
 **Format:** `tip_raport_YYYY-MM-DD_vN.ext`
 **Exemple:**
+
 - `dosar_medical_2026-04-17_v1.docx`
 - `sinteza_pentru_oncolog_2026-04-20_v1.docx`
 
+### Documente informative (ghiduri, explicații, materiale pentru familie)
+
+**Locație:** `Documente_Informative/` (rădăcina proiectului)
+**Format:** `GHID_SUBIECT.md` sau `SUBIECT_YYYY-MM-DD.md` (UPPERCASE pentru titlu când e material pregătit pentru citire rapidă de familie/pacient)
+**Exemple:**
+
+- `GHID_CONSULT_ONCOLOG.md` (checklist acțiune programare consult)
+- `GHID_NUTRITIE_OPERATIE.md` (material viitor, exemplu)
+- `EXPLICATIE_PROTOCOL_FLOT.md` (material viitor, exemplu)
+
+**NU se salvează la rădăcina proiectului direct.** Rădăcina e rezervată fișierelor structurale (CLAUDE.md, CONTEXT_MEDICAL.md, TODO.md, CHANGELOG.md, etc.).
+
 ### Versiuni arhivate
+
 **Format:** `{nume_original}_{data_arhivării}.{ext}`
 **Exemple:**
+
 - `CONTEXT_MEDICAL_2026-04-17.md`
 - `dosar_medical_2026-04-17_v1.docx` (în `rapoarte_generate/versiuni_anterioare/`)
 
@@ -120,24 +144,25 @@ Dacă data exactă nu se cunoaște, folosește `YYYY-MM_descriere.ext` sau `YYYY
 
 ### Ce merge în ce folder
 
-| Tip document | Folder |
-|---|---|
-| CI, card sănătate | `01_identitate/` |
-| Documente stent 2012 | `02_cardiologie_2012/` |
-| Prima operație de hernie | `03_hernie_anterior/` |
-| Episod H. pylori 2024 | `04_helicobacter_2024-05-30/` |
-| Hernia noiembrie 2025 | `05_hernie_2025-11/` |
-| Endoscopie, colonoscopie, bilete aprilie 2026 | `06_endoscopie_2026-04-17/` |
-| Rezultat biopsie (când vine) | `07_biopsie_2026-04/` |
-| CT de stadializare (raport + CD DICOM) | `08_CT_stadializare_2026/` |
-| Analize de laborator, în orice moment | `09_analize_laborator/` |
-| Rețete | `10_retete/` |
-| Scrisori de consult, bilete de trimitere | `11_consulturi/` |
-| Orice altceva | `99_altele/` |
+| Tip document                                  | Folder                        |
+| --------------------------------------------- | ----------------------------- |
+| CI, card sănătate                             | `01_identitate/`              |
+| Documente stent 2012                          | `02_cardiologie_2012/`        |
+| Prima operație de hernie                      | `03_hernie_anterior/`         |
+| Episod H. pylori 2024                         | `04_helicobacter_2024-05-30/` |
+| Hernia noiembrie 2025                         | `05_hernie_2025-11/`          |
+| Endoscopie, colonoscopie, bilete aprilie 2026 | `06_endoscopie_2026-04-17/`   |
+| Rezultat biopsie (când vine)                  | `07_biopsie_2026-04/`         |
+| CT de stadializare (raport + CD DICOM)        | `08_CT_stadializare_2026/`    |
+| Analize de laborator, în orice moment         | `09_analize_laborator/`       |
+| Rețete                                        | `10_retete/`                  |
+| Scrisori de consult, bilete de trimitere      | `11_consulturi/`              |
+| Orice altceva                                 | `99_altele/`                  |
 
 ### Pentru consulturi viitoare
 
 Pe măsură ce apar consulturi noi (oncolog, etc.), se creează subfoldere noi:
+
 - `12_oncolog_YYYY-MM/`
 - `13_tratament_YYYY/`
 - etc.
@@ -152,6 +177,7 @@ Pentru fiecare document sursă important se creează un fișier de interpretare 
 - Interpretare: `interpretari/2026-04-17_endoscopie.md`
 
 Fișierul de interpretare conține:
+
 - Citate factuale din document
 - Explicații ale termenilor medicali
 - Interpretare calibrată
@@ -169,13 +195,13 @@ Pentru teme de studiu sau investigație generală (nu legate de un document spec
 
 ### Ce se versionează
 
-| Categorie | Versionare | Metodă |
-|---|---|---|
-| Fișiere de configurare (CLAUDE.md, REGULAMENT.md) | La fiecare modificare | Arhivă în `arhiva/versiuni_config/` |
-| `CONTEXT_MEDICAL.md` | La modificări majore | Arhivă în `arhiva/` |
-| Rapoarte generate (docx, pdf) | La fiecare versiune nouă | Sufix `_vN`, vechiul în `rapoarte_generate/versiuni_anterioare/` |
-| Documente sursă | Imutabile | Nu se rescriu niciodată |
-| Interpretări, cercetări | În general imutabile | Dacă trebuie actualizate, se creează versiune nouă cu sufix `_v2` |
+| Categorie                                         | Versionare               | Metodă                                                            |
+| ------------------------------------------------- | ------------------------ | ----------------------------------------------------------------- |
+| Fișiere de configurare (CLAUDE.md, REGULAMENT.md) | La fiecare modificare    | Arhivă în `arhiva/versiuni_config/`                               |
+| `CONTEXT_MEDICAL.md`                              | La modificări majore     | Arhivă în `arhiva/`                                               |
+| Rapoarte generate (docx, pdf)                     | La fiecare versiune nouă | Sufix `_vN`, vechiul în `rapoarte_generate/versiuni_anterioare/`  |
+| Documente sursă                                   | Imutabile                | Nu se rescriu niciodată                                           |
+| Interpretări, cercetări                           | În general imutabile     | Dacă trebuie actualizate, se creează versiune nouă cu sufix `_v2` |
 
 ### Git — recomandare
 
@@ -187,6 +213,7 @@ git commit -m "update: adăugat rezultat CT stadializare (2026-04-22)"
 ```
 
 Această abordare permite:
+
 - Istoric complet al modificărilor
 - Revertirea oricărei modificări greșite
 - Sincronizare între dispozitive (GitHub privat recomandat)
@@ -226,6 +253,7 @@ O copie pe un disk extern fizic, actualizată lunar. Crucial în caz de pierdere
 ### Git remote
 
 Dacă se folosește Git, un remote privat pe GitHub/GitLab/Bitbucket:
+
 - Repository **privat** (NICIODATĂ public)
 - `.gitignore` nu este necesar pentru acest proiect — toate fișierele se includ.
 

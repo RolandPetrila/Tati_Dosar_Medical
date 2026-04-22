@@ -437,6 +437,32 @@ Pentru orice **document de ieșire** (raport, rezumat, interpretare, traducere p
 
 ---
 
+## Regula 19 — Documente informative în `Documente_Informative/` (NU la rădăcină)
+
+**Context:** user a solicitat explicit pe 2026-04-22 să nu se mai salveze documente operaționale/informative (ghiduri, explicații, materiale pentru familie) direct la rădăcina proiectului — acea zonă e rezervată fișierelor structurale (`CLAUDE.md`, `CONTEXT_MEDICAL.md`, `TODO.md`, `CHANGELOG.md`, `DASHBOARD.html`, etc.).
+
+**Locație canonică:** `Documente_Informative/` (rădăcina proiectului, CamelCase consistent cu `Documentatie_Initiala/` și `Dosar_Medical/`).
+
+**Tip conținut destinat:**
+
+- Ghiduri acționabile pentru Roland sau familie (`GHID_*.md`)
+- Explicații simplificate ale unor termeni medicali / protocoale
+- Materiale de pregătire pentru consulturi / intervenții
+- Checklist-uri operaționale care nu sunt parte din structura dosarului medical propriu-zis
+- Orice alt material informativ care NU e:
+  - date structurate medicale (→ `Dosar_Medical/*.json`)
+  - documente sursă digitizate (→ `Dosar_Medical/documente_sursa/`)
+  - rapoarte DOCX generate pentru medici (→ `Dosar_Medical/rapoarte_generate/`)
+  - fișiere de stare proiect (→ rădăcină)
+
+**Format denumire:** `GHID_SUBIECT.md` sau `EXPLICATIE_SUBIECT.md` sau `MATERIAL_SUBIECT_YYYY-MM-DD.md` — UPPERCASE pentru titlul principal, descriptiv pentru scanare rapidă de familie.
+
+**Why:** rădăcina proiectului aglomerată cu documente operaționale face navigarea dificilă și amestecă fișierele de configurare (care nu se ating) cu materialele de lucru zilnice (care se multiplică în timp).
+
+**How to apply:** la orice cerere viitoare de creare ghid / explicație / material pentru familie / medic → destinația e `Documente_Informative/`, NU rădăcina. Fișiere informative existente incorect plasate se pot muta cu ocazie, cu confirmarea user.
+
+---
+
 ## Relația cu celelalte regulamente
 
 Regulile de aici **extind** (nu înlocuiesc):
@@ -451,6 +477,7 @@ La conflict direct pentru lucrul în `G:\My Drive\Roly\.Tati`, regulile din aces
 
 ## Changelog
 
+- **2026-04-22 v8:** adăugată Regula 19 (documente informative se salvează în `Documente_Informative/`, nu la rădăcina proiectului). Trigger: user a cerut explicit separarea materialelor operaționale (ghiduri pentru familie/consulturi) de fișierele structurale ale dosarului. Folder `Documente_Informative/` creat simultan + `GHID_CONSULT_ONCOLOG.md` mutat acolo + `GHID_PREZENTARE_CT_FAMILIE.md` șters (la cerere).
 - **2026-04-18 v7:** actualizată Regula 16.4 (repo public intenționat pentru GitHub Pages); Regula 18 completată cu URL distribuție live + context GitHub Pages; adăugat `index.html` redirect la rădăcina repo-ului. Trigger: user a ales GitHub Pages ca metodă de distribuție live-sync a dashboardului.
 - **2026-04-18 v6:** extinsă Regula 18 — adăugat declanșator #9 (modificare `ALIMENTATIE.md` → regenerare parțială tab Alimentație din dashboard). Clarificată strategia hibridă fetch+embed a tab-urilor. Trigger: user a cerut tab dedicat Alimentație în dashboard cu auto-update la modificarea `ALIMENTATIE.md`.
 - **2026-04-18 v5:** adăugată Regula 18 (sincronizare `DASHBOARD.html` la fiecare actualizare medicală relevantă). Trigger: user a solicitat vizualizare rapidă HTML a dosarului + regulă explicită pentru a preveni divergența dashboard vs. documentație sursă.

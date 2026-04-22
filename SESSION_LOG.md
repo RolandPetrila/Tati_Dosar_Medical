@@ -6,6 +6,38 @@
 
 ---
 
+## 2026-04-22 17:41 — [Claude_Opus_4.7] restructurare-organizare-folder-documente-informative-plus-regula-19
+
+**Scop:** user (Roland) a cerut:
+
+1. Creare folder dedicat pentru documente informative / ghiduri (NU la rădăcină)
+2. Ștergere `GHID_PREZENTARE_CT_FAMILIE.md` (nu-i mai util)
+3. Mutare `GHID_CONSULT_ONCOLOG.md` în folderul nou
+4. Actualizare documentație
+5. Explicație în chat despre consult oncolog URGENT (după execuție)
+
+**Operații pe `.Tati`:**
+
+- `Documente_Informative/` — FOLDER NOU CREAT la rădăcina proiectului
+- `GHID_CONSULT_ONCOLOG.md` — MUTAT din rădăcină → `Documente_Informative/GHID_CONSULT_ONCOLOG.md`
+- `GHID_PREZENTARE_CT_FAMILIE.md` — ȘTERS (rădăcină, la cerere)
+- `CLAUDE.md` v7 → v8 — Regula 19 nouă (documente informative în `Documente_Informative/`)
+- `STRUCTURA_PROIECT.md` — adăugat folder nou în arbore + secțiune convenție de denumire
+- `DASHBOARD.html` — rută ghid actualizată + timestamp ultima generare
+- `TODO.md` — antet + intrare finalizări noi
+- `CHANGELOG.md` — intrare nouă 17:41
+- `SESSION_LOG.md` — această intrare
+
+**Conformitate reguli:**
+
+- Regula 16 aplicată: commit + push la final
+- Regula 18 aplicată: DASHBOARD.html actualizat
+- Regula 19 (nouă, adăugată în această sesiune): activă imediat
+
+**Făcut de:** Claude Code (Opus 4.7, 1M context).
+
+---
+
 ## 2026-04-22 17:00 — [Claude_Opus_4.7] ghiduri-operationale-familie-oncolog-plus-jamesi-reluat-plus-cleanup-gastroscopic
 
 **Scop:** user (Roland) a cerut:
