@@ -6,6 +6,47 @@
 
 ---
 
+## 2026-04-22 16:00 — [Claude_Opus_4.7] rezultat-CT-20.04-integrat-plus-clarificare-nedepasibil
+
+**Scop:** user (Roland) a cerut:
+
+1. Extragere date din `Dosar_Medical/documente_sursa/99_altele/CT - Genesys.pdf` (raport CT TAP efectuat 20.04.2026) și actualizare TODO.md + CONTEXT_MEDICAL.md + DASHBOARD.html cu starea reală
+2. Confirmare explicită variantă corectă pentru leziune esofag: „circumferențial **nedepășibilă** endoscopic" (rezolvare ambiguitate sesiune 19.04.2026)
+
+**Declanșator:** trecere dintr-o fază de „așteptare rezultat investigație" într-o fază de „primire rezultat + stadializare preliminară + plan consult oncolog URGENT". Ascita identificată la CT adaugă complexitate decizională.
+
+**Operații pe `.Tati`:**
+
+- `Dosar_Medical/2026-04-20_ct_torace_abdomen_pelvis.json` — CREAT (extras CT complet structurat, schema v2.0 extinsă pentru imagistică)
+- `Dosar_Medical/2026-04-20_ct_torace_abdomen_pelvis.json.meta.json` — CREAT (chain-of-custody Regula 14)
+- `Dosar_Medical/2026-04-17_buletin_gastroenterologie.json` — MODIFICAT (secțiune `examinare_endoscopica` adăugată cu localizare + aspect circumferențial + `depasibilitate_endoscopica`="NU"; update `_metadata.notes` cu clarificare user; flag `user_clarified_2026-04-22`)
+- `Dosar_Medical/arhiva/2026-04-17_buletin_gastroenterologie_pre-clarificare-nedepasibila_2026-04-22_1600.json` — BACKUP (Regula 10)
+- `Dosar_Medical/arhiva/context_medical_versiuni/CONTEXT_MEDICAL_pre-CT-stadializare_2026-04-22_1600.md` — BACKUP (Regula 10)
+- `Dosar_Medical/arhiva/TODO_pre-CT-stadializare_2026-04-22_1600.md` — BACKUP (Regula 10)
+- `CONTEXT_MEDICAL.md` — MODIFICAT (v1.1 → v1.2) — antet, secțiunea 2 (Status clinic), secțiunea 7.2 (Endoscopie extinsă), secțiunea 7.5 (CT nouă), secțiunea 8 (Investigații programate rescrise), secțiunea 9 (Echipă medicală extinsă cu radiologi), secțiunea 10 (Evaluare preliminară post-CT), secțiunea 12 (Rezumat 3 linii)
+- `TODO.md` — MODIFICAT — antet, Calendar, P0 reorganizată, „Acțiuni noi deschise de rezultat CT 20.04.2026" nouă, „Întrebări pregătite" extinsă cu 15+ întrebări noi pentru oncolog
+- `DASHBOARD.html` — REGENERAT integral (Regula 18 — declanșatori: investigație CT efectuată + rezultat + info medicală nouă majoră)
+- `CHANGELOG.md` — intrare nouă 2026-04-22 16:00
+- `SESSION_LOG.md` — această intrare
+
+**Conformitate reguli:**
+
+- Regula 7 aplicată: confirmare explicită user pentru interpretarea „nedepășibilă" înainte de actualizare
+- Regula 8 aplicată: textul original OCR păstrat literal în JSON, interpretarea adnotată separat
+- Regula 10 aplicată: 3 backup-uri create în `arhiva/` pre-modificare
+- Regula 11 aplicată: datele temporale cu an complet
+- Regula 14 aplicată: `.meta.json` pentru CT cu chain-of-custody
+- Regula 16 aplicată: commit + push la final
+- Regula 16.7 aplicată: timestamp verificat cu `date` (16:00 EEST)
+- Regula 17 aplicată: marcaje „estimativă", „probabil" la stadializare, „de elucidat" la ascită
+- Regula 18 aplicată: DASHBOARD.html regenerat integral
+
+**Stadializare estimativă finală (imagistică):** T3-T4, N0-N1, M0 probabil, Siewert II probabil. Ascită de elucidat (paracenteză / PET-CT / laparoscopie — decis de oncolog). Consult oncolog URGENT de programat, nu se așteaptă biopsia.
+
+**Făcut de:** Claude Code (Opus 4.7, 1M context).
+
+---
+
 ## 2026-04-19 04:07 — [Claude_Opus_4.7] ghid-cancer-esofagian-DOCX-complet-pentru-familie
 
 **Scop:** cerere user (Roland) — „fa research detaliat cu toate tool si skill disponibile si intocmeste document docx detaliat" despre boala tatălui (suspiciune proces proliferativ esofagian, endoscopie 17.04.2026).

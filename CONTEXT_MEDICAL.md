@@ -4,10 +4,10 @@
 
 ---
 
-**Ultima actualizare:** 18 aprilie 2026 13:28 (confirmare alergii + STOP Jamesi executat + plan hidratare)
+**Ultima actualizare:** 22 aprilie 2026 16:00 (rezultat CT stadializare integrat + clarificare leziune esofag „circumferențial nedepășibil endoscopic" confirmată de user)
 **Responsabil dosar:** Roland Petrilă (fiul pacientului)
-**Versiune structură:** 1.1 (post-reconciliere Claude_Opus_4.7)
-**Versiune anterioară arhivată:** `Dosar_Medical/arhiva/context_medical_versiuni/CONTEXT_MEDICAL_v1_2026-04-17.md`
+**Versiune structură:** 1.2 (post-CT, reconciliere Claude_Opus_4.7)
+**Versiune anterioară arhivată:** `Dosar_Medical/arhiva/context_medical_versiuni/CONTEXT_MEDICAL_pre-CT-stadializare_2026-04-22_1600.md` (v1.1 pre-CT) + `Dosar_Medical/arhiva/context_medical_versiuni/CONTEXT_MEDICAL_v1_2026-04-17.md`
 
 ---
 
@@ -34,19 +34,36 @@
 
 ## 2. Status clinic curent
 
-**Suspiciune clinică principală:** Proces proliferativ esofagian (cod 95, bilet BCTAP 0631727 din 17.04.2026).
+**Suspiciune clinică principală:** Proces proliferativ **circumferențial nedepășibil endoscopic** la nivelul 2/3 inferioare a esofagului, cu **extensie la joncțiunea eso-gastrică (orificiul cardia + cadru gastric fundic)** — probabil **Siewert II** (de confirmat cu oncolog). Cod 95, bilet BCTAP 0631727 din 17.04.2026.
 
-**Context:** Leziune esofagiană identificată la endoscopie digestivă superioară efectuată la Genesis Medical Clinic Arad, de Dr. Noufal Abdul Vahab (medic primar gastroenterologie). S-a prelevat biopsie. Medicul curant a emis bilet de trimitere către CT de stadializare (torace + abdomen + pelvis cu substanță de contrast), cu prioritate URGENȚĂ.
+**Context:** Leziune identificată la endoscopie digestivă superioară (17.04.2026, Dr. Noufal Abdul Vahab, Genesis Medical Clinic Arad). Biopsie prelevată — rezultat histopatologic încă în lucru la Bioclinica Arad (monitor automat activ, estimat 24.04–01.05.2026). CT TAP N+SDC de stadializare efectuat luni **20.04.2026 ora 17:00** la Genesis Medical Clinic Micălaca, raport semnat de Dr. Buie Florian-Laurențiu + Dr. Candea Florin-Vasile (ambii medici primari radiologie).
 
-**Natura leziunii:** neclarificată. Rezultatul biopsiei va preciza dacă leziunea este benignă, premalignă sau malignă.
+**Stadializare imagistică preliminară (CT 20.04.2026) — estimativă, necesită corelare cu biopsie:**
 
-**Extensia bolii:** neclarificată. Rezultatul CT va preciza dimensiunea, invazia locală, implicarea ganglionilor, eventualele metastaze.
+| Element       | Estimare CT           | Note                                                                                                                     |
+| ------------- | --------------------- | ------------------------------------------------------------------------------------------------------------------------ |
+| **T** (tumor) | T3–T4                 | Proces expansiv infiltrativ circumferențial cu extensie loco-regională, densificarea grăsimii peritumorale               |
+| **N** (nodes) | N0–N1                 | Limfonoduli loco-regionali max 7.5 mm (sub pragul standard <10 mm, dar în context neoplazic pot fi relevanți)            |
+| **M** (meta)  | **M0 probabil**       | Fără metastaze hepatice, pulmonare, osoase, ganglionare distale vizibile                                                 |
+| **Siewert**   | II probabil           | Joncțiune eso-gastrică propriu-zisă, centrată pe cardia cu extensie eso-distală și fundică                               |
+| **ATENȚIE**   | **Ascită de evaluat** | Colecție fluidă perihepatică 15 mm + intrapelvină 28 mm → de exclus CARCINOMATOZĂ PERITONEALĂ (ar echivala cu stadiu IV) |
 
-**Acțiuni în curs:**
+**Natura histologică a leziunii:** neclarificată. Biopsia în lucru la Bioclinica Arad va preciza tipul exact (adenocarcinom vs. carcinom scuamocelular, grad de diferențiere). Localizarea distală + extensia fundică sugerează **adenocarcinom** (pattern tipic Siewert II), dar confirmarea aparține histopatologului.
 
-- Programare și efectuare CT la Genesis Medical Clinic Micălaca (urgent)
-- Așteptarea rezultatului biopsiei (estimat 7–14 zile lucrătoare)
-- Consult oncolog digestiv după primirea ambelor rezultate
+**Descoperiri colaterale la CT (care necesită urmărire):**
+
+- **Glandă suprarenală stângă hipertrofă, heterogenă, fără leziuni focale** — „de monitorizat" per radiolog. Necesită evaluare endocrinologică (hormoni bazali + follow-up imagistic).
+- **Colecție fluidă pulmonar bazal LID** — 9.3 mm, de urmărit evolutiv
+- **Leziune chistică subcutan perete toracic posterior cXI-cXII** — 22/47.4 mm, „a se corela clinic" (probabilă benignă — chist sebaceu / lipom / chist epidermoid, palpare)
+- **Cardiomegalie + ateromatoză calcara aorto-coronariană + aortă abdominală + emergențe** — consecvent cu antecedente SCA ST+ 2012 / stent IVA, fără modificare terapeutică imediată necesară
+
+**Acțiuni în curs (22.04.2026):**
+
+- ✅ **CT efectuat 20.04.2026** — raport integrat în dosar (`Dosar_Medical/2026-04-20_ct_torace_abdomen_pelvis.json`)
+- 🟡 **Rezultat biopsie esofagiană** — așteptat la Bioclinica Arad, monitor automat activ 24/7 (GitHub Actions)
+- 🔴 **Consult oncolog digestiv URGENT** — de programat (stadiul infiltrativ + ascită modifică abordarea terapeutică)
+- 🟡 **Evaluare endocrinologică** glanda suprarenală stângă — de programat post-consult oncolog
+- 🟡 **Reluare Jamesi** AZI 22.04.2026 (H+48 post-CT, creatinină pre-CT normală)
 
 ---
 
@@ -226,9 +243,27 @@ Schema datată **10 noiembrie 2025**, prescrisă de Dr. LAZĂR [nume parțial il
 
 **Unitate:** Genesis Medical Clinic Arad
 **Medic:** Dr. Noufal Abdul Vahab, medic primar gastroenterologie
-**Rezultat principal:** leziune la nivelul esofagului, descrisă în bilet drept „proces proliferativ esofagian”.
-**Acțiune:** biopsie prelevată, trimisă la anatomopatologie.
-**Buletin endoscopie:** de obținut și arhivat în `documente_sursa/05_endoscopie_aprilie_2026/`.
+
+**Rezultat principal — findings detaliate:**
+
+| Element                        | Valoare                                                                                                   |
+| ------------------------------ | --------------------------------------------------------------------------------------------------------- |
+| **Localizare**                 | **2/3 inferioară a esofagului**                                                                           |
+| **Aspect**                     | **Proces proliferativ circumferențial**                                                                   |
+| **Depășibilitate endoscopică** | **NU — nedepășibil** (stenoză aproape completă, endoscopul nu a trecut dincolo de leziune)                |
+| **Biopsie**                    | Prelevată, trimisă la Bioclinica Arad                                                                     |
+| **Text original document**     | „La 2/3 inferioara esofagului prezinta proces proliferativ circumferentialne depasibila endoscopica(Bio)" |
+
+**Clarificare 2026-04-22 (confirmată de user Roland):** textul contopit din PDF „circumferentialne depasibila" se interpretează ca „**circumferențial nedepășibilă**" (adjectiv feminin + formulă standard rapoarte gastro RO). Interpretarea este confirmată suplimentar de raportul CT din 20.04.2026 care descrie procesul ca „infiltrativ" și „dificil de caracterizat dimensional" (compatibil cu stenoză completă care împiedică trecerea endoscopului).
+
+**Impact clinic al „nedepășibilității":**
+
+- Stenoză strânsă — esofagul nu mai are lumen liber pentru endoscop (diametru normal ~25 mm, aici mult mai îngust)
+- Explică parțial simptomatologia atipică („nod în gât" intermitent după mese, chiar fără disfagie progresivă clasică)
+- Argument suplimentar pentru stadiul avansat (T3-T4 coroborat cu CT)
+- Implicație practică: posibilă necesitate de stent esofagian preoperator sau jejunostomă nutrițională dacă disfagia se agravează înainte de tratament
+
+**Buletin endoscopie:** stocat în `documente_sursa/09_endoscopie_2026_04/` (fișier PDF sursă); extras structurat în `Dosar_Medical/2026-04-17_buletin_gastroenterologie.json` (secțiune `examinare_endoscopica` adăugată 22.04.2026).
 
 ### 7.3 Colonoscopie (17 aprilie 2026)
 
@@ -243,51 +278,49 @@ Efectuată concomitent cu endoscopia la Genesis Medical Clinic Arad (Dr. Noufal 
 
 ### 7.4 Biopsie esofagiană (în lucru)
 
-**Status:** la laboratorul de anatomopatologie.
-**Timp estimat:** 7-14 zile lucrătoare.
-**Importanță:** diagnostic de certitudine.
+**Status:** la laboratorul de anatomopatologie Bioclinica Arad.
+**Timp estimat:** 7-14 zile lucrătoare (estimare 24.04-01.05.2026).
+**Monitor automat:** activ (GitHub Actions → ntfy.sh, verificare portal Bioclinica la 30 min, 24/7).
+**Importanță:** diagnostic de certitudine (tip histologic — adenocarcinom vs. scuamocelular, grad de diferențiere, markeri moleculari relevanți pentru decizia terapeutică).
 
 ---
 
 ## 8. Investigații programate / în așteptare
 
-### 8.1 CT torace + abdomen + pelvis cu contrast (urgent)
+### 8.1 Consult oncolog digestiv (URGENT)
 
-**Bilet trimitere:** BCTAP nr. 0631727 (17.04.2026)
-**Unitate:** Genesis Medical Clinic Micălaca
-**Prioritate:** URGENȚĂ
-**Diagnostic trimitere:** Proces proliferativ esofagian (cod 95)
-**Medic trimițător:** Dr. Noufal Abdul Vahab
-**Status programare:** ✅ **PROGRAMAT LUNI 20.04.2026, ORA 17:00** (confirmat 18.04.2026)
+**Status:** de programat imediat după primirea rezultatului biopsiei (sau înaintea lui dacă se poate — discuție preliminară pe baza CT).
+**Motivație accelerare:** stadiul infiltrativ + ascită + extensia la joncțiunea eso-gastrică → protocolul terapeutic se schimbă față de un cancer esofagian distal simplu (probabil **FLOT** în loc de **CROSS**, având componenta gastrică).
 
-**Cronologie pregătire (deadline-uri exacte):**
+**Centre recomandate (opțiuni):**
 
-| Data/ora                       | Acțiune                                                               |
-| ------------------------------ | --------------------------------------------------------------------- |
-| **Sâmbătă 18.04.2026, 17:00**  | STOP Jamesi (H-48 înainte de CT)                                      |
-| Duminică 19.04.2026            | Hidratare activă cu apă plată (1.5-2 L/zi dacă tolerat cardiologic)   |
-| Duminică 19.04.2026, ~20:00    | Cină ușoară — ultima masă mai consistentă                             |
-| Luni 20.04.2026, ~11:00        | Gustare ușoară — ultima masă înainte de CT                            |
-| Luni 20.04.2026, dimineața     | Aspenter + Concor + Triplixam — DA (normal)                           |
-| Luni 20.04.2026, 17:00         | **CT**                                                                |
-| Luni 20.04.2026, seara         | Glicemie de control; NU relua Jamesi încă                             |
-| **Miercuri 22.04.2026, 17:00** | Reluare Jamesi (H+48 după CT) DOAR după confirmare creatinină normală |
+- **Arad** — apropiere geografică, continuitate cu Genesis
+- **Timișoara** — Institutul Regional / OncoHelp / SCJU
+- **Cluj** — Institutul Oncologic Prof. Dr. Ion Chiricuță
+- **București** — pentru second opinion sau cazuri complexe (Institutul Fundeni, SanaDor, Monza)
 
-**⚠️ Pregătire critică:**
+**Decizie:** la familie + recomandare Dr. Noufal Abdul Vahab (de solicitat).
 
-- ✅ **Oprire Jamesi (sitagliptin + metformin) cu 48h înainte** — **EXECUTAT sâmbătă 18.04.2026** (confirmat de familie, sursă: Roland Petrilă 18.04.2026 13:28). Reluare programată miercuri 22.04.2026 după confirmare creatinină normală post-CT.
-- ✅ **Funcție renală recent verificată** — buletin Bioclinica 17.04.2026: creatinină 0.83 mg/dL (ref 0.67-1.17, NORMALĂ), uree 33.4 mg/dL (NORMALĂ). eGFR ~95 mL/min/1.73m² (stadiu G1). **Nu necesită repetare.**
-- ✅ **Absență alergii la iod / fructe de mare / contrast anterior — CONFIRMAT** (sursă: declarație familie Roland Petrilă 18.04.2026 13:28). Fără contraindicații cunoscute pentru contrast iodat.
-- **Triplixam** (indapamidă diuretic + perindopril IECA) — de întrebat radiologul la confirmare dacă păstrez integral
-- ✅ **Plan hidratare activă duminică 19.04.2026** — 1.5-2 L apă plată (confirmat de familie 18.04.2026, atent la tolerabilitatea cardiacă)
+### 8.2 Reluare Jamesi (H+48 post-CT) — 22.04.2026 AZI
+
+**Status:** **AZI**. Creatinina pre-CT era 0.83 mg/dL (normală). În absența unei deteriorări suspecte a funcției renale post-CT (care necesită test de control), Jamesi se reia conform schemei zilnice (1-0-1, 50/1000 mg).
+
+**De monitorizat:** glicemie de control, orice semn de afectare renală (scădere diureză, edeme, senzație de vertij).
+
+### 8.3 Evaluare endocrinologică (glanda suprarenală stângă)
+
+**Status:** de programat post-consult oncolog (prioritate secundară — cancerul esofagian primar este urgența).
+
+**Analize minime:** cortizol bazal 8AM, raport aldosteron/renină, metanefrine plasmatice (+/- urinare 24h).
+**Follow-up imagistic:** interval 3-6 luni (corelat cu controlul oncologic, evitare iradiere suplimentară).
 
 **Istoric creatinină (funcție renală în timp):**
 
-| Data           | Valoare        | Interval ref | Sursă                                             |
-| -------------- | -------------- | ------------ | ------------------------------------------------- |
-| 2025-06-17     | 0.95 mg/dL     | 0.8-1.3      | Buletin analize complet                           |
-| 2025-11-28     | 0.66 mg/dL     | —            | Analize preop chirurgie (Spital)                  |
-| **2026-04-17** | **0.83 mg/dL** | 0.67-1.17    | ✅ **Buletin Bioclinica (VALID pentru CT 20.04)** |
+| Data           | Valoare        | Interval ref | Sursă                                     |
+| -------------- | -------------- | ------------ | ----------------------------------------- |
+| 2025-06-17     | 0.95 mg/dL     | 0.8-1.3      | Buletin analize complet                   |
+| 2025-11-28     | 0.66 mg/dL     | —            | Analize preop chirurgie (Spital)          |
+| **2026-04-17** | **0.83 mg/dL** | 0.67-1.17    | ✅ **Buletin Bioclinica (pre-CT validă)** |
 
 **Sursă curentă:** `Dosar_Medical/2026-04-17_buletin_bioclinica_uree_creatinina.json` (buletin nr. 26417A0362, Dr. Statnic Maria Luminița, Bioclinica Arad).
 
@@ -297,50 +330,63 @@ Efectuată concomitent cu endoscopia la Genesis Medical Clinic Arad (Dr. Noufal 
 
 ## 9. Echipă medicală
 
-| Specialitate                                                   | Medic                                            | Unitate                                    | Contact      |
-| -------------------------------------------------------------- | ------------------------------------------------ | ------------------------------------------ | ------------ |
-| Gastroenterologie                                              | Dr. Noufal Abdul Vahab (medic primar)            | Genesis Medical Clinic Arad                | De completat |
-| Cardiologie (SCA ST+ 2012)                                     | Echipa Vichy, Franța — de identificat pe PDF     | Centre Hospitalier de Vichy (de confirmat) | —            |
-| Cardiologie / Medicină internă (prescriere actuală 10.11.2025) | Dr. LAZĂR [nume parțial ilizibil]                | De identificat                             | —            |
-| Diabetologie / prescriere Jamesi                               | Dr. LAZĂR (probabil, din prescrierea 10.11.2025) | De identificat                             | —            |
-| Medic de familie                                               | De identificat                                   | De identificat                             | —            |
-| Chirurgie Generală (hernie 28.11.2025)                         | De identificat din documentul original           | Secția Chirurgie Generală II               | —            |
-| Urologie / Gastroenterologie (consult 28.10.2025)              | De identificat                                   | De identificat                             | —            |
-| Oncologie digestivă (viitor)                                   | De stabilit                                      | —                                          | —            |
+| Specialitate                                                   | Medic                                                                                                          | Unitate                                    | Contact              |
+| -------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | ------------------------------------------ | -------------------- |
+| Gastroenterologie                                              | Dr. Noufal Abdul Vahab (medic primar)                                                                          | Genesis Medical Clinic Arad                | De completat         |
+| **Radiologie și Imagistică (CT 20.04.2026)**                   | **Dr. Buie Florian-Laurențiu (cod A11818)** + **Dr. Candea Florin-Vasile (cod F52510)** — ambii medici primari | **Genesis Medical Clinic Micălaca**        | Prin Genesis         |
+| Anatomopatologie (biopsie esofag)                              | De identificat (Bioclinica Arad)                                                                               | Bioclinica Arad                            | `arad@bioclinica.ro` |
+| Cardiologie (SCA ST+ 2012)                                     | Echipa Vichy, Franța — de identificat pe PDF                                                                   | Centre Hospitalier de Vichy (de confirmat) | —                    |
+| Cardiologie / Medicină internă (prescriere actuală 10.11.2025) | Dr. LAZĂR [nume parțial ilizibil]                                                                              | De identificat                             | —                    |
+| Diabetologie / prescriere Jamesi                               | Dr. LAZĂR (probabil, din prescrierea 10.11.2025)                                                               | De identificat                             | —                    |
+| Medic de familie                                               | De identificat                                                                                                 | De identificat                             | —                    |
+| Chirurgie Generală (hernie 28.11.2025)                         | De identificat din documentul original                                                                         | Secția Chirurgie Generală II               | —                    |
+| Urologie / Gastroenterologie (consult 28.10.2025)              | De identificat                                                                                                 | De identificat                             | —                    |
+| **Oncologie digestivă** (prioritate URGENT)                    | **De stabilit**                                                                                                | Arad / Timișoara / Cluj / București        | —                    |
+| Endocrinologie (glandă suprarenală, follow-up)                 | De stabilit post-consult oncolog                                                                               | —                                          | —                    |
 
 ---
 
-## 10. Evaluare preliminară
+## 10. Evaluare preliminară (actualizată post-CT, 22.04.2026)
 
-Pe baza informațiilor disponibile la data actualizării acestui fișier:
+**Context actualizat:** CT-ul de stadializare (20.04.2026) a clarificat semnificativ imaginea — leziune infiltrativă circumferențială la joncțiunea eso-gastrică cu extensie fundică, fără metastaze la distanță vizibile, dar cu ascită de etiologie de elucidat.
 
-**Elemente care susțin suspiciunea de leziune semnificativă:**
+**Elemente care susțin neoplazie avansată (post-CT):**
 
-- Limbajul biletului („proces proliferativ”) + nivel URGENȚĂ
-- Decizia medicului primar de a cere direct CT de stadializare
-- Vârsta + istoricul de fumat prelungit (factori de risc)
-- Simptome sistemice apărute recent
+- Stenoza completă „nedepășibilă endoscopic" (17.04.2026) = masă obstructivă
+- Proces expansiv infiltrativ circumferențial + densificarea grăsimii loco-regionale (CT 20.04)
+- Extensie la joncțiunea eso-gastrică + cadru gastric fundic (Siewert II probabil)
+- Stadiu imagistic estimativ **T3–T4**
+- **Ascita** perihepatică + intrapelvină (risc carcinomatoză peritoneală de exclus)
+- Simptome sistemice (oboseală, apetit diminuat, senzație „nod în gât" postprandial)
+- Vârsta + istoric fumat 35 ani + reflux recent reapărut
 
-**Elemente care sugerează că boala NU este în stadiu avansat:**
+**Elemente favorabile (aspecte pozitive la CT):**
 
-- Absența disfagiei progresive clasice
-- Absența scăderii ponderale
-- Absența sângerărilor digestive
-- Absența semnelor de extensie locală (răgușeală, tuse la lichide, noduli)
-- Absența durerii toracice persistente
+- **M0 probabil** — fără metastaze hepatice, pulmonare, osoase sau ganglionare distale vizibile
+- Limfonoduli loco-regionali sub pragul patologic standard (max 7.5 mm vs. <10 mm criteriu)
+- Fără adenopatii mediastinale / hilare / axilare / abdomino-pelvine
+- Funcție renală normală (creatinină 0.83 mg/dL)
+- Status cardiac stabil (post-stent 2012, controlat farmacologic)
+- Absența disfagiei progresive clasice (deși stenoza e aproape completă, pacientul se alimentează încă rezonabil)
+- Scădere ponderală absentă până acum
 
-**Ipoteze diagnostice — prioritizare estimată (NU diagnostic, doar orientare):**
+**Ipoteze diagnostice revizuite (NU diagnostic, doar orientare):**
 
-1. Tumoră malignă esofagiană în stadiu localizat (neavansat) — probabilitate medie-mare
-2. Leziune premalignă (displazie pe Barrett) — probabilitate medie
-3. Leziune benignă cu aspect pseudotumoral (ulcer cronic, leiomiom, esofagită severă) — probabilitate mică-medie
-4. Tumoră malignă în stadiu avansat — probabilitate mică (pe baza absenței semnelor clasice)
+1. **Adenocarcinom de joncțiune eso-gastrică Siewert II** — probabilitate ridicată (localizare distală + extensie fundică + circumferențial)
+2. Carcinom scuamocelular cu extensie distală — probabilitate mai mică (localizarea atipică pentru scuamos)
+3. Alte tumori rare (GIST, limfoame esofagiene, sarcoame) — probabilitate foarte mică
+
+**Stadializare clinică probabilă (pre-biopsie):**
+
+- **Dacă M0 confirmat (fără carcinomatoză):** Stadiu III (T3-T4, N0-N1, M0) → candidat pentru protocol **FLOT** (chemoterapie perioperatorie) + chirurgie
+- **Dacă M1 (carcinomatoză peritoneală confirmată):** Stadiu IV → protocol paliativ / chemoterapie sistemică (FLOT sau FOLFOX, +/- imunoterapie dacă markeri PD-L1+ / HER2+)
 
 **Decizia finală se bazează EXCLUSIV pe:**
 
-- Rezultatul histopatologic al biopsiei
-- Raportul imagistic al CT-ului de stadializare
+- Rezultatul histopatologic al biopsiei (tip celular, grad de diferențiere, markeri moleculari HER2, PD-L1, MSI)
+- Clarificarea etiologiei ascitei (reactivă vs. carcinomatoză — poate necesita paracenteză + citologie sau laparoscopie)
 - Evaluarea de către medicul oncolog digestiv
+- Eventual PET-CT pentru activitate metabolică și confirmare M0 cu sensibilitate superioară CT-ului
 
 ---
 
@@ -360,13 +406,13 @@ Pe baza informațiilor disponibile la data actualizării acestui fișier:
 
 ---
 
-## 12. Rezumat în 3 linii (pentru preluare rapidă)
+## 12. Rezumat în 3 linii (pentru preluare rapidă — actualizat 22.04.2026)
 
-1. Pacient masculin, 66 ani, diabetic, post-stent cardiac 2012, ex-fumător 35 ani.
-2. Leziune esofagiană descoperită la endoscopie (17.04.2026), biopsie trimisă, CT de stadializare programat.
-3. În așteptarea rezultatelor; consult oncologic planificat imediat ce ambele rezultate sunt disponibile.
+1. Pacient masculin, 66 ani, diabetic, post-stent cardiac 2012, ex-fumător 35 ani. CNP 1590518024486.
+2. Proces proliferativ **circumferențial nedepășibil endoscopic** la joncțiunea eso-gastrică (Siewert II probabil); CT 20.04.2026 arată **T3-T4, N0-N1, M0 probabil**, cu ASCITĂ de elucidat (posibilă carcinomatoză peritoneală).
+3. Biopsia în lucru (Bioclinica, estimat 24.04-01.05); **consult oncolog URGENT** de programat — posibil protocol FLOT; reluare Jamesi AZI 22.04 H+48 post-CT.
 
 ---
 
 **Istoric versiuni:** vezi `arhiva/` pentru versiunile anterioare ale acestui fișier.
-**Următoarea actualizare planificată:** la primirea rezultatului CT sau biopsiei.
+**Următoarea actualizare planificată:** la primirea rezultatului biopsiei (histologie) SAU la primul consult oncolog digestiv.

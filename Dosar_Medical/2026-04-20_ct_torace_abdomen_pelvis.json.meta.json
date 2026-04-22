@@ -1,0 +1,20 @@
+{
+  "source_document": "CT - Genesys.pdf",
+  "source_path": "Dosar_Medical/documente_sursa/99_altele/CT - Genesys.pdf",
+  "received_date": "2026-04-20",
+  "received_from": "Genesis Medical Clinic Micălaca — secția Radiologie și Imagistică Medicală",
+  "digitized_by": "PDF digital nativ (text extractabil, generat direct de sistemul clinic, nu scan OCR)",
+  "digitized_date": "2026-04-20",
+  "transcriber": "Claude_Opus_4.7",
+  "transcription_date": "2026-04-22",
+  "ocr_quality": "good",
+  "confidence_overall": "high",
+  "chain_notes": "Raport oficial CT TAP N+SDC efectuat luni 20.04.2026 ora 17:00, în urma biletului de trimitere BCTAP 0631727 (URGENȚĂ) emis de Dr. Noufal Abdul Vahab (Genesis Arad, gastroenterologie) pe 17.04.2026. Raportul este semnat electronic de Dr. Buie Florian-Laurențiu (cod parafă A11818) și Dr. Candea Florin-Vasile (cod parafă F52510), ambii medici primari radiologie și imagistică medicală. Nr. înregistrare examinare: 284. Doza radiație DLP = 2474 mGy·cm². Stocare permanentă în documente_sursa/99_altele/. Extragere structurată în JSON v2.0 finalizată la 2026-04-22 16:00 EEST (data_procesare).",
+  "key_clinical_events": [
+    "Tumoră primară identificată: joncțiune eso-gastrică (Siewert II probabil) cu extensie fundică",
+    "Ascita (15 + 28 mm) → de exclus carcinomatoză peritoneală",
+    "Fără metastaze la distanță vizibile la CT",
+    "Descoperire incidentală: glandă suprarenală stângă hipertrofă heterogenă",
+    "Descoperire incidentală: chist subcutan perete toracic posterior 22/47.4 mm"
+  ]
+}

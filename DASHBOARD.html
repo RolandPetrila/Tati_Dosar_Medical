@@ -151,6 +151,10 @@
         gap: 14px;
         box-shadow: 0 3px 10px rgba(220, 38, 38, 0.2);
       }
+      .countdown-bar.warn {
+        background: var(--warn);
+        box-shadow: 0 3px 10px rgba(217, 119, 6, 0.2);
+      }
       .countdown-bar .label {
         font-weight: 600;
         font-size: 15px;
@@ -298,6 +302,11 @@
         border-color: var(--crit);
         color: #7f1d1d;
       }
+      .alert.ok {
+        background: var(--ok-light);
+        border-color: var(--ok);
+        color: #14532d;
+      }
       .alert strong {
         font-weight: 700;
       }
@@ -362,10 +371,17 @@
         border: 3px solid #fff;
         box-shadow: 0 0 0 2px var(--primary-light);
       }
+      .timeline-item.crit::before {
+        background: var(--crit);
+        box-shadow: 0 0 0 2px var(--crit-light);
+      }
       .timeline-item .date {
         font-size: 12px;
         font-weight: 600;
         color: var(--primary);
+      }
+      .timeline-item.crit .date {
+        color: var(--crit);
       }
       .timeline-item .title {
         font-size: 14px;
@@ -797,13 +813,14 @@
       <header class="top">
         <h1>Dosar medical — Petrilă Viorel-Mihai</h1>
         <div class="sub">
-          66 ani • Nădlac (Arad) • Suspiciune proces proliferativ esofagian — în
-          investigare
+          66 ani • Nădlac (Arad) • Post-CT 20.04.2026 — stadializare imagistică
+          T3-T4, N0-N1, M0 probabil, Siewert II • În așteptare biopsie + consult
+          oncolog URGENT
         </div>
         <div class="meta">
           <span
-            ><strong>Ultima generare:</strong> 18 aprilie 2026, 18:22
-            (optimizare mobile Android + iOS)</span
+            ><strong>Ultima generare:</strong> 22 aprilie 2026, 16:00 (rezultat
+            CT integrat + clarificare „nedepășibil endoscopic")</span
           >
           <span
             ><strong>Sursă date:</strong> CONTEXT_MEDICAL.md + TODO.md +
@@ -813,13 +830,15 @@
         </div>
       </header>
 
-      <div class="countdown-bar">
+      <div class="countdown-bar warn">
         <div>
           <div class="label">
-            ⚕ Următorul eveniment: CT torace + abdomen + pelvis cu contrast
+            🔔 Următorul eveniment: Rezultat biopsie esofagiană (Bioclinica
+            Arad)
           </div>
           <div class="event">
-            Luni 20 aprilie 2026, ora 17:00 • Genesis Medical Clinic Micălaca
+            Estimat 24.04 – 01.05.2026 • Monitor automat activ 24/7 (GitHub
+            Actions → ntfy.sh)
           </div>
         </div>
         <div class="timer" id="countdown">—</div>
@@ -861,22 +880,41 @@
               <dt>Grupa sanguină</dt>
               <dd><span class="badge neutral">De completat</span></dd>
               <dt>Greutate / Înălțime</dt>
-              <dd><span class="badge neutral">De completat</span></dd>
+              <dd>~79 kg (reper) / De completat</dd>
             </dl>
           </div>
 
           <!-- STATUS CLINIC -->
           <div class="card">
-            <h2>Status clinic curent</h2>
+            <h2>Status clinic curent (post-CT 20.04.2026)</h2>
             <dl class="kv">
               <dt>Suspiciune principală</dt>
               <dd>
-                <span class="badge crit">Proces proliferativ esofagian</span>
+                <span class="badge crit"
+                  >Proces proliferativ esofagian circumferențial nedepășibil
+                  endoscopic</span
+                >
+              </dd>
+              <dt>Localizare</dt>
+              <dd>
+                2/3 inferioară esofag + joncțiune eso-gastrică (cardia + fund
+                gastric) — <strong>Siewert II probabil</strong>
+              </dd>
+              <dt>Stadializare CT (estimativă)</dt>
+              <dd>
+                <span class="badge crit">T3–T4</span>
+                <span class="badge warn">N0–N1</span>
+                <span class="badge ok">M0 probabil</span>
+              </dd>
+              <dt>⚠ Ascită (de elucidat)</dt>
+              <dd>
+                <span class="badge crit"
+                  >Perihepatic 15 mm + intrapelvin 28 mm</span
+                >
+                — de exclus carcinomatoză peritoneală
               </dd>
               <dt>Cod diagnostic</dt>
               <dd>Cod 95 (bilet BCTAP 0631727)</dd>
-              <dt>Data identificării</dt>
-              <dd>17.04.2026 — endoscopie digestivă superioară</dd>
               <dt>Medic curant</dt>
               <dd>Dr. Noufal Abdul Vahab — Genesis Medical Clinic Arad</dd>
               <dt>Biopsie</dt>
@@ -884,17 +922,25 @@
                 <span class="badge warn">În așteptare rezultat</span> —
                 Bioclinica Arad, estimat 24.04 – 01.05.2026
               </dd>
-              <dt>Stadializare</dt>
-              <dd><span class="badge info">CT programat 20.04.2026</span></dd>
               <dt>Consult oncolog</dt>
               <dd>
-                <span class="badge neutral">De programat după rezultate</span>
+                <span class="badge crit">URGENT — de programat</span>
+              </dd>
+              <dt>Descoperire colaterală</dt>
+              <dd>
+                Glandă suprarenală stg. hipertrofă heterogenă (de urmărit)
               </dd>
             </dl>
-            <div class="alert info">
-              <strong>Elemente pozitive:</strong> absența disfagiei progresive,
-              scădere ponderală absentă, fără hematemeză / melenă, fără
-              răgușeală, fără durere toracică persistentă.
+            <div class="alert ok">
+              <strong>Vești bune (CT 20.04):</strong> fără metastaze hepatice,
+              pulmonare, osoase sau ganglionare distale vizibile. Fără
+              adenopatii mediastinale / hilare / axilare / abdomino-pelvine.
+              Funcție renală normală (creatinină 0.83 mg/dL).
+            </div>
+            <div class="alert crit">
+              <strong>Atenție:</strong> ascita perihepatică + intrapelvină în
+              context neoplazic necesită evaluare urgentă cu oncolog — poate
+              modifica protocolul terapeutic (FLOT + chirurgie vs. paliativ).
             </div>
           </div>
 
@@ -944,8 +990,8 @@
                   <td>1-0-1</td>
                   <td>Antidiabetic oral (DPP-4 + biguanidă)</td>
                   <td>
-                    <span class="pill-status stop"
-                      >OPRIT pre-CT (18.04 → 22.04)</span
+                    <span class="pill-status active"
+                      >RELUAT AZI 22.04 (post-CT H+48)</span
                     >
                   </td>
                 </tr>
@@ -970,7 +1016,11 @@
               <tbody>
                 <tr>
                   <td>Iod (contrast iodat)</td>
-                  <td><span class="badge ok">Fără alergie</span></td>
+                  <td>
+                    <span class="badge ok"
+                      >Fără alergie (confirmat la CT 20.04)</span
+                    >
+                  </td>
                 </tr>
                 <tr>
                   <td>Fructe de mare</td>
@@ -990,10 +1040,8 @@
                 </tr>
               </tbody>
             </table>
-            <div class="alert info">
-              Confirmat de familie (Roland Petrilă, 18.04.2026).
-              <strong>A se reconfirma verbal la radiolog</strong> înainte de
-              injectarea contrastului.
+            <div class="alert ok">
+              ✅ CT 20.04.2026 efectuat fără reacții alergice la contrast iodat.
             </div>
           </div>
 
@@ -1005,13 +1053,72 @@
                 <tr>
                   <th>Data</th>
                   <th>Parametru / Test</th>
-                  <th>Valoare</th>
+                  <th>Valoare / Descriere</th>
                   <th>Referință</th>
                   <th>Status</th>
                   <th>Sursă</th>
                 </tr>
               </thead>
               <tbody>
+                <tr>
+                  <td><strong>20.04.2026</strong></td>
+                  <td><strong>CT TAP N+SDC — Tumoră primară</strong></td>
+                  <td>
+                    Proces expansiv infiltrativ circumferențial, segment distal
+                    esofagian + cardia + fund gastric (Siewert II probabil),
+                    infiltrativ, dificil de caracterizat dimensional
+                  </td>
+                  <td>—</td>
+                  <td><span class="badge crit">T3–T4 estimat</span></td>
+                  <td>Dr. Buie + Dr. Candea — Genesis Micălaca</td>
+                </tr>
+                <tr>
+                  <td>20.04.2026</td>
+                  <td>CT — Limfonoduli loco-regionali</td>
+                  <td>max 7.5 mm</td>
+                  <td>&lt; 10 mm (criteriu)</td>
+                  <td><span class="badge warn">N0–N1 limită</span></td>
+                  <td>Raport CT 20.04</td>
+                </tr>
+                <tr>
+                  <td>20.04.2026</td>
+                  <td>CT — Metastaze distale</td>
+                  <td>
+                    Fără metastaze hepatice / pulmonare / osoase / ganglionare
+                    distale
+                  </td>
+                  <td>—</td>
+                  <td><span class="badge ok">M0 probabil</span></td>
+                  <td>Raport CT 20.04</td>
+                </tr>
+                <tr>
+                  <td><strong>20.04.2026</strong></td>
+                  <td><strong>CT — Ascită</strong></td>
+                  <td>
+                    Colecție fluidă perihepatică 15 mm + intrapelvină 28 mm
+                  </td>
+                  <td>—</td>
+                  <td>
+                    <span class="badge crit">De exclus carcinomatoză</span>
+                  </td>
+                  <td>Raport CT 20.04</td>
+                </tr>
+                <tr>
+                  <td>20.04.2026</td>
+                  <td>CT — Glandă suprarenală stângă</td>
+                  <td>Hipertrofă, heterogenă, fără leziuni focale</td>
+                  <td>—</td>
+                  <td><span class="badge warn">De monitorizat</span></td>
+                  <td>Raport CT 20.04</td>
+                </tr>
+                <tr>
+                  <td>20.04.2026</td>
+                  <td>CT — Leziune chistică subcutan torace posterior</td>
+                  <td>22/47.4 mm, spațiu cXI-cXII</td>
+                  <td>—</td>
+                  <td><span class="badge info">A se corela clinic</span></td>
+                  <td>Raport CT 20.04</td>
+                </tr>
                 <tr>
                   <td>17.04.2026</td>
                   <td>Creatinină serică</td>
@@ -1037,9 +1144,12 @@
                   <td>Calcul CKD-EPI</td>
                 </tr>
                 <tr>
-                  <td>17.04.2026</td>
-                  <td>Endoscopie digestivă superioară</td>
-                  <td>Leziune esofagiană + biopsie prelevată</td>
+                  <td><strong>17.04.2026</strong></td>
+                  <td><strong>Endoscopie — leziune esofag</strong></td>
+                  <td>
+                    2/3 inferioară, circumferențial,
+                    <strong>nedepășibil endoscopic</strong>, biopsie prelevată
+                  </td>
                   <td>—</td>
                   <td><span class="badge crit">Proces proliferativ</span></td>
                   <td>Dr. Noufal — Genesis Arad</td>
@@ -1081,14 +1191,6 @@
                   <td>Analize preop chirurgie</td>
                 </tr>
                 <tr>
-                  <td>06.09.2024</td>
-                  <td>Anti-H. pylori IgG</td>
-                  <td>&gt; 100 U/mL</td>
-                  <td>0 – 20</td>
-                  <td><span class="badge info">Expunere confirmată</span></td>
-                  <td>Serologie control</td>
-                </tr>
-                <tr>
                   <td>17.06.2025</td>
                   <td>Glicemie à jeun</td>
                   <td>136.1 mg/dL</td>
@@ -1096,12 +1198,21 @@
                   <td><span class="badge warn">Crescută (diabet)</span></td>
                   <td>Buletin analize complet</td>
                 </tr>
+                <tr>
+                  <td>06.09.2024</td>
+                  <td>Anti-H. pylori IgG</td>
+                  <td>&gt; 100 U/mL</td>
+                  <td>0 – 20</td>
+                  <td><span class="badge info">Expunere confirmată</span></td>
+                  <td>Serologie control</td>
+                </tr>
               </tbody>
             </table>
             <div class="alert warn">
               <strong>Lipsesc:</strong> HbA1c recent (monitorizare diabet),
               hemoleucogramă &lt; 6 luni, profil lipidic actual, TA uzuală
-              documentată.
+              documentată. Plus: confirmare markeri moleculari biopsie (HER2,
+              PD-L1, MSI) la primire.
             </div>
           </div>
 
@@ -1109,12 +1220,24 @@
           <div class="card">
             <h2>Timeline antecedente</h2>
             <div class="timeline">
-              <div class="timeline-item">
+              <div class="timeline-item crit">
+                <div class="date">2026-04-20</div>
+                <div class="title">
+                  CT torace + abdomen + pelvis cu contrast ✅
+                </div>
+                <div class="desc">
+                  Proces expansiv infiltrativ joncțiune eso-gastrică (Siewert
+                  II). T3-T4, N0-N1, M0 probabil. Ascită perihepatică +
+                  intrapelvină de elucidat. Glandă suprarenală stg. hipertrofă
+                  de urmărit.
+                </div>
+              </div>
+              <div class="timeline-item crit">
                 <div class="date">2026-04-17</div>
                 <div class="title">Endoscopie + colonoscopie + biopsie</div>
                 <div class="desc">
-                  Leziune esofagiană identificată, biopsie trimisă la
-                  anatomopatologie.
+                  Leziune esofag 2/3 inferioară, circumferențială, nedepășibilă
+                  endoscopic. Biopsie trimisă la Bioclinica Arad.
                 </div>
               </div>
               <div class="timeline-item">
@@ -1175,6 +1298,19 @@
                   <td>Genesis Medical Clinic Arad</td>
                 </tr>
                 <tr>
+                  <td><strong>Radiologie (CT 20.04.2026)</strong></td>
+                  <td>
+                    <strong>Dr. Buie Florian-Laurențiu (A11818)</strong><br />
+                    <strong>Dr. Candea Florin-Vasile (F52510)</strong>
+                  </td>
+                  <td>Genesis Medical Clinic Micălaca</td>
+                </tr>
+                <tr>
+                  <td>Anatomopatologie (biopsie)</td>
+                  <td>De identificat</td>
+                  <td>Bioclinica Arad — arad@bioclinica.ro</td>
+                </tr>
+                <tr>
                   <td>Cardiologie / Medicină internă</td>
                   <td>
                     Dr. LAZĂR <span class="badge warn">nume parțial</span>
@@ -1202,19 +1338,14 @@
                   <td>—</td>
                 </tr>
                 <tr>
-                  <td>Oncologie digestivă</td>
-                  <td><span class="badge warn">De programat</span></td>
-                  <td>Arad / Timișoara / Cluj</td>
+                  <td><strong>Oncologie digestivă</strong></td>
+                  <td><span class="badge crit">URGENT — de programat</span></td>
+                  <td>Arad / Timișoara / Cluj / București</td>
                 </tr>
                 <tr>
-                  <td>Radiologie (CT 20.04)</td>
+                  <td>Endocrinologie (glandă suprarenală)</td>
+                  <td><span class="badge warn">Post-consult oncolog</span></td>
                   <td>—</td>
-                  <td>Genesis Medical Clinic Micălaca</td>
-                </tr>
-                <tr>
-                  <td>Anatomopatologie (biopsie)</td>
-                  <td>—</td>
-                  <td>Bioclinica Arad — arad@bioclinica.ro</td>
                 </tr>
               </tbody>
             </table>
@@ -1251,74 +1382,84 @@
             <div class="alert info">
               <strong>Simptome noi (ultimele 2-3 săptămâni):</strong> oboseală
               marcată, somnolență, apetit diminuat, senzație „nod în gât"
-              intermitent postprandial, reflux reapărut.
+              intermitent postprandial, reflux reapărut. Explicate parțial de
+              stenoza endoscopică completă.
             </div>
           </div>
 
-          <!-- CALENDAR CT -->
+          <!-- CRONOLOGIE POST-CT -->
           <div class="card wide">
-            <h2>Calendar pregătire CT 20.04.2026</h2>
+            <h2>Cronologie post-CT — următorii pași</h2>
             <table>
               <thead>
                 <tr>
-                  <th>Data / ora</th>
+                  <th>Data / moment</th>
                   <th>Acțiune</th>
                   <th>Status</th>
                 </tr>
               </thead>
               <tbody>
                 <tr>
-                  <td>Sâmbătă 18.04.2026</td>
-                  <td><strong>STOP Jamesi</strong> (H-48 pre-CT)</td>
-                  <td><span class="badge ok">✓ Executat</span></td>
+                  <td>18.04.2026</td>
+                  <td>STOP Jamesi (H-48 pre-CT)</td>
+                  <td><span class="badge ok">✓ Efectuat</span></td>
                 </tr>
                 <tr>
-                  <td>Duminică 19.04.2026</td>
-                  <td>Hidratare activă 1.5-2 L apă plată</td>
-                  <td><span class="badge primary">Programat</span></td>
+                  <td>19.04.2026</td>
+                  <td>Hidratare activă</td>
+                  <td><span class="badge ok">✓ Efectuat</span></td>
                 </tr>
                 <tr>
-                  <td>Duminică 19.04, ~20:00</td>
-                  <td>Cină ușoară — ultima masă consistentă</td>
-                  <td><span class="badge primary">Programat</span></td>
-                </tr>
-                <tr>
-                  <td>Luni 20.04, ~11:00</td>
-                  <td>Gustare ușoară — ultima masă înainte de CT</td>
-                  <td><span class="badge primary">Programat</span></td>
-                </tr>
-                <tr>
-                  <td>Luni 20.04, dimineața</td>
+                  <td><strong>20.04.2026, 17:00</strong></td>
                   <td>
-                    Aspenter + Concor + Triplixam — NORMAL (dacă radiologul nu
-                    cere altfel)
+                    <strong>CT TAP cu contrast (Genesis Micălaca)</strong>
                   </td>
-                  <td><span class="badge primary">Programat</span></td>
+                  <td><span class="badge ok">✓ Efectuat</span></td>
                 </tr>
                 <tr>
-                  <td><strong>Luni 20.04, 17:00</strong></td>
+                  <td><strong>22.04.2026 (AZI)</strong></td>
+                  <td><strong>Reluare Jamesi</strong> (H+48 post-CT)</td>
+                  <td><span class="badge warn">În curs AZI</span></td>
+                </tr>
+                <tr>
+                  <td><strong>ASAP (zile următoare)</strong></td>
                   <td>
-                    <strong>CT torace + abdomen + pelvis cu contrast</strong>
-                    (Genesis Micălaca)
+                    <strong>Programare consult oncolog digestiv URGENT</strong>
                   </td>
-                  <td><span class="badge crit">CT</span></td>
-                </tr>
-                <tr>
-                  <td>Luni 20.04, seara</td>
-                  <td>Glicemie control — NU relua Jamesi încă</td>
-                  <td><span class="badge primary">Programat</span></td>
-                </tr>
-                <tr>
-                  <td>Miercuri 22.04.2026</td>
-                  <td>
-                    Reluare Jamesi (H+48 post-CT, după confirmare creatinină OK)
-                  </td>
-                  <td><span class="badge warn">Follow-up</span></td>
+                  <td><span class="badge crit">De programat</span></td>
                 </tr>
                 <tr>
                   <td>24.04 – 01.05.2026</td>
                   <td>Rezultat biopsie esofagiană (Bioclinica Arad)</td>
-                  <td><span class="badge warn">În așteptare</span></td>
+                  <td>
+                    <span class="badge warn">În așteptare · monitor activ</span>
+                  </td>
+                </tr>
+                <tr>
+                  <td>Post-rezultat biopsie</td>
+                  <td>
+                    Consult oncolog cu TOATE rezultatele (biopsie + CT) →
+                    decizie protocol terapeutic
+                  </td>
+                  <td><span class="badge primary">Planificat</span></td>
+                </tr>
+                <tr>
+                  <td>Post-consult oncolog</td>
+                  <td>
+                    Eventual PET-CT / paracenteză diagnostică / laparoscopie
+                    (pentru carcinomatoză)
+                  </td>
+                  <td><span class="badge info">Decis de oncolog</span></td>
+                </tr>
+                <tr>
+                  <td>Ulterior</td>
+                  <td>Evaluare endocrinologică glandă suprarenală stg.</td>
+                  <td><span class="badge info">Planificat</span></td>
+                </tr>
+                <tr>
+                  <td>Ulterior</td>
+                  <td>Polipectomie colon descendent (revizită Dr. Noufal)</td>
+                  <td><span class="badge info">Planificat</span></td>
                 </tr>
               </tbody>
             </table>
@@ -1334,23 +1475,27 @@
                 <li>
                   <span class="icon crit-icon">•</span>
                   <div>
-                    <strong>Confirmare telefonică Genesis Micălaca</strong> — cu
-                    24h înainte de CT
+                    <strong>Consult oncolog digestiv URGENT</strong> — nu se
+                    așteaptă biopsia. Ascita + extensia fundică modifică
+                    protocolul terapeutic (probabil FLOT). Solicitare
+                    recomandare de la Dr. Noufal + pregătire dosar complet
+                    (raport CT + CD DICOM + buletin endoscopie + bilet BCTAP).
                   </div>
                 </li>
                 <li>
                   <span class="icon crit-icon">•</span>
                   <div>
-                    <strong>Întrebare radiolog:</strong> Triplixam — mențin
-                    integral sau omit doza duminică/luni?
+                    <strong>Analiză și prezentare rezultat CT familiei</strong>
+                    — explicație echilibrată (T3-T4, N0-N1, M0 probabil — dar
+                    ascită de elucidat).
                   </div>
                 </li>
                 <li>
                   <span class="icon crit-icon">•</span>
                   <div>
-                    <strong>Pregătire documente pentru CT:</strong> CI, card
-                    CAS, bilet BCTAP 0631727, analize recente, buletin
-                    endoscopie 17.04
+                    <strong>Reluare Jamesi AZI 22.04.2026</strong> (H+48
+                    post-CT, creatinina pre-CT normală 0.83 mg/dL). De
+                    monitorizat semne renale.
                   </div>
                 </li>
               </ul>
@@ -1362,9 +1507,27 @@
                 <li>
                   <span class="icon warn-icon">•</span>
                   <div>
+                    <strong>Verificare CD DICOM de la Genesis Micălaca</strong>
+                    — util pentru consult oncolog (vizualizare directă imagini).
+                  </div>
+                </li>
+                <li>
+                  <span class="icon warn-icon">•</span>
+                  <div>
+                    <strong
+                      >Evaluare endocrinologică glanda suprarenală
+                      stângă</strong
+                    >
+                    — cortizol 8AM, aldosteron/renină, metanefrine. Follow-up
+                    imagistic 3-6 luni.
+                  </div>
+                </li>
+                <li>
+                  <span class="icon warn-icon">•</span>
+                  <div>
                     <strong>Colectare informații medicale</strong>: medicamente
                     (confirmare completă), grupa sanguină, greutate, înălțime,
-                    HbA1c recent, TA uzuală
+                    HbA1c recent, TA uzuală.
                   </div>
                 </li>
                 <li>
@@ -1372,23 +1535,14 @@
                   <div>
                     <strong>Documente istorice de obținut:</strong> bilet
                     externare Vichy 2012, externare H. pylori 2024, raport
-                    operator hernie 2025, buletin endoscopie 17.04, buletin
-                    colonoscopie 17.04
+                    operator hernie 2025, buletin ecografie 14.04.
                   </div>
                 </li>
                 <li>
                   <span class="icon warn-icon">•</span>
                   <div>
                     <strong>Identificare Dr. LAZĂR</strong> — nume parțial
-                    ilizibil pe manuscris prescriere
-                  </div>
-                </li>
-                <li>
-                  <span class="icon warn-icon">•</span>
-                  <div>
-                    <strong>Digitizare documente lipsă:</strong> 6 PDF-uri
-                    neidentificate în <code>99_altele/</code> + PDF original
-                    cardiologie Vichy + bilet ecografie 14.04
+                    ilizibil pe manuscris prescriere.
                   </div>
                 </li>
               </ul>
@@ -1400,37 +1554,44 @@
                 <li>
                   <span class="icon ok-icon">•</span>
                   <div>
-                    Identificare și contactare oncolog digestiv (Arad /
-                    Timișoara / Cluj)
+                    Corelare clinică leziune chistică subcutan perete toracic
+                    posterior (22/47.4 mm, cXI-cXII) — palpare.
                   </div>
                 </li>
                 <li>
                   <span class="icon ok-icon">•</span>
-                  <div>HbA1c — monitorizare control diabet cu Jamesi</div>
+                  <div>
+                    Monitorizare colecție fluidă pulmonar bazal LID (9.3 mm) —
+                    evolutiv.
+                  </div>
+                </li>
+                <li>
+                  <span class="icon ok-icon">•</span>
+                  <div>HbA1c — monitorizare control diabet cu Jamesi.</div>
                 </li>
                 <li>
                   <span class="icon ok-icon">•</span>
                   <div>
                     Prezentare raport reacții adverse Jamesi + Triplixam
-                    familiei + medicului curant
+                    familiei + medicului curant.
                   </div>
                 </li>
                 <li>
                   <span class="icon ok-icon">•</span>
                   <div>
                     Verificare versiune curentă SmPC Triplixam (actuală:
-                    v06.2021, vechime ~5 ani)
+                    v06.2021, vechime ~5 ani).
                   </div>
                 </li>
                 <li>
                   <span class="icon ok-icon">•</span>
-                  <div>Jurnal simptome — început pentru consult oncolog</div>
+                  <div>Jurnal simptome — început pentru consult oncolog.</div>
                 </li>
                 <li>
                   <span class="icon ok-icon">•</span>
                   <div>
                     Clarificare hidrocel + chiste epididimare (indicate preop,
-                    dar absente din externare)
+                    dar absente din externare).
                   </div>
                 </li>
               </ul>
@@ -1444,44 +1605,95 @@
             <div class="q-block">
               <h3>Pentru Dr. Noufal Abdul Vahab (gastroenterolog)</h3>
               <ul>
-                <li>În ce segment al esofagului este leziunea?</li>
                 <li>
-                  Dimensiunea aproximativă? Aspect (ulcerativ / vegetant /
-                  stenozant)?
+                  Confirmare interpretare leziune: „circumferențial
+                  nedepășibilă" (nu „depășibilă")?
                 </li>
-                <li>Circumferențială sau parțială?</li>
-                <li>A fost observat esofag Barrett?</li>
                 <li>
-                  Ce a arătat colonoscopia — dincolo de polip și hemoroizi?
+                  Dimensiunea longitudinală a leziunii — la ce cm de arcada
+                  dentară începe și se termină?
+                </li>
+                <li>Aspect (ulcerativ / vegetant / stenozant)?</li>
+                <li>A fost observat esofag Barrett proximal de leziune?</li>
+                <li>
+                  Biopsia prelevată e suficientă pentru markeri moleculari
+                  (HER2, PD-L1, MSI)?
                 </li>
                 <li>Când sunt gata rezultatele biopsiei?</li>
                 <li>Ne recomandă un oncolog anume?</li>
-              </ul>
-            </div>
-
-            <div class="q-block">
-              <h3>Pentru centrul CT (Genesis Micălaca)</h3>
-              <ul>
-                <li>Cât durează până la raportul radiologului?</li>
-                <li>Se primește CD cu imagini DICOM?</li>
                 <li>
-                  Costul dacă facem privat (dacă CAS nu acoperă integral)?
+                  Avem nevoie de EUS (eco-endoscopie) pentru stadializarea
+                  locală?
                 </li>
-                <li>Triplixam dimineața — mențin integral sau omit doza?</li>
               </ul>
             </div>
 
             <div class="q-block">
-              <h3>Pentru viitorul oncolog digestiv</h3>
+              <h3>Pentru viitorul oncolog digestiv (URGENT)</h3>
               <ul>
-                <li>Stadiul TNM exact?</li>
-                <li>Tipul histologic?</li>
-                <li>Opțiuni de tratament — ordonate după eficacitate?</li>
-                <li>Prognostic realist?</li>
-                <li>Trialuri clinice disponibile? Imunoterapie?</li>
                 <li>
-                  Gestionarea comorbidităților (diabet, stent coronarian) în
-                  timpul tratamentului oncologic?
+                  <strong>Cum interpretați ascita CT (15 + 28 mm)?</strong>
+                  Reactivă vs. carcinomatoză peritoneală?
+                </li>
+                <li>
+                  Avem nevoie de <strong>paracenteză diagnostică</strong> cu
+                  citologie peritoneală?
+                </li>
+                <li>
+                  Avem nevoie de <strong>laparoscopie diagnostică</strong>?
+                </li>
+                <li>
+                  <strong>PET-CT</strong> recomandat pentru sensibilitate
+                  superioară?
+                </li>
+                <li>
+                  Clasificare Siewert I/II/III confirmată? (CT sugerează II)
+                </li>
+                <li>Stadiul TNM exact (post-biopsie) și criteriul aplicat?</li>
+                <li>
+                  Protocol <strong>FLOT</strong> (perioperator) vs.
+                  <strong>CROSS</strong> (neoadjuvant) — dat fiind componenta
+                  gastrică?
+                </li>
+                <li>
+                  Imunoterapie (pembrolizumab, nivolumab) — indicată dacă PD-L1+
+                  sau MSI-H?
+                </li>
+                <li>
+                  Trastuzumab/zolbetuximab — dacă HER2+ sau claudin-18.2+?
+                </li>
+                <li>
+                  Chirurgie fezabilă? Ezofagogastrectomie totală vs. parțială?
+                </li>
+                <li>
+                  RAMIE (robot-assisted) disponibil pentru pacient cardiac?
+                </li>
+                <li>
+                  Gestionarea diabetului și a antiagregantei în timpul
+                  tratamentului?
+                </li>
+                <li>Prognostic realist (supraviețuire mediană, 5-year OS)?</li>
+                <li>Trialuri clinice disponibile în România 2026?</li>
+                <li>
+                  Second opinion internațional util (Germania/Austria, Card
+                  European S2)?
+                </li>
+              </ul>
+            </div>
+
+            <div class="q-block">
+              <h3>Pentru endocrinolog (post-consult oncolog)</h3>
+              <ul>
+                <li>
+                  Interpretare glandă suprarenală stângă hipertrofă heterogenă?
+                </li>
+                <li>
+                  Necesită analize hormonale funcționale (cortizol, aldosteron,
+                  metanefrine)?
+                </li>
+                <li>
+                  Interval optim pentru follow-up imagistic (3 luni? 6 luni?) —
+                  corelat oncologic?
                 </li>
               </ul>
             </div>
@@ -1510,7 +1722,7 @@
         <div style="margin-top: 6px">
           <strong>Surse principale:</strong> <code>CONTEXT_MEDICAL.md</code>,
           <code>TODO.md</code>, <code>Dosar_Medical/*.json</code>, buletine
-          Bioclinica + Genesis.
+          Bioclinica + Genesis + raport CT 20.04.2026.
         </div>
         <div style="margin-top: 6px">
           <strong>Regulament actualizare:</strong> Regula 18 din
@@ -1524,21 +1736,24 @@
           >
           Informațiile prezentate nu înlocuiesc consultul medical. Orice decizie
           terapeutică se ia exclusiv împreună cu medicii curanți, pe baza
-          documentelor medicale originale. Unele detalii pot fi necomplete sau
-          în curs de clarificare.
+          documentelor medicale originale. Stadializarea indicată (T3-T4, N0-N1,
+          M0 probabil, Siewert II) este o estimare imagistică din CT 20.04.2026
+          — stadializarea definitivă necesită corelare cu biopsia și evaluarea
+          oncologului.
         </div>
       </footer>
     </div>
 
     <script>
       (function () {
-        var target = new Date("2026-04-20T17:00:00+03:00").getTime();
+        // Countdown estimativ către fereastra rezultat biopsie (24.04.2026 dimineața — cel mai optimist)
+        var target = new Date("2026-04-24T09:00:00+03:00").getTime();
         var el = document.getElementById("countdown");
         function tick() {
           var now = Date.now();
           var diff = target - now;
           if (diff <= 0) {
-            el.textContent = "În desfășurare / finalizat";
+            el.textContent = "În fereastra estimată";
             return;
           }
           var d = Math.floor(diff / 86400000);
@@ -2067,7 +2282,7 @@
         var metaEl = document.getElementById("alimentatie-meta");
         var embeddedEl = document.getElementById("md-alimentatie");
         var embedded = embeddedEl ? embeddedEl.textContent : "";
-        var lastRegen = "2026-04-18 18:22";
+        var lastRegen = "2026-04-22 16:00";
 
         function render(md, source) {
           contentEl.innerHTML = parseMarkdown(md);

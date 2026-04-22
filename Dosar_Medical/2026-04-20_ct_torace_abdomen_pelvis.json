@@ -1,0 +1,200 @@
+{
+  "_metadata": {
+    "schema_version": "2.0",
+    "nume_fisier": "2026-04-20_ct_torace_abdomen_pelvis.json",
+    "tip_document": "raport_imagistica_ct",
+    "specialitate": "Radiologie și Imagistică Medicală",
+    "data_document": "2026-04-20",
+    "sursa_pdf": "CT - Genesys.pdf",
+    "sursa_locatie": "documente_sursa/99_altele/",
+    "procesat_de": "Claude_Opus_4.7",
+    "data_procesare": "2026-04-22",
+    "ocr_quality": "good",
+    "confidence_overall": "high",
+    "flags": ["key_clinical_event", "stadializare_imagistica", "ascita_de_investigat"],
+    "notes": "Raport CT TAP N+SDC de stadializare pentru proces proliferativ esofagian. PDF digital (text extractabil nativ). Tumoră primară identificată: segment distal esofagian + joncțiune eso-gastrică (orificiu cardia + cadru gastric fundic) — clasificare probabilă Siewert II, de confirmat cu oncologul. Stadializare imagistică estimativă: T3-T4, N0-N1 (limfonoduli loco-regionali max 7.5 mm), M0 probabil. ATENȚIE CLINICĂ MAJORĂ: colecție fluidă perihepatică 15 mm + intrapelvină 28 mm = ASCITĂ — în context neoplazic esofagian avansat necesită excludere CARCINOMATOZĂ PERITONEALĂ (altfel ar fi stadiu IV). Discuție urgentă cu oncolog. Descoperiri colaterale: glandă suprarenală stângă hipertrofă heterogenă (incidentaloma? adenom?), leziune chistică subcutan perete toracic posterior 22/47.4 mm, colecție fluidă pulmonar bazal LID 9.3 mm, cardiomegalie cu ateromatoza calcara aorto-coronariană (consecvent cu antecedente SCA 2012 + stent IVA). Numele medicului ordonator apare în PDF ca 'NOUPHAL ABDUL VAHAB' (cu 'h' intercalat) — aceeași persoană cu Dr. Noufal Abdul Vahab din dosarul gastroenterologic 17.04.2026. Numele pacientului în PDF: 'PETRILA VIOREL MIHAI' (fără diacritice, prenume cu spațiu) — aceeași persoană (CNP corect)."
+  },
+  "pacient": {
+    "nume": "PETRILĂ",
+    "prenume": "VIOREL-MIHAI",
+    "nume_text_original_document": "PETRILA VIOREL MIHAI",
+    "cnp": "1590518024486",
+    "data_nasterii": "1959-05-18",
+    "varsta_la_data_document": 66,
+    "sex": "M",
+    "confidence_identificare": "high"
+  },
+  "examinare": {
+    "tip": "CT (Computer Tomography)",
+    "protocol": "TAP nativ + substanță de contrast iodat (N+SDC)",
+    "regiuni_scanate": ["torace", "abdomen", "pelvis"],
+    "data": "2026-04-20",
+    "numar_inregistrare": "284",
+    "medic_ordonator": "Dr. Noufal Abdul Vahab",
+    "medic_ordonator_text_original": "NOUPHAL ABDUL VAHAB",
+    "diagnostic_trimitere": "Proces proliferativ esofagian",
+    "doza_radiatie": {
+      "DLP": 2474,
+      "unitate": "mGy·cm²",
+      "valoare_text_original": "2474 mGyxcm2"
+    }
+  },
+  "diagnostic": [
+    {
+      "cod_icd10": null,
+      "descriere_oficiala": "Proces expansiv infiltrativ circumferențial la joncțiunea eso-gastrică (segment distal esofagian + orificiu cardia + cadru gastric fundic), cu extensie loco-regională",
+      "descriere_originala": "Ingrosare murala heterogen captanta de SDC decelata circumferential la nivelul segmentului distal esofagian, orificiul cardia cu cadrul gastric la nivel fundic, ce asociaza densificarea grasimii loco-regionale precum și limfonoduli de pana la 7.5 mm – proces expansiv cu aspect infiltrativ prezent, dificil de caracterizat dimensional",
+      "tip": "principal",
+      "confidence_ocr": "high",
+      "note": "Clasificare anatomică probabilă: Siewert II (joncțiune eso-gastrică) — a se confirma cu echipa oncologică. Dificil de caracterizat dimensional — tumora infiltrativă, fără masă net delimitabilă. Implică atât esofagul distal cât și fundul gastric → impact asupra protocolului terapeutic (FLOT preferat față de CROSS pentru componentă gastrică)."
+    },
+    {
+      "cod_icd10": null,
+      "descriere_oficiala": "Colecție fluidă perihepatică + intrapelvină (ascită)",
+      "descriere_originala": "Colecție fluida perihepatica cu lama maximala de 15 mm ce asociaza colecție fluida intrapelvina cu lama maximala de 28 mm",
+      "tip": "secundar",
+      "confidence_ocr": "high",
+      "note": "SEMNAL CLINIC MAJOR DE URMĂRIT: în context neoplazic esofagian avansat, ascita poate indica CARCINOMATOZĂ PERITONEALĂ (ar echivala cu stadiu IV). Diagnostic diferențial necesar: reactivă inflamatorie, hipoalbuminemie, tromboză venoasă, carcinomatoză. Necesită discuție URGENTĂ cu oncolog + posibil paracenteză diagnostică cu analiză citologică."
+    },
+    {
+      "cod_icd10": null,
+      "descriere_oficiala": "Glandă suprarenală stângă hipertrofă, heterogenă, fără leziuni focale",
+      "descriere_originala": "Glanda suprarenala stânga cu aspect hipertrof, heterogena, fără leziuni focale, de monitorizat",
+      "tip": "secundar",
+      "confidence_ocr": "high",
+      "note": "Descoperire incidentală. Diagnostic diferențial: incidentaloma benignă, adenom nefuncțional, hiperplazie reactivă, metastază (mai puțin probabilă fără leziune focală). Necesită evaluare endocrinologică — analize hormonale (cortizol, aldosteron, catecolamine) + follow-up imagistic."
+    },
+    {
+      "cod_icd10": "J94.8",
+      "descriere_oficiala": "Mică colecție fluidă pulmonară bazal LID",
+      "descriere_originala": "Colecție fluida cu lama maximala de 9.3 mm decelata pulmonar bazal LID",
+      "tip": "secundar",
+      "confidence_ocr": "high",
+      "note": "Colecție fluidă de dimensiune mică. Posibil pleural minor. De urmărit evolutiv."
+    },
+    {
+      "cod_icd10": null,
+      "descriere_oficiala": "Leziune chistică subcutană perete toracic posterior (spațiu intercostal cXI-cXII)",
+      "descriere_originala": "Leziune chistica rotund-ovalara incapsulata, bine definita, cu diametre de 22/47.4 mm decelata subcutan perete toracic posterior la nivelul spațiului intercostal cXI-cXII, a se corela clinic",
+      "tip": "secundar",
+      "confidence_ocr": "high",
+      "note": "Radiologul a cerut explicit „a se corela clinic" — necesită evaluare la palpare. Probabil benignă (chist sebaceu, lipom, chist epidermoid) — încapsulată, bine definită, rotund-ovalară."
+    },
+    {
+      "cod_icd10": "I51.7",
+      "descriere_oficiala": "Cardiomegalie + ateromatoză calcara aorto-coronarian",
+      "descriere_originala": "Cardiomegalie ce asociaza placi de ateromatoza calcara la nivel aorto-coronarian",
+      "tip": "secundar",
+      "confidence_ocr": "high",
+      "note": "Consecvent cu antecedentele de SCA ST+ 2012 + stent coronarian IVA (RX VISION 3.5×28 mm). Ateromatoza calcara prezentă și pe aorta abdominală + emergențe."
+    }
+  ],
+  "findings_imagistice": {
+    "torace": {
+      "trahee_bronsii_principale": "permeabile",
+      "parenchim_pulmonar": {
+        "condensari": "absente",
+        "procese_expansive": "absente",
+        "fibroza_pulmonara": "absentă",
+        "emfizem_pulmonar": "absent",
+        "tulburari_ventilatie": "posterobazal LID și LIS"
+      },
+      "leziuni_nodulare": "câteva leziuni micronodulare calcare sechelare apical LSD, diametru maxim 6.8 mm",
+      "adenopatii": {
+        "mediastinale": "absente",
+        "hilare": "absente",
+        "axilare": "absente"
+      },
+      "colectii_fluide_torace": {
+        "pulmonar_bazal_LID": "9.3 mm",
+        "intrapericardice": "absente"
+      },
+      "cord_si_vase_mari": {
+        "cardiomegalie": "prezentă",
+        "ateromatoza_aorto_coronariana": "plăci calcare prezente",
+        "artera_pulmonara": "calibru normal, permeabilă",
+        "aorta_toracala": "calibru normal, permeabilă"
+      },
+      "tiroida": "aspect normal dimensional, omogen captantă de SDC",
+      "leziune_subcutana_perete_toracic": "chist rotund-ovalar încapsulat bine definit, 22/47.4 mm, spațiu intercostal cXI-cXII, a se corela clinic"
+    },
+    "abdomen_pelvis": {
+      "esofag_jonctiune_gastro_esofagiana": {
+        "localizare": "segment distal esofagian + orificiu cardia + cadru gastric la nivel fundic",
+        "aspect": "îngroșare murală heterogen captantă de SDC, circumferențial, proces expansiv cu aspect infiltrativ prezent",
+        "extensie_loco_regionala": "densificarea grăsimii loco-regionale",
+        "limfonoduli_loco_regionali": "până la 7.5 mm",
+        "caracterizare_dimensionala": "dificil de caracterizat dimensional"
+      },
+      "ficat": "dimensiuni și contur normale, fără prize patologice de SDC",
+      "colectii_fluide_abdomen_pelvis": {
+        "perihepatica": "15 mm",
+        "intrapelvina": "28 mm",
+        "interpretare": "ascită — posibil carcinomatoză peritoneală de exclus"
+      },
+      "cai_biliare": {
+        "colecist": "fără îngroșări parietale, fără calculi evidentiabili CT",
+        "intra_extrahepatice": "fără dilatări"
+      },
+      "vase_abdominale": {
+        "ax_spleno_portal_celiaco_mezenteric": "permeabil",
+        "aorta_abdominala_VCI": "calibru normal, permeabile",
+        "ateromatoza": "placi calcare mural supraetajat pe aorta abdominală + emergențe"
+      },
+      "pancreas": "aspect normal",
+      "splina": "aspect normal",
+      "glanda_suprarenala_stanga": "hipertrofă, heterogenă, fără leziuni focale — de monitorizat",
+      "glanda_suprarenala_dreapta": "aspect normal",
+      "rinichi": "bilateral dimensiuni și IP normale, funcționali, secreție și excreție prezentă, fără calculi radioopaci, fără dilatații pielo-caliceale",
+      "vezica_urinara": "fără modificări parietale sau intracavitare",
+      "prostata": "aspect normal CT",
+      "adenopatii_abdomino_pelvine": "absente",
+      "modificari_osoase_suspecte_malignitate": "absente",
+      "coloana_vertebrala": "modificări degenerative disco-vertebrale prezente supraetajat toraco-lombar"
+    }
+  },
+  "stadializare_imagistica_estimata": {
+    "T": "T3-T4 estimat (proces expansiv infiltrativ circumferențial cu extensie loco-regională)",
+    "N": "N0-N1 estimat (limfonoduli loco-regionali max 7.5 mm — sub pragul standard <10 mm, dar în context neoplazic pot fi relevanți pentru stadializare)",
+    "M": "M0 probabil (fără metastaze hepatice, pulmonare, osoase, ganglionare distale vizibile la CT)",
+    "confidence": "estimativă",
+    "note_critica": "Ascita perihepatică + intrapelvină necesită excludere CARCINOMATOZĂ PERITONEALĂ (ar fi stadiu IV indiferent de T și N). De discutat URGENT cu oncolog. Stadializarea definitivă necesită: (1) rezultat biopsie — tip histologic; (2) posibil PET-CT pentru activitate metabolică; (3) posibil laparoscopie diagnostică pentru excluderea carcinomatozei peritoneale și prelevare citologie peritoneală.",
+    "clasificare_Siewert_probabila": "II (joncțiune eso-gastrică propriu-zisă, tumoră centrată pe cardia cu extensie către esofagul distal și fundul gastric)"
+  },
+  "conluzii_raport": [
+    "Ingrosare murala heterogen captanta de SDC decelata circumferential la nivelul segmentului distal esofagian, orificiul cardia cu cadrul gastric la nivel fundic, ce asociaza densificarea grasimii loco-regionale precum si limfonoduli de pana la 7.5 mm – proces expansiv cu aspect infiltrativ prezent, dificil de caracterizat dimensional",
+    "Glanda suprarenala stânga cu aspect hipertrof, heterogena, fără leziuni focale, de monitorizat",
+    "Cardiomegalie ce asociaza placi de ateromatoza calcara la nivel aorto-coronarian",
+    "Colecție fluida cu lama maximala de 9.3 mm decelata pulmonar bazal LID",
+    "Colecție fluida perihepatica cu lama maximala de 15 mm ce asociaza colecție fluida intrapelvina cu lama maximala de 28 mm"
+  ],
+  "recomandari": [
+    "Consult oncolog digestiv URGENT (stadiu infiltrativ + ascită de evaluat — poate modifica tot protocolul terapeutic)",
+    "Corelare cu rezultat biopsie esofagiană (în lucru la Bioclinica Arad, estimat 24.04-01.05.2026)",
+    "Posibil PET-CT sau laparoscopie diagnostică cu citologie peritoneală pentru excluderea carcinomatozei (decis de oncolog)",
+    "Evaluare endocrinologică pentru glanda suprarenală stângă (analize hormonale bazale: cortizol 8AM, aldosteron/renină, metanefrine plasmatice + follow-up imagistic)",
+    "Corelare clinică leziune chistică subcutan perete toracic posterior (palpare, eventual ecografie superficială)",
+    "Monitorizare evolutivă colecție fluidă pulmonar bazal LID"
+  ],
+  "medici_unitati": {
+    "medic_examinator_1": {
+      "nume": "Dr. Buie Florian-Laurențiu",
+      "cod_parafa": "A11818",
+      "specialitate": "medic primar radiologie și imagistică medicală"
+    },
+    "medic_examinator_2": {
+      "nume": "Dr. Candea Florin-Vasile",
+      "cod_parafa": "F52510",
+      "specialitate": "medic primar radiologie și imagistică medicală"
+    },
+    "medic_ordonator": "Dr. Noufal Abdul Vahab",
+    "unitate": "Genesis Medical Clinic Micălaca",
+    "denumire_in_document": "Genesys",
+    "specialitate_unitate": "Radiologie și Imagistică Medicală"
+  },
+  "numere_referinta": {
+    "numar_inregistrare_examinare": "284",
+    "numar_bilet_trimitere_CT": "BCTAP 0631727",
+    "cod_diagnostic_trimitere": "95"
+  }
+}

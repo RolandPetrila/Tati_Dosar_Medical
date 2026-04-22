@@ -4,6 +4,58 @@
 
 ---
 
+## 2026-04-22 16:00 — Rezultat CT 20.04.2026 integrat + clarificare leziune esofag „circumferențial nedepășibil endoscopic"
+
+**Tip:** ACTUALIZARE MEDICALĂ MAJORĂ (rezultat investigație cheie + clarificare interpretare document sursă).
+
+**Declanșator:** user (Roland Petrilă) a solicitat:
+
+1. Extragere date din `Dosar_Medical/documente_sursa/99_altele/CT - Genesys.pdf` (raport CT TAP efectuat luni 20.04.2026 17:00 la Genesis Medical Clinic Micălaca) și actualizare TODO.md + CONTEXT_MEDICAL.md + DASHBOARD.html cu starea reală
+2. Confirmare explicită că varianta corectă pentru leziunea esofagiană din endoscopie 17.04.2026 este „circumferențial **nedepășibilă** endoscopic" (rezolvând ambiguitatea „depasibila vs nedepasibila" din sesiunea 19.04.2026 04:07)
+
+**Rezultate CT 20.04.2026 — extras structurat:**
+
+- **Tumora primară:** îngroșare murală heterogen captantă de SDC circumferențial la segmentul distal esofagian + orificiu cardia + cadru gastric fundic → **Siewert II probabil** (joncțiune eso-gastrică). Proces expansiv infiltrativ, dificil de caracterizat dimensional.
+- **Stadializare imagistică estimativă:** T3-T4, N0-N1 (limfonoduli loco-regionali max 7.5 mm, sub pragul <10 mm), **M0 probabil** (fără metastaze hepatice, pulmonare, osoase, ganglionare distale vizibile).
+- **⚠ Semnal major:** **ascită** perihepatică 15 mm + intrapelvină 28 mm — în context neoplazic esofagian avansat necesită excludere **carcinomatoză peritoneală** (ar echivala cu stadiu IV, schimbând protocolul terapeutic).
+- **Descoperire incidentală 1:** glandă suprarenală stângă hipertrofă, heterogenă, fără leziuni focale — „de monitorizat" (necesită evaluare endocrinologică).
+- **Descoperire incidentală 2:** leziune chistică subcutană 22/47.4 mm perete toracic posterior cXI-cXII, „a se corela clinic" (probabilă benignă).
+- **Alte findings:** colecție fluidă pulmonar bazal LID 9.3 mm, cardiomegalie + ateromatoza calcara aorto-coronariană (consecvent cu SCA 2012 + stent IVA), ateromatoza aortei abdominale.
+- **Medici examinator:** Dr. Buie Florian-Laurențiu (cod parafă A11818) + Dr. Candea Florin-Vasile (cod parafă F52510), ambii medici primari radiologie și imagistică medicală.
+- **Doza radiație:** DLP = 2474 mGy·cm².
+
+**Fișiere create în această sesiune:**
+
+- `Dosar_Medical/2026-04-20_ct_torace_abdomen_pelvis.json` — NOU — extras complet structurat al raportului CT conform schema v2.0, cu câmpuri extinse pentru findings imagistice (torace + abdomen_pelvis), stadializare imagistică estimativă, diagnostic array cu cod ICD-10, recomandări explicite din raport.
+- `Dosar_Medical/2026-04-20_ct_torace_abdomen_pelvis.json.meta.json` — NOU — chain-of-custody (Regula 14): source_document, digitized_date, transcriber, OCR quality, key_clinical_events.
+
+**Fișiere modificate:**
+
+- `Dosar_Medical/2026-04-17_buletin_gastroenterologie.json` — adăugată secțiune `examinare_endoscopica` cu detalii clinice ale endoscopiei (localizare 2/3 inferioară, aspect circumferențial, depășibilitate = NU, biopsie prelevată); adăugat câmp `descriere_clinica_completa_originala` cu textul PDF literal; update `_metadata.notes` cu clarificarea user 22.04.2026; flag nou `user_clarified_2026-04-22`.
+- `CONTEXT_MEDICAL.md` v1.1 → v1.2 — antet actualizat; secțiunea 2 (Status clinic) rescrisă cu stadializare imagistică + descoperiri colaterale + acțiuni în curs; secțiunea 7.2 (Endoscopie) extinsă cu tabel findings + impact clinic al „nedepășibilității"; secțiunea 7.5 (CT 20.04.2026) NOUĂ cu findings detaliate structurate pe sisteme + recomandări; secțiunea 8 rescrisă (8.1 Consult oncolog URGENT, 8.2 Reluare Jamesi AZI, 8.3 Evaluare endocrinologică); secțiunea 9 (Echipă medicală) extinsă cu radiologii + endocrinolog; secțiunea 10 (Evaluare preliminară) rescrisă post-CT cu ipoteze diagnostice revizuite + stadializare clinică probabilă FLOT vs. paliativ; secțiunea 12 (Rezumat 3 linii) actualizată. Backup pre-modificare: `arhiva/context_medical_versiuni/CONTEXT_MEDICAL_pre-CT-stadializare_2026-04-22_1600.md`.
+- `TODO.md` — antet actualizat; Calendar actualizat (CT ✅ Finalizat, Reluare Jamesi AZI, Consult oncolog URGENT); secțiunea P0 reorganizată cu 3 task-uri noi în frunte (Consult oncolog URGENT, Analiză rezultat CT familiei, Reluare Jamesi) + task-urile vechi marcate COMPLET; secțiune „Acțiuni noi deschise de rezultat CT 20.04.2026" adăugată (consult oncolog, analiză rezultate, verificare CD DICOM, evaluare endocrinologică, corelare clinică leziune chistică, monitorizare colecție pulmonară); secțiunea „Întrebări pregătite" rescrisă cu 15+ întrebări noi pentru oncolog (ascită, Siewert, FLOT/CROSS, markeri moleculari, RAMIE, trialuri). Backup pre-modificare: `arhiva/TODO_pre-CT-stadializare_2026-04-22_1600.md`.
+- `DASHBOARD.html` — REGENERAT integral (Regula 18 — declanșatori: investigație CT efectuată + rezultat primit + info medicală nouă majoră + clarificare diagnostic). Modificări-cheie: header sub-title actualizat cu stadializare preliminară; countdown bar schimbat de la „CT 20.04" la „Rezultat biopsie" (target 2026-04-24); card Status clinic rescris cu stadializare + ascită + consult oncolog URGENT + alerturi vești bune/atenție; card Analize extins cu 6 rânduri noi findings CT; timeline adăugat CT 20.04.2026 (crit); echipa medicală extinsă cu Dr. Buie + Dr. Candea Radiologie; card „Calendar CT" redenumit „Cronologie post-CT" cu status actualizat; acțiuni P0 rescrise; întrebări oncolog extinse cu 15 întrebări noi specifice contextului post-CT. „Ultima generare" → 22 aprilie 2026 16:00. Embedded ALIMENTATIE.md păstrat neatins.
+
+**Interpretarea ambiguității „depasibila" (clarificată definitiv):**
+
+Textul contopit din PDF endoscopie „La 2/3 inferioara esofagului prezinta proces proliferativ circumferentialne depasibila endoscopica(Bio)" era ambiguu din cauza lipsei de spațiu între „circumferential" și „ne-depasibila". User (Roland) a confirmat explicit pe 22.04.2026 varianta (b) „circumferențial NEDEPĂȘIBILĂ endoscopic" (= stenoză aproape completă, endoscopul nu a trecut dincolo de leziune). Interpretare coroborată și de raportul CT 20.04.2026 care descrie procesul ca „infiltrativ" și „dificil de caracterizat dimensional" (compatibil cu stenoză strânsă). Ambele JSON-uri afectate (endoscopie + CT) includ acum descrierea clinică completă literală + nota de clarificare explicit marcată cu data 2026-04-22.
+
+**Conformitate reguli:**
+
+- Regula 7 aplicată: user a confirmat explicit interpretarea ambiguă înainte de actualizare
+- Regula 8 aplicată: textul original OCR păstrat literal în JSON (câmpul `descriere_clinica_completa_originala` + `examinare_endoscopica.text_original_document`), interpretarea e adnotată separat
+- Regula 10 aplicată: 3 backup-uri create pre-modificare (CONTEXT_MEDICAL, TODO, JSON gastroenterologie) cu slug `pre-CT-stadializare_2026-04-22_1600`
+- Regula 11 aplicată: toate datele temporale marcate cu anul complet (2026-04-20, 2026-04-22)
+- Regula 14 aplicată: `.meta.json` pentru CT cu chain-of-custody complet
+- Regula 16 aplicată: commit + push la finalul sesiunii
+- Regula 16.7 aplicată: `date` rulat pentru timestamp fresh la începutul sesiunii (16:00 EEST)
+- Regula 17 aplicată: marcaje implicite în CONTEXT_MEDICAL (stadializare „estimativă", „probabil", ascită „de elucidat")
+- Regula 18 aplicată: DASHBOARD.html regenerat integral conform declanșatorilor activi (CT efectuat + rezultat primit + info medicală nouă)
+
+**Făcut de:** Claude Code (Opus 4.7, 1M context).
+
+---
+
 ## 2026-04-19 04:07 — Ghid complet cancer esofagian (DOCX) — document informativ pentru familie
 
 **Tip:** DOCUMENT GENERAT pentru familie (Regula 17 aplicată sistematic, marcaje certitudine pe fiecare afirmație factuală).

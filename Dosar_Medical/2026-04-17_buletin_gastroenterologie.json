@@ -10,11 +10,15 @@
     "procesat_de": "Gemini",
     "data_procesare": "2026-04-17",
     "revizuit_de": "Claude_Opus_4.7",
-    "data_revizuire": "2026-04-18",
+    "data_revizuire": "2026-04-22",
     "ocr_quality": "good",
     "confidence_overall": "high",
-    "flags": ["migrated_from_v1", "key_clinical_event"],
-    "notes": "Document-cheie: suspiciunea de proces proliferativ esofagian a fost ridicată la această endoscopie, declanșând trimiterea la CT de stadializare (bilet BCTAP 0631727) și biopsia în lucru. Polipectomia colonului descendent e programată pentru revizită."
+    "flags": [
+      "migrated_from_v1",
+      "key_clinical_event",
+      "user_clarified_2026-04-22"
+    ],
+    "notes": "Document-cheie: suspiciunea de proces proliferativ esofagian a fost ridicată la această endoscopie, declanșând trimiterea la CT de stadializare (bilet BCTAP 0631727, efectuat 20.04.2026) și biopsia în lucru. Polipectomia colonului descendent e programată pentru revizită. CLARIFICARE 2026-04-22 (confirmată explicit de user Roland Petrilă): interpretarea corectă a textului PDF 'circumferentialne depasibila endoscopica' este 'CIRCUMFERENȚIAL NEDEPĂȘIBILĂ ENDOSCOPIC' — adică leziunea este (a) circumferențială și (b) nu a putut fi depășită de endoscop (stenoză aproape completă). Această clarificare este confirmată suplimentar de raportul CT din 20.04.2026 care descrie procesul ca 'infiltrativ' și 'dificil de caracterizat dimensional'."
   },
   "pacient": {
     "nume": "PETRILĂ",
@@ -29,11 +33,12 @@
   "diagnostic": [
     {
       "cod_icd10": null,
-      "descriere_oficiala": "Proces proliferativ esofagian (suspiciune — biopsie în lucru)",
+      "descriere_oficiala": "Proces proliferativ esofagian circumferențial la 2/3 inferioară, nedepășibil endoscopic (suspiciune — biopsie în lucru)",
       "descriere_originala": "PROCES PROLIFERATIV ESOFAGIAN",
+      "descriere_clinica_completa_originala": "La 2/3 inferioara esofagului prezinta proces proliferativ circumferentialne depasibila endoscopica(Bio)",
       "tip": "principal",
       "confidence_ocr": "high",
-      "note": "Diagnostic de certitudine depinde de rezultatul histopatologic al biopsiei. Nu se atribuie cod ICD-10 oncologic fără confirmare."
+      "note": "Diagnostic de certitudine depinde de rezultatul histopatologic al biopsiei. Nu se atribuie cod ICD-10 oncologic fără confirmare. CLARIFICARE USER 2026-04-22: textul contopit 'circumferentialne depasibila' se interpretează ca 'circumferențial nedepășibilă' (stenoză aproape completă, endoscopul nu a trecut dincolo de leziune). Localizarea '2/3 inferioară' + extensia descrisă la CT (20.04.2026) către orificiul cardia și fundul gastric sugerează cancer de joncțiune eso-gastrică (Siewert II probabil)."
     },
     {
       "cod_icd10": "K63.5",
@@ -57,6 +62,21 @@
       "confidence_ocr": "high"
     }
   ],
+  "examinare_endoscopica": {
+    "esofag": {
+      "localizare_leziune": "2/3 inferioară a esofagului",
+      "aspect": "proces proliferativ circumferențial",
+      "depasibilitate_endoscopica": "NU (nedepășibil endoscopic — stenoză aproape completă, endoscopul nu a trecut dincolo de leziune)",
+      "biopsie_prelevata": true,
+      "text_original_document": "La 2/3 inferioara esofagului prezinta proces proliferativ circumferentialne depasibila endoscopica(Bio)",
+      "confidence_ocr": "high",
+      "note_clarificare": "Text contopit în PDF — interpretat ca 'circumferential ne-depasibila endoscopic' (= nedepășibil). Confirmat explicit de user Roland Petrilă pe 2026-04-22, coroborat cu descrierea CT din 20.04 (proces 'infiltrativ', 'dificil de caracterizat dimensional')."
+    },
+    "colon": {
+      "descendent": "polip (recomandare polipectomie la revizită)",
+      "hemoroizi": "interni grad II"
+    }
+  },
   "analize_laborator": [],
   "tratament": [],
   "recomandari": [
