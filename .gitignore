@@ -24,6 +24,13 @@ $RECYCLE.BIN/
 *.swo
 *~.tmp
 
+# Microsoft Office lock files (apar cand un DOCX/XLSX e deschis in Word/Excel)
+~$*.docx
+~$*.xlsx
+~$*.pptx
+~$*.doc
+~$*.xls
+
 # IDE local
 .vscode/
 .idea/
