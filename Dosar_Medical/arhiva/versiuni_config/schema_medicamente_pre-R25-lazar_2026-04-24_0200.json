@@ -17,10 +17,9 @@
       "migrated_from_v1",
       "contains_manuscript",
       "corrected_patient_name",
-      "ocr_errors_documented",
-      "r25_applied_2026-04-24"
+      "ocr_errors_documented"
     ],
-    "notes": "Sursa: talonul de recomandare scris de mână (foto) + foto cutii medicamente Aspenter, Concor, Triplixam, Jamesi. Pe manuscris medicul a scris numele pacientului ca 'PETRICĂ VIOREL' (transcriere eronată de medic — Regula 13). Corectat la 'PETRILĂ VIOREL-MIHAI' conform C.I. + restul dosarului (concordanță perfectă a medicației cu istoricul pacientului: Aspenter post-stent 2012 + Concor/Triplixam HTA + Jamesi=sitagliptin+metformin pentru diabet). Medic prescriptor NEIDENTIFICAT (Regula 25 aplicată 2026-04-24: nume parțial ilizibil pe manuscris, refuz atribuire aproximativă; tracking în Dosar_Medical/EXTRAGERI_INCOMPLETE.md). O recomandare suplimentară (linia 4 pe talon) e tăiată cu marker albastru = anulată."
+    "notes": "Sursa: talonul de recomandare scris de mână (foto) + foto cutii medicamente Aspenter, Concor, Triplixam, Jamesi. Pe manuscris medicul a scris numele pacientului ca 'PETRICĂ VIOREL' (transcriere eronată de medic — Regula 13). Corectat la 'PETRILĂ VIOREL-MIHAI' conform C.I. + restul dosarului (concordanță perfectă a medicației cu istoricul pacientului: Aspenter post-stent 2012 + Concor/Triplixam HTA + Jamesi=sitagliptin+metformin pentru diabet). Medic: Dr. LAZĂR [...nume parțial ilizibil]. O recomandare suplimentară (linia 4 pe talon) e tăiată cu marker albastru = anulată."
   },
   "pacient": {
     "nume": "PETRILĂ",
@@ -88,9 +87,8 @@
   ],
   "recomandari": [],
   "medici_unitati": {
-    "medic_curant": "NEIDENTIFICAT",
-    "confidence_medic": "neaplicabil_r25",
-    "unitate": "neidentificată",
-    "note_r25": "Nume ilizibil pe manuscris — conform Regula 25 (aplicată 2026-04-24) numele NU s-a integrat în dosar structurat. Tracking în Dosar_Medical/EXTRAGERI_INCOMPLETE.md. Clarificare telefonică cu familia = TODO.md P1."
+    "medic_curant": "Dr. LAZĂR [...nume parțial ilizibil pe manuscris]",
+    "confidence_medic": "low",
+    "unitate": "de identificat"
   }
 }

@@ -168,7 +168,7 @@ Confirmat prin tratament antihipertensiv triplu:
 
 ## 4. Medicație zilnică
 
-Schema datată **10 noiembrie 2025**. Medic prescriptor **NEIDENTIFICAT** — manuscris parțial ilizibil, conform Regula 25 numele NU s-a integrat în dosar (v. `Dosar_Medical/EXTRAGERI_INCOMPLETE.md`). Clarificare telefonică cu familia — vezi `TODO.md` P1.
+Schema datată **10 noiembrie 2025**, prescrisă de Dr. LAZĂR [nume parțial ilizibil pe manuscris — de identificat].
 
 | Medicament                                                     | Indicație                                                | Doză                  | Ritm                  | Note                                                                      |
 | -------------------------------------------------------------- | -------------------------------------------------------- | --------------------- | --------------------- | ------------------------------------------------------------------------- |
@@ -181,7 +181,7 @@ Schema datată **10 noiembrie 2025**. Medic prescriptor **NEIDENTIFICAT** — ma
 
 **Suplimente alimentare:** de verificat cu familia.
 
-**Sursă:** `Dosar_Medical/2025-11-10_schema_medicamente.json` (manuscris parțial + fotografii cutii). Medicamentele, dozele și ritmul de administrare sunt `[CERT]` (fotografii cutii + manuscris lizibil pentru ritm). Numele medicului prescriptor NU e integrat conform Regula 25 (manuscris parțial ilizibil — tracking în `Dosar_Medical/EXTRAGERI_INCOMPLETE.md`).
+**Sursă:** `Dosar_Medical/2025-11-10_schema_medicamente.json` (manuscris + fotografii cutii).
 
 ### Interacțiune medicamentoasă documentată — de urmărit
 
@@ -336,8 +336,8 @@ Efectuată concomitent cu endoscopia la Genesis Medical Clinic Arad (Dr. Noufal 
 | **Radiologie și Imagistică (CT 20.04.2026)**                   | **Dr. Buie Florian-Laurențiu (cod A11818)** + **Dr. Candea Florin-Vasile (cod F52510)** — ambii medici primari | **Genesis Medical Clinic Micălaca**        | Prin Genesis         |
 | Anatomopatologie (biopsie esofag)                              | De identificat (Bioclinica Arad)                                                                               | Bioclinica Arad                            | `arad@bioclinica.ro` |
 | Cardiologie (SCA ST+ 2012)                                     | Echipa Vichy, Franța — de identificat pe PDF                                                                   | Centre Hospitalier de Vichy (de confirmat) | —                    |
-| Cardiologie / Medicină internă (prescriere actuală 10.11.2025) | **NEIDENTIFICAT** (manuscris parțial ilizibil — v. R25 + `EXTRAGERI_INCOMPLETE.md`)                            | De identificat                             | —                    |
-| Diabetologie / prescriere Jamesi                               | **NEIDENTIFICAT** (probabil același prescriptor cu schema 10.11.2025 — v. `EXTRAGERI_INCOMPLETE.md`)           | De identificat                             | —                    |
+| Cardiologie / Medicină internă (prescriere actuală 10.11.2025) | Dr. LAZĂR [nume parțial ilizibil]                                                                              | De identificat                             | —                    |
+| Diabetologie / prescriere Jamesi                               | Dr. LAZĂR (probabil, din prescrierea 10.11.2025)                                                               | De identificat                             | —                    |
 | Medic de familie                                               | De identificat                                                                                                 | De identificat                             | —                    |
 | Chirurgie Generală (hernie 28.11.2025)                         | De identificat din documentul original                                                                         | Secția Chirurgie Generală II               | —                    |
 | Urologie / Gastroenterologie (consult 28.10.2025)              | De identificat                                                                                                 | De identificat                             | —                    |

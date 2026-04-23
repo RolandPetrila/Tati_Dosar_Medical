@@ -4,6 +4,98 @@
 
 ---
 
+## 2026-04-24 02:00 — Adăugare Regula 25 (prioritate claritate > completitudine la surse indescifrabile) + retroactive LAZĂR
+
+**Tip:** REGULĂ NOUĂ + CORECȚIE RETROACTIVĂ — extensie la R23 în direcția „la documente indescifrabile, IGNORĂ decât să introduci info eronate".
+
+**Context declanșator:** feedback user după batch R23+R24 (01:31): „fisierele scrise cu scris de mana si care nu se pot descifra , mai bine le ignoram decat sa introducem in sistem informatii eronate". Cerere suplimentară: fișier de tracking vizibil (`EXTRAGERI_INCOMPLETE.md`) pentru ca orice AI/user care deschide proiectul să știe ce NU s-a extras și să nu presupună că info lipsește accidental.
+
+**Decizie user (post-AskUserQuestion 02:00, 3 întrebări):**
+
+- **Q1 — Text R25:** opțiunea 1 (recommended, regulă separată) cu addendum „tracking obligatoriu în `EXTRAGERI_INCOMPLETE.md`"
+- **Q2 — Tratament retroactiv Dr. LAZĂR (manuscris 2025-11-10):** opțiunea 1 (scot numele, înlocuire neutră — „NEIDENTIFICAT" + referință R25)
+- **Q3 — Ordine execuție:** opțiunea 1 (R25 + retroactive + commit + audit, secvență continuă) + user cere raport locație surse înainte de audit
+
+**Fișiere modificate:**
+
+| Fișier                                             | Operație                                                                                                        |
+| -------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- |
+| `Dosar_Medical/CLAUDE.md`                          | ADĂUGARE Regula 25 după R23, versiune 12.1 → 12.2                                                               |
+| `CLAUDE.md` (auto-loader)                          | Hartă cu R25, versiune 12.1 → 12.2                                                                              |
+| `REGULI_CLAUDE_CODE.md`                            | Versiune 12.1 → 12.2 (aliniere; fără modificări body)                                                           |
+| `Dosar_Medical/EXTRAGERI_INCOMPLETE.md`            | FIȘIER NOU — tracking elemente ne-extrase, prima intrare schema medicamente (LAZĂR + linia 4 tăiată)            |
+| `CONTEXT_MEDICAL.md`                               | RETROACTIVE — 3 apariții LAZĂR înlocuite cu „NEIDENTIFICAT (R25)" (§4 Medicație + §9 Echipă medicală × 2)       |
+| `Dosar_Medical/2025-11-10_schema_medicamente.json` | RETROACTIVE — LAZĂR scos din body (`_metadata.notes` + `medici_unitati`), adăugat flag `r25_applied_2026-04-24` |
+| `TODO.md`                                          | Reformulare task P1 LAZĂR → „Identificare medic prescriptor schema 10.11.2025 (post-R25)"                       |
+| `CHANGELOG.md`                                     | Această intrare                                                                                                 |
+| `SESSION_LOG.md`                                   | Intrare sesiune nouă                                                                                            |
+
+**Backup-uri pre-modificare (Regula 10):**
+
+- `Dosar_Medical/arhiva/versiuni_config/CLAUDE_DOSAR_pre-R25_2026-04-24_0200.md`
+- `Dosar_Medical/arhiva/versiuni_config/CLAUDE_pre-harta-R25_2026-04-24_0200.md`
+- `Dosar_Medical/arhiva/context_medical_versiuni/CONTEXT_MEDICAL_pre-R25-lazar-retroactive_2026-04-24_0200.md`
+- `Dosar_Medical/arhiva/versiuni_config/schema_medicamente_pre-R25-lazar_2026-04-24_0200.json`
+- `Dosar_Medical/arhiva/TODO_pre-R25-lazar_2026-04-24_0200.md`
+
+**NEATINSE (deliberate):**
+
+- `DASHBOARD.html` (5 apariții LAZĂR) — regenerare la finalul sesiunii (post-audit, Regula 18). Modificarea nu e medicală (doar atribuire prescriptor), nu declanșează regen intermediar.
+- `Dosar_Medical/cercetari/SINTEZA_CLINICI_ONCOLOGIE.md` — conține „Dr. Gabriel Lazăr" (chirurg oncolog Cluj, **altă persoană** — irelevant pentru retroactive actual)
+- `.meta.json` al manuscrisului (`documente_sursa/08_schema_tratament/...meta.json`) — lasă istoric procesare inițială intact (chain of custody)
+- Regulile 1-10 din `REGULAMENT.md`
+- Regulile 6-24 existente (doar adaug R25 nouă)
+
+**Next step (BLOCAT pe aprobare user):** auditul general `AUDIT_EXTRAGERE_2026-04-24.md` pe TOATE documentele sursă vs JSON vs `CONTEXT_MEDICAL.md`. User cere preventiv raport locație surse disponibile pentru verificare completitudine.
+
+---
+
+## 2026-04-24 01:31 — Adăugare Regula 23 + Regula 24 (extragere integrală documente medicale + propagare integrală JSON → `CONTEXT_MEDICAL.md`)
+
+**Tip:** REGULI NOI — răspuns incident 2026-04-23 (omisiuni CT 20.04.2026 în `CONTEXT_MEDICAL.md`).
+
+**Context declanșator:** `Dosar_Medical/2026-04-20_ct_torace_abdomen_pelvis.json` conținea elemente (tulburări ventilație posterobazal LID+LIS, noduli apicali sechelari LSD max 6.8 mm, modificări degenerative disco-vertebrale toraco-lombar, aspecte normale multiple — colecist/pancreas/splină/prostată/suprarenală dreaptă/tiroidă/aortă/artera pulmonară, doza radiație DLP 2474 mGy·cm²) **OMISE din `CONTEXT_MEDICAL.md`**. Root cause: filtrare subiectivă a AI pe criteriu „relevanță clinică" — elemente clasificate greșit ca „de fundal". Impact clinic: tulburările de ventilație + nodulii apicali sunt relevanți pre-esofagectomie (spirometrie, kinetoterapie respiratorie, anamneză TBC vechi).
+
+**Feedback user:** AI nu are autoritate clinică să decidă ce element medical e relevant. Extragere integrală documente sursă → JSON + propagare integrală JSON → `CONTEXT_MEDICAL.md`.
+
+**Decizie user (post-AskUserQuestion 2026-04-24 01:31, 2 runde):**
+
+- **Q1 — Variantă regulament:** R23 + R24 (extragere + propagare)
+- **Q2 — Plasare:** split contextual — R23 în `Dosar_Medical/CLAUDE.md` (contextual), R24 în `REGULI_CLAUDE_CODE.md` (always-on)
+- **Q3 — Format audit:** raport unic `AUDIT_EXTRAGERE_2026-04-24.md` la rădăcina proiectului (de generat separat post-regulament)
+- **Q4 — Mod execuție:** batch pași 1-6 + STOP înainte de pasul 7 (audit)
+
+**Fișiere modificate:**
+
+| Fișier                    | Operație                                                                                             |
+| ------------------------- | ---------------------------------------------------------------------------------------------------- |
+| `Dosar_Medical/CLAUDE.md` | ADĂUGARE Regula 23 „Extragere integrală din documente medicale sursă" după R15; versiune 12.0 → 12.1 |
+| `REGULI_CLAUDE_CODE.md`   | ADĂUGARE Regula 24 „Propagare integrală JSON → `CONTEXT_MEDICAL.md`" după R22; versiune 12.0 → 12.1  |
+| `CLAUDE.md` (auto-loader) | UPDATE tabel hartă reguli cu R23 + R24; versiune 12.0 → 12.1                                         |
+| `CHANGELOG.md`            | Această intrare                                                                                      |
+| `SESSION_LOG.md`          | Intrare sesiune                                                                                      |
+
+**Backup-uri pre-modificare (Regula 10):**
+
+- `Dosar_Medical/arhiva/versiuni_config/CLAUDE_DOSAR_pre-R23_2026-04-24_0131.md` (8,500 bytes)
+- `Dosar_Medical/arhiva/versiuni_config/REGULI_CLAUDE_CODE_pre-R24_2026-04-24_0131.md` (16,645 bytes)
+- `Dosar_Medical/arhiva/versiuni_config/CLAUDE_pre-harta-R23-R24_2026-04-24_0131.md` (7,693 bytes)
+
+**NEATINSE (deliberate):**
+
+- Regulile 1-10 din `REGULAMENT.md`
+- Regulile existente 8, 9, 10, 11, 13, 14, 15 din `Dosar_Medical/CLAUDE.md` (NEMODIFICATE structural)
+- Regulile existente 6, 7, 12, 16, 17, 18, 19, 20, 21, 22 din `REGULI_CLAUDE_CODE.md` (NEMODIFICATE structural)
+- `CONTEXT_MEDICAL.md` (audit urmează la pasul 7)
+- JSON-urile din `Dosar_Medical/` (audit urmează)
+- `Documentatie_Initiala/HISTORY_CLAUDE_MD.md` + `REGULI_DETALIATE.md`
+
+**Next step (BLOCAT pe aprobare user):** generare `AUDIT_EXTRAGERE_2026-04-24.md` la rădăcină cu tabel rezumat comparativ (JSON vs PDF sursă vs `CONTEXT_MEDICAL.md`) pentru toate documentele medicale.
+
+**Observație semnalată user (Regula 21, zero-ciorne):** `Documentatie_Initiala/CLAUDE.md` (v1 din 2026-04-17) + `Documentatie_Initiala/CHANGELOG.md` (doar intrare 2026-04-17) par artefacte vechi neșterse la restructurarea v12 — de evaluat ștergere.
+
+---
+
 ## 2026-04-23 11:13 — Remediere audit standard (scor 86/100 → 92-94/100 estimat)
 
 **Tip:** REMEDIERE AUDIT — corectare consistență post-restructurare v12 + cleanup.

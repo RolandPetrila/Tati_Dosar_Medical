@@ -6,6 +6,71 @@
 
 ---
 
+## 2026-04-24 02:00 — [Claude_Opus_4.7] adaugare-r25-prioritate-claritate-completitudine-retroactive-lazar
+
+**Scop:** feedback user pe R23: „la documente indescifrabile (manuscris ilizibil, OCR eșuat, scan degradat) IGNORĂ decât să introduci info eronate". Cerere suplimentară: fișier de tracking (`Dosar_Medical/EXTRAGERI_INCOMPLETE.md`) pentru transparență AI/user.
+
+**Operații pe `.Tati`:**
+
+- `Dosar_Medical/CLAUDE.md` (M) — adăugare **Regula 25** „Prioritate claritate > completitudine la surse indescifrabile" după R23: interzicere transcriere aproximativă pe elemente critice, permis integrare parțială cu scoatere completă a elementelor ilizibile (FĂRĂ placeholder), tracking obligatoriu în `EXTRAGERI_INCOMPLETE.md`, relații cu R23/R13 explicate, versiune 12.1 → 12.2
+- `CLAUDE.md` (M) — update tabel hartă reguli cu R25, versiune 12.1 → 12.2
+- `REGULI_CLAUDE_CODE.md` (M) — versiune 12.1 → 12.2 (consistență, fără modificări body)
+- `Dosar_Medical/EXTRAGERI_INCOMPLETE.md` (C) — FIȘIER NOU pentru tracking, prima intrare: schema medicamente 10.11.2025 (LAZĂR + linia 4 tăiată)
+- `CONTEXT_MEDICAL.md` (M) — retroactive §4 Medicație + §9 Echipă medicală + sursă: 3 apariții LAZĂR înlocuite cu „NEIDENTIFICAT (R25)" + referințe EXTRAGERI_INCOMPLETE.md
+- `Dosar_Medical/2025-11-10_schema_medicamente.json` (M) — retroactive body (scot LAZĂR din `_metadata.notes` + `medici_unitati`, adaug flag `r25_applied_2026-04-24` + `note_r25`)
+- `TODO.md` (M) — reformulare task P1 LAZĂR (post-R25) + sub-task clarificare
+- 5× backup-uri Regula 10 în `Dosar_Medical/arhiva/...`
+- `CHANGELOG.md` — intrare nouă 02:00
+- `SESSION_LOG.md` — această intrare
+
+**Conformitate reguli:**
+
+- Regula 7 + Regula 20: AskUserQuestion aplicat runda 3 (3 întrebări: text R25, retroactive LAZĂR, ordine execuție) — confirmare explicită + feedback addendum (tracking)
+- Regula 10: backup pre-modificare pe toate 5 fișierele de referință modificate
+- Regula 16: commit + push în acest batch (împreună cu batch 01:31 R23+R24)
+- Regula 25 (aplicată retroactiv): LAZĂR scos din dosar structurat, păstrat în chain of custody (`.meta.json` sursă nemodificat — istoric procesare inițială) + intrare EXTRAGERI_INCOMPLETE.md
+- Regula 21 (zero-ciorne): nu am creat ciorne, totul integrat direct în fișiere validate
+
+**NEATINS deliberat:**
+
+- `DASHBOARD.html` (5 apariții LAZĂR) — regenerare la final sesiune (post-audit, R18). Modificarea nu e medicală (doar atribuire prescriptor), nu declanșează regen intermediar conform criteriilor R18.
+- `Dosar_Medical/cercetari/SINTEZA_CLINICI_ONCOLOGIE.md` — conține „Dr. Gabriel Lazăr" (chirurg oncolog Cluj), **persoană diferită**, irelevant pentru retroactive actual
+- `.meta.json` al manuscrisului (`documente_sursa/08_schema_tratament/...meta.json`) — lasă istoric procesare inițială intact (chain of custody Regula 14)
+
+**STOP la pasul 7 audit (`AUDIT_EXTRAGERE_2026-04-24.md`):** așteptare aprobare user + raport locație surse prezentat pentru verificare completitudine documente sursă.
+
+---
+
+## 2026-04-24 01:31 — [Claude_Opus_4.7] adaugare-r23-r24-extragere-integrala-documente-medicale
+
+**Scop:** răspuns incident 2026-04-23 (descoperit în conversația anterioară via handoff memory): noduli apicali sechelari + tulburări ventilație + modificări degenerative + aspecte normale + doza DLP **OMISE** din `CONTEXT_MEDICAL.md` deși prezente în `2026-04-20_ct_torace_abdomen_pelvis.json`. User (Roland) a cerut regulament strict anti-omisiune + audit fișiere existente, blocat pe aprobare variantă.
+
+**Operații pe `.Tati` (batch pași 1-6, STOP înainte de pasul 7 audit):**
+
+- `Dosar_Medical/CLAUDE.md` (M) — adăugare **Regula 23** „Extragere integrală din documente medicale sursă" (interzicere clasificare „de fundal"/„colateral fără impact"/„normal irelevant", obligativitate findings negative listate explicit, obligativitate parametri tehnici, validare `.meta.json` cu `completeness_verified`+`coverage:100%`), versiune 12.0 → 12.1
+- `REGULI_CLAUDE_CODE.md` (M) — adăugare **Regula 24** „Propagare integrală JSON → `CONTEXT_MEDICAL.md`" (structură obligatorie 5-secțiuni: findings principale/secundare/colaterale/tehnici/referință, regulă de paritate N:N), versiune 12.0 → 12.1
+- `CLAUDE.md` (M) — update tabel hartă reguli cu R23 + R24, versiune 12.0 → 12.1
+- `Dosar_Medical/arhiva/versiuni_config/CLAUDE_DOSAR_pre-R23_2026-04-24_0131.md` (C) — backup Regula 10 (8,500 bytes)
+- `Dosar_Medical/arhiva/versiuni_config/REGULI_CLAUDE_CODE_pre-R24_2026-04-24_0131.md` (C) — backup Regula 10 (16,645 bytes)
+- `Dosar_Medical/arhiva/versiuni_config/CLAUDE_pre-harta-R23-R24_2026-04-24_0131.md` (C) — backup Regula 10 (7,693 bytes)
+- `CHANGELOG.md` (M) — intrare nouă 2026-04-24 01:31
+- `SESSION_LOG.md` (M) — această intrare
+
+**Conformitate reguli:**
+
+- Regula 7 + Regula 20: AskUserQuestion aplicat 2 runde (4 întrebări total: variantă, plasare, format audit, mod execuție) — confirmare explicită înainte de Write/Edit
+- Regula 10: backup pre-modificare pe toate 3 fișierele de reguli modificate, folder convenție `Dosar_Medical/arhiva/versiuni_config/`
+- Regula 16: commit + push urmează după confirmare user (batch pași 1-6 finalizat, pasul 7 blocat)
+
+**STOP la pasul 7** (generare `AUDIT_EXTRAGERE_2026-04-24.md` — audit JSON vs PDF vs `CONTEXT_MEDICAL.md` pe toate documentele medicale) — așteptare aprobare user + commit interim opțional.
+
+**Observații suplimentare (Regula 21 zero-ciorne, semnalat spre evaluare):**
+
+- `Documentatie_Initiala/CLAUDE.md` (8.9 kB, v1 din 2026-04-17) pare un artefact vechi neșters la restructurarea v12 — duplică parțial `CLAUDE.md` de la rădăcină v1. De evaluat ștergere.
+- `Documentatie_Initiala/CHANGELOG.md` conține doar intrarea inițializare 2026-04-17 — probabil duplicat stale al `CHANGELOG.md` de la rădăcină. De evaluat ștergere sau fuziune.
+
+---
+
 ## 2026-04-23 11:13 — [Claude_Opus_4.7] remediere-audit-standard-scor-86-100-post-restructurare
 
 **Scop:** user a rulat `/audit standard` după restructurarea v12 (commit 6adc06f) + a confirmat executarea TUTUROR sugestiilor raportate (2 HIGH + 1 MEDIUM + 3 LOW cleanup).

@@ -1,6 +1,6 @@
 # REGULI_CLAUDE_CODE.md — Reguli specifice Claude Code (6-22)
 
-**Versiune:** 12.2 (aliniere cu v12.2 regulament: R25 prioritate claritate la surse indescifrabile) | **Data:** 2026-04-24
+**Versiune:** 12.0 (arhitectură restructurată din `CLAUDE.md` v11) | **Data:** 2026-04-23
 
 > **Citire obligatorie la prima interacțiune** — după `REGULAMENT.md` (reguli medicale fundamentale 1-10), înainte de `CONTEXT_MEDICAL.md`.
 >
@@ -261,32 +261,6 @@ Documentele informative/operaționale (ghiduri, explicații, materiale familie/c
 **Why:** un dosar medical nu tolerează info vagi permanent marcate „incert" — ori e adevărat (demonstrează), ori e fals (scoate). `[INCERT]` stagnant devine dezinformare cu impact clinic potențial.
 
 **How to apply:** la orice citire a unui fișier de referință, observi `[INCERT]`/`[PROBABIL]` ca obligații deschise. Nu propaga info neverificată între documente.
-
----
-
-## Regula 24 — Propagare integrală JSON → `CONTEXT_MEDICAL.md`
-
-Orice element prezent într-un JSON medical trebuie să aibă reflexie în `CONTEXT_MEDICAL.md` — fie în secțiunea principală (impact direct), fie într-o secțiune dedicată descoperirilor colaterale (aspect normal / fără impact imediat dar documentat).
-
-**Structură obligatorie per investigație integrată în `CONTEXT_MEDICAL.md`:**
-
-1. **Findings principale** (impact decizional direct — orientează tratamentul)
-2. **Findings secundare** (monitorizare / urmărire — necesită follow-up, dar nu schimbă decizia acum)
-3. **Findings colaterale** (aspecte normale, sechele vechi, leziuni benigne incidentale — documentate complet)
-4. **Parametri tehnici** (doză radiație, aparat, substanță contrast, numere buletin)
-5. **Referință sursă**: path JSON + data extragere + `completeness_verified`
-
-**Interzis:**
-
-- Rezumate selective care pierd elemente din JSON
-- Clasificarea unui element drept „nerelevant" pentru a-l omite (decide medicul, nu AI)
-- „Aspect normal" nelistat explicit (absența e ambiguă — listare explicită = confirmare că a fost examinat)
-
-**Regula de paritate:** dacă JSON-ul are 15 findings, `CONTEXT_MEDICAL.md` listează 15. Verificare obligatorie la finalul fiecărei propagări — se numără elementele din JSON și se confirmă numărul în `CONTEXT_MEDICAL.md`.
-
-**Why:** incidentul 2026-04-23 a arătat că propagarea selectivă JSON → `CONTEXT_MEDICAL.md` pierde elemente cu relevanță clinică reală (tulburări ventilație pre-esofagectomie). Separarea „principal / secundar / colateral" păstrează lizibilitatea fără a sacrifica completitudinea. R24 este corolarul R23 (din `Dosar_Medical/CLAUDE.md`): R23 garantează că JSON-ul e complet, R24 garantează că `CONTEXT_MEDICAL.md` reflectă JSON-ul.
-
-**How to apply:** la orice `Edit`/`Write` pe `CONTEXT_MEDICAL.md` care integrează date dintr-un JSON nou, numeri elementele din JSON și confirmă numărul în `CONTEXT_MEDICAL.md`. La audit periodic: compari cele două fișiere element cu element. Secțiunile 3 și 4 (colaterale + tehnici) sunt obligatorii chiar dacă par „fără impact decizional" (incidentul 2026-04-23 a arătat că tocmai aceste elemente pot deveni relevante la reevaluare).
 
 ---
 

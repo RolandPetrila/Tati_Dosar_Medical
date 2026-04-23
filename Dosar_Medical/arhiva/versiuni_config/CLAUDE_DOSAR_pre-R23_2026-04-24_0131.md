@@ -1,6 +1,6 @@
 # CLAUDE.md — `Dosar_Medical/` (reguli nested specifice)
 
-**Versiune:** 12.2 (adăugare R25 prioritate claritate > completitudine) | **Data:** 2026-04-24
+**Versiune:** 12.0 | **Data:** 2026-04-23
 
 > **Acest fișier conține reguli care se aplică DOAR când Claude lucrează cu conținutul din `Dosar_Medical/`** (extrageri OCR, JSON-uri medicale structurate, documente sursă, chain of custody, backup pre-modificare).
 >
@@ -160,73 +160,6 @@ Pentru fiecare cercetare web care produce conținut introdus în dosar, log în 
 **Why:** la verificare ulterioară, user sau medicul trebuie să poată reconstitui de unde vine o afirmație.
 
 **How to apply:** după fiecare cercetare web care generează conținut factual introdus într-un fișier de referință.
-
----
-
-## Regula 23 — Extragere integrală din documente medicale sursă
-
-Orice element medical dintr-un document sursă (PDF, scan, foto, manuscris) DEVINE parte din JSON-ul structurat — fără filtrare pe criteriu de „relevanță clinică" decisă de AI.
-
-**Interzis explicit:**
-
-- Considerarea unui element ca „de fundal", „colateral fără impact", „normal irelevant"
-- Rezumarea secțiunilor descriptive („aspect normal [organ]") fără menționare în JSON
-- Filtrarea pe criteriul „probabil benign", „sechelar vechi", „fără impact decizional"
-- Omiterea valorilor tehnice (doză radiație DLP, parametri tehnici examinare, numere buletin)
-
-**Obligatoriu în JSON:**
-
-1. Toate findings-urile pozitive (leziuni, modificări, anomalii) — detaliate
-2. Toate findings-urile negative explicite („aspect normal [organ]") — listate într-o secțiune dedicată
-3. Parametri tehnici ai examinării (doze, aparat, substanță contrast, volum)
-4. Toate valorile numerice din buletine (nu doar „în limite normale")
-
-**Validare post-extragere:**
-
-- Re-citire PDF sursă la final, confirmare zero omisiuni
-- Marcaj în `.meta.json`: `"completeness_verified": "YYYY-MM-DD"`, `"coverage": "100%"`, `"validator": "claude-opus-4-7"`
-
-**Why:** AI nu are autoritate clinică să decidă ce element medical e relevant. Incident 2026-04-23: tulburări ventilație posterobazal + noduli apicali sechelari + modificări degenerative disco-vertebrale + aspecte normale (colecist, pancreas, splină, prostată, suprarenală dreaptă, tiroidă, aortă, artera pulmonară) + doza radiație DLP = **omise din `CONTEXT_MEDICAL.md`** deși prezente în JSON sursă (`2026-04-20_ct_torace_abdomen_pelvis.json`). Root cause: filtrare subiectivă pe „relevanță clinică" clasificată greșit ca „de fundal". Elemente omise relevante pre-esofagectomie (spirometrie, kinetoterapie respiratorie, anamneză TBC vechi).
-
-**How to apply:** pas 1 obligatoriu = extragere literală integrală în JSON ÎNAINTE de orice interpretare sau rezumat. Validare la finalul extragerii = re-citește PDF-ul și confirmă coverage 100%. Propagarea rezultatului JSON în `CONTEXT_MEDICAL.md` este acoperită de **Regula 24** (în `REGULI_CLAUDE_CODE.md`). Documentele indescifrabile se tratează conform **Regula 25** (mai jos).
-
----
-
-## Regula 25 — Prioritate claritate > completitudine la surse indescifrabile
-
-Documentele medicale sursă care nu pot fi citite clar (manuscris ilizibil, scan degradat, OCR eșuat) **NU se integrează în JSON structurat al dosarului**. Se păstrează ca sursă fizică pentru revizuire manuală (user, familie, medicul curant).
-
-**Interzis:**
-
-- Transcriere cu „confidence aproximativ" pentru elemente medicale critice (doze, nume medicamente, date, valori laborator, nume medici curanți, spitale)
-- Presupunere variante contextuale ca fiind acceptabile pentru integrare (ex: `[„aspirin" | „aspirină" | „aspirat"]` — alegere arbitrară între variante)
-- Marcaj `[ILIZIBIL]` ca substituit pentru date reale (perpetuează info incompletă, nu rezolvă problema)
-
-**Permis:**
-
-- **Integrare parțială:** dacă o parte a documentului e clar descifrabilă (ex: cutii medicamente fotografiate lizibil + doze scrise de mână clar), aceasta se integrează. Partea ilizibilă se OMIT COMPLET din JSON — nu se marchează cu placeholder.
-- `.meta.json` marchează pentru transparență chain of custody: `"indescifrabil_partial": true, "excluded_elements": ["nume medic", "dată prescriere", ...]`.
-- **Escaladare la user:** pentru elemente critice ilizibile (doze, nume medicamente), alertă pentru transcriere manuală sau clarificare telefonică cu medicul emitent.
-
-**Tracking obligatoriu (`Dosar_Medical/EXTRAGERI_INCOMPLETE.md`):**
-
-- Fiecare detectare de element indescifrabil → intrare în `Dosar_Medical/EXTRAGERI_INCOMPLETE.md` (format standard definit în fișier).
-- **Notificare ACTIVĂ user în mesaj** la fiecare detectare: menționez explicit „am identificat X elemente din documentul Y care NU s-au integrat din cauza caracterului indescifrabil — v. EXTRAGERI_INCOMPLETE.md".
-- **Citire obligatorie** la start sesiune de către orice AI care procesează documente noi — `EXTRAGERI_INCOMPLETE.md` listează ce NU e în dosar, pentru ca AI-ul să nu presupună că info lipsește accidental și să nu re-întrebe user-ul pe elemente deja confirmate ca inaccesibile.
-
-**Relația cu R23 (extragere integrală):** R25 este excepția la R23. R23 cere integrare integrală A CEEA CE POATE FI CITIT CLAR. Sursă indescifrabilă integral → nu se integrează deloc. Sursă parțial descifrabilă → integrează doar partea clară; partea ilizibilă se omite (fără placeholder).
-
-**Relația cu R13 (transcriere manuscrise):** R13 oferă metodologia de transcriere cu confidence; R25 spune când să renunți la transcriere. Dacă R13 generează transcriere cu sub-elemente `[INCERT]`/`[ILIZIBIL]` pe elemente critice → decizia R25 este „scoate elementele respective, păstrează doar CERT".
-
-**Why:** incident 2025-11-10 schema medicamente — numele pacientului transcris „PETRICĂ" din manuscris, corectat retroactiv la „PETRILĂ"; Dr. LAZĂR rămâne parțial ilizibil. Info eronată din transcriere cu confidence slab e mai periculoasă decât absența info (medicul cere clarificare la info lipsă, dar info greșită poate trece neobservată).
-
-**How to apply:** la fiecare document manuscris / scan degradat / OCR eșuat, primul pas = decide categoria:
-
-1. **Lizibil integral** → R23 aplicabil (integrare completă)
-2. **Parțial lizibil** → R23 + R25 (integrare selectivă + scoatere elemente ilizibile, FĂRĂ placeholder)
-3. **Indescifrabil integral** → neintegrat; marcaj în `.meta.json` + document rămâne sursă fizică + intrare în `EXTRAGERI_INCOMPLETE.md`
-
-După decizie, notificare user în mesaj + intrare în `EXTRAGERI_INCOMPLETE.md` (obligatoriu pentru categoriile 2 și 3).
 
 ---
 
