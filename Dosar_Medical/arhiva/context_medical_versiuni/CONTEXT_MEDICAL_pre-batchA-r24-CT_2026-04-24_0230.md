@@ -36,13 +36,9 @@
 
 **Suspiciune clinică principală:** Proces proliferativ **circumferențial nedepășibil endoscopic** la nivelul 2/3 inferioare a esofagului, cu **extensie la joncțiunea eso-gastrică (orificiul cardia + cadru gastric fundic)** — probabil **Siewert II** (de confirmat cu oncolog). Cod 95, bilet BCTAP 0631727 din 17.04.2026.
 
-**Context:** Leziune identificată la endoscopie digestivă superioară (17.04.2026, Dr. Noufal Abdul Vahab, Genesis Medical Clinic Arad). Biopsie prelevată — rezultat histopatologic încă în lucru la Bioclinica Arad (monitor automat activ, estimat 24.04–01.05.2026). CT TAP N+SDC de stadializare efectuat luni **20.04.2026 ora 17:00** la Genesis Medical Clinic Micălaca, raport semnat de Dr. Buie Florian-Laurențiu (cod parafă A11818) + Dr. Candea Florin-Vasile (cod parafă F52510), ambii medici primari radiologie.
+**Context:** Leziune identificată la endoscopie digestivă superioară (17.04.2026, Dr. Noufal Abdul Vahab, Genesis Medical Clinic Arad). Biopsie prelevată — rezultat histopatologic încă în lucru la Bioclinica Arad (monitor automat activ, estimat 24.04–01.05.2026). CT TAP N+SDC de stadializare efectuat luni **20.04.2026 ora 17:00** la Genesis Medical Clinic Micălaca, raport semnat de Dr. Buie Florian-Laurențiu + Dr. Candea Florin-Vasile (ambii medici primari radiologie).
 
-> **Restructurare R24 aplicată 2026-04-24** (post-audit `AUDIT_EXTRAGERE_2026-04-24.md` Batch A): secțiunea 2 reorganizată în 5 sub-secțiuni (Findings principale / secundare / colaterale / parametri tehnici / referință sursă) pentru paritate completă cu `Dosar_Medical/2026-04-20_ct_torace_abdomen_pelvis.json`. Backup pre-restructurare: `Dosar_Medical/arhiva/context_medical_versiuni/CONTEXT_MEDICAL_pre-batchA-r24-CT_2026-04-24_0230.md`.
-
-### 2.1 Findings principale CT 20.04.2026 (impact decizional direct)
-
-**Stadializare imagistică preliminară — estimativă, necesită corelare cu biopsie:**
+**Stadializare imagistică preliminară (CT 20.04.2026) — estimativă, necesită corelare cu biopsie:**
 
 | Element       | Estimare CT           | Note                                                                                                                     |
 | ------------- | --------------------- | ------------------------------------------------------------------------------------------------------------------------ |
@@ -54,76 +50,20 @@
 
 **Natura histologică a leziunii:** neclarificată. Biopsia în lucru la Bioclinica Arad va preciza tipul exact (adenocarcinom vs. carcinom scuamocelular, grad de diferențiere). Localizarea distală + extensia fundică sugerează **adenocarcinom** (pattern tipic Siewert II), dar confirmarea aparține histopatologului.
 
-### 2.2 Findings secundare CT 20.04.2026 (monitorizare / urmărire)
+**Descoperiri colaterale la CT (care necesită urmărire):**
 
-- **Glandă suprarenală stângă hipertrofă, heterogenă, fără leziuni focale** — „de monitorizat" per radiolog. Necesită evaluare endocrinologică (hormoni bazali: cortizol 8AM, aldosteron/renină, metanefrine plasmatice + follow-up imagistic).
-- **Colecție fluidă pulmonar bazal LID** — 9.3 mm, de urmărit evolutiv.
-- **Leziune chistică subcutan perete toracic posterior cXI-cXII** — 22/47.4 mm, „a se corela clinic" (probabilă benignă — chist sebaceu / lipom / chist epidermoid; palpare la următorul consult).
-- **Cardiomegalie + ateromatoză calcara aorto-coronariană + aortă abdominală + emergențe** — consecvent cu antecedente SCA ST+ 2012 / stent IVA, fără modificare terapeutică imediată necesară.
+- **Glandă suprarenală stângă hipertrofă, heterogenă, fără leziuni focale** — „de monitorizat" per radiolog. Necesită evaluare endocrinologică (hormoni bazali + follow-up imagistic).
+- **Colecție fluidă pulmonar bazal LID** — 9.3 mm, de urmărit evolutiv
+- **Leziune chistică subcutan perete toracic posterior cXI-cXII** — 22/47.4 mm, „a se corela clinic" (probabilă benignă — chist sebaceu / lipom / chist epidermoid, palpare)
+- **Cardiomegalie + ateromatoză calcara aorto-coronariană + aortă abdominală + emergențe** — consecvent cu antecedente SCA ST+ 2012 / stent IVA, fără modificare terapeutică imediată necesară
 
-### 2.3 Findings colaterale CT 20.04.2026 (R24 — listare integrală post-audit 2026-04-24)
+**Acțiuni în curs (22.04.2026):**
 
-**Pulmonar (relevant pre-esofagectomie):**
-
-- **Tulburări de ventilație posterobazal LID + LIS** — relevant pentru pregătirea pre-chirurgie esofagiană (necesită spirometrie + kinetoterapie respiratorie pre-operatorie + anamneză pulmonară detaliată).
-- **Leziuni micronodulare calcare sechelare apical LSD, diametru maxim 6.8 mm** — sugestiv pentru sechele TBC vechi (de confirmat anamneza); follow-up imagistic la control oncologic.
-- Trahee și bronșii principale: permeabile.
-- Parenchim pulmonar: condensări absente, procese expansive absente, fibroză absentă, emfizem absent.
-
-**Adenopatii (toate categoriile evaluate explicit — confirmare M0):**
-
-- Mediastinale: absente.
-- Hilare: absente.
-- Axilare: absente.
-- Abdomino-pelvine: absente.
-
-**Aspecte normale organe (R24 — listare explicită, NU se prezumă din absența mențiunii):**
-
-- **Tiroidă:** aspect normal dimensional, omogen captantă de SDC.
-- **Cord și vase mari:** artera pulmonară permeabilă (calibru normal); aorta toracală permeabilă (calibru normal); colecții intrapericardice absente.
-- **Ficat:** dimensiuni și contur normale, fără prize patologice de SDC.
-- **Căi biliare:** colecist fără îngroșări parietale, fără calculi evidențiabili CT; intra/extrahepatice fără dilatări.
-- **Pancreas:** aspect normal.
-- **Splină:** aspect normal.
-- **Glandă suprarenală dreaptă:** aspect normal (vs. stânga hipertrofă — vezi findings secundare).
-- **Rinichi:** bilateral dimensiuni și IP normale, funcționali, secreție și excreție prezentă, fără calculi radioopaci, fără dilatații pielo-caliceale.
-- **Vezică urinară:** fără modificări parietale sau intracavitare.
-- **Prostată:** aspect normal CT.
-- **Vase abdominale:** ax spleno-portal celiaco-mezenteric permeabil; aorta abdominală + VCI calibru normal, permeabile.
-- **Modificări osoase suspecte malignitate:** absente.
-
-**Coloană vertebrală:**
-
-- **Modificări degenerative disco-vertebrale prezente supraetajat toraco-lombar** (context musculoscheletic — relevant pentru poziționare intraoperatorie + recuperare post-chirurgie).
-
-### 2.4 Parametri tehnici CT 20.04.2026 (R24 — listare obligatorie)
-
-- **Protocol:** TAP nativ + substanță de contrast iodat (N+SDC).
-- **Regiuni scanate:** torace + abdomen + pelvis.
-- **Doza radiație:** **DLP = 2474 mGy·cm²** (parametru tehnic obligatoriu pentru evaluare expunere cumulativă la radiații).
-- **Numărul înregistrare examinare:** 284.
-- **Bilet trimitere CT:** BCTAP 0631727 (cod diagnostic 95).
-- **Medic ordonator:** Dr. Noufal Abdul Vahab (gastroenterologie Genesis Arad).
-- **Medici examinatori:** Dr. Buie Florian-Laurențiu (parafă A11818) + Dr. Candea Florin-Vasile (parafă F52510), ambii medici primari radiologie.
-- **Unitate:** Genesis Medical Clinic Micălaca (denumire în document „Genesys").
-
-### 2.5 Referință sursă
-
-- **JSON canonic:** `Dosar_Medical/2026-04-20_ct_torace_abdomen_pelvis.json`
-- **PDF sursă:** `Dosar_Medical/documente_sursa/11_CT_stadializare_2026/CT - Genesys.pdf` (mutat de user 2026-04-24 din `99_altele/` în folder dedicat)
-- **Data extragere JSON:** 2026-04-22
-- **Data audit R24 + restructurare:** 2026-04-24
-- **Marcaj `.meta.json`:** `"completeness_verified": "2026-04-24"`, `"coverage": "100%"` (post-audit Batch A)
-- **Confidence overall:** high (PDF digital nativ, text extractabil, fără OCR)
-
-### 2.6 Acțiuni în curs (status la 2026-04-24)
-
-- ✅ **CT efectuat 20.04.2026** — raport integrat în dosar
+- ✅ **CT efectuat 20.04.2026** — raport integrat în dosar (`Dosar_Medical/2026-04-20_ct_torace_abdomen_pelvis.json`)
 - 🟡 **Rezultat biopsie esofagiană** — așteptat la Bioclinica Arad, monitor automat activ 24/7 (GitHub Actions)
 - 🔴 **Consult oncolog digestiv URGENT** — de programat (stadiul infiltrativ + ascită modifică abordarea terapeutică)
 - 🟡 **Evaluare endocrinologică** glanda suprarenală stângă — de programat post-consult oncolog
 - ✅ **Jamesi reluat** 22.04.2026 seara, conform schemei standard (1-0-1, 50/1000 mg), **fără complicații** — pauza H-48h → H+48h a funcționat corect, fără simptome renale post-contrast raportate de familie
-- 🟡 **Spirometrie + anamneză pulmonară pre-esofagectomie** (post audit Batch A 2026-04-24) — de discutat cu chirurgul oncolog: tulburările ventilație posterobazal LID+LIS + nodulii apicali sechelari LSD necesită evaluare pulmonară pre-operator (spirometrie + DLCO + posibil consult pneumolog)
 
 ---
 

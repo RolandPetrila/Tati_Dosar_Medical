@@ -1,6 +1,6 @@
 # CLAUDE.md — `Dosar_Medical/` (reguli nested specifice)
 
-**Versiune:** 12.3 (adăugare R26 consistență structură foldere + semnalare devieri) | **Data:** 2026-04-24
+**Versiune:** 12.2 (adăugare R25 prioritate claritate > completitudine) | **Data:** 2026-04-24
 
 > **Acest fișier conține reguli care se aplică DOAR când Claude lucrează cu conținutul din `Dosar_Medical/`** (extrageri OCR, JSON-uri medicale structurate, documente sursă, chain of custody, backup pre-modificare).
 >
@@ -227,57 +227,6 @@ Documentele medicale sursă care nu pot fi citite clar (manuscris ilizibil, scan
 3. **Indescifrabil integral** → neintegrat; marcaj în `.meta.json` + document rămâne sursă fizică + intrare în `EXTRAGERI_INCOMPLETE.md`
 
 După decizie, notificare user în mesaj + intrare în `EXTRAGERI_INCOMPLETE.md` (obligatoriu pentru categoriile 2 și 3).
-
----
-
-## Regula 26 — Consistență structură foldere documente sursă + semnalare devieri
-
-Toate documentele sursă din `Dosar_Medical/documente_sursa/` urmează același model de organizare, pentru a permite regăsire rapidă în consult medical critic și indexare automată viitoare.
-
-**Convenție foldere:** `NN_categorie_data/`
-
-- `NN` = număr ordinal cu zero padding (01, 02, ..., 99)
-- `categorie` = lowercase cu underscore, descriptiv (`identitate`, `analize_laborator`, `hernie_2025_11`, `CT_stadializare_2026`, etc.)
-- `data` = `YYYY` sau `YYYY_MM` (anul + luna unde relevant pentru delimitarea evenimentelor)
-- **Excepție:** `99_altele/` = catch-all **PROVIZORIU** pentru documente nedigitizate sau neclasificate, **NU destinație finală**
-
-**Convenție fișiere în folder:**
-
-- PDF/imagine sursă: `YYYY-MM-DD_descriere_scurta.{pdf,jpeg,jpg,png}`
-- `.meta.json` companion obligatoriu (chain of custody — Regula 14): `YYYY-MM-DD_descriere_scurta.{ext}.meta.json`
-
-**Categorii folosite în proiect (status 2026-04-24 după reorganizare user):**
-
-| Folder                     | Conținut așteptat                                | Status                                                                                |
-| -------------------------- | ------------------------------------------------ | ------------------------------------------------------------------------------------- |
-| `01_identitate/`           | Carte identitate, pașaport                       | ✅ populat                                                                            |
-| `02_cardiologie_2012/`     | Stent Vichy 2012                                 | 🟡 folder gol — PDF de obținut de la familie                                          |
-| `03_hernie_anterior/`      | Hernie anterioară (dată necunoscută)             | 🟡 folder gol — document de identificat                                               |
-| `04_helicobacter_2024/`    | Internare H. pylori mai 2024 + serologie 09.2024 | 🟡 folder gol — documente de identificat (parțial în `99_altele/`) sau obținut spital |
-| `05_analize_laborator/`    | Buletine analize sânge / urină / serologie       | ✅ populat (bioclinica uree/creatinină 17.04.2026)                                    |
-| `06_urologie_gastro_2025/` | Scrisoare medicală 28.10.2025                    | 🟡 folder gol — de identificat în `99_altele/`                                        |
-| `07_hernie_2025_11/`       | Intervenție hernie noiembrie 2025                | ✅ populat (externare + bilet)                                                        |
-| `08_schema_tratament/`     | Scheme medicație                                 | ✅ populat (manuscris 10.11.2025)                                                     |
-| `09_endoscopie_2026_04/`   | Buletin endoscopie + colonoscopie 17.04.2026     | ✅ populat                                                                            |
-| `10_administrativ_pensie/` | Talon pensie, dovezi asigurare                   | ✅ populat                                                                            |
-| `11_CT_stadializare_2026/` | Raport CT 20.04.2026                             | ✅ populat (CT - Genesys.pdf, mutat de user 2026-04-24 din `99_altele/`)              |
-| `12_biopsie_2026/`         | Rezultat biopsie Bioclinica                      | 🟡 folder gol — așteptare rezultat histopatologic                                     |
-| `99_altele/`               | **PROVIZORIU** — nedigitizate/neclasificate      | 🟡 conține 6 PDF `doc_neidentificat_{2..7}` de clasificat                             |
-
-**Obligatoriu (semnalare devieri):**
-
-1. La orice citire/procesare document sursă: AI verifică dacă fișierul respectă convenția de nume + folder.
-2. La orice **DEVIERE detectată** (nume fișier non-canonic, fișier în `99_altele/` care ar trebui în alt folder, lipsă `.meta.json` companion, lipsă folder dedicat pentru tip nou document) → **menționez EXPLICIT user-ul în mesajul activ** + propun corecție concretă (unde să fie mutat, cum să fie redenumit).
-3. NU fac mutări/redenumiri tăcute — propun, aștept confirmare user (Regula 20). Excepție: reparări triviale consimțite explicit anterior.
-4. Devieri cunoscute persistente (listate în tabelul de mai sus cu status 🟡) — NU se re-raportează la fiecare sesiune, doar la schimbare status (populare, mutare, identificare conținut).
-
-**Why:** consistența structurii reduce timpul de căutare/regăsire în consult medical critic + previne fișiere uitate în catch-all + permite indexare automată viitoare + disciplinează procesul de digitizare. User a inițiat curățenia 2026-04-24 mutând `CT - Genesys.pdf` din `99_altele/` în `11_CT_stadializare_2026/` și a cerut explicit codificarea acestui model unitar + semnalarea proactivă a devierilor — R26 formalizează principiul.
-
-**How to apply:** la fiecare interacțiune cu `Dosar_Medical/documente_sursa/`, verificare consistență; la sesiune nouă de procesare documente, scan proactiv al folder-elor pentru devieri și raportare tablou status către user; la digitizare document nou, ALEG folder-ul corect existent sau propun unul nou dacă nu există categorie adecvată.
-
-**Relație cu Regula 14 (chain of custody):** R14 cere `.meta.json` per document (ce date + cum ajungea + de cine procesat); R26 codifică unde și cum se structurează fizic documentul sursă. Ambele sunt complementare — R26 presupune R14 aplicat.
-
-**Relație cu Regula 21 (curățenie, zero ciorne):** R21 interzice ciorne pe disc; R26 interzice documente în locuri non-canonice. Ambele susțin ordinea dosarului.
 
 ---
 

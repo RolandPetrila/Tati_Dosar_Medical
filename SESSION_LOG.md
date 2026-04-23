@@ -6,6 +6,67 @@
 
 ---
 
+## 2026-04-24 02:50 — [Claude_Opus_4.7] adaugare-r26-consistenta-structura-foldere-semnalare-devieri
+
+**Scop:** cerere user explicită post-reorganizare CT (user a mutat `CT - Genesys.pdf` din `99_altele/` în `11_CT_stadializare_2026/` + a creat folder-ele goale `02/03/04/06/12`): codificare model unitar structură foldere + obligația semnalării devierilor la fiecare detectare.
+
+**Operații pe `.Tati`:**
+
+- `Dosar_Medical/CLAUDE.md` (M) — adăugare **Regula 26** „Consistență structură foldere documente sursă + semnalare devieri" după R25: convenție `NN_categorie_data/` + fișiere `YYYY-MM-DD_descriere.{ext}` + `.meta.json` companion obligatoriu + tabel status inventar (7 populate / 5 goale / 1 provizoriu) + obligativitate raportare devieri + interdicție mutări tăcute + relație cu R14 și R21. Versiune 12.2 → 12.3
+- `CLAUDE.md` (M) — update tabel hartă reguli cu R26, versiune 12.2 → 12.3
+- `REGULI_CLAUDE_CODE.md` (M) — versiune 12.2 → 12.3 (aliniere; fără modificări body)
+- 2× backup-uri Regula 10 în `Dosar_Medical/arhiva/versiuni_config/`
+- `CHANGELOG.md` — intrare nouă 02:50
+- `SESSION_LOG.md` — această intrare
+
+**Conformitate reguli:**
+
+- Regula 10: backup pre-modificare pe 2 fișiere de referință
+- Regula 16: inclus în commit-ul final (Batch A + R26 + reorganizare folder)
+- Regula 21: zero ciorne create
+
+**Devieri semnalate (conform R26 nouă, obligație activă):**
+
+- `99_altele/` conține încă 6 PDF `2026-04-17_doc_neidentificat_{2..7}.pdf` care NU sunt în folder dedicat. Propunere corecție: clasificare în `04_helicobacter_2024/`, `05_analize_laborator/`, `06_urologie_gastro_2025/`, sau folder nou pentru documente necorelate (ecografie 14.04, bilet trimitere CT etc.). Procesare amânată pentru sesiune separată (decizie user la AskUserQuestion anterioară).
+
+---
+
+## 2026-04-24 02:30 — [Claude_Opus_4.7] aplicare-audit-batch-A-CT-2004-r24-fix-dashboard-lazar
+
+**Scop:** după adăugarea R23+R24+R25 (commit `3bb9808` la 02:00), audit complet pe toate JSON-urile vs `CONTEXT_MEDICAL.md` cu raport `AUDIT_EXTRAGERE_2026-04-24.md` (rădăcină). User a aprobat aplicare Batch A (CT 20.04 — incidentul declanșator HIGH); restul batch-urilor și procesarea celor 6 PDF nedigitizate la decizie ulterioară.
+
+**Operații pe `.Tati`:**
+
+- `AUDIT_EXTRAGERE_2026-04-24.md` (C) — FIȘIER NOU la rădăcină, raport audit ~350 linii (metodologie + rezumat executiv 11 docs + findings detaliate + recomandări + status completitudine PDF + R25 inventory)
+- `CONTEXT_MEDICAL.md` (M) — RESTRUCTURARE §2 (Status clinic curent post-CT) în 5 sub-secțiuni R24 obligatorii (2.1 principale + 2.2 secundare + 2.3 colaterale + 2.4 parametri tehnici + 2.5 referință + 2.6 acțiuni + TODO nou „spirometrie pre-esofagectomie"). +30+ elemente noi listate explicit (tulburări ventilație, noduli apicali sechelari, modificări degenerative, adenopatii absente toate categoriile, aspecte normale 12 organe, DLP 2474 mGy·cm², coduri parafă, înregistrare 284).
+- `Dosar_Medical/2026-04-20_ct_torace_abdomen_pelvis.json.meta.json` (M) — adăugare câmpuri R23/R24 audit: `completeness_verified: 2026-04-24`, `coverage: 100%`, `validator: claude-opus-4-7`, `audit_reference`, `r24_propagation_status: complete`
+- `DASHBOARD.html` (M) — 5 înlocuiri LAZĂR cu „NEIDENTIFICAT (R25)" + ref `EXTRAGERI_INCOMPLETE.md` (din retroactive R25 batch precedent 02:00)
+- 3× backup-uri Regula 10 în `Dosar_Medical/arhiva/...`
+- `CHANGELOG.md` — intrare nouă 02:30
+- `SESSION_LOG.md` — această intrare
+
+**Conformitate reguli:**
+
+- Regula 7 + Regula 20: AskUserQuestion (3 întrebări: batch corectură, dashboard timing, procesare doc-uri) — confirmare explicită
+- Regula 10: backup pre-modificare pe toate 3 fișierele de referință afectate
+- Regula 16: commit final + push (include audit + Batch A + dashboard)
+- Regula 18: DASHBOARD partial regen (LAZĂR) — regenerare integrală pentru R24 colaterale CT amânată pentru sesiune separată
+- Regula 21 (zero-ciorne): zero ciorne create
+- Regula 23 + R24: incidentul declanșator (CT 20.04 omisiuni) acum complet remediat în CONTEXT_MEDICAL.md
+- Regula 25: aplicat retroactiv în batch precedent (02:00); audit confirmă LAZĂR e singurul caz curent
+
+**NEATINS deliberat (sesiune separată la decizie user):**
+
+- Batch B (Lab 17.06 — 28 analize neenumerate) — recomandat ca baseline pre-tratament
+- Batch C (Hernie 28.11 — ~21 lab + medicație spital) — recomandat pentru chirurg oncolog
+- Batch D (Bioclinica unități SI) — cosmetic LOW
+- 6 PDF `doc_neidentificat_*` din `99_altele/` — sesiune procesare separată
+- DASHBOARD.html regenerare completă pentru R24 colaterale CT (doar LAZĂR aplicat acum)
+
+**Raport final user:** include analiză relevanță documente vechi pentru cancer actual (Vichy 2012 + Hernie 28.11 = relevante chirurg/anestezist; Lab 17.06 = baseline; H. pylori = patogen marginal; admin = neutil clinic).
+
+---
+
 ## 2026-04-24 02:00 — [Claude_Opus_4.7] adaugare-r25-prioritate-claritate-completitudine-retroactive-lazar
 
 **Scop:** feedback user pe R23: „la documente indescifrabile (manuscris ilizibil, OCR eșuat, scan degradat) IGNORĂ decât să introduci info eronate". Cerere suplimentară: fișier de tracking (`Dosar_Medical/EXTRAGERI_INCOMPLETE.md`) pentru transparență AI/user.

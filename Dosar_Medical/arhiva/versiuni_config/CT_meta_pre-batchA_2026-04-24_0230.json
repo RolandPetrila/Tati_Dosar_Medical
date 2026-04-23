@@ -1,6 +1,6 @@
 {
   "source_document": "CT - Genesys.pdf",
-  "source_path": "Dosar_Medical/documente_sursa/11_CT_stadializare_2026/CT - Genesys.pdf",
+  "source_path": "Dosar_Medical/documente_sursa/99_altele/CT - Genesys.pdf",
   "received_date": "2026-04-20",
   "received_from": "Genesis Medical Clinic Micălaca — secția Radiologie și Imagistică Medicală",
   "digitized_by": "PDF digital nativ (text extractabil, generat direct de sistemul clinic, nu scan OCR)",
@@ -16,10 +16,5 @@
     "Fără metastaze la distanță vizibile la CT",
     "Descoperire incidentală: glandă suprarenală stângă hipertrofă heterogenă",
     "Descoperire incidentală: chist subcutan perete toracic posterior 22/47.4 mm"
-  ],
-  "completeness_verified": "2026-04-24",
-  "coverage": "100%",
-  "validator": "claude-opus-4-7",
-  "audit_reference": "AUDIT_EXTRAGERE_2026-04-24.md §3.1 — CT 20.04 R24 fix",
-  "r24_propagation_status": "complete (CONTEXT_MEDICAL.md §2 restructurat post-Batch A 2026-04-24 02:30 — 5 sub-secțiuni R24 obligatorii)"
+  ]
 }

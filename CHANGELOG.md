@@ -4,6 +4,106 @@
 
 ---
 
+## 2026-04-24 02:50 — Adăugare Regula 26 (consistență structură foldere documente sursă + semnalare devieri) + inventar status foldere
+
+**Tip:** REGULĂ NOUĂ — răspuns la cerere user post-reorganizare CT.
+
+**Context declanșator:** user a mutat manual `CT - Genesys.pdf` din `documente_sursa/99_altele/` (catch-all) în folder dedicat `documente_sursa/11_CT_stadializare_2026/`. Cerere user explicită: „vreau sa fie toate documentele configurate la fel in acelasi model de structura. daca observi devieri, mentioneaza intotdeauna. adauga in reguli acest aspect". Plus curățenie foldere — user a creat în paralel `02_cardiologie_2012/`, `03_hernie_anterior/`, `04_helicobacter_2024/`, `06_urologie_gastro_2025/`, `12_biopsie_2026/` (toate goale, pregătite pentru digitizare viitoare).
+
+**Regulă nouă R26:** codificare convenție `NN_categorie_data/` pentru foldere + convenție fișiere `YYYY-MM-DD_descriere_scurta.{ext}` + `.meta.json` companion + obligația semnalării active a devierilor + interdicția mutărilor tăcute.
+
+**Fișiere modificate:**
+
+| Fișier                    | Operație                                                                                              |
+| ------------------------- | ----------------------------------------------------------------------------------------------------- |
+| `Dosar_Medical/CLAUDE.md` | ADĂUGARE Regula 26 „Consistență structură foldere + semnalare devieri" după R25; versiune 12.2 → 12.3 |
+| `CLAUDE.md` (auto-loader) | Hartă cu R26; versiune 12.2 → 12.3                                                                    |
+| `REGULI_CLAUDE_CODE.md`   | Versiune 12.2 → 12.3 (aliniere; fără modificări body)                                                 |
+| `CHANGELOG.md`            | Această intrare                                                                                       |
+| `SESSION_LOG.md`          | Intrare sesiune                                                                                       |
+
+**Backup-uri pre-modificare (Regula 10):**
+
+- `Dosar_Medical/arhiva/versiuni_config/CLAUDE_DOSAR_pre-R26_2026-04-24_0250.md`
+- `Dosar_Medical/arhiva/versiuni_config/CLAUDE_pre-harta-R26_2026-04-24_0250.md`
+
+**Inventar status foldere `Dosar_Medical/documente_sursa/` (post-reorganizare user 2026-04-24):**
+
+- ✅ **Populate (7):** `01_identitate/`, `05_analize_laborator/`, `07_hernie_2025_11/`, `08_schema_tratament/`, `09_endoscopie_2026_04/`, `10_administrativ_pensie/`, `11_CT_stadializare_2026/`
+- 🟡 **Goale (5 — de digitizat ulterior):** `02_cardiologie_2012/`, `03_hernie_anterior/`, `04_helicobacter_2024/`, `06_urologie_gastro_2025/`, `12_biopsie_2026/`
+- 🟡 **Provizoriu (1):** `99_altele/` — 6 PDF `2026-04-17_doc_neidentificat_{2..7}.pdf` de clasificat în folderele țintă
+
+**Devieri curente semnalate (obligație R26):**
+
+Cele 6 PDF `doc_neidentificat_*` din `99_altele/` sunt candidate pentru mutare în:
+
+- Probabil `04_helicobacter_2024/` (serologie anti-H. pylori 06.09.2024 — JSON existent)
+- Probabil `05_analize_laborator/` (buletin analize sânge 17.06.2025 — JSON existent)
+- Probabil `06_urologie_gastro_2025/` (scrisoare 28.10.2025 — JSON existent)
+- Probabil alte PDF-uri necorelate (bilet trimitere CT 17.04.2026, buletin ecografie 14.04.2026)
+
+Procesare efectivă → sesiune separată (user a aprobat amânare).
+
+**NEATINSE (deliberate):** Regulile 1-10, 6-25 (doar adaug R26 nouă).
+
+---
+
+## 2026-04-24 02:30 — Aplicare audit Batch A (CT 20.04 R24 fix) + DASHBOARD LAZĂR + audit raport AUDIT_EXTRAGERE_2026-04-24.md + reorganizare folder CT
+
+**Tip:** AUDIT GENERAL + APLICARE CORECTURI HIGH + REORGANIZARE FOLDER — închiderea retroactivă a incidentului declanșator R23/R24 + curățenie path sursă CT.
+
+**Context:** după adăugarea R23 + R24 + R25 (commit `3bb9808`), audit complet pe toate JSON-urile vs `CONTEXT_MEDICAL.md`. Audit identificat 1 HIGH (CT 20.04 — exact incidentul declanșator), 3 MEDIUM (Lab 17.06, Hernie 28.11, Vichy 2012 PDF lipsă), 1 LOW (Bioclinica unități SI), 6 OK. User a mutat în paralel `CT - Genesys.pdf` din `99_altele/` (catch-all) în folder dedicat `11_CT_stadializare_2026/` pentru organizare logică.
+
+**Decizie user (post-AskUserQuestion 02:30):** aplic doar Batch A acum (HIGH critical); restul (B Lab + C Hernie + D cosmetic) la decizie ulterioară; procesare 6 PDF `doc_neidentificat_*` în sesiune separată; DASHBOARD regen post-corecturi înainte de commit final; user cere recomandare relevanță docs vechi pentru cancer actual (livrată în raport final).
+
+**Fișiere create:**
+
+- `AUDIT_EXTRAGERE_2026-04-24.md` (rădăcină) — raport audit complet (~360 linii): metodologie + rezumat executiv 11 documente + findings detaliate + recomandări corectură + status completitudine surse PDF + R25 inventory
+
+**Fișiere modificate (Batch A):**
+
+| Fișier                                                             | Operație                                                                                                                                                                                                                                                                                                                                                                                                     |
+| ------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `CONTEXT_MEDICAL.md` §2 (Status clinic curent)                     | RESTRUCTURARE COMPLETĂ în 5 sub-secțiuni R24: 2.1 Findings principale + 2.2 secundare + 2.3 colaterale (NEW: tulburări ventilație, noduli apicali, modificări degenerative, adenopatii absente, aspecte normale 12 organe) + 2.4 parametri tehnici (NEW: DLP 2474 mGy·cm², înregistrare 284, coduri parafă) + 2.5 referință sursă (path nou folder) + 2.6 acțiuni + nou TODO „spirometrie pre-esofagectomie" |
+| `Dosar_Medical/2026-04-20_ct_torace_abdomen_pelvis.json`           | UPDATE `_metadata.sursa_locatie` din `99_altele/` în `11_CT_stadializare_2026/` (post-mutare user)                                                                                                                                                                                                                                                                                                           |
+| `Dosar_Medical/2026-04-20_ct_torace_abdomen_pelvis.json.meta.json` | ADĂUGARE câmpuri R23/R24 markers: `completeness_verified: 2026-04-24`, `coverage: 100%`, `validator: claude-opus-4-7`, `audit_reference`, `r24_propagation_status: complete` + UPDATE `source_path` (folder nou)                                                                                                                                                                                             |
+| `DASHBOARD.html`                                                   | Înlocuiri LAZĂR (5 locuri din retroactive R25 din batch precedent): card Sursă schemă, timeline 2025-11-10, tabel Echipă medicală × 2 (cardiologie + diabetologie), TODO acțiuni — toate cu „NEIDENTIFICAT (R25)" + ref `EXTRAGERI_INCOMPLETE.md`                                                                                                                                                            |
+| `AUDIT_EXTRAGERE_2026-04-24.md`                                    | Update status Batch A → APLICAT 2026-04-24 02:30 + path-uri PDF actualizate                                                                                                                                                                                                                                                                                                                                  |
+| `CHANGELOG.md`                                                     | Această intrare                                                                                                                                                                                                                                                                                                                                                                                              |
+| `SESSION_LOG.md`                                                   | Intrare sesiune                                                                                                                                                                                                                                                                                                                                                                                              |
+
+**Reorganizare folder (de user):**
+
+- `Dosar_Medical/documente_sursa/99_altele/CT - Genesys.pdf` → ȘTERS (D)
+- `Dosar_Medical/documente_sursa/11_CT_stadializare_2026/CT - Genesys.pdf` → CREAT (curățenie folder dedicat CT stadializare)
+
+**Backup-uri pre-modificare (Regula 10):**
+
+- `Dosar_Medical/arhiva/context_medical_versiuni/CONTEXT_MEDICAL_pre-batchA-r24-CT_2026-04-24_0230.md`
+- `Dosar_Medical/arhiva/versiuni_config/CT_meta_pre-batchA_2026-04-24_0230.json`
+- `Dosar_Medical/arhiva/versiuni_config/DASHBOARD_pre-lazar-batchA_2026-04-24_0230.html`
+
+**Elemente CT 20.04 acum REPREZENTATE explicit în CONTEXT_MEDICAL.md (post-Batch A):**
+
+1. ✅ Tulburări ventilație posterobazal LID + LIS (HIGH — pre-esofagectomie)
+2. ✅ Noduli apicali calcari sechelari LSD max 6.8 mm (HIGH — anamneză TBC)
+3. ✅ Modificări degenerative disco-vertebrale supraetajat toraco-lombar
+4. ✅ Adenopatii absente — toate 4 categorii enumerate explicit
+5. ✅ Aspecte normale 12 organe enumerate explicit (R24 paritate)
+6. ✅ Doza radiație DLP 2474 mGy·cm² + protocol + numere referință + coduri parafă
+
+**NEATINSE (deliberate, pentru sesiune ulterioară la decizie user):**
+
+- Batch B (Lab 17.06.2025 — 28 analize) — recomandat ca relevant baseline pre-tratament oncologic
+- Batch C (Hernie 28.11.2025 — analize complete preop + medicație spital) — recomandat ca relevant pentru chirurg oncolog (abord laparoscopic vs laparotomie post-hernie + plasă + aderențe)
+- Batch D (Bioclinica unități SI) — cosmetic, low priority
+- Procesare 6 PDF `doc_neidentificat_*` din `99_altele/` — sesiune separată
+- DASHBOARD.html regenerare integrală pentru R24 colaterale CT — sesiune separată
+
+**Next step (post-sesiune):** la decizie user — aplicare Batch C (hernie 28.11, relevant pentru chirurg oncolog) sau Batch B (lab 17.06, baseline) sau procesare doc*neidentificat*\* (closure R23 strict pentru documentele istorice).
+
+---
+
 ## 2026-04-24 02:00 — Adăugare Regula 25 (prioritate claritate > completitudine la surse indescifrabile) + retroactive LAZĂR
 
 **Tip:** REGULĂ NOUĂ + CORECȚIE RETROACTIVĂ — extensie la R23 în direcția „la documente indescifrabile, IGNORĂ decât să introduci info eronate".

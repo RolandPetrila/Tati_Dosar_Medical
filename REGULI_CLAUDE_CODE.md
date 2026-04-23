@@ -1,6 +1,6 @@
 # REGULI_CLAUDE_CODE.md — Reguli specifice Claude Code (6-22)
 
-**Versiune:** 12.2 (aliniere cu v12.2 regulament: R25 prioritate claritate la surse indescifrabile) | **Data:** 2026-04-24
+**Versiune:** 12.3 (aliniere cu v12.3 regulament: R26 consistență structură foldere + semnalare devieri) | **Data:** 2026-04-24
 
 > **Citire obligatorie la prima interacțiune** — după `REGULAMENT.md` (reguli medicale fundamentale 1-10), înainte de `CONTEXT_MEDICAL.md`.
 >
