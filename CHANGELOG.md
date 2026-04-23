@@ -12,14 +12,14 @@
 
 **Audit findings remediate (7/7):**
 
-| # | Severitate | Fișier | Problema | Fix aplicat |
-|---|---|---|---|---|
-| H1 | HIGH | `REGULAMENT.md:5-13` | Notă relație CLAUDE.md depășită (v2/R6-15) | Actualizată la v12/R6-22 + enumerate 6 fișiere distribuite + clarificare scoping R6/R7 |
-| H2 | HIGH | `Dosar_Medical/CLAUDE.md:9` | Header always-on include R19 eronat | Scos R19 din enumerație + adăugată linie explicită „R19 contextual" |
-| M1 | MEDIUM | `CLAUDE.md:38-57` | Hartă nu clarifică overlap R6/R7 | Adăugată notă sub tabel: R6/R7 apar generic (REGULAMENT) + scoped (REGULI_CLAUDE_CODE), prioritate scoped |
-| L1 | LOW | `Dosar_Medical/arhiva/versiuni_config/CLAUDE_pre-github-pages_2026-04-18_2104.md` | Backup expirat (>5 zile, politică „ultimele 3") | ȘTERS via git rm |
-| L2 | LOW | `Dosar_Medical/arhiva/TODO_pre-CT-stadializare_2026-04-22_1600.md` | Backup depășit | ȘTERS via git rm |
-| L3 | LOW | `Dosar_Medical/arhiva/2026-04-17_buletin_gastroenterologie_pre-clarificare-nedepasibila_2026-04-22_1600.json` | Versiune tranziție integrată | ȘTERS via git rm |
+| #   | Severitate | Fișier                                                                                                        | Problema                                        | Fix aplicat                                                                                               |
+| --- | ---------- | ------------------------------------------------------------------------------------------------------------- | ----------------------------------------------- | --------------------------------------------------------------------------------------------------------- |
+| H1  | HIGH       | `REGULAMENT.md:5-13`                                                                                          | Notă relație CLAUDE.md depășită (v2/R6-15)      | Actualizată la v12/R6-22 + enumerate 6 fișiere distribuite + clarificare scoping R6/R7                    |
+| H2  | HIGH       | `Dosar_Medical/CLAUDE.md:9`                                                                                   | Header always-on include R19 eronat             | Scos R19 din enumerație + adăugată linie explicită „R19 contextual"                                       |
+| M1  | MEDIUM     | `CLAUDE.md:38-57`                                                                                             | Hartă nu clarifică overlap R6/R7                | Adăugată notă sub tabel: R6/R7 apar generic (REGULAMENT) + scoped (REGULI_CLAUDE_CODE), prioritate scoped |
+| L1  | LOW        | `Dosar_Medical/arhiva/versiuni_config/CLAUDE_pre-github-pages_2026-04-18_2104.md`                             | Backup expirat (>5 zile, politică „ultimele 3") | ȘTERS via git rm                                                                                          |
+| L2  | LOW        | `Dosar_Medical/arhiva/TODO_pre-CT-stadializare_2026-04-22_1600.md`                                            | Backup depășit                                  | ȘTERS via git rm                                                                                          |
+| L3  | LOW        | `Dosar_Medical/arhiva/2026-04-17_buletin_gastroenterologie_pre-clarificare-nedepasibila_2026-04-22_1600.json` | Versiune tranziție integrată                    | ȘTERS via git rm                                                                                          |
 
 **Observații pozitive confirmate în audit (7):**
 
