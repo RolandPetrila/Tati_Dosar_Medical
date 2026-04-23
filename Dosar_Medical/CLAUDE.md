@@ -6,7 +6,9 @@
 >
 > Se încarcă **contextual** — nu consumă context când lucrezi în alte zone ale proiectului.
 >
-> **Regulile 6, 7, 12, 16, 17, 18, 19, 20, 21, 22 se aplică always-on** — sunt în `REGULI_CLAUDE_CODE.md` la rădăcină.
+> **Regulile 6, 7, 12, 16, 17, 18, 20, 21, 22 se aplică always-on** — sunt în `REGULI_CLAUDE_CODE.md` la rădăcină.
+>
+> **Regula 19** (Documente_Informative) se încarcă **contextual** — e în `Documente_Informative/CLAUDE.md` (nested, ca acest fișier).
 
 ---
 

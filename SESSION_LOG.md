@@ -6,6 +6,41 @@
 
 ---
 
+## 2026-04-23 11:13 — [Claude_Opus_4.7] remediere-audit-standard-scor-86-100-post-restructurare
+
+**Scop:** user a rulat `/audit standard` după restructurarea v12 (commit 6adc06f) + a confirmat executarea TUTUROR sugestiilor raportate (2 HIGH + 1 MEDIUM + 3 LOW cleanup).
+
+**Audit rezultat:** scor 86/100 — zero blockeri, 7 probleme minore. Raport la `.claude-outputs/audit/2026-04-23_033300/`.
+
+**Operații pe `.Tati`:**
+
+- `REGULAMENT.md` (M) — actualizat nota relație cu arhitectura Claude Code post-restructurare v12: versiune v12/2026-04-23, enumerare R6-22 distribuite în 6 fișiere, clarificare scoping R6/R7 scoped vs generic (H1, audit HIGH)
+- `Dosar_Medical/CLAUDE.md` (M) — corectat header: scos R19 din enumerație always-on + adăugat linie explicită „R19 contextual în Documente_Informative/CLAUDE.md" (H2, audit HIGH)
+- `CLAUDE.md` (M) — adăugată notă sub tabel hartă reguli: clarificare overlap R6/R7 între REGULAMENT.md (generic) și REGULI_CLAUDE_CODE.md (scoped) + prioritate scoped la conflict (M1, audit MEDIUM)
+- `Dosar_Medical/arhiva/versiuni_config/CLAUDE_pre-github-pages_2026-04-18_2104.md` (D) — șters (backup expirat >5 zile, politică retenție „ultimele 3" — audit L1)
+- `Dosar_Medical/arhiva/TODO_pre-CT-stadializare_2026-04-22_1600.md` (D) — șters (depășit de versiune mai nouă — audit L2)
+- `Dosar_Medical/arhiva/2026-04-17_buletin_gastroenterologie_pre-clarificare-nedepasibila_2026-04-22_1600.json` (D) — șters (versiune tranziție integrată în canonic — audit L3)
+- `.claude-outputs/audit/2026-04-23_033300/` — raport + audit_score.json (în `.gitignore`, nu se comit)
+- `CHANGELOG.md` — intrare nouă 11:13 remediere audit
+- `SESSION_LOG.md` — această intrare
+
+**Conformitate reguli:**
+
+- Regula 20: user a confirmat explicit „execuția tuturor sugestiilor" înainte de execuție
+- Regula 21: cleanup L1-L3 respectă „zero ciorne" (nu arhivare la ciorne, git păstrează istoric)
+- Regula 22: remediere `[INCERT]`-uri implicite (notele stale din REGULAMENT și Dosar_Medical/CLAUDE.md header) — upgrade la concordanță 100% cu arhitectura v12
+- Regula 16: va urma commit + push
+
+**Impact scor audit (estimare post-remediere):** 86 → **92-94/100**
+
+**Dimensiuni post-remediere:**
+
+- `CLAUDE.md`: 7,693 bytes (+393 pentru nota overlap R6/R7)
+- `REGULAMENT.md`: 12,169 bytes (+749 pentru nota extinsă v12)
+- `Dosar_Medical/CLAUDE.md`: 8,500 bytes (+138 pentru clarificare R19)
+
+---
+
 ## 2026-04-23 03:31 — [Claude_Opus_4.7] restructurare-arhitectura-claude-md-v12-reducere-84-la-suta
 
 **Scop:** user a raportat avertismentul Claude Code „Large CLAUDE.md will impact performance (43.4k chars > 40.0k)" și a oferit ca sursă de inspirație workspace-ul paralel `.Tati_Documente_Medicale` + folderul `Regulamente_Globale/`. Cerere: aplicare filozofie matură (minimalism global + specificitate locală, separație roluri fișiere, nested CLAUDE.md, format per tip informație).

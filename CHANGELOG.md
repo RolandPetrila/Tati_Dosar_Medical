@@ -4,6 +4,44 @@
 
 ---
 
+## 2026-04-23 11:13 — Remediere audit standard (scor 86/100 → 92-94/100 estimat)
+
+**Tip:** REMEDIERE AUDIT — corectare consistență post-restructurare v12 + cleanup.
+
+**Declanșator:** user a rulat `/audit` după commit-ul v12 `6adc06f` și a confirmat „execuția tuturor sugestiilor". Audit raport complet la `.claude-outputs/audit/2026-04-23_033300/audit_report.md`.
+
+**Audit findings remediate (7/7):**
+
+| # | Severitate | Fișier | Problema | Fix aplicat |
+|---|---|---|---|---|
+| H1 | HIGH | `REGULAMENT.md:5-13` | Notă relație CLAUDE.md depășită (v2/R6-15) | Actualizată la v12/R6-22 + enumerate 6 fișiere distribuite + clarificare scoping R6/R7 |
+| H2 | HIGH | `Dosar_Medical/CLAUDE.md:9` | Header always-on include R19 eronat | Scos R19 din enumerație + adăugată linie explicită „R19 contextual" |
+| M1 | MEDIUM | `CLAUDE.md:38-57` | Hartă nu clarifică overlap R6/R7 | Adăugată notă sub tabel: R6/R7 apar generic (REGULAMENT) + scoped (REGULI_CLAUDE_CODE), prioritate scoped |
+| L1 | LOW | `Dosar_Medical/arhiva/versiuni_config/CLAUDE_pre-github-pages_2026-04-18_2104.md` | Backup expirat (>5 zile, politică „ultimele 3") | ȘTERS via git rm |
+| L2 | LOW | `Dosar_Medical/arhiva/TODO_pre-CT-stadializare_2026-04-22_1600.md` | Backup depășit | ȘTERS via git rm |
+| L3 | LOW | `Dosar_Medical/arhiva/2026-04-17_buletin_gastroenterologie_pre-clarificare-nedepasibila_2026-04-22_1600.json` | Versiune tranziție integrată | ȘTERS via git rm |
+
+**Observații pozitive confirmate în audit (7):**
+
+- ✅ Zero secrets committed în git history
+- ✅ `.gitignore` include `.env`, `~$*.docx`, `.claude-outputs/`
+- ✅ API keys în sistem central, nu în proiect
+- ✅ 17/17 reguli (6-22) acoperite în noua arhitectură v12
+- ✅ Alert 40k rezolvat (CLAUDE.md 7.3k → margine 5.5x)
+- ✅ Backup Regula 10 aplicat corect
+- ✅ Concordanță compactă ↔ extinsă §R11/R16/R17/R18/R22
+
+**NEATINSE (deliberat):**
+
+- `info_tati.txt` (IGNORABIL — marcat off-topic de user în audit)
+- Restul fișierelor de referință + date medicale
+
+**Impact scor estimat:** 86 → **92-94/100** (confirmare după re-run audit).
+
+**Scope clar:** doar remedieri audit. Zero modificări date medicale clinice. Zero modificări reguli conținut (doar reformulări stale post-restructurare).
+
+---
+
 ## 2026-04-23 03:31 — Restructurare arhitectură CLAUDE.md (v11 → v12, reducere -84%)
 
 **Tip:** RESTRUCTURARE ARHITECTURĂ DOCUMENTAȚIE AI (zero modificări date medicale).

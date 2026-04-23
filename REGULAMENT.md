@@ -2,15 +2,22 @@
 
 **Acest fișier conține regulile obligatorii pentru întreaga activitate din acest dosar. Regulile sunt grupate pe categorii. Încălcarea unei reguli critice este un eșec de sarcină.**
 
-> **Relația cu `CLAUDE.md` (proiect v2, 2026-04-17):**
+> **Relația cu arhitectura Claude Code (proiect v12, 2026-04-23):**
 >
-> Acest REGULAMENT.md conține **Regulile 1–10** (bază, preluate din kit-ul inițial Claude.ai).
+> Acest REGULAMENT.md conține **Regulile 1–10** (bază medicale fundamentale — siguranță clinică, limbaj, cercetare, documentare, interacțiune, confidențialitate, documente pentru medici/familie, escaladare, feedback, principiu director). Preluate din kit-ul inițial Claude.ai, NEATINSE la restructurarea v12.
 >
-> `CLAUDE.md` de la rădăcina proiectului adaugă **Regulile 6–15** specifice pentru lucrul cu Claude Code (`AskUserQuestion`, protecție anti-halucinație OCR, coordonare Claude↔Gemini, backup pre-modificare, valabilitate clinică, conflict surse autoritare, manuscrise, chain of custody, web queries log).
+> Arhitectura Claude Code adaugă **Regulile 6–22** distribuite în mai multe fișiere (post-restructurare 2026-04-23):
 >
-> **La conflict direct, `CLAUDE.md` proiect are prioritate** (regulile Claude-specific extind, nu contrazic).
+> - `CLAUDE.md` (auto-loader minimalist, ~7k) — identitate + ordine citire + harta regulilor + pointers
+> - `REGULI_CLAUDE_CODE.md` (always-on, ~17k) — Regulile 6, 7, 12, 16, 17, 18, 20, 21, 22
+> - `Dosar_Medical/CLAUDE.md` (nested contextual) — Regulile 8, 9, 10, 11, 13, 14, 15
+> - `Documente_Informative/CLAUDE.md` (nested contextual) — Regula 19 + shortcut R17
+> - `Documentatie_Initiala/REGULI_DETALIATE.md` (on-demand) — exemple extinse §R11/R16/R17/R18/R22
+> - `Documentatie_Initiala/HISTORY_CLAUDE_MD.md` (referință istorică) — changelog v1→v12
 >
-> Numerotarea overlap (Regulile 6 și 7 apar în ambele): `CLAUDE.md` conține versiunea **scoped** (aplicabilă doar la fișiere de referință / decizii medicale), REGULAMENT.md conține versiunea generică.
+> **La conflict direct, regulile Claude Code (6-22) au prioritate** pentru lucrul cu Claude Code (extind, nu contrazic regulamentul medical de bază).
+>
+> Numerotarea overlap (Regulile 6 și 7 apar în ambele): `REGULI_CLAUDE_CODE.md` conține versiunea **scoped** (aplicabilă la fișiere de referință / decizii medicale), REGULAMENT.md conține versiunea generică kit inițial. **Versiunea scoped are prioritate** pentru deciziile cu impact medical.
 
 ## 1. Siguranța medicală — reguli CRITICE
 

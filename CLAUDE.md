@@ -56,6 +56,13 @@ Citești în această ordine, înainte de orice răspuns substanțial:
 | 21     | Curățenie fluidă folder, zero ciorne                                       | `REGULI_CLAUDE_CODE.md`                                                                    |
 | 22     | Verificare proactivă + eliminare info neverificate                         | `REGULI_CLAUDE_CODE.md` (+ protocol în `REGULI_DETALIATE.md`)                              |
 
+**Notă overlap R6/R7:** Regulile 6 și 7 apar în două locuri cu versiuni diferite:
+
+- `REGULAMENT.md` — versiunea **generică** (kit inițial Claude.ai, aplicabilă general)
+- `REGULI_CLAUDE_CODE.md` — versiunea **scoped** (aplicabilă la fișiere de referință / decizii cu impact medical)
+
+**La conflict direct, versiunea scoped are prioritate** pentru deciziile cu impact medical.
+
 **Istoric evoluție reguli:** `Documentatie_Initiala/HISTORY_CLAUDE_MD.md`.
 **Exemple extinse + matrice:** `Documentatie_Initiala/REGULI_DETALIATE.md` (citit on-demand).
 
