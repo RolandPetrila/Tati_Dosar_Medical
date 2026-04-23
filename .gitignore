@@ -38,8 +38,14 @@ $RECYCLE.BIN/
 # Claude Code output folders (rapoarte temporare skill-uri ca /review --full)
 .claude-outputs/
 
+# Claude Code config local (per-user, nu per-proiect)
+.claude/settings.local.json
+
 # Secrete (safety net — niciun fișier .env planificat, dar previne accidente)
 .env
 .env.*
 *.secret
 credentials.json
+
+# Ciorne locale nedecise (rămân pe disc pentru inspecție, nu se versionează)
+info_tati.txt
