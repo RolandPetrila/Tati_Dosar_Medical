@@ -6,6 +6,37 @@
 
 ---
 
+## 2026-04-23 03:31 — [Claude_Opus_4.7] restructurare-arhitectura-claude-md-v12-reducere-84-la-suta
+
+**Scop:** user a raportat avertismentul Claude Code „Large CLAUDE.md will impact performance (43.4k chars > 40.0k)" și a oferit ca sursă de inspirație workspace-ul paralel `.Tati_Documente_Medicale` + folderul `Regulamente_Globale/`. Cerere: aplicare filozofie matură (minimalism global + specificitate locală, separație roluri fișiere, nested CLAUDE.md, format per tip informație).
+
+**Operații pe `.Tati`:**
+
+- `CLAUDE.md` — RESCRIS minimalist (7.3k vs 45.2k anterior, reducere -84%): identitate + ordine citire + harta regulilor + pointers
+- `REGULI_CLAUDE_CODE.md` — CREAT (16.6k): Regulile 6-22 compactate always-on
+- `Dosar_Medical/CLAUDE.md` — CREAT (8.4k): Regulile 8, 9, 10, 11, 13, 14, 15 (nested contextual)
+- `Documente_Informative/CLAUDE.md` — CREAT (3.6k): Regula 19 + shortcut Regula 17
+- `Documentatie_Initiala/REGULI_DETALIATE.md` — CREAT (14.4k): exemple complete §R11, §R16, §R17, §R18, §R22 (on-demand)
+- `Documentatie_Initiala/HISTORY_CLAUDE_MD.md` — CREAT (10.1k): changelog v1→v12 extras din CLAUDE.md v11
+- `Documentatie_Initiala/PLAN_reorganizare_claude_md_2026-04-23.md` — CREAT (8.9k): PLAN R-PLAN cu checklist bifabil + reguli siguranță + rollback
+- `Dosar_Medical/arhiva/versiuni_config/CLAUDE_pre-reorganizare-v12_2026-04-23_0320.md` — BACKUP (45.2k, Regula 10)
+- `CHANGELOG.md` — intrare nouă 03:31 v12
+- `SESSION_LOG.md` — această intrare
+
+**Zero modificări** la date medicale: `CONTEXT_MEDICAL.md`, `TODO.md`, JSON-urile din `Dosar_Medical/`, `DASHBOARD.html` neatinse. `REGULAMENT.md` existent (Regulile 1-10 medicale) NEATINS.
+
+**Conformitate reguli:**
+
+- Regula 10 (backup pre-modificare): backup CLAUDE.md v11 în arhiva/versiuni_config/
+- Regula R-PLAN: PLAN explicit cu checklist bifabil (task >5 sub-operații)
+- Regula 20: user a confirmat direcția + mod „într-o sesiune" înainte de execuție
+- Regula 22: verificare integritate — toate 17 regulile (6-22) acoperite în noua arhitectură
+- Regula 16: va urma commit + push
+
+**Verificare integritate (diff semantic):** Regulile 6, 7, 12, 16, 17, 18, 20, 21, 22 → `REGULI_CLAUDE_CODE.md`; Regulile 8, 9, 10, 11, 13, 14, 15 → `Dosar_Medical/CLAUDE.md`; Regula 19 → `Documente_Informative/CLAUDE.md`; detalii extinse §R11/R16/R17/R18/R22 → `REGULI_DETALIATE.md`. Acoperire 17/17 ✅.
+
+---
+
 ## 2026-04-23 02:30 — [Claude_Opus_4.7] ghid-apel-oncohelp-programare-urgenta-pentru-Roland
 
 **Scop:** user (Roland) a cerut generare document operațional pentru efectuarea apelului telefonic la OncoHelp Timișoara în vederea programării urgente a tatălui. Conținut: date de contact complete + scenariu de apel + Q&A anticipate pe elementele clinice vitale.

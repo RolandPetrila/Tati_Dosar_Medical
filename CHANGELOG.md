@@ -4,6 +4,72 @@
 
 ---
 
+## 2026-04-23 03:31 — Restructurare arhitectură CLAUDE.md (v11 → v12, reducere -84%)
+
+**Tip:** RESTRUCTURARE ARHITECTURĂ DOCUMENTAȚIE AI (zero modificări date medicale).
+
+**Declanșator:** avertisment Claude Code „Large CLAUDE.md will impact performance (43.4k chars > 40.0k)". User (Roland Petrilă) a oferit ca sursă de inspirație:
+
+1. Workspace-ul paralel `C:\Users\ALIENWARE\Desktop\Roly\.Tati_Documente_Medicale\` — pattern matur CLAUDE.md minimalist (2k) + REGULAMENT.md autoritar (11k) + zona privată user + nested rules
+2. Folderul `C:\Users\ALIENWARE\Desktop\Roly\4. Artificial Inteligence\Folder_Lucru\Prompt-uri_Chat\Regulamente_Globale\` — REGULAMENT_TERMINALE.md (4k) + nested CLAUDE.md/GEMINI.md per terminal + `PROPUNERI_ADAPTARI_REGULAMENT_2026-04-22.md` cu Regula R7 format per tip informație
+
+Cerere: aplicare filozofie matură (minimalism global + specificitate locală, separație roluri fișiere, nested CLAUDE.md, format per tip informație). User a cerut „toți pașii într-o singură sesiune".
+
+**Fișier nou/modificate:**
+
+- `CLAUDE.md` — **RESCRIS minimalist** (7,300 bytes vs 45,178 anterior, **-84%**): identitate proiect + ordine citire obligatorie + harta regulilor + pointers spre REGULI_CLAUDE_CODE.md, nested CLAUDE.md-uri, REGULI_DETALIATE.md, HISTORY_CLAUDE_MD.md
+- `REGULI_CLAUDE_CODE.md` — **CREAT** (16,645 bytes): Regulile 6, 7, 12, 16, 17, 18, 20, 21, 22 în formă compactă (rule + Why + How) + shortcut Regula 19
+- `Dosar_Medical/CLAUDE.md` — **CREAT** (8,362 bytes, nested contextual): Regulile 8, 9, 10, 11, 13, 14, 15 (OCR, coordonare Gemini, backup, valabilitate clinică, manuscrise, chain of custody, WEB_QUERIES log)
+- `Documente_Informative/CLAUDE.md` — **CREAT** (3,608 bytes, nested contextual): Regula 19 detaliată + shortcut Regula 17 pentru documente familie
+- `Documentatie_Initiala/REGULI_DETALIATE.md` — **CREAT** (14,362 bytes, on-demand): §R11 matrice extinsă valabilitate clinică, §R16 protocol extins timestamp per fișier, §R17 exemple complete `[CERT]`/`[PROBABIL]`/`[INCERT]`/`[NEGASIT]` + format corect/greșit, §R18 protocol complet DASHBOARD (11 secțiuni obligatorii), §R22 ierarhie surse acceptabile/respinse + protocol concret verificare
+- `Documentatie_Initiala/HISTORY_CLAUDE_MD.md` — **CREAT** (10,061 bytes): changelog v1→v12 extras din CLAUDE.md v11
+- `Documentatie_Initiala/PLAN_reorganizare_claude_md_2026-04-23.md` — **CREAT** (8,854 bytes): PLAN explicit R-PLAN cu arhitectură target, checklist bifabil, reguli siguranță, rollback
+- `Dosar_Medical/arhiva/versiuni_config/CLAUDE_pre-reorganizare-v12_2026-04-23_0320.md` — **BACKUP** (45,178 bytes, Regula 10)
+
+**NEATINS (deliberate):**
+
+- `REGULAMENT.md` rădăcină (11,420 bytes, Regulile 1-10 medicale fundamentale) — util, păstrat integral
+- `CONTEXT_MEDICAL.md`, `TODO.md`, `SESSION_LOG.md` (edit doar append), `WEB_QUERIES.md`, `GLOSAR.md`, `DASHBOARD.html`, `ALIMENTATIE.md`, `STRUCTURA_PROIECT.md`
+- Toate JSON-urile din `Dosar_Medical/`
+- Documentele din `Documente_Informative/` (GHID\_\*.md) și `Dosar_Medical/cercetari/`
+
+**Impact măsurat:**
+
+|                                  | Înainte         | După                           | Reducere |
+| -------------------------------- | --------------- | ------------------------------ | -------- |
+| CLAUDE.md rădăcină (always-on)   | 45,178 bytes    | 7,300 bytes                    | **-84%** |
+| Avertisment Claude Code 40k      | ❌ declanșat    | ✅ sub prag cu margine de 5.5x |          |
+| Total fișiere reguli la rădăcină | 45k + 11k = 56k | 7k + 17k + 11k = 35k           | -37%     |
+
+**Conformitate reguli:**
+
+- **Regula 10** (backup pre-modificare): backup CLAUDE.md v11 în `arhiva/versiuni_config/`
+- **Regula R-PLAN** (task >5 sub-operații): PLAN explicit cu checklist bifabil (9 pași: 0.5, 0, 1-7)
+- **Regula 20** (mod lucru cercetare → status → Ask → confirmare → execuție): user a oferit sursa de inspirație, Claude a sintetizat principiile + propus arhitectura, user a confirmat direcția + mod „într-o sesiune"
+- **Regula 22** (verificare proactivă): diff semantic la Pas 7 — acoperire 17/17 reguli (6-22) în noua arhitectură
+
+**Verificare integritate (Pas 7):**
+
+| Regulă                               | Locație nouă                                 | Verificat    |
+| ------------------------------------ | -------------------------------------------- | ------------ |
+| 6, 7, 12, 16, 17, 18, 20, 21, 22     | `REGULI_CLAUDE_CODE.md`                      | ✅ 9/9       |
+| 8, 9, 10, 11, 13, 14, 15             | `Dosar_Medical/CLAUDE.md`                    | ✅ 7/7       |
+| 19                                   | `Documente_Informative/CLAUDE.md`            | ✅ 1/1       |
+| Detalii extinse §R11/R16/R17/R18/R22 | `Documentatie_Initiala/REGULI_DETALIATE.md`  | ✅ 5/5       |
+| Changelog v1→v11                     | `Documentatie_Initiala/HISTORY_CLAUDE_MD.md` | ✅ preservat |
+
+**Principii aplicate (din sursa de inspirație):**
+
+1. CLAUDE.md = pointer, nu depozit (sub 10k always-on)
+2. Separație roluri fișiere (guvernanță / autoritate / stare / istoric / detaliu on-demand)
+3. Nested CLAUDE.md în zone specializate (Dosar_Medical/, Documente_Informative/)
+4. Format per tip informație (narativ `.md`, structurat `.yaml`/`.json`, colecții `.jsonl`)
+5. Detalii extinse → fișiere dedicate citite on-demand
+
+**Aplicabilitate generalizată („și nu numai"):** pattern-ul e reutilizabil pentru orice proiect documentar viitor (medical, legal, educațional). Propunere viitoare: folder `~/.claude/templates/template_proiect_documentar.md` cu schelet ~60 linii.
+
+---
+
 ## 2026-04-23 02:30 — Document operațional: Ghid apel OncoHelp pentru programare urgentă
 
 **Tip:** DOCUMENT INFORMATIV OPERAȚIONAL (material pentru Roland — efectuarea apelului telefonic).
