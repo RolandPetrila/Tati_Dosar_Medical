@@ -1,0 +1,391 @@
+{
+  "_metadata": {
+    "schema_version": "2.0",
+    "nume_fisier": "2024-05-30_upu_consult_gastro_cardio.json",
+    "tip_document": "consult_upu_compus_gastro_cardio_ekg_scrisoare",
+    "specialitate": "Medicină de urgență / Gastroenterologie / Cardiologie",
+    "data_document": "2024-05-30",
+    "numar_FO_spital": "1021735",
+    "sursa_pdf": "2024-05-30_dosar_upu_complet.pdf (pag 1-2, 6-10 din 10)",
+    "sursa_locatie": "documente_sursa/14_UPU_2024_05_30/",
+    "procesat_de": "Claude_Opus_4.7",
+    "data_procesare": "2026-04-24",
+    "ocr_quality": "mixed (tipărit 95% + manuscris 60-80%)",
+    "confidence_overall": "medium-high",
+    "completeness_verified": "2026-04-24",
+    "coverage": "100% (elemente critice CERT; anamneze manuscrise PROBABIL)",
+    "flags": [
+      "episod_clinic_major_pre_oncologic",
+      "troponina_dinamica",
+      "EKG_markedly_abnormal",
+      "criza_HTA",
+      "identificat_MF_orban_ecaterina",
+      "identificat_cardiolog_post_mihaela"
+    ],
+    "notes": "Episod clinic major la UPU Arad — pacient prezentat 30.05.2024 17:30 cu grețuri+vărsături (după consum sarmale) + vertij, TA 145/70, bradicardie 55 bpm. INCIDENTE CLINICE CRITICE: (1) hs-cTnI dinamic 4.24 → 4.59 ng/L (trending UP — relevant cardiologic!), (2) EKG auto Glasgow 'Anteroseptal infarct - age undetermined' + 'Markedly Abnormal ECG', (3) biletul trimitere MF Dr. Orbán menționează 'Criza HTA 200/100 mmHg' + glicemie 177 mg% + SaO2 91%. Consult gastro (Dr. Grada Sebastian) + consult cardio (Dr. Post Mihaela) + scrisoare medicală nr 0003622. Medicul de familie identificat: Dr. Orbán Ecaterina-Maria (CUI 20263730, cod parafă 718705, Cabinet Medical Individual Nădlac). ANOMALIE: Dr. Post Mihaela apare cu 2 coduri parafă pe 2 ștampile diferite (A13550 pe consultul cardio pag.2, A14555 pe scrisoarea medicală pag.9) — transcris literal așa cum apar."
+  },
+  "pacient": {
+    "nume": "PETRILĂ",
+    "prenume": "VIOREL-MIHAI",
+    "nume_text_original_document": "PETRILA VIOREL MIHAI",
+    "cnp": "1590518024486",
+    "data_nasterii": "1959-05-18",
+    "varsta_la_data_document": "65 ani 0 luni",
+    "sex": "M",
+    "adresa": "Nădlac, Vasile Goldiș 42, jud. Arad",
+    "confidence_identificare": "high"
+  },
+  "prezentare_urgenta": {
+    "data_ora": "2024-05-30T17:30:00",
+    "serviciu": "UPU Adulți — Spitalul Clinic Județean de Urgență Arad",
+    "motivele_prezentarii": [
+      "Grețuri, vărsături (după consum sarmale)",
+      "Vertij"
+    ],
+    "stare_clinica_initiala": {
+      "TA_mmHg": "145/70",
+      "AV_bpm": 55,
+      "SaO2_procent": 97,
+      "stare_generala": "conștient, cooperant",
+      "auscultatie": "MV prezent bilateral fără raluri, zgomote cardiace ritmice, fără sufluri stetacustice",
+      "edeme_gambiere": "absente"
+    }
+  },
+  "consult_gastroenterologie": {
+    "numar_fisa": "71735",
+    "medic_solicitat": {
+      "nume": "Dr. Grada Sebastian",
+      "specialitate": "medic specialist gastroenterologie",
+      "cod_parafa": "G15512"
+    },
+    "medic_solicitant": {
+      "nume": "Dr. Pop Florica",
+      "specialitate": "medic primar medicină de urgență",
+      "cod_parafa": "C79981"
+    },
+    "ecografie_abdominala": {
+      "ficat": "suprafață micronodulară moderat, fără colestază intrahepatică",
+      "colecist": "cu sediment",
+      "CBP_VP": "normale",
+      "pancreas": "hiperecogen",
+      "splina_cm": 12,
+      "rinichi_stang_drept": "dimensiuni normale, fără stază",
+      "anse_intestinale": "ușor dilatate flanc stâng",
+      "lichid_liber_abdomen": "absent",
+      "confidence_ocr": "medium"
+    },
+    "diagnostic_gastro": "Sindrom dispeptic",
+    "recomandari_gastro": [
+      {
+        "medicament": "Controloc",
+        "doza": "20 mg",
+        "schema": "1-0-0",
+        "confidence_ocr": "high"
+      },
+      {
+        "medicament": "Debridat",
+        "schema": "3x1/zi",
+        "confidence_ocr": "high"
+      },
+      "Reevaluare prin ambulator gastro"
+    ]
+  },
+  "consult_cardiologie": {
+    "numar_fisa": "21735",
+    "medic_solicitat": {
+      "nume": "Dr. Pop Florica",
+      "cod_parafa": "C79981"
+    },
+    "medic_solicitant": {
+      "nume": "Dr. Post Mihaela",
+      "specialitate": "medic specialist cardiologie",
+      "cod_parafa_UPU": "A13550",
+      "cod_parafa_scrisoare_ambulator": "A14555",
+      "note_cod_parafa": "2 coduri parafă distincte pe 2 ștampile diferite — transcris literal; anomalie documentată"
+    },
+    "antecedente_cunoscute": [
+      "IM vechi",
+      "PTCA + stent (2011 conform scrisoare, 2012 conform restul dosarului — discrepanță scriere manuală)",
+      "DZ tip II"
+    ],
+    "examen_clinic": {
+      "TA_mmHg": "145/70",
+      "AV_bpm": 55,
+      "SaO2_procent": 97
+    },
+    "biologie": {
+      "hs_cTnI_dinamic_ng_L": [4.24, 4.59],
+      "hs_cTnI_trend": "crescător între 2 măsurători succesive",
+      "unitate_document": "ng/L (instrument Atellica) — pe scrisoare apare 'mg/L' (inconsistență tipărit vs manuscris)",
+      "hiperglicemie": "prezentă",
+      "confidence_ocr": "high"
+    },
+    "EKG_interpretare_manuala": {
+      "ritm": "sinusal",
+      "AV_bpm": 55,
+      "ax_QRS": "intermediar",
+      "unda_T_negativa_in": "aVL, V2-V5",
+      "aspect": "stationar",
+      "confidence_ocr": "high"
+    },
+    "ecocord_interpretare": {
+      "VS": "dimensiuni normale, cinetică parietală normală, FS păstrată",
+      "regurgitare_mitrala": "ușoară",
+      "regurgitare_tricuspidiana": "ușoară funcțională",
+      "lichid_pericardic": "absent",
+      "confidence_ocr": "medium"
+    },
+    "diagnostic_cardio": [
+      "Sindrom dispeptic",
+      "Sindrom coronarian cronic",
+      "IM vechi",
+      "PTCA + stent (2011)",
+      "Insuficiență mitrală ușoară degenerativă",
+      "Insuficiență tricuspidiană ușoară funcțională",
+      "HTAE gradul I stadiul 3",
+      "DZ tip II non-insulino-necesitant"
+    ],
+    "recomandari_cardio": [
+      {
+        "medicament": "Aspenter",
+        "doza": "75 mg",
+        "schema": "0-1-0",
+        "confidence_ocr": "high"
+      },
+      {
+        "medicament": "Concor",
+        "doza": "5 mg",
+        "schema": "1-0-0",
+        "confidence_ocr": "high"
+      },
+      {
+        "medicament": "Noliterax",
+        "doza": "10 mg / 2.5 mg",
+        "schema": "1-0-0",
+        "confidence_ocr": "medium",
+        "note": "Denumire incertă — posibil Noliprel / Noliterax, manuscris"
+      },
+      {
+        "medicament": "Norvasc",
+        "doza": "5 mg",
+        "schema": "0-0-1",
+        "confidence_ocr": "high",
+        "note": "Discrepanță între foi: consult pag.2 = 0-0-1, scrisoare pag.9 = 0-1-0"
+      },
+      {
+        "medicament": "Sortis",
+        "doza": "80 mg",
+        "schema": "0-0-1",
+        "confidence_ocr": "high"
+      },
+      "Medicația comorbidităților",
+      "Dispensarizare cardiologică în ambulator"
+    ]
+  },
+  "EKG_automat_UPU": {
+    "instrument": "SE-1201 V1.42 Glasgow V28.6.0",
+    "unitate": "SC:IU UPU SMURD ARAD",
+    "data_ora": "2024-05-30T15:28:00",
+    "parametri_auto": {
+      "HR_bpm": 55,
+      "P_ms": 124,
+      "T_ms": 152,
+      "QRS_ms": 120,
+      "QT_QTc_ms": "470/450",
+      "PQRS_T_grade": "43/6/85",
+      "RV5_SV1_mV": "0.38/0.652"
+    },
+    "interpretari_automate": [
+      "Sinus bradycardia",
+      "Anteroseptal infarct - age undetermined",
+      "Lateral T wave abnormality may be due to myocardial ischemia",
+      "Abnormal ECG"
+    ],
+    "raport_confirmat_medic": false
+  },
+  "EKG_cabinet_medic_familie": {
+    "instrument": "CARDIO-M PLUS 2.21 / 3.12 Medical Econet GmbH",
+    "data_ora": "2024-05-30T11:30:00",
+    "parametri_auto": {
+      "PR_RR_Int_ms": "176 / 1071",
+      "QRS_Dur_ms": 102,
+      "QT_QTc_ms": "448 / 433",
+      "P_R_T_axes": "64, 30, 94",
+      "SV1_RV5_RplusS_mV": "0.67 / 0.00 / 0.67"
+    },
+    "interpretari_automate": [
+      "Sinus Bradycardia (HR: 50-59)",
+      "Normal Axis",
+      "possible Anteroseptal MI",
+      "Markedly Abnormal ECG"
+    ],
+    "mediu": "Cabinet Medical Individual Dr. Orbán Ecaterina, Nădlac"
+  },
+  "bilet_trimitere_medic_familie": {
+    "emis_de": {
+      "nume": "Dr. Orbán Ecaterina",
+      "specialitate": "medic specialist medicină generală-pediatrie",
+      "CUI_cabinet": "20263730",
+      "cod_parafa": "718705",
+      "cabinet": "Cabinet Medical Individual, Nădlac"
+    },
+    "data": "2024-05-30",
+    "catre": "Spitalul Județean Arad",
+    "motivul_trimiterii": [
+      "Criza HTA 200/100 mmHg — tratat anterior",
+      "Pacient cu grețuri, vărsături",
+      "SaO2 = 91%",
+      "Glicemie = 177 mg%",
+      "Diabet zaharat tip II dezechilibrat"
+    ],
+    "indicatii_terapeutice_cabinet": [
+      "Perfuzie NaCl 50/100 × 2 flacoane",
+      "EKG ora 11:30 — modificat cu supradenivelare ne-specifică V3-V5"
+    ],
+    "parametri_post_tratament_cabinet": {
+      "TA_mmHg": "110/80",
+      "AV_bpm": 53
+    },
+    "confidence_ocr": "medium-low (manuscris dens)"
+  },
+  "scrisoare_medicala_cardio_ambulator": {
+    "numar_scrisoare": "0003622",
+    "formular": "ANEXA 43",
+    "emis_de": {
+      "nume": "Dr. Post Mihaela",
+      "specialitate": "medic specialist cardiologie",
+      "cod_parafa": "A14555"
+    },
+    "motivele_prezentarii": [
+      "Dismnestezic (probabil)",
+      "Fatigabilitate la efort mediu"
+    ],
+    "diagnostic_complet": [
+      "Sindrom coronarian cronic",
+      "IM vechi (2011)",
+      "PTCA cu 1 stent (2011)",
+      "HTAE gr. 3",
+      "Risc CV foarte înalt",
+      "DZ tip 2",
+      "Insuficiență diastolică globală VS ușoară",
+      "Regurgitare mitrală ușoară degenerativă"
+    ],
+    "antecedente_personale_patologice": [
+      "DZ tip 2",
+      "Dislipidemie (LDL 210 mg/dL — probabil)",
+      "IM (2011)",
+      "PTCA cu 1 stent",
+      "Tabagism (stopat din 2011)",
+      "HTA gr. 3"
+    ],
+    "factori_risc_raportati_la_domiciliu": [
+      "Diaforeză (probabil)",
+      "Januvia (incert — posibil medicație DZ)",
+      "Prestarium 10 mg × 2",
+      "Aspenter",
+      "Concor 5 mg × 1"
+    ],
+    "examen_clinic_ambulator": {
+      "cord": "zgomote ritmice, AV 65 bpm, fără sufluri audibile",
+      "pulmonar": "MV prezent bilateral, fără raluri",
+      "TA_evolutie_mmHg": ["180/90", "160/80"]
+    },
+    "EKG_ambulator": {
+      "ritm": "sinusal",
+      "AV_bpm": 65,
+      "ax_QRS": "intermediar",
+      "unda_T_negativa_in": "aVL, V4-V5-V6"
+    },
+    "tratament_recomandat": [
+      { "medicament": "PRESTARIUM", "doza": "10 mg", "schema": "1-0-0" },
+      { "medicament": "ASPENTER", "doza": "75 mg", "schema": "0-1-0" },
+      { "medicament": "SORTIS", "doza": "80 mg", "schema": "0-0-1" },
+      { "medicament": "CONCOR", "doza": "5 mg", "schema": "1-0-0" },
+      { "medicament": "NORVASC", "doza": "5 mg", "schema": "0-1-0" }
+    ],
+    "recomandari_suplimentare": [
+      "Regim hiposodat, hipolipidic",
+      "Efort fizic în limita tolerabilității",
+      "Dacă TA ≥ 140/90 mmHg seara → medicament 10 mg suplimentar (incert)",
+      "Control la 1 lună (profil lipidic)",
+      "Control TA la 3 luni"
+    ],
+    "concediu_medical": "nu s-a eliberat"
+  },
+  "note_administrare_manuscrise_cabinet_MF": {
+    "medicatie_administrata": [
+      {
+        "medicament": "O₂ (oxigen)",
+        "cale": "inhalator",
+        "confidence_ocr": "medium"
+      },
+      {
+        "medicament": "Ser fiziologic 100 ml + flacon 250 ml",
+        "cale": "i.v. perfuzie",
+        "confidence_ocr": "high"
+      },
+      {
+        "medicament": "Algocalmin",
+        "doza": "1 fiolă",
+        "cale": "i.v.",
+        "confidence_ocr": "medium"
+      },
+      {
+        "medicament": "Metoclopramid",
+        "doza": "1 fiolă",
+        "cale": "i.v.",
+        "confidence_ocr": "medium"
+      },
+      {
+        "medicament": "TROMBEX",
+        "doza": "1 cp",
+        "cale": "p.o.",
+        "confidence_ocr": "medium"
+      },
+      {
+        "medicament": "Ser fiziologic 250 ml cu manitol (incert)",
+        "cale": "i.v. perfuzie",
+        "confidence_ocr": "low"
+      }
+    ],
+    "monitorizare_post_administrare": {
+      "AV_bpm": 55,
+      "TA_mmHg": "140/90"
+    },
+    "semnatura_emitent": "Dr. Orbán Ecaterina (cod parafă 718705)"
+  },
+  "medici_implicati": [
+    {
+      "rol": "medic familie + bilet trimitere",
+      "nume": "Dr. Orbán Ecaterina",
+      "cod_parafa": "718705",
+      "CUI_cabinet": "20263730"
+    },
+    {
+      "rol": "medic urgență UPU (solicitant gastro)",
+      "nume": "Dr. Pop Florica",
+      "cod_parafa": "C79981"
+    },
+    {
+      "rol": "consult gastroenterologie",
+      "nume": "Dr. Grada Sebastian",
+      "cod_parafa": "G15512"
+    },
+    {
+      "rol": "consult cardiologie UPU + scrisoare ambulator",
+      "nume": "Dr. Post Mihaela",
+      "cod_parafa_UPU": "A13550",
+      "cod_parafa_scrisoare": "A14555"
+    }
+  ],
+  "unitate_spital": {
+    "denumire": "Spitalul Clinic Județean de Urgență Arad",
+    "sectie": "UPU Adulți"
+  },
+  "referinte_legate": {
+    "analize_sange_acelasi_episod": "Dosar_Medical/2024-05-30_analize_upu_sange_1517243.json",
+    "analize_urina_acelasi_episod": "Dosar_Medical/2024-05-30_analize_upu_urina_1517290.json",
+    "serologie_HP_post_episod_prima": "Dosar_Medical/2024-06-04_anti_helicobacter_pylori_igg_77449.json",
+    "serologie_HP_post_episod_urmare": "Dosar_Medical/2024-09-06_anti_helicobacter_pylori_igg_79765.json"
+  }
+}

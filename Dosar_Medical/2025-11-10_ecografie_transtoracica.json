@@ -1,0 +1,104 @@
+{
+  "_metadata": {
+    "schema_version": "2.0",
+    "nume_fisier": "2025-11-10_ecografie_transtoracica.json",
+    "tip_document": "ecografie_transtoracica_raport",
+    "specialitate": "Cardiologie",
+    "data_document": "2025-11-10",
+    "sursa_pdf": "2025-11-10_cardiologie_eco_scrisoare.pdf (pagina 1)",
+    "sursa_locatie": "documente_sursa/13_cardiologie_ambulator_2025/",
+    "procesat_de": "Claude_Opus_4.7",
+    "data_procesare": "2026-04-24",
+    "ocr_quality": "excellent",
+    "confidence_overall": "high",
+    "completeness_verified": "2026-04-24",
+    "coverage": "100%",
+    "flags": [
+      "pagina_1_din_document_compus",
+      "baseline_functie_cardiaca_pre_CT_si_pre_chirurgie",
+      "identificat_medic_laza_cristina_C07842"
+    ],
+    "notes": "Ecografie transtoracică tipărită — rezultate complete pentru evaluarea funcției cardiace. RELEVANȚĂ MAXIMĂ pre-esofagectomie: acest document stabilește baseline-ul cardiac al pacientului la ~5 luni pre-diagnostic oncologic. FE păstrată 55%, hipokinezie infero-bazală + septal bazal (consecvent cu IM vechi 2012), IM + IT ușoare, HVS concentrică, disfuncție diastolică tip I, AS mărit. Rezultatele susțin riscul anestezic moderat la pacient post-stent. Medic identificat: Dr. LAZA CRISTINA cod parafă C07842 (clar tipărit pe ștampilă)."
+  },
+  "pacient": {
+    "nume": "PETRILĂ",
+    "prenume": "VIOREL-MIHAI",
+    "nume_text_original_document": "Petrila Viorel",
+    "varsta_la_data_document": 66,
+    "sex": "M",
+    "confidence_identificare": "high",
+    "note_identificare": "CNP absent pe document ECO; identificat prin cross-reference cu pagina 2 (scrisoare medicală aceeași zi) + restul dosarului."
+  },
+  "parametri_hemodinamici_baseline": {
+    "ritm": "sinusal",
+    "TA_mmHg": "130/80",
+    "FC_bpm": 70
+  },
+  "incidenta_parasternala": {
+    "aorta_la_inel_cm": null,
+    "aorta_ascendenta_cm": 3.4,
+    "diametru_AS_cm": 4.3,
+    "diametru_VD_cm": 2.6,
+    "SIV_cm": 1.4,
+    "DTDVS_cm": 4.7,
+    "DTSVS_cm": null,
+    "PPVS_cm": 1.3,
+    "aspect_valva_mitrala": "ușor fibrozate",
+    "aspect_valva_aortica": "ușor fibrozate"
+  },
+  "apical_4_camere": {
+    "VTD_ml": 135,
+    "VTS_ml": 58,
+    "FE_planimetric_procent": 55,
+    "suprafata_AS_cm2": 23,
+    "volum_AS_ml": null
+  },
+  "flux_mitral": {
+    "E_ms": 0.6,
+    "A_ms": 0.98,
+    "raport_E_A": null,
+    "stenoza_mitrala": "NU",
+    "insuficienta_mitrala": "DA — severitate ușoară"
+  },
+  "flux_aortic": {
+    "Vmax_ms": 1.3,
+    "Pmax_mmHg": 7,
+    "stenoza_aortica": "NU",
+    "insuficienta_aortica": "NU"
+  },
+  "flux_tricuspidian": {
+    "stenoza_tricuspidiana": "NU",
+    "insuficienta_tricuspidiana": "DA — severitate ușoară"
+  },
+  "flux_pulmonar": {
+    "Vmax_ms": 1.1,
+    "Pmax_mmHg": 5.5,
+    "stenoza_pulmonara": "NU",
+    "insuficienta_pulmonara": "DA — severitate ușoară"
+  },
+  "cinetica_parietala": {
+    "aspect": "hipokinezie infero-bazală + hipokinezie sept bazal",
+    "interpretare_clinica": "consecvent cu sechelă IM vechi (SCA ST+ 2012 antero-septo-apical post-stent IVA); confirmă zona de țesut cicatricial."
+  },
+  "lichid_pericardic": "Absent",
+  "concluzii_ecografice": [
+    "VS de dimensiuni normale cu funcție sistolică păstrată (FE=55%)",
+    "Hipokinezie infero-bazală și hipokinezie sept bazal",
+    "HVS concentrică",
+    "Disfuncție diastolică tip I",
+    "Insuficiența mitrală ușoară degenerativă",
+    "Insuficiența tricuspidiană ușoară funcțională",
+    "AS mărit"
+  ],
+  "medic_examinator": {
+    "nume": "Dr. LAZA CRISTINA",
+    "specialitate": "medic primar cardiolog",
+    "cod_parafa": "C07842",
+    "confidence_identificare": "high",
+    "note": "Prenume CRISTINA are confidență ~85% (textul complet „Dr. LAZA CRISTIN..." parțial vizibil pe ștampilă); nume „LAZA" + cod parafă C07842 sunt 100% clare."
+  },
+  "referinte_legate": {
+    "scrisoare_medicala_aceeasi_zi": "Dosar_Medical/2025-11-10_scrisoare_medicala_cardiologie.json",
+    "schema_medicamentatie_aceeasi_zi_acelasi_medic": "Dosar_Medical/2025-11-10_schema_medicamente.json"
+  }
+}

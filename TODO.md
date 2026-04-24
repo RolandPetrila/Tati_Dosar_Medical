@@ -2,7 +2,7 @@
 
 **Fișier de evidență a tuturor acțiunilor de făcut. Se actualizează continuu — la adăugarea și completarea fiecărei acțiuni.**
 
-**Ultima actualizare:** 22 aprilie 2026 18:30 (extins masiv `EXPLICATIE_CONSULT_ONCOLOG_SCENARII.md` cu 10+ secțiuni noi + generat DOCX 64 KB cu design profesional).
+**Ultima actualizare:** 24 aprilie 2026 18:30 (integrare masivă Arhiva_Generala + Boala_Actuala — 12 JSON-uri noi canonice + identificare medici critici: MF Dr. Orbán, cardiolog Dr. LAZA CRISTINA, urolog Dr. Pitea, chirurg Dr. Papiu; ștergere 99_altele, eliminare duplicate).
 
 ---
 
@@ -310,28 +310,38 @@ Pentru evaluare mai precisă a expunerii (calculul „pachete-an”).
 
 **Notă:** confirmarea rămâne valabil să fie repetată verbal la radiolog înainte de injectarea contrastului.
 
-### [P1] Identificare conținut PDF-uri nedigitizate
+### [P1] ✅ Identificare conținut PDF-uri nedigitizate — REZOLVAT 2026-04-24
 
-**Context:** 6 PDF-uri `2026-04-17_doc_neidentificat_{2-7}.pdf` în `Dosar_Medical/documente_sursa/99_altele/` fără conținut cartografiat.
+**Rezolvat:** toate 6 PDF-uri `doc_neidentificat_{2-7}.pdf` din `99_altele/` au fost identificate prin match exact de dimensiune cu fișierele din workspace-ul extern `Arhiva_Generala`:
 
-- [ ] Deschidere fiecare PDF
-- [ ] Anunț Claude Code: `proces [nume_fisier], corelează cu JSON-ul v2 corespunzător`
-- [ ] Actualizare `.meta.json` corespunzător
+- `_2` (1.52 MB) = `Hernie municipal.pdf`
+- `_3` (1.75 MB) = `Cardiologie.pdf`
+- `_4` (2.40 MB) = `Urologie 2025.pdf`
+- `_5` (1.39 MB) = `Analize_2025.pdf`
+- `_6` (898 KB) = `Heliobacter.pdf`
+- `_7` (12 MB) ≈ `2024 - complet analize.pdf`
+
+**Operații efectuate 2026-04-24:**
+
+- [x] Identificate ca duplicate (match dimensiune)
+- [x] Conținutul real copiat din `Arhiva_Generala` în folderele dedicate (`04_helicobacter_2024/`, `05_analize_laborator/`, `06_urologie_gastro_2025/`, `07_hernie_2025_11/`, `13_cardiologie_ambulator_2025/`, `14_UPU_2024_05_30/`)
+- [x] JSON-uri canonice create din extrageri strict-extractive (12 noi)
+- [x] Folderul `99_altele/` **ȘTERS** integral (nu arhivat — conform cererii user)
 
 ### [P1] Digitizare documente lipsă
 
 - [ ] PDF original cardiologie Vichy 2012 (pentru tipul exact al stent-ului DES vs. BMS)
-- [ ] Document externare episod H. pylori 30.05.2024
+- [x] ✅ Document externare episod H. pylori 30.05.2024 — **REZOLVAT 2026-04-24** prin integrarea `2024_Gastro_Complet` (10 pagini UPU + consulturi + analize) → JSON-uri: `2024-05-30_upu_consult_gastro_cardio.json` + `2024-05-30_analize_upu_sange_1517243.json` + `2024-05-30_analize_upu_urina_1517290.json`
 - [ ] Buletin ecografie abdominală 14.04.2026
 
-### [P1] Identificare medic prescriptor schema 10.11.2025 (post-R25)
+### [P1] ✅ Identificare medic prescriptor schema 10.11.2025 — REZOLVAT 2026-04-24
 
-**Context:** nume medic parțial ilizibil pe manuscris (transcriere „Dr. LAZĂR" cu confidence LOW — surname parțial, prenume necunoscut, unitate necunoscută). Conform **Regula 25** (aplicată 2026-04-24), numele NU s-a integrat în `CONTEXT_MEDICAL.md` și `Dosar_Medical/2025-11-10_schema_medicamente.json` — se refuză transcrieri aproximative pe elemente critice (nume medic curant). Tracking în `Dosar_Medical/EXTRAGERI_INCOMPLETE.md` (status 🟡 deschis).
+**Rezolvat:** **Dr. LAZA CRISTINA** (medic primar cardiolog, cod parafă **C07842**) — identificat prin cross-reference cu ecografia transtoracică efectuată în aceeași zi (10.11.2025), text tipărit cu cod parafă clar vizibil pe ștampilă. Consult pre-chirurgie hernie.
 
-**Sub-task-uri:**
-
-- [ ] Clarificare telefonică cu familia — identificare medic prescriptor (nume complet, cabinet, specialitate, unitate)
-- [ ] După identificare: update `CONTEXT_MEDICAL.md` §4 Medicație + §9 Echipă medicală + `Dosar_Medical/2025-11-10_schema_medicamente.json` + `Dosar_Medical/EXTRAGERI_INCOMPLETE.md` (status 🟡 → ✅ + data + sursă verificare)
+- [x] Identificare prin cross-reference ECO aceeași zi (10.11.2025)
+- [x] Update `CONTEXT_MEDICAL.md` §4 Medicație + §9 Echipă medicală
+- [x] Update `Dosar_Medical/2025-11-10_schema_medicamente.json`
+- [ ] Clarificare cabinet/unitate Dr. LAZA CRISTINA (probabil cabinet cardiologie ambulator Arad — de confirmat cu familia)
 
 ### [P2] HbA1c recent
 

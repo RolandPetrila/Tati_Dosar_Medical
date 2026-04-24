@@ -1,0 +1,104 @@
+{
+  "_metadata": {
+    "schema_version": "2.0",
+    "nume_fisier": "2026-04-17_bilet_trimitere_CT.json",
+    "tip_document": "bilet_trimitere_investigatii_paraclinice",
+    "specialitate": "Administrativ / Gastroenterologie (trimițător) → Radiologie (destinatar)",
+    "data_document": "2026-04-17",
+    "sursa_pdf": "2026-04-17_bilet_trimitere_CT_BCTAP_0631727.jpeg",
+    "sursa_locatie": "documente_sursa/11_CT_stadializare_2026/",
+    "procesat_de": "Claude_Opus_4.7",
+    "data_procesare": "2026-04-24",
+    "ocr_quality": "excellent",
+    "confidence_overall": "high",
+    "completeness_verified": "2026-04-24",
+    "coverage": "100%",
+    "flags": [
+      "bilet_CAS_decontat",
+      "genesis_medical_clinic",
+      "pre_CT_2026_04_20"
+    ],
+    "notes": "Bilet tipizat emis de C.N. Imprimeria Națională S.A. Investigații paraclinice decontate de CAS AR, nr. contract 1148. Nivel prioritate bifat: Ambulator Specialitate. Biletul autorizează CT torace + abdomen + pelvis toate cu SDC pentru diagnostic 'PROCES PROLIFERATIV ESOFAGIAN' (cod 95). A generat examinarea efectuată pe 20.04.2026 la Genesis Medical Clinic Micălaca — vezi 2026-04-20_ct_torace_abdomen_pelvis.json."
+  },
+  "pacient": {
+    "nume": "PETRILĂ",
+    "prenume": "VIOREL-MIHAI",
+    "nume_text_original_document": "PETRILA VIOREL-MIHAI",
+    "cnp": "1590518024486",
+    "adresa_document": "Nădlac",
+    "cetatenia": "Ro",
+    "categorie_asigurat_bifata": "Pensionar",
+    "cod_card_asigurat": null,
+    "confidence_identificare": "high"
+  },
+  "diagnostic": [
+    {
+      "cod_icd10": null,
+      "cod_intern_bilet": "95",
+      "descriere_oficiala": "Proces proliferativ esofagian",
+      "descriere_originala": "PROCES PROLIFERATIV ESOFAGIAN",
+      "tip": "principal",
+      "confidence_ocr": "high",
+      "note": "Cod '95' este cod intern CAS / formular, nu ICD-10 standard."
+    }
+  ],
+  "unitate_medicala_emitenta": {
+    "denumire": "SC GENESIS MEDICAL CLINIC SRL",
+    "cui": "R20295098",
+    "adresa": "Arad, Bd. Revoluției nr. 3",
+    "cas": "CAS AR",
+    "nr_contract_conventie": "1148"
+  },
+  "medic_emitent": {
+    "nume": "Dr. Noufal Abdul Vahab",
+    "nume_text_original_document": "NOUPHAL ABDUL VAHAB",
+    "specialitate": "medic primar gastroenterologie",
+    "cod_parafa": "C 11074"
+  },
+  "investigatii_recomandate": [
+    {
+      "pozitie": 1,
+      "cod_investigatie": "CT",
+      "descriere": "TORACE (SDC)",
+      "confidence_ocr": "high"
+    },
+    {
+      "pozitie": 2,
+      "cod_investigatie": "CT",
+      "descriere": "ABDOMEN (SDC)",
+      "confidence_ocr": "high"
+    },
+    {
+      "pozitie": 3,
+      "cod_investigatie": "CT",
+      "descriere": "PELVIS (SDC)",
+      "confidence_ocr": "high"
+    }
+  ],
+  "campuri_necompletate_pe_bilet": [
+    "Date clinice și paraclinice care să justifice investigația (4.2)",
+    "Examen CT anterior DA/NU (4.3)",
+    "Greutate pacient (4.4.a)",
+    "Toleranță substanța iodată (4.4.b)",
+    "Substanță de contrast DA/NU explicit (4.5) — implicit DA prin 'SDC' în 4.1",
+    "Persoana desemnată de furnizor paraclinic (5)",
+    "Data prezentării pacientului + semnătura (6)"
+  ],
+  "nivel_prioritate": {
+    "MF": false,
+    "Urgenta": false,
+    "Amb_Spec": true,
+    "Curente": false,
+    "Altele": false
+  },
+  "referinta_biletul_a_generat": {
+    "ct_efectuat_data": "2026-04-20",
+    "ct_efectuat_JSON": "Dosar_Medical/2026-04-20_ct_torace_abdomen_pelvis.json"
+  },
+  "numere_referinta": {
+    "serie_bilet": "BCTAP",
+    "numar_bilet": "0631727",
+    "cod_diagnostic": "95",
+    "tiparit_la": "C.N. Imprimeria Națională S.A."
+  }
+}

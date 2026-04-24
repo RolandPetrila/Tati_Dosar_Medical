@@ -1,0 +1,91 @@
+{
+  "_metadata": {
+    "schema_version": "2.0",
+    "nume_fisier": "2024-09-06_anti_helicobacter_pylori_igg_79765.json",
+    "tip_document": "buletin_analize_serologie",
+    "specialitate": "Laborator / Microbiologie",
+    "data_document": "2024-09-06",
+    "data_recoltare": "2024-09-03T08:43:00",
+    "data_eliberare": "2024-09-06T09:39:00",
+    "data_inregistrare": "2024-09-03T08:36:00",
+    "data_imprimare": "2024-09-06T09:39:00",
+    "numar_buletin": "79765",
+    "sursa_pdf": "2024-06-04_si_2024-09-06_buletine_anti_hp_igg.pdf (pagina 1)",
+    "sursa_locatie": "documente_sursa/04_helicobacter_2024/",
+    "procesat_de": "Claude_Opus_4.7",
+    "data_procesare": "2026-04-24",
+    "ocr_quality": "good",
+    "confidence_overall": "high",
+    "completeness_verified": "2026-04-24",
+    "coverage": "100%",
+    "flags": [
+      "control_serologic_la_3_luni_post_buletin_77449",
+      "identificat_laborator_ultra_clinicavest",
+      "identificat_medic_solicitant_orban"
+    ],
+    "notes": "Al doilea buletin serologic IgG, la ~3 luni după buletinul 77449 din 04.06.2024. Aceeași valoare >100 U/mL — consistent în timp, compatibil cu antecedente H. pylori. Serologia IgG NU distinge infecție activă de antecedentă — eradicarea ar trebui confirmată prin antigen fecal sau test respirator cu uree. Fișier redenumit 2026-04-24 (anterior '2024-09-06_anti_helicobacter_pylori_igg.json') + completat cu identificarea laboratorului (Ultra ClinicaVest Pecica) + medicului solicitant (Dr. Orbán Ecaterina-Maria) + medicului validator (Dr. Cret Anamaria)."
+  },
+  "pacient": {
+    "nume": "PETRILĂ",
+    "prenume": "VIOREL-MIHAI",
+    "nume_text_original_document": "PETRILA VIOREL-MIHAI",
+    "cnp": "1590518024486",
+    "data_nasterii": "1959-05-18",
+    "varsta_la_data_document": 65,
+    "sex": "M",
+    "adresa": "Ors. Nădlac, AR",
+    "confidence_identificare": "high"
+  },
+  "diagnostic": [],
+  "analize_laborator": [
+    {
+      "nume": "Anticorpi Anti Helicobacter Pylori IgG",
+      "nume_original": "Anticorpi Anti Helicobacter Pylori IgG",
+      "categorie": "MARKERI BOLI INFECTIOASE",
+      "valoare_numerica": null,
+      "valoare_text": ">100",
+      "unitate": "U/mL",
+      "interval_referinta_min": 0,
+      "interval_referinta_max": 20,
+      "interval_referinta_text": "0-20 U/mL",
+      "flag": "crescut",
+      "tip_proba": "ser",
+      "metoda": "CLIA",
+      "subcontractat": true,
+      "acreditat_renar": false,
+      "confidence_ocr": "high",
+      "note": "Pozitiv masiv (peste 5× limita superioară a intervalului de referință). Semnifică expunere anterioară la H. pylori; nu diferențiază infecție activă de antecedentă. Aceeași valoare ca buletinul anterior 77449 din 04.06.2024 — persistență anticorpi IgG compatibilă cu istoricul."
+    }
+  ],
+  "tratament": [],
+  "recomandari": [],
+  "medic_solicitant": {
+    "nume": "Dr. ORBÁN ECATERINA-MARIA",
+    "specialitate": "MF (medicină de familie)",
+    "cod_parafa": "718705",
+    "CUI_cabinet": "20263730",
+    "bilet_trimitere": "BTIAU / 03.09.24"
+  },
+  "medic_validator_laborator": {
+    "nume": "Dr. Cret Anamaria",
+    "specialitate": "Medic Primar Laborator",
+    "cod_parafa": "A 0769"
+  },
+  "unitate_laborator": {
+    "denumire": "SC Ultra ClinicaVest SRL",
+    "tip": "LABORATOR DE ANALIZE MEDICALE",
+    "adresa": "Oraș Pecica, str. 2, nr. 173, jud. Arad",
+    "email": "laborator@ultraclinicavest.ro",
+    "telefon": "0257.468.212",
+    "software": "SmartLabs 5.20 (Build 20.2305)"
+  },
+  "numere_referinta": {
+    "numar_buletin": "79765",
+    "barcode": "0000079765",
+    "cod_formular": "BA-7.4-05"
+  },
+  "referinte_legate": {
+    "buletin_anterior_acelasi_pacient": "Dosar_Medical/2024-06-04_anti_helicobacter_pylori_igg_77449.json",
+    "episod_clinic_declansator": "Dosar_Medical/2024-05-30_upu_consult_gastro_cardio.json"
+  }
+}

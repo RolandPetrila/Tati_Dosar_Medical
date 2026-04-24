@@ -4,6 +4,98 @@
 
 ---
 
+## 2026-04-24 18:30 — Integrare completă Arhiva_Generala + Boala_Actuala (12 JSON-uri noi + restructurare completă)
+
+**Tip:** INTEGRARE MASIVĂ + REORGANIZARE — răspuns la cerere user comprehensivă (audit + plan + execuție A/A/A/A/A/A).
+
+**Context declanșator:** User a pus la dispoziție extrageri strict-extractive (format v2.1) din workspace-ul paralel `.Tati_Documente_Medicale/Claude/` (Boala_Actuala: 5 documente + Arhiva_Generala: 11 documente). Cerere: comparație cu JSON-urile canonice din `.Tati`, identificare lacune, plan de reorganizare într-o documentație UNICĂ (zero duplicate) cu ștergeri fără arhivare + eliminare folder `99_altele/`.
+
+**Surse externe integrate:**
+
+- `.Tati_Documente_Medicale/Claude/Boala_Actuala/` — Bilet_trimitere + Bioclinica + CT-Genesys + Examen_Gastroscopic + Examen_Colonoscopic
+- `.Tati_Documente_Medicale/Claude/Arhiva_Generala/` — C.I. + Cupon_pensie + Cardiologie + Heliobacter + Hernie municipal + Iesire din spital + Analize_2025 + Urologie 2025 + Schema_medicamentatie + Gastro-genesis 2026 + 2024_Gastro_Complet (10 pagini)
+
+**Lacune CRITICE rezolvate:**
+
+1. **Cardiologie ambulator 10.11.2025** (LACUNĂ A) — ECO transtoracică + scrisoare medicală cu valori complete (FE 55%, HVS concentrică, disfuncție diastolică tip I, AS mărit, hipokinezie sechelară). Medic identificat: **Dr. LAZA CRISTINA (cod C07842)** — cross-reference cu schema medicamente aceeași zi.
+2. **Episod UPU 30.05.2024** (LACUNĂ B) — 10 pagini: consult gastro (Dr. Grada Sebastian) + cardio (Dr. Post Mihaela cod A13550/A14555) + 2 EKG (Glasgow + CARDIO-M PLUS) + bilet trimitere MF + scrisoare 0003622 + note manuscrise + analize complete sânge/urină. Incidente clinice: **hs-cTnI dinamic 4.24→4.59 ng/L**, **EKG Markedly Abnormal**, criza HTA 200/100, hiperglicemie 180 mg/dL.
+3. **Buletin HP IgG 04.06.2024** (LACUNĂ C) — nr. 77449, anterior existând doar 06.09.2024.
+4. **Ecografie scrotală 28.10.2025** (LACUNĂ D) — integrată în JSON-ul urologie.
+5. **Medic de familie** (LACUNĂ E) — **Dr. ORBÁN ECATERINA-MARIA** (CUI 20263730, cod parafă 718705, Cabinet Medical Individual Nădlac) — identificat prin trei surse concordante.
+
+**Operații executate:**
+
+### FAZA 1 — Copieri (15 fișiere sursă + 14 MD-uri din workspace extern)
+
+Surse PDF/JPEG + MD-uri strict-extractive copiate în:
+
+- `documente_sursa/11_CT_stadializare_2026/` (bilet trimitere + MD)
+- `documente_sursa/09_endoscopie_2026_04/` (gastroscopie + colonoscopie JPEG + MD)
+- `documente_sursa/05_analize_laborator/` (Bioclinica MD + Analize_2025 PDF+MD)
+- `documente_sursa/04_helicobacter_2024/` (ambele buletine PDF + MD)
+- `documente_sursa/06_urologie_gastro_2025/` (5 pagini PDF + MD)
+- `documente_sursa/07_hernie_2025_11/` (bilet + scrisoare anexa43 + 2 MD)
+- `documente_sursa/08_schema_tratament/` (MD alături)
+- `documente_sursa/01_identitate/` (MD alături)
+- `documente_sursa/10_administrativ_pensie/` (MD alături)
+- **NOU `documente_sursa/13_cardiologie_ambulator_2025/`** (PDF + MD)
+- **NOU `documente_sursa/14_UPU_2024_05_30/`** (PDF compozit + 10 JPEG pagini + MD)
+
+### FAZA 2 — 12 JSON-uri canonice noi v2.0 + .meta.json
+
+1. `2024-05-30_upu_consult_gastro_cardio.json` — fuziune 7 pagini
+2. `2024-05-30_analize_upu_sange_1517243.json` — 27 parametri
+3. `2024-05-30_analize_upu_urina_1517290.json` — glucozurie+corpi cetonici+
+4. `2024-06-04_anti_helicobacter_pylori_igg_77449.json`
+5. `2024-09-06_anti_helicobacter_pylori_igg_79765.json` — redenumire cu nr. buletin + completare medici/laborator
+6. `2025-11-10_ecografie_transtoracica.json` — toate valorile ECO
+7. `2025-11-10_scrisoare_medicala_cardiologie.json` — scrisoare nr 0005042
+8. `2026-04-17_bilet_trimitere_CT.json` — BCTAP 0631727 ca document propriu
+9. `2026-04-17_examen_gastroscopic.json` — separat
+10. `2026-04-17_examen_colonoscopic.json` — separat, R23 integral aplicat (toate 6 segmente listate)
+
+- toate `.meta.json` companion
+
+### FAZA 3 — 5 JSON-uri existente actualizate
+
+- `2025-11-10_schema_medicamente.json` — medic identificat Dr. LAZA CRISTINA (cod C07842) prin cross-reference, înlocuiește NEIDENTIFICAT (R25)
+- `2025-06-17_buletin_analize_sange.json` — adăugat medic solicitant (Dr. Orbán) + laborator Ultra ClinicaVest + nr. buletin 87967
+- `2025-10-28_scrisoare_urologie_gastroenterologie.json` — adăugată secțiune `ecografie_scrotala` + identificat medic Dr. Pitea Alexandru
+- `2026-04-20_ct_torace_abdomen_pelvis.json` — eliminat referințe fragmentare bilet trimitere, înlocuit cu link către JSON canonic dedicat
+- `2024-09-06_anti_helicobacter_pylori_igg.json` — redenumit la `_79765` + completat
+
+### FAZA 4 — MANIFEST.json regenerat la v2.0
+
+- 19 JSON-uri canonice indexate
+- Timeline extins cu evenimente noi (UPU 2024-05-30, cardiologie 2025-11-10)
+- Lacune rămase: 5 (Vichy 2012, hernie anterioară, ECO abdominală 14.04, HbA1c, test eradicare HP)
+- Lacune rezolvate 2026-04-24: 9
+
+### FAZA 5 — CONTEXT_MEDICAL.md extins
+
+- Antet: versiune 1.3 + dată 2026-04-24 18:30
+- §3 Antecedente: adăugat „Episod UPU 30.05.2024" + reorganizat H. pylori (2 buletine serologie) + adăugat „Cardiologie ambulator 10.11.2025" cu tabele ECO complete
+- §4 Medicație: Dr. LAZA CRISTINA identificat ca prescriptor (înlocuiește NEIDENTIFICAT R25)
+- §7 Investigații: separare 7.2 gastroscopie + 7.3 colonoscopie (R23 — 6 segmente listate) + NOU 7.5 bilet trimitere CT
+- §9 Echipă medicală: extins de la 11 la 16 medici/unități; adăugați Dr. Orbán (MF), Dr. LAZA CRISTINA (cardio ambulator), Dr. Post Mihaela (cardio UPU), Dr. Grada Sebastian (gastro UPU), Dr. Pop Florica (urgență), Dr. Pitea Alexandru (urologie), Dr. Papiu Horațiu (chirurgie), Dr. Cret Anamaria (laborator), Dr. Igas Angelica + Dr. Avram Cecilia (laborator UPU)
+
+### FAZA 6 — ȘTERGERI (fără arhivare, per cerere user)
+
+- `documente_sursa/99_altele/` (6 PDF + 6 meta.json — duplicate confirmate prin match dimensiune cu Arhiva_Generala)
+- `Dosar_Medical/2026-04-17_buletin_gastroenterologie.json` (înlocuit cu 2 JSON-uri separate)
+- `documente_sursa/09_endoscopie_2026_04/2026-04-17_buletin_endoscopie_colonoscopie.pdf` (PDF unificat → JPEG separate)
+- `documente_sursa/07_hernie_2025_11/2025-11-28_externare_chirurgie_hernie.pdf` (redundant cu bilet_iesire + scrisoare_anexa43)
+- `arhiva/backup_pre-migrare_v2_2026-04-18/` (10 JSON Gemini v1 superseded)
+- `arhiva/duplicate_chirurgie_28_11_2025/` (3 JSON-uri fuzionate în canonic)
+- `arhiva/context_medical_versiuni/` (păstrat doar `_pre-batchA-r24-CT_2026-04-24_0230.md`; șterse 4 vechi)
+- `arhiva/TODO_pre-*.md` (2 backup-uri TODO vechi)
+
+**Total impact:** 15 copieri + 24 JSON-uri create/modificate + ~25 fișiere șterse + 2 foldere noi.
+
+**Status regulament:** v12.3 (neatins; toate cele 4 reguli noi R23/R24/R25/R26 au fost aplicate corect în operațiune).
+
+---
+
 ## 2026-04-24 02:50 — Adăugare Regula 26 (consistență structură foldere documente sursă + semnalare devieri) + inventar status foldere
 
 **Tip:** REGULĂ NOUĂ — răspuns la cerere user post-reorganizare CT.

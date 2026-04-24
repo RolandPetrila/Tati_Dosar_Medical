@@ -83,8 +83,39 @@
   "recomandari": [
     "Cură chirurgicală hernie inghinală + cură chirurgicală hidrocel + excizie chiste epididimare"
   ],
+  "ecografie_scrotala": {
+    "patient_id_aparat": "28-10-2025-101401",
+    "sonographer": "Dr. Pitea Alexandru",
+    "diagnostic_conclusion": "Hernie inghinala dreapta. Hidrocel drept. Chiste epididimare bilaterale.",
+    "imagini_ecografice_numar": 4,
+    "timestamps_imagini": [
+      "2025-10-28T10:15:04",
+      "2025-10-28T10:16:56",
+      "2025-10-28T10:19:04"
+    ],
+    "dimensiuni_masurate": [
+      {
+        "nr": 1,
+        "distanta_cm": 3.85,
+        "confidence_ocr": "medium",
+        "note": "rezoluție scan scăzută"
+      },
+      { "nr": 2, "distanta_cm": 0.85, "confidence_ocr": "medium" },
+      { "nr": 3, "distanta_cm": 3.18, "confidence_ocr": "medium" }
+    ],
+    "regiune_examinata": "Scrotum (Small Parts Report)",
+    "echipament_software": "Urologie Arad Dr. Pitea Alexandru",
+    "confidence_ocr": "medium"
+  },
   "medici_unitati": {
-    "unitate": "de identificat din documentul original",
-    "sectie": "Urologie / Gastroenterologie"
+    "nume_medic": "Dr. PITEA ALEXANDRU",
+    "specialitate": "medic primar urologie",
+    "cod_parafa": "A13044",
+    "nr_FO_consultatii": "6453",
+    "unitate": "Complex Medical Pitea & Pitea SRL",
+    "adresa": "Arad, Revoluției 45",
+    "telefon": "0749111455",
+    "email": "UROLOGIE.PITEA@YAHOO.COM",
+    "sectie": "Urologie"
   }
 }

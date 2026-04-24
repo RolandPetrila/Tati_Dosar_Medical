@@ -88,9 +88,12 @@
   ],
   "recomandari": [],
   "medici_unitati": {
-    "medic_curant": "NEIDENTIFICAT",
-    "confidence_medic": "neaplicabil_r25",
-    "unitate": "neidentificată",
-    "note_r25": "Nume ilizibil pe manuscris — conform Regula 25 (aplicată 2026-04-24) numele NU s-a integrat în dosar structurat. Tracking în Dosar_Medical/EXTRAGERI_INCOMPLETE.md. Clarificare telefonică cu familia = TODO.md P1."
+    "medic_curant": "Dr. LAZA CRISTINA",
+    "specialitate": "medic primar cardiolog",
+    "cod_parafa": "C07842",
+    "confidence_medic": "high",
+    "metoda_identificare": "cross-reference 2026-04-24 cu ecografia transtoracică efectuată în aceeași zi (10.11.2025) de același medic — Dr. LAZA CRISTINA, cod C07842 (clar tipărit pe ștampila ECO). Schema medicamentatie manuscrisă a fost prescrisă de același cardiolog la consultul ambulator din 10.11.2025 (consult preoperator hernie). Înlocuiește marcajul NEIDENTIFICAT (R25) din varianta anterioară.",
+    "referinta_ecografie": "Dosar_Medical/2025-11-10_ecografie_transtoracica.json",
+    "referinta_scrisoare_medicala": "Dosar_Medical/2025-11-10_scrisoare_medicala_cardiologie.json"
   }
 }

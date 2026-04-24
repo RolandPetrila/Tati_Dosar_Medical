@@ -1,0 +1,16 @@
+{
+  "source_document": "2025-11-10_cardiologie_eco_scrisoare.pdf (pagina 2)",
+  "source_location": "documente_sursa/13_cardiologie_ambulator_2025/",
+  "received_date": "2025-11-10",
+  "received_from": "Dr. LAZA CRISTINA (medic primar cardiolog, cod C07842) — consult ambulator probabil pre-chirurgie hernie",
+  "digitized_by": "PDF (scan manuscris)",
+  "digitized_date": "2026-04-19",
+  "transcriber": "Claude_Opus_4.7 (extragere strict-extractivă v2.1 + cross-reference user-confirmat 2026-04-22)",
+  "extragere_md": "documente_sursa/13_cardiologie_ambulator_2025/2025-11-10_cardiologie_eco_scrisoare_extragere.md",
+  "json_canonic": "Dosar_Medical/2025-11-10_scrisoare_medicala_cardiologie.json",
+  "ocr_quality": "partial (manuscris)",
+  "completeness_verified": "2026-04-24",
+  "coverage": "100% (elemente critice CERT; manuscris dens 60-70% confidence per element)",
+  "validator": "claude-opus-4-7",
+  "chain_notes": "Document compus ECO+scrisoare separat în 2 JSON-uri (pag.1 ECO tipărit = 2025-11-10_ecografie_transtoracica.json; pag.2 scrisoare manuscris = acest JSON) pentru a reflecta clar nivelul de confidence diferit și a permite propagare independentă în CONTEXT_MEDICAL.md."
+}

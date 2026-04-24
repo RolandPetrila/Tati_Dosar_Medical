@@ -1,0 +1,163 @@
+{
+  "_metadata": {
+    "schema_version": "2.0",
+    "nume_fisier": "2025-11-10_scrisoare_medicala_cardiologie.json",
+    "tip_document": "scrisoare_medicala_consult_cardiologie",
+    "specialitate": "Cardiologie",
+    "data_document": "2025-11-10",
+    "numar_scrisoare": "0005042",
+    "sursa_pdf": "2025-11-10_cardiologie_eco_scrisoare.pdf (pagina 2)",
+    "sursa_locatie": "documente_sursa/13_cardiologie_ambulator_2025/",
+    "procesat_de": "Claude_Opus_4.7",
+    "data_procesare": "2026-04-24",
+    "ocr_quality": "partial",
+    "confidence_overall": "medium",
+    "completeness_verified": "2026-04-24",
+    "coverage": "100% (parte manuscris cu confidence ~68%)",
+    "flags": [
+      "manuscris_dens",
+      "pre_CT_si_pre_chirurgie_consult",
+      "identificat_medic_laza_cristina"
+    ],
+    "notes": "Scrisoare medicală scrisă de mână (formular tipizat Gutenberg Arad). Același medic Dr. LAZA CRISTINA (cod C07842) ca pe ECO din pagina 1. Confidence transcriere ~68% (manuscris dens); elemente critice clare: tratament recomandat (confirmat prin cross-reference cu schema_medicamente 10.11.2025 + foto cutii), diagnostic (IC cronică + IM vechi ~13 ani + HTAE gr.II-III + DZ tip 2), valori lab (GL 133, creat 0.85), examen clinic (TAs 130/80, FC 70, AV 70). Corecție §3 confirmată de user 2026-04-22: rândul 4 din rețeta manuscrisă a fost citit inițial 'ROSOMEZ 20 mg' — este de fapt TRIPLIXAM 10/2,5/5 mg 1-0-0."
+  },
+  "pacient": {
+    "nume": "PETRILĂ",
+    "prenume": "VIOREL-MIHAI",
+    "nume_text_original_document": "PETRILA VIOREL",
+    "varsta_la_data_document": 66,
+    "sex": "M",
+    "confidence_identificare": "high"
+  },
+  "motivele_prezentarii": {
+    "text_original": "consult preoperator",
+    "confidence_ocr": "medium",
+    "context_probabil": "consult cardiologic pre-chirurgie hernie inghinală (intervenție efectuată 26-28.11.2025)"
+  },
+  "diagnostic": [
+    {
+      "descriere_oficiala": "Insuficiență coronariană cronică",
+      "descriere_originala": "Insuficiență coronariană cronică",
+      "tip": "principal",
+      "confidence_ocr": "medium"
+    },
+    {
+      "descriere_oficiala": "Infarct miocardic vechi (~13 ani)",
+      "descriere_originala": "IM vechi 13 ani",
+      "tip": "antecedent",
+      "confidence_ocr": "medium",
+      "note": "Consistent cu SCA ST+ 2012 (stent IVA Vichy) — 13 ani = 2012→2025."
+    }
+  ],
+  "anamneza": {
+    "antecedente_raportate": [
+      "Bolnav post PTCA cu stent pe IVA (2012)",
+      "HTA esențială gr. II-III cu risc foarte înalt",
+      "Dislipidemie (probabil)",
+      "DZ tip 2 (probabil)",
+      "Stabil hemodinamic pe tratament ambulator (probabil)"
+    ],
+    "confidence_ocr": "low-medium",
+    "note": "Scris cursiv dens — probabilitatea ~60-70% pe interpretare; diagnosticele sunt consistente cu restul dosarului."
+  },
+  "factori_risc": [
+    "vârstă",
+    "HTA",
+    "dislipidemie",
+    "DZ tip 2",
+    "sedentarism",
+    "fost fumător"
+  ],
+  "examen_clinic": {
+    "general": {
+      "TA_mmHg": "130/80",
+      "status": "stabil, afebril"
+    },
+    "local": {
+      "TA_mmHg": "130/80",
+      "FC_bpm": 70,
+      "HTA_prezent_compensat": true,
+      "cord": "ritmic",
+      "zgomote_cardiace": "normale",
+      "MV_pulmonar": "prezent fără raluri",
+      "abdomen": "suplu, nedureros"
+    }
+  },
+  "examene_laborator": {
+    "valori_normale": "câmp neclar (ilizibil)",
+    "valori_patologice": {
+      "glicemie_mg_dL": 133,
+      "creatinina_mg_dL": 0.85,
+      "confidence_ocr": "high"
+    }
+  },
+  "examene_paraclinice": {
+    "EKG": {
+      "ritm": "sinusal",
+      "AV_bpm": 80,
+      "ax_QRS": "intermediar",
+      "ischemie_acuta": "absent",
+      "aspect_sechelar": "posibil infarct inferior",
+      "confidence_ocr": "medium"
+    },
+    "ECO": "vezi pagina 1 (JSON dedicat: 2025-11-10_ecografie_transtoracica.json)",
+    "radiografie": null
+  },
+  "tratament_recomandat": [
+    {
+      "medicament": "ASPENTER",
+      "doza": "75 mg",
+      "schema": "0-1-0",
+      "moment": "prânz",
+      "confidence_ocr": "medium",
+      "note": "consecvent cu schema medicamente manuscris aceeași zi"
+    },
+    {
+      "medicament": "TRIPLIXAM",
+      "doza": "10/2,5/5 mg",
+      "schema": "1-0-0",
+      "moment": "dimineața",
+      "confidence_ocr": "high",
+      "note": "CONFIRMAT user 2026-04-22 prin cross-reference Schema_medicamentatie_zilnica.jpeg (foto cutii). Corectează eroarea inițială 'ROSOMEZ 20 mg' din primul pass."
+    },
+    {
+      "medicament": "CONCOR",
+      "doza": "5 mg",
+      "schema": "1-0-0 (sau 1/2-0-0)",
+      "moment": "dimineața",
+      "confidence_ocr": "medium",
+      "note": "consecvent cu schema medicamente"
+    },
+    {
+      "medicament": "TORVACARD",
+      "doza": "10 mg sau 20 mg",
+      "schema": "0-0-1",
+      "moment": "seara",
+      "confidence_ocr": "medium-low",
+      "note": "doză incertă — 10 vs 20 mg; necesită clarificare"
+    }
+  ],
+  "recomandari_suplimentare": [
+    "Repetă peste 3 luni cu profil lipidic",
+    "Nu este necesară revenirea pentru internare (bifat explicit)"
+  ],
+  "indicatie_revenire_internare": "NU",
+  "concediu_medical": "nu s-a eliberat (niciuna dintre opțiuni bifată explicit)",
+  "medic_examinator": {
+    "nume": "Dr. LAZA CRISTINA",
+    "specialitate": "medic primar cardiolog",
+    "cod_parafa": "C07842",
+    "confidence_identificare": "high",
+    "note": "Primele 4 litere 'LAZA' + cod parafă C07842 = clar pe ștampilă. Prenume CRISTINA ~85% confidence (parțial vizibil 'CRISTIN...')."
+  },
+  "formular_tipizat": {
+    "tipografie": "Gutenberg SRL Arad",
+    "telefon_tipografie": "0257 254 330",
+    "email_tipografie": "ditgutenberg@gmail.com"
+  },
+  "referinte_legate": {
+    "ecografie_transtoracica_aceeasi_zi": "Dosar_Medical/2025-11-10_ecografie_transtoracica.json",
+    "schema_medicamentatie_aceeasi_zi_acelasi_medic": "Dosar_Medical/2025-11-10_schema_medicamente.json",
+    "eveniment_declansator_probabil": "consult preoperator hernie inghinală (chirurgie 26-28.11.2025 → 2025-11-28_externare_chirurgie_hernie.json)"
+  }
+}

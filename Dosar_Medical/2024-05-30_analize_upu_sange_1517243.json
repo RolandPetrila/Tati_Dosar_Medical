@@ -1,0 +1,312 @@
+{
+  "_metadata": {
+    "schema_version": "2.0",
+    "nume_fisier": "2024-05-30_analize_upu_sange_1517243.json",
+    "tip_document": "buletin_analize_laborator_hematologie_biochimie",
+    "specialitate": "Laborator Clinic",
+    "data_document": "2024-05-30",
+    "data_recoltare": "2024-05-30T13:05:00",
+    "data_examinare": "2024-05-30T13:05:00",
+    "data_eliberare": "2024-05-30T14:04:16",
+    "numar_buletin": "1517243",
+    "cod_proba": "1517243",
+    "sursa_pdf": "2024-05-30_dosar_upu_complet.pdf (pag 3-4)",
+    "sursa_locatie": "documente_sursa/14_UPU_2024_05_30/",
+    "procesat_de": "Claude_Opus_4.7",
+    "data_procesare": "2026-04-24",
+    "ocr_quality": "excellent",
+    "confidence_overall": "high",
+    "completeness_verified": "2026-04-24",
+    "coverage": "100%",
+    "flags": [
+      "valori_patologice_glicemie_creatinina",
+      "UPU_30_05_2024_episod_major",
+      "hiperglicemie_aproape_dubla_limita"
+    ],
+    "notes": "Analize din episodul UPU 30.05.2024. Glicemie 180.48 mg/dL (↑↑ aproape dublu față de limita 115 — hiperglicemie severă necontrolată), lymphopenie (LY% 15.4), creatinină 0.66 (↓ ușor sub limita 0.7). Restul hemoleucogramei + biochimiei — în limite normale. Examinat la analizor SYSMEX XN 1000 (hematologie) + COBAS INTEGRA 400 PLUS (biochimie) la Spitalul Clinic Județean de Urgență Arad."
+  },
+  "pacient": {
+    "nume": "PETRILĂ",
+    "prenume": "VIOREL-MIHAI",
+    "nume_text_original_document": "PETRILA VIOREL MIHAI",
+    "cnp": "1590518024486",
+    "data_nasterii": "1959-05-18",
+    "varsta_la_data_document": "65 ani 0 luni",
+    "sex": "M",
+    "adresa": "Nadlac, AR",
+    "nr_FO": "1021735",
+    "sectie_spital": "UPU Adulți",
+    "confidence_identificare": "high"
+  },
+  "diagnostic": [],
+  "analize_laborator": [
+    {
+      "categorie": "HEMATOLOGIE",
+      "nume": "Leucocite (WBC)",
+      "valoare_numerica": 8.82,
+      "unitate": "x10^3/µL",
+      "interval_referinta_text": "4.00-10.00",
+      "flag": "normal",
+      "confidence_ocr": "high"
+    },
+    {
+      "categorie": "HEMATOLOGIE",
+      "nume": "Eritrocite (RBC)",
+      "valoare_numerica": 4.93,
+      "unitate": "x10^6/µL",
+      "interval_referinta_text": "3.80-5.80",
+      "flag": "normal",
+      "confidence_ocr": "high"
+    },
+    {
+      "categorie": "HEMATOLOGIE",
+      "nume": "Hemoglobina (HGB)",
+      "valoare_numerica": 15.1,
+      "unitate": "g/dL",
+      "interval_referinta_text": "12.60-17.40",
+      "flag": "normal",
+      "confidence_ocr": "high"
+    },
+    {
+      "categorie": "HEMATOLOGIE",
+      "nume": "Hematocrit (HCT)",
+      "valoare_numerica": 42.8,
+      "unitate": "%",
+      "interval_referinta_text": "37.00-51.00",
+      "flag": "normal",
+      "confidence_ocr": "high"
+    },
+    {
+      "categorie": "HEMATOLOGIE",
+      "nume": "Trombocite (PLT)",
+      "valoare_numerica": 186.0,
+      "unitate": "x10^3/µL",
+      "interval_referinta_text": "150.00-450.00",
+      "flag": "normal",
+      "confidence_ocr": "high"
+    },
+    {
+      "categorie": "HEMATOLOGIE",
+      "nume": "Volum eritrocitar mediu (MCV)",
+      "valoare_numerica": 86.8,
+      "unitate": "fL",
+      "interval_referinta_text": "81.00-103.00",
+      "flag": "normal",
+      "confidence_ocr": "high"
+    },
+    {
+      "categorie": "HEMATOLOGIE",
+      "nume": "Hemoglobina eritrocitara medie (MCH)",
+      "valoare_numerica": 30.6,
+      "unitate": "pg",
+      "interval_referinta_text": "27.00-34.00",
+      "flag": "normal",
+      "confidence_ocr": "high"
+    },
+    {
+      "categorie": "HEMATOLOGIE",
+      "nume": "Concentrația medie Hb/Eritrocite (MCHC)",
+      "valoare_numerica": 35.3,
+      "unitate": "%",
+      "interval_referinta_text": "31.00-36.00",
+      "flag": "normal",
+      "confidence_ocr": "high"
+    },
+    {
+      "categorie": "HEMATOLOGIE",
+      "nume": "RDW-SD",
+      "valoare_numerica": 39.8,
+      "unitate": "fL",
+      "interval_referinta_text": "35.10-43.90",
+      "flag": "normal",
+      "confidence_ocr": "high"
+    },
+    {
+      "categorie": "HEMATOLOGIE",
+      "nume": "RDW-CV",
+      "valoare_numerica": 12.5,
+      "unitate": "%",
+      "interval_referinta_text": "11.60-14.40",
+      "flag": "normal",
+      "confidence_ocr": "high"
+    },
+    {
+      "categorie": "HEMATOLOGIE",
+      "nume": "Neutrofile procentual (NE%)",
+      "valoare_numerica": 78.1,
+      "unitate": "%",
+      "interval_referinta_text": "45.00-80.00",
+      "flag": "normal",
+      "confidence_ocr": "high"
+    },
+    {
+      "categorie": "HEMATOLOGIE",
+      "nume": "Limfocite procentual (LY%)",
+      "valoare_numerica": 15.4,
+      "unitate": "%",
+      "interval_referinta_text": "20.00-55.00",
+      "flag": "scazut",
+      "confidence_ocr": "high",
+      "note": "Lymphopenie — sub limita 20%."
+    },
+    {
+      "categorie": "HEMATOLOGIE",
+      "nume": "Monocite procentual (MO%)",
+      "valoare_numerica": 5.1,
+      "unitate": "%",
+      "interval_referinta_text": "0.00-15.00",
+      "flag": "normal",
+      "confidence_ocr": "high"
+    },
+    {
+      "categorie": "HEMATOLOGIE",
+      "nume": "Eozinofile procentual (EO%)",
+      "valoare_numerica": 1.1,
+      "unitate": "%",
+      "interval_referinta_text": "0.00-7.00",
+      "flag": "normal",
+      "confidence_ocr": "high"
+    },
+    {
+      "categorie": "HEMATOLOGIE",
+      "nume": "Bazofile procentual (BA%)",
+      "valoare_numerica": 0.3,
+      "unitate": "%",
+      "interval_referinta_text": "0.00-2.00",
+      "flag": "normal",
+      "confidence_ocr": "high"
+    },
+    {
+      "categorie": "HEMATOLOGIE",
+      "nume": "Neutrofile absolute (NE#)",
+      "valoare_numerica": 6.88,
+      "unitate": "x10^3/µL",
+      "interval_referinta_text": "2.00-8.00",
+      "flag": "normal",
+      "confidence_ocr": "high"
+    },
+    {
+      "categorie": "HEMATOLOGIE",
+      "nume": "Limfocite absolute (LY#)",
+      "valoare_numerica": 1.36,
+      "unitate": "x10^3/µL",
+      "interval_referinta_text": "1.00-4.00",
+      "flag": "normal",
+      "confidence_ocr": "high"
+    },
+    {
+      "categorie": "HEMATOLOGIE",
+      "nume": "Monocite absolute (MO#)",
+      "valoare_numerica": 0.45,
+      "unitate": "x10^3/µL",
+      "interval_referinta_text": "0.30-1.00",
+      "flag": "normal",
+      "confidence_ocr": "high"
+    },
+    {
+      "categorie": "HEMATOLOGIE",
+      "nume": "Eozinofile absolute (EO#)",
+      "valoare_numerica": 0.1,
+      "unitate": "x10^3/µL",
+      "interval_referinta_text": "0.05-0.70",
+      "flag": "normal",
+      "confidence_ocr": "high"
+    },
+    {
+      "categorie": "HEMATOLOGIE",
+      "nume": "Bazofile absolute (BA#)",
+      "valoare_numerica": 0.03,
+      "unitate": "x10^3/µL",
+      "interval_referinta_text": "0.00-0.20",
+      "flag": "normal",
+      "confidence_ocr": "high"
+    },
+    {
+      "categorie": "BIOCHIMIE",
+      "nume": "Uree (UREA)",
+      "valoare_numerica": 31.39,
+      "unitate": "mg/dL",
+      "interval_referinta_text": "17.13-49.25",
+      "flag": "normal",
+      "confidence_ocr": "high"
+    },
+    {
+      "categorie": "BIOCHIMIE",
+      "nume": "Creatinină serică",
+      "valoare_numerica": 0.66,
+      "unitate": "mg/dL",
+      "interval_referinta_text": "0.70-1.20",
+      "flag": "scazut",
+      "confidence_ocr": "high",
+      "note": "Ușor sub limită — neîngrijorător izolat."
+    },
+    {
+      "categorie": "BIOCHIMIE",
+      "nume": "Glucoză",
+      "valoare_numerica": 180.48,
+      "unitate": "mg/dL",
+      "interval_referinta_text": "82.00-115.00",
+      "flag": "crescut",
+      "confidence_ocr": "high",
+      "note": "Hiperglicemie severă — ~1.6× limita superioară. Consecvent cu DZ tip 2 necontrolat la momentul prezentării UPU."
+    },
+    {
+      "categorie": "BIOCHIMIE",
+      "nume": "AST (TGO)",
+      "valoare_numerica": 21.4,
+      "unitate": "U/L",
+      "interval_referinta_text": "<40.0",
+      "flag": "normal",
+      "confidence_ocr": "high"
+    },
+    {
+      "categorie": "BIOCHIMIE",
+      "nume": "Amilaza",
+      "valoare_numerica": 40.5,
+      "unitate": "U/L",
+      "interval_referinta_text": "28.0-100.0",
+      "flag": "normal",
+      "confidence_ocr": "high"
+    },
+    {
+      "categorie": "BIOCHIMIE",
+      "nume": "ALT (TGP)",
+      "valoare_numerica": 33.6,
+      "unitate": "U/L",
+      "interval_referinta_text": "<41.0",
+      "flag": "normal",
+      "confidence_ocr": "high"
+    }
+  ],
+  "tratament": [],
+  "recomandari": [],
+  "medic_solicitant": {
+    "nume": "Dr. Pop Florica",
+    "specialitate": "medic primar medicină de urgență",
+    "cod_parafa": "C79981"
+  },
+  "medic_validator_laborator": {
+    "nume": "Dr. IGAS ANGELICA",
+    "specialitate": "medic primar medicina de laborator",
+    "cod_parafa": "119856"
+  },
+  "unitate_laborator": {
+    "denumire": "Spitalul Clinic Județean de Urgență Arad",
+    "sectie": "Laborator Central",
+    "acreditare": "ANMCS + SR EN ISO 15189:2013 Certificat LM 716"
+  },
+  "analizoare_utilizate": {
+    "hematologie": "SYSMEX XN 1000",
+    "biochimie": "COBAS INTEGRA 400 PLUS"
+  },
+  "numere_referinta": {
+    "numar_buletin": "1517243",
+    "cod_proba": "1517243",
+    "nr_FO": "1021735",
+    "cod_formular": "FG-18-01 Editia din 28.12.2023"
+  },
+  "referinte_legate": {
+    "consult_asociat_UPU_30_05_2024": "Dosar_Medical/2024-05-30_upu_consult_gastro_cardio.json",
+    "analize_urina_aceeasi_zi": "Dosar_Medical/2024-05-30_analize_upu_urina_1517290.json"
+  }
+}

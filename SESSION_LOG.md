@@ -6,6 +6,39 @@
 
 ---
 
+## 2026-04-24 18:30 — [Claude_Opus_4.7] integrare-completa-arhiva_generala-boala_actuala-restructurare-documentatie-unica
+
+**Scop:** integrare completă a extragerilor strict-extractive (v2.1) din workspace-ul paralel `.Tati_Documente_Medicale/Claude/` în documentația canonică `.Tati/Dosar_Medical/`; restructurare pentru documentație UNICĂ (zero duplicate) conform cererii user explicite A/A/A/A/A/A + ștergeri fără arhivare + eliminare `99_altele/`.
+
+**Operații pe `.Tati`:**
+
+- **Creare 12 JSON-uri canonice noi v2.0** + `.meta.json` companion (chain-of-custody R14):
+  - 3× UPU 30.05.2024 (consult + sânge + urină)
+  - 1× HP IgG 04.06.2024 (buletin 77449 nou)
+  - 1× HP IgG 06.09.2024 (redenumit cu nr. 79765)
+  - 2× cardiologie 10.11.2025 (ECO + scrisoare)
+  - 3× 17.04.2026 (bilet trimitere + gastroscopie + colonoscopie — separate)
+- **Actualizare 4 JSON-uri existente:** schema_medicamente (Dr. LAZA CRISTINA identificat retroactiv via cross-reference), buletin_analize_sange 17.06.2025 (medic Orbán), scrisoare_urologie 28.10.2025 (ecografie scrotală), CT 20.04.2026 (cleanup referințe fragmentare bilet)
+- **MANIFEST.json** regenerat la v2.0 (19 JSON-uri canonice, timeline extins, lacune actualizate)
+- **CONTEXT_MEDICAL.md** (M) — antet v1.3, §3 extins cu UPU + cardiologie ambulator, §4 medic LAZA, §7 separare gastro/colono + NOU 7.5 bilet trimitere, §9 echipă 16 medici
+- **Foldere noi:** `13_cardiologie_ambulator_2025/`, `14_UPU_2024_05_30/`
+- **Copieri:** 15 fișiere sursă (PDF+JPEG) + 14 MD extragere strict-extractivă
+- **Ștergeri (fără arhivare):** `99_altele/` (6 duplicates), PDF/JSON unificate endoscopie, PDF hernie redundant, arhiva/backup_pre-migrare_v2 (10 Gemini v1), arhiva/duplicate_chirurgie (3 duplicate), backup-uri context_medical_versiuni vechi, TODO backup-uri vechi
+
+**Identificări critice noi:**
+
+- Medic de familie: **Dr. Orbán Ecaterina-Maria** (CUI 20263730, cod 718705)
+- Prescriptor schema medicație: **Dr. LAZA CRISTINA** (cod C07842) — cross-reference ECO aceeași zi
+- Medic urolog: **Dr. Pitea Alexandru** (cod A13044)
+- Medic chirurg hernie: **Dr. Papiu Horațiu-Sabin** (cod 775468)
+- Cardiolog UPU: **Dr. Post Mihaela** (cod A13550/A14555)
+
+**Regulament respectat:** R20 (ciclu status→confirmare→execuție), R23 (extragere integrală — R23 pe colonoscopie cu 6 segmente), R24 (paritate JSON↔CONTEXT_MEDICAL), R25 (upgrade Dr. LAZA prin cross-reference), R26 (structură consistentă foldere + denumiri), R14 (.meta.json chain-of-custody per fișier nou).
+
+**Impact:** ~80 operații totale, 19 JSON-uri canonice în MANIFEST, 15 foldere sursă cu 2 noi (13/14).
+
+---
+
 ## 2026-04-24 02:50 — [Claude_Opus_4.7] adaugare-r26-consistenta-structura-foldere-semnalare-devieri
 
 **Scop:** cerere user explicită post-reorganizare CT (user a mutat `CT - Genesys.pdf` din `99_altele/` în `11_CT_stadializare_2026/` + a creat folder-ele goale `02/03/04/06/12`): codificare model unitar structură foldere + obligația semnalării devierilor la fiecare detectare.

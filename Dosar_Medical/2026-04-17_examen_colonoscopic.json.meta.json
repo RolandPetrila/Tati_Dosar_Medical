@@ -1,0 +1,16 @@
+{
+  "source_document": "2026-04-17_examen_colonoscopic.jpeg",
+  "source_location": "documente_sursa/09_endoscopie_2026_04/",
+  "received_date": "2026-04-17",
+  "received_from": "Dr. Noufal Abdul Vahab (Genesis Medical Clinic Arad)",
+  "digitized_by": "foto JPEG (orientare rotită 90°)",
+  "digitized_date": "2026-04-20",
+  "transcriber": "Claude_Opus_4.7 (extragere strict-extractivă v2.1 + aplicare R23 integrală)",
+  "extragere_md": "documente_sursa/09_endoscopie_2026_04/2026-04-17_examen_colonoscopic_extragere.md",
+  "json_canonic": "Dosar_Medical/2026-04-17_examen_colonoscopic.json",
+  "ocr_quality": "good",
+  "completeness_verified": "2026-04-24",
+  "coverage": "100%",
+  "validator": "claude-opus-4-7",
+  "chain_notes": "Separat (2026-04-24) din fostul JSON unificat. R23 aplicată — toate 6 segmente colonice listate individual (rect, sigmoid, descendent, transvers, ascendent, cec) cu aspect, calitate pregătire, dimensiuni polip."
+}

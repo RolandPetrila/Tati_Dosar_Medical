@@ -4,9 +4,9 @@
 
 ---
 
-**Ultima actualizare:** 22 aprilie 2026 17:00 (Jamesi reluat fără complicații + ghiduri operaționale create pentru prezentare CT familie și programare consult oncolog)
+**Ultima actualizare:** 24 aprilie 2026 18:30 (integrare completă Arhiva_Generala + Boala_Actuala: cardiologie ambulator 10.11.2025, UPU 30.05.2024, medic familie identificat, separare gastroscopie/colonoscopie, bilet trimitere CT ca document propriu)
 **Responsabil dosar:** Roland Petrilă (fiul pacientului)
-**Versiune structură:** 1.2.1 (micro-update status medicație; v1.2 post-CT reconciliere Claude_Opus_4.7 rămâne valabil)
+**Versiune structură:** 1.3 (integrare masivă extrageri strict-extractive + 12 JSON-uri noi canonice + MANIFEST v2.0)
 **Versiune anterioară arhivată:** `Dosar_Medical/arhiva/context_medical_versiuni/CONTEXT_MEDICAL_pre-status-jamesi-reluat_2026-04-22_1658.md` + `Dosar_Medical/arhiva/context_medical_versiuni/CONTEXT_MEDICAL_pre-CT-stadializare_2026-04-22_1600.md` (v1.1 pre-CT) + `Dosar_Medical/arhiva/context_medical_versiuni/CONTEXT_MEDICAL_v1_2026-04-17.md`
 
 ---
@@ -151,21 +151,48 @@
 
 **Sursă:** `Dosar_Medical/2012-02-17_cardiologie_vichy_stent.json` (în așteptarea scanului PDF original).
 
-### Infecție cu Helicobacter pylori (30 mai 2024)
+### Episod UPU 30 mai 2024 (criza HTA + hiperglicemie + troponină dinamică)
 
-Episod acut cu simptome digestive, internare pentru investigații. Diagnosticat cu infecție H. pylori. Tratament cu antibiotice și inhibitor de pompă de protoni efectuat cu succes. Fără recidivă simptomatică până la momentul actual.
+**Prezentare UPU Arad 17:30:** grețuri + vărsături (după consum sarmale) + vertij. Trimis de medic de familie Dr. Orbán Ecaterina (Cabinet Medical Individual Nădlac) pentru „criza HTA 200/100 mmHg, SaO2 91%, glicemie 177 mg%, DZ tip II dezechilibrat".
 
-**Serologie de control (06.09.2024):** Anti-H. pylori IgG **>100 U/mL** (referință 0-20 U/mL) — semnifică expunere anterioară confirmată.
+**La UPU (Dr. Pop Florica, medic primar medicină de urgență):**
 
-**Important:** Serologia IgG **nu diferențiază** infecție activă de antecedentă (anticorpii persistă luni/ani post-eradicare). Pentru a valida eradicarea ar trebui efectuat: (a) antigen fecal H. pylori SAU (b) test respirator cu uree C13. Nu este clar dacă un astfel de test a fost făcut. De clarificat cu medicul de familie sau gastroenterologul.
+- TA 145/70 mmHg, AV 55 bpm, SaO2 97%
+- Stare generală conștient, cooperant; MV prezent bilateral, fără raluri
+- Biologic CRITIC: **hs-cTnI dinamic 4.24 → 4.59 ng/L** (trending UP între 2 măsurători succesive — relevant cardiologic)
+- Glicemie serică **180.48 mg/dL** (↑↑), glucozurie (+), corpi cetonici (+) — decompensare metabolică DZ
+- EKG auto Glasgow: „Sinus bradycardia HR 55, **Anteroseptal infarct - age undetermined**, Lateral T wave abnormality, **Markedly Abnormal ECG**"
+- Lymphopenie 15.4% (↓), creatinină 0.66 (↓ ușor)
+
+**Consult gastroenterologie (Dr. Grada Sebastian, cod G15512):** ecografie abdominală — ficat cu suprafață micronodulară moderat, colecist cu sediment, pancreas hiperecogen, splină 12 cm, anse intestinale ușor dilatate flanc stâng. **Diagnostic: sindrom dispeptic**. Recomandare: Controloc 20 mg 1-0-0 + Debridat 3×1/zi + reevaluare ambulator gastro.
+
+**Consult cardiologie (Dr. Post Mihaela, cod parafă A13550 UPU / A14555 ambulator):** sindrom coronarian cronic, IM vechi (2011), HTAE gradul I stadiul 3, DZ tip II non-insulino-necesitant, IM + IT ușoare. Scrisoare medicală nr 0003622 cu recomandare: PRESTARIUM 10 mg 1-0-0 ×2 + ASPENTER 75 0-1-0 + SORTIS 80 0-0-1 + CONCOR 5 1-0-0 + NORVASC 5 0-1-0.
+
+**NU există documentație serologie H. pylori în acest episod** — serologia IgG a fost efectuată ulterior (04.06.2024 + 06.09.2024) la Ultra ClinicaVest Pecica.
+
+**Medic de familie identificat prin acest episod:** **Dr. ORBÁN ECATERINA-MARIA** — Cabinet Medical Individual Nădlac, CUI 20263730, cod parafă 718705, medic specialist medicină generală-pediatrie.
+
+**Relevanță pre-oncologică:** EKG automat „Markedly Abnormal ECG" + troponina dinamică în creștere + criza HTA cu glicemie 200 mg% documentează un pacient cardiovascular instabil la distanță. Necesar pentru evaluarea riscului anestezic preoperator.
+
+**Sursă:** `Dosar_Medical/2024-05-30_upu_consult_gastro_cardio.json` + `2024-05-30_analize_upu_sange_1517243.json` + `2024-05-30_analize_upu_urina_1517290.json` (documente sursă în `documente_sursa/14_UPU_2024_05_30/`).
+
+### Infecție cu Helicobacter pylori (serologie 2024)
+
+**Serologie IgG pozitivă consistentă în timp:**
+
+- **04.06.2024 buletin 77449** — Anti-H. pylori IgG **>100 U/mL** (referință 0-20)
+- **06.09.2024 buletin 79765** — Anti-H. pylori IgG **>100 U/mL** (aceeași valoare la ~3 luni distanță)
+
+Ambele recoltate la SC Ultra ClinicaVest SRL Pecica (metoda CLIA), solicitate de Dr. Orbán Ecaterina (medic familie).
+
+**Interpretare:** rezultatul masiv pozitiv confirmă expunere anterioară. Serologia IgG **NU distinge** infecție activă de antecedentă (anticorpii IgG persistă luni/ani post-eradicare). Pentru validarea eradicării ar trebui efectuat: (a) antigen fecal H. pylori SAU (b) test respirator cu uree C13 — **niciun astfel de test documentat în dosar**.
 
 **Date de completat:**
 
-- Spitalul unde a fost internat (mai 2024)
-- Schema exactă de tratament administrată (antibioticele + IPP)
+- Tratament antibiotic + IPP specific — nu există documentare explicită (probabil efectuat ambulator post-episod UPU)
 - Test de control post-eradicare (antigen fecal sau UBT) — NU serologie
 
-**Sursă:** `Dosar_Medical/2024-09-06_anti_helicobacter_pylori_igg.json` + CONTEXT_MEDICAL v1 (raportat verbal de Roland pentru episodul din mai).
+**Sursă:** `Dosar_Medical/2024-06-04_anti_helicobacter_pylori_igg_77449.json` + `2024-09-06_anti_helicobacter_pylori_igg_79765.json`.
 
 ### Hernie operată (28 noiembrie 2025)
 
@@ -228,7 +255,7 @@ Confirmat prin tratament antihipertensiv triplu:
 
 ## 4. Medicație zilnică
 
-Schema datată **10 noiembrie 2025**. Medic prescriptor **NEIDENTIFICAT** — manuscris parțial ilizibil, conform Regula 25 numele NU s-a integrat în dosar (v. `Dosar_Medical/EXTRAGERI_INCOMPLETE.md`). Clarificare telefonică cu familia — vezi `TODO.md` P1.
+Schema datată **10 noiembrie 2025**. Medic prescriptor **IDENTIFICAT (2026-04-24): Dr. LAZA CRISTINA** (medic primar cardiolog, cod parafă **C07842**) — cross-reference cu ecografia transtoracică efectuată în aceeași zi (sursă tipărită, cod parafă clar vizibil). Consult pre-chirurgie hernie.
 
 | Medicament                                                     | Indicație                                                | Doză                  | Ritm                  | Note                                                                      |
 | -------------------------------------------------------------- | -------------------------------------------------------- | --------------------- | --------------------- | ------------------------------------------------------------------------- |
@@ -323,18 +350,33 @@ Schema datată **10 noiembrie 2025**. Medic prescriptor **NEIDENTIFICAT** — ma
 - Argument suplimentar pentru stadiul avansat (T3-T4 coroborat cu CT)
 - Implicație practică: posibilă necesitate de stent esofagian preoperator sau jejunostomă nutrițională dacă disfagia se agravează înainte de tratament
 
-**Buletin endoscopie:** stocat în `documente_sursa/09_endoscopie_2026_04/` (fișier PDF sursă); extras structurat în `Dosar_Medical/2026-04-17_buletin_gastroenterologie.json` (secțiune `examinare_endoscopica` adăugată 22.04.2026).
+**Buletin gastroscopie:** JPEG sursă `documente_sursa/09_endoscopie_2026_04/2026-04-17_examen_gastroscopic.jpeg`; extragere MD strict-extractivă alături; JSON canonic dedicat `Dosar_Medical/2026-04-17_examen_gastroscopic.json` (separat 2026-04-24 din fostul JSON unificat).
 
 ### 7.3 Colonoscopie (17 aprilie 2026)
 
 Efectuată concomitent cu endoscopia la Genesis Medical Clinic Arad (Dr. Noufal Abdul Vahab).
 
-**Rezultat:**
+**Examinare detaliată pe segmente (R23 — aspecte normale listate explicit):**
 
-- **Polip colon descendent** (K63.5) — recomandare: revine pentru polipectomie
-- **Boală hemoroidală** — hemoroizi interni grad II (K64.1)
+| Segment        | Aspect                                          | Calitate pregătire    |
+| -------------- | ----------------------------------------------- | --------------------- |
+| Rect           | fără modificări                                 | bună                  |
+| Sigmoid        | porțiune vizibilă fără modificări               | resturi fecale solide |
+| **Descendent** | **polip sesil 8 mm** — recomandare polipectomie | bună                  |
+| Transvers      | porțiune vizibilă fără modificări               | resturi fecale solide |
+| Ascendent      | porțiune vizibilă fără modificări               | resturi fecale solide |
+| Cec            | fără modificări                                 | bună                  |
 
-**Sursă:** `Dosar_Medical/2026-04-17_buletin_gastroenterologie.json`.
+**Mențiune inițială:** hemoroizi interni grad II (K64.1).
+
+**Concluzii:**
+
+- **Polip colon descendent** (K63.5) — sesil 8 mm — recomandare: revine pentru polipectomie
+- **Boală hemoroidală** (K64) — hemoroizi interni grad II (K64.1)
+
+**Observație pregătire colon:** reziduuri fecale solide în 3 segmente (sigmoid, transvers, ascendent) au limitat vizualizarea completă — pregătire colon optimizată recomandată pentru următoarea colonoscopie.
+
+**Buletin colonoscopie:** JPEG sursă `documente_sursa/09_endoscopie_2026_04/2026-04-17_examen_colonoscopic.jpeg`; JSON canonic `Dosar_Medical/2026-04-17_examen_colonoscopic.json`.
 
 ### 7.4 Biopsie esofagiană (în lucru)
 
@@ -342,6 +384,19 @@ Efectuată concomitent cu endoscopia la Genesis Medical Clinic Arad (Dr. Noufal 
 **Timp estimat:** 7-14 zile lucrătoare (estimare 24.04-01.05.2026).
 **Monitor automat:** activ (GitHub Actions → ntfy.sh, verificare portal Bioclinica la 30 min, 24/7).
 **Importanță:** diagnostic de certitudine (tip histologic — adenocarcinom vs. scuamocelular, grad de diferențiere, markeri moleculari relevanți pentru decizia terapeutică).
+
+### 7.5 Bilet trimitere CT (17 aprilie 2026) — document administrativ declanșator
+
+**Serie/Număr:** **BCTAP 0631727**.
+**Emitent:** Dr. Noufal Abdul Vahab (cod parafă C 11074), Genesis Medical Clinic Arad (CUI R20295098, Bd. Revoluției nr. 3).
+**Casa asigurări:** CAS AR, nr. contract/convenție 1148.
+**Nivel prioritate:** Ambulator Specialitate (bifat).
+**Cod diagnostic (intern CAS):** 95 — „PROCES PROLIFERATIV ESOFAGIAN".
+**Investigații recomandate:** CT TORACE (SDC) + CT ABDOMEN (SDC) + CT PELVIS (SDC) — toate cu substanță de contrast.
+
+**A declanșat:** CT efectuat 20.04.2026 la Genesis Medical Clinic Micălaca (vezi §2).
+
+**Sursă:** `documente_sursa/11_CT_stadializare_2026/2026-04-17_bilet_trimitere_CT_BCTAP_0631727.jpeg` + `Dosar_Medical/2026-04-17_bilet_trimitere_CT.json`.
 
 ---
 
@@ -390,19 +445,24 @@ Efectuată concomitent cu endoscopia la Genesis Medical Clinic Arad (Dr. Noufal 
 
 ## 9. Echipă medicală
 
-| Specialitate                                                   | Medic                                                                                                          | Unitate                                    | Contact              |
-| -------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | ------------------------------------------ | -------------------- |
-| Gastroenterologie                                              | Dr. Noufal Abdul Vahab (medic primar)                                                                          | Genesis Medical Clinic Arad                | De completat         |
-| **Radiologie și Imagistică (CT 20.04.2026)**                   | **Dr. Buie Florian-Laurențiu (cod A11818)** + **Dr. Candea Florin-Vasile (cod F52510)** — ambii medici primari | **Genesis Medical Clinic Micălaca**        | Prin Genesis         |
-| Anatomopatologie (biopsie esofag)                              | De identificat (Bioclinica Arad)                                                                               | Bioclinica Arad                            | `arad@bioclinica.ro` |
-| Cardiologie (SCA ST+ 2012)                                     | Echipa Vichy, Franța — de identificat pe PDF                                                                   | Centre Hospitalier de Vichy (de confirmat) | —                    |
-| Cardiologie / Medicină internă (prescriere actuală 10.11.2025) | **NEIDENTIFICAT** (manuscris parțial ilizibil — v. R25 + `EXTRAGERI_INCOMPLETE.md`)                            | De identificat                             | —                    |
-| Diabetologie / prescriere Jamesi                               | **NEIDENTIFICAT** (probabil același prescriptor cu schema 10.11.2025 — v. `EXTRAGERI_INCOMPLETE.md`)           | De identificat                             | —                    |
-| Medic de familie                                               | De identificat                                                                                                 | De identificat                             | —                    |
-| Chirurgie Generală (hernie 28.11.2025)                         | De identificat din documentul original                                                                         | Secția Chirurgie Generală II               | —                    |
-| Urologie / Gastroenterologie (consult 28.10.2025)              | De identificat                                                                                                 | De identificat                             | —                    |
-| **Oncologie digestivă** (prioritate URGENT)                    | **De stabilit**                                                                                                | Arad / Timișoara / Cluj / București        | —                    |
-| Endocrinologie (glandă suprarenală, follow-up)                 | De stabilit post-consult oncolog                                                                               | —                                          | —                    |
+| Specialitate                                                 | Medic                                                                                                                 | Unitate                                                          | Contact                         |
+| ------------------------------------------------------------ | --------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------- | ------------------------------- |
+| **Medic de familie**                                         | **Dr. ORBÁN ECATERINA-MARIA** (medic specialist medicină generală-pediatrie, cod parafă **718705**, CUI **20263730**) | **Cabinet Medical Individual, Nădlac**                           | De completat                    |
+| Gastroenterologie (endoscopie 17.04.2026)                    | Dr. Noufal Abdul Vahab (medic primar, cod parafă **C 11074**)                                                         | Genesis Medical Clinic Arad                                      | De completat                    |
+| **Radiologie și Imagistică (CT 20.04.2026)**                 | **Dr. Buie Florian-Laurențiu (cod A11818)** + **Dr. Candea Florin-Vasile (cod F52510)** — ambii medici primari        | **Genesis Medical Clinic Micălaca**                              | Prin Genesis                    |
+| Anatomopatologie (biopsie esofag)                            | De identificat (Bioclinica Arad)                                                                                      | Bioclinica Arad                                                  | `arad@bioclinica.ro`            |
+| Laborator clinic (pre-CT 17.04.2026)                         | Dr. Statnic Maria Luminița (medic primar medicina de laborator, cod **A08064**)                                       | Bioclinica SRL Arad, punct recoltare Vlaicu                      | `arad@bioclinica.ro`            |
+| **Cardiologie ambulator (consult pre-chirurgie 10.11.2025)** | **Dr. LAZA CRISTINA** (medic primar cardiolog, cod parafă **C07842**) — prescriptor schemă medicație actuală          | Arad (cabinet de identificat)                                    | —                               |
+| Cardiologie (SCA ST+ 2012)                                   | Echipa Vichy, Franța — de identificat pe PDF                                                                          | Centre Hospitalier de Vichy (de confirmat)                       | —                               |
+| Cardiologie (episod UPU 30.05.2024)                          | Dr. Post Mihaela (medic specialist cardiologie, cod **A13550** / **A14555** — 2 coduri pe 2 ștampile diferite)        | Spitalul Clinic Județean de Urgență Arad + ambulator             | —                               |
+| Gastroenterologie (episod UPU 30.05.2024)                    | Dr. Grada Sebastian (medic specialist gastroenterologie, cod **G15512**)                                              | Spitalul Clinic Județean de Urgență Arad                         | —                               |
+| Medicină de urgență (UPU 30.05.2024)                         | Dr. Pop Florica (medic primar medicină de urgență, cod **C79981**)                                                    | Spitalul Clinic Județean de Urgență Arad — UPU Adulți            | —                               |
+| **Chirurgie Generală (hernie 28.11.2025)**                   | **Dr. Papiu Horațiu-Sabin (medic primar chirurgie, cod parafă 775468)**                                               | Spitalul Clinic Județean de Urgență Arad — Chirurgie Generală II | —                               |
+| **Urologie (consult 28.10.2025)**                            | **Dr. PITEA ALEXANDRU (medic primar urologie, cod A13044)**                                                           | Complex Medical Pitea & Pitea SRL, Arad, Revoluției 45           | **0749111455**                  |
+| Laborator clinic (serologie HP + analize 2025)               | Dr. Cret Anamaria (medic primar laborator, cod A 0769)                                                                | SC Ultra ClinicaVest SRL Pecica                                  | `laborator@ultraclinicavest.ro` |
+| Laborator clinic (UPU 30.05.2024)                            | Dr. Igas Angelica (cod 119856) + Dr. Avram Cecilia — ambii medici primari medicina de laborator                       | Spitalul Clinic Județean de Urgență Arad — Laborator Central     | —                               |
+| **Oncologie digestivă** (prioritate URGENT)                  | **De stabilit**                                                                                                       | Arad / Timișoara / Cluj / București                              | —                               |
+| Endocrinologie (glandă suprarenală, follow-up)               | De stabilit post-consult oncolog                                                                                      | —                                                                | —                               |
 
 ---
 

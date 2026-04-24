@@ -1,0 +1,113 @@
+{
+  "_metadata": {
+    "schema_version": "2.0",
+    "nume_fisier": "2026-04-17_examen_colonoscopic.json",
+    "tip_document": "buletin_examen_colonoscopic",
+    "specialitate": "Gastroenterologie",
+    "data_document": "2026-04-17",
+    "sursa_pdf": "2026-04-17_examen_colonoscopic.jpeg",
+    "sursa_locatie": "documente_sursa/09_endoscopie_2026_04/",
+    "procesat_de": "Claude_Opus_4.7",
+    "data_procesare": "2026-04-24",
+    "ocr_quality": "good",
+    "confidence_overall": "high",
+    "completeness_verified": "2026-04-24",
+    "coverage": "100%",
+    "flags": ["separat_de_gastroscopie_2026-04-24", "R23_integrala"],
+    "notes": "Colonoscopie efectuată concomitent cu gastroscopia la Genesis Medical Clinic Arad (Dr. Noufal Abdul Vahab). Separat într-un JSON dedicat 2026-04-24. R23 aplicat integral: toate 6 segmente colonice listate explicit (inclusiv aspecte normale), dimensiune polip documentată, reziduuri fecale menționate. Nume pacient pe document 'PETRILA VIOREL MHAI' (typo în document) — corectat la 'PETRILĂ VIOREL-MIHAI' prin cross-reference C.I.+gastroscopie aceeași zi."
+  },
+  "pacient": {
+    "nume": "PETRILĂ",
+    "prenume": "VIOREL-MIHAI",
+    "nume_text_original_document": "PETRILA VIOREL MHAI",
+    "cnp": "1590518024486",
+    "data_nasterii": "1959-05-18",
+    "varsta_la_data_document": 66,
+    "sex": "M",
+    "confidence_identificare": "high",
+    "note_identificare": "Typo în document — 'MHAI' în loc de 'MIHAI'. Identitate confirmată prin cross-reference cu gastroscopia aceeași zi (text corect) + C.I."
+  },
+  "diagnostic": [
+    {
+      "cod_icd10": "K63.5",
+      "descriere_oficiala": "Polip al colonului descendent",
+      "descriere_originala": "POLIP COLON DESCENDENT",
+      "tip": "secundar",
+      "confidence_ocr": "high",
+      "detalii": "polip sesil de 8 mm"
+    },
+    {
+      "cod_icd10": "K64",
+      "descriere_oficiala": "Boală hemoroidală",
+      "descriere_originala": "BOALA HEMOROIDALA",
+      "tip": "secundar",
+      "confidence_ocr": "high"
+    },
+    {
+      "cod_icd10": "K64.1",
+      "descriere_oficiala": "Hemoroizi interni grad II",
+      "descriere_originala": "Hemoroizi interni II",
+      "tip": "secundar",
+      "confidence_ocr": "high"
+    }
+  ],
+  "examinare_colonoscopica": {
+    "hemoroizi_mentiune_initiala": "Hemoroizi interni II",
+    "segmente": {
+      "rect": {
+        "aspect": "fără modificări",
+        "text_original": "fara modificari",
+        "confidence_ocr": "high"
+      },
+      "sigmoid": {
+        "aspect": "portiune vizibilă fără modificări",
+        "calitate_pregatire": "cu resturi fecale solide",
+        "text_original": "cu restuir fecale solide, portiunea vizibila fara modificari",
+        "confidence_ocr": "high"
+      },
+      "descendent": {
+        "aspect": "prezintă polip sesil 8 mm",
+        "dimensiune_polip_mm": 8,
+        "tip_polip": "sesil",
+        "recomandare": "Revine pentru polipectomie",
+        "text_original": "prezinta un polip sesil de 8mm (Revine pentru polipectomie)",
+        "confidence_ocr": "high"
+      },
+      "transvers": {
+        "aspect": "portiune vizibilă fără modificări",
+        "calitate_pregatire": "cu resturi fecale solide",
+        "text_original": "cu restuir fecale solide, portiunea vizibila fara modificari",
+        "confidence_ocr": "high"
+      },
+      "ascendent": {
+        "aspect": "portiune vizibilă fără modificări",
+        "calitate_pregatire": "cu resturi fecale solide",
+        "text_original": "cu restuir fecale solide, portiunea vizibila fara modificari",
+        "confidence_ocr": "high"
+      },
+      "cec": {
+        "aspect": "fără modificări",
+        "text_original": "fara modificari",
+        "confidence_ocr": "high"
+      }
+    },
+    "calitate_pregatire_globala": "suboptimă — reziduuri fecale solide în 3 segmente (sigmoid, transvers, ascendent); porțiunile vizibile fără modificări patologice; re-colonoscopia cu pregătire optimizată ar putea fi considerată la polipectomie"
+  },
+  "concluzii_raport": ["POLIP COLON DESCENDENT", "BOALA HEMOROIDALA"],
+  "recomandari": [
+    "Revine pentru polipectomie (polip sesil 8 mm descendent)",
+    "Pregătire colon optimizată pentru următoarea colonoscopie (resturi fecale în 3 segmente au limitat vizualizarea completă)"
+  ],
+  "medici_unitati": {
+    "medic_curant": "Dr. Noufal Abdul Vahab",
+    "medic_text_original_document": "Dr. Nouphal Abdul Vahab",
+    "cod_parafa": "C. 11074",
+    "specialitate_medic": "medic primar gastroenterologie",
+    "unitate": "Genesis Medical Clinic Arad",
+    "sectie": "Gastroenterologie"
+  },
+  "referinte_legate": {
+    "gastroscopie_aceeasi_zi": "Dosar_Medical/2026-04-17_examen_gastroscopic.json",
+    "bilet_trimitere_CT_declansat_de_gastroscopie": "Dosar_Medical/2026-04-17_bilet_trimitere_CT.json"
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "source_document": "2024-06-04_si_2024-09-06_buletine_anti_hp_igg.pdf (pagina 1)",
+  "source_location": "documente_sursa/04_helicobacter_2024/",
+  "received_date": "2024-09-06",
+  "received_from": "SC Ultra ClinicaVest SRL Pecica (prin Dr. Orbán Ecaterina-Maria, medic de familie Nădlac)",
+  "digitized_by": "PDF combinat ambele buletine (77449 + 79765)",
+  "digitized_date": "2026-04-20",
+  "transcriber": "Claude_Opus_4.7 (extragere strict-extractivă v2.1) — prima procesare Gemini 2026-04-17",
+  "extragere_md": "documente_sursa/04_helicobacter_2024/2024-06-04_si_2024-09-06_buletine_anti_hp_igg_extragere.md",
+  "json_canonic": "Dosar_Medical/2024-09-06_anti_helicobacter_pylori_igg_79765.json",
+  "ocr_quality": "good",
+  "completeness_verified": "2026-04-24",
+  "coverage": "100%",
+  "validator": "claude-opus-4-7",
+  "chain_notes": "Fișier redenumit 2026-04-24 de la '2024-09-06_anti_helicobacter_pylori_igg.json' pentru a include nr. buletin în nume (consistență cu buletinul pereche 77449). Date noi adăugate: laborator Ultra ClinicaVest Pecica, medic solicitant Dr. Orbán, medic validator Dr. Cret, toate datele precise de recoltare/eliberare."
+}

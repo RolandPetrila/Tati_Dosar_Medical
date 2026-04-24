@@ -1,0 +1,16 @@
+{
+  "source_document": "2026-04-17_bilet_trimitere_CT_BCTAP_0631727.jpeg",
+  "source_location": "documente_sursa/11_CT_stadializare_2026/",
+  "received_date": "2026-04-17",
+  "received_from": "Dr. Noufal Abdul Vahab (Genesis Medical Clinic Arad) — bilet tipizat CAS AR",
+  "digitized_by": "foto JPEG",
+  "digitized_date": "2026-04-20",
+  "transcriber": "Claude_Opus_4.7 (extragere strict-extractivă v2.1)",
+  "extragere_md": "documente_sursa/11_CT_stadializare_2026/2026-04-17_bilet_trimitere_CT_BCTAP_0631727_extragere.md",
+  "json_canonic": "Dosar_Medical/2026-04-17_bilet_trimitere_CT.json",
+  "ocr_quality": "excellent",
+  "completeness_verified": "2026-04-24",
+  "coverage": "100%",
+  "validator": "claude-opus-4-7",
+  "chain_notes": "Document administrativ CAS — toate câmpurile completate/necompletate de pe formular sunt reflectate în JSON. Bilet unic, fără pagini suplimentare."
+}

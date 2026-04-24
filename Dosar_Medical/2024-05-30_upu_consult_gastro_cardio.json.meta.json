@@ -1,0 +1,16 @@
+{
+  "source_document": "2024-05-30_dosar_upu_complet.pdf (pag 1-2, 6-10 din 10)",
+  "source_location": "documente_sursa/14_UPU_2024_05_30/",
+  "received_date": "2024-05-30",
+  "received_from": "Spitalul Clinic Județean de Urgență Arad — UPU Adulți (Dr. Pop Florica) + Cabinet Medical Individual Dr. Orbán Ecaterina",
+  "digitized_by": "PDF compozit (scan 10 pagini)",
+  "digitized_date": "2026-04-19",
+  "transcriber": "Claude_Opus_4.7 (extragere strict-extractivă v2.1; consulturi tipărite CERT, scrisori manuscrise PROBABIL)",
+  "extragere_md": "documente_sursa/14_UPU_2024_05_30/2024-05-30_dosar_upu_complet_extragere.md",
+  "json_canonic": "Dosar_Medical/2024-05-30_upu_consult_gastro_cardio.json",
+  "ocr_quality": "mixed (95% tipărit + 60-80% manuscris)",
+  "completeness_verified": "2026-04-24",
+  "coverage": "100%",
+  "validator": "claude-opus-4-7",
+  "chain_notes": "Document compus 10 pagini — separat semantic în 3 JSON-uri canonice: consulturi + EKG + scrisori + note (acest JSON), analize sânge 1517243 (JSON dedicat), analize urină 1517290 (JSON dedicat). Toate 3 derivă din același PDF sursă."
+}

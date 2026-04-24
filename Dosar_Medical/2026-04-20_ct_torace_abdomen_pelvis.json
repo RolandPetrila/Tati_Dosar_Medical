@@ -193,8 +193,10 @@
     "specialitate_unitate": "Radiologie și Imagistică Medicală"
   },
   "numere_referinta": {
-    "numar_inregistrare_examinare": "284",
-    "numar_bilet_trimitere_CT": "BCTAP 0631727",
-    "cod_diagnostic_trimitere": "95"
+    "numar_inregistrare_examinare": "284"
+  },
+  "referinte_legate": {
+    "bilet_trimitere_JSON": "Dosar_Medical/2026-04-17_bilet_trimitere_CT.json",
+    "note_referinta": "Datele biletului (serie BCTAP, nr 0631727, cod diagnostic 95, medic ordonator) sunt în JSON-ul dedicat biletului — nu se duplică aici pentru a menține documentația unică (cleanup 2026-04-24)."
   }
 }

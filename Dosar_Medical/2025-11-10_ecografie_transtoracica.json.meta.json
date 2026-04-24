@@ -1,0 +1,16 @@
+{
+  "source_document": "2025-11-10_cardiologie_eco_scrisoare.pdf (pagina 1)",
+  "source_location": "documente_sursa/13_cardiologie_ambulator_2025/",
+  "received_date": "2025-11-10",
+  "received_from": "Dr. LAZA CRISTINA (medic primar cardiolog, cod C07842)",
+  "digitized_by": "PDF digital nativ",
+  "digitized_date": "2026-04-19",
+  "transcriber": "Claude_Opus_4.7 (extragere strict-extractivă v2.1)",
+  "extragere_md": "documente_sursa/13_cardiologie_ambulator_2025/2025-11-10_cardiologie_eco_scrisoare_extragere.md",
+  "json_canonic": "Dosar_Medical/2025-11-10_ecografie_transtoracica.json",
+  "ocr_quality": "excellent",
+  "completeness_verified": "2026-04-24",
+  "coverage": "100%",
+  "validator": "claude-opus-4-7",
+  "chain_notes": "PDF sursă conține 2 pagini — pag.1 ECO (tipărit, 97% lizibil), pag.2 scrisoare medicală (manuscris, ~68% lizibil). Pagina 2 este în JSON-ul separat '2025-11-10_scrisoare_medicala_cardiologie.json' pentru respectarea principiului 1-document-sursă → 1-JSON (pe când sursa e compusă și conținuturile sunt distincte semantic)."
+}

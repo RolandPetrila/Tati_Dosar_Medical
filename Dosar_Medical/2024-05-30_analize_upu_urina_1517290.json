@@ -1,0 +1,169 @@
+{
+  "_metadata": {
+    "schema_version": "2.0",
+    "nume_fisier": "2024-05-30_analize_upu_urina_1517290.json",
+    "tip_document": "buletin_analize_urina_sumar_sediment",
+    "specialitate": "Laborator Clinic",
+    "data_document": "2024-05-30",
+    "data_recoltare": "2024-05-30T14:52:00",
+    "data_examinare": "2024-05-30T14:52:00",
+    "data_eliberare": "2024-05-30T16:08:19",
+    "numar_buletin": "1517290",
+    "cod_proba": "1517290",
+    "sursa_pdf": "2024-05-30_dosar_upu_complet.pdf (pag 5)",
+    "sursa_locatie": "documente_sursa/14_UPU_2024_05_30/",
+    "procesat_de": "Claude_Opus_4.7",
+    "data_procesare": "2026-04-24",
+    "ocr_quality": "excellent",
+    "confidence_overall": "high",
+    "completeness_verified": "2026-04-24",
+    "coverage": "100%",
+    "flags": [
+      "glucozurie_pozitiva_confirmare_DZ_decompensat",
+      "corpi_cetonici_pozitivi",
+      "UPU_30_05_2024_episod_major"
+    ],
+    "notes": "Analize urină efectuate ~1h40 după analizele de sânge (1517243 la 13:05 → 1517290 la 14:52). CONFIRMĂ hiperglicemia decompensată din sânge: glucozurie (+), corpi cetonici (+), pH 7 (crescut), acid ascorbic (+). Sedimentul microscopic: 1-2 leucocite (normal). Analizor LABUMAT 2 (reflectometrie) + microscop optic."
+  },
+  "pacient": {
+    "nume": "PETRILĂ",
+    "prenume": "VIOREL-MIHAI",
+    "nume_text_original_document": "PETRILA VIOREL MIHAI",
+    "cnp": "1590518024486",
+    "data_nasterii": "1959-05-18",
+    "varsta_la_data_document": "65 ani 0 luni",
+    "sex": "M",
+    "adresa": "Nadlac, AR",
+    "nr_FO": "1021735",
+    "sectie_spital": "UPU Adulți",
+    "confidence_identificare": "high"
+  },
+  "diagnostic": [],
+  "analize_laborator": [
+    {
+      "categorie": "SEDIMENT_URINAR",
+      "nume": "Sediment urinar microscopie",
+      "valoare_text": "1-2 leucocite",
+      "metoda": "Microscopie Optică",
+      "flag": "normal",
+      "confidence_ocr": "high"
+    },
+    {
+      "categorie": "SUMAR_URINA",
+      "nume": "Densitate",
+      "valoare_numerica": 1.024,
+      "unitate": null,
+      "interval_referinta_text": "1015-1025",
+      "flag": "normal",
+      "confidence_ocr": "high"
+    },
+    {
+      "categorie": "SUMAR_URINA",
+      "nume": "pH",
+      "valoare_numerica": 7,
+      "unitate": null,
+      "interval_referinta_text": "5-6",
+      "flag": "crescut",
+      "confidence_ocr": "high"
+    },
+    {
+      "categorie": "SUMAR_URINA",
+      "nume": "Proteine",
+      "valoare_text": "Negativ",
+      "interval_referinta_text": "Negativ",
+      "flag": "normal",
+      "confidence_ocr": "high"
+    },
+    {
+      "categorie": "SUMAR_URINA",
+      "nume": "Leucocite",
+      "valoare_text": "Negativ",
+      "interval_referinta_text": "Negativ",
+      "flag": "normal",
+      "confidence_ocr": "high"
+    },
+    {
+      "categorie": "SUMAR_URINA",
+      "nume": "Glucoză urinară",
+      "valoare_text": "(+)",
+      "interval_referinta_text": "Normal (negativ)",
+      "flag": "crescut",
+      "confidence_ocr": "high",
+      "note": "Glucozurie pozitivă — corelat direct cu hiperglicemia plasmatică 180.48 mg/dL (depășește pragul renal)."
+    },
+    {
+      "categorie": "SUMAR_URINA",
+      "nume": "Urobilinogen",
+      "valoare_text": "Normal",
+      "interval_referinta_text": "Normal",
+      "flag": "normal",
+      "confidence_ocr": "high"
+    },
+    {
+      "categorie": "SUMAR_URINA",
+      "nume": "Pigmenți biliari",
+      "valoare_text": "Negativ",
+      "interval_referinta_text": "Negativ",
+      "flag": "normal",
+      "confidence_ocr": "high"
+    },
+    {
+      "categorie": "SUMAR_URINA",
+      "nume": "Corpi cetonici",
+      "valoare_text": "(+)",
+      "interval_referinta_text": "Negativ",
+      "flag": "crescut",
+      "confidence_ocr": "high",
+      "note": "Cetonurie — semn de decompensare metabolică DZ (posibil cetoacidoză ușoară)."
+    },
+    {
+      "categorie": "SUMAR_URINA",
+      "nume": "Hematii",
+      "valoare_text": "Negativ",
+      "interval_referinta_text": "Negativ",
+      "flag": "normal",
+      "confidence_ocr": "high"
+    },
+    {
+      "categorie": "SUMAR_URINA",
+      "nume": "Nitriți",
+      "valoare_text": "Negativ",
+      "interval_referinta_text": "Negativ",
+      "flag": "normal",
+      "confidence_ocr": "high"
+    },
+    {
+      "categorie": "SUMAR_URINA",
+      "nume": "Acid ascorbic",
+      "valoare_text": "(+)",
+      "interval_referinta_text": "Negativ",
+      "flag": "crescut",
+      "confidence_ocr": "high",
+      "note": "Ne-acreditat RENAR (* pe buletin). Cauză uzuală: aport vitamina C alimentar."
+    }
+  ],
+  "tratament": [],
+  "recomandari": [],
+  "medic_validator_laborator": {
+    "nume": "Dr. AVRAM CECILIA",
+    "specialitate": "medic primar medicina de laborator"
+  },
+  "unitate_laborator": {
+    "denumire": "Spitalul Clinic Județean de Urgență Arad",
+    "sectie": "Laborator Central",
+    "acreditare": "ANMCS + SR EN ISO 15189:2013 Certificat LM 716"
+  },
+  "analizoare_utilizate": {
+    "sumar_urina": "LABUMAT 2 (reflectometrie)",
+    "sediment": "Microscop optic"
+  },
+  "numere_referinta": {
+    "numar_buletin": "1517290",
+    "cod_proba": "1517290",
+    "nr_FO": "1021735"
+  },
+  "referinte_legate": {
+    "consult_asociat_UPU_30_05_2024": "Dosar_Medical/2024-05-30_upu_consult_gastro_cardio.json",
+    "analize_sange_aceeasi_zi": "Dosar_Medical/2024-05-30_analize_upu_sange_1517243.json"
+  }
+}

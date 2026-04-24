@@ -456,7 +456,32 @@
   ],
   "tratament": [],
   "recomandari": [],
-  "medici_unitati": {
-    "unitate": "de identificat din documentul original"
-  }
+  "medic_solicitant": {
+    "nume": "Dr. ORBÁN ECATERINA-MARIA",
+    "specialitate": "MF (medicină de familie)",
+    "cod_parafa": "718705",
+    "CUI_cabinet": "20263730",
+    "bilet_trimitere": "BTIAW 9406823 / 10.06.2025"
+  },
+  "medic_validator_laborator": {
+    "nume": "Dr. Cret Anamaria",
+    "specialitate": "Medic Primar Laborator",
+    "cod_parafa": "A 0769"
+  },
+  "unitate_laborator": {
+    "denumire": "SC Ultra ClinicaVest SRL",
+    "tip": "LABORATOR DE ANALIZE MEDICALE",
+    "adresa": "Oraș Pecica, str. 2, nr. 173, jud. Arad",
+    "email": "ultraclinicavest@gmail.com",
+    "telefon": "0257-468-212",
+    "acreditare": "RENAR, SR EN ISO 15189:2013, Certificat LM 955",
+    "software": "SmartLabs 5.0 (Build 0.2315)"
+  },
+  "numere_referinta": {
+    "numar_buletin": "87967",
+    "barcode": "0000087967",
+    "bilet_trimitere": "BTIAW 9406823",
+    "cod_formular": "FL-7.4-02"
+  },
+  "platitor": "Casa de Asigurări de Sănătate Arad"
 }
