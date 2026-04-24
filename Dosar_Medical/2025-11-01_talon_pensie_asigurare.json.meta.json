@@ -1,0 +1,15 @@
+{
+  "source_document": "2025-11-01_talon_pensie_scan.jpeg",
+  "source_location": "documente_sursa/10_administrativ_pensie/",
+  "received_date": "2025-11-01 (luna 11/2025)",
+  "received_from": "CJP Arad (Casa Județeană de Pensii) — direct pacient/familie",
+  "digitized_by": "scanare foto user/familie",
+  "digitized_date": "pre-2026-04-18 (fișier exista la inițializare dosar)",
+  "transcriber": "Claude_Opus_4.7 (extragere strict-extractivă)",
+  "ocr_quality": "good",
+  "completeness_verified": "2026-04-18",
+  "coverage": "100%",
+  "validator": "claude-opus-4-7",
+  "chain_notes": "Talon pensie luna 11/2025, CJP Arad (cod CJP 021), dosar pensie 42/359336, total drepturi 3166 lei/lună. Folosit ca dovadă status asigurat CASS (pensionar → asigurare automată). Document administrativ non-medical dar relevant pentru accesul la serviciile medicale (CAS AR, card european sănătate, drepturi pacient oncologic). Documentul sursă (JPEG) are .meta.json propriu: `documente_sursa/10_administrativ_pensie/2025-11-01_talon_pensie_scan.jpeg.meta.json`; acest meta.json este pentru JSON-ul canonic derivat.",
+  "retrospectively_added": "2026-04-24 21:30 — audit identificat lipsă meta.json pentru JSON canonic (sursa JPEG avea deja meta.json)"
+}

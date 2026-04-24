@@ -1,0 +1,15 @@
+{
+  "source_document": "2023-06-12_carte_identitate.pdf",
+  "source_location": "documente_sursa/01_identitate/",
+  "received_date": "2023-06-12 (data emiterii CI) + scanare ulterioară de către Roland Petrilă",
+  "received_from": "PETRILĂ VIOREL-MIHAI (pacient) via Roland Petrilă (responsabil dosar)",
+  "digitized_by": "scanare PDF (familie/user)",
+  "digitized_date": "pre-2026-04-18 (fișier exista la inițializare dosar)",
+  "transcriber": "Claude_Opus_4.7 (extragere din PDF scanat)",
+  "ocr_quality": "excellent (PDF text extractabil + câmpuri CI standardizate)",
+  "completeness_verified": "2026-04-18",
+  "coverage": "100%",
+  "validator": "claude-opus-4-7",
+  "chain_notes": "Carte de identitate românească emisă 12.06.2023 de SPCLEP Nădlac, seria ZR nr. 089382, valabilă până la 03.08.2031. Document anchor pentru identitatea pacientului (CNP 1590518024486, date nașterii 18.05.1959, domiciliu Nădlac Str. Vasile Goldiș 42). Referențiat în MANIFEST.json ca `pacient.ancora_identitate`. Documentul sursă (PDF) are deja .meta.json propriu: `documente_sursa/01_identitate/2023-06-12_carte_identitate.pdf.meta.json`; acest meta.json este pentru JSON-ul canonic derivat.",
+  "retrospectively_added": "2026-04-24 21:30 — audit identificat lipsă meta.json pentru JSON canonic (sursa PDF avea deja meta.json)"
+}

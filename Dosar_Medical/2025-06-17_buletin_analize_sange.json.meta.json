@@ -1,0 +1,22 @@
+{
+  "source_document": "2025-06-17_buletin_analize_sange.pdf",
+  "source_location": "documente_sursa/05_analize_laborator/",
+  "received_date": "2025-06-17 (data recoltării/raportării)",
+  "received_from": "SC Ultra ClinicaVest SRL Pecica (laborator clinic)",
+  "solicitant": "Dr. Orbán Ecaterina-Maria (medic de familie, CUI 20263730, cod parafă 718705)",
+  "buletin_nr": "87967",
+  "digitized_by": "PDF digital nativ laborator",
+  "digitized_date": "pre-2026-04-18 (fișier exista la inițializare dosar)",
+  "transcriber": "Claude_Opus_4.7 (extragere strict-extractivă + integrare Arhiva_Generala 2026-04-24)",
+  "extragere_md": "documente_sursa/05_analize_laborator/2025-06-17_buletin_analize_sange_extragere.md",
+  "ocr_quality": "excellent (PDF digital)",
+  "completeness_verified": "2026-04-24 (post sesiune integrare Arhiva_Generala)",
+  "coverage": "100%",
+  "validator": "claude-opus-4-7",
+  "chain_notes": "Panel complet (hemoleucogramă + biochimie + lipidogramă + electroliți + TSH + FT4 + PSA). Valori-cheie: glicemie 136.1 mg/dL (↑, ref 70-115), HDL <prag, eozinofile ușor crescute, creatinină 0.95 mg/dL (normală). LDL 133 mg/dL — post-stent 2012, țintă <70 conform ESC (neatins — relevant pentru Flag #2 TORVACARD din audit 2026-04-24). Actualizat 2026-04-24 cu medic solicitant Dr. Orbán + nr. buletin 87967 (identificate retroactiv din Arhiva_Generala).",
+  "retrospectively_added": "2026-04-24 21:30 — audit identificat lipsă meta.json",
+  "related_context": {
+    "cross_reference_ldl_torvacard": "CONTEXT_MEDICAL.md §4 discrepanță TORVACARD — 'Clarificare TORVACARD' task P1 TODO.md",
+    "solicitant_confirmed_via": "integrare Arhiva_Generala 2026-04-24 seara (commit ec5819d)"
+  }
+}

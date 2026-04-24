@@ -1,0 +1,17 @@
+{
+  "source_document": "2025-10-28_scrisoare_urologie_eco_scrotala.pdf",
+  "source_location": "documente_sursa/06_urologie_gastro_2025/",
+  "received_date": "2025-10-28",
+  "received_from": "Complex Medical Pitea & Pitea SRL, Arad, Revoluției 45, tel. 0749111455",
+  "medic_emitent": "Dr. PITEA ALEXANDRU (medic primar urologie, cod parafă A13044)",
+  "digitized_by": "PDF scanat (user familie)",
+  "digitized_date": "pre-2026-04-18 (fișier exista la inițializare dosar)",
+  "transcriber": "Claude_Opus_4.7 (extragere strict-extractivă + integrare Arhiva_Generala 2026-04-24 pentru ecografie scrotală detaliată)",
+  "extragere_md": "documente_sursa/06_urologie_gastro_2025/2025-10-28_scrisoare_urologie_eco_scrotala_extragere.md",
+  "ocr_quality": "good (PDF scanat cu text OCR-abil)",
+  "completeness_verified": "2026-04-24 (post integrare secțiune ecografie scrotală + identificare medic)",
+  "coverage": "100%",
+  "validator": "claude-opus-4-7",
+  "chain_notes": "Scrisoare medicală pre-chirurgie hernie (28.10.2025, ~1 lună înainte de operație 28.11.2025). Include ecografie scrotală + diagnostic: hidrocel drept (N43.3), chiste epididimare bilaterale (N50.89), hernie inghinală dreaptă (K40.90). Preoperator a fost indicată combinație cură chirurgicală hernie + hidrocel + chiste; externarea 28.11.2025 menționează însă doar hernie + aderențe peritoneale — discrepanță de urmărit (task P2 TODO.md 'Clarificare rezolvare simultană hidrocel + chiste'). Medic identificat retroactiv 2026-04-24 ca Dr. Pitea Alexandru via antet scrisoare + cod parafă A13044.",
+  "retrospectively_added": "2026-04-24 21:30 — audit identificat lipsă meta.json"
+}

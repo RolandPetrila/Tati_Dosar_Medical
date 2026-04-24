@@ -21,23 +21,33 @@ dosar_medical_petrila/
 ├── TODO.md                           Acțiuni curente
 ├── CHANGELOG.md                      Istoricul modificărilor
 │
-├── documente_sursa/                  Scanurile și fișierele originale (structură v2026-04-24 — 14 foldere, 99_altele ELIMINAT)
-│   ├── 01_identitate/                Carte identitate, pașaport
-│   ├── 02_cardiologie_2012/          Stent Vichy 2012 (🟡 PDF de obținut)
-│   ├── 03_hernie_anterior/           Prima operație de hernie (🟡 dată necunoscută)
-│   ├── 04_helicobacter_2024/         Serologie H. pylori iunie + septembrie 2024
-│   ├── 05_analize_laborator/         Buletine analize sânge / urină (cronologic)
-│   ├── 06_urologie_gastro_2025/      Consult urologie + ECO scrotală 28.10.2025 (Dr. Pitea)
-│   ├── 07_hernie_2025_11/            Intervenție hernie noiembrie 2025 (Dr. Papiu)
-│   ├── 08_schema_tratament/          Scheme medicație manuscrise (10.11.2025)
-│   ├── 09_endoscopie_2026_04/        Gastroscopie + colonoscopie 17.04.2026 (Dr. Noufal)
-│   ├── 10_administrativ_pensie/      Talon pensie, dovezi asigurare CASS
-│   ├── 11_CT_stadializare_2026/      Bilet trimitere CT + raport CT 20.04.2026 (Dr. Buie + Dr. Candea)
-│   ├── 12_biopsie_2026/              Rezultat biopsie (🟡 așteptare Bioclinica)
-│   ├── 13_cardiologie_ambulator_2025/  Consult cardiologie + ECO 10.11.2025 (Dr. LAZA CRISTINA)
-│   └── 14_UPU_2024_05_30/            Episod UPU Arad 30.05.2024 (Dr. Post + Dr. Grada + Dr. Pop)
-│
-│   [Convenție R26: NN_categorie_data/ unde NN crește continuu; 99_altele/ eliminat 2026-04-24 — documente noi se plasează în folder tematic sau se creează 15_... conform convenției]
+├── documente_sursa/                  Scanurile și fișierele originale
+│   ├── 01_identitate/
+│   │   └── 2023-06-12_carte_identitate.pdf
+│   │
+│   ├── 02_cardiologie_2012/          Istoric stent
+│   │
+│   ├── 03_hernie_anterior/           Prima operație de hernie
+│   │
+│   ├── 04_helicobacter_2024-05-30/   Episod H. pylori
+│   │
+│   ├── 05_hernie_2025-11/            Hernia din noiembrie 2025
+│   │
+│   ├── 06_endoscopie_2026-04-17/     Endoscopia + colonoscopia
+│   │   └── 2026-04-17_bilet_trimitere_CT.jpg
+│   │
+│   ├── 07_biopsie_2026-04/           Rezultat biopsie (de primit)
+│   │
+│   ├── 08_CT_stadializare_2026/      CT de stadializare (de primit)
+│   │
+│   ├── 09_analize_laborator/         Toate analizele cronologic
+│   │   └── YYYY-MM-DD_tip_analiza.pdf
+│   │
+│   ├── 10_retete/                    Rețete curente și istorice
+│   │
+│   ├── 11_consulturi/                Scrisori medicale, bilete consult
+│   │
+│   └── 99_altele/                    Orice alt document
 │
 ├── interpretari/                     Sintezele / interpretările documentelor
 │   ├── 2026-04-14_ecografie.md
@@ -132,36 +142,30 @@ Dacă data exactă nu se cunoaște, folosește `YYYY-MM_descriere.ext` sau `YYYY
 3. **Subfolder clar.** Fiecare episod medical are propriul subfolder.
 4. **Data prima.** Formatul `YYYY-MM-DD_` la începutul numelui asigură sortarea cronologică.
 
-### Ce merge în ce folder (structură actuală 2026-04-24)
+### Ce merge în ce folder
 
-| Tip document                                         | Folder                           |
-| ---------------------------------------------------- | -------------------------------- |
-| CI, pașaport                                         | `01_identitate/`                 |
-| Stent Vichy 2012 (la obținere PDF)                   | `02_cardiologie_2012/`           |
-| Prima hernie (la identificare)                       | `03_hernie_anterior/`            |
-| Serologie/internare H. pylori 2024                   | `04_helicobacter_2024/`          |
-| Buletine analize sânge/urină — orice dată            | `05_analize_laborator/`          |
-| Consult urologie + ECO scrotală 28.10.2025           | `06_urologie_gastro_2025/`       |
-| Intervenție hernie noiembrie 2025                    | `07_hernie_2025_11/`             |
-| Scheme medicație (rețete manuscrise cronologice)     | `08_schema_tratament/`           |
-| Gastroscopie + colonoscopie 17.04.2026               | `09_endoscopie_2026_04/`         |
-| Talon pensie, dovezi asigurare                       | `10_administrativ_pensie/`       |
-| Bilet trimitere CT + raport CT 20.04.2026 + CD DICOM | `11_CT_stadializare_2026/`       |
-| Rezultat biopsie (la primire)                        | `12_biopsie_2026/`               |
-| Consult cardiologie ambulator 10.11.2025 (Dr. LAZA)  | `13_cardiologie_ambulator_2025/` |
-| Episod UPU 30.05.2024 (criza HTA + hiperglicemie)    | `14_UPU_2024_05_30/`             |
-
-**`99_altele/` eliminat 2026-04-24** — conținutul a fost redistribuit în folderele tematice după integrarea documentelor din Arhiva_Generala.
+| Tip document                                  | Folder                        |
+| --------------------------------------------- | ----------------------------- |
+| CI, card sănătate                             | `01_identitate/`              |
+| Documente stent 2012                          | `02_cardiologie_2012/`        |
+| Prima operație de hernie                      | `03_hernie_anterior/`         |
+| Episod H. pylori 2024                         | `04_helicobacter_2024-05-30/` |
+| Hernia noiembrie 2025                         | `05_hernie_2025-11/`          |
+| Endoscopie, colonoscopie, bilete aprilie 2026 | `06_endoscopie_2026-04-17/`   |
+| Rezultat biopsie (când vine)                  | `07_biopsie_2026-04/`         |
+| CT de stadializare (raport + CD DICOM)        | `08_CT_stadializare_2026/`    |
+| Analize de laborator, în orice moment         | `09_analize_laborator/`       |
+| Rețete                                        | `10_retete/`                  |
+| Scrisori de consult, bilete de trimitere      | `11_consulturi/`              |
+| Orice altceva                                 | `99_altele/`                  |
 
 ### Pentru consulturi viitoare
 
-Pe măsură ce apar consulturi noi (oncolog, endocrinolog, etc.), se creează subfoldere noi **continuând numerotarea de la 15**:
+Pe măsură ce apar consulturi noi (oncolog, etc.), se creează subfoldere noi:
 
-- `15_oncolog_YYYY-MM/` (la prima vizită oncolog digestiv)
-- `16_endocrinologie_YYYY-MM/` (la prima vizită endocrinolog pentru glanda suprarenală stângă)
+- `12_oncolog_YYYY-MM/`
+- `13_tratament_YYYY/`
 - etc.
-
-**Regula R26:** nu se re-crează `99_altele/`. Un document care nu se încadrează în categoriile existente declanșează crearea unui folder tematic dedicat.
 
 ## Reguli pentru interpretări și cercetări
 

@@ -1,0 +1,14 @@
+{
+  "source_document": "2025-11-28_scrisoare_medicala_anexa43.pdf",
+  "source_location": "documente_sursa/07_hernie_2025_11/",
+  "received_date": "2025-11-28",
+  "received_from": "Spitalul Clinic Județean de Urgență Arad — Chirurgie Generală II",
+  "medic_operator": "Dr. Papiu Horațiu-Sabin (cod parafă 775468)",
+  "digitized_by": "PDF scanat (user/familie)",
+  "digitized_date": "pre-2026-04-18",
+  "transcriber": "Claude_Opus_4.7 (extragere strict-extractivă)",
+  "extragere_md": "documente_sursa/07_hernie_2025_11/2025-11-28_scrisoare_medicala_anexa43_extragere.md",
+  "ocr_quality": "good",
+  "chain_notes": "Scrisoare medicală Anexa 43 (format standard CAS) complementară cu biletul de externare. Include recomandări post-operatorii + schema medicație continuată. Document companion `2025-11-28_bilet_iesire_spital.pdf` în același folder. Ambele fuzionate în JSON canonic 2025-11-28_externare_chirurgie_hernie.json.",
+  "retrospectively_added": "2026-04-24 21:30 — audit R14 batch"
+}

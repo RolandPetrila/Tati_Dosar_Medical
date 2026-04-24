@@ -1,0 +1,14 @@
+{
+  "source_document": "2025-11-28_bilet_iesire_spital.pdf",
+  "source_location": "documente_sursa/07_hernie_2025_11/",
+  "received_date": "2025-11-28 (data externării post-intervenție hernie)",
+  "received_from": "Spitalul Clinic Județean de Urgență Arad — Chirurgie Generală II",
+  "medic_operator": "Dr. Papiu Horațiu-Sabin (medic primar chirurgie, cod parafă 775468)",
+  "digitized_by": "PDF scanat (user/familie)",
+  "digitized_date": "pre-2026-04-18",
+  "transcriber": "Claude_Opus_4.7 (extragere strict-extractivă)",
+  "extragere_md": "documente_sursa/07_hernie_2025_11/2025-11-28_bilet_iesire_spital_extragere.md",
+  "ocr_quality": "good",
+  "chain_notes": "Bilet de externare post cură chirurgicală hernie inghinală dreaptă (26-28.11.2025). Diagnostic: K40.90 (hernie inghinală) + K66.0 (aderențe peritoneale). PO 1476 din 26.11.2025 — cură cu grefon plasă sintetică. Anestezie rahidiană + sedare. Antibioprofilaxie Zolinef 1g. Profilaxie trombotică Clexane 60mg. Scrisoare medicală anexa 43 separată — vezi `2025-11-28_scrisoare_medicala_anexa43.pdf` în același folder. JSON canonic (fuziune): 2025-11-28_externare_chirurgie_hernie.json.",
+  "retrospectively_added": "2026-04-24 21:30 — audit R14 batch"
+}

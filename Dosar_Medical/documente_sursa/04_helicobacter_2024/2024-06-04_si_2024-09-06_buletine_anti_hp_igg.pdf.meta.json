@@ -1,0 +1,18 @@
+{
+  "source_document": "2024-06-04_si_2024-09-06_buletine_anti_hp_igg.pdf",
+  "source_location": "documente_sursa/04_helicobacter_2024/",
+  "received_date": "2024-06-04 (buletin nr. 77449) + 2024-09-06 (buletin nr. 79765) — 2 buletine în 1 PDF",
+  "received_from": "SC Ultra ClinicaVest SRL Pecica",
+  "medic_lab": "Dr. Cret Anamaria (medic primar laborator, cod A 0769)",
+  "medic_solicitant": "Dr. Orbán Ecaterina (medic de familie, cod 718705)",
+  "digitized_by": "scanare PDF (familie/user)",
+  "digitized_date": "2026-04-24 (integrare Arhiva_Generala în dosar .Tati)",
+  "transcriber": "Claude_Opus_4.7 (extragere strict-extractivă din Arhiva_Generala)",
+  "extragere_md": "documente_sursa/04_helicobacter_2024/2024-06-04_si_2024-09-06_buletine_anti_hp_igg_extragere.md",
+  "ocr_quality": "good (PDF digital)",
+  "completeness_verified": "2026-04-24",
+  "coverage": "100%",
+  "validator": "claude-opus-4-7",
+  "chain_notes": "Două buletine serologie IgG Anti-Helicobacter pylori (metoda CLIA): 04.06.2024 (buletin 77449) valoare >100 U/mL; 06.09.2024 (buletin 79765) aceeași valoare >100 U/mL (consistent în timp). Referință 0-20 U/mL. NU distinge infecție activă vs antecedentă (IgG persistă luni/ani post-eradicare). Pentru validarea eradicării ar trebui antigen fecal sau UBT — niciunul documentat. JSON-uri canonice derivate: 2024-06-04_anti_helicobacter_pylori_igg_77449.json + 2024-09-06_anti_helicobacter_pylori_igg_79765.json.",
+  "retrospectively_added": "2026-04-24 21:30 — audit identificat lipsă meta.json pe documentul sursă"
+}

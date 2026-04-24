@@ -6,6 +6,50 @@
 
 ---
 
+## 2026-04-24 21:45 — [Claude_Opus_4.7] audit-complet-plus-remediere-totala
+
+**Scop:** execuție `/audit` standard (13 dimensiuni adaptate medical documentar) + remediere exhaustivă a 5 HIGH + 4 MEDIUM + 3 LOW la cerere user explicită „remediaza tot".
+
+**Audit output generat:** `.claude-outputs/audit/2026-04-24_205408/audit_report.md` (18.8 KB) + `audit_score.json` (11 KB). Scor inițial 77/100 (delta −9 vs 86 din 2026-04-23 — scope nou: R14, R18, flag-uri).
+
+**Operații pe fișierele de referință:**
+
+1. **EXTRAGERI_INCOMPLETE.md** — intrarea pentru schema medicamente 10.11.2025 (Dr. LAZĂR) marcată ✅ REZOLVAT cu log transparență + istoric completitudine.
+2. **Dosar_Medical/rapoarte_generate/2026-04-18_raport_reactii_adverse_jamesi_triplixam.meta.json** creat (chain-of-custody R14 paritate cu celelalte 2 DOCX).
+3. **.ruff_cache/** șters (reziduu linter Python nefolositor).
+4. **Backup-uri R10** pre-modificare structurală: CLAUDE_DOSAR + STRUCTURA_PROIECT + DASHBOARD + CONTEXT_MEDICAL (4 fișiere) cu timestamp 2026-04-24_2130.
+5. **Dosar_Medical/CLAUDE.md** — tabel R26 regenerat (14 foldere, 99_altele eliminat, status actualizat 3 foldere gol justificat).
+6. **STRUCTURA_PROIECT.md** — schema foldere actualizată la structura reală 01–14 (era schemă veche 08_CT / 09_analize_laborator / 10_retete / 11_consulturi / 99_altele).
+7. **CONTEXT_MEDICAL.md** v1.4:
+   - Header: adăugare convenție marcaje R17/R22 explicit documentată.
+   - §4 Medicație: nouă sub-secțiune „⚠️ Discrepanță TORVACARD" cu tabel comparativ + analiză clinică (LDL 133 țintă <70).
+   - §2.1 Findings principale CT: marcaje `[CERT]`/`[PROBABIL]`/`[INCERT]` aplicate pe tabel TNM + ascită.
+   - §4 Medicație: marcaje `[CERT]` pe medicamente/doze, `[CERT]` pe notă CRITIC metformin pre-CT.
+   - §10 Evaluare preliminară: notă explicit „concluzii interpretative, NU factual direct" + marcaje aplicate pe elemente care susțin + elemente favorabile + ipoteze + stadializare probabilă.
+8. **TODO.md** — nou task P1 „Clarificare TORVACARD (discrepanță 10.11.2025)" cu 6 sub-task-uri.
+9. **Dosar_Medical/\*.meta.json** — 8 meta.json noi pentru JSON canonice care le lipseau (2012 Vichy, 2023 CI, 2025-06-17 analize, 2025-10-28 urologie, 2025-11-01 talon, 2025-11-10 schema, 2025-11-28 hernie, 2026-04-17 bioclinica).
+10. **Dosar_Medical/documente_sursa/_/_.meta.json** — 11 meta.json noi pentru documente sursă care le lipseau (04/HP, 05/analize_sange, 06/urologie, 07/bilet + scrisoare, 09/gastroscopic + colonoscopic, 11/bilet_CT + CT-Genesys, 13/cardiologie, 14/UPU_complet).
+11. **DASHBOARD.html** — regenerare integrală:
+    - Medicație card: sursa Dr. LAZA CRISTINA + alert critical TORVACARD discrepanță.
+    - Echipă medicală card: wide + 16 medici (era 7 cu multe „De identificat").
+    - Timeline: +5 entries noi (UPU 2024 KEY, cardiologie 10.11.2025 KEY, urologie 28.10.2025, HP IgG 2024).
+    - P1 Actions: închis identificare medic (rezolvat), adăugat TORVACARD (nou).
+    - lastRegen text: „2026-04-24 21:45 (regenerare integrală post-audit)".
+
+**Commit R16:** de inițiat după această intrare — hash se adaugă retrospectiv.
+
+**3 flag-uri follow-up checkpoint 2026-04-24 seara — TOATE finalizate:**
+
+- Flag #1 DASHBOARD regenerare: ✅ REZOLVAT
+- Flag #2 TORVACARD clarificare: ✅ DOCUMENTAT (acțiune efectivă = apel familie de user)
+- Flag #3 EXTRAGERI_INCOMPLETE: ✅ REZOLVAT
+
+**Coverage R14 final:** 19/19 JSON canonice (100%), 15/15 documente sursă în foldere populate (100%).
+
+**Durata sesiune:** 20:54 → 22:00 (~65 min audit + remediere + documentare).
+
+---
+
 ## 2026-04-24 18:30 — [Claude_Opus_4.7] integrare-completa-arhiva_generala-boala_actuala-restructurare-documentatie-unica
 
 **Scop:** integrare completă a extragerilor strict-extractive (v2.1) din workspace-ul paralel `.Tati_Documente_Medicale/Claude/` în documentația canonică `.Tati/Dosar_Medical/`; restructurare pentru documentație UNICĂ (zero duplicate) conform cererii user explicite A/A/A/A/A/A + ștergeri fără arhivare + eliminare `99_altele/`.

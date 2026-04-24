@@ -1,0 +1,16 @@
+{
+  "source_document": "2025-11-28_bilet_iesire_spital.pdf + 2025-11-28_scrisoare_medicala_anexa43.pdf (fuziune 2 documente)",
+  "source_location": "documente_sursa/07_hernie_2025_11/",
+  "received_date": "2025-11-28 (data externării)",
+  "received_from": "Spitalul Clinic Județean de Urgență Arad — Chirurgie Generală II",
+  "medic_operator": "Dr. Papiu Horațiu-Sabin (medic primar chirurgie, cod parafă 775468)",
+  "digitized_by": "PDF scanat (user/familie)",
+  "digitized_date": "pre-2026-04-18 (fișier exista la inițializare dosar)",
+  "transcriber": "Claude_Opus_4.7 (fuziune 3 JSON-uri Gemini v1 + corecturi audit 2026-04-18 + identificare medic retroactivă 2026-04-24)",
+  "ocr_quality": "good",
+  "completeness_verified": "2026-04-24",
+  "coverage": "100%",
+  "validator": "claude-opus-4-7",
+  "chain_notes": "Externare post cură chirurgicală hernie inghinală dreaptă (K40.90) + aderențe peritoneale (K66.0), procedură PO 1476 din 26.11.2025 (cură cu grefon plasă sintetică). Anestezie rahidiană + sedare. Antibioprofilaxie Zolinef. Profilaxie trombotică Clexane. Analize preop 28.11.2025 (glicemie 129 ↑, creatinină 0.66, eozinofile 7.5% ↑). JSON-ul este fuziune a 3 JSON-uri Gemini v1 (dedup 2026-04-18 în auditul migrare schema v2.0). Identificare medic operator Dr. Papiu Horațiu-Sabin (cod 775468) adăugată retroactiv 2026-04-24 din Arhiva_Generala. Discrepanță cu scrisoarea preop 28.10.2025: scrisoarea Pitea indica + hidrocel + chiste epididimare — bilet externare menționează doar hernie + aderențe (task P2 clarificare TODO.md).",
+  "retrospectively_added": "2026-04-24 21:30 — audit identificat lipsă meta.json pentru JSON canonic"
+}

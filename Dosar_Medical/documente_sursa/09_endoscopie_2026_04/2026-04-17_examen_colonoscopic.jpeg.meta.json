@@ -1,0 +1,14 @@
+{
+  "source_document": "2026-04-17_examen_colonoscopic.jpeg",
+  "source_location": "documente_sursa/09_endoscopie_2026_04/",
+  "received_date": "2026-04-17",
+  "received_from": "Genesis Medical Clinic Arad",
+  "medic_examinator": "Dr. Noufal Abdul Vahab (cod parafă C 11074)",
+  "digitized_by": "scanare foto user/familie",
+  "digitized_date": "2026-04-17 sau 2026-04-18",
+  "transcriber": "Claude_Opus_4.7 (extragere strict-extractivă + R23 integral aplicat pe 6 segmente colon)",
+  "extragere_md": "documente_sursa/09_endoscopie_2026_04/2026-04-17_examen_colonoscopic_extragere.md",
+  "ocr_quality": "good",
+  "chain_notes": "Buletin colonoscopie 17.04.2026 — findings: polip sesil 8 mm în colon descendent (K63.5) recomandare polipectomie + hemoroizi interni grad II (K64.1). Pregătire colon suboptimă: reziduuri fecale solide în sigmoid + transvers + ascendent. R23 aplicat integral: toate 6 segmente (rect, sigmoid, descendent, transvers, ascendent, cec) listate explicit cu aspect + calitate pregătire. JSON canonic: 2026-04-17_examen_colonoscopic.json (separat 2026-04-24 din JSON unificat anterior).",
+  "retrospectively_added": "2026-04-24 21:30 — audit R14 batch"
+}

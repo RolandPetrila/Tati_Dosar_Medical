@@ -1,0 +1,26 @@
+{
+  "source_document": "2024-05-30_dosar_upu_complet.pdf (10 pagini) + 10 JPEG pagini individuale (pag0..pag9)",
+  "source_location": "documente_sursa/14_UPU_2024_05_30/",
+  "received_date": "2024-05-30 (episod UPU Arad, 17:30 prezentare)",
+  "received_from": "Spitalul Clinic Județean de Urgență Arad — UPU Adulți",
+  "medici_identificati": {
+    "urgentist": "Dr. Pop Florica (medic primar medicină de urgență, cod parafă C79981)",
+    "gastroenterolog_consult": "Dr. Grada Sebastian (cod parafă G15512)",
+    "cardiolog_consult": "Dr. Post Mihaela (cod parafă A13550 UPU / A14555 ambulator — 2 coduri pe 2 ștampile)",
+    "laborator": [
+      "Dr. Igas Angelica (cod 119856, medic primar laborator)",
+      "Dr. Avram Cecilia (medic primar laborator)"
+    ],
+    "trimis_de": "Dr. Orbán Ecaterina (medic de familie Cabinet Medical Individual Nădlac, cod 718705) — pentru 'criza HTA 200/100 mmHg, SaO2 91%, glicemie 177 mg%, DZ tip II dezechilibrat'"
+  },
+  "digitized_by": "PDF multi-pagină + JPEG-uri individuale (origine: workspace extern Arhiva_Generala)",
+  "digitized_date": "2026-04-24 (integrare Arhiva_Generala în dosar .Tati)",
+  "transcriber": "Claude_Opus_4.7 (extragere strict-extractivă)",
+  "extragere_md": "documente_sursa/14_UPU_2024_05_30/2024-05-30_dosar_upu_complet_extragere.md",
+  "ocr_quality": "mixed (pagini tipărite: good; manuscris: partial)",
+  "completeness_verified": "2026-04-24",
+  "coverage": "100% (pagini tipărite integrale; manuscris limitat la ce e lizibil — excluderi R25 documentate în JSON)",
+  "validator": "claude-opus-4-7",
+  "chain_notes": "KEY EVENT — episod clinic major: pacient prezentat UPU cu grețuri+vărsături (post-sarmale) + vertij + criza HTA 200/100 + hiperglicemie decompensată (180.48 mg/dL), troponină dinamică hs-cTnI 4.24 → 4.59 ng/L (trend UP relevant cardiologic), EKG 'Markedly Abnormal'. Consulturi cascade: gastro (diagnostic sindrom dispeptic → Controloc + Debridat) + cardio (scrisoare medicală nr. 0003622 — schemă medicație PRESTARIUM + ASPENTER + SORTIS + CONCOR + NORVASC). NU există serologie H. pylori în acest episod (serologia ulterioară 04.06.2024 + 06.09.2024 la Ultra ClinicaVest). Relevanță pre-oncologică: documentează pacient cardiovascular instabil la distanță → evaluare risc anestezic preoperator pentru esofagectomie. **Medic familie identificat prin acest episod: Dr. Orbán Ecaterina** (referință pentru viitoare bilete trimitere + follow-up cronic). Folderul 14_UPU_2024_05_30/ creat 2026-04-24. JSON-uri canonice derivate: 2024-05-30_upu_consult_gastro_cardio.json + 2024-05-30_analize_upu_sange_1517243.json + 2024-05-30_analize_upu_urina_1517290.json.",
+  "retrospectively_added": "2026-04-24 21:30 — audit R14 batch"
+}

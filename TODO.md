@@ -343,6 +343,27 @@ Pentru evaluare mai precisă a expunerii (calculul „pachete-an”).
 - [x] Update `Dosar_Medical/2025-11-10_schema_medicamente.json`
 - [ ] Clarificare cabinet/unitate Dr. LAZA CRISTINA (probabil cabinet cardiologie ambulator Arad — de confirmat cu familia)
 
+### [P1] 🟡 **NOU — Clarificare TORVACARD (discrepanță 10.11.2025)** — deschis audit 2026-04-24
+
+**Context:** Scrisoarea medicală Dr. LAZA CRISTINA din 10.11.2025 (`Dosar_Medical/2025-11-10_scrisoare_medicala_cardiologie.json`) prescrie **TORVACARD 10 sau 20 mg 0-0-1 seara** (statină, atorvastatină). Schema zilnică manuscrisă de aceeași zi (`2025-11-10_schema_medicamente.json`) **NU include TORVACARD** — rândul 4 este tăiat cu marker albastru (anulat?). `CONTEXT_MEDICAL.md §4` până acum nu documentase această discrepanță.
+
+**De ce e important (impact clinic):**
+
+- Pacient post-stent coronarian 2012 → prevenție CV secundară recomandă statină continuă (ghid ESC/AHA)
+- Lipidogramă 17.06.2025: **LDL 133 mg/dL** (țintă post-stent <70 mg/dL) — neatins, statină indicată
+- Pre-intervenție oncologică majoră (esofagectomie planificată post-biopsie): prevenția CV secundară suboptimă crește risc perioperator
+
+**Sub-task-uri:**
+
+- [ ] **Apel telefonic familie:** pacientul ia TORVACARD (sau altă statină) curent? Dacă DA, doză + orar? Dacă NU, de la ce dată și motivul (efecte adverse, decizie medic, omisiune)?
+- [ ] Cerere foto cutie TORVACARD (dacă există) → adăugare în `Dosar_Medical/documente_sursa/08_schema_tratament/` + `.meta.json`
+- [ ] Update `CONTEXT_MEDICAL.md §4` cu statusul real (luat / neluat / doză)
+- [ ] Update `Dosar_Medical/2025-11-10_schema_medicamente.json` cu status TORVACARD clarificat
+- [ ] Update `DASHBOARD.html` la regenerarea viitoare
+- [ ] Dacă NU e luat și nu există motiv clinic documentat → ridicare către medic curant (Dr. LAZA sau medic familie Dr. Orbán) pentru reevaluare
+
+**Data deschiderii:** 2026-04-24 (identificat în auditul din 20:54).
+
 ### [P2] HbA1c recent
 
 **Context:** monitorizare control diabet cu Jamesi; ultima HbA1c necunoscută.

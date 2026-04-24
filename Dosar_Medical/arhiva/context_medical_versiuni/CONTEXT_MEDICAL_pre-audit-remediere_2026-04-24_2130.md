@@ -4,23 +4,10 @@
 
 ---
 
-**Ultima actualizare:** 24 aprilie 2026 21:30 (audit remediere: TORVACARD discrepanță documentată în §4; marcaje certitudine R22 aplicate pe §2.1, §4, §10 conform convenției de mai jos)
+**Ultima actualizare:** 24 aprilie 2026 18:30 (integrare completă Arhiva_Generala + Boala_Actuala: cardiologie ambulator 10.11.2025, UPU 30.05.2024, medic familie identificat, separare gastroscopie/colonoscopie, bilet trimitere CT ca document propriu)
 **Responsabil dosar:** Roland Petrilă (fiul pacientului)
-**Versiune structură:** 1.4 (R22 marcaje certitudine pass conservativ pe secțiuni clinic critice)
-**Versiune anterioară arhivată:** `Dosar_Medical/arhiva/context_medical_versiuni/CONTEXT_MEDICAL_pre-audit-remediere_2026-04-24_2130.md` + versiunile anterioare (vezi arhiva).
-
----
-
-### Convenție marcaje certitudine (R17 + R22 — aplicare în acest fișier)
-
-Acest fișier este **state file intern** (sursă pentru documentele de ieșire), nu document final trimis medicilor. Aplicarea R17 (marcaje obligatorii pe `output docs`) + R22 (zero afirmații fără sursă în fișiere de referință) se face astfel:
-
-- **`[CERT]`** — afirmație factuală confirmată din sursă primară (JSON canonic din `Dosar_Medical/`, RCP/SmPC oficial, ghid ESMO/NCCN/AJCC, studiu peer-reviewed). Sursa citată în ultima linie a secțiunii relevante.
-- **`[PROBABIL]`** — susținut de literatura medicală standard, estimare clinică a unui medic, sau inferare rezonabilă; nu sursă primară directă.
-- **`[INCERT]`** — conflict între surse, extrapolare de la alt context, lacună date care necesită clarificare.
-- **`[NEGASIT]`** — căutat explicit în surse și neidentificat; listăm unde s-a căutat.
-
-**Valori default fără marcaj explicit** = `[CERT]` cu sursă în JSON-ul sursă menționat în referința secțiunii (`Sursă:` la finalul secțiunii). Afirmațiile care NU sunt factuale (concluzii clinice preliminare, opțiuni terapeutice, întrebări deschise) NU necesită marcaj — dar secțiunea menționează explicit natura lor în titlu (ex: „§10 Evaluare preliminară").
+**Versiune structură:** 1.3 (integrare masivă extrageri strict-extractive + 12 JSON-uri noi canonice + MANIFEST v2.0)
+**Versiune anterioară arhivată:** `Dosar_Medical/arhiva/context_medical_versiuni/CONTEXT_MEDICAL_pre-status-jamesi-reluat_2026-04-22_1658.md` + `Dosar_Medical/arhiva/context_medical_versiuni/CONTEXT_MEDICAL_pre-CT-stadializare_2026-04-22_1600.md` (v1.1 pre-CT) + `Dosar_Medical/arhiva/context_medical_versiuni/CONTEXT_MEDICAL_v1_2026-04-17.md`
 
 ---
 
@@ -55,17 +42,17 @@ Acest fișier este **state file intern** (sursă pentru documentele de ieșire),
 
 ### 2.1 Findings principale CT 20.04.2026 (impact decizional direct)
 
-**Stadializare imagistică preliminară** `[PROBABIL]` — estimativă per radiolog, necesită corelare cu biopsie pentru confirmare histologică:
+**Stadializare imagistică preliminară — estimativă, necesită corelare cu biopsie:**
 
-| Element       | Estimare CT           | Marcaj       | Note                                                                                                                                         |
-| ------------- | --------------------- | ------------ | -------------------------------------------------------------------------------------------------------------------------------------------- |
-| **T** (tumor) | T3–T4                 | `[PROBABIL]` | Proces expansiv infiltrativ circumferențial cu extensie loco-regională, densificarea grăsimii peritumorale                                   |
-| **N** (nodes) | N0–N1                 | `[PROBABIL]` | Limfonoduli loco-regionali max 7.5 mm `[CERT]` (sub pragul standard <10 mm, dar în context neoplazic pot fi relevanți)                       |
-| **M** (meta)  | **M0 probabil**       | `[PROBABIL]` | Fără metastaze hepatice, pulmonare, osoase, ganglionare distale vizibile pe CT `[CERT]`                                                      |
-| **Siewert**   | II probabil           | `[PROBABIL]` | Joncțiune eso-gastrică propriu-zisă, centrată pe cardia cu extensie eso-distală și fundică                                                   |
-| **ATENȚIE**   | **Ascită de evaluat** | `[CERT]`     | Colecție fluidă perihepatică 15 mm + intrapelvină 28 mm `[CERT]` → de exclus CARCINOMATOZĂ PERITONEALĂ `[INCERT]` (ar echivala cu stadiu IV) |
+| Element       | Estimare CT           | Note                                                                                                                     |
+| ------------- | --------------------- | ------------------------------------------------------------------------------------------------------------------------ |
+| **T** (tumor) | T3–T4                 | Proces expansiv infiltrativ circumferențial cu extensie loco-regională, densificarea grăsimii peritumorale               |
+| **N** (nodes) | N0–N1                 | Limfonoduli loco-regionali max 7.5 mm (sub pragul standard <10 mm, dar în context neoplazic pot fi relevanți)            |
+| **M** (meta)  | **M0 probabil**       | Fără metastaze hepatice, pulmonare, osoase, ganglionare distale vizibile                                                 |
+| **Siewert**   | II probabil           | Joncțiune eso-gastrică propriu-zisă, centrată pe cardia cu extensie eso-distală și fundică                               |
+| **ATENȚIE**   | **Ascită de evaluat** | Colecție fluidă perihepatică 15 mm + intrapelvină 28 mm → de exclus CARCINOMATOZĂ PERITONEALĂ (ar echivala cu stadiu IV) |
 
-**Natura histologică a leziunii:** `[INCERT]` — neclarificată. Biopsia în lucru la Bioclinica Arad va preciza tipul exact (adenocarcinom vs. carcinom scuamocelular, grad de diferențiere). Localizarea distală + extensia fundică sugerează **adenocarcinom** `[PROBABIL]` (pattern tipic Siewert II per literatura de specialitate), dar confirmarea aparține histopatologului.
+**Natura histologică a leziunii:** neclarificată. Biopsia în lucru la Bioclinica Arad va preciza tipul exact (adenocarcinom vs. carcinom scuamocelular, grad de diferențiere). Localizarea distală + extensia fundică sugerează **adenocarcinom** (pattern tipic Siewert II), dar confirmarea aparține histopatologului.
 
 ### 2.2 Findings secundare CT 20.04.2026 (monitorizare / urmărire)
 
@@ -281,34 +268,7 @@ Schema datată **10 noiembrie 2025**. Medic prescriptor **IDENTIFICAT (2026-04-2
 
 **Suplimente alimentare:** de verificat cu familia.
 
-**Sursă:** `Dosar_Medical/2025-11-10_schema_medicamente.json` (manuscris parțial + fotografii cutii). Medicamentele, dozele și ritmul de administrare sunt `[CERT]` (fotografii cutii + manuscris lizibil pentru ritm). Medicul prescriptor identificat retroactiv 2026-04-24: **Dr. LAZA CRISTINA (cod parafă C07842)** via cross-reference ECO tipărită aceeași zi.
-
-### ⚠️ Discrepanță medicamentoasă 10.11.2025 — TORVACARD (de clarificat telefonic)
-
-**Status:** 🟡 **NECLARIFICAT — task P1 deschis 2026-04-24** (telefon familie necesar).
-
-**Context discrepanță:**
-
-| Document                                                            | Medicamente prescrise                                                                          |
-| ------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
-| **Scrisoarea medicală Dr. LAZA CRISTINA (10.11.2025, nr. 0005042)** | ASPENTER 75 + TRIPLIXAM 10/2.5/5 + CONCOR 5 + **TORVACARD 10 sau 20 mg 0-0-1 seara**           |
-| **Schema zilnică manuscrisă (10.11.2025, pe talon — aceeași zi)**   | ASPENTER 75 + CONCOR 5 + TRIPLIXAM 10/2.5/5 + **JAMESI 50/1000 mg** (rândul 4 tăiat cu marker) |
-
-**Ipoteze:**
-
-1. **TORVACARD prescris scris pe scrisoarea medicală, dar anulat pe schema zilnică** (rândul 4 tăiat cu marker albastru) — pacientul NU-l ia?
-2. **Posibil inversare:** TORVACARD pe scrisoare + Jamesi pe talon zilnic sunt ambele reale (schema zilnică include statină + antidiabetic separat — dar atunci ce e pe rândul 4 tăiat?)
-3. **Posibil: Jamesi adăugat ulterior** (pre-chirurgie hernie ca parte a controlului DZ), iar TORVACARD rămâne separat (neînregistrat pe schema zilnică).
-
-**Relevanță clinică:**
-
-- Pacient **post-stent coronarian 2012** → prevenție CV secundară recomandă statină continuă (`[CERT]` ghid AHA/ESC post-MI + ghid ESC dyslipidemia)
-- **Lipidogramă 17.06.2025** (`Dosar_Medical/2025-06-17_buletin_analize_sange.json`): colesterol total 189, **LDL 133 mg/dL** (țintă post-stent <70 mg/dL conform ESC 2019/2021) → **LDL neatins**, statină indicată
-- Dacă TORVACARD NU e luat → prevenția CV secundară este **suboptimă pre-intervenție oncologică majoră** (esofagectomie planificată post-diagnostic histopatologic)
-
-**Acțiune necesară:** apel telefonic familie pentru clarificare status real (luat/neluat TORVACARD, doza, orarul), eventual consultare medic curant (Dr. LAZA CRISTINA) dacă nevoie.
-
-**Task tracking:** `TODO.md` secțiunea P1 „Clarificare TORVACARD (discrepanță 10.11.2025)".
+**Sursă:** `Dosar_Medical/2025-11-10_schema_medicamente.json` (manuscris parțial + fotografii cutii). Medicamentele, dozele și ritmul de administrare sunt `[CERT]` (fotografii cutii + manuscris lizibil pentru ritm). Numele medicului prescriptor NU e integrat conform Regula 25 (manuscris parțial ilizibil — tracking în `Dosar_Medical/EXTRAGERI_INCOMPLETE.md`).
 
 ### Interacțiune medicamentoasă documentată — de urmărit
 
@@ -508,40 +468,38 @@ Efectuată concomitent cu endoscopia la Genesis Medical Clinic Arad (Dr. Noufal 
 
 ## 10. Evaluare preliminară (actualizată post-CT, 22.04.2026)
 
-> **Marcaj secțiune:** această secțiune conține **concluzii preliminare interpretative** care NU sunt afirmații factuale directe — sunt sinteze bazate pe datele din §2 și §7. Deciziile clinice finale aparțin medicilor curanți (Dr. Noufal gastro + viitor oncolog digestiv). Marcajele individuale aplicate la ipoteze și probabilități.
-
-**Context actualizat:** CT-ul de stadializare (20.04.2026) a clarificat semnificativ imaginea — leziune infiltrativă circumferențială la joncțiunea eso-gastrică cu extensie fundică, fără metastaze la distanță vizibile `[CERT]`, dar cu ascită de etiologie de elucidat `[INCERT]`.
+**Context actualizat:** CT-ul de stadializare (20.04.2026) a clarificat semnificativ imaginea — leziune infiltrativă circumferențială la joncțiunea eso-gastrică cu extensie fundică, fără metastaze la distanță vizibile, dar cu ascită de etiologie de elucidat.
 
 **Elemente care susțin neoplazie avansată (post-CT):**
 
-- Stenoza completă „nedepășibilă endoscopic" (17.04.2026) = masă obstructivă `[CERT]`
-- Proces expansiv infiltrativ circumferențial + densificarea grăsimii loco-regionale (CT 20.04) `[CERT]`
-- Extensie la joncțiunea eso-gastrică + cadru gastric fundic (Siewert II probabil) `[PROBABIL]`
-- Stadiu imagistic estimativ **T3–T4** `[PROBABIL]`
-- **Ascita** perihepatică + intrapelvină `[CERT]` (risc carcinomatoză peritoneală de exclus `[INCERT]`)
-- Simptome sistemice (oboseală, apetit diminuat, senzație „nod în gât" postprandial) `[CERT]` declarativ familie
-- Vârsta + istoric fumat 35 ani + reflux recent reapărut `[CERT]` factori de risc cumulați
+- Stenoza completă „nedepășibilă endoscopic" (17.04.2026) = masă obstructivă
+- Proces expansiv infiltrativ circumferențial + densificarea grăsimii loco-regionale (CT 20.04)
+- Extensie la joncțiunea eso-gastrică + cadru gastric fundic (Siewert II probabil)
+- Stadiu imagistic estimativ **T3–T4**
+- **Ascita** perihepatică + intrapelvină (risc carcinomatoză peritoneală de exclus)
+- Simptome sistemice (oboseală, apetit diminuat, senzație „nod în gât" postprandial)
+- Vârsta + istoric fumat 35 ani + reflux recent reapărut
 
 **Elemente favorabile (aspecte pozitive la CT):**
 
-- **M0 probabil** `[PROBABIL]` — fără metastaze hepatice, pulmonare, osoase sau ganglionare distale vizibile
-- Limfonoduli loco-regionali sub pragul patologic standard (max 7.5 mm vs. <10 mm criteriu) `[CERT]`
-- Fără adenopatii mediastinale / hilare / axilare / abdomino-pelvine `[CERT]`
-- Funcție renală normală (creatinină 0.83 mg/dL) `[CERT]`
-- Status cardiac stabil (post-stent 2012, controlat farmacologic) `[PROBABIL]` (baseline 10.11.2025 ECO — FE 55% `[CERT]`)
-- Absența disfagiei progresive clasice `[CERT]` declarativ familie (deși stenoza e aproape completă, pacientul se alimentează încă rezonabil)
-- Scădere ponderală absentă până acum `[CERT]` declarativ familie
+- **M0 probabil** — fără metastaze hepatice, pulmonare, osoase sau ganglionare distale vizibile
+- Limfonoduli loco-regionali sub pragul patologic standard (max 7.5 mm vs. <10 mm criteriu)
+- Fără adenopatii mediastinale / hilare / axilare / abdomino-pelvine
+- Funcție renală normală (creatinină 0.83 mg/dL)
+- Status cardiac stabil (post-stent 2012, controlat farmacologic)
+- Absența disfagiei progresive clasice (deși stenoza e aproape completă, pacientul se alimentează încă rezonabil)
+- Scădere ponderală absentă până acum
 
-**Ipoteze diagnostice revizuite** `[PROBABIL]` **(NU diagnostic — doar orientare pre-biopsie):**
+**Ipoteze diagnostice revizuite (NU diagnostic, doar orientare):**
 
-1. **Adenocarcinom de joncțiune eso-gastrică Siewert II** `[PROBABIL]` — probabilitate ridicată (localizare distală + extensie fundică + circumferențial; pattern tipic per literatura ESMO/NCCN)
-2. Carcinom scuamocelular cu extensie distală `[PROBABIL]` — probabilitate mai mică (localizarea atipică pentru scuamos)
-3. Alte tumori rare (GIST, limfoame esofagiene, sarcoame) `[PROBABIL]` — probabilitate foarte mică
+1. **Adenocarcinom de joncțiune eso-gastrică Siewert II** — probabilitate ridicată (localizare distală + extensie fundică + circumferențial)
+2. Carcinom scuamocelular cu extensie distală — probabilitate mai mică (localizarea atipică pentru scuamos)
+3. Alte tumori rare (GIST, limfoame esofagiene, sarcoame) — probabilitate foarte mică
 
-**Stadializare clinică probabilă (pre-biopsie)** `[PROBABIL]`:
+**Stadializare clinică probabilă (pre-biopsie):**
 
-- **Dacă M0 confirmat (fără carcinomatoză):** Stadiu III (T3-T4, N0-N1, M0) → candidat pentru protocol **FLOT** (chemoterapie perioperatorie) + chirurgie `[PROBABIL]` (sursă: ghid ESMO 2022 + NCCN V1.2025)
-- **Dacă M1 (carcinomatoză peritoneală confirmată):** Stadiu IV → protocol paliativ / chemoterapie sistemică (FLOT sau FOLFOX, +/- imunoterapie dacă markeri PD-L1+ / HER2+) `[PROBABIL]`
+- **Dacă M0 confirmat (fără carcinomatoză):** Stadiu III (T3-T4, N0-N1, M0) → candidat pentru protocol **FLOT** (chemoterapie perioperatorie) + chirurgie
+- **Dacă M1 (carcinomatoză peritoneală confirmată):** Stadiu IV → protocol paliativ / chemoterapie sistemică (FLOT sau FOLFOX, +/- imunoterapie dacă markeri PD-L1+ / HER2+)
 
 **Decizia finală se bazează EXCLUSIV pe:**
 

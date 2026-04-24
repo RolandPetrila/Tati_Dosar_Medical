@@ -1,0 +1,16 @@
+{
+  "source_document": "2025-11-10_cardiologie_eco_scrisoare.pdf (2 pagini: pag.1 ECO tipărit, pag.2 scrisoare medicală manuscris)",
+  "source_location": "documente_sursa/13_cardiologie_ambulator_2025/",
+  "received_date": "2025-11-10 (consult cardiologie ambulator pre-chirurgie hernie)",
+  "received_from": "Dr. LAZA CRISTINA (medic primar cardiolog, cod parafă C07842) — cabinet Arad de identificat exact",
+  "digitized_by": "PDF scanat sau nativ (origine: workspace extern Arhiva_Generala)",
+  "digitized_date": "2026-04-24 (integrare Arhiva_Generala în dosar .Tati)",
+  "transcriber": "Claude_Opus_4.7 (extragere strict-extractivă)",
+  "extragere_md": "documente_sursa/13_cardiologie_ambulator_2025/2025-11-10_cardiologie_eco_scrisoare_extragere.md",
+  "ocr_quality": "partial (pag.1 ECO tipărit ~97% lizibil; pag.2 scrisoare manuscris dens ~68% lizibil)",
+  "completeness_verified": "2026-04-24",
+  "coverage": "100% (în măsura lizibilității manuscrisului; elementele ilizibile excluse per R25)",
+  "validator": "claude-opus-4-7",
+  "chain_notes": "KEY EVENT — consult cardiologic pre-chirurgie hernie, include ecografie transtoracică detaliată (FE 55%, hipokinezie infero-bazală + sept bazal, HVS concentrică, disfuncție diastolică tip I, AS mărit, IM+IT ușoare) + scrisoare medicală cu diagnostic (IC cronică + IM vechi ~13 ani + HTAE gr.II-III + DZ tip 2) + tratament recomandat (Aspenter + Triplixam + Concor + TORVACARD). Scrisoarea prescrie TORVACARD 10/20 mg 0-0-1 — discrepanță cu schema zilnică manuscrisă aceeași zi (task P1 TODO.md 'Clarificare TORVACARD'). Folderul 13_cardiologie_ambulator_2025/ creat 2026-04-24. JSON-uri canonice derivate: 2025-11-10_ecografie_transtoracica.json (pag.1) + 2025-11-10_scrisoare_medicala_cardiologie.json (pag.2).",
+  "retrospectively_added": "2026-04-24 21:30 — audit R14 batch"
+}

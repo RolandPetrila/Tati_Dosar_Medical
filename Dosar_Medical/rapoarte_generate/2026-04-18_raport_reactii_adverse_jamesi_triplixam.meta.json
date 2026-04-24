@@ -1,0 +1,32 @@
+{
+  "source_document": "2026-04-18_raport_reactii_adverse_jamesi_triplixam.docx",
+  "received_date": "2026-04-18",
+  "received_from": "compilat de Claude Opus 4.7 pe baza SmPC Triplixam v06.2021 + SmPC Jamesi + ghid farmacologic standard",
+  "digitized_by": "generat nativ din Python (python-docx), script `generate_reactii_adverse_docx.py` în același folder",
+  "digitized_date": "2026-04-18",
+  "transcriber": "Claude Opus 4.7 (1M context)",
+  "ocr_quality": "n/a - document generat nativ, nu scanat",
+  "chain_notes": "Raport reacții adverse combinate Jamesi (sitagliptin + metformin) + Triplixam (perindopril + indapamidă + amlodipină) pentru pacientul Petrilă Viorel-Mihai. Observație clinică centrală: combinația sitagliptin + perindopril → RISC CRESCUT DE ANGIOEDEM documentat în RCP Triplixam secțiunea 4.5 „Gliptins" — mecanism: inhibiția DPP-4 (sitagliptin) + inhibiția ECA (perindopril) → acumulare substanță P + bradikinină → umflare bruscă față/buze/limbă/căi respiratorii. NU e contraindicație; necesită vigilență familie + medic curant. Conform Regulii 17 (marcaje certitudine) + Regulii 11 (valabilitate temporală — SmPC 06.2021 vechi ~5 ani, recomandare verificare versiune curentă pe anm.ro). Generat în cadrul auditului 2026-04-18, pre-CT stadializare 20.04.2026. NU înlocuiește consultul medical. Sursa script: generate_reactii_adverse_docx.py în același folder.",
+  "topics_covered": [
+    "Partea I — Mecanisme de acțiune Jamesi (sitagliptin + metformin)",
+    "Partea II — Mecanisme de acțiune Triplixam (perindopril + indapamidă + amlodipină)",
+    "Partea III.A — Interacțiune sitagliptin + perindopril → risc angioedem (CENTRAL)",
+    "Partea III.B — Alte interacțiuni documentate",
+    "Partea IV — Reacții adverse frecvente fiecare componentă",
+    "Partea V — Reacții adverse rare de urmărit",
+    "Partea VI — Semne de alarmă imediată (112)",
+    "Partea VII — Recomandări monitorizare",
+    "Partea VIII — Referințe + data versiune SmPC"
+  ],
+  "applicable_patient": "Petrilă Viorel-Mihai (66 ani, diabet tip 2 tratat Jamesi 50/1000 mg 1-0-1, HTA tratat Triplixam 10/2.5/5 mg 1-0-0 + Concor 5 mg + Aspenter 75 mg, post-stent IVA 2012, suspiciune proces proliferativ eso-gastric la data întocmirii)",
+  "document_pages_approx": 30,
+  "file_size_kb": 47,
+  "destinatar": "familie Petrilă + medic curant (de prezentat la consult)",
+  "validitate_temporala": "SmPC Triplixam v06.2021 — vechime ~5 ani la data raportului; conform R11 recomandare verificare versiune curentă pe anm.ro pentru decizii terapeutice majore",
+  "related_files": {
+    "script_sursa": "generate_reactii_adverse_docx.py",
+    "schema_medicamente": "Dosar_Medical/2025-11-10_schema_medicamente.json",
+    "context_medical_ref": "CONTEXT_MEDICAL.md §4.Interacțiune medicamentoasă documentată"
+  },
+  "retrospectively_added": "2026-04-24 21:30 — audit identificat meta.json lipsă (celelalte 2 DOCX din folder aveau deja meta.json; completat pentru paritate R14)"
+}

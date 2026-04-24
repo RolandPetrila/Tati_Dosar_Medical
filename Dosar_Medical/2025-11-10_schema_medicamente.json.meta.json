@@ -1,0 +1,28 @@
+{
+  "source_document": "2025-11-10_schema_medicamente_manuscris.jpeg (+ fotografii cutii medicamente)",
+  "source_location": "documente_sursa/08_schema_tratament/",
+  "received_date": "2025-11-10 (consult cardiologie ambulator pre-chirurgie hernie)",
+  "received_from": "Dr. LAZA CRISTINA (medic primar cardiolog, cod parafă C07842) — identificat retroactiv via cross-reference ECO aceeași zi",
+  "digitized_by": "fotografie manuscris + fotografii cutii medicamente (user/familie)",
+  "digitized_date": "pre-2026-04-18 (fișier exista la inițializare dosar)",
+  "transcriber": "Claude_Opus_4.7 + corecții retroactive via cross-reference 2026-04-22/2026-04-24",
+  "ocr_quality": "partial (manuscris dens; elemente clare: denumiri cutii + ritm administrare; element ilizibil inițial: nume medic prescriptor)",
+  "completeness_verified": "2026-04-24",
+  "coverage": "95% (4 medicamente certificate; rândul 4 al talonului tăiat cu marker albastru — conținut nelizibil dar irrelevant clinic per anulare)",
+  "validator": "claude-opus-4-7",
+  "flags": [
+    "manuscris_partial_ilizibil",
+    "nume_pacient_corectat_retroactiv",
+    "medic_identificat_retroactiv_cross_reference",
+    "discrepanta_torvacard_de_clarificat"
+  ],
+  "indescifrabil_partial": true,
+  "excluded_elements": ["linia 4 talon (recomandare tăiată cu marker)"],
+  "chain_notes": "Schemă medicație prescrisă la consultul cardiologie 10.11.2025 (pre-chirurgie hernie): Aspenter 75 + Triplixam 10/2.5/5 + Concor 5 + Jamesi 50/1000. Corecturi retroactive: (a) nume pacient inițial transcris 'PETRICĂ VIOREL' → corectat 'PETRILĂ VIOREL-MIHAI' via cross-reference CI (eroare medic la scris); (b) medic prescriptor inițial 'Dr. LAZĂR' cu confidence LOW per R25 (EXTRAGERI_INCOMPLETE.md) → REZOLVAT 2026-04-24 via cross-reference ECO aceeași zi (stamp C07842) → **Dr. LAZA CRISTINA**; (c) rândul 4 tăiat rămâne ilizibil. Flag clinic 🟡: scrisoarea medicală aceeași zi prescrie TORVACARD 0-0-1 (statină), dar schema zilnică NU include → discrepanță de clarificat telefonic (task P1 TODO.md nou deschis 2026-04-24 în audit). Documentul sursă (JPEG manuscris) are .meta.json propriu: `documente_sursa/08_schema_tratament/2025-11-10_schema_medicamente_manuscris.jpeg.meta.json`; acest meta.json este pentru JSON-ul canonic derivat.",
+  "retrospectively_added": "2026-04-24 21:30 — audit identificat lipsă meta.json pentru JSON canonic (deși JSON-ul trecuse prin 3 iterații R25 anterioare, meta.json nu fusese creat)",
+  "related_files": {
+    "scrisoare_medicala_aceeasi_zi": "Dosar_Medical/2025-11-10_scrisoare_medicala_cardiologie.json",
+    "ecografie_aceeasi_zi": "Dosar_Medical/2025-11-10_ecografie_transtoracica.json",
+    "extrageri_incomplete_tracking": "Dosar_Medical/EXTRAGERI_INCOMPLETE.md (status ✅ rezolvat LAZA CRISTINA)"
+  }
+}

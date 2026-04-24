@@ -1,0 +1,19 @@
+{
+  "source_document": "de_obtinut_din_arhiva_pacient (PDF original cardiologie Vichy 2012)",
+  "source_location": "documente_sursa/02_cardiologie_2012/ (folder gol — așteptare document)",
+  "received_date": "unknown (episod cardiologic februarie 2012 la Centre Hospitalier de Vichy, Franța)",
+  "received_from": "family anamneză inițială (Roland Petrilă, declarat 2026-04-17); PDF original de obținut din arhiva pacientului",
+  "digitized_by": "n/a — JSON creat din anamneză familie, fără document sursă digital",
+  "digitized_date": "2026-04-18",
+  "transcriber": "Claude_Opus_4.7 (reconstituire din anamneză + context clinic)",
+  "ocr_quality": "n/a",
+  "completeness_verified": "2026-04-18",
+  "coverage": "partial — date de bază (an, stent IVA, medicamente perioperator), detalii precise (tipul stent DES vs BMS, spital exact, cardiolog curant după repatriere) RĂMÂN neidentificate",
+  "validator": "claude-opus-4-7",
+  "chain_notes": "JSON reconstituit din anamneza familiei, fără document sursă digital. Info confirmată: SCA ST+ antero-septo-apical februarie 2012 → tromboliza tenecteplază → angioplastie stent IVA (RX Vision 3.5×28 mm, 19.02.2012) → antiagregant post-stent ASPENTER în schema curentă. Lacună cunoscută declarată în MANIFEST.json (lacune_cunoscute[0]) + TODO.md [P1] Digitizare documente lipsă. La primirea PDF-ului Vichy original, acest JSON se va actualiza și meta.json se va regenera cu ocr_quality + source_document real. Meta.json creat retrospectiv 2026-04-24 la audit — necesar pentru R14 chain of custody chiar în absența documentului sursă (transparență: documentează explicit că JSON-ul provine din anamneză, nu din document digital).",
+  "retrospectively_added": "2026-04-24 21:30 — audit identificat lipsă meta.json pentru R14 coverage",
+  "related_context": {
+    "gaps_tracked_in_MANIFEST": "lacune_cunoscute[0] domeniu='Cardiologie 2012'",
+    "todo_ref": "[P1] Digitizare documente lipsă — PDF original cardiologie Vichy 2012 (tip stent DES vs BMS)"
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "source_document": "2026-04-17_bilet_trimitere_CT_BCTAP_0631727.jpeg",
+  "source_location": "documente_sursa/11_CT_stadializare_2026/",
+  "received_date": "2026-04-17",
+  "received_from": "Genesis Medical Clinic Arad (CUI R20295098, Bd. Revoluției nr. 3)",
+  "medic_emitent": "Dr. Noufal Abdul Vahab (medic primar gastroenterologie, cod parafă C 11074)",
+  "serie_numar": "BCTAP 0631727",
+  "casa_asigurari": "CAS AR, nr. contract/convenție 1148",
+  "digitized_by": "scanare foto user/familie",
+  "digitized_date": "2026-04-17 sau 2026-04-18",
+  "transcriber": "Claude_Opus_4.7 (extragere strict-extractivă)",
+  "extragere_md": "documente_sursa/11_CT_stadializare_2026/2026-04-17_bilet_trimitere_CT_BCTAP_0631727_extragere.md",
+  "ocr_quality": "good",
+  "chain_notes": "Bilet trimitere CT TAP+SDC, nivel prioritate Ambulator Specialitate (bifat), cod diagnostic intern CAS: 95 (PROCES PROLIFERATIV ESOFAGIAN). Investigații recomandate: CT TORACE (SDC) + CT ABDOMEN (SDC) + CT PELVIS (SDC). Document declanșator pentru CT efectuat 20.04.2026 la Genesis Micălaca. JSON canonic: 2026-04-17_bilet_trimitere_CT.json (document administrativ propriu, separat de raportul CT).",
+  "retrospectively_added": "2026-04-24 21:30 — audit R14 batch"
+}

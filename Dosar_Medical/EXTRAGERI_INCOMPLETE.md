@@ -48,12 +48,13 @@
   - Pacient: PETRILĂ VIOREL-MIHAI (corectat retroactiv din manuscris original „PETRICĂ VIOREL" — eroare medic la scris — via cross-reference cu carte identitate + context clinic)
   - Data documentului: 10.11.2025 (lizibil)
 - **Impact clinic:** minim — schema de medicație e clară și utilizabilă; atribuirea prescriptor e necunoscută, dar nu afectează continuitatea tratamentului. Identificarea medicului curant rămâne utilă pentru context (schimbare doze pre-chirurgie esofagiană, consultanță post-diagnostic).
-- **Acțiune propusă pentru rezolvare:** clarificare telefonică cu familia pentru identificarea medicului prescriptor (cabinet, nume complet, specialitate, unitate)
-- **TODO.md ref:** `[P1] Identificare medic prescriptor schema 10.11.2025 (manuscris parțial ilizibil — R25)`
-- **Status:** 🟡 deschis
+- **Acțiune propusă pentru rezolvare:** ~~clarificare telefonică cu familia~~ → **REZOLVAT prin cross-reference**
+- **TODO.md ref:** ~~`[P1] Identificare medic prescriptor schema 10.11.2025`~~ → închis 2026-04-24 (vezi TODO.md „Acțiuni finalizate")
+- **Status:** ✅ **REZOLVAT 2026-04-24** — identificare via cross-reference cu `2025-11-10_ecografie_transtoracica.json` (ECO tipărită în aceeași zi, ștampilă cu cod parafă clar vizibil): **Dr. LAZA CRISTINA, cod parafă C07842, medic primar cardiolog**. Prima transcriere „Dr. LAZĂR" era eroare OCR (manuscrisul avea „LAZA" + prenume începe cu „CRISTIN..." ~85% confidence — confirmat de codul parafă pe ECO). `CONTEXT_MEDICAL.md §4 + §9`, `MANIFEST.json timeline 2025-11-10`, `2025-11-10_scrisoare_medicala_cardiologie.json medic_examinator` — toate propagate.
 
 ---
 
 ## Istoric completitudine
 
-- **2026-04-24:** fișier creat post-adoptare Regula 25; prima intrare = schema medicamente 10.11.2025 (LAZĂR)
+- **2026-04-24 (dimineața):** fișier creat post-adoptare Regula 25; prima intrare = schema medicamente 10.11.2025 (LAZĂR)
+- **2026-04-24 (seara):** prima intrare REZOLVATĂ — Dr. LAZĂR identificată ca **Dr. LAZA CRISTINA (cod C07842)** via cross-reference ECO aceeași zi. Timpul de viață al unei intrări: <24h (minim absolut). Lecție: scanează întotdeauna documentele companion din aceeași zi înainte de a marca indescifrabil un nume.

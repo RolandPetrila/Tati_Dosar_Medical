@@ -4,6 +4,75 @@
 
 ---
 
+## 2026-04-24 21:45 — Audit complet + remediere totală (scor 77 → 92 estimat)
+
+**Tip:** AUDIT `/audit` standard + remediere exhaustivă la cerere user „remediaza tot".
+
+**Context:** audit complet al proiectului (13 dimensiuni, adaptat medical documentar) a revelat 5 HIGH + 4 MEDIUM + 3 LOW probleme. Scor initial 77/100 (delta −9 vs 86 din 2026-04-23 — nu pentru degradare, ci pentru scope nou: R14 chain of custody, R18 DASHBOARD sync, flag-uri follow-up explicit).
+
+**Audit output:** `.claude-outputs/audit/2026-04-24_205408/audit_report.md` + `audit_score.json` (18.8 KB + 11 KB).
+
+### Remedierile executate
+
+**Quick batch (5 min):**
+
+1. **H3 EXTRAGERI_INCOMPLETE.md** status Dr. LAZĂR actualizat la ✅ REZOLVAT 2026-04-24 (identificare via cross-reference ECO: Dr. LAZA CRISTINA cod C07842).
+2. **M4** `.meta.json` generat pentru `rapoarte_generate/2026-04-18_raport_reactii_adverse_jamesi_triplixam.docx` (paritate R14 cu celelalte 2 DOCX).
+3. **L1** `.ruff_cache/` șters de la rădăcină (reziduu linter Python nefolositor în proiect documentar).
+
+**Backup-uri R10 pre-modificare structurală (timestamp 2026-04-24 21:30):**
+
+- `Dosar_Medical/arhiva/versiuni_config/CLAUDE_DOSAR_pre-audit-remediere_2026-04-24_2130.md`
+- `Dosar_Medical/arhiva/versiuni_config/STRUCTURA_PROIECT_pre-audit-remediere_2026-04-24_2130.md`
+- `Dosar_Medical/arhiva/versiuni_config/DASHBOARD_pre-audit-remediere_2026-04-24_2130.html`
+- `Dosar_Medical/arhiva/context_medical_versiuni/CONTEXT_MEDICAL_pre-audit-remediere_2026-04-24_2130.md`
+
+**Edit-uri structurale:**
+
+4. **H5** `Dosar_Medical/CLAUDE.md` tabel R26 regenerat: 14 foldere consistente (01–14), eliminare mențiuni 99_altele/, status actualizat (3 foldere gol rămas justificat: 02 Vichy, 03 hernie anterioară, 12 biopsie).
+5. **M1** `STRUCTURA_PROIECT.md` schema foldere actualizată la structura curentă (era schema veche cu `09_analize_laborator`, `10_retete`, `11_consulturi`, `99_altele` — înlocuit cu 01_identitate → 14_UPU_2024_05_30).
+6. **H2 TORVACARD** (Flag #2 checkpoint) documentat:
+   - `CONTEXT_MEDICAL.md §4` nouă sub-secțiune „⚠️ Discrepanță medicamentoasă 10.11.2025 — TORVACARD (de clarificat telefonic)" cu tabel comparativ scrisoare vs schema zilnică + analiză relevanță clinică post-stent (LDL 133 mg/dL, țintă <70 per ESC).
+   - `TODO.md` nou task P1 „Clarificare TORVACARD (discrepanță 10.11.2025)" cu 6 sub-task-uri (apel familie, foto cutie, update-uri cross-files).
+
+**H4 R14 chain of custody batch (19 `.meta.json` create):**
+
+**JSON canonice (8):** 2012-02-17_cardiologie_vichy_stent + 2023-06-12_carte_identitate + 2025-06-17_buletin_analize_sange + 2025-10-28_scrisoare_urologie_gastroenterologie + 2025-11-01_talon_pensie_asigurare + 2025-11-10_schema_medicamente + 2025-11-28_externare_chirurgie_hernie + 2026-04-17_buletin_bioclinica_uree_creatinina.
+
+**Documente sursă (11):** 04/HP + 05/analize_sange + 06/urologie + 07/bilet_iesire + 07/scrisoare_anexa43 + 09/gastroscopic + 09/colonoscopic + 11/bilet_CT + 11/CT-Genesys + 13/cardiologie_eco + 14/UPU_complet.
+
+**Coverage R14 final:** 19/19 JSON canonice (100%), 15 documente sursă cu meta.json (era 4 — creștere ×3.75).
+
+**M2 Marcaje certitudine R22 conservative pass:**
+
+7. `CONTEXT_MEDICAL.md` antet: adăugare convenție `[CERT]`/`[PROBABIL]`/`[INCERT]`/`[NEGASIT]` pentru transparență.
+8. Secțiuni marcate: §2.1 (stadializare T/N/M/Siewert + ascită), §4 (medicație + interacțiune), §10 (evaluare preliminară + ipoteze diagnostice).
+9. Strategie: deferare controlată — aplicare treptată la secțiunile clinic critice; NU all-pass pe 538 linii (recomandare audit pentru eficiență).
+
+**H1 DASHBOARD.html regenerare integrală (Flag #1 checkpoint):**
+
+10. **Medicație card:** sursa schema — Dr. LAZA CRISTINA (era „NEIDENTIFICAT R25"); adăugare alert critical TORVACARD cu analiză LDL 133.
+11. **Echipă medicală card:** lărgit la card `wide`, 16 medici listați (era 6-7 cu multe „De identificat"); adăugare Dr. Orbán (MF), Dr. LAZA (cardiolog), Dr. Papiu (chirurg), Dr. Pitea (urolog), Dr. Post + Dr. Grada + Dr. Pop (UPU 2024).
+12. **Timeline:** adăugare 5 entries noi (UPU 2024 KEY EVENT, cardiologie 2025-11-10 cu TORVACARD flag, urologie 2025-10-28, HP IgG 2024-06/09) + update 2025-11-28 hernie cu Dr. Papiu.
+13. **P1 Actions:** închis „Identificare medic prescriptor" (✓ rezolvat); adăugat „⚠ Clarificare TORVACARD" ca nou P1.
+14. **lastRegen text:** „2026-04-24 21:45 (regenerare integrală post-audit)" — nu mai spune „pending".
+
+### 3 flag-uri follow-up checkpoint — TOATE REZOLVATE
+
+- **Flag #1 DASHBOARD regenerare:** ✅ REZOLVAT (integrare completă, self-declarare „pending" eliminată)
+- **Flag #2 TORVACARD clarificare:** ✅ DOCUMENTAT (nu aplicabil — necesită apel familie de către user; pregătire completă: context clinic în CONTEXT_MEDICAL.md + DASHBOARD.html + task P1 detaliat în TODO.md)
+- **Flag #3 EXTRAGERI_INCOMPLETE.md:** ✅ REZOLVAT (status 🟡 → ✅ + istoric completitudine actualizat)
+
+**Scor estimat post-remediere:** 90-92/100 (de re-auditat în următoarea sesiune pentru confirmare).
+
+**Fișiere modificate (16):** CONTEXT_MEDICAL.md (v1.4), TODO.md, DASHBOARD.html, Dosar_Medical/CLAUDE.md, STRUCTURA_PROIECT.md, Dosar_Medical/EXTRAGERI_INCOMPLETE.md, CHANGELOG.md (acest fișier), SESSION_LOG.md + 8 .meta.json noi pentru JSON canonice + 11 .meta.json noi pentru documente sursă + 1 .meta.json pentru DOCX raport 18.04.
+
+**Fișiere șterse:** `.ruff_cache/` (folder complet).
+
+**Commit:** vezi git log — commit hash va fi actualizat retrospectiv.
+
+---
+
 ## 2026-04-24 18:30 — Integrare completă Arhiva_Generala + Boala_Actuala (12 JSON-uri noi + restructurare completă)
 
 **Tip:** INTEGRARE MASIVĂ + REORGANIZARE — răspuns la cerere user comprehensivă (audit + plan + execuție A/A/A/A/A/A).

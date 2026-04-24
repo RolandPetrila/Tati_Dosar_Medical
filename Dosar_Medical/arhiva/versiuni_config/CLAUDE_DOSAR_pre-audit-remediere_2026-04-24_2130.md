@@ -239,46 +239,39 @@ Toate documentele sursă din `Dosar_Medical/documente_sursa/` urmează același 
 - `NN` = număr ordinal cu zero padding (01, 02, ..., 99)
 - `categorie` = lowercase cu underscore, descriptiv (`identitate`, `analize_laborator`, `hernie_2025_11`, `CT_stadializare_2026`, etc.)
 - `data` = `YYYY` sau `YYYY_MM` (anul + luna unde relevant pentru delimitarea evenimentelor)
-- **Excepție istorică:** `99_altele/` a existat până 2026-04-24 ca catch-all **PROVIZORIU** — **ELIMINAT** după integrarea conținutului din Arhiva_Generala. Nu se re-creează — documentele nedigitizate/neclasificate se plasează direct în folderul tematic corespunzător sau se creează folder nou dedicat.
+- **Excepție:** `99_altele/` = catch-all **PROVIZORIU** pentru documente nedigitizate sau neclasificate, **NU destinație finală**
 
 **Convenție fișiere în folder:**
 
 - PDF/imagine sursă: `YYYY-MM-DD_descriere_scurta.{pdf,jpeg,jpg,png}`
 - `.meta.json` companion obligatoriu (chain of custody — Regula 14): `YYYY-MM-DD_descriere_scurta.{ext}.meta.json`
 
-**Categorii folosite în proiect (status 2026-04-24 post integrare Arhiva_Generala + Boala_Actuala + audit remediere):**
+**Categorii folosite în proiect (status 2026-04-24 după reorganizare user):**
 
-| Folder                           | Conținut așteptat                                                   | Status                                                                              |
-| -------------------------------- | ------------------------------------------------------------------- | ----------------------------------------------------------------------------------- |
-| `01_identitate/`                 | Carte identitate, pașaport                                          | ✅ populat (2023-06-12_carte_identitate.pdf + .meta.json)                           |
-| `02_cardiologie_2012/`           | Stent Vichy 2012                                                    | 🟡 folder gol — PDF de obținut de la familie (tip stent DES vs BMS)                 |
-| `03_hernie_anterior/`            | Hernie anterioară (dată necunoscută)                                | 🟡 folder gol — document de identificat                                             |
-| `04_helicobacter_2024/`          | Serologie H. pylori IgG iunie+septembrie 2024                       | ✅ populat (2024-06-04 + 2024-09-06 buletine integrate în 1 PDF)                    |
-| `05_analize_laborator/`          | Buletine analize sânge / urină / serologie                          | ✅ populat (2025-06-17 panel complet + 2026-04-17 bioclinica uree/creatinină)       |
-| `06_urologie_gastro_2025/`       | Scrisoare urologie + ecografie scrotală 28.10.2025                  | ✅ populat (Dr. Pitea)                                                              |
-| `07_hernie_2025_11/`             | Intervenție hernie noiembrie 2025 (Dr. Papiu)                       | ✅ populat (bilet iesire + scrisoare anexa43)                                       |
-| `08_schema_tratament/`           | Scheme medicație manuscrise                                         | ✅ populat (2025-11-10 + .meta.json)                                                |
-| `09_endoscopie_2026_04/`         | Buletine gastroscopie + colonoscopie 17.04.2026                     | ✅ populat (Dr. Noufal Abdul Vahab, 2 JPEG separate)                                |
-| `10_administrativ_pensie/`       | Talon pensie, dovezi asigurare                                      | ✅ populat (talon 11/2025 + .meta.json)                                             |
-| `11_CT_stadializare_2026/`       | Bilet trimitere CT + raport CT 20.04.2026                           | ✅ populat (BCTAP 0631727 + CT - Genesys.pdf, mutat de user din fostul 99_altele/)  |
-| `12_biopsie_2026/`               | Rezultat biopsie Bioclinica                                         | 🟡 folder gol — așteptare rezultat histopatologic (monitor automat ntfy activ 24/7) |
-| `13_cardiologie_ambulator_2025/` | Consult cardiologie + ECO 10.11.2025 (Dr. LAZA CRISTINA)            | ✅ populat (adăugat 2026-04-24 din Arhiva_Generala)                                 |
-| `14_UPU_2024_05_30/`             | Episod UPU Arad 30.05.2024 (Dr. Post + Dr. Grada + Dr. Pop Florica) | ✅ populat (adăugat 2026-04-24 din Arhiva_Generala; 1 PDF + 10 JPEG pagini)         |
-
-**Note structurale:**
-
-- **Totalul curent: 14 foldere** (01–14, continuu, fără goluri în numerotare). `99_altele/` eliminat 2026-04-24.
-- **Foldere populate: 11/14.** Foldere goale justificate: `02_cardiologie_2012/` (PDF Vichy de obținut), `03_hernie_anterior/` (dată necunoscută), `12_biopsie_2026/` (așteptare rezultat).
-- **La document nou care nu se încadrează în 01–14:** creare folder nou `15_categorie_data/` conform convenției + update acest tabel.
+| Folder                     | Conținut așteptat                                | Status                                                                                |
+| -------------------------- | ------------------------------------------------ | ------------------------------------------------------------------------------------- |
+| `01_identitate/`           | Carte identitate, pașaport                       | ✅ populat                                                                            |
+| `02_cardiologie_2012/`     | Stent Vichy 2012                                 | 🟡 folder gol — PDF de obținut de la familie                                          |
+| `03_hernie_anterior/`      | Hernie anterioară (dată necunoscută)             | 🟡 folder gol — document de identificat                                               |
+| `04_helicobacter_2024/`    | Internare H. pylori mai 2024 + serologie 09.2024 | 🟡 folder gol — documente de identificat (parțial în `99_altele/`) sau obținut spital |
+| `05_analize_laborator/`    | Buletine analize sânge / urină / serologie       | ✅ populat (bioclinica uree/creatinină 17.04.2026)                                    |
+| `06_urologie_gastro_2025/` | Scrisoare medicală 28.10.2025                    | 🟡 folder gol — de identificat în `99_altele/`                                        |
+| `07_hernie_2025_11/`       | Intervenție hernie noiembrie 2025                | ✅ populat (externare + bilet)                                                        |
+| `08_schema_tratament/`     | Scheme medicație                                 | ✅ populat (manuscris 10.11.2025)                                                     |
+| `09_endoscopie_2026_04/`   | Buletin endoscopie + colonoscopie 17.04.2026     | ✅ populat                                                                            |
+| `10_administrativ_pensie/` | Talon pensie, dovezi asigurare                   | ✅ populat                                                                            |
+| `11_CT_stadializare_2026/` | Raport CT 20.04.2026                             | ✅ populat (CT - Genesys.pdf, mutat de user 2026-04-24 din `99_altele/`)              |
+| `12_biopsie_2026/`         | Rezultat biopsie Bioclinica                      | 🟡 folder gol — așteptare rezultat histopatologic                                     |
+| `99_altele/`               | **PROVIZORIU** — nedigitizate/neclasificate      | 🟡 conține 6 PDF `doc_neidentificat_{2..7}` de clasificat                             |
 
 **Obligatoriu (semnalare devieri):**
 
 1. La orice citire/procesare document sursă: AI verifică dacă fișierul respectă convenția de nume + folder.
-2. La orice **DEVIERE detectată** (nume fișier non-canonic, fișier în folder greșit, lipsă `.meta.json` companion, lipsă folder dedicat pentru tip nou document) → **menționez EXPLICIT user-ul în mesajul activ** + propun corecție concretă (unde să fie mutat, cum să fie redenumit).
+2. La orice **DEVIERE detectată** (nume fișier non-canonic, fișier în `99_altele/` care ar trebui în alt folder, lipsă `.meta.json` companion, lipsă folder dedicat pentru tip nou document) → **menționez EXPLICIT user-ul în mesajul activ** + propun corecție concretă (unde să fie mutat, cum să fie redenumit).
 3. NU fac mutări/redenumiri tăcute — propun, aștept confirmare user (Regula 20). Excepție: reparări triviale consimțite explicit anterior.
 4. Devieri cunoscute persistente (listate în tabelul de mai sus cu status 🟡) — NU se re-raportează la fiecare sesiune, doar la schimbare status (populare, mutare, identificare conținut).
 
-**Why:** consistența structurii reduce timpul de căutare/regăsire în consult medical critic + previne fișiere uitate în catch-all + permite indexare automată viitoare + disciplinează procesul de digitizare. User a inițiat curățenia 2026-04-24 mutând `CT - Genesys.pdf` din `99_altele/` în `11_CT_stadializare_2026/` și a cerut explicit codificarea acestui model unitar + semnalarea proactivă a devierilor. Sesiunea 2026-04-24 (seara) a finalizat eliminarea completă a `99_altele/` după integrarea restului conținutului din Arhiva_Generala în folderele tematice corespunzătoare (13_cardiologie_ambulator_2025/, 14_UPU_2024_05_30/) — R26 formalizează principiul.
+**Why:** consistența structurii reduce timpul de căutare/regăsire în consult medical critic + previne fișiere uitate în catch-all + permite indexare automată viitoare + disciplinează procesul de digitizare. User a inițiat curățenia 2026-04-24 mutând `CT - Genesys.pdf` din `99_altele/` în `11_CT_stadializare_2026/` și a cerut explicit codificarea acestui model unitar + semnalarea proactivă a devierilor — R26 formalizează principiul.
 
 **How to apply:** la fiecare interacțiune cu `Dosar_Medical/documente_sursa/`, verificare consistență; la sesiune nouă de procesare documente, scan proactiv al folder-elor pentru devieri și raportare tablou status către user; la digitizare document nou, ALEG folder-ul corect existent sau propun unul nou dacă nu există categorie adecvată.
 

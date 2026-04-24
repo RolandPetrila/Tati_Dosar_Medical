@@ -1,0 +1,15 @@
+{
+  "source_document": "2025-06-17_buletin_analize_sange.pdf",
+  "source_location": "documente_sursa/05_analize_laborator/",
+  "received_date": "2025-06-17",
+  "received_from": "SC Ultra ClinicaVest SRL Pecica (laborator clinic)",
+  "medic_solicitant": "Dr. Orbán Ecaterina-Maria (medic de familie, CUI 20263730, cod parafă 718705)",
+  "buletin_nr": "87967",
+  "digitized_by": "PDF digital nativ laborator",
+  "digitized_date": "pre-2026-04-18 (fișier exista la inițializare dosar)",
+  "transcriber": "Claude_Opus_4.7 (extragere strict-extractivă)",
+  "extragere_md": "documente_sursa/05_analize_laborator/2025-06-17_buletin_analize_sange_extragere.md",
+  "ocr_quality": "excellent (PDF digital)",
+  "chain_notes": "Panel complet analize sânge: hemoleucogramă, biochimie, lipidogramă, electroliți, TSH, FT4, PSA. Relevant post-diagnostic: LDL 133 mg/dL (țintă post-stent <70 neatins — Flag TORVACARD); glicemie 136.1 mg/dL (↑, consistent DZ tip 2 cunoscut); creatinină 0.95 (normală). JSON canonic: 2025-06-17_buletin_analize_sange.json.",
+  "retrospectively_added": "2026-04-24 21:30 — audit R14 batch"
+}

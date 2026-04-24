@@ -1,0 +1,17 @@
+{
+  "source_document": "2026-04-17_buletin_bioclinica_uree_creatinina.jpeg",
+  "source_location": "documente_sursa/05_analize_laborator/",
+  "received_date": "2026-04-17 (data recoltării/raportării)",
+  "received_from": "Bioclinica SRL Arad, punct recoltare Vlaicu",
+  "medic_lab": "Dr. Statnic Maria Luminița (medic primar medicina de laborator, cod A08064)",
+  "buletin_nr": "26417A0362",
+  "digitized_by": "scanare foto user/familie",
+  "digitized_date": "2026-04-17 sau 2026-04-18",
+  "transcriber": "Claude_Opus_4.7 (extragere strict-extractivă)",
+  "ocr_quality": "good",
+  "completeness_verified": "2026-04-18",
+  "coverage": "100%",
+  "validator": "claude-opus-4-7",
+  "chain_notes": "Buletin analize pre-CT (creatinină 0.83 mg/dL normală, uree 33.4 mg/dL normală, eGFR ~95 mL/min/1.73m² — OK pentru contrast iodat). Menționează explicit 'Examen histopatologic în curs de execuție' → biopsia esofagiană din 17.04.2026 se procesează la Bioclinica Arad (nu la Genesis, cum s-ar presupune). Contact urmărire rezultat: arad@bioclinica.ro. Documentul sursă (JPEG) are .meta.json propriu: `documente_sursa/05_analize_laborator/2026-04-17_buletin_bioclinica_uree_creatinina.jpeg.meta.json`; acest meta.json este pentru JSON-ul canonic derivat.",
+  "retrospectively_added": "2026-04-24 21:30 — audit identificat lipsă meta.json pentru JSON canonic"
+}

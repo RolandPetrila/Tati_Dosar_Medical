@@ -1,0 +1,14 @@
+{
+  "source_document": "2026-04-17_examen_gastroscopic.jpeg",
+  "source_location": "documente_sursa/09_endoscopie_2026_04/",
+  "received_date": "2026-04-17",
+  "received_from": "Genesis Medical Clinic Arad",
+  "medic_examinator": "Dr. Noufal Abdul Vahab (medic primar gastroenterologie, cod parafă C 11074)",
+  "digitized_by": "scanare foto user/familie",
+  "digitized_date": "2026-04-17 sau 2026-04-18",
+  "transcriber": "Claude_Opus_4.7 (extragere strict-extractivă)",
+  "extragere_md": "documente_sursa/09_endoscopie_2026_04/2026-04-17_examen_gastroscopic_extragere.md",
+  "ocr_quality": "good (scan foto lizibil; detalii tehnice vizibile)",
+  "chain_notes": "Buletin gastroscopie 17.04.2026 — finding principal: proces proliferativ circumferențial la 2/3 inferioară a esofagului, NEDEPĂȘIBIL ENDOSCOPIC (text original: 'La 2/3 inferioara esofagului prezinta proces proliferativ circumferentialne depasibila endoscopica(Bio)'). Biopsie prelevată, trimisă la Bioclinica Arad. Clarificare 2026-04-22 user: textul contopit 'circumferentialne depasibila' = 'circumferențial nedepășibilă'. Anterior în JSON unificat cu colonoscopia — separat 2026-04-24 în JSON canonic dedicat: 2026-04-17_examen_gastroscopic.json (R26 1 JSON per eveniment clinic distinct).",
+  "retrospectively_added": "2026-04-24 21:30 — audit R14 batch"
+}
