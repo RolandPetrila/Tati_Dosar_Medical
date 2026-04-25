@@ -95,7 +95,7 @@
     "specialitate": "medic primar cardiolog",
     "cod_parafa": "C07842",
     "confidence_identificare": "high",
-    "note": "Prenume CRISTINA are confidență ~85% (textul complet „Dr. LAZA CRISTIN...” parțial vizibil pe ștampilă); nume „LAZA” + cod parafă C07842 sunt 100% clare."
+    "note": "Prenume CRISTINA are confidență ~85% (textul complet „Dr. LAZA CRISTIN..." parțial vizibil pe ștampilă); nume „LAZA" + cod parafă C07842 sunt 100% clare."
   },
   "referinte_legate": {
     "scrisoare_medicala_aceeasi_zi": "Dosar_Medical/2025-11-10_scrisoare_medicala_cardiologie.json",
