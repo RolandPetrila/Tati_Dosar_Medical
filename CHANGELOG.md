@@ -4,6 +4,65 @@
 
 ---
 
+## 2026-04-26 01:30 — FIX CORS DASHBOARD tab Echipă + audit complet sistem post-R27/R28/R29
+
+**Tip:** FIX TEHNIC + AUDIT SISTEMIC.
+
+**Context:** plan-audit cross-terminal R29 nr. 2. Terminal A (auditor) a identificat că DASHBOARD.html deschis pe `file://` afișează „Eroare la INDEX.json: Failed to fetch" în tab „Echipă medicală" (CORS policy). Terminal B (executor) a aplicat fix hibrid embed JSON + audit complet sistem.
+
+### Fix CORS DASHBOARD (commit `7a69e19`)
+
+- **`DASHBOARD.html`:** bloc `<script type="application/json" id="dashboard-index">` cu INDEX.json embedded + loader hibrid `getIndexData()` care detectează `location.protocol`:
+  - pe `file://` → citește din embed (`document.getElementById('dashboard-index').textContent`)
+  - pe `http(s)` → fetch normal cu fallback final la embed dacă HTTP eșuează
+  - mesaj eroare actualizat: sugerează rulare `generate_index.py` ȘI `regenerate_structura.py` (al doilea sincronizează embed-ul)
+- **`scripts/regenerate_structura.py`:** funcție nouă `sync_dashboard_embed()` apelată la finalul `main()` care actualizează blocul embedded la fiecare regenerare (auto-sync, evită drift)
+- **Backup R10:** `Dosar_Medical/arhiva/context_medical_versiuni/DASHBOARD_pre-fix-cors-tab-echipa_2026-04-26_0105.html`
+- **STRUCTURA_PROIECT.md:** regenerat ca side-effect al testului de sync embed
+
+### Audit complet sistem (raport: `AUDIT_EXTRAGERE_2026-04-26.md`)
+
+**Verificat:** 44 fișiere de referință (ROOT + Dosar_Medical + scripts + .claude + Documente_Informative + Documentatie_Initiala) + 60 JSON-uri (validity syntactic) + 14 foldere `documente_sursa` R26 + 19 paritate JSON↔meta R14 + 13 fișiere cu cross-references + marcaje certitudine R17 + frontmatter YAML + 12 fișiere auto-memory + integritate end-to-end scripturi.
+
+**Findings noi:**
+
+- **🔴 HIGH (P0) — 3 JSON-uri invalide syntactic:** `2026-04-20_ct_torace_abdomen_pelvis.json` + `2025-11-10_ecografie_transtoracica.json` + `rapoarte_generate/2026-04-18_raport_reactii_adverse_jamesi_triplixam.meta.json`. Cauza: ghilimele drepte `"` U+0022 folosite în interiorul valorilor string, închid string-ul prematur. Impact: `generate_index.py` skip-uie aceste 3 fișiere → `INDEX.json/documente_canonice` are 18 în loc de 21.
+- **🟡 LOW (P3) — 5 linkuri rupte** în `PLAN_IMPLEMENTARE_2026-04-25.md` (path-uri relative fără prefix `Dosar_Medical/corespondenta/`).
+- **🟡 LOW (P3) — frontmatter YAML inconsistent** pe 3 planuri vechi (predec R29).
+
+**Status confirmat OK (123/131 verificări):** paritate JSON↔meta R14 = 19/19, structură foldere R26 = 14/14, scripts integritate = 3/3 rulează end-to-end, marcaje R17 conform pe 6 fișiere, backup R10 = 10 fișiere arhivă (+1 azi), 12 fișiere memory.
+
+### Decizii pendente user
+
+- [ ] **P0:** fix 3 JSON-uri invalide (înlocuire `"` U+0022 → `"` U+201D sau escape `\"`) + backup R10 obligatoriu
+- [ ] **P1:** re-rulare `generate_index.py` post-fix P0
+- [ ] **P2:** lint preventiv JSON pe pre-commit hook
+- [ ] **P3:** fix linkuri rupte + frontmatter retroactiv
+
+### Fișiere modificate (8)
+
+1. `DASHBOARD.html` — bloc embed + loader hibrid
+2. `scripts/regenerate_structura.py` — pas sync embed
+3. `STRUCTURA_PROIECT.md` — regenerat
+4. `INDEX.json` — regenerat (`generated_at` actualizat)
+5. `Dosar_Medical/SYSTEM_HEALTH.json` — regenerat startup hook
+6. `AUDIT_EXTRAGERE_2026-04-26.md` — **NOU**
+7. `SESSION_LOG.md` — intrare 2026-04-26 01:30
+8. `CHANGELOG.md` — această intrare
+
+### Backup R10 nou
+
+- `Dosar_Medical/arhiva/context_medical_versiuni/DASHBOARD_pre-fix-cors-tab-echipa_2026-04-26_0105.html`
+
+### Lecții (validate end-to-end protocol R29 nr. 2)
+
+- Pattern hibrid `<script type="application/json">` + protocol detect funcționează curat — aplicabil pentru orice altă feature DASHBOARD care va citi date externe pe file://.
+- Auto-sync prin `regenerate_structura.py` elimină drift între INDEX.json și DASHBOARD.html — rulează idempotent.
+- Lint preventiv JSON pe pre-commit ar fi prevenit issue P0 (HIGH) — recomandat ca P2.
+- Plan-audit R29 nr. 2 confirmă că protocolul scalează la task-uri pur tehnice (fix CORS), nu doar la implementări de reguli noi.
+
+---
+
 ## 2026-04-25 19:45 — Implementare R27 + R28 + R29 + sistem catalog OncoHelp + ingest Gmail (plan-audit cross-terminal)
 
 **Tip:** ARHITECTURĂ SISTEM + INTEGRARE INFORMAȚII NOI.

@@ -273,7 +273,7 @@ Structura descrisă în acest fișier **nu se modifică decât cu acordul explic
 
 ## 🗺 Hartă completă auto-generată
 
-> ⚙️ **Generat automat:** 2026-04-26T01:08:44 de `scripts/regenerate_structura.py`. NU edita manual această secțiune — modificările se pierd la următoarea regenerare. Pentru cuprinsul fix vezi secțiunile non-auto de mai sus.
+> ⚙️ **Generat automat:** 2026-04-26T01:17:30 de `scripts/regenerate_structura.py`. NU edita manual această secțiune — modificările se pierd la următoarea regenerare. Pentru cuprinsul fix vezi secțiunile non-auto de mai sus.
 
 ### 📊 Statistici live
 
@@ -281,7 +281,7 @@ Structura descrisă în acest fișier **nu se modifică decât cu acordul explic
 - **Markdown (.md):** 91
 - **JSON (.json):** 62
 - **HTML (.html):** 6
-- **Total size:** 50153.1 KB
+- **Total size:** 50151.4 KB
 
 ### 🧭 Index thematic (caut...)
 
@@ -442,10 +442,10 @@ Structura descrisă în acest fișier **nu se modifică decât cu acordul explic
 ├── CHANGELOG.md  (136.1 KB)
 ├── CLAUDE.md  (9.4 KB)
 ├── CONTEXT_MEDICAL.md  (50.4 KB)
-├── DASHBOARD.html  (169.4 KB)
+├── DASHBOARD.html  (167.6 KB)
 ├── GLOSAR.md  (10.6 KB)
 ├── index.html  (0.3 KB)
-├── INDEX.json  (33.6 KB)
+├── INDEX.json  (33.7 KB)
 ├── info_tati.txt  (1.6 KB)
 ├── manifest.webmanifest  (0.9 KB)
 ├── PLAN_IMPLEMENTARE_2026-04-25.md  (51.3 KB)

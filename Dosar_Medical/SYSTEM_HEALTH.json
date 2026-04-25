@@ -1,5 +1,5 @@
 {
-  "checked_at": "2026-04-25T19:36:03",
+  "checked_at": "2026-04-26T01:17:19",
   "status": "🟢 OK",
   "limits": {
     "claude_md_size_kb": {
@@ -15,18 +15,22 @@
       "status": "🟢 OK"
     },
     "total_md_root_kb": {
-      "current": 561.1,
+      "current": 573.0,
       "limit": 1024,
-      "percent": 54.8,
+      "percent": 56.0,
       "status": "🟢 OK"
     },
     "largest_files": [
       {
-        "path": "CHANGELOG.md",
-        "size_kb": 131.9
+        "path": "DASHBOARD.html",
+        "size_kb": 167.6
       },
       {
-        "path": "DASHBOARD.html",
+        "path": "CHANGELOG.md",
+        "size_kb": 136.1
+      },
+      {
+        "path": "Dosar_Medical/arhiva/context_medical_versiuni/DASHBOARD_pre-fix-cors-tab-echipa_2026-04-26_0105.html",
         "size_kb": 129.8
       },
       {
@@ -38,12 +42,12 @@
         "size_kb": 121.7
       },
       {
-        "path": "Dosar_Medical/arhiva/versiuni_config/DASHBOARD_pre-audit-remediere_2026-04-24_2130.html",
-        "size_kb": 81.8
+        "path": "SESSION_LOG.md",
+        "size_kb": 84.7
       },
       {
-        "path": "SESSION_LOG.md",
-        "size_kb": 81.5
+        "path": "Dosar_Medical/arhiva/versiuni_config/DASHBOARD_pre-audit-remediere_2026-04-24_2130.html",
+        "size_kb": 81.8
       },
       {
         "path": "Dosar_Medical/arhiva/versiuni_config/DASHBOARD_pre-lazar-batchA_2026-04-24_0230.html",
@@ -56,10 +60,6 @@
       {
         "path": "Documente_Informative/EXPLICATIE_CONSULT_ONCOLOG_SCENARII.md",
         "size_kb": 74.5
-      },
-      {
-        "path": "CONTEXT_MEDICAL.md",
-        "size_kb": 50.4
       }
     ],
     "files_over_limit": [],

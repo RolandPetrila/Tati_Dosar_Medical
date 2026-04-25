@@ -6,6 +6,29 @@
 
 ---
 
+## 2026-04-26 01:30 — [Claude_Opus_4.7_executor] fix-cors-dashboard-tab-echipa + audit-complet-sistem
+
+**Scop:** plan-audit cross-terminal R29 — terminal A (auditor) a identificat problema CORS pe DASHBOARD tab „Echipă medicală" deschis de pe disk (`file://` blochează `fetch('INDEX.json')`); terminal B (acest executor) a aplicat fix hibrid file://+http embed JSON și a executat audit complet sistem.
+
+**Operații (2 commits push-uite):**
+
+1. **`7a69e19` (Task 1.1-1.6 fix CORS)** — backup R10 DASHBOARD pre-fix + bloc `<script type="application/json" id="dashboard-index">` cu INDEX.json embedded + loader hibrid `getIndexData()` (detect `location.protocol === 'file:'` → embed; HTTP → fetch + fallback embed) + pas nou `sync_dashboard_embed()` în `scripts/regenerate_structura.py` care actualizează blocul embedded la fiecare regenerare. STRUCTURA_PROIECT.md regenerat ca side-effect.
+2. **`<commit-2.12>` (Task 2.1-2.12 audit complet)** — `AUDIT_EXTRAGERE_2026-04-26.md` cu 7 secțiuni (metodologie + rezumat executiv + findings detaliate + status confirmat OK + comparație cu 04-24 + recomandări P0-P3 + status final). Findings: **3 JSON-uri syntactic invalide** (HIGH/P0) — ghilimele drepte `"` neescapate în interiorul valorilor string, închid string-ul prematur (CT torace + ecografie transtoracica + raport reactii adverse meta) — IMPACT: aceste 3 fișiere nu sunt incluse în `INDEX.json/documente_canonice` (18 în loc de 21). **5 linkuri rupte** (LOW/P3) în `PLAN_IMPLEMENTARE_2026-04-25.md` — path-uri relative incorecte la fișiere din `Dosar_Medical/corespondenta/`. **Frontmatter inconsistent** (LOW/P3) pe 3 planuri vechi (predec R29).
+
+**Why:** validare end-to-end protocol R29 pe un task pur tehnic (fix CORS) + audit sistemic pentru a cataloga starea proiectului post-implementare R27/R28/R29. Sistemul este stabil cu un singur issue HIGH (3 JSON-uri invalide) — regresie tăcută probabil din editare manuală cu copy-paste de ghilimele drepte. Fix-ul CORS validat structural (Python parse + extract embed + verificare 2 medici Anater + Vornicu).
+
+**How to apply (lecții):**
+
+- Pattern hibrid `<script type="application/json">` + `getIndexData()` aplicabil pentru orice altă feature DASHBOARD care va citi date externe (mai ales pe file://)
+- Aut-sync embed prin script eliminează drift între INDEX.json și DASHBOARD.html — rulează la fiecare `regenerate_structura.py`
+- Lint preventiv JSON pe pre-commit ar fi prevenit issue P0 — recomandat ca P2
+
+**Fișiere modificate:** `DASHBOARD.html` (fix CORS), `scripts/regenerate_structura.py` (sync embed), `STRUCTURA_PROIECT.md` (regenerat), `INDEX.json` (regenerat la 2.9), `Dosar_Medical/SYSTEM_HEALTH.json` (regenerat startup hook), `AUDIT_EXTRAGERE_2026-04-26.md` (nou), `SESSION_LOG.md` (această intrare), `CHANGELOG.md`. Backup R10 nou: `Dosar_Medical/arhiva/context_medical_versiuni/DASHBOARD_pre-fix-cors-tab-echipa_2026-04-26_0105.html`.
+
+**Aștept decizie user pentru P0** (fix 3 JSON-uri invalide).
+
+---
+
 ## 2026-04-25 19:45 — [Claude_Opus_4.7_executor] plan-audit-cross-terminal-executie-r27-r28-r29
 
 **Scop:** execuție strictă a `PLAN_IMPLEMENTARE_2026-04-25.md` (creat de auditor terminal A 18:05). Implementare R27 ingest Gmail + R28 system health monitor + R29 plan-audit cross-terminal + CONTACTE_MEDICALE.md OncoHelp + primul ingest Gmail full-history + tab DASHBOARD Echipă medicală + INDEX.json query-abil + scripts auto-regen.
