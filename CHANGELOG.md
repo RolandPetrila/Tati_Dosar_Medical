@@ -4,6 +4,85 @@
 
 ---
 
+## 2026-04-25 03:00 — Clarificare TORVACARD + programare consult oncolog OncoHelp + sincronizare ALIMENTATIE.md cu ghid ESPEN/IDDSI/FLOT
+
+**Tip:** UPDATE STATUS (clarificare user) + PROGRAMARE EVENIMENT + INTEGRARE GHID NUTRIȚIONAL.
+
+**Context:** user a clarificat 2 puncte și a cerut sincronizare ALIMENTATIE.md cu un ghid nutrițional exhaustiv pentru pacient JEG Siewert II (compass_artifact din `Downloads/`).
+
+### Clarificări user 2026-04-25
+
+1. **TORVACARD:** schema reală în vigoare este cea manuscrisă din `Dosar_Medical/documente_sursa/08_schema_tratament/` — pacientul **NU administrează** TORVACARD. Discrepanța din `CONTEXT_MEDICAL.md §4` a fost înlocuită cu o observație clinică scurtă (LDL 133 + post-stent fără statină → de discutat la consult oncolog). Task P1 TORVACARD închis.
+2. **Calendar oncolog:** rezultat biopsie estimat **28-29 aprilie 2026**, consult oncolog **PROGRAMAT 30 aprilie 2026 la OncoHelp Timișoara**. Dosarul fizic se asamblează POST-biopsie (29-30.04) — task P0 nou separat.
+3. **Documente lipsă (Vichy 2012, HbA1c, UBT, ecografie 14.04):** confirmate ca neexistente în dosar — task-uri rămân deschise pentru user (obținere documente fizice + test UBT/HP).
+4. **Sincronizare ALIMENTATIE.md:** integrare cu compass_artifact (ghid nutrițional ESPEN/IDDSI/FLOT/ONS/IARC) — păstrare ton familie + zona Arad + adăugare secțiuni științifice (țintele zilnice, texturi IDDSI, ONS Nutridrink/Fresubin/Forticare, imunonutriție pre-FLOT, alimente cu interacțiuni FLOT specifice).
+
+### Edituri executate
+
+**`CONTEXT_MEDICAL.md` v1.5:**
+
+1. Antet — versiune 1.5, ultima actualizare 25.04 03:00.
+2. §2.6 (status acțiuni) — biopsie 28-29.04, consult oncolog ✅ programat 30.04 OncoHelp.
+3. §4 — sub-secțiunea „⚠ Discrepanță TORVACARD" ștearsă; înlocuită cu „Observație clinică — statină nealuată curent (de evaluat la consult oncolog 30.04)" — păstrare paritate R24 cu JSON scrisoare LAZA.
+4. §8.1 — consult oncolog programat OncoHelp Timișoara 30.04 + listă pregătire dosar fizic POST-biopsie (decizie user).
+5. §9 — echipă medicală: oncologie digestivă programat OncoHelp Timișoara.
+
+**`TODO.md`:**
+
+6. Antet + Calendar — biopsie 28-29.04, dosar 29-30.04, consult 30.04 OncoHelp Timișoara.
+7. P0 Consult oncolog — status programat (era „de programat URGENT").
+8. P0 NOU — „Pregătire dosar fizic POST-biopsie (29-30.04)" cu cronologie + componente.
+9. P1 TORVACARD — închis (REZOLVAT 25.04 prin clarificare user). Task observație clinică transferat în P0 dosar fizic + medic familie.
+10. P1 NOU — „Test confirmare eradicare H. pylori (UBT sau antigen fecal)" — relevant pre-FLOT.
+
+**`ALIMENTATIE.md` v2.0 (sincronizare cu compass_artifact):**
+
+11. Antet + nota update 25.04.
+12. Secțiune nouă **„🎯 Țintele zilnice (orientativ ESPEN)"** — kcal, proteine, macros, sodiu, potasiu, lichide.
+13. Secțiune nouă **„🥄 Texturile sigure (cadrul IDDSI)"** — disfagie + îngroșători comerciali (Nutilis Clear, ThickenUp Clear).
+14. Secțiunea „Recomandate" extinsă cu produse cheie (somon, sardine, Skyr, ovăz cu β-glucan, broccoli cu sulforafan, lapte praf degresat ca booster proteic, ulei MCT).
+15. Secțiune nouă **„💊 Suplimente nutritive ONS"** — Nutridrink, Fresubin, Forticare, Cubitan + decontare CNAS + schemă orientativă.
+16. Secțiune nouă **„🔧 Boostere calorice practice"** — food fortification ESMO/ESPEN (Protifar, ulei MCT, lapte praf, semințe măcinate).
+17. Secțiune nouă **„🌿 Condimente cu beneficii"** — turmeric+piper, scorțișoară (DZ), ghimbir antiemetic chimio.
+18. Secțiunea „De evitat" extinsă cu **interacțiuni FLOT specifice** (sunătoare ↔ irinotecan/docetaxel — scădere SN-38 −42%; grapefruit ↔ docetaxel; alimente reci 5-7 zile post-oxaliplatin; vaccinuri vii) + alimente carcinogene IARC (mezeluri Grup 1, carne afumată Grup 2A, alimente sărate/murate).
+19. Secțiune nouă **„🧪 Pre-FLOT — pregătire nutrițională"** — Impact Oral 5-7 zile preoperator (imunonutriție arginină + omega-3).
+20. Secțiune nouă **„📊 Monitorizare săptămânală"** — greutate, aport oral, toleranță, hidratare.
+21. Surse extinse: ESPEN 2021, ESMO 2021, IDDSI 2019, IARC Vol. 114, MSKCC About Herbs, Ryan 2012 RCT ginger, Mathijssen 2002 sunătoare.
+
+**`DASHBOARD.html` regenerare integrală 25.04 03:00:**
+
+22. Status banner — biopsie 28-29 + consult oncolog programat 30.04 OncoHelp.
+23. Countdown bar — actualizat cu noile date.
+24. Card status clinic — Consult oncolog: badge ✅ PROGRAMAT 30.04.2026.
+25. Card medicație — alert TORVACARD înlocuit cu observație clinică info-level (nu mai e crit).
+26. Timeline 2025-11-10 — clarificat: pacientul NU administrează TORVACARD (clarificat user 25.04).
+27. Card echipă medicală — oncologie programat OncoHelp Timișoara.
+28. Tabel schedule — biopsie 28-29.04, dosar 29-30.04, consult 30.04 OncoHelp.
+29. P0 actions — consult oncolog rezolvat (✅) + nou „Pregătire dosar fizic POST-biopsie" + analiză rezultat CT familiei păstrat.
+30. P1 actions — TORVACARD rezolvat (✓) + nou „Test confirmare eradicare H. pylori".
+31. Bloc `md-alimentatie` — înlocuit integral cu noul `ALIMENTATIE.md` v2.0 (619 linii noi vs. 393 vechi).
+32. lastRegen — 2026-04-25 03:00.
+
+**Backup R10:**
+
+33. `Dosar_Medical/arhiva/context_medical_versiuni/CONTEXT_MEDICAL_pre-clarificare-torvacard-program-oncolog_2026-04-25_0300.md`
+34. `Dosar_Medical/arhiva/context_medical_versiuni/ALIMENTATIE_pre-sync-compass-espen-iddsi-flot_2026-04-25_0300.md`
+
+**JSON-uri NU modificate (chain of custody R14 intact):**
+
+- `2025-11-10_schema_medicamente.json` — reflectă schema reală (4 medicamente, fără TORVACARD)
+- `2025-11-10_scrisoare_medicala_cardiologie.json` — păstrează TORVACARD în „tratament_recomandat" (sursa scrisă fidel)
+
+**Acțiuni rămase user:**
+
+- Telefon biopsie (rezultat 28-29.04)
+- Asamblare dosar fizic 29-30.04
+- Consult oncolog 30.04 OncoHelp Timișoara
+- Întrebare oncolog: necesar test UBT/HP pre-FLOT?
+- Documente lipsă (Vichy 2012, HbA1c, ecografie 14.04) — obținere ulterioară
+
+---
+
 ## 2026-04-24 21:45 — Audit complet + remediere totală (scor 77 → 92 estimat)
 
 **Tip:** AUDIT `/audit` standard + remediere exhaustivă la cerere user „remediaza tot".

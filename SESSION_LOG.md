@@ -6,6 +6,83 @@
 
 ---
 
+## 2026-04-25 03:00 — [Claude_Opus_4.7] clarificare-torvacard-program-oncolog-sincronizare-alimentatie
+
+**Scop:** integrare clarificări user 2026-04-25: (1) TORVACARD nu se administrează — schema reală e cea manuscrisă fără statină; (2) consult oncolog programat 30.04 OncoHelp Timișoara, biopsie estimat 28-29.04, dosar fizic POST-biopsie; (3) sincronizare `ALIMENTATIE.md` cu ghid nutrițional exhaustiv pentru JEG Siewert II (compass_artifact ESPEN/IDDSI/FLOT/ONS/IARC).
+
+**Operații pe fișierele de referință:**
+
+1. **Backup R10** — 2 fișiere pre-modificare:
+   - `Dosar_Medical/arhiva/context_medical_versiuni/CONTEXT_MEDICAL_pre-clarificare-torvacard-program-oncolog_2026-04-25_0300.md`
+   - `Dosar_Medical/arhiva/context_medical_versiuni/ALIMENTATIE_pre-sync-compass-espen-iddsi-flot_2026-04-25_0300.md`
+
+2. **`CONTEXT_MEDICAL.md` v1.5** (5 edituri):
+   - Antet versiune 1.5
+   - §2.6 status acțiuni updated (biopsie 28-29 + consult 30.04 OncoHelp)
+   - §4 sub-secțiunea „Discrepanță TORVACARD" înlocuită cu „Observație clinică — statină nealuată curent" (paritate R24 cu JSON scrisoare păstrată)
+   - §8.1 consult oncolog programat OncoHelp + lista pregătire dosar POST-biopsie
+   - §9 echipă medicală: oncologie OncoHelp Timișoara
+
+3. **`TODO.md`** (4 edituri):
+   - Antet + Calendar updated
+   - P0 Consult oncolog — status programat
+   - P0 NOU — Pregătire dosar fizic POST-biopsie 29-30.04
+   - P1 TORVACARD — închis (REZOLVAT 25.04 user)
+   - P1 NOU — Test eradicare H. pylori (UBT/antigen fecal)
+
+4. **`ALIMENTATIE.md` v2.0** (rescriere integrală cu integrare compass_artifact):
+   - 7 secțiuni noi adăugate: țintele zilnice ESPEN, texturi IDDSI, ONS, boostere calorice food fortification, condimente cu beneficii, pre-FLOT imunonutriție, monitorizare săptămânală
+   - Secțiunile vechi extinse: Recomandate (somon, sardine, Skyr, ovăz, broccoli, lapte praf, ulei MCT) + De evitat (interacțiuni FLOT specifice — sunătoare scade SN-38 cu 42%, grapefruit ↔ docetaxel, oxaliplatin cold dysesthesia)
+   - Tonul familie + zona Arad păstrat
+   - 619 linii (vs. 393 vechi)
+
+5. **`DASHBOARD.html` regenerare integrală** (R18 declanșatori 1+2+9):
+   - Status banner + countdown bar (biopsie 28-29 + consult 30.04 OncoHelp)
+   - Card status clinic Consult oncolog: badge ✅ PROGRAMAT
+   - Card medicație alert TORVACARD înlocuit cu observație clinică info
+   - Timeline 2025-11-10 clarificat
+   - Card echipă: oncologie OncoHelp
+   - Schedule (table): biopsie 28-29 + dosar 29-30 + consult 30.04
+   - P0 actions: consult ✅ + nou „dosar fizic POST-biopsie"
+   - P1 actions: TORVACARD ✓ + nou „test eradicare HP"
+   - Bloc `md-alimentatie` (linii 1931-2323) înlocuit cu noul `ALIMENTATIE.md` v2.0 (script Python pentru replacement masiv)
+   - lastRegen: 2026-04-25 03:00
+   - Total linii: 2706 (era 2442)
+
+6. **`CHANGELOG.md`** — intrare nouă 2026-04-25 03:00 cu detalii complete (34 puncte).
+
+**JSON-uri NU modificate** (chain of custody R14 intact):
+
+- `2025-11-10_schema_medicamente.json` (reflectă deja schema reală)
+- `2025-11-10_scrisoare_medicala_cardiologie.json` (păstrează TORVACARD în „tratament_recomandat" ca sursă scrisă fidelă)
+
+**Surse documentare:**
+
+- `compass_artifact_wf-e942f31e-75f4-4163-b5ef-dbe611ac0dac_text_markdown.md` (486 linii) — ghid nutrițional exhaustiv JEG Siewert II cu surse ESPEN, ESMO, IDDSI, IARC, MSKCC, Ryan 2012 RCT, Mathijssen 2002
+
+**Reguli aplicate:**
+
+- R10 backup pre-modificare structurală
+- R18 DASHBOARD regenerare integrală (declanșatori multipli + ALIMENTATIE.md modificată #9)
+- R20 cercetare → status → AskUserQuestion → confirmare → execuție (AskUser pentru tratament observație TORVACARD §4)
+- R22 marcaje certitudine — păstrate pe §4 nouă (LDL `[CERT]` cu sursă)
+- R24 paritate JSON ↔ CONTEXT_MEDICAL (TORVACARD păstrat în CONTEXT ca observație clinică, nu prescripție)
+- R25 prioritate claritate (clarificare user a închis discrepanța)
+
+**Commit R16:** de inițiat după această intrare — hash adăugat retrospectiv.
+
+**Acțiuni rămase user:**
+
+- Așteptare rezultat biopsie 28-29.04 (notificare ntfy.sh automată)
+- Asamblare dosar fizic 29-30.04
+- Consult oncolog 30.04 OncoHelp Timișoara
+- Întrebare oncolog: necesar test UBT/HP pre-FLOT?
+- Documente fizice lipsă (Vichy 2012, HbA1c, ecografie 14.04) — obținere ulterioară
+
+**Durata sesiune:** ~02:30 → 03:00 (~30 min — clarificări + sincronizare ALIMENTATIE + regenerare DASHBOARD).
+
+---
+
 ## 2026-04-24 21:45 — [Claude_Opus_4.7] audit-complet-plus-remediere-totala
 
 **Scop:** execuție `/audit` standard (13 dimensiuni adaptate medical documentar) + remediere exhaustivă a 5 HIGH + 4 MEDIUM + 3 LOW la cerere user explicită „remediaza tot".

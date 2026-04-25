@@ -4,10 +4,10 @@
 
 ---
 
-**Ultima actualizare:** 25 aprilie 2026 03:00 (clarificare user: TORVACARD nu se administrează — schema reală este manuscrisă fără statină; consult oncolog ✅ programat 30.04.2026 la OncoHelp Timișoara; rezultat biopsie estimat 28-29.04.2026)
+**Ultima actualizare:** 24 aprilie 2026 21:30 (audit remediere: TORVACARD discrepanță documentată în §4; marcaje certitudine R22 aplicate pe §2.1, §4, §10 conform convenției de mai jos)
 **Responsabil dosar:** Roland Petrilă (fiul pacientului)
-**Versiune structură:** 1.5 (clarificare schema medicație fără TORVACARD + programare consult oncolog OncoHelp 30.04.2026)
-**Versiune anterioară arhivată:** `Dosar_Medical/arhiva/context_medical_versiuni/CONTEXT_MEDICAL_pre-clarificare-torvacard-program-oncolog_2026-04-25_0300.md` + versiunile anterioare (vezi arhiva).
+**Versiune structură:** 1.4 (R22 marcaje certitudine pass conservativ pe secțiuni clinic critice)
+**Versiune anterioară arhivată:** `Dosar_Medical/arhiva/context_medical_versiuni/CONTEXT_MEDICAL_pre-audit-remediere_2026-04-24_2130.md` + versiunile anterioare (vezi arhiva).
 
 ---
 
@@ -132,8 +132,8 @@ Acest fișier este **state file intern** (sursă pentru documentele de ieșire),
 ### 2.6 Acțiuni în curs (status la 2026-04-24)
 
 - ✅ **CT efectuat 20.04.2026** — raport integrat în dosar
-- 🟢 **Rezultat biopsie esofagiană** — estimat **28-29 aprilie 2026** (confirmat de familie 25.04); monitor automat activ 24/7 (GitHub Actions)
-- ✅ **Consult oncolog digestiv** — **PROGRAMAT 30 aprilie 2026 la OncoHelp Timișoara** (confirmat de user 25.04.2026)
+- 🟡 **Rezultat biopsie esofagiană** — așteptat la Bioclinica Arad, monitor automat activ 24/7 (GitHub Actions)
+- 🔴 **Consult oncolog digestiv URGENT** — de programat (stadiul infiltrativ + ascită modifică abordarea terapeutică)
 - 🟡 **Evaluare endocrinologică** glanda suprarenală stângă — de programat post-consult oncolog
 - ✅ **Jamesi reluat** 22.04.2026 seara, conform schemei standard (1-0-1, 50/1000 mg), **fără complicații** — pauza H-48h → H+48h a funcționat corect, fără simptome renale post-contrast raportate de familie
 - 🟡 **Spirometrie + anamneză pulmonară pre-esofagectomie** (post audit Batch A 2026-04-24) — de discutat cu chirurgul oncolog: tulburările ventilație posterobazal LID+LIS + nodulii apicali sechelari LSD necesită evaluare pulmonară pre-operator (spirometrie + DLCO + posibil consult pneumolog)
@@ -283,17 +283,32 @@ Schema datată **10 noiembrie 2025**. Medic prescriptor **IDENTIFICAT (2026-04-2
 
 **Sursă:** `Dosar_Medical/2025-11-10_schema_medicamente.json` (manuscris parțial + fotografii cutii). Medicamentele, dozele și ritmul de administrare sunt `[CERT]` (fotografii cutii + manuscris lizibil pentru ritm). Medicul prescriptor identificat retroactiv 2026-04-24: **Dr. LAZA CRISTINA (cod parafă C07842)** via cross-reference ECO tipărită aceeași zi.
 
-### Observație clinică — statină nealuată curent (de evaluat la consult oncolog 30.04)
+### ⚠️ Discrepanță medicamentoasă 10.11.2025 — TORVACARD (de clarificat telefonic)
 
-**Context (clarificat de user 2026-04-25):** scrisoarea medicală Dr. LAZA CRISTINA din 10.11.2025 (`2025-11-10_scrisoare_medicala_cardiologie.json`) prescrisese **TORVACARD 10/20 mg 0-0-1 seara**, însă pacientul **NU îl administrează curent** — schema reală în vigoare este cea manuscrisă în aceeași zi (cele 4 medicamente din tabelul de mai sus, fără statină). Documentele sursă confirmă: folder `Dosar_Medical/documente_sursa/08_schema_tratament/` (manuscris talon + foto cutii Aspenter, Concor, Triplixam, Jamesi).
+**Status:** 🟡 **NECLARIFICAT — task P1 deschis 2026-04-24** (telefon familie necesar).
 
-**Relevanță pre-esofagectomie** `[CERT]`:
+**Context discrepanță:**
 
-- Pacient post-stent coronarian 2012 → ghidurile AHA/ESC recomandă statină continuă pentru prevenție CV secundară
-- **Lipidogramă 17.06.2025** (`Dosar_Medical/2025-06-17_buletin_analize_sange.json`): colesterol total 189, **LDL 133 mg/dL** — țintă ESC 2019/2021 post-stent: <70 mg/dL → ținta neatinsă
-- De ridicat la **consultul oncolog 30.04.2026 OncoHelp Timișoara** + medicul de familie Dr. Orbán: reevaluare prevenție CV secundară pre-chirurgie esofagiană
+| Document                                                            | Medicamente prescrise                                                                          |
+| ------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
+| **Scrisoarea medicală Dr. LAZA CRISTINA (10.11.2025, nr. 0005042)** | ASPENTER 75 + TRIPLIXAM 10/2.5/5 + CONCOR 5 + **TORVACARD 10 sau 20 mg 0-0-1 seara**           |
+| **Schema zilnică manuscrisă (10.11.2025, pe talon — aceeași zi)**   | ASPENTER 75 + CONCOR 5 + TRIPLIXAM 10/2.5/5 + **JAMESI 50/1000 mg** (rândul 4 tăiat cu marker) |
 
-**Paritate R24:** TORVACARD apare în JSON-ul scrisorii (chain of custody intact — nu se modifică sursa) și este reflectat aici ca observație clinică, nu ca prescripție efectivă.
+**Ipoteze:**
+
+1. **TORVACARD prescris scris pe scrisoarea medicală, dar anulat pe schema zilnică** (rândul 4 tăiat cu marker albastru) — pacientul NU-l ia?
+2. **Posibil inversare:** TORVACARD pe scrisoare + Jamesi pe talon zilnic sunt ambele reale (schema zilnică include statină + antidiabetic separat — dar atunci ce e pe rândul 4 tăiat?)
+3. **Posibil: Jamesi adăugat ulterior** (pre-chirurgie hernie ca parte a controlului DZ), iar TORVACARD rămâne separat (neînregistrat pe schema zilnică).
+
+**Relevanță clinică:**
+
+- Pacient **post-stent coronarian 2012** → prevenție CV secundară recomandă statină continuă (`[CERT]` ghid AHA/ESC post-MI + ghid ESC dyslipidemia)
+- **Lipidogramă 17.06.2025** (`Dosar_Medical/2025-06-17_buletin_analize_sange.json`): colesterol total 189, **LDL 133 mg/dL** (țintă post-stent <70 mg/dL conform ESC 2019/2021) → **LDL neatins**, statină indicată
+- Dacă TORVACARD NU e luat → prevenția CV secundară este **suboptimă pre-intervenție oncologică majoră** (esofagectomie planificată post-diagnostic histopatologic)
+
+**Acțiune necesară:** apel telefonic familie pentru clarificare status real (luat/neluat TORVACARD, doza, orarul), eventual consultare medic curant (Dr. LAZA CRISTINA) dacă nevoie.
+
+**Task tracking:** `TODO.md` secțiunea P1 „Clarificare TORVACARD (discrepanță 10.11.2025)".
 
 ### Interacțiune medicamentoasă documentată — de urmărit
 
@@ -427,36 +442,19 @@ Efectuată concomitent cu endoscopia la Genesis Medical Clinic Arad (Dr. Noufal 
 
 ## 8. Investigații programate / în așteptare
 
-### 8.1 Consult oncolog digestiv — ✅ PROGRAMAT 30 aprilie 2026 la OncoHelp Timișoara
+### 8.1 Consult oncolog digestiv (URGENT)
 
-**Status:** ✅ **PROGRAMAT** — confirmat de user 25.04.2026.
+**Status:** de programat imediat după primirea rezultatului biopsiei (sau înaintea lui dacă se poate — discuție preliminară pe baza CT).
+**Motivație accelerare:** stadiul infiltrativ + ascită + extensia la joncțiunea eso-gastrică → protocolul terapeutic se schimbă față de un cancer esofagian distal simplu (probabil **FLOT** în loc de **CROSS**, având componenta gastrică).
 
-**Detalii programare:**
+**Centre recomandate (opțiuni):**
 
-- **Data:** 30 aprilie 2026
-- **Unitate:** **OncoHelp Timișoara**
-- **Medic oncolog:** de identificat la consult (de completat post-consult)
-- **Context așteptat:** rezultat biopsie estimat **28-29 aprilie 2026** → consultul beneficiază de toate elementele decizionale (CT 20.04 + biopsie histopatologic + analize pre-CT)
+- **Arad** — apropiere geografică, continuitate cu Genesis
+- **Timișoara** — Institutul Regional / OncoHelp / SCJU
+- **Cluj** — Institutul Oncologic Prof. Dr. Ion Chiricuță
+- **București** — pentru second opinion sau cazuri complexe (Institutul Fundeni, SanaDor, Monza)
 
-**Motivație accelerare (păstrată pentru context):** stadiul infiltrativ + ascită + extensia la joncțiunea eso-gastrică → protocolul terapeutic se schimbă față de un cancer esofagian distal simplu (probabil **FLOT** în loc de **CROSS**, având componenta gastrică).
-
-**Pregătirea dosarului fizic — finalizare POST-biopsie (29-30.04):**
-
-> **Important (decizie user 25.04):** dosarul fizic se asamblează **DUPĂ primirea rezultatului histopatologic** (estimat 28-29.04), pentru a fi **complet** la consultul din 30.04. Nu se pregătește în avans.
-
-Componente prevăzute:
-
-- C.I. + card CAS
-- Bilet trimitere BCTAP 0631727 (17.04.2026)
-- Buletin endoscopie + colonoscopie 17.04.2026 (Genesis Arad)
-- Buletin Bioclinica creatinină + uree 17.04.2026
-- **Raport CT 20.04.2026** + CD DICOM (dacă s-a primit la efectuare)
-- **Rezultat biopsie histopatologic** (28-29.04 — element-cheie, fără care consultul e incomplet)
-- Listă medicație curentă (4 medicamente confirmate: Aspenter, Concor, Triplixam, Jamesi) + alergii (fără alergii relevante)
-- Listă întrebări pregătite (vezi `TODO.md` secțiunea „Pentru viitorul oncolog digestiv")
-- **Notă observație:** statină indicată dar nealuată — de discutat la consult (vezi §4)
-
-**Task tracking:** `TODO.md` secțiunea P0 „Pregătire dosar fizic POST-biopsie (29-30.04)".
+**Decizie:** la familie + recomandare Dr. Noufal Abdul Vahab (de solicitat).
 
 ### 8.2 Reluare Jamesi (H+48 post-CT) — 22.04.2026 ✅ FINALIZAT
 
@@ -503,7 +501,7 @@ Componente prevăzute:
 | **Urologie (consult 28.10.2025)**                            | **Dr. PITEA ALEXANDRU (medic primar urologie, cod A13044)**                                                           | Complex Medical Pitea & Pitea SRL, Arad, Revoluției 45           | **0749111455**                  |
 | Laborator clinic (serologie HP + analize 2025)               | Dr. Cret Anamaria (medic primar laborator, cod A 0769)                                                                | SC Ultra ClinicaVest SRL Pecica                                  | `laborator@ultraclinicavest.ro` |
 | Laborator clinic (UPU 30.05.2024)                            | Dr. Igas Angelica (cod 119856) + Dr. Avram Cecilia — ambii medici primari medicina de laborator                       | Spitalul Clinic Județean de Urgență Arad — Laborator Central     | —                               |
-| **Oncologie digestivă** (consult ✅ programat 30.04.2026)    | **De identificat la consult**                                                                                         | **OncoHelp Timișoara** (programat 30.04.2026)                    | De completat post-consult       |
+| **Oncologie digestivă** (prioritate URGENT)                  | **De stabilit**                                                                                                       | Arad / Timișoara / Cluj / București                              | —                               |
 | Endocrinologie (glandă suprarenală, follow-up)               | De stabilit post-consult oncolog                                                                                      | —                                                                | —                               |
 
 ---

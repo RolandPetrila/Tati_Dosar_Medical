@@ -2,7 +2,41 @@
 
 > Sursă de inspirație pentru gătit acasă, în perioada actuală. Produse grupate simplu: recomandate / limitate / de evitat + idei concrete de mâncăruri, centrate pe ce se găsește și se gătește în zona Aradului.
 >
-> Nu este document medical — este o listă de gătit.
+> Nu este document medical — este o listă de gătit. La consult cu oncologul / medicul curant se ajustează după caz.
+
+**Ultima actualizare:** 25 aprilie 2026 (sincronizare cu ghid nutrițional ESPEN/IDDSI/FLOT — context pacient oncolog JEG Siewert II, consult oncolog programat 30.04.2026 OncoHelp Timișoara).
+
+---
+
+## 🎯 Țintele zilnice (orientativ — confirmare la oncolog/nutriționist)
+
+Pentru ~79 kg, profil pacient oncolog cu disfagie + diabet + HTA + post-stent (sursa: ghidul ESPEN „Clinical Nutrition in Cancer", Muscaritoli M et al. 2021):
+
+| Țintă            | Cantitate orientativă                                      | De unde vine                            |
+| ---------------- | ---------------------------------------------------------- | --------------------------------------- |
+| **Energie**      | 2.100–2.300 kcal/zi (28–30 kcal/kg)                        | ESPEN                                   |
+| **Proteine**     | 100–120 g/zi (1,3–1,5 g/kg)                                | ESPEN — protejare masă musculară        |
+| **Grăsimi bune** | 85–100 g/zi (40% kcal) — ulei măsline, pește gras, avocado | ESPEN — densitate calorică pe volum mic |
+| **Carbohidrați** | 220–260 g/zi — cu IG mic (ovăz, linte, basmati integral)   | adaptat la diabet                       |
+| **Sodiu**        | <2.000 mg/zi (sub 5 g sare)                                | dietă DASH (HTA + post-stent)           |
+| **Potasiu**      | 3.500–4.700 mg/zi — banane, cartof, dovleac, sfeclă        | DASH                                    |
+| **Lichide**      | 2.300–2.700 mL/zi, **la temperatura camerei**              | hidratare în context disfagie           |
+
+**Frecvența:** 6–8 mese mici (200–300 mL fiecare) — mai ușor de tolerat decât 3 mari când apetitul e scăzut și stenoza e strânsă.
+
+---
+
+## 🥄 Texturile sigure (cadrul IDDSI — pentru stenoza nedepășibilă)
+
+Endoscopia 17.04 a arătat o stenoză aproape completă pe esofag. Pentru a evita oprirea bolusului în zona îngustă, texturile sunt grupate după cadrul **IDDSI** (International Dysphagia Diet Standardisation Initiative, 2019):
+
+- **Lichide îngroșate (IDDSI 2–3)** — apă, ceaiuri, supe; curg de pe lingură dar nu sunt apoase
+- **Piure omogen (IDDSI 4)** — fără bucăți, coeziv, „test furculiță": rămâne pe furculiță, nu cade rapid
+- **Pasat moale (IDDSI 5)** — doar dacă toleranța e clară; particule sub 4 mm, umede
+
+**Test rapid acasă (fork test):** se scapă piureul peste furculiță. Dacă cade ca apa = prea subțire (mai gros). Dacă rămâne în formă = OK (IDDSI 4).
+
+**Îngroșători comerciali utili** (pentru lichide care altfel curg prea repede): **Nutilis Clear** (Nutricia, ~25 RON/pungă 175 g) sau **Resource ThickenUp Clear** (Nestlé) — pulbere pe bază de gumă xantan, se dizolvă instant în lichid rece sau cald, fără gust.
 
 ---
 
@@ -20,7 +54,7 @@ Obiectiv principal în perioada asta: **să nu scadă în greutate**. Motivul e 
 
 ### Strategii pentru menținerea greutății
 
-- **Mese mici și dese** — 5-6 mese mici sunt mai ușor de acceptat când apetitul e scăzut decât 3 mari
+- **Mese mici și dese** — 6–8 mese mici sunt mai ușor de acceptat când apetitul e scăzut decât 3 mari
 - **Densitate calorică** — alimente care dau energie fără volum mare: avocado, ulei de măsline în mâncare, cartofi, paste, orez moale, banane bine coapte, ouă, miere puțin
 - **Proteine la fiecare masă** — fundamentale pentru păstrarea masei musculare: pește, pui, curcan, ouă, leguminoase pasate (linte fină, mazăre)
 - **Gustări programate, nu la foame** — nu aștepta să îi fie foame, poate să nu vină niciodată. Oferă o felie de pâine cu pate de avocado, banană pasată, compot cu biscuite moale, supă cremă
@@ -49,71 +83,205 @@ Obiectiv principal în perioada asta: **să nu scadă în greutate**. Motivul e 
 
 ### Carne și pește
 
-- **Piept de pui** — fiert, înăbușit, rasol
-- **Piept de curcan** — fiert, înăbușit
-- **Ficat de pui** — înăbușit cu ceapă călită moale (nu rumenită)
+- **Piept de pui** — fiert, înăbușit, rasol; pasat cu supă pentru IDDSI 4
+- **Piept de curcan** — fiert, înăbușit (cea mai slabă carne albă)
+- **Ficat de pui** — înăbușit cu ceapă călită moale (nu rumenită) — sursă bună de fier hem, vit. B12
 - **Vițel moale** — rasol cu zarzavat
 - **Miel tânăr** (primăvara, Paște) — înăbușit la cuptor cu capac
-- **Șalău** (din Mureș / pescării Arad) — la abur, fiert cu zeamă de lămâie
-- **Păstrăv** (crescătorii locale) — fiert, la abur
-- **Biban, crap tânăr** — înăbușit, fiert
-- **Cod, merluciu** (supermarket) — la abur
+- **Iepure / vițel slab** (rasol pasat) — max 2×/săptămână (carnea roșie e factor de risc IARC 2A)
+- **Pește gras: somon, macrou, hering, sardine proaspete** — fiert/abur; pasat cu propriul jeleu. Sursă cheie de **omega-3 (EPA+DHA)** care contracarează cașexia oncologică (studii Fearon, Barber, Ryan)
+- **Sardine în ulei de măsline** (Connetable, Rio Mare) — pasate cu furculița. Una dintre cele mai bune surse concomitente de **proteină + calciu** (din oasele fine: 240 mg) **+ omega-3** (1,2 g)
+- **Ton conservat în ulei de măsline** (scurs, varianta low sodium) — 80 g = 18 g proteine
+- **Șalău, biban, păstrăv** (pescării Arad / Mureș / crescătorii locale) — fiert / abur, ușor de pasat
+- **Cod, merluciu** (supermarket) — alb slab, hipoalergenic, ușor de pasat
 
 ### Ouă
 
 - **Ou fiert moale** (3-4 minute)
 - **Ochi în apă** (ou poșat)
 - **Omletă pe abur** (fără prăjire în ulei)
+- **Albuș de ou pasteurizat lichid** (cartușe la Carrefour/Kaufland) — booster proteic 11 g/100 mL, 0 grăsimi
 - **Ouă de la piață locală** — proaspete, textură mai plăcută
+
+Limită: max 7 ouă întregi/săptămână din cauza colesterolului (post-stent).
 
 ### Cereale și amidonoase
 
-- **Cartof** — fiert, piure, copt la cuptor înăbușit
-- **Orez** — bine fiert, moale (tip pilaf umezit)
-- **Paste** — fierte mai mult decât „al dente", moi
-- **Griș** — fiert pe apă sau lapte vegetal
-- **Mămăligă moale** — făină de porumb fină, cu apă multă
-- **Ovăz** — fiert pe apă sau lapte vegetal (migdale, ovăz, orez)
+- **Fulgi de ovăz integrali** — fierți cu lapte = porridge cremos IDDSI 4. Conține **β-glucan** care reduce LDL și glicemia (util la diabet + post-stent)
+- **Cartof** — fiert, piure, copt la cuptor înăbușit. Sursă mare de potasiu (800 mg/200 g — pro-HTA)
+- **Cartof dulce** — alternativă cu IG mai mic + β-caroten
+- **Orez basmati integral** — bine fiert, moale (IG mai mic decât orezul alb)
+- **Paste fine pasate** (fidea, pastina, orzo) în supă — fierte mai mult decât „al dente"
+- **Griș** — fiert pe apă sau lapte vegetal = budincă cremoasă IDDSI 4
+- **Mămăligă moale** — făină de porumb fină, cu apă multă; cu parmezan ras pentru aromă + proteină
+- **Linte roșie decorticată** — fiartă 30 min = piure natural (IG 25, foarte mic) + 15 g proteină vegetală/100 g
+- **Quinoa fiartă moale** — alternativă fără gluten, conține toți AA esențiali
+- **Hummus** (năut pasat cu tahini, lămâie, usturoi puțin) — densitate nutritivă excelentă, IDDSI 4 natural
 - **Tăiței de casă** — bine fierți
 - **Cușcuș** — fiert moale
 
 ### Legume (mereu bine fierte)
 
-- **Morcov** — fiert, la abur, piure
-- **Dovlecel** — înăbușit, la abur
-- **Dovleac** — copt la cuptor
+- **Broccoli fiert/abur** — pasat cu ulei măsline; conține **sulforafan** (potențial antitumoral, inhibitor H. pylori în studii preclinice)
+- **Conopidă fiartă** — piure cu unt sau ulei măsline (cruciferă)
+- **Spanac fiert** — piure cu smântână/ulei măsline; sursă de **fier non-hem (4 mg/150 g) + folat (200 µg) + magneziu**
+- **Morcov** — fiert, la abur, piure (β-caroten din alimente e sigur — atenție: NU β-caroten ca supliment izolat la fost fumător)
+- **Dovlecel** — înăbușit, la abur (digerabil, IDDSI 4 natural)
+- **Dovleac plăcintar copt** — bază excelentă pentru creme/supe (potasiu 700 mg/200 g)
 - **Cartof** — fiert, piure
-- **Conopidă** — fiartă bine, piure
+- **Sfeclă roșie fiartă** — pasată, conține **nitrați alimentari** (efect ușor antihipertensiv natural)
 - **Fasole verde** — fiartă moale
 - **Mazăre** — fiartă, mâncare de mazăre
-- **Spanac** — călit moale (fără rumenire)
 - **Țelină rădăcină** — fiartă, pasată
 - **Pătrunjel rădăcină** — fiert, în supă
 - **Vinete coapte** — salată cu puțin ulei măsline (fără usturoi mult)
+- **Roșii fierte / sos pasat fără sare** — la fierbere + ulei crește biodisponibilitatea licopenului
+- **Ardei capia copt și curățat** — pasat (vit. C 150 mg/100 g)
 
-### Fructe (coapte, fierte, pasate — mai ușor de tolerat)
+Țintă: **2 crucifere/săptămână** (broccoli, conopidă), **1 portocalie/zi** (morcov, dovleac), **1 sursă verde/zi** (spanac).
 
-- **Mere Ionathan / Golden** (livezi Arad) — coapte la cuptor
-- **Pere coapte** — cu scorțișoară
+### Fructe (coapte, fierte, pasate — la temperatura camerei)
+
+- **Banană bine coaptă, pasată** — IDDSI 4 natural; potasiu 360 mg, vit. B6, triptofan. Pentru diabet: 1/2–1 bucată/porție
+- **Avocado pasat** — IG <15, MUFA, K, folat; 1/2–1 bucată/zi
+- **Mere Ionathan / Golden** (livezi Arad) — coapte la cuptor cu scorțișoară (IG 38, mic)
+- **Pere coapte, pasate** — fibre solubile bune pentru tranzit
 - **Gutui** — coapte, dulceață casnică (cantitate mică)
-- **Banane bine coapte** — pasate dacă textura e dificilă
-- **Pepene roșu** (vara) — apos, trece ușor
 - **Piersici, caise** — coapte, fără coajă
+- **Pepene roșu** (vara) — apos, trece ușor (la temperatura camerei!)
+- **Afine, zmeură, mure, căpșuni** — pasate prin sită (eliminare semințe); antioxidanți (antocianine)
+- **Kiwi auriu** — pasat (vit. C 90–160 mg/100 g — sursa de top)
+- **Mango bine copt** — pasat
 - **Compot fără zahăr** — din orice fruct de sezon
 - **Prune uscate înmuiate** — cantitate mică (ajută tranzitul)
 
 ### Grăsimi bune
 
-- **Ulei măsline extravirgin** — crud, peste mâncare
-- **Avocado** — pasat, pe pâine proaspătă
-- **Puțin unt proaspăt** — la gătit (în piure, în supă la final)
+- **Ulei măsline extravirgin** (Monini, Borges, Costa d'Oro) — 3–4 linguri/zi în piureuri; conține oleocantal (antiinflamator) și scade LDL
+- **Avocado pasat** — pe pâine proaspătă, în smoothie
+- **Unt nesărat** — la gătit, în piure (moderat — saturate post-stent)
+- **Smântână 30% grăsime** (Covalact, Delaco) — booster caloric în supe cremă
+- **Tahini** (pastă de susan) — în hummus, supe; calciu 65 mg/lingură
+- **Unt de migdale/arahide 100% natural** — fără zahăr/sare; vit. E + magneziu
+- **Semințe de in măcinate** (obligatoriu măcinate) — în iaurt/piure; ALA omega-3 + lignani antihipertensivi
+- **Semințe de chia hidratate** — gelifică natural (util pentru IDDSI 3); atenție cantitate cu Aspenter (max 25 g/zi)
+- **Semințe de dovleac decorticate, măcinate fin** — zinc (cicatrizare), magneziu
+- **Migdale/nuci măcinate fin** — niciodată întregi (risc disfagie)
+- **Ulei MCT** (Nutricia, Now) — booster caloric absorbție rapidă, util în malabsorbție; +120 kcal/lingură fără proteine
 
-### Lichide
+### Lactate (sursă proteică concentrată)
 
-- **Apă plată** — între mese
-- **Ceai slab** — mușețel, gălbenele, tei, mentă NU
-- **Supe și ciorbe limpezi** — hidratează și hrănesc
-- **Bulion de oase** — hrănitor, ușor de digerat
+- **Iaurt grecesc 10% grăsime, natural** — 15 g proteine/150 g, IG foarte mic; servit la temperatura camerei
+- **Skyr** (iaurt islandez — Olympus, Müller la Carrefour/Kaufland) — 17 g proteine/150 g; densitatea proteică maximă între iaurturi
+- **Kefir natural** (Napolact, Covalact) — probiotic, calciu; 200 mL/zi
+- **Brânză de vaci slabă (urdă dulce)** — pasată cu smântână lichidă; 14 g proteine/100 g
+- **Ricotta** (Delaco, Hochland) — pentru piureuri/creme dulci sau sărate
+- **Parmigiano Reggiano ras** — booster în piureuri (umami stimulează apetit)
+- **Lapte integral 3,5%** sau **fără lactoză** (Zuzu, Napolact FL) — bază pentru shake-uri
+- **Lapte praf degresat** — _booster proteic_ + ieftin: 25 g (2 linguri) = +9 g proteine, se adaugă în lapte normal pentru densitate
+
+> **Notă:** lapte dulce simplu fusese restricționat de gastroenterolog. La consultul oncolog din 30.04 se reconfirmă recomandarea (probabil rămâne valabilă, dar cu opțiunea iaurturilor și kefirului ca surse alternative de calciu + probiotice).
+
+### Lichide (toate la temperatura camerei sau călduțe)
+
+- **Apă plată** — 1,5–2 L/zi (Borsec, Aqua Carpatica — Borsec are magneziu natural ~70 mg/L, pro-HTA)
+- **Ceai slab** — mușețel, gălbenele, tei, fenicul, anason (călduțe)
+- **Ceai de ghimbir proaspăt** (rădăcină 1–2 g/zi) — antiemetic dovedit RCT pentru greață chimio (Ryan 2012, n=576, reducere ~40%); atenție cu Aspenter — max 4 g/zi
+- **Ceai verde decafeinizat** — 1–2 cupe/zi, catechine (EGCG)
+- **Supe și ciorbe limpezi pasate** — hidratează și hrănesc
+- **Bulion de oase** — fiert 6–8 ore, sursă glicină + prolină pentru cicatrizare; **fără sare**
+- **Suc natural de morcov + măr + ghimbir** — 200 mL, palatabilitate
+
+---
+
+## 💊 Suplimente nutritive ONS — Suplimente Nutritive Orale Enterale
+
+**Pentru ce sunt:** sticluțe gata preparate cu calorii + proteine concentrate, ușor de băut cu paiul. **Sunt singura cale sigură** de a atinge 2.000 kcal cu 100+ g proteine într-un volum acceptabil pentru o stenoză strânsă.
+
+> **Important:** se discută cu oncologul/nutriționistul la consult (30.04 OncoHelp). Prescripția decide produsul + cantitatea exactă. Lista de mai jos e orientativă pentru recunoașterea produselor.
+
+### Hipercalorice + hiperproteice (zilnic)
+
+| Produs                                       | Volum  | Kcal | Proteine | Pret retail aprox. |
+| -------------------------------------------- | ------ | ---- | -------- | ------------------ |
+| **Nutridrink Compact Protein** (Nutricia)    | 125 mL | 300  | 18 g     | ~17 RON/sticlă     |
+| **Fresubin Protein Energy** (Fresenius Kabi) | 200 mL | 300  | 20 g     | ~17 RON/sticlă     |
+| **Nutridrink 2 kcal Protein**                | 200 mL | 400  | 20 g     | similar            |
+| **Resource 2.0 Fibre** (Nestlé)              | 200 mL | 400  | 18 g     | similar            |
+
+### Adaptate diabet
+
+| Produs                          | Volum  | Kcal | Proteine | Notă                       |
+| ------------------------------- | ------ | ---- | -------- | -------------------------- |
+| **Diasip** (Nutricia)           | 200 mL | 208  | 9,8 g    | IG mic (36) — izomaltuloză |
+| **Fresubin Diben Drink**        | 200 mL | 300  | 15 g     | Adaptat diabet             |
+| **Fortimel DiabetCare Protein** | 200 mL | 212  | 19 g     | Hiperproteic + IG redus    |
+
+### Oncologice (cu omega-3 anti-cașexie) — **utile post-FLOT dacă se decide protocolul**
+
+| Produs                            | Volum  | Kcal | Proteine | EPA omega-3         |
+| --------------------------------- | ------ | ---- | -------- | ------------------- |
+| **Forticare Advanced** (Nutricia) | 125 mL | 300  | 18 g     | 2 g EPA/3 sticle/zi |
+| **Supportan Drink** (Fresenius)   | 200 mL | 300  | 20 g     | ~2 g EPA+DHA        |
+
+### Imunonutriție — **5–7 zile preoperator** (dacă se decide chirurgie)
+
+| Produs                   | Volum  | Kcal | Proteine | Arginină + omega-3                                                  |
+| ------------------------ | ------ | ---- | -------- | ------------------------------------------------------------------- |
+| **Cubitan** (Nutricia)   | 200 mL | 250  | 20 g     | 3 g arginină + Zn, Fe, Se                                           |
+| **Impact Oral** (Nestlé) | 237 mL | 340  | 18 g     | **4,2 g arginină + 1,1 g omega-3** — evidență robustă pre-chirurgie |
+
+### Decontare CNAS
+
+Programul Național de Oncologie acoperă pacientul; **decontarea ONS specifice nu e automată** — verificare la farmacia spitalului oncologic, oncologul curant poate emite rețetă pentru FSMP (alimente cu destinație medicală specială). Alternativ, achiziție privată în farmacii (farmaciatei.ro, alimentespeciale.ro, drmax.ro, catena.ro).
+
+### Schemă orientativă/zi (de confirmat la oncolog)
+
+- **2× Nutridrink 2 kcal Protein sau Fresubin 2 kcal** = 800 kcal + 40 g proteine
+- **1× Forticare Advanced sau Supportan** = 300 kcal + 18 g proteine + 2 g EPA
+- **Total ONS: ~1.100 kcal, ~58 g proteine** (aprox. jumătate din necesar)
+- Restul din alimentația pasată zilnică
+
+**Tehnică:** se beau **între mese**, cu paiul, **lent (20–30 min/sticlă)**, ca să nu suprime apetitul la mese.
+
+---
+
+## 🔧 Boostere calorice practice (food fortification)
+
+Strategie ESMO/ESPEN: crește densitatea nutritivă fără să crească volumul. Adaugi 1–2 din lista de mai jos la mesele obișnuite — calorii și proteine "ascunse".
+
+| Booster                                          | Cantitate         | + kcal | + proteine | Unde                         |
+| ------------------------------------------------ | ----------------- | ------ | ---------- | ---------------------------- |
+| **Lapte praf degresat**                          | 2 linguri (25 g)  | +90    | +9 g       | În lapte, supă, piure, iaurt |
+| **Protifar** (Nutricia, pulbere proteină neutră) | 2 lingurițe (5 g) | +20    | +4,4 g     | Orice lichid, fără gust      |
+| **Whey protein neutru** (Myprotein, OstroVit)    | 1 scoop (25 g)    | +95    | +22 g      | Shake-uri, piureuri          |
+| **Ulei măsline extravirgin**                     | 1 lingură (15 mL) | +120   | 0          | Peste piure finalizat        |
+| **Ulei MCT**                                     | 1 lingură (15 mL) | +120   | 0          | În supă, iaurt               |
+| **Smântână 30%**                                 | 2 linguri (30 mL) | +90    | +1 g       | Supă cremă, piure            |
+| **Avocado pasat**                                | 50 g              | +80    | +1 g       | Smoothie, humus              |
+| **Unt de arahide 100%**                          | 1 lingură (15 g)  | +95    | +4 g       | Shake, banană pasată         |
+| **Tahini**                                       | 1 lingură (15 g)  | +90    | +3 g       | Hummus, supe cremă           |
+| **Iaurt grecesc 10%**                            | 3 linguri (50 g)  | +60    | +5 g       | Piure de fructe/legume       |
+| **Parmezan ras**                                 | 1 lingură (10 g)  | +40    | +3,6 g     | Peste piureuri sărate        |
+| **Semințe in măcinate**                          | 1 lingură (10 g)  | +50    | +2 g       | Iaurt, piureuri              |
+
+**Exemplu concret:** piure cartof (200 g, 150 kcal, 4 g prot) + 2 linguri Protifar + 1 lingură ulei măsline + 1 lingură parmezan + 1 lingură smântână = **430 kcal, 14 g proteine** într-un bol de ~250 g (IDDSI 4).
+
+---
+
+## 🌿 Condimente cu beneficii (înlocuiesc sarea)
+
+| Condiment                            | Doza               | Beneficiu                                                              | Atenție                                                           |
+| ------------------------------------ | ------------------ | ---------------------------------------------------------------------- | ----------------------------------------------------------------- |
+| **Pătrunjel verde, mărar, busuioc**  | 1–2 linguri/porție | Vit. C, K, aromă                                                       | —                                                                 |
+| **Curcuma (turmeric) + piper negru** | 1/2–1 linguriță    | Curcumină antiinflamatoare; piperina crește biodisponibilitatea de 20× | Cantități alimentare OK; suplimente >3 g/zi precauție cu Aspenter |
+| **Scorțișoară (Ceylon)**             | 1/2 linguriță      | Îmbunătățește sensibilitatea la insulină — util DZ2                    | —                                                                 |
+| **Ghimbir proaspăt ras**             | 1–2 g              | Antiemetic dovedit chimio; digestiv                                    | Max 4 g/zi cu Aspenter (risc sângerare la doze mari)              |
+| **Usturoi fiert** (NU crud mult)     | 1 cățel/porție     | Allicină; reducere risc cancer gastric (epidemiologic)                 | —                                                                 |
+| **Oregano, cimbru, rozmarin**        | 1/2 linguriță      | Polifenoli antioxidanți                                                | —                                                                 |
+| **Lămâie (suc)**                     | 1 lingură          | Vit. C, înlocuiește sarea                                              | Limitat dacă mucozită post-chimio                                 |
+
+**Sare/sodiu:** țintă **<5 g sare/zi** (ideal <4 g). Brânzeturile, ONS și pâinea aduc deja 300–600 mg sodiu pe porție. **De evitat:** cuburi Knorr/Maggi, sosuri ready-made (soia, worcestershire), murături comerciale.
 
 ---
 
@@ -122,14 +290,15 @@ Obiectiv principal în perioada asta: **să nu scadă în greutate**. Motivul e 
 - **Cafea** — max 1 ceașcă/zi, slabă, nu dimineața pe stomacul gol
 - **Miere** (salcâm de la Peregu / Chișineu-Criș) — cantitate mică
 - **Dulceață casnică, gem** — 1 linguriță pe felie, nu mai mult
-- **Pâine** — doar proaspătă din ziua coacerii, nu crocantă, preferabil înmuiată în supă sau ceai
+- **Pâine** — doar proaspătă din ziua coacerii, nu crocantă, preferabil înmuiată în supă sau ceai. **Pentru disfagie:** evitată dacă nu e bine înmuiată (risc bolus pe stenoză)
 - **Smântână** — puțin, doar la gătit (final de supă, piure) — nu direct
 - **Unt** — puțin, la gătit
-- **Carne roșie slabă** (vițel, porc slab) — rar, foarte bine gătită, moale
+- **Carne roșie slabă** (vițel, porc slab) — max 2×/săptămână, foarte bine gătită, moale (IARC 2A)
 - **Nuci, migdale** — doar măcinate fin sau pisate (nu întregi, nu cu coajă)
-- **Iaurt, kefir, brânzeturi proaspete** — de clarificat cu medicul înainte de consum (directiva actuală este doar pentru lapte)
+- **Iaurt, kefir, brânzeturi proaspete** — directiva inițială (gastroenterolog) restricționase laptele dulce; iaurturile/kefirul în general sunt OK la pacient oncolog (sursă proteină + probiotice). Reconfirmare la consult 30.04.
 - **Ciocolată neagră** — eventual 1-2 pătrățele rar, nu frecvent
 - **Ouă ochiuri în ulei** — grăsime mai multă, ocazional
+- **β-caroten ca supliment izolat** — interzis la fost fumător (studiile ATBC, CARET — risc cancer pulmonar). β-caroten **din alimente** (morcov, dovleac) este sigur.
 
 ---
 
@@ -185,38 +354,42 @@ Obiectiv principal în perioada asta: **să nu scadă în greutate**. Motivul e 
 - Chipsuri
 - Șnițel pane cu coajă tare
 - Pizza cu margine foarte prăjită
+- Rezistă-te la ispita „un pic" — pe stenoză aproape completă, **un singur fragment dur poate bloca tubul digestiv**.
 
 ### Băuturi carbogazoase
 
 **Ce provoacă:** dilatarea stomacului cu gaz → presiune pe sfincterul esofagian → reflux acid garantat după fiecare pahar. Eructații cu acid.
 
-- Apă minerală cu bule (Borsec, Bucovina cu bule, etc.)
+- Apă minerală cu bule (Borsec cu bule, Bucovina cu bule, etc.)
 - Cola, Pepsi, Fanta, Sprite, Schweppes
 - Bere (dublă problemă — gaz + alcool)
 - Cidru
 - Șampanie, vin spumant
 - Limonadă industrială cu bule
 
-### Temperaturi extreme
+### Temperaturi extreme (NB: critic în zilele de chimio cu oxaliplatin)
 
-**Ce provoacă:** șoc termic direct pe leziune. Fierbinte = arsură peste arsură. Foarte rece = contractare bruscă + iritație. Amplifică inflamația.
+**Ce provoacă în general:** șoc termic direct pe leziune. Fierbinte = arsură peste arsură.
+
+**Ce provoacă cu oxaliplatin (parte din FLOT, dacă se decide):** alimentele/băuturile reci declanșează **disestezie faringolaringiană acută** (senzație de "gât strâns" + amorțeală) prin canale ionice (TRPM8). Evitare obligatorie **5–7 zile post-infuzie**.
 
 - Supă clocotită (așteptare 10 min până scade la temperatura corpului)
 - Ceai proaspăt fiert fierbinte (se lasă până e călduț)
 - Cafea fierbinte
-- Înghețată direct din congelator
-- Băuturi cu multă gheață
-- Apă foarte rece din frigider
+- **Înghețată direct din congelator** — interzisă post-oxaliplatin
+- **Băuturi cu multă gheață** — interzise post-oxaliplatin
+- **Apă foarte rece din frigider** — interzisă post-oxaliplatin
+- **Sucuri/fructe direct din frigider** — interzise post-oxaliplatin
 
 ### Mezeluri procesate și afumate
 
-**Ce provoacă:** combinație toxică pe termen lung — nitriți/nitrați (conservanți transformați în compuși iritanți pentru mucoasa digestivă), sare multă, hidrocarburi din afumare (benzopireni). Consum frecvent = iritație cronică a tubului digestiv și factor de risc documentat pentru leziuni noi în stomac, esofag și colon. De evitat mai ales acum, cu leziune esofagiană activă și polip la colon.
+**Ce provoacă:** **IARC Grup 1 — cert carcinogen** pe digestiv. Nitriți/nitrați transformați în compuși N-nitrozo + sare multă + hidrocarburi din afumare (benzopireni). **De evitat ferm acum**, cu leziune esofagiană activă, polip colon descendent, antecedent H. pylori pozitiv.
 
-- Salam uscat, kaizer, chorizo
+- Salam uscat, kaizer, chorizo, prosciutto, jamón, mortadella
 - Cabanos, ghiudem, babic
 - Cârnați afumați (semi-afumat Sibiu, de plescoi afumat)
 - Șuncă afumată, slănină afumată
-- Pește afumat (heringi, scrumbie afumată, macrou afumat)
+- Pește afumat (heringi, scrumbie afumată, macrou afumat) — afumarea adaugă HAP
 - Pastramă
 - Hot-dog, parizer, crenvurști
 - Conserve de carne
@@ -249,7 +422,7 @@ Obiectiv principal în perioada asta: **să nu scadă în greutate**. Motivul e 
 
 ### Exces de sare
 
-**Ce provoacă:** retenție de apă, presiune crescută pe sistem, iritație digestivă în cantitate mare.
+**Ce provoacă:** retenție de apă, presiune crescută pe sistem (HTA + post-stent), iritație digestivă; sinergie cu H. pylori pentru risc gastric.
 
 - Murături în cantitate mare
 - Pastă concentrată de roșii industrială
@@ -259,17 +432,30 @@ Obiectiv principal în perioada asta: **să nu scadă în greutate**. Motivul e 
 - Supe instant Knorr / Maggi
 - Cuburi concentrate de supă
 
-### Interacțiuni cu medicația curentă
+### Interacțiuni cu medicația curentă (medicamentele zilnice)
 
 **Ce provoacă:** modifică efectul medicamentelor pe care le ia zilnic. Risc real, nu teoretic.
 
-- **Suc de grapefruit, grapefruit întreg, grepfrut** — interacționează cu amlodipina din Triplixam. Efect: crește concentrația medicamentului în sânge, poate scădea tensiunea prea mult. EXCLUS cât timp ia Triplixam.
-- **Lapte dulce** — directivă directă a medicului gastroenterolog în perioada actuală. EXCLUS.
-- **Ceai / tinctură de sunătoare** — interacționează cu Aspenter și alte medicamente. EVITAT.
+- **Suc de grapefruit, grapefruit întreg, pomelo** — interacționează cu amlodipina din Triplixam. Efect: crește concentrația medicamentului în sânge, poate scădea tensiunea prea mult. **EXCLUS** cât timp ia Triplixam.
+- **Ceai / tinctură de sunătoare** (Hypericum perforatum) — interacționează cu Aspenter și (dacă va lua FLOT) cu **docetaxel + irinotecan**: scade SN-38 cu 42%, scade docetaxel sub nivel terapeutic. **EXCLUS — efect persistent peste 3 săptămâni după oprire**.
+- **Lapte dulce simplu** — directivă inițială gastroenterolog. De reconfirmat la consult oncolog 30.04.
+
+### Interacțiuni cu chimioterapia FLOT (dacă se decide protocolul) — strict de evitat
+
+> **Notă:** decizia FLOT vs. alt protocol vs. tratament paliativ se ia la consult oncolog 30.04.2026 OncoHelp Timișoara, după rezultatul biopsiei. Lista de mai jos e relevantă **doar dacă se confirmă FLOT**.
+
+| Element                                                             | De ce e periculos                                                                                   |
+| ------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- |
+| **Sunătoare (Hypericum)**                                           | Reduce activitatea irinotecan (SN-38 −42%) și docetaxel sub nivel terapeutic — **interzis absolut** |
+| **Grapefruit, pomelo**                                              | Crește toxicitatea docetaxel (inhibitor CYP3A4 intestinal)                                          |
+| **Echinaceea, ginseng, ginkgo, kava, valeriană în doze mari**       | Interacțiuni multiple cu chimio — evitate ca suplimente                                             |
+| **Alimente reci** (5–7 zile post-oxaliplatin)                       | Disestezie faringolaringiană acută                                                                  |
+| **Vaccinuri vii** (rubeolă, varicelă, BCG, vaccin antigripal nazal) | Imunosupresie chimio — contraindicate                                                               |
+| **Alcool de orice tip**                                             | Hepatotoxic + IARC Grup 1 cancer digestiv superior — **interzis absolut**                           |
 
 ---
 
-## Idei de mâncăruri (inspirație pentru bucătărie)
+## 🍳 Idei de mâncăruri (inspirație pentru bucătărie)
 
 ### Supe și ciorbe — cele mai utile (umezesc, hrănesc, ușor de înghițit)
 
@@ -281,6 +467,8 @@ Obiectiv principal în perioada asta: **să nu scadă în greutate**. Motivul e 
 - Ciorbă de cartofi cu leuștean
 - Ciorbă de miel (primăvara, miel tânăr)
 - Bulion de legume pasat
+- **Supă cremă de broccoli + cartof cu parmezan** (sulforafan + densitate proteică)
+- **Supă cremă de linte roșie cu morcov și ghimbir** (15 g proteine vegetale + β-caroten)
 - Supă cremă de conopidă cu puțin unt
 - Supă cremă de morcov cu ghimbir puțin
 - Ciorbă de loboda / ștevie / urzici (primăvara)
@@ -289,6 +477,8 @@ Obiectiv principal în perioada asta: **să nu scadă în greutate**. Motivul e 
 
 - Șalău la abur cu zeamă de lămâie și pătrunjel
 - Păstrăv fiert cu cartofi noi și ulei măsline
+- **Somon la abur cu mărar și ulei măsline** (omega-3 anti-cașexie)
+- **Sardine pasate pe pâine proaspătă cu avocado** (proteine + calciu + omega-3 într-o porție mică)
 - Biban înăbușit cu morcov și dovlecel
 - Cod la abur cu mărar
 - Piept de pui fiert cu legume rădăcinoase
@@ -296,25 +486,27 @@ Obiectiv principal în perioada asta: **să nu scadă în greutate**. Motivul e 
 - Rasol de vită cu zarzavat (clasic)
 - Rasol de pui cu sos alb de legume pasate
 - Iahnie de curcan cu cartofi (totul înăbușit, fără rumenire)
-- Ficat de pui înăbușit cu ceapă moale
+- Ficat de pui înăbușit cu ceapă moale (1×/săptămână — fier hem)
 - Miel tânăr la cuptor cu capac, cu cartofi și morcov
 - Perișoare moi în sos de roșii diluat (nu concentrat)
 - Tocăniță de pui cu cartofi (fără rumenire, doar înăbușit)
 
-### Garnituri
+### Garnituri (toate IDDSI 4 — pasate cu booster)
 
-- Piure de cartofi cu puțin unt sau ulei măsline
+- Piure de cartofi cu Protifar + ulei măsline + parmezan
 - Cartofi natur cu pătrunjel
 - Cartofi copți înăbușiți în pungă de hârtie la cuptor
-- Mămăligă moale (apă multă, textură aproape ca o cremă)
+- **Mămăligă moale cu parmezan și smântână** (carb + proteine + grăsimi într-o lingură)
 - Orez fiert moale cu pătrunjel
 - Pilaf moale cu pui
 - Paste bine fierte cu ulei măsline și verdeață
 - Griș pe apă cu puțin unt
 - Cușcuș fiert moale
-- Piure de conopidă
-- Piure de mazăre
-- Piure de țelină rădăcină
+- Piure de conopidă cu unt
+- Piure de mazăre cu pătrunjel
+- Piure de țelină rădăcină cu lapte
+- **Piure de linte roșie cu morcov** (15 g proteine vegetale)
+- **Hummus pasat cu tahini și lămâie** (proteine + grăsimi bune)
 - Tăiței de casă fierți cu puțin ulei
 
 ### Legume ca preparate principale
@@ -326,6 +518,7 @@ Obiectiv principal în perioada asta: **să nu scadă în greutate**. Motivul e 
 - Salată de vinete cu puțin ulei măsline (fără mult usturoi)
 - Dovlecei înăbușiți cu mărar
 - Spanac cu pui (călit moale, nu prăjit)
+- **Broccoli + conopidă piure cu parmezan** (crucifere cu sulforafan)
 
 ### Mâncăruri tradiționale românești — versiuni adaptate
 
@@ -337,25 +530,28 @@ Obiectiv principal în perioada asta: **să nu scadă în greutate**. Motivul e 
 - Piftie de pui (mai ușor decât cea de porc)
 - Ostropel de pui (fără ardei iute, cu puțin usturoi)
 
-### Mic dejun — variante
+### Mic dejun — variante cu booster proteic
 
+- **Porridge de ovăz pe lapte cu Protifar + banană pasată + scorțișoară** (β-glucan + proteină booster)
 - Griș pe apă cu banană coaptă pasată și scorțișoară
-- Ovăz pe lapte vegetal cu pere coapte
+- **Smoothie booster: banană + lapte + 1 scoop whey + ulei măsline + 1 lingură unt arahide** (~500 kcal, 30 g proteine)
 - Omletă pe abur cu pâine proaspătă
-- Mămăligă moale cu un ou fiert moale
-- Piure de avocado pe pâine proaspătă
+- Mămăligă moale cu un ou fiert moale și parmezan
+- Piure de avocado pe pâine proaspătă cu sare puțină
+- **Iaurt grecesc 10% + miere + semințe in măcinate + afine pasate** (proteine + omega-3 + antioxidanți)
 - Ou fiert moale cu pâine proaspătă înmuiată în supă
-- Smoothie: banană + lapte vegetal + ovăz + puțin ulei măsline
 
 ### Gustări — variante
 
-- Banană bine coaptă pasată
+- Banană bine coaptă pasată cu unt arahide
 - Compot de mere fără zahăr cu biscuite moale înmuiat
 - Pere fierte la cuptor
 - Piure de banană cu puțină miere
 - Felie mică de pâine proaspătă cu pate vegetal (avocado, humus diluat)
-- Pepene roșu bine copt (vara)
+- **Hummus pasat fin cu pâine proaspătă** (proteine + grăsimi)
+- Pepene roșu bine copt (vara) — la temperatura camerei
 - Caise / piersici coapte fără coajă
+- **Sticluță Nutridrink/Fresubin** (între mese, cu paiul, lent — vezi secțiunea ONS)
 
 ### Dulciuri naturale (moderat)
 
@@ -380,12 +576,44 @@ Obiectiv principal în perioada asta: **să nu scadă în greutate**. Motivul e 
 
 ---
 
-## De unde vin recomandările
+## 🧪 Pre-FLOT — pregătire nutrițională (dacă se decide protocolul)
 
-- Directivă medic curant (Genesis Medical Clinic Arad) — restricție lapte dulce
-- Principii generale de alimentație pentru leziuni esofagiene și reflux: ghiduri ESMO (Societatea Europeană de Oncologie Medicală) și ESPEN (Societatea Europeană de Nutriție Clinică)
-- Interacțiunea grapefruit ↔ amlodipină: prospectul oficial Triplixam
-- Mezeluri procesate ca factor de risc digestiv: raport IARC (Agenția Internațională pentru Cercetarea Cancerului), 2015
-- Produse locale Arad: cunoaștere directă a zonei (piețe, livezi, pescării)
+Dacă oncologul (30.04 OncoHelp) recomandă chirurgie + chemoterapie perioperatorie FLOT, există o fereastră de **5–7 zile preoperator** cu beneficii dovedite în meta-analize (Braga, Klek, Farreras):
 
-**Lista de mai sus este un ghid de inspirație pentru gătit. La orice nelămurire punctuală (iaurt, kefir, brânzeturi, cantitate de miere), se clarifică direct cu medicul curant la următorul consult.**
+- **Imunonutriție:** **Impact Oral 3×/zi** (Nestlé) — 4,2 g arginină + omega-3 1,1 g + nucleotide per porție. Reduce complicații infecțioase + durata spitalizare post-chirurgie cancer gastric.
+- **Alternativă:** **Cubitan** (Nutricia) 200 mL × 3/zi — 3 g arginină + Zn, Fe, Se, vit. C/E (pro-cicatrizare).
+- **Optimizare proteică:** ținta 1,5–2 g/kg/zi (la 79 kg ⇒ 120–160 g proteine) — combinație ONS + alimentație pasată.
+
+> **Decizie strict cu oncologul/chirurgul** la consult.
+
+---
+
+## 📊 Monitorizare săptămânală (sugestie pentru familie)
+
+- **Greutate:** 2×/săptămână, dimineața după toaletă, aceeași oră
+- **Aport oral aproximativ:** notare în telefon — câte sticluțe ONS, câte mese, dacă a mâncat tot sau parțial
+- **Toleranță:** apariție / dispariție de "nod în gât", senzație de bolus oprit, regurgitări
+- **Hidratare:** dacă diureza scade, se amplifică oboseala, apare amețeală la ridicare → semnal contact medic
+
+---
+
+## 📚 De unde vin recomandările
+
+**Surse științifice (ghid nutrițional EXHAUSTIV cercetare 25.04.2026 — `Downloads/compass_artifact_wf-e942f31e...`):**
+
+- ESPEN „Practical guideline: Clinical Nutrition in cancer" (Muscaritoli M et al., Clin Nutr 2021;40(5):2898-2913) — necesar energetic + proteic + macro/micronutrienți
+- ESMO „Cancer cachexia in adult patients: Clinical Practice Guidelines" (Arends J et al., ESMO Open 2021;6(3):100092) — strategii prevenție cașexie
+- IDDSI Framework 2019 (Cichero JAY et al., Dysphagia 2017;32:293-314) — niveluri textură pentru disfagie
+- IARC Monographs Vol. 114 (2018) — carne procesată cert carcinogen Grup 1
+- ESPEN „Practical short micronutrient guideline" (Berger MM et al., 2024)
+- Ryan JL et al. (2012) RCT n=576 — ginger antiemetic chimio
+- Mathijssen RH et al. (2002) — sunătoare reduce SN-38 cu 42%
+- Memorial Sloan Kettering Cancer Center „About Herbs Database" — interacțiuni plante-medicamente
+
+**Surse anterioare (păstrate):**
+
+- Directivă medic curant (Genesis Medical Clinic Arad) — restricție lapte dulce (de reconfirmat la consult 30.04)
+- Prospectul oficial Triplixam — interacțiunea grapefruit ↔ amlodipină
+- Produse locale Arad — cunoaștere directă a zonei (piețe, livezi, pescării)
+
+**Disclaimer:** acest document este un ghid de inspirație pentru gătit + orientare nutrițională, **NU** plan medical individualizat. Recomandările finale pentru cantități exacte ONS, suplimente, integrare cu protocolul FLOT, jejunostomă etc. se stabilesc de **echipa multidisciplinară** (oncolog, chirurg, nutriționist clinic, cardiolog post-stent, farmacist clinic) la consultul din 30.04.2026 OncoHelp Timișoara.

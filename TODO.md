@@ -2,7 +2,7 @@
 
 **Fișier de evidență a tuturor acțiunilor de făcut. Se actualizează continuu — la adăugarea și completarea fiecărei acțiuni.**
 
-**Ultima actualizare:** 24 aprilie 2026 18:30 (integrare masivă Arhiva_Generala + Boala_Actuala — 12 JSON-uri noi canonice + identificare medici critici: MF Dr. Orbán, cardiolog Dr. LAZA CRISTINA, urolog Dr. Pitea, chirurg Dr. Papiu; ștergere 99_altele, eliminare duplicate).
+**Ultima actualizare:** 25 aprilie 2026 03:00 (clarificare TORVACARD: NU se administrează — schema reală este cea manuscrisă; consult oncolog ✅ programat 30.04 OncoHelp Timișoara; rezultat biopsie estimat 28-29.04; dosar fizic POST-biopsie; ALIMENTATIE.md sincronizat cu ghid nutrițional ESPEN/IDDSI/FLOT).
 
 ---
 
@@ -17,8 +17,9 @@
 | 19.04.2026                          | Hidratare activă (plan confirmat de familie)                    | ✅ Finalizat                                            |
 | **20.04.2026 17:00**                | **CT torace + abdomen + pelvis cu contrast (Genesis Micălaca)** | ✅ **Finalizat** — raport integrat 22.04.2026           |
 | **22.04.2026**                      | Reluare Jamesi (H+48 post-CT, creatinină pre-CT normală)        | ✅ **Finalizat** — reluat seara 22.04, fără complicații |
-| {17.04.2026 + 7-14 zile}            | Rezultat biopsie (estimat 24.04-01.05)                          | 🟡 În așteptare · monitor automat activ ↓               |
-| **Post-CT, URGENT**                 | **Consult oncolog digestiv** (nu se așteaptă biopsia)           | 🔴 **De programat URGENT** (ascită de elucidat)         |
+| **28-29.04.2026** (estimat)         | **Rezultat biopsie esofagiană** (Bioclinica Arad)               | 🟢 În așteptare · monitor automat activ 24/7 (ntfy.sh)  |
+| **29-30.04.2026**                   | Pregătire dosar fizic POST-biopsie pentru consult oncolog       | 🔴 P0 nou — vezi secțiune dedicată mai jos              |
+| **30.04.2026** ✅                   | **Consult oncolog digestiv — OncoHelp Timișoara**               | ✅ **PROGRAMAT** (confirmat user 25.04)                 |
 | Post-consult oncolog                | Evaluare endocrinologică (glandă suprarenală stângă)            | 🟡 De programat                                         |
 
 ---
@@ -39,19 +40,49 @@
 
 ## P0 — Critic, de efectuat IMEDIAT
 
-### [P0] 🔴 Consult oncolog digestiv URGENT (post-CT, 22.04.2026)
+### [P0] ✅ Consult oncolog digestiv — PROGRAMAT 30.04.2026 OncoHelp Timișoara
 
-**Status:** NOU deschis. **Prioritate maximă** — nu se așteaptă biopsia.
+**Status:** ✅ **PROGRAMAT** — confirmat de user 25.04.2026.
 
-**Motivație accelerare:** CT-ul din 20.04.2026 arată proces expansiv infiltrativ circumferențial la joncțiunea eso-gastrică (Siewert II probabil) + **ascită perihepatică 15 mm + intrapelvină 28 mm**. Ascita în context neoplazic esofagian avansat poate indica **carcinomatoză peritoneală** (stadiu IV). Decizia terapeutică se schimbă esențial: FLOT adjuvant + chirurgie vs. chemoterapie paliativă.
+**Detalii:**
 
-**Sub-task-uri:**
+- **Data:** 30 aprilie 2026
+- **Unitate:** **OncoHelp Timișoara**
+- **Context așteptat:** rezultat biopsie estimat 28-29.04 → consultul are toate elementele decizionale
 
-- [ ] Solicitare recomandare oncolog de la Dr. Noufal Abdul Vahab (Genesis Arad)
-- [ ] Comparare opțiuni: Arad / Timișoara (IOCN, OncoHelp, SCJU) / Cluj (IOC Chiricuță) / București (Fundeni, SanaDor, Monza)
-- [ ] Programare preventivă cât mai curând, chiar înainte de rezultatul biopsiei
-- [ ] Pregătire dosar fizic pentru consult: CI, card CAS, bilet BCTAP, buletin endoscopie 17.04, buletin Bioclinica creatinină 17.04, **raport CT 20.04 (imprimare + CD DICOM dacă s-a primit)**
-- [ ] Listă întrebări actualizată (secțiunea „Întrebări pentru viitorul oncolog digestiv" mai jos)
+**Motivație (păstrată pentru context):** CT-ul din 20.04.2026 arată proces expansiv infiltrativ circumferențial la joncțiunea eso-gastrică (Siewert II probabil) + **ascită perihepatică 15 mm + intrapelvină 28 mm**. Ascita în context neoplazic esofagian avansat poate indica **carcinomatoză peritoneală** (stadiu IV). Decizia terapeutică se schimbă esențial: FLOT adjuvant + chirurgie vs. chemoterapie paliativă.
+
+**Sub-task-uri rămase:**
+
+- [x] ✅ Programare consult — confirmată user 25.04
+- [ ] (Opțional) Solicitare recomandare oncolog de la Dr. Noufal Abdul Vahab (Genesis Arad) — pentru continuitate
+- [ ] **Pregătire dosar fizic — vezi task P0 dedicat de mai jos** (deadline 29-30.04, post-biopsie)
+- [ ] Recapitulare listă întrebări pregătite (secțiunea „Pentru viitorul oncolog digestiv" mai jos)
+
+### [P0] 🔴 Pregătire dosar fizic POST-biopsie pentru consult oncolog (deadline 29-30.04)
+
+**Status:** NOU deschis 25.04.2026.
+
+**Decizie user (25.04):** dosarul se asamblează **DUPĂ primirea rezultatului histopatologic**, pentru a fi complet la consult. Nu se pregătește în avans.
+
+**Cronologie:**
+
+1. **28-29.04.2026** — primire rezultat biopsie (notificare automată ntfy.sh pe telefon)
+2. **29-30.04.2026** — asamblare dosar fizic (printare + organizare)
+3. **30.04.2026** — consult OncoHelp Timișoara
+
+**Componente dosar:**
+
+- [ ] C.I. + card CAS
+- [ ] Bilet trimitere BCTAP 0631727 (17.04.2026)
+- [ ] Buletin endoscopie + colonoscopie 17.04.2026 (de printat din `Dosar_Medical/`)
+- [ ] Buletin Bioclinica creatinină + uree 17.04.2026 (de printat)
+- [ ] **Raport CT 20.04.2026** + CD DICOM (dacă s-a primit la efectuare — verificare familie)
+- [ ] **Rezultat biopsie histopatologic** (element-cheie — printat când apare 28-29.04)
+- [ ] Listă medicație curentă (4 confirmate: Aspenter, Concor, Triplixam, Jamesi) + alergii (fără)
+- [ ] Listă întrebări pregătite pentru oncolog (secțiunea dedicată mai jos)
+- [ ] **Notă observație** statină nealuată — pentru discuție la consult (vezi `CONTEXT_MEDICAL.md §4`)
+- [ ] (Opțional) `Documente_Informative/EXPLICATIE_CONSULT_ONCOLOG_SCENARII.md` — pentru orientare familie pre-consult
 
 ### [P0] 📋 Analiză și prezentare rezultat CT familiei (22.04.2026)
 
@@ -343,26 +374,34 @@ Pentru evaluare mai precisă a expunerii (calculul „pachete-an”).
 - [x] Update `Dosar_Medical/2025-11-10_schema_medicamente.json`
 - [ ] Clarificare cabinet/unitate Dr. LAZA CRISTINA (probabil cabinet cardiologie ambulator Arad — de confirmat cu familia)
 
-### [P1] 🟡 **NOU — Clarificare TORVACARD (discrepanță 10.11.2025)** — deschis audit 2026-04-24
+### [P1] ✅ Clarificare TORVACARD — REZOLVAT 2026-04-25
 
-**Context:** Scrisoarea medicală Dr. LAZA CRISTINA din 10.11.2025 (`Dosar_Medical/2025-11-10_scrisoare_medicala_cardiologie.json`) prescrie **TORVACARD 10 sau 20 mg 0-0-1 seara** (statină, atorvastatină). Schema zilnică manuscrisă de aceeași zi (`2025-11-10_schema_medicamente.json`) **NU include TORVACARD** — rândul 4 este tăiat cu marker albastru (anulat?). `CONTEXT_MEDICAL.md §4` până acum nu documentase această discrepanță.
+**Status:** ✅ **REZOLVAT 2026-04-25** — clarificat de user. Schema reală în vigoare este cea manuscrisă din `Dosar_Medical/documente_sursa/08_schema_tratament/` (4 medicamente: Aspenter, Concor, Triplixam, Jamesi). **Pacientul NU administrează TORVACARD.**
 
-**De ce e important (impact clinic):**
+- [x] Clarificare status real — user a confirmat 25.04 că schema reală e cea manuscrisă, fără statină
+- [x] Update `CONTEXT_MEDICAL.md §4` — sub-secțiunea de discrepanță înlocuită cu observație clinică scurtă (LDL 133 + lipsă statină pre-esofagectomie → de discutat la consult oncolog 30.04)
+- [x] `Dosar_Medical/2025-11-10_schema_medicamente.json` — reflectă deja schema reală, nu necesită modificare
+- [x] `DASHBOARD.html` — alert TORVACARD eliminat la regenerarea 2026-04-25
+- [ ] **Acțiune rămasă:** discuție cu oncologul (30.04 OncoHelp) + medic familie (Dr. Orbán) despre reevaluare prevenție CV secundară (LDL 133 mg/dL pre-esofagectomie) — listat în task P0 „Pregătire dosar fizic"
 
-- Pacient post-stent coronarian 2012 → prevenție CV secundară recomandă statină continuă (ghid ESC/AHA)
-- Lipidogramă 17.06.2025: **LDL 133 mg/dL** (țintă post-stent <70 mg/dL) — neatins, statină indicată
-- Pre-intervenție oncologică majoră (esofagectomie planificată post-biopsie): prevenția CV secundară suboptimă crește risc perioperator
+### [P1] 🟢 NOU — Test confirmare eradicare H. pylori (UBT sau antigen fecal)
+
+**Context:** Serologia Anti-H. pylori IgG era pozitivă **>100 U/mL** în 04.06.2024 + 06.09.2024 (Ultra ClinicaVest Pecica). Serologia IgG NU distinge infecție activă de antecedentă (anticorpii persistă luni/ani post-eradicare). Tratamentul antibiotic + IPP probabil a fost efectuat ambulator post-episod UPU 30.05.2024 (NU documentat explicit). **Niciun test de control post-eradicare** efectuat (UBT sau antigen fecal).
+
+**De ce e important pre-esofagectomie:**
+
+- HP activ persistent în context tumoral eso-gastric → factor de risc inflamator + posibil impact pe vindecare anastomotică
+- Eradicarea HP înainte de chirurgie e standard ESMO/NCCN dacă se confirmă activ
 
 **Sub-task-uri:**
 
-- [ ] **Apel telefonic familie:** pacientul ia TORVACARD (sau altă statină) curent? Dacă DA, doză + orar? Dacă NU, de la ce dată și motivul (efecte adverse, decizie medic, omisiune)?
-- [ ] Cerere foto cutie TORVACARD (dacă există) → adăugare în `Dosar_Medical/documente_sursa/08_schema_tratament/` + `.meta.json`
-- [ ] Update `CONTEXT_MEDICAL.md §4` cu statusul real (luat / neluat / doză)
-- [ ] Update `Dosar_Medical/2025-11-10_schema_medicamente.json` cu status TORVACARD clarificat
-- [ ] Update `DASHBOARD.html` la regenerarea viitoare
-- [ ] Dacă NU e luat și nu există motiv clinic documentat → ridicare către medic curant (Dr. LAZA sau medic familie Dr. Orbán) pentru reevaluare
+- [ ] **Decizie test:** UBT (urea breath test, mai sensibil) sau antigen fecal HP (alternativă acceptabilă)
+- [ ] Programare test la laborator (Ultra ClinicaVest Pecica / Bioclinica Arad / alt laborator)
+- [ ] Întrebare pentru oncolog 30.04: este necesar testul pre-FLOT/chirurgie sau se poate face concomitent?
+- [ ] Dacă pozitiv → re-tratament eradicare conform ghid Maastricht VI
+- [ ] Integrare rezultat în `Dosar_Medical/` (JSON canonic + .meta.json + propagare CONTEXT_MEDICAL.md)
 
-**Data deschiderii:** 2026-04-24 (identificat în auditul din 20:54).
+**Data deschiderii:** 2026-04-25.
 
 ### [P2] HbA1c recent
 
