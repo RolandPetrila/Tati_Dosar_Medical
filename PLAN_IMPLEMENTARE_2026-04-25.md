@@ -406,7 +406,7 @@ version: 1.0
 
 ### Istoric corespondență
 
-- 2026-04-24 10:56 — primit `RE: Solicitare consult oncologic` ([thread](corespondenta/2026-04-24_re-solicitare-consult-anater.md)) — cale clinică propusă: așteptare biopsie + consult ulterior
+- 2026-04-24 10:56 — primit `RE: Solicitare consult oncologic` ([thread](Dosar_Medical/corespondenta/2026-04-24_re-solicitare-consult-anater.md)) — cale clinică propusă: așteptare biopsie + consult ulterior
 - 2026-04-25 18:00 — răspuns trimis manual de user (programare 30.04 + 5 întrebări organizatorice)
 
 ### Note libere
@@ -564,9 +564,9 @@ version: 1.0
 
 | Data ultim | Thread                                                                     | Subiect                                              | Participanți        | Status                       |
 | ---------- | -------------------------------------------------------------------------- | ---------------------------------------------------- | ------------------- | ---------------------------- |
-| 2026-04-25 | [solicitare-sprijin-oncohelp](2026-04-23_solicitare-sprijin-oncohelp.md)   | Solicitare sprijin medical pentru tatăl meu (66 ani) | Roland → OncoHelp   | ⚪ încheiat (thread inițial) |
-| 2026-04-25 | [re-solicitare-consult-anater](2026-04-24_re-solicitare-consult-anater.md) | RE: Solicitare consult oncologic                     | Roland ↔ Dr. Anater | 🟡 așteptare răspuns         |
-| 2026-04-24 | [raspuns-iocn-mester](2026-04-24_raspuns-iocn-mester.md)                   | Răspuns IOCN — solicitare consult oncologic          | Dr. Mester → Roland | ⚪ încheiat                  |
+| 2026-04-25 | [solicitare-sprijin-oncohelp](Dosar_Medical/corespondenta/2026-04-23_solicitare-sprijin-oncohelp.md)   | Solicitare sprijin medical pentru tatăl meu (66 ani) | Roland → OncoHelp   | ⚪ încheiat (thread inițial) |
+| 2026-04-25 | [re-solicitare-consult-anater](Dosar_Medical/corespondenta/2026-04-24_re-solicitare-consult-anater.md) | RE: Solicitare consult oncologic                     | Roland ↔ Dr. Anater | 🟡 așteptare răspuns         |
+| 2026-04-24 | [raspuns-iocn-mester](Dosar_Medical/corespondenta/2026-04-24_raspuns-iocn-mester.md)                   | Răspuns IOCN — solicitare consult oncologic          | Dr. Mester → Roland | ⚪ încheiat                  |
 
 ## Threaduri arhivate
 
