@@ -1,12 +1,13 @@
 ---
 plan_id: implementare-r27-r28-contacte-dashboard-2026-04-25
 version: 1.0
-status: 🔴 PENDING
+status: 🟡 IN_PROGRESS
 created_at: 2026-04-25 18:05
+started_execution_at: 2026-04-25 18:30
 auditor_session: terminal A (Opus 4.7 1M context — sesiunea care a creat planul)
 executor_session: terminal B (sesiune nouă deschisă de user — execută strict)
 estimated_duration_min: 85
-commits_planned: 5
+commits_planned: 7
 backup_strategy: R10 înainte de fiecare modificare la fișiere de referință
 commit_strategy: incremental (NU final unic) — 1 commit per task major
 ---
@@ -69,25 +70,25 @@ User a confirmat în conversație următoarele decizii:
 
 **Pași concreti:**
 
-- [ ] **#7.1** — Backup R10:
+- [x] **#7.1** — Backup R10 (2026-04-25 18:26 — 3 fișiere copiate în `Dosar_Medical/arhiva/context_medical_versiuni/`):
 
   ```bash
   cp "G:/My Drive/Roly/.Tati/SESSION_LOG.md" "G:/My Drive/Roly/.Tati/Dosar_Medical/arhiva/context_medical_versiuni/SESSION_LOG_pre-trimitere-mail-anater_2026-04-25_$(date +%H%M).md"
   cp "G:/My Drive/Roly/.Tati/TODO.md" "G:/My Drive/Roly/.Tati/Dosar_Medical/arhiva/context_medical_versiuni/TODO_pre-trimitere-mail-anater_2026-04-25_$(date +%H%M).md"
   ```
 
-- [ ] **#7.2** — `SESSION_LOG.md` — adaugă DEASUPRA intrării `2026-04-25 15:50` o nouă intrare `2026-04-25 18:00` cu titlul `[Roland_user_manual] trimitere-mail-raspuns-anater-programare-30`:
+- [x] **#7.2** — `SESSION_LOG.md` — adaugă DEASUPRA intrării `2026-04-25 15:50` o nouă intrare `2026-04-25 18:00` cu titlul `[Roland_user_manual] trimitere-mail-raspuns-anater-programare-30`:
   - Scop: răspuns trimis manual de user la Dr. Anater (NU prin Claude Gmail draft) — confirmare programare 30.04 + 5 întrebări organizatorice
   - Destinatari: TO `angelo.anater@oncohelp.ro`; CC `programari@oncohelp.ro` + `office@oncohelp.ro`
   - Subiect: `RE: Solicitare consult oncologic`
   - Conținut sintetizat (5 puncte): biopsie 28-29.04 confirmare, programare 30.04 cerere, întrebări analize/internare/documente/bilet/telefon
   - Așteptare răspuns Dr. Anater pentru confirmare slot + clarificări
 
-- [ ] **#7.3** — `TODO.md` — în secțiunea `P0 — Critic, de efectuat IMEDIAT`:
+- [x] **#7.3** — `TODO.md` — în secțiunea `P0 — Critic, de efectuat IMEDIAT`:
   - La task `[P0] ✅ Consult oncolog digestiv — PROGRAMAT 30.04.2026 OncoHelp Timișoara` → adaugă sub-task: `- [x] ✅ Mail trimis manual 25.04 către Dr. Anater (RE: Solicitare consult oncologic) — confirmare biopsie 28-29.04 + 5 întrebări organizatorice. Așteptare răspuns clarificări.`
   - Sub Calendar — eveniment nou: `25.04.2026 18:00 | Mail trimis Dr. Anater (programare + 5 întrebări) | ✅ Trimis · Așteptare răspuns`
 
-- [ ] **#7.4** — `CHANGELOG.md` — DEASUPRA intrării `2026-04-25 15:50` adaugă intrare `2026-04-25 18:00 — Trimitere manual mail răspuns Dr. Anater (programare 30.04 + întrebări organizatorice)`:
+- [x] **#7.4** — `CHANGELOG.md` — DEASUPRA intrării `2026-04-25 15:50` adaugă intrare `2026-04-25 18:00 — Trimitere manual mail răspuns Dr. Anater (programare 30.04 + întrebări organizatorice)`:
   - Tip: CORESPONDENȚĂ EXTERNĂ
   - Context: răspuns la mailul Dr. Anater 24.04 + workflow plan-audit pe sesiunea curentă
   - Conținut: 5 întrebări (analize/internare/documente/bilet/telefon)
@@ -95,17 +96,11 @@ User a confirmat în conversație următoarele decizii:
 
 **Verificare:**
 
-- [ ] `SESSION_LOG.md` are intrare nouă cu data `2026-04-25 18:00`
-- [ ] `TODO.md` reflectă mailul trimis în calendar + sub-task P0 consult
-- [ ] `CHANGELOG.md` are intrare nouă
+- [x] `SESSION_LOG.md` are intrare nouă cu data `2026-04-25 18:00`
+- [x] `TODO.md` reflectă mailul trimis în calendar + sub-task P0 consult (cronologic ordonat: după 22.04, înainte de 28-29.04)
+- [x] `CHANGELOG.md` are intrare nouă
 
-**Commit incremental:**
-
-```
-git add SESSION_LOG.md TODO.md CHANGELOG.md "Dosar_Medical/arhiva/context_medical_versiuni/"
-git commit -m "[PLAN 2026-04-25] task #7 — log mail trimis manual Dr. Anater 25.04"
-git push
-```
+**Commit incremental:** `[PLAN 2026-04-25] task #7 — log mail trimis manual Dr. Anater 25.04` (commit pending push).
 
 ---
 

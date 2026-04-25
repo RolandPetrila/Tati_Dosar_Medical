@@ -4,39 +4,6 @@
 
 ---
 
-## 2026-04-25 18:00 — Trimitere manual mail răspuns Dr. Anater (programare 30.04 + 5 întrebări organizatorice)
-
-**Tip:** CORESPONDENȚĂ EXTERNĂ.
-
-**Context:** răspuns la mailul Dr. Anater Angelo - Christian primit 24.04.2026 10:56 (`RE: Solicitare consult oncologic`, thread Gmail `19dbe7d30cfacbb3`). User a redactat și trimis manual răspunsul din clientul propriu de mail (NU prin Claude Gmail draft) — sincron cu workflow-ul plan-audit cross-terminal pe sesiunea curentă.
-
-**Conținut mail:**
-
-- **TO:** `angelo.anater@oncohelp.ro`
-- **CC:** `programari@oncohelp.ro`, `office@oncohelp.ro`
-- **Subiect:** `RE: Solicitare consult oncologic` (thread păstrat)
-- **5 puncte cheie:**
-  1. Confirmare timp biopsie (28-29.04, Bioclinica Arad)
-  2. Cerere programare slot 30.04 OncoHelp Timișoara
-  3. Întrebare: analize de sânge la OncoHelp sau acceptate din alt laborator?
-  4. Întrebare: regim ambulator sau internare?
-  5. Întrebare: documente necesare + bilet trimitere CAS + telefon contact organizatoric
-
-**Status așteptare:** răspuns Dr. Anater pentru confirmare slot + clarificări la cele 5 întrebări.
-
-**Edituri executate:**
-
-1. **`SESSION_LOG.md`** — intrare nouă DEASUPRA `2026-04-25 15:50`, cu titlul `[Roland_user_manual] trimitere-mail-raspuns-anater-programare-30`
-2. **`TODO.md`** — Calendar nou rând „25.04.2026 18:00 — Mail trimis Dr. Anater" + sub-task `[x]` în task P0 Consult oncolog + antet ultimei actualizări update
-3. **`CHANGELOG.md`** — această intrare
-4. **Backup R10:** `Dosar_Medical/arhiva/context_medical_versiuni/{SESSION_LOG,TODO,CHANGELOG}_pre-trimitere-mail-anater_2026-04-25_1826.md`
-
-**Why:** trasabilitate completă a corespondenței medicale — fiecare interacțiune cu medicii curanți / programați se loghează în SESSION_LOG + reflectă în calendarul TODO. Atunci când în Task #11 facem ingest Gmail, mailul va apărea automat și în `Dosar_Medical/corespondenta/2026-04-24_re-solicitare-consult-anater.md` ca mesaj nou în thread.
-
-**How to apply:** la orice mail trimis sau primit în legătură cu tata, log în SESSION_LOG cu marcaj rol (`[Roland_user_manual]` / `[Claude_Gmail_draft]` / `[primit_extern]`) + propagare la TODO calendar dacă există termen / programare.
-
----
-
 ## 2026-04-25 15:50 — Eliminare restricție generică pe lapte atribuită eronat gastroenterologului + secțiune nouă „🥛 Lactate — sinteză evidență"
 
 **Tip:** CORECȚIE FACTUALĂ + REACTUALIZARE EVIDENȚĂ-BAZATĂ.

@@ -6,35 +6,6 @@
 
 ---
 
-## 2026-04-25 18:00 — [Roland_user_manual] trimitere-mail-raspuns-anater-programare-30
-
-**Scop:** răspuns trimis manual de user (Roland) la mailul Dr. Anater Angelo - Christian (RE: Solicitare consult oncologic, primit 24.04.2026 10:56). NU prin Claude Gmail draft — user a redactat și a trimis direct din clientul propriu de mail.
-
-**Destinatari:**
-
-- **TO:** `angelo.anater@oncohelp.ro` (Dr. Anater)
-- **CC:** `programari@oncohelp.ro` + `office@oncohelp.ro` (departamentele OncoHelp pentru organizare logistică)
-
-**Subiect:** `RE: Solicitare consult oncologic` (păstrat thread-ul existent)
-
-**Conținut sintetizat (5 puncte cheie):**
-
-1. **Confirmare biopsie 28-29.04** — informare că rezultatul histopatologic al biopsiei esofagiene (prelevată 17.04.2026 la Bioclinica Arad) este estimat să apară în 28-29.04.2026.
-2. **Cerere programare 30.04** — solicitare slot consult oncologic la OncoHelp Timișoara pentru 30.04.2026, imediat după primirea rezultatului biopsiei.
-3. **Întrebare analize** — clarificare dacă analizele de sânge (HLG, biochimie, markeri tumorali) trebuie efectuate la OncoHelp sau dacă sunt acceptate cele din alt laborator (Bioclinica Arad / Genesis).
-4. **Întrebare internare/ambulator** — clarificare dacă consultul este în regim ambulator sau dacă trebuie programată internare pentru evaluare extinsă.
-5. **Întrebare documente + bilet trimitere + telefon de contact** — clarificare ce documente sunt necesare la consult (CT 20.04, bilet trimitere, scrisori medicale anterioare), dacă e nevoie de bilet de trimitere CAS și telefonul direct pentru contact organizatoric.
-
-**Status așteptare:** răspuns Dr. Anater pentru confirmare slot 30.04 + clarificări la cele 5 întrebări organizatorice. Thread ID în Gmail: `19dbe7d30cfacbb3`.
-
-**Why:** decuplarea workflow-ului — user redactează răspunsuri proprii când are pregătire suficientă, Claude îl ajută în paralel cu organizarea contextului medical. Mailul respectă reguli de cordialitate + sintetizează cele mai relevante întrebări pentru consult.
-
-**How to apply:** la orice corespondență externă inițiată sau primită, intrare separată în SESSION_LOG cu rol `[Roland_user_manual]` (când e trimis de user direct) sau `[Claude_Gmail_draft]` (când e generat de Claude). Reflectă în CONTEXT_MEDICAL.md / TODO.md / CHANGELOG.md conform R27 (auto-propagare ingest Gmail).
-
-**Fișiere modificate:** `SESSION_LOG.md`, `TODO.md`, `CHANGELOG.md`. Nicio modificare pe JSON-uri sursă (chain of custody R14 intact).
-
----
-
 ## 2026-04-25 15:50 — [Claude_Opus_4.7] eliminare-restrictie-lactate-gastroenterolog-sinteza-evidenta
 
 **Scop:** clarificare user 2026-04-25 (după-amiază): **medicul gastroenterolog (Dr. Noufal Abdul Vahab, gastroscopie 17.04.2026) NU a interzis lactatele**. Restricția generică pe „lapte dulce" prezentă în versiunile anterioare ale `ALIMENTATIE.md` era o reportare eronată. User cere: (1) eliminare mențiuni interdicție gastroenterolog din `ALIMENTATIE.md`, (2) cercetare bazată pe evidență dacă lactatele sunt recomandate sau nu pentru profilul pacientului, (3) reactualizare documentație cu noile recomandări.
