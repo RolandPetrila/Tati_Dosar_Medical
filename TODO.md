@@ -405,6 +405,25 @@ Pentru evaluare mai precisă a expunerii (calculul „pachete-an”).
 
 **Data deschiderii:** 2026-04-25.
 
+### [P2] 🔧 Rafinare R28 System Health Monitor — metric `auto_loaded_md_kb` (NOU 2026-04-25)
+
+**Context:** prima rulare R28 (2026-04-25 18:31) a detectat status `🔴 CRITICAL` pe metricul `total_md_root_kb` (542.3 KB / 500 KB inițial = 108.5%) — fals pozitiv din cauza pragului prea agresiv. CHANGELOG.md (132KB) + SESSION_LOG.md (81KB) cresc natural cu activitatea proiectului și NU sunt auto-loaded la sesiune (doar `CLAUDE.md` e auto-injected). Pragul a fost ridicat la 1024 KB ca soluție temporară.
+
+**Soluția corectă (rafinare):**
+
+- [ ] Introducere metric nou `auto_loaded_md_kb` în `scripts/system_health_check.py` care însumează DOAR fișierele realmente auto-loaded la pornire sesiune:
+  - `CLAUDE.md` (root) — always-on
+  - `Dosar_Medical/CLAUDE.md` — încărcat contextual când Claude lucrează în acel subfolder
+  - `Documente_Informative/CLAUDE.md` — idem
+  - opțional: `REGULAMENT.md`, `REGULI_CLAUDE_CODE.md` (citite la prima interacțiune per ordine din root `CLAUDE.md`)
+- [ ] Prag pragmatic: 100KB pentru auto-loaded combined (sub limita oficială Claude Code de ~40KB pentru CLAUDE.md singur, dar permite cumulul nested + reference reads)
+- [ ] Update `REGULI_CLAUDE_CODE.md §Regula 28` cu metricul nou
+- [ ] Demote `total_md_root_kb` la metric secundar (informativ, NU declanșează stop rule) — îl păstrăm pentru igienă proiect
+
+**Why:** R28 trebuie să alerteze pe pericolul real (depășire context window), nu pe igienă cumulativă a logurilor istorice. Fals pozitivul de la 25.04 a forțat o pauză de plan-execuție inutilă (rezolvată prin AskUserQuestion).
+
+**Data deschiderii:** 2026-04-25.
+
 ### [P2] HbA1c recent
 
 **Context:** monitorizare control diabet cu Jamesi; ultima HbA1c necunoscută.

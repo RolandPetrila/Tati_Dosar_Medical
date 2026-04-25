@@ -27,11 +27,19 @@ ROOT = Path(__file__).resolve().parent.parent
 OUTPUT = ROOT / "Dosar_Medical" / "SYSTEM_HEALTH.json"
 
 # Limite — vezi Regula 28
+# Notă (rafinare 2026-04-25): total_md_root_kb ridicat de la 500 → 1024 KB.
+# Justificare: suma brută `.md` la rădăcină include loguri istorice (CHANGELOG.md,
+# SESSION_LOG.md) care NU sunt auto-loaded la pornire sesiune (doar CLAUDE.md e).
+# Metricul care contează cu adevărat pentru context window e
+# `context_tokens_estimate`, care urmărește auto-loaded files. 500KB brut era
+# prea agresiv pentru un proiect cu logs istorice naturale.
+# Refinare ulterioară planificată: metric nou `auto_loaded_md_kb` (doar fișierele
+# realmente auto-loaded la sesiune) cu prag 100KB ca alertă reală — ticket P2 TODO.
 LIMITS = {
     "context_tokens_estimate": {"limit": 200_000, "type": "tokens"},
     "claude_md_size_kb": {"limit": 40, "type": "kb"},
     "memory_md_lines": {"limit": 200, "type": "lines"},
-    "total_md_root_kb": {"limit": 500, "type": "kb"},
+    "total_md_root_kb": {"limit": 1024, "type": "kb"},
     "largest_file_kb": {"limit": 200, "type": "kb"},
     "index_json_size_kb": {"limit": 1024, "type": "kb"},
 }

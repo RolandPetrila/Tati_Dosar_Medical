@@ -1,6 +1,6 @@
 {
-  "checked_at": "2026-04-25T18:32:36",
-  "status": "🔴 CRITICAL",
+  "checked_at": "2026-04-25T19:09:10",
+  "status": "🟢 OK",
   "limits": {
     "claude_md_size_kb": {
       "current": 9.4,
@@ -15,10 +15,10 @@
       "status": "🟢 OK"
     },
     "total_md_root_kb": {
-      "current": 542.3,
-      "limit": 500,
-      "percent": 108.5,
-      "status": "🔴 CRITICAL"
+      "current": 545.6,
+      "limit": 1024,
+      "percent": 53.3,
+      "status": "🟢 OK"
     },
     "largest_files": [
       {
@@ -64,15 +64,13 @@
     ],
     "files_over_limit": [],
     "context_tokens_estimate": {
-      "current": 16557,
+      "current": 16877,
       "limit": 200000,
-      "percent": 8.3,
+      "percent": 8.4,
       "status": "🟢 OK",
       "note": "estimat doar pe fișiere auto-loaded (CLAUDE.md + REGULI_CLAUDE_CODE.md + REGULAMENT.md). Read-uri ad-hoc, MEMORY.md auto-injection, sistem-reminders nu sunt incluse — context real e mai mare."
     }
   },
-  "recommendations": [
-    "🔴 total_md_root_kb: la 108.5% — STOP scrieri. Restructurare urgentă."
-  ],
+  "recommendations": [],
   "version": "1.0"
 }

@@ -350,9 +350,13 @@ Dosarul `.Tati` se va încărca progresiv (corespondență, meta.json-uri, JSON-
 | Context tokens estimat la pornire sesiune | 200k Sonnet / 1M Opus | 🟢 <60% / 🟡 60-80% / 🟠 80-95% / 🔴 >95% |
 | `CLAUDE.md` size (root proiect)           | 40KB warning oficial  | 🟢 / 🟡 / 🔴                              |
 | `MEMORY.md` linii                         | 200 (truncat automat) | 🟢 <120 / 🟡 120-180 / 🔴 >180            |
-| Total `.md` root size                     | 500KB                 | 🟢 / 🟡 / 🔴                              |
+| Total `.md` root size                     | 1024KB ⚠ (vezi notă)  | 🟢 / 🟡 / 🔴                              |
 | Fișier individual                         | 200KB sau 5000 linii  | 🟢 / 🟡 / 🔴                              |
 | `INDEX.json` size                         | 1MB                   | 🟢 / 🟡 / 🔴                              |
+
+> **Notă rafinare 2026-04-25 — `total_md_root_kb` 500 → 1024 KB:** pragul inițial de 500KB calculat ca sumă brută `.md` la rădăcină era prea agresiv pentru un proiect cu logs istorice naturale (CHANGELOG.md, SESSION_LOG.md cresc liniar cu activitatea). Aceste fișiere NU sunt auto-loaded la pornire sesiune (doar `CLAUDE.md` e auto-injected). Metricul care contează cu adevărat pentru context window e `context_tokens_estimate` (auto-loaded files only). Pragul brut a fost ridicat la 1024 KB ca limită informativă; restructurarea reală vine din rafinarea metricii (vezi sub-secțiunea de mai jos).
+>
+> **Rafinare planificată (P2 TODO):** introducere metric nou `auto_loaded_md_kb` (doar `CLAUDE.md` + nested CLAUDE.md-uri încărcate când lucrezi în subfoldere — `Dosar_Medical/CLAUDE.md`, `Documente_Informative/CLAUDE.md`) cu prag 100KB ca alertă reală pentru risc context-prea-mare. Pragul `total_md_root_kb` rămâne ca metric secundar pentru igienă proiect.
 
 **Acțiuni automate la depășire:**
 
