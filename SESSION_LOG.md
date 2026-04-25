@@ -6,6 +6,33 @@
 
 ---
 
+## 2026-04-25 19:45 — [Claude_Opus_4.7_executor] plan-audit-cross-terminal-executie-r27-r28-r29
+
+**Scop:** execuție strictă a `PLAN_IMPLEMENTARE_2026-04-25.md` (creat de auditor terminal A 18:05). Implementare R27 ingest Gmail + R28 system health monitor + R29 plan-audit cross-terminal + CONTACTE_MEDICALE.md OncoHelp + primul ingest Gmail full-history + tab DASHBOARD Echipă medicală + INDEX.json query-abil + scripts auto-regen.
+
+**Operații (8 task-uri executate, 7 commits push-uite):**
+
+1. **`b01261e` (Task #7)** — log mail trimis manual Dr. Anater 25.04 (SESSION_LOG + TODO + CHANGELOG + backup R10 3 fișiere)
+2. **`675ca20` (Task #15)** — R28 System Health Monitor (`scripts/system_health_check.py` + `Dosar_Medical/SYSTEM_HEALTH.json` + hook SessionStart în settings.local.json gitignored). Prima rulare a detectat 🔴 CRITICAL pe `total_md_root_kb` (542KB / 500KB)
+3. **`eb25b72` (R28 fix)** — ridicare prag 500 → 1024 KB după AskUserQuestion (opțiunea 3 user) + ticket P2 TODO pentru rafinare metric `auto_loaded_md_kb`. Status R28 → 🟢 OK
+4. **`9b3200b` (Task #9+#10)** — `Dosar_Medical/CONTACTE_MEDICALE.md` v1.0 (scope OncoHelp activi: Anater + Vornicu) + cercetare web 7 surse + `Dosar_Medical/cercetari/2026-04-25_cercetare-oncohelp-vornicu-anater.md`. **Descoperire R12:** site oncohelp.ro listează Anater ca „Rezident", semnătura email zice „Medic Specialist" — conflict surse rezolvat în favoarea self-id email
+5. **`4e2adcd` (Task #11)** — primul ingest Gmail R27 full-history. 11 threaduri identificate, 5 fișiere markdown thread + INDEX master în `Dosar_Medical/corespondenta/`. Auto-propagare CONTACTE_MEDICALE.md v1.1 (corectare status Anater) + CONTEXT_MEDICAL.md §9 cu 3 medici noi
+6. **`d51d0cf` (Task #12)** — `INDEX.json` query-abil (32 KB, 130 fișiere indexate, parser lightweight) + `STRUCTURA_PROIECT.md` cu secțiune auto-generată ~9.7 KB. 2 scripturi noi: `scripts/generate_index.py` + `scripts/regenerate_structura.py`
+7. **`b305502` (Task #13)** — DASHBOARD tab `👥 Echipă medicală` cu search live + render cards click-to-call/mail. Bonus: upgrade `generate_index.py` la PyYAML cu fallback + fix `regenerate_structura.py` regex backslash escapes Windows path
+
+**Why:** primul plan-audit cross-terminal R29 a validat protocolul end-to-end. Auditorul a planificat detaliat (45KB plan), executorul a executat strict cu commit-uri incrementale păstrând granularitatea git. Stop Rule #1 declanșat la R28 prim-rulare a folosit AskUserQuestion pentru a transforma stop forțat în decizie informată user. Sistem unificat funcțional.
+
+**How to apply (lecții):**
+
+- Pentru orice task >5 sub-operații cu risc rupere parțială → propune R29 cu plan în fișier
+- La descoperiri în execuție diferite de plan, documentează cu marcaj `[NOU descoperit]` + procedează conservator
+- AskUserQuestion la fiecare Stop Rule pentru decuplare stop forțat de halt permanent
+- Linterul auto-formatează YAML + tabele Markdown — conținut neschimbat, continuă fără fight
+
+**Fișiere modificate:** 14 fișiere noi + 9 fișiere existente actualizate. Vezi `PLAN_IMPLEMENTARE_2026-04-25.md` §Validări post-execuție pentru lista completă commits + tabel devieri justificate.
+
+---
+
 ## 2026-04-25 18:00 — [Roland_user_manual] trimitere-mail-raspuns-anater-programare-30
 
 **Scop:** răspuns trimis manual de user (Roland) la mailul Dr. Anater Angelo - Christian (RE: Solicitare consult oncologic, primit 24.04.2026 10:56). NU prin Claude Gmail draft — user a redactat și a trimis direct din clientul propriu de mail.

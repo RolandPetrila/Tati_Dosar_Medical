@@ -1,5 +1,5 @@
 {
-  "checked_at": "2026-04-25T19:09:10",
+  "checked_at": "2026-04-25T19:36:03",
   "status": "🟢 OK",
   "limits": {
     "claude_md_size_kb": {
@@ -15,9 +15,9 @@
       "status": "🟢 OK"
     },
     "total_md_root_kb": {
-      "current": 545.6,
+      "current": 561.1,
       "limit": 1024,
-      "percent": 53.3,
+      "percent": 54.8,
       "status": "🟢 OK"
     },
     "largest_files": [
@@ -26,11 +26,15 @@
         "size_kb": 131.9
       },
       {
+        "path": "DASHBOARD.html",
+        "size_kb": 129.8
+      },
+      {
         "path": "Dosar_Medical/arhiva/context_medical_versiuni/CHANGELOG_pre-trimitere-mail-anater_2026-04-25_1826.md",
         "size_kb": 129.6
       },
       {
-        "path": "DASHBOARD.html",
+        "path": "Dosar_Medical/arhiva/context_medical_versiuni/DASHBOARD_pre-tab-echipa-search_2026-04-25_1932.html",
         "size_kb": 121.7
       },
       {
@@ -54,15 +58,17 @@
         "size_kb": 74.5
       },
       {
-        "path": "ALIMENTATIE.md",
-        "size_kb": 48.2
-      },
-      {
         "path": "CONTEXT_MEDICAL.md",
-        "size_kb": 47.1
+        "size_kb": 50.4
       }
     ],
     "files_over_limit": [],
+    "index_json_size_kb": {
+      "current": 33.6,
+      "limit": 1024,
+      "percent": 3.3,
+      "status": "🟢 OK"
+    },
     "context_tokens_estimate": {
       "current": 16877,
       "limit": 200000,

@@ -4,6 +4,60 @@
 
 ---
 
+## 2026-04-25 19:45 — Implementare R27 + R28 + R29 + sistem catalog OncoHelp + ingest Gmail (plan-audit cross-terminal)
+
+**Tip:** ARHITECTURĂ SISTEM + INTEGRARE INFORMAȚII NOI.
+
+**Context:** primul plan-audit cross-terminal R29. Auditor terminal A a creat planul detaliat (`PLAN_IMPLEMENTARE_2026-04-25.md`), executor terminal B a executat strict cu 7 commits incrementale (b01261e → b305502). Sistem unificat R27 (ingest Gmail) + R28 (system health monitor) + R29 (plan-audit) + CONTACTE_MEDICALE OncoHelp + primul ingest Gmail full-history + INDEX.json + DASHBOARD tab Echipă medicală.
+
+### Modificări structurale (14 fișiere noi)
+
+1. `scripts/system_health_check.py` — R28 monitor cu 6 metrici + status 🟢/🟡/🟠/🔴
+2. `scripts/generate_index.py` — generator INDEX.json query-abil (PyYAML cu fallback)
+3. `scripts/regenerate_structura.py` — auto-regen secțiune `🗺 Hartă completă` în STRUCTURA_PROIECT.md
+4. `INDEX.json` (rădăcină) — sursă unică query, 32 KB, 131 fișiere indexate, 2 medici OncoHelp, 5 threaduri Gmail, 18 documente canonice
+5. `Dosar_Medical/SYSTEM_HEALTH.json` — output R28 auto-generat la SessionStart
+6. `Dosar_Medical/CONTACTE_MEDICALE.md` — catalog OncoHelp activi (Anater + Vornicu) v1.1
+7. `Dosar_Medical/cercetari/2026-04-25_cercetare-oncohelp-vornicu-anater.md` — cercetare web 7 surse cu marcaje certitudine
+8. `Dosar_Medical/corespondenta/INDEX.md` — master corespondență 11 threaduri categorizate
+   9-13. 5 fișiere thread Gmail în `Dosar_Medical/corespondenta/` (Anater, Mester, Cip, broadcast, OncoHelp inițial)
+
+### Modificări la fișiere existente (9)
+
+- `REGULI_CLAUDE_CODE.md` v12.4 — Regulile 27 + 28 + 29 codificate (cu prag R28 ridicat 500→1024 KB + notă rafinare planificată P2)
+- `CLAUDE.md` proiect v12.4 — pas 0 detect plan activ + harta extinsă R27/R28/R29
+- `CONTEXT_MEDICAL.md` §9 — Dr. Anater + Dr. Vornicu (OncoHelp) + Dr. Mester (IOCN second opinion) + footnote pointer la corespondenta
+- `DASHBOARD.html` — tab `👥 Echipă medicală` cu search live + click-to-call/mail + CSS .card-medic + IIFE loadEchipa fetch INDEX.json
+- `STRUCTURA_PROIECT.md` — secțiune auto-generată cu stats live + index thematic 12 categorii + arbore depth 3
+- `SESSION_LOG.md` — intrare 2026-04-25 19:45 cu sinteza execuției
+- `TODO.md` — calendar mail Anater 25.04 + ticket P2 rafinare R28 metric `auto_loaded_md_kb`
+- `PLAN_IMPLEMENTARE_2026-04-25.md` — status `🟢 COMPLETED` + secțiune Validări post-execuție
+- `CHANGELOG.md` — această intrare
+
+### Descoperiri importante
+
+- **R12 conflict surse Dr. Anater:** site oncohelp.ro listează „Rezident", semnătură email zice „Medic Specialist". Decizie R12: prioritate self-id email
+- **Numărul `0762120428` validat:** apare ca sursă publică ResearchGate Vornicu — confirmă că e numărul corect al Dr. Vornicu (vs eroare transcriere)
+- **Dr. Cip 22.04** (recomandare prin Adriana Lusca): Zeolit Spectrum + AHCC ca adjuvant. **NU se administrează fără confirmare oncolog 30.04** (risc interacțiuni cu chimio + medicația cardiacă post-stent)
+- **Convergență clinică Anater + Mester:** ambele centre majore au răspuns același principiu (NU urgentare pre-histopatologic, așteptare biopsie + consult ulterior)
+
+### Auto-propagare R27 (validate end-to-end)
+
+CONTACTE_MEDICALE → CONTEXT_MEDICAL → DASHBOARD → INDEX.json — toate în sincron, sursa unică `Dosar_Medical/corespondenta/INDEX.md` (R27).
+
+### Backup R10
+
+- `Dosar_Medical/arhiva/context_medical_versiuni/SESSION_LOG_pre-trimitere-mail-anater_2026-04-25_1826.md`
+- `Dosar_Medical/arhiva/context_medical_versiuni/TODO_pre-trimitere-mail-anater_2026-04-25_1826.md`
+- `Dosar_Medical/arhiva/context_medical_versiuni/CHANGELOG_pre-trimitere-mail-anater_2026-04-25_1826.md`
+- `Dosar_Medical/arhiva/context_medical_versiuni/DASHBOARD_pre-tab-echipa-search_2026-04-25_1932.html`
+
+**Why:** sistem unificat de ingest informație + monitorizare sănătate proiect + protocol task-uri complexe. Sesiunea a validat R29 plan-audit ca pattern reutilizabil pentru viitor.
+
+**How to apply:** task >5 sub-operații → propune R29; comandă `verifică gmail nou/oncohelp/[keyword]` activă; hook SessionStart auto-rulează R28 la fiecare deschidere sesiune.
+
+---
+
 ## 2026-04-25 18:00 — Trimitere manual mail răspuns Dr. Anater (programare 30.04 + 5 întrebări organizatorice)
 
 **Tip:** CORESPONDENȚĂ EXTERNĂ.

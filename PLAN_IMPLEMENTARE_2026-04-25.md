@@ -1,13 +1,15 @@
 ---
 plan_id: implementare-r27-r28-contacte-dashboard-2026-04-25
 version: 1.0
-status: 🟡 IN_PROGRESS
+status: 🟢 COMPLETED
 created_at: 2026-04-25 18:05
 started_execution_at: 2026-04-25 18:30
+completed_at: 2026-04-25 19:45
+total_duration_min: ~75
 auditor_session: terminal A (Opus 4.7 1M context — sesiunea care a creat planul)
 executor_session: terminal B (sesiune nouă deschisă de user — execută strict)
 estimated_duration_min: 85
-commits_planned: 7
+commits_actual: 7 (incremental, +1 follow-up final)
 backup_strategy: R10 înainte de fiecare modificare la fișiere de referință
 commit_strategy: incremental (NU final unic) — 1 commit per task major
 ---
@@ -935,4 +937,61 @@ Auditor (terminal A) răspunde după ce verifică:
 ---
 
 **📌 Plan creat de:** sesiune Claude Opus 4.7 (1M context) — terminal A — 2026-04-25 18:05
-**📌 Pentru execuție:** terminal B — sesiune nouă — pornire după confirmare user
+**📌 Executat de:** sesiune Claude Opus 4.7 (1M context) — terminal B — 2026-04-25 18:30 → 19:45 (~75 min)
+
+---
+
+## ✅ Validări post-execuție (2026-04-25 19:45)
+
+### Verificări structurale
+
+- [x] `REGULI_CLAUDE_CODE.md` conține `## Regula 27` (linia 293), `## Regula 28` (linia 342), `## Regula 29` (linia 386)
+- [x] `CLAUDE.md` proiect v12.4 are pas 0 detect plan activ + harta extinsă cu R27/R28/R29
+- [x] `Dosar_Medical/SYSTEM_HEALTH.json` status `🟢 OK` (după ridicare prag total_md_root_kb la 1024 KB)
+- [x] `INDEX.json` regenerat cu structură completă (medici_oncohelp ca obiecte cu emails + telefoane corecte după upgrade PyYAML)
+- [x] `STRUCTURA_PROIECT.md` are secțiunea auto-generată `<!-- AUTO-GENERATED START/END -->` cu stats + index thematic + arbore
+- [x] `Dosar_Medical/corespondenta/INDEX.md` master cu 11 threaduri categorizate
+- [x] 5 fișiere thread Gmail în `Dosar_Medical/corespondenta/` (mai mult decât minim 3 cerut)
+- [x] `Dosar_Medical/CONTACTE_MEDICALE.md` v1.1 cu Anater (Specialist per email — R12) + Vornicu (cu telefon validat ResearchGate)
+- [x] `DASHBOARD.html` cu tab `👥 Echipă medicală` + search live + click-to-call/mail
+- [x] Hook SessionStart configurat în `.claude/settings.local.json` (gitignored, local-only)
+
+### Commits validate (push-uite la origin/main)
+
+| Hash      | Task    | Subiect                                                   |
+| --------- | ------- | --------------------------------------------------------- |
+| `b01261e` | #7      | log mail trimis manual Dr. Anater 25.04                   |
+| `675ca20` | #15     | R28 System Health Monitor + hook SessionStart             |
+| `eb25b72` | R28-fix | prag total_md_root_kb 500→1024 KB + ticket P2 rafinare    |
+| `9b3200b` | #9+#10  | CONTACTE_MEDICALE OncoHelp + cercetare web Anater+Vornicu |
+| `4e2adcd` | #11     | primul ingest Gmail R27 (full-history)                    |
+| `d51d0cf` | #12     | INDEX.json + STRUCTURA_PROIECT auto-regen                 |
+| `b305502` | #13     | tab DASHBOARD Echipa medicala + search global INDEX.json  |
+
+### Devieri de la plan (justificate)
+
+1. **Task #15 — settings.local.json gitignored:** planul cerea commit, dar fișierul e gitignored corect (e local user setting). Hook funcționează local; pentru share trebuie mutat în `.claude/settings.json`.
+
+2. **R28 prag total_md_root_kb 500 → 1024 KB (commit `eb25b72`):** Stop Rule #1 declanșat la prima rulare = fals pozitiv pe stare pre-existentă. Decizie via AskUserQuestion (opțiunea 3 user). Ticket P2 deschis în TODO.md pentru metric nou `auto_loaded_md_kb`.
+
+3. **Task #10 — fișier extins:** plan zicea `2026-04-25_cercetare-oncohelp-vornicu.md`, executor a creat `2026-04-25_cercetare-oncohelp-vornicu-anater.md` (incluzând și Dr. Anater pentru paritate clinică). Descoperire NOUĂ: Dr. Anater listed ca Rezident pe site vs Specialist în semnătură email (R12).
+
+4. **Task #11 — 5 fișiere thread vs 3 minim cerut:** descoperire NOI threaduri (Cip cu Zeolit + AHCC adjuvant + broadcast 5 clinici aggregator).
+
+5. **Task #13 — bonus fixe scripts:** generate_index.py upgrade PyYAML + regenerate_structura.py fix regex backslash escapes (Windows path conflict). Aceste fixe ar fi trebuit să fie în Task #12 inițial dar au apărut la testarea integrată cu DASHBOARD.
+
+### Rapoarte sistem
+
+- **R28 status final:** 🟢 OK (toate metrici sub praguri actualizate)
+- **INDEX.json stats:** 131 fișiere indexate, 2 medici OncoHelp, 5 threaduri Gmail, 18 documente canonice
+- **STRUCTURA_PROIECT.md secțiune auto:** ~9.7 KB cu 12 categorii index thematic + arbore depth 3
+
+### Limitări cunoscute
+
+- **DASHBOARD vizual:** NU testat în browser real din mediul agent. User trebuie să verifice click-to-call/mail la `https://rolandpetrila.github.io/Tati_Dosar_Medical/` după push.
+- **R28 metric `auto_loaded_md_kb` NEIMPLEMENTAT** (planificat P2 TODO) — pragul brut `total_md_root_kb` rămâne ca metric secundar fals-pozitiv pentru loguri istorice.
+- **Atașamente Gmail nu sunt extrase textual** (planul R27 prevedea, dar pentru ingest curent nu era critic — atașamentele Roland sunt deja în `Dosar_Medical/documente_sursa/` ca PDF-uri sursă autoritare).
+
+---
+
+**🎯 Plan executat cu succes prin protocol R29 plan-audit cross-terminal.** Sistemul unificat R27 + R28 + R29 + CONTACTE_MEDICALE + corespondență ingest + DASHBOARD echipă funcționează end-to-end. Sesiunea următoare poate folosi nativ comenzile R27 (`verifică gmail nou` / `verifică gmail oncohelp` / etc.) și se va beneficia de hook-ul SessionStart R28 care rulează automat verificarea de sănătate sistem.
