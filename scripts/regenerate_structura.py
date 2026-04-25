@@ -157,14 +157,14 @@ def main():
     new_section = build_section()
 
     if START_MARKER in text and END_MARKER in text:
-        # Înlocuire între markeri
+        # Înlocuire între markeri — folosesc callable pentru a evita
+        # interpretarea backslash escapes în new_section (Windows paths C:\Users)
         pattern = re.compile(
             re.escape(START_MARKER) + r".*?" + re.escape(END_MARKER),
             re.DOTALL,
         )
-        new_text = pattern.sub(new_section, text)
+        new_text = pattern.sub(lambda _m: new_section, text)
     else:
-        # Append la final
         new_text = text.rstrip() + "\n\n---\n\n" + new_section + "\n"
 
     TARGET.write_text(new_text, encoding="utf-8")

@@ -488,41 +488,6 @@
         border-bottom-color: var(--primary);
         background: var(--primary-light);
       }
-      .card-medic {
-        border: 1px solid #d0d7de;
-        border-radius: 8px;
-        padding: 14px 16px;
-        margin-bottom: 12px;
-        background: #f6f8fa;
-        transition: box-shadow 0.15s ease;
-      }
-      .card-medic:hover {
-        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-      }
-      .card-medic h3 {
-        margin: 0 0 8px 0;
-        color: #0969da;
-        font-size: 1.1em;
-      }
-      .card-medic p {
-        margin: 4px 0;
-        font-size: 0.95em;
-      }
-      .card-medic a {
-        color: #0969da;
-        text-decoration: none;
-      }
-      .card-medic a:hover {
-        text-decoration: underline;
-      }
-      .card-medic .badge-status {
-        display: inline-block;
-        padding: 2px 8px;
-        border-radius: 12px;
-        font-size: 0.85em;
-        background: #ddf4ff;
-        color: #0969da;
-      }
       .tab-panel {
         display: none;
       }
@@ -884,9 +849,6 @@
       <nav class="tabs" role="tablist">
         <button class="tab-btn active" data-tab="medical" role="tab">
           🏥 Medical
-        </button>
-        <button class="tab-btn" data-tab="echipa" role="tab">
-          👥 Echipă medicală
         </button>
         <button class="tab-btn" data-tab="alimentatie" role="tab">
           🍽️ Alimentație
@@ -1896,44 +1858,6 @@
       </section>
       <!-- /panel-medical -->
 
-      <section class="tab-panel" id="panel-echipa" role="tabpanel">
-        <div class="card wide">
-          <h2>👥 Echipă medicală — OncoHelp Timișoara</h2>
-          <p class="meta">
-            Date din <code>Dosar_Medical/CONTACTE_MEDICALE.md</code> via
-            <code>INDEX.json</code> (regenerat la fiecare modificare). Click pe
-            telefon = apel direct (mobil). Click pe email = client mail. Vezi și
-            <code>Dosar_Medical/corespondenta/INDEX.md</code> pentru istoric
-            mailuri.
-          </p>
-          <input
-            type="text"
-            id="search-medici"
-            placeholder="🔍 Caută medic / specializare / unitate / email..."
-            style="
-              width: 100%;
-              padding: 10px;
-              margin: 12px 0;
-              border: 1px solid #d0d7de;
-              border-radius: 6px;
-              font-size: 1em;
-              box-sizing: border-box;
-            "
-            aria-label="Caută în lista de medici"
-          />
-          <div id="echipa-cards"></div>
-          <p class="meta" style="margin-top: 16px; font-size: 0.85em">
-            Sursă date: site oncohelp.ro/echipa-oncohelp + corespondență email +
-            cercetare web (UMFT, ResearchGate, surse media). Marcaje certitudine
-            [CERT/PROBABIL] aplicate per element. Detalii complete:
-            <code
-              >Dosar_Medical/cercetari/2026-04-25_cercetare-oncohelp-vornicu-anater.md</code
-            >.
-          </p>
-        </div>
-      </section>
-      <!-- /panel-echipa -->
-
       <section class="tab-panel" id="panel-alimentatie" role="tabpanel">
         <div class="card wide">
           <h2>🍽️ Alimentație — ghid de inspirație pentru gătit</h2>
@@ -2759,167 +2683,6 @@
         });
       })();
 
-      // === ECHIPA MEDICALA — load INDEX.json + render cards + search ===
-      (function loadEchipa() {
-        var container = document.getElementById("echipa-cards");
-        var searchInput = document.getElementById("search-medici");
-        if (!container) return;
-
-        function escapeHtml(s) {
-          return String(s == null ? "" : s)
-            .replace(/&/g, "&amp;")
-            .replace(/</g, "&lt;")
-            .replace(/>/g, "&gt;")
-            .replace(/"/g, "&quot;");
-        }
-
-        function renderCard(m) {
-          var phones = [];
-          if (Array.isArray(m.telefoane)) {
-            m.telefoane.forEach(function (t) {
-              if (typeof t === "object" && t && t.numar) phones.push(t.numar);
-              else if (typeof t === "string" && /\d/.test(t)) phones.push(t);
-            });
-          }
-          var emails = [];
-          if (typeof m.emails === "object" && m.emails) {
-            if (m.emails.primar) emails.push(m.emails.primar);
-            if (m.emails.secundar) emails.push(m.emails.secundar);
-          }
-          var spec = m.specializare;
-          if (Array.isArray(spec)) spec = spec.join(", ");
-          var tagsArr = Array.isArray(m.tags)
-            ? m.tags
-            : typeof m.tags === "string" && m.tags.length > 2
-              ? [m.tags]
-              : [];
-          var tagsHtml = tagsArr.length
-            ? '<p style="font-size:0.8em; color:#57606a;">Tags: ' +
-              tagsArr
-                .map(function (t) {
-                  return "<code>" + escapeHtml(t) + "</code>";
-                })
-                .join(" ") +
-              "</p>"
-            : "";
-          var titleProf = m.titlu_profesional
-            ? ' <span class="badge-status">' +
-              escapeHtml(String(m.titlu_profesional).split("(")[0].trim()) +
-              "</span>"
-            : "";
-          return (
-            '<div class="card-medic">' +
-            "<h3>" +
-            escapeHtml(m.titlu || "Dr.") +
-            " " +
-            escapeHtml(m.nume) +
-            titleProf +
-            "</h3>" +
-            (spec
-              ? "<p><strong>Specializare:</strong> " + escapeHtml(spec) + "</p>"
-              : "") +
-            "<p><strong>Unitate:</strong> " +
-            escapeHtml(m.unitate || "—") +
-            (m.departament ? " · " + escapeHtml(m.departament) : "") +
-            "</p>" +
-            (m.pozitie_academica
-              ? "<p><strong>Academic:</strong> " +
-                escapeHtml(m.pozitie_academica) +
-                "</p>"
-              : "") +
-            "<p><strong>Status:</strong> " +
-            escapeHtml(m.status || "—") +
-            "</p>" +
-            (phones.length
-              ? "<p><strong>Telefon:</strong> " +
-                phones
-                  .map(function (p) {
-                    var tel = p.replace(/\s+/g, "");
-                    return (
-                      '<a href="tel:' +
-                      escapeHtml(tel) +
-                      '">' +
-                      escapeHtml(p) +
-                      "</a>"
-                    );
-                  })
-                  .join(", ") +
-                "</p>"
-              : "") +
-            (emails.length
-              ? "<p><strong>Email:</strong> " +
-                emails
-                  .map(function (e) {
-                    return (
-                      '<a href="mailto:' +
-                      escapeHtml(e) +
-                      '">' +
-                      escapeHtml(e) +
-                      "</a>"
-                    );
-                  })
-                  .join(" · ") +
-                "</p>"
-              : "") +
-            (m.rol
-              ? '<p style="color:#57606a;"><em>' +
-                escapeHtml(m.rol) +
-                "</em></p>"
-              : "") +
-            (m.file
-              ? '<p><a href="' +
-                escapeHtml(m.file) +
-                '">→ profil complet</a></p>'
-              : "") +
-            tagsHtml +
-            "</div>"
-          );
-        }
-
-        function render(filter) {
-          if (!window.__medici_data) {
-            container.innerHTML =
-              '<p style="color:#cf222e;">⚠ INDEX.json încă nu e încărcat.</p>';
-            return;
-          }
-          var f = (filter || "").toLowerCase().trim();
-          var filtered = f
-            ? window.__medici_data.filter(function (m) {
-                return JSON.stringify(m).toLowerCase().indexOf(f) !== -1;
-              })
-            : window.__medici_data;
-          if (!filtered.length) {
-            container.innerHTML =
-              '<p style="color:#57606a;">Niciun medic potrivit pentru "<strong>' +
-              escapeHtml(filter) +
-              '</strong>".</p>';
-            return;
-          }
-          container.innerHTML = filtered.map(renderCard).join("");
-        }
-
-        fetch("INDEX.json")
-          .then(function (res) {
-            if (!res.ok) throw new Error("HTTP " + res.status);
-            return res.json();
-          })
-          .then(function (idx) {
-            window.__medici_data = idx.medici_oncohelp || [];
-            render("");
-            if (searchInput) {
-              searchInput.addEventListener("input", function (e) {
-                render(e.target.value);
-              });
-            }
-          })
-          .catch(function (err) {
-            container.innerHTML =
-              '<p style="color:#cf222e;">⚠ Eroare la <code>INDEX.json</code>: ' +
-              escapeHtml(err.message) +
-              ". Rulează <code>python scripts/generate_index.py</code> pentru regenerare.</p>";
-          });
-      })();
-
       // === MARKDOWN PARSER (minimal, self-contained) ===
       function parseMarkdown(md) {
         var lines = md.split(/\r?\n/);
@@ -3018,7 +2781,7 @@
         var embeddedEl = document.getElementById("md-alimentatie");
         var embedded = embeddedEl ? embeddedEl.textContent : "";
         var lastRegen =
-          "2026-04-25 19:35 (R27 + R28 + R29 codificate + CONTACTE_MEDICALE.md OncoHelp v1.1 cu Anater [Specialist per email vs Rezident per site — R12] + Vornicu + ingest Gmail full-history primul scan [5 fișiere thread + INDEX.md] + tab DASHBOARD Echipă medicală cu search global INDEX.json + scripts auto-regen)";
+          '2026-04-25 15:50 (eliminare restricție generică pe lapte atribuită eronat gastroenterologului + secțiune nouă ALIMENTATIE.md "🥛 Lactate — sinteză evidență" cu surse peer-reviewed: ESPEN/ESMO/FDA 2024/IARC/Frontiers Nutrition/Nature Sci Rep/EJN; consult oncolog 30.04 OncoHelp)';
 
         function render(md, source) {
           contentEl.innerHTML = parseMarkdown(md);

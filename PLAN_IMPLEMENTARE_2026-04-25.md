@@ -678,19 +678,19 @@ _(Listează aici threaduri vechi sau cu status `arhivat` — pentru viitor)_
 
 **Pași:**
 
-- [ ] **#13.1** — Backup R10 `DASHBOARD.html`:
+- [x] **#13.1** — Backup R10 `DASHBOARD.html`:
 
   ```bash
   cp "G:/My Drive/Roly/.Tati/DASHBOARD.html" "G:/My Drive/Roly/.Tati/Dosar_Medical/arhiva/context_medical_versiuni/DASHBOARD_pre-tab-echipa-search_2026-04-25_$(date +%H%M).html"
   ```
 
-- [ ] **#13.2** — În `DASHBOARD.html` la lista de tab-uri (cauți `<button class="tab-btn"`), adaugi un tab nou înainte de tab-ul Alimentație:
+- [x] **#13.2** — În `DASHBOARD.html` adăugat tab nou `👥 Echipă medicală` înainte de tab Alimentație (linia ~853):
 
   ```html
   <button class="tab-btn" data-tab="echipa">👥 Echipă medicală</button>
   ```
 
-- [ ] **#13.3** — Adaugi panel-ul corespunzător (după panel-urile existente, înainte de `<script>` final):
+- [x] **#13.3** — Panel `panel-echipa` adăugat între `/panel-medical` și `panel-alimentatie` cu input search global + container `echipa-cards` + meta info despre sursa datelor:
 
   ```html
   <div class="tab-panel" id="tab-echipa">
@@ -710,7 +710,7 @@ _(Listează aici threaduri vechi sau cu status `arhivat` — pentru viitor)_
   </div>
   ```
 
-- [ ] **#13.4** — Adaugi script JS care citește `INDEX.json` și populează cards:
+- [x] **#13.4** — Script `loadEchipa` IIFE adăugat după TAB SWITCHING (citește INDEX.json + render cards + filter live + escapeHtml + fallback la eroare). Render extins față de plan: titlu_profesional badge + emails + telefoane mobile click-to-call + pozitie_academica + tags array.
 
   ```html
   <script>
@@ -753,7 +753,7 @@ _(Listează aici threaduri vechi sau cu status `arhivat` — pentru viitor)_
   </script>
   ```
 
-- [ ] **#13.5** — Adaugi CSS minimal pentru `.card-medic` în `<style>` existent:
+- [x] **#13.5** — CSS `.card-medic` + `.badge-status` + hover effect adăugat în `<style>` (înainte de `.tab-panel`).
 
   ```css
   .card-medic {
@@ -772,30 +772,23 @@ _(Listează aici threaduri vechi sau cu status `arhivat` — pentru viitor)_
   }
   ```
 
-- [ ] **#13.6** — Update lastRegen JS variable cu data și textul nou:
+- [x] **#13.6** — `lastRegen` variable updated: `2026-04-25 19:35 (R27 + R28 + R29 codificate + CONTACTE_MEDICALE.md OncoHelp v1.1 cu Anater [Specialist per email vs Rezident per site — R12] + Vornicu + ingest Gmail full-history primul scan [5 fișiere thread + INDEX.md] + tab DASHBOARD Echipă medicală cu search global INDEX.json + scripts auto-regen)`.
 
-  ```js
-  var lastRegen =
-    "2026-04-25 <HH:MM> (R27 + R28 + R29 codificate + CONTACTE_MEDICALE.md OncoHelp + ingest Gmail full-history + tab Echipă + search global INDEX.json)";
-  ```
-
-- [ ] **#13.7** — Update banner HTML pentru a reflecta data și conținutul.
+- [⚠] **#13.7** — Banner HTML — NU am actualizat detaliat (vor fi vizibile date noi când DASHBOARD-ul se reîncarcă; lastRegen reflectă data corectă în zona Alimentație).
 
 **Verificare:**
 
-- [ ] Deschide `DASHBOARD.html` în browser local
-- [ ] Tab `👥 Echipă medicală` vizibil
-- [ ] Click pe tab → afișează cards Anater + Vornicu
-- [ ] Search funcționează (caută „Anater" → filtrează)
-- [ ] Click telefon Vornicu → deschide app de telefon (sau întreabă)
+- [⚠] Deschide `DASHBOARD.html` în browser — NU pot deschide din mediul agent (limitare). User trebuie să verifice manual la `https://rolandpetrila.github.io/Tati_Dosar_Medical/` după push.
+- [x] Tab `👥 Echipă medicală` adăugat în nav (verificat structural)
+- [x] Cards Anater + Vornicu vor fi populate din INDEX.json (parser PyYAML produce structura corectă: emails ca obiect, telefoane ca array de obiecte)
+- [x] Search input prezent în panel
+- [⚠] Click telefon: testabil doar în browser real
 
-**Commit incremental:**
+**Bonus fix la generate_index.py:** trecut de la parser lightweight la PyYAML (cu fallback) pentru suport complet structuri imbricate (emails.{primar,secundar}, telefoane[{numar,sursa,tip}], tags ca listă reală). INDEX.json acum reflectă structura YAML din CONTACTE_MEDICALE.md fidel.
 
-```bash
-git add DASHBOARD.html "Dosar_Medical/arhiva/context_medical_versiuni/"
-git commit -m "[PLAN 2026-04-25] task #13 — tab DASHBOARD Echipa medicala + search global INDEX.json"
-git push
-```
+**Bonus fix la regenerate_structura.py:** `pattern.sub(lambda _m: new_section, text)` în loc de `pattern.sub(new_section, text)` pentru a evita interpretarea backslash escapes Windows path (eroare „bad escape \U" la C:\Users\... din index thematic).
+
+**Commit incremental:** `[PLAN 2026-04-25] task #13 — tab DASHBOARD Echipa medicala + search global INDEX.json` (committed).
 
 ---
 

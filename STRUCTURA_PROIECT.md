@@ -273,15 +273,15 @@ Structura descrisă în acest fișier **nu se modifică decât cu acordul explic
 
 ## 🗺 Hartă completă auto-generată
 
-> ⚙️ **Generat automat:** 2026-04-25T19:28:44 de `scripts/regenerate_structura.py`. NU edita manual această secțiune — modificările se pierd la următoarea regenerare. Pentru cuprinsul fix vezi secțiunile non-auto de mai sus.
+> ⚙️ **Generat automat:** 2026-04-25T19:34:34 de `scripts/regenerate_structura.py`. NU edita manual această secțiune — modificările se pierd la următoarea regenerare. Pentru cuprinsul fix vezi secțiunile non-auto de mai sus.
 
 ### 📊 Statistici live
 
-- **Total fișiere proiect (excl. .git):** 206
+- **Total fișiere proiect (excl. .git):** 207
 - **Markdown (.md):** 91
 - **JSON (.json):** 62
-- **HTML (.html):** 4
-- **Total size:** 49859.1 KB
+- **HTML (.html):** 5
+- **Total size:** 50001.4 KB
 
 ### 🧭 Index thematic (caut...)
 
@@ -341,9 +341,9 @@ Structura descrisă în acest fișier **nu se modifică decât cu acordul explic
 │   ├── EXPLICATIE_CONSULT_ONCOLOG_SCENARII.md  (74.5 KB)
 │   ├── GHID_APEL_ONCOHELP.md  (11.1 KB)
 │   ├── GHID_CONSULT_ONCOLOG.md  (22.5 KB)
-├── Dosar_Medical/  (146 fișiere)
-│   ├── arhiva/  (26 fișiere)
-│   │   ├── context_medical_versiuni/  (8 fișiere)
+├── Dosar_Medical/  (147 fișiere)
+│   ├── arhiva/  (27 fișiere)
+│   │   ├── context_medical_versiuni/  (9 fișiere)
 │   │   ├── versiuni_config/  (18 fișiere)
 │   ├── cercetari/  (2 fișiere)
 │   │   ├── 2026-04-25_cercetare-oncohelp-vornicu-anater.md  (15.4 KB)
@@ -432,8 +432,8 @@ Structura descrisă în acest fișier **nu se modifică decât cu acordul explic
 │   ├── SCHEMA_JSON_v2.md  (7.6 KB)
 │   ├── SYSTEM_HEALTH.json  (2.0 KB)
 ├── scripts/  (3 fișiere)
-│   ├── generate_index.py  (8.3 KB)
-│   ├── regenerate_structura.py  (7.0 KB)
+│   ├── generate_index.py  (8.2 KB)
+│   ├── regenerate_structura.py  (7.1 KB)
 │   ├── system_health_check.py  (7.2 KB)
 ├── .gitignore  (0.9 KB)
 ├── ALIMENTATIE.md  (48.2 KB)
@@ -442,19 +442,19 @@ Structura descrisă în acest fișier **nu se modifică decât cu acordul explic
 ├── CHANGELOG.md  (131.9 KB)
 ├── CLAUDE.md  (9.4 KB)
 ├── CONTEXT_MEDICAL.md  (50.4 KB)
-├── DASHBOARD.html  (121.7 KB)
+├── DASHBOARD.html  (129.8 KB)
 ├── GLOSAR.md  (10.6 KB)
 ├── index.html  (0.3 KB)
-├── INDEX.json  (32.2 KB)
+├── INDEX.json  (33.6 KB)
 ├── info_tati.txt  (2.1 KB)
 ├── manifest.webmanifest  (0.9 KB)
-├── PLAN_IMPLEMENTARE_2026-04-25.md  (45.9 KB)
+├── PLAN_IMPLEMENTARE_2026-04-25.md  (45.6 KB)
 ├── README.md  (2.0 KB)
 ├── REGULAMENT.md  (11.9 KB)
 ├── REGULI_CLAUDE_CODE.md  (30.0 KB)
 ├── SESSION_LOG.md  (81.5 KB)
 ├── START.md  (3.8 KB)
-├── STRUCTURA_PROIECT.md  (12.5 KB)
+├── STRUCTURA_PROIECT.md  (23.8 KB)
 ├── SURSE_MEDICALE.md  (7.5 KB)
 ├── tati.png  (170.8 KB)
 ├── TEMPLATES.md  (9.7 KB)

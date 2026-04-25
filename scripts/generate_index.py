@@ -19,6 +19,12 @@ import sys
 from datetime import datetime
 from pathlib import Path
 
+try:
+    import yaml  # PyYAML — parser robust pentru frontmatter cu obiecte/liste imbricate
+    HAS_YAML = True
+except ImportError:
+    HAS_YAML = False
+
 if hasattr(sys.stdout, "reconfigure"):
     try:
         sys.stdout.reconfigure(encoding="utf-8", errors="replace")
@@ -29,53 +35,62 @@ ROOT = Path(__file__).resolve().parent.parent
 OUTPUT = ROOT / "INDEX.json"
 SKIP_DIRS = {".git", "node_modules", ".claude-outputs", "__pycache__", "arhiva"}
 
-# Regex pentru detectare frontmatter YAML simplu (fără safe_load — lightweight)
 FRONTMATTER_RE = re.compile(r"\A---\s*\n(.*?)\n---\s*\n", re.DOTALL)
 
 
 def parse_frontmatter(text):
-    """Parsează frontmatter YAML simplu (key: value) — NU obiecte/liste imbricate.
+    """Parsează frontmatter YAML.
 
-    Returnează dict cu chei top-level. Liste pe o linie [a, b, c] și liste
-    multi-linie cu '-' sunt suportate la nivel top.
+    Folosește PyYAML dacă disponibil (suport complet pentru obiecte/liste imbricate).
+    Fallback la parser lightweight dacă PyYAML lipsește.
     """
     m = FRONTMATTER_RE.match(text)
     if not m:
         return None
     raw = m.group(1)
+    if HAS_YAML:
+        try:
+            return yaml.safe_load(raw) or {}
+        except yaml.YAMLError:
+            pass
+    # Fallback parser lightweight
     data = {}
     current_list_key = None
     for raw_line in raw.split("\n"):
         if not raw_line.strip():
             current_list_key = None
             continue
-        # Continuare listă cu indent + dash
         if current_list_key and raw_line.lstrip().startswith("-"):
             item = raw_line.lstrip()[1:].strip()
             if item:
                 data[current_list_key].append(item)
             continue
-        # Element cheie: valoare
         if ":" in raw_line and not raw_line.startswith(" "):
             key, _, value = raw_line.partition(":")
-            key = key.strip()
-            value = value.strip()
+            key, value = key.strip(), value.strip()
             if not value:
-                # Listă multi-linie va urma
                 data[key] = []
                 current_list_key = key
             elif value.startswith("[") and value.endswith("]"):
-                # Listă inline
                 items = [x.strip().strip("'\"") for x in value[1:-1].split(",") if x.strip()]
                 data[key] = items
                 current_list_key = None
             else:
-                # Valoare simplă (string, număr)
                 data[key] = value.strip("'\"")
                 current_list_key = None
         else:
             current_list_key = None
     return data
+
+
+def parse_yaml_block(text):
+    """Parsează un bloc YAML standalone (fără frontmatter)."""
+    if HAS_YAML:
+        try:
+            return yaml.safe_load(text) or {}
+        except yaml.YAMLError:
+            pass
+    return {}
 
 
 def relpath_str(path):
@@ -108,18 +123,9 @@ def main():
     if contacte_md.exists():
         try:
             text = contacte_md.read_text(encoding="utf-8")
-            # Caut blocurile YAML cu id: dr-...
-            for match in re.finditer(
-                r"```yaml\s*\n(.*?)```", text, re.DOTALL
-            ):
-                yaml_block = match.group(1)
-                # Parse simplu pe blocul YAML medical
-                medic = {}
-                for line in yaml_block.split("\n"):
-                    if ":" in line and not line.startswith(" ") and not line.startswith("\t"):
-                        key, _, value = line.partition(":")
-                        medic[key.strip()] = value.strip()
-                if medic.get("id", "").startswith("dr-"):
+            for match in re.finditer(r"```yaml\s*\n(.*?)```", text, re.DOTALL):
+                medic = parse_yaml_block(match.group(1))
+                if isinstance(medic, dict) and isinstance(medic.get("id"), str) and medic["id"].startswith("dr-"):
                     medic["file"] = relpath_str(contacte_md) + f"#{medic['id']}"
                     medici_oncohelp.append(medic)
         except (OSError, UnicodeDecodeError):
@@ -218,7 +224,10 @@ def main():
         "files_by_path": files_by_path,
     }
 
-    OUTPUT.write_text(json.dumps(output, ensure_ascii=False, indent=2), encoding="utf-8")
+    OUTPUT.write_text(
+        json.dumps(output, ensure_ascii=False, indent=2, default=str),
+        encoding="utf-8",
+    )
     print(f"INDEX.json generated: {OUTPUT}")
     print(f"  Stats: {stats}")
     return 0

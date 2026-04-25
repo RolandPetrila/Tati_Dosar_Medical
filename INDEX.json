@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-04-25T19:28:44",
+  "generated_at": "2026-04-25T19:34:34",
   "version": "1.0",
   "stats": {
-    "total_files_indexed": 130,
+    "total_files_indexed": 131,
     "medici_oncohelp": 2,
     "threaduri_gmail": 5,
     "documente_canonice": 18,
@@ -14,21 +14,32 @@
       "nume": "Anater Angelo-Christian",
       "titlu": "Dr.",
       "titlu_profesional": "Medic Specialist (per self-id email; site oncohelp.ro listează „Rezident\" — conflict surse R12)",
-      "specializare": "[oncologie medicala]",
+      "specializare": [
+        "oncologie medicala"
+      ],
       "unitate": "OncoHelp Timișoara",
       "unitate_id": "oncohelp-timisoara",
       "departament": "Secția de Oncologie",
-      "emails": "",
-      "telefoane": "[]",
+      "emails": {
+        "primar": "angelo.anater@oncohelp.ro",
+        "secundar": "angelo.anater95@yahoo.com"
+      },
+      "telefoane": [],
       "varsta_estimata": "~31 ani (sufix `95` în yahoo sugerează naștere 1995) [PROBABIL]",
       "status": "🟢 activ",
       "prim_contact": "2026-04-23",
       "ultim_contact": "2026-04-25",
       "rol": "medic oncolog curant — primă linie de contact OncoHelp pentru cazul tata",
-      "tags": "[oncolog, oncohelp, medic-curant, programat-30-04, conflict-surse-status]",
-      "version": "1.1",
-      "sursa_status_profesional_email": "'semnătură email Dr. Anater 24.04.2026 — „Medic Specialist, Oncologie Medicala, Oncohelp Timisoara\"'",
-      "sursa_status_profesional_site": "'oncohelp.ro/echipa-oncohelp/ accesat 2026-04-25 — „Medic Rezident\" (probabil neactualizat după promovare)'",
+      "tags": [
+        "oncolog",
+        "oncohelp",
+        "medic-curant",
+        "programat-30-04",
+        "conflict-surse-status"
+      ],
+      "version": 1.1,
+      "sursa_status_profesional_email": "semnătură email Dr. Anater 24.04.2026 — „Medic Specialist, Oncologie Medicala, Oncohelp Timisoara\"",
+      "sursa_status_profesional_site": "oncohelp.ro/echipa-oncohelp/ accesat 2026-04-25 — „Medic Rezident\" (probabil neactualizat după promovare)",
       "file": "Dosar_Medical/CONTACTE_MEDICALE.md#dr-anater-angelo-christian"
     },
     {
@@ -36,24 +47,53 @@
       "nume": "Vornicu Vlad-Norin",
       "titlu": "Dr.",
       "titlu_profesional": "Medic Specialist Oncolog",
-      "specializare": "[oncologie medicala, oncologie clinica]",
-      "focus_clinic": "",
+      "specializare": [
+        "oncologie medicala",
+        "oncologie clinica"
+      ],
+      "focus_clinic": [
+        "oncologie pulmonara (principal)",
+        "oncologie mamara",
+        "oncologie urologica"
+      ],
       "unitate": "OncoHelp Timișoara",
       "unitate_id": "oncohelp-timisoara",
       "departament": "Secția de Oncologie",
       "pozitie_academica": "Asistent Universitar PhD — UMFT „Victor Babeș\" Timișoara, Departament IX Chirurgie I, Disciplina Oncologie",
-      "emails": "",
-      "telefoane": "",
+      "emails": {
+        "primar": "vornicuvlad91@gmail.com"
+      },
+      "telefoane": [
+        {
+          "numar": "0762 120 428",
+          "sursa": "furnizat user 2026-04-25 + ResearchGate",
+          "tip": "mobil"
+        }
+      ],
       "data_nasterii": "1991-07-06",
-      "varsta": "35",
+      "varsta": 35,
       "status": "🟡 contact furnizat user — încă fără interacțiune directă",
-      "prim_contact": "null",
-      "ultim_contact": "null",
+      "prim_contact": null,
+      "ultim_contact": null,
       "rol": "oncolog senior accesibil — eventual a doua opinie / specialist complementar Dr. Anater",
-      "tags": "",
-      "version": "1.0",
-      "publicatii": "",
-      "implicare_publica": "[activist spital oncologic Reșița Caraș-Severin]",
+      "tags": [
+        "oncolog",
+        "oncohelp",
+        "specialist",
+        "asistent-universitar-umft",
+        "oncologie-pulmonara",
+        "researchgate"
+      ],
+      "version": 1.0,
+      "publicatii": {
+        "researchgate_id": "Vlad-Norin-Vornicu",
+        "citari": 11,
+        "reads": 396,
+        "publicatii_count": 2
+      },
+      "implicare_publica": [
+        "activist spital oncologic Reșița Caraș-Severin"
+      ],
       "sources_verified": "2026-04-25",
       "file": "Dosar_Medical/CONTACTE_MEDICALE.md#dr-vornicu-vlad"
     }
@@ -70,10 +110,17 @@
       "data_start": "2026-04-22",
       "data_ultim": "2026-04-22",
       "status": "⚪ încheiat",
-      "tags": [],
-      "mesaje_count": "2",
-      "atasamente_count": "6",
-      "version": "1.0",
+      "tags": [
+        "adjuvant",
+        "suplimente",
+        "doctorcip",
+        "recomandare-personala",
+        "lusca",
+        "pre-broadcast"
+      ],
+      "mesaje_count": 2,
+      "atasamente_count": 6,
+      "version": 1.0,
       "file": "Dosar_Medical/corespondenta/2026-04-22_solicitare-dr-cip-recomandare-lusca.md"
     },
     {
@@ -93,15 +140,17 @@
         "broadcast-23-04",
         "biopsie-asteptare"
       ],
-      "mesaje_count": "1",
-      "atasamente_count": "7",
-      "version": "1.0",
+      "mesaje_count": 1,
+      "atasamente_count": 7,
+      "version": 1.0,
       "follow_up_thread": "19dbe7d30cfacbb3",
       "file": "Dosar_Medical/corespondenta/2026-04-23_solicitare-sprijin-oncohelp.md"
     },
     {
       "thread_ids": [
-        "19db78a7c0a1758d (OncoHelp Timișoara — fișier dedicat: 2026-04-23_solicitare-sprijin-oncohelp.md)",
+        {
+          "19db78a7c0a1758d (OncoHelp Timișoara — fișier dedicat": "2026-04-23_solicitare-sprijin-oncohelp.md)"
+        },
         "19db78aecc2bc85d (Medisprof Cluj — auto-reply primit)",
         "19db78ab576e126b (IOCN Cluj office)",
         "19db78a3f9a3f229 (Amethyst Radiotherapy Cluj)",
@@ -119,10 +168,19 @@
       "data_start": "2026-04-23",
       "data_ultim": "2026-04-23",
       "status": "🟡 broadcast trimis — răspunsuri pe threaduri separate (vezi cross-references)",
-      "tags": [],
-      "mesaje_count": "6",
+      "tags": [
+        "broadcast",
+        "solicitare-initiala",
+        "oncohelp",
+        "iocn",
+        "medlife",
+        "medisprof",
+        "amethyst",
+        "second-opinion"
+      ],
+      "mesaje_count": 6,
       "atasamente_count": "7 (per fiecare destinatar)",
-      "version": "1.0",
+      "version": 1.0,
       "file": "Dosar_Medical/corespondenta/2026-04-23_broadcast-solicitari-clinici.md"
     },
     {
@@ -171,10 +229,13 @@
         "biopsie-asteptare",
         "cluj"
       ],
-      "mesaje_count": "1",
-      "atasamente_count": "0",
-      "version": "1.0",
-      "related_threads": [],
+      "mesaje_count": 1,
+      "atasamente_count": 0,
+      "version": 1.0,
+      "related_threads": [
+        "19db78ab576e126b (solicitare inițială către IOCN office)",
+        "19db78a7c0a1758d (broadcast OncoHelp)"
+      ],
       "file": "Dosar_Medical/corespondenta/2026-04-24_raspuns-iocn-mester.md"
     }
   ],
@@ -273,7 +334,8 @@
       "Dosar_Medical/corespondenta/2026-04-23_broadcast-solicitari-clinici.md",
       "Dosar_Medical/corespondenta/2026-04-24_re-solicitare-consult-anater.md",
       "Dosar_Medical/corespondenta/2026-04-24_raspuns-iocn-mester.md",
-      "Dosar_Medical/corespondenta/INDEX.md"
+      "Dosar_Medical/corespondenta/INDEX.md",
+      "INDEX.json"
     ],
     "Vornicu": [
       "CONTEXT_MEDICAL.md",
@@ -282,7 +344,8 @@
       "Dosar_Medical/CONTACTE_MEDICALE.md",
       "Dosar_Medical/cercetari/SINTEZA_CLINICI_ONCOLOGIE.md",
       "Dosar_Medical/cercetari/2026-04-25_cercetare-oncohelp-vornicu-anater.md",
-      "Dosar_Medical/corespondenta/INDEX.md"
+      "Dosar_Medical/corespondenta/INDEX.md",
+      "INDEX.json"
     ]
   },
   "files_by_path": {
@@ -323,8 +386,8 @@
     },
     "STRUCTURA_PROIECT.md": {
       "type": "md",
-      "size_kb": 12.5,
-      "last_modified": "2026-04-24T22:23:52"
+      "size_kb": 23.8,
+      "last_modified": "2026-04-25T19:28:49"
     },
     "BAZA_CUNOSTINTE.md": {
       "type": "md",
@@ -378,8 +441,8 @@
     },
     "PLAN_IMPLEMENTARE_2026-04-25.md": {
       "type": "md",
-      "size_kb": 45.9,
-      "last_modified": "2026-04-25T19:26:20"
+      "size_kb": 45.6,
+      "last_modified": "2026-04-25T19:29:19"
     },
     "Dosar_Medical/PLAN_audit_remediere_v2_2026-04-18.md": {
       "type": "md",
@@ -630,6 +693,11 @@
       "type": "md",
       "size_kb": 23.0,
       "last_modified": "2026-04-24T18:06:23"
+    },
+    "INDEX.json": {
+      "type": "json",
+      "size_kb": 33.6,
+      "last_modified": "2026-04-25T19:33:34"
     },
     "Dosar_Medical/2012-02-17_cardiologie_vichy_stent.json": {
       "type": "json",
@@ -928,8 +996,8 @@
     },
     "DASHBOARD.html": {
       "type": "html",
-      "size_kb": 121.7,
-      "last_modified": "2026-04-25T15:51:37"
+      "size_kb": 129.8,
+      "last_modified": "2026-04-25T19:34:19"
     },
     "index.html": {
       "type": "html",
