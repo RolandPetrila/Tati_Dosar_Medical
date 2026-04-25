@@ -6,6 +6,50 @@
 
 ---
 
+## 2026-04-25 15:50 — [Claude_Opus_4.7] eliminare-restrictie-lactate-gastroenterolog-sinteza-evidenta
+
+**Scop:** clarificare user 2026-04-25 (după-amiază): **medicul gastroenterolog (Dr. Noufal Abdul Vahab, gastroscopie 17.04.2026) NU a interzis lactatele**. Restricția generică pe „lapte dulce" prezentă în versiunile anterioare ale `ALIMENTATIE.md` era o reportare eronată. User cere: (1) eliminare mențiuni interdicție gastroenterolog din `ALIMENTATIE.md`, (2) cercetare bazată pe evidență dacă lactatele sunt recomandate sau nu pentru profilul pacientului, (3) reactualizare documentație cu noile recomandări.
+
+**Cercetare web (9 query-uri WebSearch + sinteză):**
+
+1. ESPEN guidelines clinical nutrition cancer 2021 — lactate fortificate ca strategie standard
+2. Lactate și cancer eso-gastric (cohort PLCO 101.000, meta-analiză yogurt-gastric −24%)
+3. Lapte și GERD/reflux/disfagie (RCT EJN 2022 — 3 porții/zi nu agravează)
+4. Mit lapte → mucus (dezavuat sistematic, multiple meta-analize)
+5. Lactate, CV și DZ tip 2 (FDA 2024 claim iaurt-DZ scădere risc)
+6. Probiotice + chimio mucozită/diaree (meta-analiză Wang n=1013, Frontiers 2022)
+7. Probiotice + Lactobacillus → eradicare H. pylori (Nature Sci Rep 2024 umbrella, 96 RCT n=13.829)
+8. Gastropareză + lapte (volume mici dese OK; lactose-free dacă intoleranță)
+9. Whole milk fortification + cașexie (ESPEN/ESMO standard)
+
+**Concluzie evidență:** zero contraindicație medicală pe lactate la profilul pacientului. Iaurturile fermentate, kefirul și laptele praf sunt recomandate activ; lapte integral OK în volume mici dese; trecere la fără-lactoză doar dacă apare intoleranță individuală clinic.
+
+**Operații pe fișierele de referință:**
+
+1. **Backup R10** — `Dosar_Medical/arhiva/context_medical_versiuni/ALIMENTATIE_pre-eliminare-restrictie-lactate-evidenta_2026-04-25_1547.md`
+
+2. **`ALIMENTATIE.md` v2.1** (5 modificări):
+   - Eliminare „Notă: lapte dulce simplu fusese restricționat de gastroenterolog..." → înlocuită cu „Notă practică (volum)" (doze mici dese + lactose-free la intoleranță)
+   - Eliminare „Iaurt, kefir, brânzeturi proaspete — directiva inițială (gastroenterolog)..." din secțiunea 🟡 Limitate (lactatele fermentate erau deja la 🟢 Recomandate)
+   - Eliminare „Lapte dulce simplu — directivă inițială gastroenterolog" din Interacțiuni medicație
+   - Eliminare „Directivă medic curant (Genesis Medical Clinic Arad) — restricție lapte dulce" din Surse
+   - Adăugare secțiune nouă **„🥛 Lactate — sinteză evidență (clarificare 2026-04-25)"** cu: concluzie scurtă, evidență pe 7 contexte, clasificare actualizată (🟢/🟡/🔴), recomandări pentru consult 30.04 OncoHelp (test intoleranță lactoză, probiotice FLOT, Lactobacillus eradicare HP)
+   - Antet: versiune v2.1 + lista surselor științifice noi
+
+3. **`DASHBOARD.html` regenerare bloc md-alimentatie** (R18 declanșatori 1+9):
+   - Bloc embedded `md-alimentatie` (1931–2552) înlocuit cu noul `ALIMENTATIE.md` v2.1
+   - Banner Ultima generare: 25 aprilie 2026, 15:50 — text „clarificare lactate fără restricție gastroenterolog + sinteză evidență ESPEN/FDA/Frontiers/Nature"
+   - lastRegen variable JS sincronizat
+   - Total linii: 2706 → 2820
+
+**Why:** corectitudine clinică + transparență față de medicul gastroenterolog (informație atribuită eronat) + dosar bazat exclusiv pe evidență peer-reviewed înainte de consult oncolog 30.04. Lactatele fermentate sunt aliați nutriționali documentați în context oncologic + post-stent + DZ tip 2 + pre-FLOT.
+
+**How to apply:** la orice viitoare reportare a unei „interdicții" sau „recomandări" atribuite unui medic, verificare directă cu user-ul + sursă scrisă (scrisoare medicală, recomandare din JSON canonic) înainte de propagare în documentele de referință.
+
+**Fișiere modificate:** `ALIMENTATIE.md`, `DASHBOARD.html`, `SESSION_LOG.md`, `CHANGELOG.md`. JSON-uri sursă NU modificate (chain of custody R14 intact). `CONTEXT_MEDICAL.md` — verificat (0 mențiuni lactate, fără modificări necesare).
+
+---
+
 ## 2026-04-25 03:00 — [Claude_Opus_4.7] clarificare-torvacard-program-oncolog-sincronizare-alimentatie
 
 **Scop:** integrare clarificări user 2026-04-25: (1) TORVACARD nu se administrează — schema reală e cea manuscrisă fără statină; (2) consult oncolog programat 30.04 OncoHelp Timișoara, biopsie estimat 28-29.04, dosar fizic POST-biopsie; (3) sincronizare `ALIMENTATIE.md` cu ghid nutrițional exhaustiv pentru JEG Siewert II (compass_artifact ESPEN/IDDSI/FLOT/ONS/IARC).
@@ -105,7 +149,7 @@
    - §10 Evaluare preliminară: notă explicit „concluzii interpretative, NU factual direct" + marcaje aplicate pe elemente care susțin + elemente favorabile + ipoteze + stadializare probabilă.
 8. **TODO.md** — nou task P1 „Clarificare TORVACARD (discrepanță 10.11.2025)" cu 6 sub-task-uri.
 9. **Dosar_Medical/\*.meta.json** — 8 meta.json noi pentru JSON canonice care le lipseau (2012 Vichy, 2023 CI, 2025-06-17 analize, 2025-10-28 urologie, 2025-11-01 talon, 2025-11-10 schema, 2025-11-28 hernie, 2026-04-17 bioclinica).
-10. **Dosar_Medical/documente_sursa/_/_.meta.json** — 11 meta.json noi pentru documente sursă care le lipseau (04/HP, 05/analize_sange, 06/urologie, 07/bilet + scrisoare, 09/gastroscopic + colonoscopic, 11/bilet_CT + CT-Genesys, 13/cardiologie, 14/UPU_complet).
+10. **Dosar*Medical/documente_sursa/*/\_.meta.json** — 11 meta.json noi pentru documente sursă care le lipseau (04/HP, 05/analize_sange, 06/urologie, 07/bilet + scrisoare, 09/gastroscopic + colonoscopic, 11/bilet_CT + CT-Genesys, 13/cardiologie, 14/UPU_complet).
 11. **DASHBOARD.html** — regenerare integrală:
     - Medicație card: sursa Dr. LAZA CRISTINA + alert critical TORVACARD discrepanță.
     - Echipă medicală card: wide + 16 medici (era 7 cu multe „De identificat").

@@ -4,6 +4,57 @@
 
 ---
 
+## 2026-04-25 15:50 — Eliminare restricție generică pe lapte atribuită eronat gastroenterologului + secțiune nouă „🥛 Lactate — sinteză evidență"
+
+**Tip:** CORECȚIE FACTUALĂ + REACTUALIZARE EVIDENȚĂ-BAZATĂ.
+
+**Context:** user a clarificat că medicul gastroenterolog Dr. Noufal Abdul Vahab (gastroscopie 17.04.2026, Genesis Arad) **nu a interzis lactatele**. Restricția generică pe „lapte dulce" prezentă în versiunile anterioare ALIMENTATIE.md era o reportare eronată și trebuie eliminată. User cere reactualizare bazată exclusiv pe evidența medicală peer-reviewed.
+
+### Cercetare web 9 query-uri (sinteză)
+
+| Aspect                              | Concluzie                                         | Sursă                                    |
+| ----------------------------------- | ------------------------------------------------- | ---------------------------------------- |
+| Lactate fermentate ↔ cancer gastric | −24% risc (cohort meta)                           | Yogurt in Nutrition                      |
+| Lactate ↔ cancer esofagian          | Fără asociere semnificativă (cohort PLCO 101.000) | Frontiers Nutrition 2022                 |
+| Lapte ↔ mucus                       | Mit dezavuat (multiple meta-analize)              | J Am Coll Nutr 2005, Med Hypotheses 2010 |
+| Lapte ↔ GERD                        | RCT 3 porții/zi nu agravează                      | EJN 2022                                 |
+| Lactate ↔ CV / HTA                  | Neutru sau benefic                                | Current Nutrition Reports 2018, PURE     |
+| Iaurt ↔ DZ tip 2                    | FDA 2024: claim oficial scădere risc              | FDA qualified health claim               |
+| Probiotice ↔ mucozită chimio        | RR 0.84 (orice grad), RR 0.66 (sever)             | Frontiers Nutrition 2022 (n=1013)        |
+| Probiotice ↔ diaree chimio          | RR 0.70 (orice), RR 0.50 (sever)                  | Idem                                     |
+| Lactobacillus ↔ eradicare HP        | +9% rată eradicare; reduce efecte adverse         | Nature Sci Rep 2024 (96 RCT n=13.829)    |
+| Lapte fortificat ↔ cașexie          | Strategie standard ESPEN/ESMO                     | ESPEN 2021                               |
+
+**Concluzie:** zero contraindicație medicală pe lactate la profilul pacientului (JEG Siewert II + DZ + HTA + post-stent + HP IgG+).
+
+### Edituri executate
+
+1. **`ALIMENTATIE.md` v2.1** (5 modificări):
+   - Eliminare 4 mențiuni „interdicție gastroenterolog" (linii 183, 298, 441, 615 din v2.0)
+   - Înlocuire notă cu „Notă practică (volum)" — doze mici dese 100–150 mL × 4–6/zi + lactose-free dacă apare intoleranță
+   - Adăugare secțiune nouă **„🥛 Lactate — sinteză evidență (clarificare 2026-04-25)"** cu concluzie, evidență pe 7 contexte, clasificare actualizată 🟢/🟡/🔴, recomandări pentru consult 30.04 OncoHelp
+   - Antet versiune v2.1
+   - Total linii: 627 → ~770
+
+2. **`DASHBOARD.html`** (R18):
+   - Bloc `md-alimentatie` regenerat cu noul ALIMENTATIE.md v2.1
+   - Banner + lastRegen actualizate
+   - Total linii: 2706 → 2820
+
+3. **`SESSION_LOG.md`** — intrare nouă 2026-04-25 15:50
+
+4. **Backup R10:** `Dosar_Medical/arhiva/context_medical_versiuni/ALIMENTATIE_pre-eliminare-restrictie-lactate-evidenta_2026-04-25_1547.md`
+
+5. **`CONTEXT_MEDICAL.md`** — verificat (0 mențiuni lactate, fără modificări necesare).
+
+6. **JSON-uri sursă (`Dosar_Medical/*.json`)** — NU modificate (chain of custody R14 intact). Documentul sursă `2026-04-17_examen_gastroscopic.json` reflectă fidel raportul gastroenterologului — nu conține menționarea unei restricții pe lactate (validare retroactivă a clarificării).
+
+### Lecție pentru sesiuni viitoare
+
+La orice reportare a unei „interdicții" sau „recomandări" atribuite unui medic, verificare directă cu user-ul + sursă scrisă (scrisoare medicală, recomandare din JSON canonic, înregistrare consult) **înainte** de propagare în documentele de referință medicală.
+
+---
+
 ## 2026-04-25 03:00 — Clarificare TORVACARD + programare consult oncolog OncoHelp + sincronizare ALIMENTATIE.md cu ghid ESPEN/IDDSI/FLOT
 
 **Tip:** UPDATE STATUS (clarificare user) + PROGRAMARE EVENIMENT + INTEGRARE GHID NUTRIȚIONAL.
