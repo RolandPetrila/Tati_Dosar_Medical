@@ -609,7 +609,7 @@ _(Listează aici threaduri vechi sau cu status `arhivat` — pentru viitor)_
 
 **Pași:**
 
-- [ ] **#12.1** — Creez `scripts/generate_index.py` cu următorul rol:
+- [x] **#12.1** — Creat `scripts/generate_index.py` (2026-04-25 19:25):
   - Scanează tot proiectul (excluzând `.git`, `node_modules`, `.claude-outputs`, `arhiva`)
   - Pentru fiecare fișier `.md` cu frontmatter YAML → extrage frontmatter
   - Pentru fiecare fișier `.json` cu schema cunoscută (medical document) → extrage metadata
@@ -652,31 +652,21 @@ _(Listează aici threaduri vechi sau cu status `arhivat` — pentru viitor)_
 }
 ```
 
-- [ ] **#12.2** — Rulează `python scripts/generate_index.py` și verifică `INDEX.json` la rădăcină.
+- [x] **#12.2** — Rulat `python scripts/generate_index.py` → `INDEX.json` 32.2 KB la rădăcină. Stats: 130 fișiere indexate, 2 medici, 5 threaduri Gmail, 18 documente canonice.
 
-- [ ] **#12.3** — Extinde `STRUCTURA_PROIECT.md` (existent) cu o secțiune nouă **„🗺 Hartă completă auto-generată"** la finalul fișierului, generată de `scripts/regenerate_structura.py`:
-  - Arborele complet folder/fișiere (output `tree` formatat)
-  - Index thematic („Caut [biopsie/medic/programare/dietă/corespondență]? → mergi la [...]")
-  - Stats live: număr fișiere, dimensiuni, ultima modificare
-  - **Important:** secțiunea auto-generată e marcată cu `<!-- AUTO-GENERATED START -->` și `<!-- AUTO-GENERATED END -->` ca să poată fi regenerată fără a afecta restul fișierului.
+- [x] **#12.3** — Extins `STRUCTURA_PROIECT.md` cu secțiunea auto-generată „🗺 Hartă completă" la final, cu markeri `<!-- AUTO-GENERATED START -->` / `<!-- AUTO-GENERATED END -->`.
 
-- [ ] **#12.4** — Creez `scripts/regenerate_structura.py` care detectează markerii și regenerează doar secțiunea auto.
+- [x] **#12.4** — Creat `scripts/regenerate_structura.py` (2026-04-25 19:27) cu logică pe markeri (replace dacă există, append cu separator dacă nu).
 
-- [ ] **#12.5** — Rulează `python scripts/regenerate_structura.py`.
+- [x] **#12.5** — Rulat `python scripts/regenerate_structura.py` → secțiune ~9.7 KB cu: 12 stats live + 12 categorii index thematic + arbore folder depth 3.
 
 **Verificare:**
 
-- [ ] `INDEX.json` există la rădăcină cu structura cerută
-- [ ] `STRUCTURA_PROIECT.md` are secțiunea auto-generată actualizată
-- [ ] `scripts/generate_index.py` și `scripts/regenerate_structura.py` rulează fără erori
+- [x] `INDEX.json` există la rădăcină cu structura cerută (medici_oncohelp + corespondenta + documente_canonice + cross_references + files_by_path)
+- [x] `STRUCTURA_PROIECT.md` are secțiunea auto-generată actualizată
+- [x] `scripts/generate_index.py` + `scripts/regenerate_structura.py` rulează fără erori (cod 0)
 
-**Commit incremental:**
-
-```bash
-git add scripts/generate_index.py scripts/regenerate_structura.py INDEX.json STRUCTURA_PROIECT.md
-git commit -m "[PLAN 2026-04-25] task #12 — INDEX.json + STRUCTURA_PROIECT auto-regen"
-git push
-```
+**Commit incremental:** `[PLAN 2026-04-25] task #12 — INDEX.json + STRUCTURA_PROIECT auto-regen` (committed).
 
 ---
 

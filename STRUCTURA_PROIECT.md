@@ -266,3 +266,201 @@ Structura descrisă în acest fișier **nu se modifică decât cu acordul explic
 ---
 
 **Ultima revizuire:** 17 aprilie 2026.
+
+---
+
+<!-- AUTO-GENERATED START -->
+
+## 🗺 Hartă completă auto-generată
+
+> ⚙️ **Generat automat:** 2026-04-25T19:28:44 de `scripts/regenerate_structura.py`. NU edita manual această secțiune — modificările se pierd la următoarea regenerare. Pentru cuprinsul fix vezi secțiunile non-auto de mai sus.
+
+### 📊 Statistici live
+
+- **Total fișiere proiect (excl. .git):** 206
+- **Markdown (.md):** 91
+- **JSON (.json):** 62
+- **HTML (.html):** 4
+- **Total size:** 49859.1 KB
+
+### 🧭 Index thematic (caut...)
+
+| Caut...                                        | Mergi la                                                                 |
+| ---------------------------------------------- | ------------------------------------------------------------------------ |
+| biopsie  | `Dosar_Medical/documente_sursa/12_biopsie_2026/` · `TODO.md` · `Documente_Informative/EXPLICATIE_CONSULT_ONCOLOG_SCENARII.md` |
+| medic / oncolog / programare  | `Dosar_Medical/CONTACTE_MEDICALE.md` · `CONTEXT_MEDICAL.md (§9 Echipă medicală)` · `TODO.md (Calendar + P0)` |
+| corespondență email medici  | `Dosar_Medical/corespondenta/INDEX.md` · `Dosar_Medical/corespondenta/2026-04-*.md` |
+| dietă / alimentație  | `ALIMENTATIE.md` · `DASHBOARD.html (tab Alimentație)` |
+| CT 20.04.2026  | `Dosar_Medical/2026-04-20_ct_torace_abdomen_pelvis.json` · `Dosar_Medical/documente_sursa/11_CT_stadializare_2026/` · `CONTEXT_MEDICAL.md §2` |
+| endoscopie / colonoscopie 17.04.2026  | `Dosar_Medical/2026-04-17_examen_gastroscopic.json` · `Dosar_Medical/2026-04-17_examen_colonoscopic.json` · `Dosar_Medical/documente_sursa/09_endoscopie_2026_04/` |
+| medicație + interacțiuni  | `CONTEXT_MEDICAL.md §4` · `Dosar_Medical/2025-11-10_schema_medicamente.json` · `Dosar_Medical/rapoarte_generate/2026-04-18_raport_reactii_adverse_jamesi_triplixam.docx` |
+| monitor automat biopsie ntfy.sh  | `TODO.md (secțiunea Monitor automat)` · `C:\Users\ALIENWARE\Desktop\Roly\Sistem_Notificari_Telefon\ (repo extern)` |
+| DASHBOARD live (familie)  | `DASHBOARD.html` · `https://rolandpetrila.github.io/Tati_Dosar_Medical/` |
+| reguli + protocol  | `CLAUDE.md (loader)` · `REGULAMENT.md (R1-10 medicale)` · `REGULI_CLAUDE_CODE.md (R6-29 specifice)` |
+| system health monitor R28  | `Dosar_Medical/SYSTEM_HEALTH.json` · `scripts/system_health_check.py` |
+| plan execuție curent  | `PLAN_IMPLEMENTARE_2026-04-25.md (status în frontmatter)` |
+
+### 🌳 Arbore folder (depth 3)
+
+```
+.Tati/  (7 subfoldere, 26 fișiere root)
+├── .claude/  (1 fișiere)
+│   ├── settings.local.json  (1.9 KB)
+├── .ruff_cache/  (3 fișiere)
+│   ├── 0.14.2/  (1 fișiere)
+│   │   ├── 4361782613845319426  (0.2 KB)
+│   ├── .gitignore  (0.0 KB)
+│   ├── CACHEDIR.TAG  (0.0 KB)
+├── assets/  (4 fișiere)
+│   ├── generate_icons.py  (2.2 KB)
+│   ├── icon-192.png  (1.1 KB)
+│   ├── icon-512.png  (3.4 KB)
+│   ├── icon-maskable-512.png  (2.5 KB)
+├── Documentatie_Initiala/  (19 fișiere)
+│   ├── BAZA_CUNOSTINTE.md  (9.4 KB)
+│   ├── CHANGELOG.md  (3.7 KB)
+│   ├── CLAUDE.md  (5.7 KB)
+│   ├── CONTEXT_MEDICAL.md  (10.1 KB)
+│   ├── GLOSAR.md  (10.6 KB)
+│   ├── HISTORY_CLAUDE_MD.md  (9.8 KB)
+│   ├── INSTALARE.md  (8.3 KB)
+│   ├── kit_claude_code_dosar_medical.zip  (50.1 KB)
+│   ├── PLAN_reorganizare_claude_md_2026-04-23.md  (8.6 KB)
+│   ├── PRIMUL_PROMPT.md  (6.8 KB)
+│   ├── README.md  (2.0 KB)
+│   ├── REGULAMENT.md  (9.6 KB)
+│   ├── REGULI_DETALIATE.md  (14.0 KB)
+│   ├── START.md  (3.8 KB)
+│   ├── STRUCTURA_PROIECT.md  (9.3 KB)
+│   ├── SURSE_MEDICALE.md  (7.5 KB)
+│   ├── TEMPLATES.md  (9.7 KB)
+│   ├── TODO.md  (7.0 KB)
+│   ├── WORKFLOW.md  (9.2 KB)
+├── Documente_Informative/  (4 fișiere)
+│   ├── CLAUDE.md  (3.5 KB)
+│   ├── EXPLICATIE_CONSULT_ONCOLOG_SCENARII.md  (74.5 KB)
+│   ├── GHID_APEL_ONCOHELP.md  (11.1 KB)
+│   ├── GHID_CONSULT_ONCOLOG.md  (22.5 KB)
+├── Dosar_Medical/  (146 fișiere)
+│   ├── arhiva/  (26 fișiere)
+│   │   ├── context_medical_versiuni/  (8 fișiere)
+│   │   ├── versiuni_config/  (18 fișiere)
+│   ├── cercetari/  (2 fișiere)
+│   │   ├── 2026-04-25_cercetare-oncohelp-vornicu-anater.md  (15.4 KB)
+│   │   ├── SINTEZA_CLINICI_ONCOLOGIE.md  (34.3 KB)
+│   ├── comunicare_medici/  (0 fișiere)
+│   ├── corespondenta/  (6 fișiere)
+│   │   ├── 2026-04-22_solicitare-dr-cip-recomandare-lusca.md  (7.7 KB)
+│   │   ├── 2026-04-23_broadcast-solicitari-clinici.md  (6.6 KB)
+│   │   ├── 2026-04-23_solicitare-sprijin-oncohelp.md  (5.2 KB)
+│   │   ├── 2026-04-24_raspuns-iocn-mester.md  (4.3 KB)
+│   │   ├── 2026-04-24_re-solicitare-consult-anater.md  (7.7 KB)
+│   │   ├── INDEX.md  (7.2 KB)
+│   ├── documente_sursa/  (55 fișiere)
+│   │   ├── 01_identitate/  (3 fișiere)
+│   │   ├── 02_cardiologie_2012/  (0 fișiere)
+│   │   ├── 03_hernie_anterior/  (0 fișiere)
+│   │   ├── 04_helicobacter_2024/  (3 fișiere)
+│   │   ├── 05_analize_laborator/  (6 fișiere)
+│   │   ├── 06_urologie_gastro_2025/  (3 fișiere)
+│   │   ├── 07_hernie_2025_11/  (6 fișiere)
+│   │   ├── 08_schema_tratament/  (3 fișiere)
+│   │   ├── 09_endoscopie_2026_04/  (6 fișiere)
+│   │   ├── 10_administrativ_pensie/  (3 fișiere)
+│   │   ├── 11_CT_stadializare_2026/  (6 fișiere)
+│   │   ├── 12_biopsie_2026/  (0 fișiere)
+│   │   ├── 13_cardiologie_ambulator_2025/  (3 fișiere)
+│   │   ├── 14_UPU_2024_05_30/  (13 fișiere)
+│   ├── interpretari/  (0 fișiere)
+│   │   ├── cronologic/  (0 fișiere)
+│   │   ├── jurnal_simptome/  (0 fișiere)
+│   ├── rapoarte_generate/  (12 fișiere)
+│   │   ├── .ruff_cache/  (3 fișiere)
+│   │   ├── versiuni_anterioare/  (0 fișiere)
+│   │   ├── 2026-04-18_raport_reactii_adverse_jamesi_triplixam.docx  (46.1 KB)
+│   │   ├── 2026-04-18_raport_reactii_adverse_jamesi_triplixam.meta.json  (3.0 KB)
+│   │   ├── 2026-04-19_ghid_cancer_esofagian_complet.docx  (63.3 KB)
+│   │   ├── 2026-04-19_ghid_cancer_esofagian_complet.meta.json  (2.4 KB)
+│   │   ├── 2026-04-22_explicatie_consult_oncolog_scenarii.docx  (63.5 KB)
+│   │   ├── 2026-04-22_explicatie_consult_oncolog_scenarii.meta.json  (4.5 KB)
+│   │   ├── generate_explicatie_scenarii.py  (85.6 KB)
+│   │   ├── generate_ghid_cancer_esofagian.py  (80.7 KB)
+│   │   ├── generate_reactii_adverse_docx.py  (35.1 KB)
+│   ├── 2012-02-17_cardiologie_vichy_stent.json  (3.4 KB)
+│   ├── 2012-02-17_cardiologie_vichy_stent.json.meta.json  (2.0 KB)
+│   ├── 2023-06-12_carte_identitate.json  (2.3 KB)
+│   ├── 2023-06-12_carte_identitate.json.meta.json  (1.3 KB)
+│   ├── 2024-05-30_analize_upu_sange_1517243.json  (9.2 KB)
+│   ├── 2024-05-30_analize_upu_sange_1517243.json.meta.json  (0.8 KB)
+│   ├── 2024-05-30_analize_upu_urina_1517290.json  (5.2 KB)
+│   ├── 2024-05-30_analize_upu_urina_1517290.json.meta.json  (0.8 KB)
+│   ├── 2024-05-30_upu_consult_gastro_cardio.json  (13.1 KB)
+│   ├── 2024-05-30_upu_consult_gastro_cardio.json.meta.json  (1.1 KB)
+│   ├── 2024-06-04_anti_helicobacter_pylori_igg_77449.json  (3.5 KB)
+│   ├── 2024-06-04_anti_helicobacter_pylori_igg_77449.json.meta.json  (1.1 KB)
+│   ├── 2024-09-06_anti_helicobacter_pylori_igg_79765.json  (3.8 KB)
+│   ├── 2024-09-06_anti_helicobacter_pylori_igg_79765.json.meta.json  (1.1 KB)
+│   ├── 2025-06-17_buletin_analize_sange.json  (14.7 KB)
+│   ├── 2025-06-17_buletin_analize_sange.json.meta.json  (1.7 KB)
+│   ├── 2025-10-28_scrisoare_urologie_gastroenterologie.json  (4.3 KB)
+│   ├── 2025-10-28_scrisoare_urologie_gastroenterologie.json.meta.json  (1.6 KB)
+│   ├── 2025-11-01_talon_pensie_asigurare.json  (1.9 KB)
+│   ├── 2025-11-01_talon_pensie_asigurare.json.meta.json  (1.2 KB)
+│   ├── 2025-11-10_ecografie_transtoracica.json  (4.0 KB)
+│   ├── 2025-11-10_ecografie_transtoracica.json.meta.json  (1.1 KB)
+│   ├── 2025-11-10_schema_medicamente.json  (4.8 KB)
+│   ├── 2025-11-10_schema_medicamente.json.meta.json  (2.8 KB)
+│   ├── 2025-11-10_scrisoare_medicala_cardiologie.json  (5.9 KB)
+│   ├── 2025-11-10_scrisoare_medicala_cardiologie.json.meta.json  (1.2 KB)
+│   ├── 2025-11-28_externare_chirurgie_hernie.json  (14.9 KB)
+│   ├── 2025-11-28_externare_chirurgie_hernie.json.meta.json  (1.7 KB)
+│   ├── 2026-04-17_bilet_trimitere_CT.json  (3.5 KB)
+│   ├── 2026-04-17_bilet_trimitere_CT.json.meta.json  (0.9 KB)
+│   ├── 2026-04-17_buletin_bioclinica_uree_creatinina.json  (4.2 KB)
+│   ├── 2026-04-17_buletin_bioclinica_uree_creatinina.json.meta.json  (1.3 KB)
+│   ├── 2026-04-17_examen_colonoscopic.json  (4.7 KB)
+│   ├── 2026-04-17_examen_colonoscopic.json.meta.json  (0.9 KB)
+│   ├── 2026-04-17_examen_gastroscopic.json  (3.9 KB)
+│   ├── 2026-04-17_examen_gastroscopic.json.meta.json  (0.9 KB)
+│   ├── 2026-04-20_ct_torace_abdomen_pelvis.json  (13.0 KB)
+│   ├── 2026-04-20_ct_torace_abdomen_pelvis.json.meta.json  (1.9 KB)
+│   ├── CLAUDE.md  (21.2 KB)
+│   ├── CONTACTE_MEDICALE.md  (16.2 KB)
+│   ├── EXTRAGERI_INCOMPLETE.md  (5.0 KB)
+│   ├── MANIFEST.json  (14.9 KB)
+│   ├── PLAN_audit_remediere_v2_2026-04-18.md  (7.3 KB)
+│   ├── SCHEMA_JSON_v2.md  (7.6 KB)
+│   ├── SYSTEM_HEALTH.json  (2.0 KB)
+├── scripts/  (3 fișiere)
+│   ├── generate_index.py  (8.3 KB)
+│   ├── regenerate_structura.py  (7.0 KB)
+│   ├── system_health_check.py  (7.2 KB)
+├── .gitignore  (0.9 KB)
+├── ALIMENTATIE.md  (48.2 KB)
+├── AUDIT_EXTRAGERE_2026-04-24.md  (28.3 KB)
+├── BAZA_CUNOSTINTE.md  (9.4 KB)
+├── CHANGELOG.md  (131.9 KB)
+├── CLAUDE.md  (9.4 KB)
+├── CONTEXT_MEDICAL.md  (50.4 KB)
+├── DASHBOARD.html  (121.7 KB)
+├── GLOSAR.md  (10.6 KB)
+├── index.html  (0.3 KB)
+├── INDEX.json  (32.2 KB)
+├── info_tati.txt  (2.1 KB)
+├── manifest.webmanifest  (0.9 KB)
+├── PLAN_IMPLEMENTARE_2026-04-25.md  (45.9 KB)
+├── README.md  (2.0 KB)
+├── REGULAMENT.md  (11.9 KB)
+├── REGULI_CLAUDE_CODE.md  (30.0 KB)
+├── SESSION_LOG.md  (81.5 KB)
+├── START.md  (3.8 KB)
+├── STRUCTURA_PROIECT.md  (12.5 KB)
+├── SURSE_MEDICALE.md  (7.5 KB)
+├── tati.png  (170.8 KB)
+├── TEMPLATES.md  (9.7 KB)
+├── TODO.md  (31.8 KB)
+├── WEB_QUERIES.md  (14.9 KB)
+├── WORKFLOW.md  (9.2 KB)
+```
+
+<!-- AUTO-GENERATED END -->
