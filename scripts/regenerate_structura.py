@@ -24,9 +24,15 @@ if hasattr(sys.stdout, "reconfigure"):
 
 ROOT = Path(__file__).resolve().parent.parent
 TARGET = ROOT / "STRUCTURA_PROIECT.md"
+DASHBOARD_HTML = ROOT / "DASHBOARD.html"
+INDEX_JSON = ROOT / "INDEX.json"
 SKIP_DIRS = {".git", "node_modules", ".claude-outputs", "__pycache__"}
 START_MARKER = "<!-- AUTO-GENERATED START -->"
 END_MARKER = "<!-- AUTO-GENERATED END -->"
+EMBED_PATTERN = re.compile(
+    r'(<script type="application/json" id="dashboard-index">)(.*?)(</script>)',
+    re.DOTALL,
+)
 
 THEMATIC_INDEX = [
     ("biopsie", ["Dosar_Medical/documente_sursa/12_biopsie_2026/", "TODO.md", "Documente_Informative/EXPLICATIE_CONSULT_ONCOLOG_SCENARII.md"]),
@@ -148,6 +154,34 @@ def build_section():
     return "\n".join(parts)
 
 
+def sync_dashboard_embed():
+    """Sincronizează blocul <script id="dashboard-index"> din DASHBOARD.html cu INDEX.json curent.
+
+    Necesar pentru loadEchipa() pe file:// (CORS blochează fetch INDEX.json).
+    """
+    if not DASHBOARD_HTML.exists() or not INDEX_JSON.exists():
+        print("  [embed] DASHBOARD.html sau INDEX.json lipsă — skip sync embed")
+        return False
+    dash_text = DASHBOARD_HTML.read_text(encoding="utf-8")
+    index_content = INDEX_JSON.read_text(encoding="utf-8")
+    if "</script" in index_content.lower():
+        print("  [embed] WARN: INDEX.json conține </script — skip pentru siguranță")
+        return False
+    if not EMBED_PATTERN.search(dash_text):
+        print("  [embed] Tag <script id=\"dashboard-index\"> nu există în DASHBOARD.html — skip (rulează fix CORS întâi)")
+        return False
+    new_dash = EMBED_PATTERN.sub(
+        lambda m: m.group(1) + "\n" + index_content + "\n    " + m.group(3),
+        dash_text,
+    )
+    if new_dash == dash_text:
+        print("  [embed] DASHBOARD.html embed deja sincronizat (no-op)")
+        return False
+    DASHBOARD_HTML.write_text(new_dash, encoding="utf-8")
+    print(f"  [embed] DASHBOARD.html embed dashboard-index sincronizat ({len(index_content)} chars JSON)")
+    return True
+
+
 def main():
     if not TARGET.exists():
         print(f"ERROR: {TARGET} nu există", file=sys.stderr)
@@ -170,6 +204,8 @@ def main():
     TARGET.write_text(new_text, encoding="utf-8")
     print(f"STRUCTURA_PROIECT.md regenerated: {TARGET}")
     print(f"  Section size: ~{len(new_section)} chars")
+
+    sync_dashboard_embed()
     return 0
 
 
