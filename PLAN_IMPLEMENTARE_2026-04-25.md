@@ -481,9 +481,9 @@ telefoane:
 
 **Pași:**
 
-- [ ] **#11.1** — Creez folder `Dosar_Medical/corespondenta/` dacă nu există: `mkdir -p "G:/My Drive/Roly/.Tati/Dosar_Medical/corespondenta"`
+- [x] **#11.1** — Folder `Dosar_Medical/corespondenta/` creat (2026-04-25 19:16).
 
-- [ ] **#11.2** — Folosesc `mcp__claude_ai_Gmail__search_threads` cu următoarele query-uri (paralel când posibil):
+- [x] **#11.2** — Search Gmail executat cu 5 query-uri paralel (2026-04-25 19:18):
   - `subject:"Solicitare sprijin medical" OR subject:"Solicitare consult oncologic"`
   - `from:oncohelp.ro OR to:oncohelp.ro`
   - `from:bioclinica.ro OR to:bioclinica.ro`
@@ -491,9 +491,9 @@ telefoane:
   - `(Anater OR Vornicu OR Mester OR Noufal) newer_than:180d`
   - `(petrila viorel) newer_than:365d`
 
-- [ ] **#11.3** — Pentru fiecare thread relevant returnat, folosesc `mcp__claude_ai_Gmail__get_thread` cu `messageFormat: FULL_CONTENT` pentru a obține corpul integral.
+- [x] **#11.3** — `get_thread` rulat pe 4 threaduri principale cu `FULL_CONTENT` (Anater, Mester, OncoHelp inițial, Cip).
 
-- [ ] **#11.4** — Pentru fiecare thread, generez fișier markdown `Dosar_Medical/corespondenta/YYYY-MM-DD_slug-thread.md` cu format:
+- [x] **#11.4** — Generate 5 fișiere markdown thread (mai mult decât 3 cerute în plan, pentru paritate scan full-history):
 
 ```markdown
 ---
@@ -535,14 +535,15 @@ version: 1.0
 [...]
 ```
 
-- [ ] **#11.5** — Pentru thread-urile DEJA cunoscute din această sesiune (auditor a citit deja), creează direct fișiere — NU mai apela Gmail API:
-  - `2026-04-23_solicitare-sprijin-oncohelp.md` (thread `19db78a7c0a1758d`)
-  - `2026-04-24_re-solicitare-consult-anater.md` (thread `19dbe7d30cfacbb3` — include și mailul răspuns trimis 25.04)
-  - `2026-04-24_raspuns-iocn-mester.md` (thread `19dbef8d0454235d`)
+- [x] **#11.5** — Threadurile cunoscute din plan create + extinse cu 2 noi descoperite în scan:
+  - `2026-04-23_solicitare-sprijin-oncohelp.md` (thread `19db78a7c0a1758d`) — per plan
+  - `2026-04-24_re-solicitare-consult-anater.md` (thread `19dbe7d30cfacbb3`) — per plan; **CONFIRM**: mailul Roland 25.04 18:00 EXISTĂ în thread (mesaj `19dc4e472df6e379`, sincronizat cu Gmail), inclus integral
+  - `2026-04-24_raspuns-iocn-mester.md` (thread `19dbef8d0454235d`) — per plan
+  - **NOU descoperit:** `2026-04-22_solicitare-dr-cip-recomandare-lusca.md` (thread `19db4ec3cd076144`) — cu răspuns Dr. Cip recomandând Zeolit + AHCC ca adjuvant
+  - **NOU descoperit:** `2026-04-23_broadcast-solicitari-clinici.md` — agregator pentru 4 threaduri broadcast (Medisprof + IOCN office + Amethyst + MedLife)
+  - **DESCOPERIRE IMPORTANTĂ:** semnătura email Dr. Anater zice „Medic Specialist, Oncologie Medicala" — diferă de site oncohelp.ro care îl listează „Rezident". Conflict R12 rezolvat în favoarea „Specialist" + actualizat CONTACTE_MEDICALE.md la v1.1.
 
-  **NOTĂ:** mailul trimis manual de user 25.04 NU este încă în Gmail thread (sau este — verifică). Dacă apare în thread `19dbe7d30cfacbb3` ca mesaj nou, include-l. Dacă nu (a fost trimis cu altă identitate sau încă nu s-a sincronizat), notează în sinteză că textul integral este în SESSION_LOG.md (intrarea 2026-04-25 18:00).
-
-- [ ] **#11.6** — Creez `Dosar_Medical/corespondenta/INDEX.md` master cu format:
+- [x] **#11.6** — Creat `Dosar_Medical/corespondenta/INDEX.md` master cu format extins (3 secțiuni: active / încheiate cu răspuns medic / broadcast fără răspuns + statistici scan + threaduri non-medicale exclude + comenzi disponibile + politică atașamente):
 
 ```markdown
 ---
@@ -583,26 +584,20 @@ _(Listează aici threaduri vechi sau cu status `arhivat` — pentru viitor)_
 - `verifică gmail [keyword]` — scan custom
 ```
 
-- [ ] **#11.7** — **Auto-propagare obligatorie:**
-  - Update `CONTACTE_MEDICALE.md` — verifică dacă vreun thread nou a adus emailuri/telefoane noi pentru Anater sau Vornicu. Dacă da, update version (1.0 → 1.1).
-  - Update `CONTEXT_MEDICAL.md` — la final §9 sau §11 adaugă referință scurtă: „Corespondență cu OncoHelp 23-25.04.2026: vezi `Dosar_Medical/corespondenta/INDEX.md`."
-  - Update `TODO.md` — calendar cu programările/termenele identificate (deja există).
+- [x] **#11.7** — **Auto-propagare executată:**
+  - `CONTACTE_MEDICALE.md` v1.0 → v1.1 — corectare status Dr. Anater per semnătură email + added changelog field
+  - `CONTEXT_MEDICAL.md §9` — Dr. Anater Angelo - Christian + Dr. Vornicu Vlad-Norin + Dr. Andra Meșter (IOCN second opinion) adăugați la tabel Echipă medicală + footnote „Corespondență oncologică completă: vezi corespondenta/INDEX.md"
+  - `TODO.md` — calendar deja conține programare 30.04 + mail trimis 25.04 (Task #7)
 
 **Verificare:**
 
-- [ ] `Dosar_Medical/corespondenta/INDEX.md` există cu listă threaduri
-- [ ] Minim 3 fișiere thread create (Solicitare inițială + RE Anater + IOCN Mester)
-- [ ] Frontmatter YAML valid în fiecare
-- [ ] Sinteze automate completate
-- [ ] Conținut integral mailuri păstrat în secțiunea `Mesaje (cronologic)`
+- [x] `Dosar_Medical/corespondenta/INDEX.md` există cu 11 threaduri categorizate
+- [x] **5 fișiere thread create** (mai mult decât 3 minim cerut)
+- [x] Frontmatter YAML valid în fiecare (linterul a auto-formatat unele tabele/lists)
+- [x] Sinteze automate completate cu cross-references la CONTACTE_MEDICALE.md + CONTEXT_MEDICAL.md
+- [x] Conținut integral mailuri păstrat în secțiunile `Mesaje (cronologic)`
 
-**Commit incremental:**
-
-```bash
-git add Dosar_Medical/corespondenta/ Dosar_Medical/CONTACTE_MEDICALE.md CONTEXT_MEDICAL.md TODO.md
-git commit -m "[PLAN 2026-04-25] task #11 — primul ingest Gmail R27 (full-history OncoHelp + tata)"
-git push
-```
+**Commit incremental:** `[PLAN 2026-04-25] task #11 — primul ingest Gmail R27 (full-history OncoHelp + tata)` (committed).
 
 ---
 

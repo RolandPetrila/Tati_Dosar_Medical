@@ -1,10 +1,14 @@
 ---
 title: Catalog contacte medicale OncoHelp Timișoara
 scope: doar medici OncoHelp activi (NU istoric extern; pentru istoric vezi CONTEXT_MEDICAL.md §9)
-last_updated: 2026-04-25
+last_updated: 2026-04-25 19:30
 medici_listati: 2
-version: 1.0
+version: 1.1
+changelog:
+  v1.0_19:00: creare inițială cu Anater + Vornicu, status Anater per site oncohelp.ro = „Rezident"
+  v1.1_19:30: corectare status Anater post-ingest Gmail — semnătura email zice „Medic Specialist" (R12 conflict surse)
 related_research: cercetari/2026-04-25_cercetare-oncohelp-vornicu-anater.md
+related_correspondence: corespondenta/INDEX.md
 ---
 
 # Catalog contacte medicale — OncoHelp Timișoara
@@ -21,10 +25,10 @@ related_research: cercetari/2026-04-25_cercetare-oncohelp-vornicu-anater.md
 
 ## Index rapid
 
-| ID                           | Nume                          | Specializare                                  | Status                      | Telefon directe          | Email primar              |
-| ---------------------------- | ----------------------------- | --------------------------------------------- | --------------------------- | ------------------------ | ------------------------- |
-| `dr-anater-angelo-christian` | Dr. Anater Angelo - Christian | Medic Rezident Oncologie                      | 🟢 activ — programare 30.04 | (prin centrală OncoHelp) | angelo.anater@oncohelp.ro |
-| `dr-vornicu-vlad`            | Dr. Vornicu Vlad-Norin        | Medic Specialist Oncolog (oncologie medicală) | 🟡 contact furnizat user    | 0762 120 428             | vornicuvlad91@gmail.com   |
+| ID                           | Nume                          | Specializare                                                  | Status                      | Telefon directe          | Email primar              |
+| ---------------------------- | ----------------------------- | ------------------------------------------------------------- | --------------------------- | ------------------------ | ------------------------- |
+| `dr-anater-angelo-christian` | Dr. Anater Angelo - Christian | Medic Specialist Oncologie Medicală ⚠ (vezi notă R12 mai jos) | 🟢 activ — programare 30.04 | (prin centrală OncoHelp) | angelo.anater@oncohelp.ro |
+| `dr-vornicu-vlad`            | Dr. Vornicu Vlad-Norin        | Medic Specialist Oncolog (oncologie medicală)                 | 🟡 contact furnizat user    | 0762 120 428             | vornicuvlad91@gmail.com   |
 
 ---
 
@@ -66,8 +70,8 @@ sources_verified: 2026-04-25
 id: dr-anater-angelo-christian
 nume: Anater Angelo-Christian
 titlu: Dr.
-titlu_profesional: Medic Rezident
-specializare: [oncologie medicala (in formare)]
+titlu_profesional: Medic Specialist (per self-id email; site oncohelp.ro listează „Rezident" — conflict surse R12)
+specializare: [oncologie medicala]
 unitate: OncoHelp Timișoara
 unitate_id: oncohelp-timisoara
 departament: Secția de Oncologie
@@ -79,19 +83,29 @@ varsta_estimata: ~31 ani (sufix `95` în yahoo sugerează naștere 1995) [PROBAB
 status: 🟢 activ
 prim_contact: 2026-04-23
 ultim_contact: 2026-04-25
-rol: medic oncolog rezident — primă linie de contact OncoHelp pentru cazul tata
-tags: [oncolog, oncohelp, medic-curant, programat-30-04, rezident]
-version: 1.0
-sursa_status_profesional: oncohelp.ro/echipa-oncohelp/ (accesat 2026-04-25)
+rol: medic oncolog curant — primă linie de contact OncoHelp pentru cazul tata
+tags: [oncolog, oncohelp, medic-curant, programat-30-04, conflict-surse-status]
+version: 1.1
+sursa_status_profesional_email: 'semnătură email Dr. Anater 24.04.2026 — „Medic Specialist, Oncologie Medicala, Oncohelp Timisoara"'
+sursa_status_profesional_site: 'oncohelp.ro/echipa-oncohelp/ accesat 2026-04-25 — „Medic Rezident" (probabil neactualizat după promovare)'
 ```
 
-### Profil profesional [cercetare 2026-04-25]
+### Profil profesional [cercetare 2026-04-25, update 19:30 după ingest Gmail]
 
-**Status profesional [CERT — sursă oficială oncohelp.ro/echipa-oncohelp/]:**
+**Status profesional — CONFLICT DE SURSE (R12 protocol):**
 
-- Listat oficial ca **MEDIC REZIDENT** (NU specialist) la Secția de Oncologie OncoHelp Timișoara
-- Email instituțional `angelo.anater@oncohelp.ro` activ și folosit pentru corespondență (confirmat în threadul Gmail 24-25.04.2026)
-- Email personal yahoo `angelo.anater95@yahoo.com` folosit secundar (sufix `95` = probabil 1995, vârstă estimată ~31 ani — consistent cu profil rezident în an avansat de specialitate)
+| Sursă                                          | Status declarat                                                | Data verificării |
+| ---------------------------------------------- | -------------------------------------------------------------- | ---------------- |
+| Semnătură email Dr. Anater (24.04 + următoare) | **„Medic Specialist, Oncologie Medicala, Oncohelp Timisoara"** | 2026-04-24       |
+| Site oficial oncohelp.ro/echipa-oncohelp/      | „Medic Rezident"                                               | 2026-04-25       |
+
+**Interpretare R12:**
+
+- **Self-identification în corespondență oficială cu pacient** (semnătură email cu titlu profesional declarat) = sursă autoritară directă cu impact legal/etic. Folosirea unui titlu fals în comunicare cu pacienți ar constitui falsificare profesională — improbabil într-o instituție reputabilă.
+- **Site instituțional** = autoritară structurală, dar frecvent neactualizată (multe site-uri medicale nu reflectă promovări recente luni întregi).
+- **Decizie:** prioritate **„Medic Specialist"** (per email semnătură) ca status curent. Site-ul probabil neactualizat post-promovare specialist (consistent cu vârstă ~31 ani + finalizare rezidențiat oncologie 5 ani la 2025-2026).
+
+**Email instituțional `angelo.anater@oncohelp.ro` activ și folosit pentru corespondență (24-25.04.2026 — vezi `corespondenta/2026-04-24_re-solicitare-consult-anater.md`).** Email personal yahoo `angelo.anater95@yahoo.com` folosit secundar.
 
 **Implicare profesională [CERT]:**
 
@@ -99,17 +113,19 @@ sursa_status_profesional: oncohelp.ro/echipa-oncohelp/ (accesat 2026-04-25)
 - NU a fost identificată activitate publicistică (zero rezultate ResearchGate / Google Scholar / PubMed la 25.04.2026)
 - Nu are profil public LinkedIn / DocPlanner / Pareri-medici accesibil
 
-**Observație clinică din corespondență [PROBABIL — bazat pe interacțiunea 24-25.04.2026]:**
+**Observație clinică din corespondență [CERT — sursă scrisă thread Gmail `19dbe7d30cfacbb3` 24.04.2026]:**
 
 - Răspuns prompt (sub 24h) la solicitarea inițială Roland
-- Comunicare structurată, separând componenta oncologică de cea cardiacă (interpretare echilibrată a ascitei perihepatice de la CT 20.04.2026)
+- Comunicare structurată, separând componenta oncologică de cea cardiacă (interpretare echilibrată: ascita perihepatică + pelvină + pleurală minoră → „cel mai probabil secundară afecțiunii sale cardiace, NU oncologică primă vedere")
 - Disponibil pentru programare directă (slot consult 30.04.2026 confirmat)
-- Atitudine consistentă cu un medic rezident în an avansat (probabil R3-R5 dat fiind nivelul de autonomie demonstrat)
+- Recomandare conservatoare: NU urgentare paracenteză/laparoscopie pre-histopatologic
+- Recomandări concrete pre-consult: markeri tumorali + consult cardiologic recent (<6 luni) + analize sânge generale
+- Stil profesional consistent cu specialist deplin format (per self-id email)
 
 **Considerații clinice [PROBABIL]:**
 
-- Un medic rezident poate consulta și gestiona cazuri sub supervizarea unui medic specialist/primar din echipă
-- Pentru decizii terapeutice majore (FLOT vs CROSS, chirurgie esofagogastrectomie, imunoterapie), supervizarea de către un specialist senior + tumor board multidisciplinar este standard în clinici reputabile precum OncoHelp
+- Per self-id „Medic Specialist", Dr. Anater are autoritate clinică de specialist deplin format pentru gestionarea cazului (consult + propunere plan terapeutic)
+- Decizii terapeutice majore (FLOT vs CROSS, chirurgie esofagogastrectomie, imunoterapie) discutate în mod tipic în echipa tumor board OncoHelp — standard de îngrijire pentru cancere eso-gastrice complexe
 - Consultul cu Dr. Anater oferă acces la întreaga echipă OncoHelp, nu doar la deciziile sale individuale
 
 ### Surse cercetare
@@ -132,7 +148,8 @@ sursa_status_profesional: oncohelp.ro/echipa-oncohelp/ (accesat 2026-04-25)
 - Răspuns prompt și atent (24h) — semnal pozitiv pentru relația medic-pacient
 - A explicat clar că acumulările lichidiene observate la CT pot fi cardiace, nu doar oncologice — abordare echilibrată non-alarmistă
 - Următorul pas: așteptare confirmare slot 30.04 + clarificări la cele 5 întrebări organizatorice
-- **Atenționare:** statutul de „medic rezident" este transparent — pentru pacient e relevant să știe că deciziile complexe vor fi probabil discutate în echipă tumor board
+- **Conflict surse status profesional R12** rezolvat în favoarea „Specialist" per self-id email — site oncohelp.ro probabil neactualizat post-promovare
+- Pentru clarificare definitivă, în conversația 30.04 cu Dr. Anater se poate întreba politicos „Care este momentul în care ați promovat specialitatea?" — informație utilă pentru context relație medic-pacient
 
 ---
 
