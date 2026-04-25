@@ -273,15 +273,15 @@ Structura descrisă în acest fișier **nu se modifică decât cu acordul explic
 
 ## 🗺 Hartă completă auto-generată
 
-> ⚙️ **Generat automat:** 2026-04-26T01:17:30 de `scripts/regenerate_structura.py`. NU edita manual această secțiune — modificările se pierd la următoarea regenerare. Pentru cuprinsul fix vezi secțiunile non-auto de mai sus.
+> ⚙️ **Generat automat:** 2026-04-26T01:35:30 de `scripts/regenerate_structura.py`. NU edita manual această secțiune — modificările se pierd la următoarea regenerare. Pentru cuprinsul fix vezi secțiunile non-auto de mai sus.
 
 ### 📊 Statistici live
 
-- **Total fișiere proiect (excl. .git):** 208
-- **Markdown (.md):** 91
-- **JSON (.json):** 62
+- **Total fișiere proiect (excl. .git):** 213
+- **Markdown (.md):** 92
+- **JSON (.json):** 65
 - **HTML (.html):** 6
-- **Total size:** 50151.4 KB
+- **Total size:** 50197.6 KB
 
 ### 🧭 Index thematic (caut...)
 
@@ -303,11 +303,12 @@ Structura descrisă în acest fișier **nu se modifică decât cu acordul explic
 ### 🌳 Arbore folder (depth 3)
 
 ```
-.Tati/  (7 subfoldere, 26 fișiere root)
+.Tati/  (7 subfoldere, 27 fișiere root)
 ├── .claude/  (1 fișiere)
 │   ├── settings.local.json  (1.9 KB)
-├── .ruff_cache/  (3 fișiere)
-│   ├── 0.14.2/  (1 fișiere)
+├── .ruff_cache/  (4 fișiere)
+│   ├── 0.14.2/  (2 fișiere)
+│   │   ├── 11311870640459399777  (0.1 KB)
 │   │   ├── 4361782613845319426  (0.2 KB)
 │   ├── .gitignore  (0.0 KB)
 │   ├── CACHEDIR.TAG  (0.0 KB)
@@ -341,9 +342,10 @@ Structura descrisă în acest fișier **nu se modifică decât cu acordul explic
 │   ├── EXPLICATIE_CONSULT_ONCOLOG_SCENARII.md  (74.5 KB)
 │   ├── GHID_APEL_ONCOHELP.md  (11.1 KB)
 │   ├── GHID_CONSULT_ONCOLOG.md  (22.5 KB)
-├── Dosar_Medical/  (148 fișiere)
-│   ├── arhiva/  (28 fișiere)
+├── Dosar_Medical/  (151 fișiere)
+│   ├── arhiva/  (31 fișiere)
 │   │   ├── context_medical_versiuni/  (10 fișiere)
+│   │   ├── json_versiuni/  (3 fișiere)
 │   │   ├── versiuni_config/  (18 fișiere)
 │   ├── cercetari/  (2 fișiere)
 │   │   ├── 2026-04-25_cercetare-oncohelp-vornicu-anater.md  (15.4 KB)
@@ -406,7 +408,7 @@ Structura descrisă în acest fișier **nu se modifică decât cu acordul explic
 │   ├── 2025-10-28_scrisoare_urologie_gastroenterologie.json.meta.json  (1.6 KB)
 │   ├── 2025-11-01_talon_pensie_asigurare.json  (1.9 KB)
 │   ├── 2025-11-01_talon_pensie_asigurare.json.meta.json  (1.2 KB)
-│   ├── 2025-11-10_ecografie_transtoracica.json  (4.0 KB)
+│   ├── 2025-11-10_ecografie_transtoracica.json  (4.1 KB)
 │   ├── 2025-11-10_ecografie_transtoracica.json.meta.json  (1.1 KB)
 │   ├── 2025-11-10_schema_medicamente.json  (4.8 KB)
 │   ├── 2025-11-10_schema_medicamente.json.meta.json  (2.8 KB)
@@ -422,7 +424,7 @@ Structura descrisă în acest fișier **nu se modifică decât cu acordul explic
 │   ├── 2026-04-17_examen_colonoscopic.json.meta.json  (0.9 KB)
 │   ├── 2026-04-17_examen_gastroscopic.json  (3.9 KB)
 │   ├── 2026-04-17_examen_gastroscopic.json.meta.json  (0.9 KB)
-│   ├── 2026-04-20_ct_torace_abdomen_pelvis.json  (13.0 KB)
+│   ├── 2026-04-20_ct_torace_abdomen_pelvis.json  (13.2 KB)
 │   ├── 2026-04-20_ct_torace_abdomen_pelvis.json.meta.json  (1.9 KB)
 │   ├── CLAUDE.md  (21.2 KB)
 │   ├── CONTACTE_MEDICALE.md  (16.2 KB)
@@ -438,21 +440,22 @@ Structura descrisă în acest fișier **nu se modifică decât cu acordul explic
 ├── .gitignore  (0.9 KB)
 ├── ALIMENTATIE.md  (48.2 KB)
 ├── AUDIT_EXTRAGERE_2026-04-24.md  (28.3 KB)
+├── AUDIT_EXTRAGERE_2026-04-26.md  (18.3 KB)
 ├── BAZA_CUNOSTINTE.md  (9.4 KB)
-├── CHANGELOG.md  (136.1 KB)
+├── CHANGELOG.md  (140.2 KB)
 ├── CLAUDE.md  (9.4 KB)
 ├── CONTEXT_MEDICAL.md  (50.4 KB)
 ├── DASHBOARD.html  (167.6 KB)
 ├── GLOSAR.md  (10.6 KB)
 ├── index.html  (0.3 KB)
-├── INDEX.json  (33.7 KB)
+├── INDEX.json  (34.1 KB)
 ├── info_tati.txt  (1.6 KB)
 ├── manifest.webmanifest  (0.9 KB)
 ├── PLAN_IMPLEMENTARE_2026-04-25.md  (51.3 KB)
 ├── README.md  (2.0 KB)
 ├── REGULAMENT.md  (11.9 KB)
 ├── REGULI_CLAUDE_CODE.md  (30.0 KB)
-├── SESSION_LOG.md  (84.7 KB)
+├── SESSION_LOG.md  (87.7 KB)
 ├── START.md  (3.8 KB)
 ├── STRUCTURA_PROIECT.md  (23.8 KB)
 ├── SURSE_MEDICALE.md  (7.5 KB)

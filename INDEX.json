@@ -1,11 +1,11 @@
 {
-  "generated_at": "2026-04-26T01:17:30",
+  "generated_at": "2026-04-26T01:35:30",
   "version": "1.0",
   "stats": {
-    "total_files_indexed": 131,
+    "total_files_indexed": 132,
     "medici_oncohelp": 2,
     "threaduri_gmail": 5,
-    "documente_canonice": 18,
+    "documente_canonice": 20,
     "atasamente_listate": 0
   },
   "medici_oncohelp": [
@@ -277,6 +277,10 @@
       "file": "Dosar_Medical/2026-04-17_buletin_bioclinica_uree_creatinina.json"
     },
     {
+      "id": "2026-04-20_ct_torace_abdomen_pelvis",
+      "file": "Dosar_Medical/2026-04-20_ct_torace_abdomen_pelvis.json"
+    },
+    {
       "id": "2026-04-17_bilet_trimitere_CT",
       "file": "Dosar_Medical/2026-04-17_bilet_trimitere_CT.json",
       "medic": {
@@ -297,6 +301,10 @@
     {
       "id": "2024-06-04_anti_helicobacter_pylori_igg_77449",
       "file": "Dosar_Medical/2024-06-04_anti_helicobacter_pylori_igg_77449.json"
+    },
+    {
+      "id": "2025-11-10_ecografie_transtoracica",
+      "file": "Dosar_Medical/2025-11-10_ecografie_transtoracica.json"
     },
     {
       "id": "2025-11-10_scrisoare_medicala_cardiologie",
@@ -358,8 +366,8 @@
     },
     "SESSION_LOG.md": {
       "type": "md",
-      "size_kb": 84.7,
-      "last_modified": "2026-04-25T19:39:02"
+      "size_kb": 87.7,
+      "last_modified": "2026-04-26T01:20:48"
     },
     "WEB_QUERIES.md": {
       "type": "md",
@@ -389,7 +397,7 @@
     "STRUCTURA_PROIECT.md": {
       "type": "md",
       "size_kb": 23.8,
-      "last_modified": "2026-04-26T01:08:49"
+      "last_modified": "2026-04-26T01:17:35"
     },
     "BAZA_CUNOSTINTE.md": {
       "type": "md",
@@ -423,8 +431,8 @@
     },
     "CHANGELOG.md": {
       "type": "md",
-      "size_kb": 136.1,
-      "last_modified": "2026-04-25T19:39:54"
+      "size_kb": 140.2,
+      "last_modified": "2026-04-26T01:21:31"
     },
     "ALIMENTATIE.md": {
       "type": "md",
@@ -445,6 +453,11 @@
       "type": "md",
       "size_kb": 51.3,
       "last_modified": "2026-04-25T19:38:57"
+    },
+    "AUDIT_EXTRAGERE_2026-04-26.md": {
+      "type": "md",
+      "size_kb": 18.3,
+      "last_modified": "2026-04-26T01:20:23"
     },
     "Dosar_Medical/PLAN_audit_remediere_v2_2026-04-18.md": {
       "type": "md",
@@ -698,8 +711,8 @@
     },
     "INDEX.json": {
       "type": "json",
-      "size_kb": 33.6,
-      "last_modified": "2026-04-25T19:34:34"
+      "size_kb": 33.7,
+      "last_modified": "2026-04-26T01:17:30"
     },
     "Dosar_Medical/2012-02-17_cardiologie_vichy_stent.json": {
       "type": "json",
@@ -748,8 +761,8 @@
     },
     "Dosar_Medical/2026-04-20_ct_torace_abdomen_pelvis.json": {
       "type": "json",
-      "size_kb": 13.0,
-      "last_modified": "2026-04-24T18:16:23"
+      "size_kb": 13.2,
+      "last_modified": "2026-04-26T01:33:11"
     },
     "Dosar_Medical/2026-04-20_ct_torace_abdomen_pelvis.json.meta.json": {
       "type": "json",
@@ -798,8 +811,8 @@
     },
     "Dosar_Medical/2025-11-10_ecografie_transtoracica.json": {
       "type": "json",
-      "size_kb": 4.0,
-      "last_modified": "2026-04-24T18:09:46"
+      "size_kb": 4.1,
+      "last_modified": "2026-04-26T01:33:41"
     },
     "Dosar_Medical/2025-11-10_ecografie_transtoracica.json.meta.json": {
       "type": "json",
@@ -919,7 +932,7 @@
     "Dosar_Medical/rapoarte_generate/2026-04-18_raport_reactii_adverse_jamesi_triplixam.meta.json": {
       "type": "json",
       "size_kb": 3.0,
-      "last_modified": "2026-04-24T21:30:56"
+      "last_modified": "2026-04-26T01:33:11"
     },
     "Dosar_Medical/documente_sursa/01_identitate/2023-06-12_carte_identitate.pdf.meta.json": {
       "type": "json",
@@ -999,7 +1012,7 @@
     "DASHBOARD.html": {
       "type": "html",
       "size_kb": 167.6,
-      "last_modified": "2026-04-26T01:08:49"
+      "last_modified": "2026-04-26T01:17:36"
     },
     "index.html": {
       "type": "html",
