@@ -313,38 +313,21 @@ if __name__ == "__main__":
 
 **Pași:**
 
-- [ ] **#10.1** — WebSearch / WebFetch pentru următoarele query-uri:
-  - `"Vlad Vornicu" oncolog Timisoara OncoHelp`
-  - `Dr. Vornicu Vlad oncologie medicala`
-  - `oncohelp.ro echipa medici`
-  - `OncoHelp Timisoara contact telefon adresa`
-  - Recenzii / păreri Dr. Vornicu (dacă publicate)
+- [x] **#10.1** — WebSearch executat 4 query-uri principale (2026-04-25 19:00).
 
-- [ ] **#10.2** — Pentru OncoHelp Timișoara, extrage:
-  - Telefon central / programări
-  - Adresă fizică completă
-  - Site oficial
-  - Echipa (lista medicilor publicați)
-  - Eventuale specializări de top ale clinicii
+- [x] **#10.2** — OncoHelp Timișoara — date complete extrase din oncohelp.ro/contact + oncohelp.ro/echipa-oncohelp/.
 
-- [ ] **#10.3** — Pentru Dr. Vornicu Vlad, extrage cu marcaje certitudine:
-  - `[CERT]` / `[PROBABIL]` / `[NEGASIT]` per element
-  - Specializare (oncologie medicală, chirurgie oncologică, radioterapie, etc.)
-  - Vechime / experiență (dacă apare în site oficial / CV public)
-  - Formare profesională (rezidențiat, doctorat, training-uri internaționale)
-  - Publicații / cercetare (Google Scholar, ResearchGate)
-  - Recenzii agregate (sinteză, NU cherry-pick)
-  - Surse complete cu URL + data accesării
+- [x] **#10.3** — Dr. Vornicu Vlad-Norin — profil exhaustiv (data nașterii 06.07.1991, asistent univ. PhD UMFT, ResearchGate 11 citări 2 publicații, focus oncologie pulmonară).
 
-- [ ] **#10.4** — Salvează rezultatele cercetării într-un fișier temporar `Dosar_Medical/cercetari/2026-04-25_cercetare-oncohelp-vornicu.md` cu marcaje complete (vor fi referențiate în CONTACTE_MEDICALE.md la Task #9). **IMPORTANT:** dacă folder-ul `cercetari/` nu există, îl creezi.
+- [x] **#10.4** — Salvat în `Dosar_Medical/cercetari/2026-04-25_cercetare-oncohelp-vornicu-anater.md` (numele extins față de plan: include și Dr. Anater pentru paritate, ambii fiind activi acum). **DESCOPERIRE IMPORTANTĂ:** Dr. Anater este listat oficial ca **MEDIC REZIDENT** (NU specialist) la OncoHelp — informație nouă față de contextul anterior.
 
 **Verificare:**
 
-- [ ] Fișier `Dosar_Medical/cercetari/2026-04-25_cercetare-oncohelp-vornicu.md` există
-- [ ] Conține minim 5 surse URL cu data accesării
-- [ ] Marcaje [CERT/PROBABIL/NEGASIT] explicite
+- [x] Fișier `Dosar_Medical/cercetari/2026-04-25_cercetare-oncohelp-vornicu-anater.md` există
+- [x] Conține 7+ surse URL cu data accesării (oncohelp.ro echipa/contact, UMFT 2 surse, ResearchGate, Radio România Reșița 2 articole, G4Media)
+- [x] Marcaje [CERT/PROBABIL/NEGASIT] explicite în tot fișierul
 
-**Commit incremental:** **NU.** Acest task pregătește materialul pentru Task #9 — committed împreună la #9.
+**Commit incremental:** comun cu Task #9 — vezi mai jos.
 
 ---
 
@@ -474,25 +457,19 @@ telefoane:
 - _De completat după prima interacțiune._
 ```
 
-- [ ] **#9.2** — Populează **Profil profesional** și **Surse cercetare** pentru ambii medici cu datele extrase la Task #10. **REGULA STRICTĂ:** dacă cercetarea NU a returnat date publice → scrie explicit limitarea, NU inventa.
+- [x] **#9.2** — Populat **Profil profesional** și **Surse cercetare** pentru ambii medici. Anater: status `[CERT] medic rezident` cu nuanțare clinică despre rolul rezidenților + tumor board OncoHelp. Vornicu: profil științific complet cu publicații, conferințe, focus oncologie pulmonară. Coincidență validatoare: numărul `0762120428` apare și ca sursă publică ResearchGate → confirmă identitatea contactului.
 
-- [ ] **#9.3** — Verifică că nu există referințe la medici externi (Noufal, LAZA, Orbán, Pop, Grada, Post, Pitea, Papiu, Mester) în `CONTACTE_MEDICALE.md` — ei rămân doar în `CONTEXT_MEDICAL.md §9` (scope-ul confirmat de user).
+- [x] **#9.3** — Verificat: zero referințe la medici externi în CONTACTE_MEDICALE.md (scope OncoHelp activi respectat). Noufal, LAZA, Orbán, Pop, Grada, Post, Pitea, Papiu, Mester rămân doar în `CONTEXT_MEDICAL.md §9`.
 
 **Verificare:**
 
-- [ ] Fișier `Dosar_Medical/CONTACTE_MEDICALE.md` există
-- [ ] Conține DOAR Anater + Vornicu
-- [ ] Frontmatter YAML valid pentru ambii
-- [ ] Surse cercetare cu URL + dată accesare
-- [ ] Marcaje certitudine prezente
+- [x] Fișier `Dosar_Medical/CONTACTE_MEDICALE.md` există
+- [x] Conține DOAR Anater + Vornicu (+ secțiune `Unitate de referință OncoHelp`)
+- [x] Frontmatter YAML valid pentru ambii medici + unitatea
+- [x] Surse cercetare cu URL + dată accesare (per medic + agregat în cercetari/)
+- [x] Marcaje certitudine prezente ([CERT]/[PROBABIL]/[NEGASIT])
 
-**Commit incremental:**
-
-```bash
-git add Dosar_Medical/CONTACTE_MEDICALE.md Dosar_Medical/cercetari/
-git commit -m "[PLAN 2026-04-25] task #9+#10 — CONTACTE_MEDICALE OncoHelp + cercetare web Anater+Vornicu"
-git push
-```
+**Commit incremental:** `[PLAN 2026-04-25] task #9+#10 — CONTACTE_MEDICALE OncoHelp + cercetare web Anater+Vornicu` (committed).
 
 ---
 
