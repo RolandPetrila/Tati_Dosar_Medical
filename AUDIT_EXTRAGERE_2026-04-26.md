@@ -16,6 +16,28 @@ related_commit: 7a69e19 (FIX CORS) + commit final 2.12 (audit)
 > **Diferență față de [AUDIT_EXTRAGERE_2026-04-24.md](AUDIT_EXTRAGERE_2026-04-24.md):** auditul anterior a verificat conformitatea R23/R24/R25 (extragere PDF→JSON→CONTEXT_MEDICAL.md). Acest audit verifică **integritatea sistemică** post evoluție majoră (R27 ingest Gmail, R28 system health, R29 plan-audit, fix CORS DASHBOARD).
 >
 > **Status raport:** propuneri de corectură, NU modificări directe. User decide ce se aplică.
+>
+> ---
+>
+> **🔄 UPDATE 2026-04-26 ~01:45 — REMEDIERI P0 + P1 + P3 APLICATE** (decizie auditor terminal A confirmată):
+>
+> - **P0 (3 JSON-uri invalide):** ✅ APLICAT (commit `cec37bb`). `"` U+0022 → `"` U+201D pe cele 3 fișiere + descoperire bonus la fișier 2 (a doua ocurență `„LAZA"` pe aceeași linie 98). Backup R10 în `Dosar_Medical/arhiva/json_versiuni/`. Scan exhaustiv post-fix: 0 alte ocurențe buggy în 60 JSON-uri.
+> - **P1 (re-rulare generate_index.py):** ✅ APLICAT (commit `3ddc024`). `documente_canonice` 18 → **20** (NU 21 cum estimase auditul — al 3-lea fix era pe `rapoarte_generate/.meta.json` care NU e indexat ca document canonic; e meta-fișier pentru DOCX). DASHBOARD embed re-sincronizat. SYSTEM_HEALTH 🟢 OK.
+> - **P3 (5 linkuri rupte):** ✅ APLICAT 4/5 (commit `ed325df`). Al 5-lea confirmat **fals-pozitiv** — apare în interior de inline code-block backtick (exemplu de text pentru MEMORY.md, nu link funcțional). Re-verificare excluzând inline code: 0 linkuri rupte.
+> - **P3 frontmatter retroactiv (3 planuri vechi):** ⏭ SKIPPED conform decizie auditor. Toate 3 sunt istorice/finalizate (audit 04-24 cu Batch A APLICAT + plan v2 04-18 executat în sesiuni 04-18→04-24 + plan reorganizare CLAUDE.md 04-23 implementat). „Nu modifici planuri istorice — riscă rescriere trecut."
+> - **P2 (pre-commit hook lint JSON):** 📋 ESCALADAT user. Adăugat ca ticket P3 în `TODO.md` cu opțiuni decizie [aplic / refuz / amânat].
+>
+> **Status sistem post-remediere:**
+>
+> ```
+> SYSTEM_HEALTH:    🟢 OK
+> JSON_VALIDITY:    🟢 60/60 (0 invalide)
+> documente_canonice: 20 (era 18)
+> CROSS_REFS:       🟢 0 rupte real (excl. fals-pozitive code-block)
+> Backup R10:       🟢 +3 (folder NOU arhiva/json_versiuni/)
+>
+> Overall:          🟢 STABIL — toate findings P0/P1/P3 remediate
+> ```
 
 ---
 

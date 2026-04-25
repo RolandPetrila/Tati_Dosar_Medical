@@ -6,6 +6,37 @@
 
 ---
 
+## 2026-04-26 01:45 — [Claude_Opus_4.7_executor] remediere-p0-p1-p3-post-audit (R29 — al doilea ciclu fix→audit→remediere)
+
+**Scop:** auditorul terminal A a verificat raportul `AUDIT_EXTRAGERE_2026-04-26.md` și a confirmat findings-urile P0+P3. A trimis decizii ferme pentru remediere (convenție `"` U+0022 → `"` U+201D, NU escape `\"`; backup R10 în `arhiva/json_versiuni/`; commit incremental per task; STOP la prima eroare; R28 după Task 2). Executorul terminal B a aplicat strict.
+
+**Operații (3 commits noi push-uite):**
+
+1. **`cec37bb` (Task 1 — P0 fix JSON-uri):** backup R10 cele 3 JSON-uri în folder NOU `Dosar_Medical/arhiva/json_versiuni/` (timestamp `_0132`) → înlocuire `"` U+0022 cu `"` U+201D pe cele 3 fișiere → validare `json.load()` SUCCESS → scan exhaustiv pattern `„...\"` pe 60 JSON-uri (0 alte ocurențe). **Descoperire bonus:** fișier 2 (`ecografie_transtoracica.json`) avea **DOUĂ** ocurențe pe linia 98 (auditul listase doar prima — `„Dr. LAZA CRISTIN..."`; a doua — `„LAZA"` la pos 128 — descoperită la re-validare după primul fix).
+2. **`3ddc024` (Task 2 — P1 re-rulare scripts):** `generate_index.py` → `documente_canonice` 18 → **20** (NU 21). Discrepanță explicată: al 3-lea fix era pe `rapoarte_generate/.meta.json` care nu e indexat ca document canonic (e meta-fișier pentru DOCX). `regenerate_structura.py` → embed DASHBOARD re-sincronizat (33766 chars JSON). R28 health check post-rulare: 🟢 OK.
+3. **`ed325df` (Task 3 — P3 fix linkuri):** 4/5 linkuri reparate cu prefix `Dosar_Medical/corespondenta/`. Al 5-lea confirmat **fals-pozitiv**: apare la linia 825 PLAN_IMPLEMENTARE în interior de inline code-block backtick (exemplu de text pentru MEMORY.md, nu link funcțional). Re-verificare excluzând inline code: 0 linkuri rupte.
+
+**Decizii pe Task 4 + Bonus:**
+
+- **Task 4 (frontmatter retroactiv 3 planuri vechi):** ⏭ SKIPPED conform decizie auditor „COMPLETED → SKIP, nu modifici planuri istorice (riscă rescriere trecut)". Toate 3 sunt istorice (`AUDIT_EXTRAGERE_2026-04-24.md` Batch A APLICAT explicit; `Dosar_Medical/PLAN_audit_remediere_v2_2026-04-18.md` executat în sesiuni 04-18→04-24; `Documentatie_Initiala/PLAN_reorganizare_claude_md_2026-04-23.md` restructurare CLAUDE.md DEJA implementată — vezi memory `arhitectura_claude_md_v12.md`).
+- **Bonus (P2 pre-commit lint JSON):** ESCALADAT user prin ticket P3 nou în `TODO.md` secțiunea „🔧 Pre-commit hook pentru lint JSON" cu opțiuni decizie [aplic / refuz / amânat]. NU implementat acum.
+
+**Why:** validare end-to-end protocol R29 al doilea ciclu (fix → audit → remediere), pe task pur tehnic. Sistemul scalează — separarea auditor↔executor face deciziile transparente și commit-urile incrementale păstrează granularitate git pentru rollback selectiv.
+
+**How to apply (lecții):**
+
+- Înainte de fix automat pe pattern, **verifică unicitatea pattern-ului în fișier** (`text.count(bad) == 1`) — la match multiplu, STOP și raportează manual; la match zero, skip + warn.
+- După fix punctual, **re-validează `json.load()` pe fiecare fișier separat** — au fost 2 ocurențe pe aceeași linie pentru fișier 2, fără re-validare s-ar fi crezut greșit că e fixat.
+- Scan exhaustiv `„[^"„”]*"` cu regex e util pentru detect ulterior — patternul e specific suficient pentru a evita false-pozitive (toate 60 JSON-uri scanate post-fix: 0 ocurențe).
+- Linkuri în inline code-block (backticks ` ` `) sunt **fals-pozitive** la audit cross-references markdown — exclude `re.sub(r'`[^`\n]\*`', '', text)` înainte de detect.
+- Pre-commit hook lint JSON ar fi prevenit P0 actual; e simplu de adăugat (`python -c "import json; json.load(open(f))"`).
+
+**Fișiere modificate:** 3 JSON-uri canonice fixed + 3 backup-uri NOI în `arhiva/json_versiuni/` + INDEX.json (regenerat) + STRUCTURA_PROIECT.md (regenerat) + DASHBOARD.html (re-sync embed) + Dosar_Medical/SYSTEM_HEALTH.json (regenerat) + PLAN_IMPLEMENTARE_2026-04-25.md (4 linkuri) + TODO.md (P3 ticket nou) + AUDIT_EXTRAGERE_2026-04-26.md (notă remedieri) + această intrare + CHANGELOG.md.
+
+**Status sistem post-remediere:** SYSTEM_HEALTH 🟢 OK, JSON validity 60/60, documente_canonice 20, cross-refs 0 rupte real, +3 backup R10. **Findings P0/P1/P3 toate remediate; P2 escaladat user; Task 4 SKIP intenționat.**
+
+---
+
 ## 2026-04-26 01:30 — [Claude_Opus_4.7_executor] fix-cors-dashboard-tab-echipa + audit-complet-sistem
 
 **Scop:** plan-audit cross-terminal R29 — terminal A (auditor) a identificat problema CORS pe DASHBOARD tab „Echipă medicală" deschis de pe disk (`file://` blochează `fetch('INDEX.json')`); terminal B (acest executor) a aplicat fix hibrid file://+http embed JSON și a executat audit complet sistem.

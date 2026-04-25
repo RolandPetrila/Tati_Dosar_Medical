@@ -227,6 +227,23 @@
 
 ## P3 — Util pe termen mediu
 
+### [P3] 🔧 Pre-commit hook pentru lint JSON (escaladare audit 2026-04-26)
+
+**Context:** auditul `AUDIT_EXTRAGERE_2026-04-26.md` a descoperit 3 JSON-uri cu ghilimele drepte `"` (U+0022) neescapate care au închis string-uri prematur, sărite silent de `generate_index.py` (`documente_canonice` 18 în loc de 21). Fix-ul a fost aplicat în commit `cec37bb`. Pentru a preveni recidiva, auditorul a recomandat ca **P2** un pre-commit hook care rulează `python -c "import json; json.load(open(f))"` pe orice `*.json` modificat. Auditorul a escaladat decizia la user (impact pe workflow git, scop mai larg decât remediere — depășește un fix punctual).
+
+**Decizie cerută user:**
+
+- [ ] Aplic hook (modificare `.git/hooks/pre-commit` SAU `pre-commit` framework dacă va fi adoptat)
+- [ ] Refuz hook (aleg lint manual ad-hoc)
+- [ ] Amânat — re-discutat la următoarea sesiune
+
+**Note:**
+
+- Hook-ul ar bloca commit-ul DOAR la JSON-uri syntactic invalide; nu validează schema (mai relax decât JSON Schema validation)
+- Funcționează cross-platform (Windows + Linux + Mac)
+- Latență adăugată ~0.1-0.5s per commit (pe ~60 JSON-uri actuale)
+- Notă: scriptul `system_health_check.py` (R28) NU validează JSON syntactic — e un alt scop (KB warning)
+
 ### [P3] Documentare istoric de fumat detaliat
 
 Pentru evaluare mai precisă a expunerii (calculul „pachete-an”).

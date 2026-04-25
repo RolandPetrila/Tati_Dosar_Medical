@@ -4,6 +4,75 @@
 
 ---
 
+## 2026-04-26 01:45 — REMEDIERE P0 + P1 + P3 post-audit (R29 ciclu 2 — fix → audit → remediere)
+
+**Tip:** REMEDIERE FINDINGS AUDIT.
+
+**Context:** auditul `AUDIT_EXTRAGERE_2026-04-26.md` (commit precedent `0ff3041`) a raportat 1 HIGH (P0) + 7 LOW (P3). Auditorul terminal A a confirmat findings-urile + a trimis decizii ferme (convenție fix, backup R10, commit incremental, STOP la eroare). Executorul terminal B a aplicat strict.
+
+### Remedieri aplicate
+
+**Commit `cec37bb` — P0 fix 3 JSON-uri:**
+
+- Înlocuire `"` U+0022 (drept) → `"` U+201D (tipografic) pe cele 3 fișiere identificate în audit secțiunea 3.1
+- **Descoperire bonus:** fișier `2025-11-10_ecografie_transtoracica.json` linia 98 conține **DOUĂ** ocurențe pe aceeași linie (auditul listase doar prima `„Dr. LAZA CRISTIN..."`; a doua `„LAZA"` descoperită la re-validare post-prim-fix)
+- Backup R10: folder NOU `Dosar_Medical/arhiva/json_versiuni/` (timestamp `_0132`)
+- Validare `json.load()`: 3/3 SUCCESS (11 + 14 + 16 top-level keys)
+- Scan exhaustiv pattern `„[^"„”]*"` pe 60 JSON-uri Dosar_Medical: **0 alte ocurențe buggy**
+
+**Commit `3ddc024` — P1 re-rulare scripts:**
+
+- `generate_index.py`: `documente_canonice` 18 → **20** (NU 21 cum estimase auditul; al 3-lea fix era pe `rapoarte_generate/.meta.json` care nu e indexat ca canonic — e meta-fișier pentru DOCX, comportament corect)
+- `regenerate_structura.py`: embed `<script id="dashboard-index">` re-sincronizat (33766 chars JSON)
+- R28 health check post-rulare: 🟢 OK
+
+**Commit `ed325df` — P3 fix 4/5 linkuri rupte PLAN_IMPLEMENTARE_2026-04-25.md:**
+
+- Adăugat prefix `Dosar_Medical/corespondenta/` la 4 linkuri (thread, solicitare-sprijin-oncohelp, re-solicitare-consult-anater, raspuns-iocn-mester)
+- Al 5-lea confirmat **fals-pozitiv** — apare în interior de inline code-block backtick `` ` `` (exemplu de text pentru MEMORY.md auto-memory, nu link funcțional)
+- Re-verificare excluzând inline code: 0 linkuri rupte real
+
+### Decizii fără acțiune
+
+- **Task 4 (frontmatter retroactiv 3 planuri vechi):** ⏭ SKIPPED — toate 3 sunt istorice/finalizate. Nu modific planuri istorice (decizie auditor: „riscă rescriere trecut").
+- **P2 (pre-commit hook lint JSON):** 📋 ESCALADAT user prin ticket nou P3 în `TODO.md` cu opțiuni decizie [aplic / refuz / amânat].
+
+### Status sistem post-remediere
+
+```
+SYSTEM_HEALTH:    🟢 OK
+JSON_VALIDITY:    🟢 60/60 (0 invalide)
+documente_canonice: 20 (era 18)
+CROSS_REFS:       🟢 0 rupte real
+Backup R10:       🟢 +3 (folder NOU arhiva/json_versiuni/)
+
+Overall: 🟢 STABIL — toate findings P0/P1/P3 remediate
+```
+
+### Fișiere modificate (12)
+
+- 3 JSON-uri canonice fixed (CT torace + ecografie transtoracica + raport reactii adverse meta)
+- 3 backup-uri NOI în `Dosar_Medical/arhiva/json_versiuni/`
+- `INDEX.json` (regenerat)
+- `STRUCTURA_PROIECT.md` (regenerat)
+- `DASHBOARD.html` (re-sync embed)
+- `Dosar_Medical/SYSTEM_HEALTH.json` (regenerat)
+- `PLAN_IMPLEMENTARE_2026-04-25.md` (4 linkuri reparate)
+- `TODO.md` (P3 ticket nou „Pre-commit hook lint JSON")
+- `AUDIT_EXTRAGERE_2026-04-26.md` (notă REMEDIAT în antet)
+- `SESSION_LOG.md` (intrare 01:45)
+- `CHANGELOG.md` (această intrare)
+
+### Lecții (validate al doilea ciclu R29 — fix → audit → remediere)
+
+- **Verifică unicitatea pattern-ului înainte de înlocuire** (`text.count(bad) == 1`); la non-unic STOP și raportează — am evitat o ștergere accidentală.
+- **Re-validează `json.load()` per fișier după fix** — descoperirea celei de-a doua ocurențe `„LAZA"` ar fi fost ratată fără re-validare.
+- **Linkuri în inline code-block sunt fals-pozitive la audit markdown cross-refs** — preprocesare `re.sub(r'`[^`\n]\*`', '', text)` înainte de detect.
+- **R29 ciclu fix→audit→remediere funcționează end-to-end pe task tehnic** — separarea auditor↔executor + commit incremental face deciziile transparente și permite rollback selectiv.
+- **Estimările auditorului pot fi off-by-one** — verifică **comportamentul real** al script-ului (e.g., `generate_index.py` indexeaza doar `Dosar_Medical/*.json` direct, nu `rapoarte_generate/`), nu doar count-ul așteptat.
+
+---
+
 ## 2026-04-26 01:30 — FIX CORS DASHBOARD tab Echipă + audit complet sistem post-R27/R28/R29
 
 **Tip:** FIX TEHNIC + AUDIT SISTEMIC.
