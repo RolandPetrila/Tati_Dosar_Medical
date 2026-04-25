@@ -1,6 +1,6 @@
-# REGULI_CLAUDE_CODE.md — Reguli specifice Claude Code (6-22)
+# REGULI_CLAUDE_CODE.md — Reguli specifice Claude Code (6-29)
 
-**Versiune:** 12.3 (aliniere cu v12.3 regulament: R26 consistență structură foldere + semnalare devieri) | **Data:** 2026-04-24
+**Versiune:** 12.4 (adăugare R27 ingest Gmail + R28 system health monitor + R29 plan-audit cross-terminal) | **Data:** 2026-04-25
 
 > **Citire obligatorie la prima interacțiune** — după `REGULAMENT.md` (reguli medicale fundamentale 1-10), înainte de `CONTEXT_MEDICAL.md`.
 >
@@ -287,6 +287,146 @@ Orice element prezent într-un JSON medical trebuie să aibă reflexie în `CONT
 **Why:** incidentul 2026-04-23 a arătat că propagarea selectivă JSON → `CONTEXT_MEDICAL.md` pierde elemente cu relevanță clinică reală (tulburări ventilație pre-esofagectomie). Separarea „principal / secundar / colateral" păstrează lizibilitatea fără a sacrifica completitudinea. R24 este corolarul R23 (din `Dosar_Medical/CLAUDE.md`): R23 garantează că JSON-ul e complet, R24 garantează că `CONTEXT_MEDICAL.md` reflectă JSON-ul.
 
 **How to apply:** la orice `Edit`/`Write` pe `CONTEXT_MEDICAL.md` care integrează date dintr-un JSON nou, numeri elementele din JSON și confirmă numărul în `CONTEXT_MEDICAL.md`. La audit periodic: compari cele două fișiere element cu element. Secțiunile 3 și 4 (colaterale + tehnici) sunt obligatorii chiar dacă par „fără impact decizional" (incidentul 2026-04-23 a arătat că tocmai aceste elemente pot deveni relevante la reevaluare).
+
+---
+
+## Regula 27 — Ingest Gmail pentru context dosar medical
+
+Mailurile primite/trimise în legătură cu tata constituie sursă autoritară pentru programări, recomandări medicale, contacte noi. Ele trebuie integrate sistematic în dosar — fără pierderi, fără citate selective.
+
+**Comenzi standard** (declanșabile oricând în chat):
+
+| Comandă user                      | Acțiune                                                                                                                                    |
+| --------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------ |
+| `verifică gmail oncohelp`         | Scan threaduri cu „oncohelp", „Anater", „Vornicu", „Mester" + alți medici OncoHelp/IOCN                                                    |
+| `verifică gmail tata` (full scan) | Larg: „Petrila Viorel", „biopsie", „endoscopie", „colonoscopie", „CT", „Bioclinica", „Genesis", „cardiologie", „Nădlac", „Triplixam", etc. |
+| `verifică gmail [keyword]`        | Specific pe termen indicat de user                                                                                                         |
+| `verifică gmail nou`              | Tot ce e nou față de ultimul scan (nu limitat la zile — limita = ultimul thread_id procesat în `corespondenta/INDEX.md`)                   |
+
+**Locație fișiere:** `Dosar_Medical/corespondenta/`
+
+```
+Dosar_Medical/corespondenta/
+├── INDEX.md                                    ← index master cu toate threadurile
+├── YYYY-MM-DD_slug-thread.md                   ← un fișier per thread (markdown + YAML frontmatter)
+└── atasamente/                                 ← listate (NU descărcate); URL deep-link Gmail păstrat
+```
+
+**Format fișier per thread:** Markdown cu YAML frontmatter conținând `thread_id`, `subject`, `participanti`, `data_start`, `data_ultim`, `status`, `tags`. Corpul conține sinteză automată + mesaje cronologic + cross-references.
+
+**Auto-propagare obligatorie după ingest:**
+
+1. `Dosar_Medical/CONTACTE_MEDICALE.md` — emailuri/telefoane noi (dar NUMAI medici OncoHelp activi; nu istoric extern)
+2. `CONTEXT_MEDICAL.md` — instrucțiuni medicale primite, cu marcaj sursă `[per mail Dr. X 2026-MM-DD]`
+3. `TODO.md` — programări/termene noi
+4. `SESSION_LOG.md` + `CHANGELOG.md` — log scan
+5. `DASHBOARD.html` — tab Echipă medicală + bannere relevante
+6. `INDEX.json` (rădăcină) — regenerat
+7. Backup R10 + commit + push
+
+**Atașamente — politică:** listate cu nume + tip + dimensiune + URL deep-link Gmail + extras textual (dacă PDF/DOCX) salvat în `INDEX.json#atasamente_index`. **NU se descarcă** automat. La cerere user („găsește atașamentul X") returnez instant numele + URL + sumar din extras.
+
+**Auto-scan**:
+
+- **Hook SessionStart** rulează `verifică gmail nou` ca primă acțiune
+- **Cron Windows zilnic 22:00** rulează același scan independent
+
+**Ce NU fac:** scan fără comandă user, modificare/trimitere/ștergere mailuri, expunere conținut integral mailuri pe DASHBOARD-ul public fără confirmare explicită.
+
+**Why:** mailurile cu medicii sunt momente decizionale. Sesiunea 2026-04-25 a arătat că o reportare incorectă (lactate restricționate de gastroenterolog) propagată în documente fără sursă scrisă duce la decizii nutriționale eronate. Sistemul Gmail-ingest cu cross-reference la mail-sursă elimină acest risc.
+
+**How to apply:** la orice frază de tipul „medicul a zis că..." sau „e programat la...", verifică întâi în `corespondenta/INDEX.md` dacă există sursa scrisă. Dacă da → citează thread-ul. Dacă nu → `[per user — neconfirmat în corespondență]` + propune scan dacă posibil să existe mail.
+
+---
+
+## Regula 28 — System Health Monitor (limite native Claude Code)
+
+Dosarul `.Tati` se va încărca progresiv (corespondență, meta.json-uri, JSON-uri canonice, planuri). Fără monitorizare → risc real de depășire context window, CLAUDE.md prea mare, MEMORY.md trunchiat → erori de execuție și pierdere informație.
+
+**Limite monitorizate** (`Dosar_Medical/SYSTEM_HEALTH.json` auto-generat):
+
+| Metrică                                   | Limită                | Status                                    |
+| ----------------------------------------- | --------------------- | ----------------------------------------- |
+| Context tokens estimat la pornire sesiune | 200k Sonnet / 1M Opus | 🟢 <60% / 🟡 60-80% / 🟠 80-95% / 🔴 >95% |
+| `CLAUDE.md` size (root proiect)           | 40KB warning oficial  | 🟢 / 🟡 / 🔴                              |
+| `MEMORY.md` linii                         | 200 (truncat automat) | 🟢 <120 / 🟡 120-180 / 🔴 >180            |
+| Total `.md` root size                     | 500KB                 | 🟢 / 🟡 / 🔴                              |
+| Fișier individual                         | 200KB sau 5000 linii  | 🟢 / 🟡 / 🔴                              |
+| `INDEX.json` size                         | 1MB                   | 🟢 / 🟡 / 🔴                              |
+
+**Acțiuni automate la depășire:**
+
+| Status              | Comportament Claude                                                                                                                |
+| ------------------- | ---------------------------------------------------------------------------------------------------------------------------------- |
+| 🟢 OK               | nimic                                                                                                                              |
+| 🟡 WARNING (60-80%) | 1-line warning + propunere proactivă restructurare la final răspuns                                                                |
+| 🟠 ALERT (80-95%)   | Refuz operații care încarcă suplimentar (scrieri masive, ingest gmail full). Cer confirmare explicită + propun plan restructurare. |
+| 🔴 CRITICAL (>95%)  | STOP scrieri. Doar citire. Plan restructurare urgent. Refuz pornire ingest gmail full / adăugare fișiere.                          |
+
+**Strategii preventive standard:**
+
+1. **Lazy-load** — `CONTEXT_MEDICAL.md`, `ALIMENTATIE.md`, `corespondenta/*` NU se citesc la fiecare sesiune; doar la cerere
+2. **INDEX.json first** — pentru orice search/query, citesc întâi `INDEX.json` (mic), apoi citesc fișiere specifice
+3. **Sharding pe an** corespondență când va fi cazul (`corespondenta/2026/`, `2027/`)
+4. **Arhivare proactivă** — corespondență finalizată >6 luni → `corespondenta/arhiva/YYYY/` cu doar sinteze
+5. **Versioning** fișiere catalog (CONTACTE_MEDICALE.md cu `version: X.Y` în frontmatter)
+
+**Hook SessionStart:** rulează `scripts/system_health_check.py` → afișează 1-line status în primul răspuns al sesiunii.
+
+**Why:** prevenire pierderi informație și erori execuție. CLAUDE.md depășise 43KB la v11 (re-restructurat la 7KB v12). MEMORY.md poate trunchia silent. Fără monitorizare proactivă, sistemul degradează silent.
+
+**How to apply:** la fiecare scriere semnificativă (>50 linii noi într-un fișier de referință), verific SYSTEM_HEALTH înainte. La 🟠/🔴 propun arhivare/sharding înainte de a continua.
+
+---
+
+## Regula 29 — Plan-Audit cross-terminal pentru task-uri complexe
+
+Când un task depășește 5 sub-operații **sau** traversează mai multe sesiuni **sau** are risc real de rupere parțială, se aplică protocolul Plan-Audit cu **două terminale Claude Code**:
+
+- **Terminal A (Auditor)** — sesiunea care planifică. Creează `PLAN_<nume>_<YYYY-MM-DD>.md` la rădăcina proiectului. Nu execută. Auditează după fiecare commit incremental.
+- **Terminal B (Executor)** — sesiunea care execută strict planul. Marchează progresul în plan. Face commit incremental după fiecare task validat.
+
+**Protocol obligatoriu:**
+
+1. **Auditor (terminal A) creează planul** cu:
+   - Header: versiune, status (`🔴 PENDING` / `🟡 IN_PROGRESS` / `🟢 COMPLETED`), auditor, executor, durată estimată
+   - Context complet (decizii luate în sesiunea anterioară)
+   - Reguli protocol (ordine, dependențe, backup R10, commit-uri incrementale)
+   - Per task: pre-requisite, pași concreti (cu cod/comenzi/conținut paste-ready), verificare, status checkbox `- [ ]`, commit message planificat
+   - Validări finale (ce trebuie să existe la final)
+   - Handoff (instrucțiuni pentru terminalul B)
+
+2. **Executor (terminal B), la deschidere:**
+   - Citește `MEMORY.md` (vede checkpoint cu pointer la plan)
+   - Citește `PLAN_*.md` la rădăcină cu status `🔴 PENDING` sau `🟡 IN_PROGRESS`
+   - Confirmă cu user-ul că pornește execuția
+   - Execută strict pas cu pas — nu abate, nu refactorează, nu adaugă lucruri ne-cerute
+   - La fiecare task completat: marchează `[x]`, face commit incremental, update status plan
+   - La eroare: STOP, raport în chat, NU continuă
+
+3. **Auditor (terminal A) verifică** după fiecare commit incremental:
+   - `git log` + `git diff` pentru a vedea ce s-a făcut
+   - Validează că modificarea respectă planul
+   - Semnalează discrepanțe în chat
+
+4. **La final:** executor marchează status `🟢 COMPLETED` în plan + face commit final + audit final.
+
+**Detect plan activ:** `CLAUDE.md` proiect conține instrucțiunea „dacă există `PLAN_*.md` la rădăcină cu status `🔴 PENDING` sau `🟡 IN_PROGRESS` în antet, citește-l ÎNAINTE de orice altceva și urmează instrucțiunile lui strict".
+
+**Convenții bifare:**
+
+- `- [ ]` task pending
+- `- [x]` task completed (cu data + commit hash în paranteză)
+- `- [⚠]` task blocat (cu motiv)
+- `- [~]` task skipped (cu justificare)
+
+**Backup R10 obligatoriu** pentru orice modificare la fișiere de referință medicală listate în plan.
+
+**Commit-uri incrementale obligatorii** — un commit per task major (NU un commit final unic), cu mesaj `[PLAN <nume>] task #X — <subiect>`. Așa, întreruperea sesiunii nu pierde lucrul deja făcut.
+
+**Why:** sesiunea 2026-04-25 a inițiat un task cu 9 sub-operații (R27 + R28 + CONTACTE + ingest Gmail + INDEX + DASHBOARD tab + commit). Sesiunea de planificare deja consumase context substanțial cu cercetarea Gmail + audit. Cumulul plan + execuție într-o singură sesiune ar fi atins limita de context. Decuplarea elimină acest risc + permite audit independent al execuției.
+
+**How to apply:** orice cerere user care presupune `>5` modificări concrete și non-triviale → propune protocolul Plan-Audit. Creează `PLAN_*.md` cu detalierea de mai sus. NU începe execuția în terminalul curent; aștepți terminal nou (executor) și auditezi din terminalul curent.
 
 ---
 
