@@ -112,9 +112,9 @@ User a confirmat în conversație următoarele decizii:
 
 **Pași:**
 
-- [ ] **#15.1** — Creez folder `scripts/` la rădăcina proiectului dacă nu există: `mkdir -p "G:/My Drive/Roly/.Tati/scripts"`
+- [x] **#15.1** — Creat folder `scripts/` (2026-04-25 18:30).
 
-- [ ] **#15.2** — Creez `scripts/system_health_check.py` cu următorul conținut (script Python care scanează proiectul și generează `Dosar_Medical/SYSTEM_HEALTH.json`):
+- [x] **#15.2** — Creat `scripts/system_health_check.py` cu fix-uri vs. specificația originală (2026-04-25 18:30): (1) `sys.stdout.reconfigure(encoding="utf-8")` pentru emojis pe Windows cp1252, (2) bug fix `sum()` peste strings (înlocuit cu `"".join(texts)`), (3) try/except pe rglob pentru permisiuni Drive sync, (4) chars/token la 3 (român), (5) status_for() consolidat în helper `metric()`. Logica praguri identică cu plan.
 
 ```python
 #!/usr/bin/env python3
@@ -270,16 +270,9 @@ if __name__ == "__main__":
     main()
 ```
 
-- [ ] **#15.3** — Rulează scriptul prima dată ca să generezi `Dosar_Medical/SYSTEM_HEALTH.json`:
+- [⚠] **#15.3** — Rulat scriptul (2026-04-25 18:31). **Status detectat: `🔴 CRITICAL`** pe metricul `total_md_root_kb` (542.3 KB / 500 KB = 108.5%). Toate celelalte metrici 🟢 OK. **Stop Rule #1 declanșat** — vezi raport către user în chat după Task #15. Stare PRE-existentă, nu cauzată de execuția planului. Cauza: CHANGELOG.md (131.9KB) + SESSION_LOG.md (81.5KB) + ALIMENTATIE.md (48.2KB) + CONTEXT_MEDICAL.md (47.1KB) + altele = 542.3 KB cumulat.
 
-  ```bash
-  cd "G:/My Drive/Roly/.Tati"
-  python scripts/system_health_check.py
-  ```
-
-  Verifică că s-a creat `Dosar_Medical/SYSTEM_HEALTH.json` cu status `🟢 OK`.
-
-- [ ] **#15.4** — Adaugă în `.claude/settings.local.json` (creează dacă nu există) hook SessionStart care rulează scriptul:
+- [x] **#15.4** — Hook SessionStart adăugat în `.claude/settings.local.json` (2026-04-25 18:32). Format respectă schema Claude Code (`hooks > SessionStart > [{ hooks: [{ type: "command", command: ... }] }]`). **Notă:** `settings.local.json` e gitignored (corect — e setting local per user) → hook-ul NU e committed în git, dar rulează local pentru sesiunile pe acest laptop. Pentru a fi share-uit, ar trebui mutat în `.claude/settings.json` (project-level), dar planul a specificat explicit `settings.local.json`.
   ```json
   {
     "hooks": {
@@ -297,17 +290,11 @@ if __name__ == "__main__":
 
 **Verificare:**
 
-- [ ] `scripts/system_health_check.py` există și e executabil
-- [ ] `Dosar_Medical/SYSTEM_HEALTH.json` există cu status valid (🟢 / 🟡 / 🟠 / 🔴)
-- [ ] `.claude/settings.local.json` are hook SessionStart configurat
+- [x] `scripts/system_health_check.py` există și rulează cu cod 0
+- [x] `Dosar_Medical/SYSTEM_HEALTH.json` există cu status `🔴 CRITICAL` (declanșează Stop Rule #1 — raport user)
+- [x] `.claude/settings.local.json` are hook SessionStart configurat
 
-**Commit incremental:**
-
-```bash
-git add scripts/ Dosar_Medical/SYSTEM_HEALTH.json .claude/settings.local.json
-git commit -m "[PLAN 2026-04-25] task #15 — R28 System Health Monitor + hook SessionStart"
-git push
-```
+**Commit incremental:** `[PLAN 2026-04-25] task #15 — R28 System Health Monitor + hook SessionStart` (committed).
 
 ---
 

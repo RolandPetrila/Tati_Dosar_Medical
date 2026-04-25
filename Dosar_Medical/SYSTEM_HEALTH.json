@@ -1,0 +1,78 @@
+{
+  "checked_at": "2026-04-25T18:32:36",
+  "status": "🔴 CRITICAL",
+  "limits": {
+    "claude_md_size_kb": {
+      "current": 9.4,
+      "limit": 40,
+      "percent": 23.5,
+      "status": "🟢 OK"
+    },
+    "memory_md_lines": {
+      "current": 13,
+      "limit": 200,
+      "percent": 6.5,
+      "status": "🟢 OK"
+    },
+    "total_md_root_kb": {
+      "current": 542.3,
+      "limit": 500,
+      "percent": 108.5,
+      "status": "🔴 CRITICAL"
+    },
+    "largest_files": [
+      {
+        "path": "CHANGELOG.md",
+        "size_kb": 131.9
+      },
+      {
+        "path": "Dosar_Medical/arhiva/context_medical_versiuni/CHANGELOG_pre-trimitere-mail-anater_2026-04-25_1826.md",
+        "size_kb": 129.6
+      },
+      {
+        "path": "DASHBOARD.html",
+        "size_kb": 121.7
+      },
+      {
+        "path": "Dosar_Medical/arhiva/versiuni_config/DASHBOARD_pre-audit-remediere_2026-04-24_2130.html",
+        "size_kb": 81.8
+      },
+      {
+        "path": "SESSION_LOG.md",
+        "size_kb": 81.5
+      },
+      {
+        "path": "Dosar_Medical/arhiva/versiuni_config/DASHBOARD_pre-lazar-batchA_2026-04-24_0230.html",
+        "size_kb": 81.4
+      },
+      {
+        "path": "Dosar_Medical/arhiva/context_medical_versiuni/SESSION_LOG_pre-trimitere-mail-anater_2026-04-25_1826.md",
+        "size_kb": 79.0
+      },
+      {
+        "path": "Documente_Informative/EXPLICATIE_CONSULT_ONCOLOG_SCENARII.md",
+        "size_kb": 74.5
+      },
+      {
+        "path": "ALIMENTATIE.md",
+        "size_kb": 48.2
+      },
+      {
+        "path": "CONTEXT_MEDICAL.md",
+        "size_kb": 47.1
+      }
+    ],
+    "files_over_limit": [],
+    "context_tokens_estimate": {
+      "current": 16557,
+      "limit": 200000,
+      "percent": 8.3,
+      "status": "🟢 OK",
+      "note": "estimat doar pe fișiere auto-loaded (CLAUDE.md + REGULI_CLAUDE_CODE.md + REGULAMENT.md). Read-uri ad-hoc, MEMORY.md auto-injection, sistem-reminders nu sunt incluse — context real e mai mare."
+    }
+  },
+  "recommendations": [
+    "🔴 total_md_root_kb: la 108.5% — STOP scrieri. Restructurare urgentă."
+  ],
+  "version": "1.0"
+}
