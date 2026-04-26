@@ -567,3 +567,6 @@ Pentru evaluare mai precisă a expunerii (calculul „pachete-an”).
 ---
 
 **Ultima revizuire:** 17 aprilie 2026.
+
+<!-- AUTO_SYNC_TEST_MARKER_2026_04_27 — invisibil în randare; testare propagare hook pre-commit + Drive Connector în Claude Projects. Roland va căuta acest marker în chat Projects pentru verificare. -->
+
