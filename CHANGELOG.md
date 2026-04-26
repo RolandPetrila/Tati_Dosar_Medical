@@ -4,6 +4,54 @@
 
 ---
 
+## 2026-04-27 01:30 — NEW R30 — Sistem sync Claude Projects (chat web/mobil) + pre-commit hook auto-regen
+
+**Tip:** ENHANCEMENT — feature nou pentru acces context medical de pe mobil când Roland nu e la laptop (consult oncolog 4.05.2026 OncoHelp Timișoara apropiat; deciziile critice apar și în week-end / deplasări).
+
+### Componente implementate
+
+**1. Folder `_projects_sync/`** (8 fișiere, ~258 KB) la rădăcina proiectului:
+
+- `STATUS_SNAPSHOT.md` (auto-generat): one-page agregat — date pacient §1 + status TNM §2.1 + medicație §4 + calendar TODO + P0 active + git hash
+- `PROJECTS_PRIMER.md` (manual): instrucțiuni operaționale Claude Projects — ordine consultare 7 fișiere, marcaje R17 obligatorii, refuz presupunere R7, conflicte, limite (NU modifici, NU executi, NU ești medic, NU ești Claude Code), întrebări frecvente
+- Mirror al 6 fișiere sursă: `CONTEXT_MEDICAL.md`, `TODO.md`, `REGULAMENT.md`, `INDEX.json`, `Dosar_Medical/CONTACTE_MEDICALE.md`, `Documente_Informative/EXPLICATIE_CONSULT_ONCOLOG_SCENARII.md`
+
+**2. Script `scripts/regen_projects_sync.py`** (~170 linii Python): copiază 6 sursă + generează STATUS_SNAPSHOT prin extragere regex + git log HEAD; funcție `strip_first_header()` evită dublură headers cosmetică.
+
+**3. Pre-commit hook `.git/hooks/pre-commit`** (POSIX shell): detectează staged changes pe 6 fișiere sursă → rulează scriptul → `git add _projects_sync/` → commit-ul include sync (no infinite loop). Sincronizat Desktop ↔ Drive prin Drive client desktop.
+
+**4. Custom Instructions Project** (paste manual de user în UI claude.ai → Project Settings): identitate pacient + ordine consultare + marcaje R17 + limite.
+
+**5. Regula nouă R30** în `REGULI_CLAUDE_CODE.md` (v12.4 → v12.5) + harta regulilor în `CLAUDE.md` root (v12.4 → v12.5).
+
+### Limitare descoperită [CERT] (verificare docs Anthropic 2026-04-27)
+
+Drive Connector în Project knowledge pe planul Max acceptă **DOAR Google Docs nativ** — NU `.md`, NU `.json`. Cataloging RAG cu re-index automat = Enterprise-only. Pe Max → fișierele din Project knowledge sunt **upload static** (drag&drop), înghețate la momentul drop-ului.
+
+**Implicație:** lanțul automat funcționează 100% până la `git push` (laptop → Drive). Pentru chat Projects (mobil), user-ul re-uploadează manual cele 8 fișiere modificate (~30s, doar la modificări medicale majore).
+
+**Decizie user (AskUserQuestion 2026-04-27):** Opțiunea A — drag&drop manual periodic. Garantat, fiabil pentru consult 4.05.
+
+### Test live confirmare auto-sync local
+
+Marker `AUTO_SYNC_TEST_MARKER_2026_04_27` adăugat temporar în TODO.md (commit `3f7a167`):
+
+- Hook detectat: `🔍 [pre-commit] Fișier sursă modificat: TODO.md`
+- Script rulat automat → 6 copii + STATUS_SNAPSHOT regenerat → git add automat
+- Commit-ul a inclus 3 fișiere (TODO.md + \_projects_sync/TODO.md + \_projects_sync/STATUS_SNAPSHOT.md)
+- Marker scos în commit `b300996` după validare
+
+### Commit-uri (4)
+
+- `9f89809` — `[NEW R30 2026-04-27] Sistem sync Claude Projects: _projects_sync/ + script regen` (10 files, +4540 lines)
+- `5531bb0` — `[ENH R30 2026-04-27] Auto-sync Projects: pre-commit hook + strip headers cosmetici` (2 files)
+- `3f7a167` — `[TEST 2026-04-27] Auto-sync marker - verificare hook pre-commit + Drive Connector` (3 files)
+- `b300996` — `[FIX R30 2026-04-27] Corectie PROJECTS_PRIMER + cleanup test marker` (4 files)
+
+Toate push-uite pe `main`.
+
+---
+
 ## 2026-04-26 22:24 — FIX post-audit 21:06 — Propagare reprogramare 4.05 + close TODO P2 oncolog + sync DASHBOARD
 
 **Tip:** REMEDIERE — finding-uri audit `2026-04-26_210608` (scor 87/100).

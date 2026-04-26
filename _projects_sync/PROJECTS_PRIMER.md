@@ -93,6 +93,7 @@ Dacă STATUS_SNAPSHOT contrazice CONTEXT_MEDICAL → **CONTEXT_MEDICAL prevaleaz
 ## Mecanism de actualizare (corectat 2026-04-27 după verificare oficială docs Anthropic)
 
 **Realitate confirmată [CERT]** pe planul Max:
+
 - Drive Connector în Project knowledge acceptă **DOAR Google Docs nativ** — NU `.md`, NU `.json`
 - Cataloging RAG cu re-index automat (5-30 min) e feature **Enterprise-only**
 - Pe Max → fișierele din Project knowledge sunt **upload static** (drag&drop), înghețate la momentul drop-ului
@@ -119,6 +120,7 @@ Dacă STATUS_SNAPSHOT contrazice CONTEXT_MEDICAL → **CONTEXT_MEDICAL prevaleaz
 ```
 
 **Pentru utilizator (TU, Claude Projects):** dacă răspunsul tău depinde de date care par stale (ex: date noi pe care Roland le menționează dar nu le vezi în fișiere):
+
 - Întreabă explicit: „Văd că Project knowledge are TODO.md cu Ultima actualizare X. Tu menționezi date mai noi. Ai re-uploadat fișierele după modificarea respectivă?"
 - NU presupune că ai versiunea curentă — verifică data din STATUS_SNAPSHOT antet
 - La conflict raportat → versiunea pe care o are Roland local (laptop) e autoritativă; ce vezi tu poate fi stale

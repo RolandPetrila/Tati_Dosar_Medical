@@ -6,6 +6,44 @@
 
 ---
 
+## 2026-04-27 01:30 — [Claude_Opus_4.7_1M] new-r30-sistem-sync-claude-projects-pentru-chat-web-mobil (R16 + R20)
+
+**Scop:** sistem nou pentru acces context medical de pe mobil când user nu e la laptop (chat Claude Projects). Setup mirror auto-sync local + drag&drop manual către Project knowledge (limită Max).
+
+**Fișiere create:**
+
+- `scripts/regen_projects_sync.py` (~170 linii Python — mirror 6 fișiere sursă + generează STATUS_SNAPSHOT.md prin extragere regex + git log)
+- `.git/hooks/pre-commit` (POSIX shell — detectează staged changes pe fișiere sursă, rulează scriptul, git add _projects_sync/)
+- `_projects_sync/PROJECTS_PRIMER.md` (manual — instrucțiuni operaționale Claude Projects)
+- `_projects_sync/STATUS_SNAPSHOT.md` (auto-generat)
+- `_projects_sync/{6 mirror copies}` (CONTEXT_MEDICAL, TODO, REGULAMENT, INDEX.json, CONTACTE_MEDICALE, EXPLICATIE_CONSULT_ONCOLOG_SCENARII)
+
+**Fișiere modificate:**
+
+- `CLAUDE.md` (v12.4 → v12.5 — adăugare R30 în harta regulilor)
+- `REGULI_CLAUDE_CODE.md` (v12.4 → v12.5 — secțiunea R30 propriu-zisă)
+- `TODO.md` (test marker adăugat + scos după validare)
+- `CHANGELOG.md` (intrare nouă 27.04 R30)
+- `SESSION_LOG.md` (această intrare)
+- `Dosar_Medical/SYSTEM_HEALTH.json` (auto-refresh la SessionStart)
+
+**Decizii user (AskUserQuestion):**
+
+- Plan Anthropic: Max
+- PII în cloud: urcă as-is (acord explicit)
+- Script Python regen: Da
+- Doc oncolog (15k cuvinte) în knowledge: Include
+- Folder dedicat: `_projects_sync/`
+- Sync strategy după descoperire limită Max: Opțiunea A (drag&drop manual periodic)
+
+**Limitare descoperită [CERT]:** Drive Connector pe Max = doar Google Docs nativ. Cataloging RAG re-index automat = Enterprise-only. Workflow final: auto până la `git push`, apoi manual drag&drop în Project knowledge.
+
+**Commit-uri (4):** `9f89809`, `5531bb0`, `3f7a167`, `b300996` — toate push-uite pe `main`.
+
+**Memory salvat:** `sesiune_2026-04-27_r30-projects-sync.md` (checkpoint activ).
+
+---
+
 ## 2026-04-26 22:24 — [Claude_Opus_4.7] fix-audit-post-21:06-propagare-reprogramare-4-05-close-todo-p2 (R10 + R16 + R18 + R24)
 
 **Scop:** remediere 4 finding-uri audit `2026-04-26_210608` (1 HIGH + 2 MEDIUM + 1 LOW).

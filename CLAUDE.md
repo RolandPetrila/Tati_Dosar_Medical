@@ -1,6 +1,6 @@
 # CLAUDE.md — Proiect `.Tati` (auto-loader minimalist)
 
-**Versiune:** 12.4 (adăugare R27 + R28 + R29: ingest Gmail + system health monitor + plan-audit cross-terminal) | **Data:** 2026-04-25
+**Versiune:** 12.5 (adăugare R30: sistem sync Claude Projects pentru chat web/mobil) | **Data:** 2026-04-27
 
 > **Fișier auto-încărcat de Claude Code la pornirea în `G:\My Drive\Roly\.Tati`.**
 > Scop: loader minimalist care direcționează spre reguli și context.
@@ -64,6 +64,7 @@ Citești în această ordine, înainte de orice răspuns substanțial:
 | 27     | Ingest Gmail pentru context dosar medical (comenzi + auto-scan + propagare) | `REGULI_CLAUDE_CODE.md`                                                                    |
 | 28     | System Health Monitor (limite native Claude Code)                           | `REGULI_CLAUDE_CODE.md`                                                                    |
 | 29     | Plan-Audit cross-terminal pentru task-uri complexe                          | `REGULI_CLAUDE_CODE.md`                                                                    |
+| 30     | Sistem sync Claude Projects (chat web/mobil) — `_projects_sync/` + hook     | `REGULI_CLAUDE_CODE.md`                                                                    |
 
 **Notă overlap R6/R7:** Regulile 6 și 7 apar în două locuri cu versiuni diferite:
 

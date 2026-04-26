@@ -1,6 +1,6 @@
-# REGULI_CLAUDE_CODE.md — Reguli specifice Claude Code (6-29)
+# REGULI_CLAUDE_CODE.md — Reguli specifice Claude Code (6-30)
 
-**Versiune:** 12.4 (adăugare R27 ingest Gmail + R28 system health monitor + R29 plan-audit cross-terminal) | **Data:** 2026-04-25
+**Versiune:** 12.5 (adăugare R30 sistem sync Claude Projects pentru chat web/mobil) | **Data:** 2026-04-27
 
 > **Citire obligatorie la prima interacțiune** — după `REGULAMENT.md` (reguli medicale fundamentale 1-10), înainte de `CONTEXT_MEDICAL.md`.
 >
@@ -441,6 +441,49 @@ Când un task depășește 5 sub-operații **sau** traversează mai multe sesiun
 **Why:** sesiunea 2026-04-25 a inițiat un task cu 9 sub-operații (R27 + R28 + CONTACTE + ingest Gmail + INDEX + DASHBOARD tab + commit). Sesiunea de planificare deja consumase context substanțial cu cercetarea Gmail + audit. Cumulul plan + execuție într-o singură sesiune ar fi atins limita de context. Decuplarea elimină acest risc + permite audit independent al execuției.
 
 **How to apply:** orice cerere user care presupune `>5` modificări concrete și non-triviale → propune protocolul Plan-Audit. Creează `PLAN_*.md` cu detalierea de mai sus. NU începe execuția în terminalul curent; aștepți terminal nou (executor) și auditezi din terminalul curent.
+
+---
+
+## Regula 30 — Sistem sync Claude Projects (chat web/mobil)
+
+**Pentru acces medical de pe mobil când Roland nu e la laptop**, există un mirror sincronizat al fișierelor critice în `_projects_sync/`, alimentat automat de pre-commit hook + script Python `scripts/regen_projects_sync.py`.
+
+**Componente:**
+
+1. **Folder `_projects_sync/`** la rădăcina proiectului (8 fișiere, ~257 KB total):
+   - `STATUS_SNAPSHOT.md` (auto-generat: agregat one-page cu date pacient + status TNM + medicație + calendar + P0 active + git hash)
+   - `PROJECTS_PRIMER.md` (manual, instrucțiuni operaționale Claude Projects: ordine consultare, marcaje R17, refuz presupunere R7, conflicte, limite)
+   - Mirror al 6 fișiere sursă: `CONTEXT_MEDICAL.md`, `TODO.md`, `REGULAMENT.md`, `INDEX.json`, `Dosar_Medical/CONTACTE_MEDICALE.md`, `Documente_Informative/EXPLICATIE_CONSULT_ONCOLOG_SCENARII.md`
+
+2. **Script `scripts/regen_projects_sync.py`** — copiază cele 6 sursă + generează `STATUS_SNAPSHOT.md` prin extragere regex secțiuni cheie din CONTEXT_MEDICAL §1/§2.1/§4 + TODO calendar + P0 active + git log HEAD.
+
+3. **Pre-commit hook `.git/hooks/pre-commit`** (sincronizat Desktop ↔ Drive prin Drive client desktop):
+   - Detectează staged changes pe cele 6 fișiere sursă
+   - Dacă DA → rulează scriptul + `git add _projects_sync/`
+   - Commit-ul include automat sync-ul (un singur commit, no infinite loop)
+   - Dacă scriptul eșuează → abort commit (exit 1)
+
+**Workflow user:**
+
+```
+Roland editează fișier sursă local
+  → git commit (hook auto-regen _projects_sync/)
+  → git push (GitHub + Drive sync auto)
+═══════ RUPTURĂ MANUALĂ ═══════
+  → Pentru chat Projects: Roland manual remove + drag&drop fișiere modificate
+    în Project knowledge (~30s, doar la modificări medicale majore)
+```
+
+**Limitare cunoscută [CERT]:** Drive Connector în Project knowledge pe planul Max acceptă DOAR Google Docs nativ (verificat docs Anthropic 2026-04-27). Cataloging RAG cu re-index automat = Enterprise-only. Pe Max → drag&drop static, înghețat la momentul drop-ului.
+
+**Why:** consult oncolog 4.05.2026 OncoHelp Timișoara apropiat; deciziile critice se iau în week-end / deplasări când Roland nu e la laptop. Claude Projects pe mobil cu fișiere sync-uite oferă context medical complet pentru întrebări rapide. Setup-ul auto-mirror local elimină munca manuală de regenerare; doar drag&drop final rămâne user-side.
+
+**How to apply:**
+
+- La adăugare fișier nou care merită sync mobil → update `FILES_TO_COPY` în `scripts/regen_projects_sync.py` + regen
+- La modificare medicală majoră anticipată să fie consultată mobil → user re-uploadează cele 8 fișiere în Project knowledge după push
+- La conflict raportat de user între chat Projects și fișier original → instruiește verificare data din `STATUS_SNAPSHOT.md` antet + reupload manual
+- NU edita direct fișiere în `_projects_sync/` — sunt mirror, suprascrise la următorul commit cu fișier sursă; modificările se fac în originalele
 
 ---
 
