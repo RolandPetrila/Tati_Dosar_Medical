@@ -1,5 +1,5 @@
 {
-  "checked_at": "2026-04-26T22:18:17",
+  "checked_at": "2026-04-27T00:02:34",
   "status": "🟢 OK",
   "limits": {
     "claude_md_size_kb": {
@@ -44,12 +44,16 @@
       "note": "suma fișierelor auto-loaded la pornire sesiune (CLAUDE.md root + REGULAMENT + REGULI + nested CLAUDE.md). Pragul 150 KB e alertă reală pentru risc context window."
     },
     "total_md_root_kb": {
-      "current": 636.1,
+      "current": 640.8,
       "note": "informativ — suma brută `.md` la rădăcină; include logs istorice (CHANGELOG, SESSION_LOG) care NU sunt auto-loaded. Pentru alertă reală vezi `auto_loaded_md_kb`. Demotează 2026-04-26 (ticket P2 închis)."
     },
     "largest_files": [
       {
         "path": "DASHBOARD.html",
+        "size_kb": 176.3
+      },
+      {
+        "path": "Dosar_Medical/arhiva/context_medical_versiuni/DASHBOARD_pre-fix-audit-26-04-21_2026-04-26_2224.html",
         "size_kb": 173.8
       },
       {
@@ -58,7 +62,7 @@
       },
       {
         "path": "CHANGELOG.md",
-        "size_kb": 152.7
+        "size_kb": 155.8
       },
       {
         "path": "Dosar_Medical/arhiva/context_medical_versiuni/DASHBOARD_pre-fix-cors-tab-echipa_2026-04-26_0105.html",
@@ -74,7 +78,7 @@
       },
       {
         "path": "SESSION_LOG.md",
-        "size_kb": 100.6
+        "size_kb": 101.7
       },
       {
         "path": "Dosar_Medical/arhiva/versiuni_config/DASHBOARD_pre-audit-remediere_2026-04-24_2130.html",
@@ -83,10 +87,6 @@
       {
         "path": "Dosar_Medical/arhiva/versiuni_config/DASHBOARD_pre-lazar-batchA_2026-04-24_0230.html",
         "size_kb": 81.4
-      },
-      {
-        "path": "Dosar_Medical/arhiva/context_medical_versiuni/SESSION_LOG_pre-trimitere-mail-anater_2026-04-25_1826.md",
-        "size_kb": 79.0
       }
     ],
     "files_over_limit": [],
