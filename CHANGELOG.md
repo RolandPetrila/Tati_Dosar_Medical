@@ -4,6 +4,94 @@
 
 ---
 
+## 2026-04-26 19:06 — INGEST mail Dr. Anater 26.04: REPROGRAMARE consult 30.04 → 4 mai 2026 (R27 ciclu 2 — incremental scan)
+
+**Tip:** R27 INGEST GMAIL INCREMENTAL — comandă user implicită „am un mail nou de la anater".
+
+### Eveniment-cheie
+
+**Mail Dr. Anater Angelo - Christian (OncoHelp Timișoara), 2026-04-26 10:28 EEST:**
+
+- **REPROGRAMARE consult oncolog:** 30.04 → **4 mai 2026 (luni)**. Motiv: 30.04 era foarte aglomerată din cauza zilei libere de 1 mai; caz nou care necesită mai mult timp pentru constituirea dosarului de comisie oncologică.
+- **Markeri tumorali specificați:** **CEA (antigen carcinoembrionar) + CA 19-9 (antigen carbohidrat 19-9)**. Pot fi făcuți la OncoHelp (1 decontat pe internare + 1 plătit la laborator) SAU la laborator extern „la fel de bine".
+- **Consult cardiologic recent (max 6 luni):** făcut afară, cu bilet de trimitere de la medicul de familie, adus la consult.
+- **Analize de sânge uzuale:** se vor face în spital pe internare (NU extern).
+- **Bilet de trimitere medicul de familie pentru oncologie medicală:** NECESAR la primul consult (ulterior nu mai e necesar).
+- **Programul zilei 4 mai:** consult + comisie oncologică (constituire dosar) + opinie chirurg eso pentru evaluare rezecție + plan tratament. **NU rămâne internat** din 4 mai. Posibilă intervenție laparoscopică ULTERIOR (NU pe 4.05) pentru evaluarea peritoneului. Anater va elibera bilet de trimitere chirurgie + va lua legătura tintit.
+- **Documente:** nimic specific, dar **scrisori medicale / bilete ieșire spital pentru ALTE patologii** (pentru evaluare comorbidități).
+- **Telefon contact:** va fi furnizat la consult (nu prin mail).
+
+### Acțiuni declanșate (de Roland)
+
+**🔴 P0 — MÂINE 27.04.2026 — 3 telefoane:**
+
+1. **Medic familie Dr. Orbán** (Cabinet Nădlac) — cerere 2 bilete trimitere: oncologie medicală + cardiologie
+2. **Cardiolog Arad** — programare consult ambulator (Dr. LAZA CRISTINA dacă disponibil) cu ECG + ECO + scrisoare medicală scrisă
+3. **Synevo Arad** — programare markeri tumorali CEA + CA 19-9 (a jeun, dimineața)
+
+### Remedieri propagate
+
+**1. `Dosar_Medical/corespondenta/2026-04-24_re-solicitare-consult-anater.md`** (R27 — fișier thread):
+
+- Adăugare mesaj Dr. Anater 26.04 10:28 + forward intern Roland 26.04 10:54
+- Sinteză automată extinsă cu 9 puncte de decizii medicale (toate cele 4 întrebări Roland clarificate + plan zi 4.05)
+- Status: 🟡 așteptare → ⚪ încheiat
+- Tags actualizat: + markeri-tumorali, bilet-trimitere, comisie-oncologica
+- mesaje_count: 3 → 5
+
+**2. `Dosar_Medical/corespondenta/INDEX.md`:**
+
+- last_processed_thread_id: `19dc4e472df6e379` → `19dc8c8db3dd4d2c`
+- last_scan: 2026-04-25 19:30 → 2026-04-26 19:06
+- scan_type: full_history → incremental
+- threads_active: 1 → 0 (toate au răspuns)
+- Mailuri totale: 11 → 13 (răspuns medici 4 → 5)
+- Status thread Anater: 🟡 așteptare → ⚪ încheiat (cu detalii reprogramare)
+
+**3. `CONTEXT_MEDICAL.md`** (versiune 1.5 → 1.6):
+
+- Header data 25.04 03:00 → 26.04 19:06
+- §2.6 acțiuni în curs: reprogramare 30.04 → 4.05 + 3 telefoane mâine 27.04 + plan zi 4.05
+- §8.1 consult oncolog: 30 aprilie → 4 mai 2026 (luni) + listă documente revizuită cu instrucțiuni Anater 26.04 (bilet trimitere medic familie + cardiologic recent + markeri CEA/CA19-9 + scrisori comorbidități)
+- §9 echipă: badge oncologie 30.04 → 4.05
+- §12 rezumat 3 linii: linia 3 actualizată cu data nouă + 3 telefoane mâine
+
+**4. `TODO.md`:**
+
+- Header data 25.04 18:00 → 26.04 19:06
+- Calendar: + 26.04 răspuns Anater + 27.04 telefoane (P0 nou) + 28-30.04 dosar fizic + 30.04 ANULAT + 4.05 (luni) PROGRAMAT
+- P0 nou „MÂINE 27.04 — 3 telefoane" cu 3 sub-task-uri detaliate
+- P0 consult oncolog: 30.04 → 4.05 + motivare reprogramare + sub-task-uri remaining
+- P0 dosar fizic: componente revizuite (bilet trimitere oncologie + cardiologic recent + markeri + scrisori comorbidități hernie/urologie/cardiologie/UPU/HP)
+
+**5. `DASHBOARD.html`:**
+
+- Header subtitle: badge ✅ → 🔴 cu data 4 mai 2026 (luni)
+- Header meta data 25.04 → 26.04 cu rezumat ingest
+- Countdown bar: revizuit cu „REPROGRAMARE 26.04" + 3 telefoane mâine + biopsie 28-29.04
+- Card Status clinic: badge oncolog 🔴 REPROGRAMAT 4.05.2026 (luni) cu motivare
+- Cronologie post-CT: + 27.04 telefoane + 28-30.04 dosar + 30.04 anulat (strikethrough) + 4.05 programat (4 rânduri noi)
+- Acțiuni P0: card oncolog actualizat cu detalii zi 4.05 + card 27.04 NOU cu sub-listă 3 telefoane + card dosar fizic revizuit cu listă completă bullet (12 elemente)
+- Mențiuni minore actualizate: P1 (TORVACARD + HP) + Echipă (cronologie 10.11.2025) + ALIMENTATIE.md embedded (replace_all 30.04 → 4.05)
+
+**6. `ALIMENTATIE.md`** (versiune 2.1 → 2.2):
+
+- Header data 25.04 → 26.04 + nota reprogramare
+- 6 mențiuni replace_all `30.04 → 4.05` în secțiuni ONS, FLOT decision, post-stent prehab, probiotic HP, „Recomandări concrete" final, disclaimer
+
+### Status sistem post-ingest
+
+```
+SYSTEM_HEALTH:    🟢 OK (post-regenerare scripts)
+JSON_VALIDITY:    🟢 60/60 (neafectat — doar markdown modificat)
+CROSS_REFS:       🟢 0 rupte (verificat)
+Backup R10:       🟢 +5 (5 fișiere noi în arhiva/context_medical_versiuni/_1906)
+
+Overall:          🟢 STABIL — propagare R27 completă
+```
+
+---
+
 ## 2026-04-26 01:45 — REMEDIERE P0 + P1 + P3 post-audit (R29 ciclu 2 — fix → audit → remediere)
 
 **Tip:** REMEDIERE FINDINGS AUDIT.

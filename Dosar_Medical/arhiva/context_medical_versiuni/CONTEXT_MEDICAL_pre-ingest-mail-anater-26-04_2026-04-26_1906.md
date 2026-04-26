@@ -4,10 +4,10 @@
 
 ---
 
-**Ultima actualizare:** 26 aprilie 2026 19:06 (ingest mail Dr. Anater 26.04 — **REPROGRAMARE consult: 30.04 → 4 mai 2026 OncoHelp Timișoara**; markeri tumorali specificați **CEA + CA 19-9**; bilet trimitere medic familie pentru oncologie medicală; consult cardiologic recent extern cu bilet trimitere; comisie oncologică 4.05 cu chirurg eso pentru evaluare rezecție)
+**Ultima actualizare:** 25 aprilie 2026 03:00 (clarificare user: TORVACARD nu se administrează — schema reală este manuscrisă fără statină; consult oncolog ✅ programat 30.04.2026 la OncoHelp Timișoara; rezultat biopsie estimat 28-29.04.2026)
 **Responsabil dosar:** Roland Petrilă (fiul pacientului)
-**Versiune structură:** 1.6 (reprogramare consult oncolog 30.04 → 4.05 + clarificare instrucțiuni pre-consult Anater 26.04)
-**Versiune anterioară arhivată:** `Dosar_Medical/arhiva/context_medical_versiuni/CONTEXT_MEDICAL_pre-ingest-mail-anater-26-04_2026-04-26_1906.md` + versiunile anterioare (vezi arhiva).
+**Versiune structură:** 1.5 (clarificare schema medicație fără TORVACARD + programare consult oncolog OncoHelp 30.04.2026)
+**Versiune anterioară arhivată:** `Dosar_Medical/arhiva/context_medical_versiuni/CONTEXT_MEDICAL_pre-clarificare-torvacard-program-oncolog_2026-04-25_0300.md` + versiunile anterioare (vezi arhiva).
 
 ---
 
@@ -129,16 +129,11 @@ Acest fișier este **state file intern** (sursă pentru documentele de ieșire),
 - **Marcaj `.meta.json`:** `"completeness_verified": "2026-04-24"`, `"coverage": "100%"` (post-audit Batch A)
 - **Confidence overall:** high (PDF digital nativ, text extractabil, fără OCR)
 
-### 2.6 Acțiuni în curs (status la 2026-04-26 19:06 — post ingest mail Anater 26.04)
+### 2.6 Acțiuni în curs (status la 2026-04-24)
 
 - ✅ **CT efectuat 20.04.2026** — raport integrat în dosar
 - 🟢 **Rezultat biopsie esofagiană** — estimat **28-29 aprilie 2026** (confirmat de familie 25.04); monitor automat activ 24/7 (GitHub Actions)
-- 🔴 **Consult oncolog digestiv — REPROGRAMAT: 30.04 → 4 mai 2026 (luni) la OncoHelp Timișoara** [per mail Dr. Anater 2026-04-26 10:28]. Motiv: 30.04 e foarte aglomerată din cauza zilei libere de 1 mai; caz nou care necesită mai mult timp.
-- 🔴 **MÂINE 27.04 — 3 telefoane (P0):**
-  - Medic familie Dr. Orbán → cerere **2 bilete trimitere** (oncologie medicală pentru OncoHelp + cardiologie pentru consult ambulator)
-  - Cardiolog Arad → programare consult (rezultat și document scrise) înainte de 4.05
-  - Synevo Arad → programare **markeri tumorali CEA + CA 19-9** (a jeun, dimineața; ~1 zi rezultat) — opțional dar recomandat: Anater a confirmat „laborator extern la fel de bine"
-- 🟡 **Plan zi 4 mai consult [per mail Anater 26.04]:** consult + comisie oncologică (constituire dosar) + opinie chirurg eso pentru posibilitate rezecție. **NU rămâne internat din 4 mai.** Posibilă intervenție laparoscopică ULTERIOR pentru evaluarea peritoneului. Anater va elibera bilet trimitere chirurgie + va lua legătura tintit cu chirurgul.
+- ✅ **Consult oncolog digestiv** — **PROGRAMAT 30 aprilie 2026 la OncoHelp Timișoara** (confirmat de user 25.04.2026)
 - 🟡 **Evaluare endocrinologică** glanda suprarenală stângă — de programat post-consult oncolog
 - ✅ **Jamesi reluat** 22.04.2026 seara, conform schemei standard (1-0-1, 50/1000 mg), **fără complicații** — pauza H-48h → H+48h a funcționat corect, fără simptome renale post-contrast raportate de familie
 - 🟡 **Spirometrie + anamneză pulmonară pre-esofagectomie** (post audit Batch A 2026-04-24) — de discutat cu chirurgul oncolog: tulburările ventilație posterobazal LID+LIS + nodulii apicali sechelari LSD necesită evaluare pulmonară pre-operator (spirometrie + DLCO + posibil consult pneumolog)
@@ -432,49 +427,36 @@ Efectuată concomitent cu endoscopia la Genesis Medical Clinic Arad (Dr. Noufal 
 
 ## 8. Investigații programate / în așteptare
 
-### 8.1 Consult oncolog digestiv — 🔴 REPROGRAMAT 4 mai 2026 (luni) la OncoHelp Timișoara
+### 8.1 Consult oncolog digestiv — ✅ PROGRAMAT 30 aprilie 2026 la OncoHelp Timișoara
 
-**Status:** 🔴 **REPROGRAMAT 30.04 → 4 mai 2026** [per mail Dr. Anater 2026-04-26 10:28].
+**Status:** ✅ **PROGRAMAT** — confirmat de user 25.04.2026.
 
 **Detalii programare:**
 
-- **Data:** **4 mai 2026 (luni)**
+- **Data:** 30 aprilie 2026
 - **Unitate:** **OncoHelp Timișoara**
-- **Medic oncolog:** Dr. Anater Angelo - Christian (consult inițial); va aduce și opinia unui chirurg care operează tumori esofagiene
-- **Motiv reprogramare:** 30.04 era foarte aglomerată din cauza zilei libere de 1 mai; caz nou care necesită mai mult timp pentru constituirea dosarului de comisie oncologică
-- **Context așteptat:** rezultat biopsie estimat **28-29 aprilie 2026** + markeri tumorali Synevo (dacă recoltați mâine 27-28.04, rezultate gata 29-30.04) → consultul beneficiază de toate elementele decizionale
+- **Medic oncolog:** de identificat la consult (de completat post-consult)
+- **Context așteptat:** rezultat biopsie estimat **28-29 aprilie 2026** → consultul beneficiază de toate elementele decizionale (CT 20.04 + biopsie histopatologic + analize pre-CT)
 
-**Programul zilei 4 mai [per mail Anater 26.04]:**
+**Motivație accelerare (păstrată pentru context):** stadiul infiltrativ + ascită + extensia la joncțiunea eso-gastrică → protocolul terapeutic se schimbă față de un cancer esofagian distal simplu (probabil **FLOT** în loc de **CROSS**, având componenta gastrică).
 
-- Consult + **comisie oncologică** (constituire dosar)
-- Opinie **chirurg eso** pentru evaluare posibilitate rezecție (Anater va lua legătura tintit + va elibera bilet trimitere chirurgie)
-- Discuție diagnostic + plan tratament
-- **NU rămâne internat din 4 mai**
-- Posibilă **intervenție laparoscopică ULTERIOR** (NU pe 4.05) pentru evaluarea peritoneului (excludere carcinomatoză)
+**Pregătirea dosarului fizic — finalizare POST-biopsie (29-30.04):**
 
-**Motivație clinică (păstrată pentru context):** stadiul infiltrativ + ascită + extensia la joncțiunea eso-gastrică → protocolul terapeutic se schimbă față de un cancer esofagian distal simplu (probabil **FLOT** în loc de **CROSS**, având componenta gastrică).
+> **Important (decizie user 25.04):** dosarul fizic se asamblează **DUPĂ primirea rezultatului histopatologic** (estimat 28-29.04), pentru a fi **complet** la consultul din 30.04. Nu se pregătește în avans.
 
-**Pregătirea dosarului fizic — finalizare POST-biopsie (28-30.04):**
-
-> **Important:** dosarul fizic se asamblează **DUPĂ primirea rezultatului histopatologic** (estimat 28-29.04), pentru a fi **complet** la consultul din 4 mai. Nu se pregătește în avans.
-
-Componente prevăzute (revizuit 26.04 cu instrucțiuni Anater):
+Componente prevăzute:
 
 - C.I. + card CAS
-- **Bilet de trimitere medic familie pentru oncologie medicală** [per mail Anater 26.04 — necesar la primul consult; ulterior nu mai e necesar]
 - Bilet trimitere BCTAP 0631727 (17.04.2026)
 - Buletin endoscopie + colonoscopie 17.04.2026 (Genesis Arad)
 - Buletin Bioclinica creatinină + uree 17.04.2026
 - **Raport CT 20.04.2026** + CD DICOM (dacă s-a primit la efectuare)
 - **Rezultat biopsie histopatologic** (28-29.04 — element-cheie, fără care consultul e incomplet)
-- **Markeri tumorali CEA + CA 19-9** (Synevo Arad sau alt laborator — opțional pre-consult; alternativ se fac la OncoHelp pe internare)
-- **Consult cardiologic recent (max 6 luni vechime) cu rezultat și documente** [per mail Anater 26.04 — făcut afară cu bilet de trimitere de la medicul de familie]
 - Listă medicație curentă (4 medicamente confirmate: Aspenter, Concor, Triplixam, Jamesi) + alergii (fără alergii relevante)
-- **Scrisori medicale + bilete ieșire spital pentru ALTE patologii / intervenții / proceduri** [per mail Anater 26.04 — pentru evaluare comorbidități]: hernie 28.11.2025 (Dr. Papiu), urologie 28.10.2025 (Dr. Pitea), cardiologie 10.11.2025 (Dr. Laza Cristina) + ECO transtoracică, UPU 30.05.2024 (gastro Dr. Grada + cardiologie Dr. Post), serologie H. pylori 2024, stent Vichy 2012 (dacă obținut)
 - Listă întrebări pregătite (vezi `TODO.md` secțiunea „Pentru viitorul oncolog digestiv")
 - **Notă observație:** statină indicată dar nealuată — de discutat la consult (vezi §4)
 
-**Task tracking:** `TODO.md` secțiunea P0 „Pregătire dosar fizic POST-biopsie".
+**Task tracking:** `TODO.md` secțiunea P0 „Pregătire dosar fizic POST-biopsie (29-30.04)".
 
 ### 8.2 Reluare Jamesi (H+48 post-CT) — 22.04.2026 ✅ FINALIZAT
 
@@ -521,7 +503,7 @@ Componente prevăzute (revizuit 26.04 cu instrucțiuni Anater):
 | **Urologie (consult 28.10.2025)**                            | **Dr. PITEA ALEXANDRU (medic primar urologie, cod A13044)**                                                                                                                                                                  | Complex Medical Pitea & Pitea SRL, Arad, Revoluției 45           | **0749111455**                                      |
 | Laborator clinic (serologie HP + analize 2025)               | Dr. Cret Anamaria (medic primar laborator, cod A 0769)                                                                                                                                                                       | SC Ultra ClinicaVest SRL Pecica                                  | `laborator@ultraclinicavest.ro`                     |
 | Laborator clinic (UPU 30.05.2024)                            | Dr. Igas Angelica (cod 119856) + Dr. Avram Cecilia — ambii medici primari medicina de laborator                                                                                                                              | Spitalul Clinic Județean de Urgență Arad — Laborator Central     | —                                                   |
-| **Oncologie digestivă** (consult 🔴 reprogramat 4.05.2026)   | **Dr. Anater Angelo - Christian** (Medic Specialist Oncologie Medicală — per self-id email; site oncohelp.ro listează „Rezident", R12 conflict surse) — vezi `Dosar_Medical/CONTACTE_MEDICALE.md#dr-anater-angelo-christian` | **OncoHelp Timișoara** (Str. C. Porumbescu 57-59, 300239)        | `angelo.anater@oncohelp.ro` · centrală 0256 495403  |
+| **Oncologie digestivă** (consult ✅ programat 30.04.2026)    | **Dr. Anater Angelo - Christian** (Medic Specialist Oncologie Medicală — per self-id email; site oncohelp.ro listează „Rezident", R12 conflict surse) — vezi `Dosar_Medical/CONTACTE_MEDICALE.md#dr-anater-angelo-christian` | **OncoHelp Timișoara** (Str. C. Porumbescu 57-59, 300239)        | `angelo.anater@oncohelp.ro` · centrală 0256 495403  |
 | Oncologie (contact direct furnizat user 25.04)               | **Dr. Vornicu Vlad-Norin** (Medic Specialist Oncolog, Asistent Univ PhD UMFT, focus oncologie pulmonară) — opțiune second opinion / specialist complementar                                                                  | OncoHelp Timișoara                                               | `0762 120 428` · `vornicuvlad91@gmail.com`          |
 | Oncologie second opinion (IOCN Cluj — răspuns 24.04)         | **Șef Lucrări Dr. Andra Meșter** (Medic Specialist Oncologie Medicală)                                                                                                                                                       | Institutul Oncologic „Prof. Dr. Ion Chiricuță", Cluj-Napoca      | `drmester.iocn@gmail.com` · `0264 598 362 int. 347` |
 | Endocrinologie (glandă suprarenală, follow-up)               | De stabilit post-consult oncolog                                                                                                                                                                                             | —                                                                | —                                                   |
@@ -592,11 +574,11 @@ Componente prevăzute (revizuit 26.04 cu instrucțiuni Anater):
 
 ---
 
-## 12. Rezumat în 3 linii (pentru preluare rapidă — actualizat 26.04.2026)
+## 12. Rezumat în 3 linii (pentru preluare rapidă — actualizat 22.04.2026)
 
 1. Pacient masculin, 66 ani, diabetic, post-stent cardiac 2012, ex-fumător 35 ani. CNP 1590518024486.
-2. Proces proliferativ **circumferențial nedepășibil endoscopic** la joncțiunea eso-gastrică (Siewert II probabil); CT 20.04.2026 arată **T3-T4, N0-N1, M0 probabil**, cu ASCITĂ probabil cardiacă per Anater (de elucidat eventual cu laparoscopie ulterior).
-3. Biopsia în lucru (Bioclinica, estimat 28-29.04); **consult oncolog reprogramat 4 mai 2026 (luni) la OncoHelp Timișoara** (Dr. Anater + chirurg eso, comisie oncologică) — posibil protocol FLOT; mâine 27.04 telefoane: medic familie (2 bilete trimitere), cardiolog, Synevo (CEA + CA 19-9).
+2. Proces proliferativ **circumferențial nedepășibil endoscopic** la joncțiunea eso-gastrică (Siewert II probabil); CT 20.04.2026 arată **T3-T4, N0-N1, M0 probabil**, cu ASCITĂ de elucidat (posibilă carcinomatoză peritoneală).
+3. Biopsia în lucru (Bioclinica, estimat 24.04-01.05); **consult oncolog URGENT** de programat — posibil protocol FLOT; Jamesi reluat seara 22.04 post-CT fără complicații.
 
 ---
 

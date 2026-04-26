@@ -8,12 +8,12 @@ participanti:
   - programari@oncohelp.ro (CC pe răspuns Roland 25.04)
   - office@oncohelp.ro (CC pe răspuns Roland 25.04)
 data_start: 2026-04-24
-data_ultim: 2026-04-25
-status: 🟡 așteptare răspuns Dr. Anater (la mailul Roland 25.04)
-tags: [oncohelp, anater, consult-oncolog, programare-30-04, biopsie-asteptare, ascita-cardiaca]
-mesaje_count: 3
+data_ultim: 2026-04-26
+status: ⚪ încheiat — răspuns clarificări complet primit, programare consult 4 mai 2026 (reprogramat de Anater de la 30.04)
+tags: [oncohelp, anater, consult-oncolog, programare-04-05, biopsie-asteptare, ascita-cardiaca, markeri-tumorali, bilet-trimitere, comisie-oncologica]
+mesaje_count: 5
 atasamente_count: 0
-version: 1.0
+version: 2.0
 related_threads: [19db78a7c0a1758d (solicitare inițială OncoHelp)]
 ---
 
@@ -21,33 +21,38 @@ related_threads: [19db78a7c0a1758d (solicitare inițială OncoHelp)]
 
 ## Sinteză automată
 
-- **Decizii / recomandări medicale primite [CERT — sursă scrisă autoritară Dr. Anater 24.04]:**
+- **Decizii / recomandări medicale primite [CERT — sursă scrisă autoritară Dr. Anater 24.04 + 26.04]:**
   1. **Suspiciune înaltă tumoră malignă esofag inferior** — diagnostic și subtip vor fi confirmate de **examenul histopatologic** (rezultat biopsie 28-29.04 estimat).
   2. **Ascita perihepatică + pelvină + pleurală minoră** observată la CT este **„cel mai probabil secundară afecțiunii sale cardiace"** — NU oncologică primă vedere [CERT — interpretare directă oncolog].
   3. **NU urgentare paracenteză / laparoscopie** înainte de histopatologic (recomandare conservatoare echilibrată).
-  4. **Investigații suplimentare necesare pre-consult:**
-     - Markeri tumorali (recoltare)
-     - **Consult cardiologic recent (NU mai vechi de 6 luni)**
-     - Analize de sânge generale (HLG + biochimie)
-  5. **Programare consult la OncoHelp imediat după primirea histopatologic** — confirmat ulterior pentru 30.04.2026.
+  4. **Investigații suplimentare necesare pre-consult [precizate complet 26.04]:**
+     - **Markeri tumorali: CEA + CA 19-9** (la OncoHelp 1 decontat pe internare + 1 plătit la laborator, SAU la laborator extern „la fel de bine")
+     - **Consult cardiologic recent (NU mai vechi de 6 luni)** — făcut afară cu bilet de trimitere de la medicul de familie, adus la consult
+     - **Analize de sânge uzuale** — făcute în spital (la internare) — NU extern
+  5. **🔴 REPROGRAMARE consult: 30.04 → 4 mai 2026** [CERT — mail Dr. Anater 26.04]. Motiv: 30.04 e foarte aglomerată din cauza zilei libere de 1 mai; caz nou care necesită mai mult timp.
+  6. **Programul zilei de 4 mai [CERT — mail 26.04]:** NU rămâne internat. Comisia oncologică va constitui dosarul + va discuta diagnostic + tratament. Anater va aduce și opinia unui chirurg care operează tumori esofagiene pentru evaluarea posibilității de rezecție. Posibilă intervenție laparoscopică ulterior (NU pe 4.05) pentru evaluarea peritoneului. Anater va elibera bilet de trimitere către chirurgie + va lua legătura tintit.
+  7. **Documente necesare [CERT — mail 26.04]:** nimic specific, dar **scrisori medicale / bilete ieșire spital pentru ALTE boli, intervenții chirurgicale, proceduri** — pentru a evalua comorbiditățile.
+  8. **Bilet de trimitere [CERT — mail 26.04]:** NECESAR de la medicul de familie pentru oncologie medicală — DOAR pentru primul consult; ulterior nu mai e necesar.
+  9. **Telefon contact:** va fi furnizat la consult (nu prin email).
 
 - **Contacte noi identificate:** Dr. Anater Angelo - Christian — oficial:
   - Email: `angelo.anater@oncohelp.ro` / `angelo.anater95@yahoo.com`
-  - **Self-identification în semnătură:** „Medic Specialist, Oncologie Medicala, Oncohelp Timisoara"
+  - **Self-identification în semnătură:** „Medic Specialist, Oncologie Medicala, Oncohelp Timisoara" (confirmat 26.04 — al doilea mail, identică)
   - **NOTĂ R12 — conflict surse:** site oncohelp.ro/echipa-oncohelp/ îl listează ca „Medic Rezident". Self-identification în corespondență oficială cu pacient probabil reflectă status actual (specialist promovat recent), site posibil neactualizat. Vezi `CONTACTE_MEDICALE.md#dr-anater-angelo-christian` pentru update.
 
 - **Termene / programări menționate:**
-  - **30.04.2026** — slot consult propus inițial de Dr. Anater (24.04), confirmat ulterior de Roland (25.04 mail în acest thread)
+  - ~~30.04.2026~~ — ANULAT 26.04 (motivat: aglomerație zi liberă 1 mai)
+  - **4 mai 2026 (luni)** — slot consult propus de Dr. Anater, **CONFIRMAT EXPLICIT 26.04**
   - 28-29.04.2026 — așteptare rezultat biopsie
 
 - **Atașamente menționate:** niciuna în acest thread. Documentele au fost atașate în mailul inițial (`19db78a7c0a1758d`).
 
 - **Cross-references:**
   - → `corespondenta/2026-04-23_solicitare-sprijin-oncohelp.md` (mailul inițial Roland 23.04 → OncoHelp)
-  - → `CONTACTE_MEDICALE.md#dr-anater-angelo-christian`
-  - → `CONTEXT_MEDICAL.md §2.6` (acțiuni P0 actualizate)
-  - → `TODO.md` P0 (consult oncolog 30.04 + 5 întrebări organizatorice)
-  - → `SESSION_LOG.md` 2026-04-25 18:00 (intrare logare mailul Roland 25.04)
+  - → `Dosar_Medical/CONTACTE_MEDICALE.md#dr-anater-angelo-christian`
+  - → `CONTEXT_MEDICAL.md §2.6 + §8.1` (acțiuni P0 actualizate post-26.04)
+  - → `TODO.md` P0 (consult oncolog 4.05 + 3 telefoane mâine 27.04)
+  - → `SESSION_LOG.md` 2026-04-26 19:06 (intrare ingest mail Anater 26.04)
 
 ## Mesaje (cronologic)
 
@@ -158,8 +163,82 @@ Nădlac, județul Arad
 
 ---
 
+### 2026-04-26 10:28 — Dr. Anater Angelo - Christian (angelo.anater@oncohelp.ro → petrilarolly@gmail.com)
+
+```
+Buna dimineata!
+
+V-as propune sa ne vedem luni, in data de 4 mai, pentru a stabili o
+directie privind completarea diagnosticului si initierii tratamentului.
+Ziua de 30 aprilie este cat se poate de aglomerata din cauza zilei
+libere de 1 mai. Fiind un caz nou, vom avea nevoie de mai mult timp sa
+stabilim toate cele.
+
+In privinta intrebarilor dumneavoastra:
+
+- Markerii tumorali ii putem face si in cadrul spitalului (este vorba de
+2 markeri tumorali, din care unul il putem face decontat pe internare,
+iar celalalt va trebui platit in cadrul laboratorului). Daca doriti sa
+veniti cu ei direct facuti dintr-un laborator extern, este la fel de
+bine. E vorba de markerul CEA (antigenul carcinoembrionar) si CA 19-9.
+
+- Consultul cardiologic ar fi mai facil daca l-ati putea face in afara,
+cu bilet de trimitere de la medicul de familie, ca sa il si avem cand ne
+vedem pentru consult.
+
+- Analizele de sange uzuale, de care am nevoie, le vom face in cadrul
+internarii, in spital.
+
+- Tatal dumneavoastra NU va ramane internat din 4 mai. Cel mai probabil
+ca in 4 mai vom constitui dosarul de comisie oncologica, vom discuta
+despre boala si despre ce tratament ar trebui urmat. As avea nevoie si
+de parerea unui chirurg care opereaza tumori esofagiene pentru a stabili
+posibilitatea de rezectie. Cu ocazia asta vom incerca sa facem si o
+interventie laparoscopica sa ne asiguram ca peritoneul nu este atins de
+boala. Am sa va eliberez eu un bilet de trimitere catre chirurgie si am
+sa iau legatura cu cineva de acolo, sa va trimit tintit.
+
+- In privinta documentelor, nu este ceva specific de care voi avea
+nevoie. Daca domnul mai are orice alta scrisoare medicala / iesire din
+spital pentru alte tipuri de boli, interventii chirurgicale sau
+proceduri, le puteti aduce ca sa le pot pune la dosar. Asta deoarece ma
+intereseaza si daca este cunoscut cu alte comorbiditati.
+
+- Va fi nevoie de un bilet de trimitere emis de catre medicul de familie
+pentru oncologie medicala. Ulterior, nu va mai fi, dar pentru un prim
+consult, asa ar trebui.
+
+- Am sa va ofer un numar de contact personal cand ne vom vedea la consult.
+
+
+O zi buna va doresc!
+
+Dr. Anater Angelo - Christian
+
+Medic Specialist Oncologie Medicala, Oncohelp, Timisoara
+```
+
+---
+
+### 2026-04-26 10:54 — Roland Petrila — Forward intern către mama (petrilarolly@gmail.com → maria.petrila68@gmail.com)
+
+```
+---------- Forwarded message ---------
+De la: Angelo Anater <angelo.anater@oncohelp.ro>
+Date: dum., 26 apr. 2026, 10:28
+Subject: Re: Solicitare consult oncologic
+[...mesajul Dr. Anater 26.04 forwarded integral...]
+```
+
+(Forward intern fără text suplimentar — informare familie despre reprogramare 4.05 + clarificări.)
+
+---
+
 ## Note
 
-- **Status thread:** așteptare răspuns Dr. Anater la mailul Roland 25.04 (4 întrebări + cerere telefon contact).
-- **Notă R12 conflict surse:** site oncohelp.ro îl listează „Medic Rezident", semnătura email zice „Medic Specialist, Oncologie Medicala". Status corect probabil = **specialist** (self-id în corespondență oficială cu pacient + nivel autoritate tehnică în răspunsul medical) — site neactualizat. Update CONTACTE_MEDICALE.md pendinte.
-- **Auto-propagare:** mail-ul Roland 25.04 e logat în SESSION_LOG.md (intrare 2026-04-25 18:00) + TODO.md (calendar + sub-task P0) + CHANGELOG.md (intrare 2026-04-25 18:00).
+- **Status thread:** ⚪ ÎNCHEIAT 26.04 — toate cele 4 întrebări au răspuns explicit + reprogramare confirmată. Anater va furniza telefon contact la consult; nu mai sunt elemente deschise.
+- **Acțiuni declanșate de mailul 26.04 (de executat):**
+  - **Mâine 27.04:** 3 telefoane → medic familie (2 bilete trimitere: oncologie medicală + cardiologie) · cardiolog (programare consult) · Synevo Arad (programare CEA + CA 19-9)
+  - **4 mai 2026:** consult OncoHelp Timișoara (comisie oncologică + chirurg eso) — NU rămâne internat
+- **Notă R12 conflict surse:** site oncohelp.ro îl listează „Medic Rezident", semnătura email zice „Medic Specialist, Oncologie Medicala". Status corect probabil = **specialist** (self-id în corespondență oficială cu pacient + nivel autoritate tehnică în răspunsul medical) — site neactualizat. Update CONTACTE_MEDICALE.md în această sesiune.
+- **Auto-propagare 2026-04-26 19:06:** mailul 26.04 logat în SESSION_LOG.md + CHANGELOG.md + TODO.md (calendar 30.04 → 4.05 + P0 nou) + CONTEXT_MEDICAL.md (§2.6 + §8.1) + DASHBOARD.html (banner + listă documente).

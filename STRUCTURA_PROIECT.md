@@ -273,15 +273,15 @@ Structura descrisă în acest fișier **nu se modifică decât cu acordul explic
 
 ## 🗺 Hartă completă auto-generată
 
-> ⚙️ **Generat automat:** 2026-04-26T01:35:30 de `scripts/regenerate_structura.py`. NU edita manual această secțiune — modificările se pierd la următoarea regenerare. Pentru cuprinsul fix vezi secțiunile non-auto de mai sus.
+> ⚙️ **Generat automat:** 2026-04-26T19:22:02 de `scripts/regenerate_structura.py`. NU edita manual această secțiune — modificările se pierd la următoarea regenerare. Pentru cuprinsul fix vezi secțiunile non-auto de mai sus.
 
 ### 📊 Statistici live
 
-- **Total fișiere proiect (excl. .git):** 213
-- **Markdown (.md):** 92
+- **Total fișiere proiect (excl. .git):** 218
+- **Markdown (.md):** 96
 - **JSON (.json):** 65
-- **HTML (.html):** 6
-- **Total size:** 50197.6 KB
+- **HTML (.html):** 7
+- **Total size:** 50509.1 KB
 
 ### 🧭 Index thematic (caut...)
 
@@ -342,9 +342,9 @@ Structura descrisă în acest fișier **nu se modifică decât cu acordul explic
 │   ├── EXPLICATIE_CONSULT_ONCOLOG_SCENARII.md  (74.5 KB)
 │   ├── GHID_APEL_ONCOHELP.md  (11.1 KB)
 │   ├── GHID_CONSULT_ONCOLOG.md  (22.5 KB)
-├── Dosar_Medical/  (151 fișiere)
-│   ├── arhiva/  (31 fișiere)
-│   │   ├── context_medical_versiuni/  (10 fișiere)
+├── Dosar_Medical/  (156 fișiere)
+│   ├── arhiva/  (36 fișiere)
+│   │   ├── context_medical_versiuni/  (15 fișiere)
 │   │   ├── json_versiuni/  (3 fișiere)
 │   │   ├── versiuni_config/  (18 fișiere)
 │   ├── cercetari/  (2 fișiere)
@@ -356,8 +356,8 @@ Structura descrisă în acest fișier **nu se modifică decât cu acordul explic
 │   │   ├── 2026-04-23_broadcast-solicitari-clinici.md  (6.6 KB)
 │   │   ├── 2026-04-23_solicitare-sprijin-oncohelp.md  (5.2 KB)
 │   │   ├── 2026-04-24_raspuns-iocn-mester.md  (4.3 KB)
-│   │   ├── 2026-04-24_re-solicitare-consult-anater.md  (7.7 KB)
-│   │   ├── INDEX.md  (7.2 KB)
+│   │   ├── 2026-04-24_re-solicitare-consult-anater.md  (12.4 KB)
+│   │   ├── INDEX.md  (7.3 KB)
 │   ├── documente_sursa/  (55 fișiere)
 │   │   ├── 01_identitate/  (3 fișiere)
 │   │   ├── 02_cardiologie_2012/  (0 fișiere)
@@ -438,30 +438,30 @@ Structura descrisă în acest fișier **nu se modifică decât cu acordul explic
 │   ├── regenerate_structura.py  (8.6 KB)
 │   ├── system_health_check.py  (7.2 KB)
 ├── .gitignore  (0.9 KB)
-├── ALIMENTATIE.md  (48.2 KB)
+├── ALIMENTATIE.md  (48.0 KB)
 ├── AUDIT_EXTRAGERE_2026-04-24.md  (28.3 KB)
-├── AUDIT_EXTRAGERE_2026-04-26.md  (18.3 KB)
+├── AUDIT_EXTRAGERE_2026-04-26.md  (20.1 KB)
 ├── BAZA_CUNOSTINTE.md  (9.4 KB)
-├── CHANGELOG.md  (140.2 KB)
+├── CHANGELOG.md  (149.5 KB)
 ├── CLAUDE.md  (9.4 KB)
-├── CONTEXT_MEDICAL.md  (50.4 KB)
-├── DASHBOARD.html  (167.6 KB)
+├── CONTEXT_MEDICAL.md  (53.2 KB)
+├── DASHBOARD.html  (175.4 KB)
 ├── GLOSAR.md  (10.6 KB)
 ├── index.html  (0.3 KB)
-├── INDEX.json  (34.1 KB)
+├── INDEX.json  (34.2 KB)
 ├── info_tati.txt  (1.6 KB)
 ├── manifest.webmanifest  (0.9 KB)
-├── PLAN_IMPLEMENTARE_2026-04-25.md  (51.3 KB)
+├── PLAN_IMPLEMENTARE_2026-04-25.md  (52.4 KB)
 ├── README.md  (2.0 KB)
 ├── REGULAMENT.md  (11.9 KB)
 ├── REGULI_CLAUDE_CODE.md  (30.0 KB)
-├── SESSION_LOG.md  (87.7 KB)
+├── SESSION_LOG.md  (97.2 KB)
 ├── START.md  (3.8 KB)
-├── STRUCTURA_PROIECT.md  (23.8 KB)
+├── STRUCTURA_PROIECT.md  (23.9 KB)
 ├── SURSE_MEDICALE.md  (7.5 KB)
 ├── tati.png  (138.8 KB)
 ├── TEMPLATES.md  (9.7 KB)
-├── TODO.md  (31.8 KB)
+├── TODO.md  (37.6 KB)
 ├── WEB_QUERIES.md  (14.9 KB)
 ├── WORKFLOW.md  (9.2 KB)
 ```

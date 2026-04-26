@@ -1,6 +1,6 @@
 {
-  "checked_at": "2026-04-26T01:36:22",
-  "status": "🟢 OK",
+  "checked_at": "2026-04-26T19:22:13",
+  "status": "🟡 WARNING",
   "limits": {
     "claude_md_size_kb": {
       "current": 9.4,
@@ -9,25 +9,29 @@
       "status": "🟢 OK"
     },
     "memory_md_lines": {
-      "current": 14,
+      "current": 16,
       "limit": 200,
-      "percent": 7.0,
+      "percent": 8.0,
       "status": "🟢 OK"
     },
     "total_md_root_kb": {
-      "current": 598.6,
+      "current": 628.8,
       "limit": 1024,
-      "percent": 58.5,
-      "status": "🟢 OK"
+      "percent": 61.4,
+      "status": "🟡 WARNING"
     },
     "largest_files": [
       {
         "path": "DASHBOARD.html",
-        "size_kb": 168.1
+        "size_kb": 173.8
+      },
+      {
+        "path": "Dosar_Medical/arhiva/context_medical_versiuni/DASHBOARD_pre-ingest-mail-anater-26-04_2026-04-26_1906.html",
+        "size_kb": 170.1
       },
       {
         "path": "CHANGELOG.md",
-        "size_kb": 140.2
+        "size_kb": 149.5
       },
       {
         "path": "Dosar_Medical/arhiva/context_medical_versiuni/DASHBOARD_pre-fix-cors-tab-echipa_2026-04-26_0105.html",
@@ -43,7 +47,7 @@
       },
       {
         "path": "SESSION_LOG.md",
-        "size_kb": 87.7
+        "size_kb": 97.2
       },
       {
         "path": "Dosar_Medical/arhiva/versiuni_config/DASHBOARD_pre-audit-remediere_2026-04-24_2130.html",
@@ -56,15 +60,11 @@
       {
         "path": "Dosar_Medical/arhiva/context_medical_versiuni/SESSION_LOG_pre-trimitere-mail-anater_2026-04-25_1826.md",
         "size_kb": 79.0
-      },
-      {
-        "path": "Documente_Informative/EXPLICATIE_CONSULT_ONCOLOG_SCENARII.md",
-        "size_kb": 74.5
       }
     ],
     "files_over_limit": [],
     "index_json_size_kb": {
-      "current": 34.1,
+      "current": 34.2,
       "limit": 1024,
       "percent": 3.3,
       "status": "🟢 OK"
@@ -77,6 +77,8 @@
       "note": "estimat doar pe fișiere auto-loaded (CLAUDE.md + REGULI_CLAUDE_CODE.md + REGULAMENT.md). Read-uri ad-hoc, MEMORY.md auto-injection, sistem-reminders nu sunt incluse — context real e mai mare."
     }
   },
-  "recommendations": [],
+  "recommendations": [
+    "⚠ total_md_root_kb: la 61.4% — propune restructurare proactivă"
+  ],
   "version": "1.0"
 }

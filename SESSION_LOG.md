@@ -6,6 +6,42 @@
 
 ---
 
+## 2026-04-26 19:06 — [Claude_Opus_4.7] ingest-mail-anater-26-04-reprogramare-consult (R27 — al doilea ingest incremental Gmail)
+
+**Scop:** user a anunțat „am un mail nou de la anater" — declanșat R27 ingest incremental. Mailul Dr. Anater 26.04 10:28 EEST a răspuns la cele 4 întrebări organizatorice ale lui Roland (25.04) + a **REPROGRAMAT consultul de la 30.04 la 4 mai 2026 (luni)** (motiv: aglomerație zi liberă 1 mai). Pipeline R27 propagat strict (corespondență → INDEX.md → CONTEXT_MEDICAL.md → TODO.md → DASHBOARD.html → ALIMENTATIE.md → CHANGELOG.md → INDEX.json).
+
+**Operații:**
+
+1. **Citire thread Gmail** `19dbe7d30cfacbb3` (mcp gmail full content, 5 mesaje: Anater 24.04 + fwd Roland 24.04 + Roland 25.04 + Anater 26.04 + fwd Roland 26.04).
+2. **Cercetare web** (R3 + R15) prețuri/timp Synevo CEA + CA 19-9 + semnificație clinică în adenocarcinom esogastric. Surse autoritare PMC/Synevo/MedLife. **Decizie user:** prețurile NU intră în documentație (informativ, nu necesar în dosar). Cercetarea NU loghează în WEB_QUERIES.md (volatile + non-decizional pentru dosar).
+3. **Backup R10** 5 fișiere de referință în `Dosar_Medical/arhiva/context_medical_versiuni/` (timestamp `_1906`): CONTEXT_MEDICAL.md + TODO.md + DASHBOARD.html + INDEX.md corespondență + 2026-04-24_re-solicitare-consult-anater.md.
+4. **Update fișier thread Anater** (`Dosar_Medical/corespondenta/2026-04-24_re-solicitare-consult-anater.md`) — adăugare mesaj Anater 26.04 + forward Roland 26.04 + sinteză automată extinsă (status ⚪ încheiat, instrucțiuni complete clarificate).
+5. **Update INDEX.md corespondență** — last_processed_thread_id `19dc4e472df6e379` → `19dc8c8db3dd4d2c`, last_scan timestamp 19:06, threads_active 1 → 0, status thread Anater (active → încheiat).
+6. **Update CONTEXT_MEDICAL.md** — header data + versiune (1.5 → 1.6), §2.6 (acțiuni în curs cu reprogramare), §8.1 (programare nouă 4.05 + listă documente revizuită cu instrucțiuni Anater 26.04), §9 echipă (status oncologie reprogramat), §12 (rezumat 3 linii actualizat).
+7. **Update TODO.md** — header data 26.04 19:06, calendar (3 rânduri noi: 26.04 răspuns Anater + 27.04 telefoane + 30.04 ANULAT + 4.05 PROGRAMAT), secțiune P0 nouă „MÂINE 27.04 — 3 telefoane" (medic familie 2 bilete + cardiolog Arad + Synevo CEA/CA19-9), update P0 consult oncolog (30.04 → 4.05 + motivare reprogramare), update P0 dosar fizic (componente revizuite cu instrucțiuni Anater 26.04 + scrisori medicale comorbidități).
+8. **Update DASHBOARD.html** — banner principal (REPROGRAMARE), countdown bar revizuit (3 telefoane + reprogramare), tab medical card status oncolog (badge crit), cronologie post-CT (4 rânduri noi: 27.04 + 28-29.04 + 28-30.04 + 30.04 anulat + 4.05 programat), acțiuni P0 P0 (lista completă revizuită cu sub-listă bullet pentru cele 3 telefoane + lista documente bullet completă), update mențiuni minore P1 + tab Echipă + ALIMENTATIE.md embedded (replace_all 30.04 → 4.05).
+9. **Update ALIMENTATIE.md** (sursa de adevăr — DASHBOARD-ul are embed) — header v2.1 → v2.2 + 6 mențiuni replace_all `30.04 → 4.05`.
+
+**Why:** mailul Anater 26.04 e moment decizional cu impact direct pe planul P0 (data consult, dosar fizic, telefoane mâine). Lipsa propagării rapide ar însemna acțiuni greșite ale user-ului mâine 27.04 (ar suna pentru analize de sânge uzuale la Synevo, ar lipsi biletele de trimitere, etc).
+
+**How to apply (lecții):**
+
+- Pipeline R27 e funcțional și scalabil — un mail relevant e propagat în 7 fișiere de referință în <30 min cu backup R10 + commit incremental.
+- Pattern „replace_all + backup R10" e robust pentru date de programări care apar pe multe pagini (calendar + cronologie + acțiuni + tab-uri + markdown embedded).
+- Cercetarea web pentru prețuri/timp laboratoare e utilă pentru user (decizie instant), dar NU e necesar de log dacă user explicit zice „informativ, nu în documentație" — R-MINIMAL la cleanup.
+- **CONFIRMARE explicită user pentru execuție** (R20) e critică — am cerut confirmare și am primit „incepe execuția planului" + restricție pe documentație.
+
+**Fișiere modificate:** `Dosar_Medical/corespondenta/2026-04-24_re-solicitare-consult-anater.md` (mesaj nou adăugat) + `Dosar_Medical/corespondenta/INDEX.md` (last_processed_thread_id + status) + `CONTEXT_MEDICAL.md` (header + §2.6 + §8.1 + §9 + §12) + `TODO.md` (header + calendar + P0 telefoane mâine + P0 consult + P0 dosar fizic) + `DASHBOARD.html` (banner + countdown + status + cronologie + acțiuni P0 + mențiuni embed alimentație) + `ALIMENTATIE.md` (header v2.2 + 6 mențiuni date) + `SESSION_LOG.md` (această intrare) + `CHANGELOG.md` + `INDEX.json` (regenerat) + `Dosar_Medical/SYSTEM_HEALTH.json` (regenerat). **Backup R10 nou:** 5 fișiere în `Dosar_Medical/arhiva/context_medical_versiuni/` cu suffix `_pre-ingest-mail-anater-26-04_2026-04-26_1906`.
+
+**Status thread Anater:** ⚪ ÎNCHEIAT 26.04 — toate 4 întrebări au răspuns explicit + reprogramare confirmată. Anater va furniza telefon contact la consult.
+
+**Acțiuni declanșate (de executat de Roland):**
+
+- **Mâine 27.04:** 3 telefoane (medic familie pentru 2 bilete trimitere · cardiolog Arad · Synevo CEA + CA 19-9)
+- **4 mai 2026:** consult OncoHelp Timișoara (comisie oncologică + chirurg eso)
+
+---
+
 ## 2026-04-26 01:45 — [Claude_Opus_4.7_executor] remediere-p0-p1-p3-post-audit (R29 — al doilea ciclu fix→audit→remediere)
 
 **Scop:** auditorul terminal A a verificat raportul `AUDIT_EXTRAGERE_2026-04-26.md` și a confirmat findings-urile P0+P3. A trimis decizii ferme pentru remediere (convenție `"` U+0022 → `"` U+201D, NU escape `\"`; backup R10 în `arhiva/json_versiuni/`; commit incremental per task; STOP la prima eroare; R28 după Task 2). Executorul terminal B a aplicat strict.

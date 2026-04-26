@@ -4,7 +4,7 @@
 >
 > Nu este document medical — este o listă de gătit. La consult cu oncologul / medicul curant se ajustează după caz.
 
-**Ultima actualizare:** 25 aprilie 2026 (v2.1 — eliminare restricție generică pe „lapte dulce" atribuită eronat medicului gastroenterolog + adăugare secțiune **„🥛 Lactate — sinteză evidență"** cu poziție bazată exclusiv pe surse peer-reviewed: ESPEN, ESMO, FDA 2024, IARC, Frontiers Nutrition 2022, Nature Sci Rep 2024, EJN 2022; consult oncolog programat 30.04.2026 OncoHelp Timișoara).
+**Ultima actualizare:** 26 aprilie 2026 (v2.2 — actualizare data consult oncolog: REPROGRAMAT 30.04 → 4 mai 2026 OncoHelp Timișoara per mail Dr. Anater 26.04, motiv aglomerație 1 mai; restul conținutului v2.1 nemodificat).
 
 ---
 
@@ -198,7 +198,7 @@ Limită: max 7 ouă întregi/săptămână din cauza colesterolului (post-stent)
 
 **Pentru ce sunt:** sticluțe gata preparate cu calorii + proteine concentrate, ușor de băut cu paiul. **Sunt singura cale sigură** de a atinge 2.000 kcal cu 100+ g proteine într-un volum acceptabil pentru o stenoză strânsă.
 
-> **Important:** se discută cu oncologul/nutriționistul la consult (30.04 OncoHelp). Prescripția decide produsul + cantitatea exactă. Lista de mai jos e orientativă pentru recunoașterea produselor.
+> **Important:** se discută cu oncologul/nutriționistul la consult (4.05 OncoHelp). Prescripția decide produsul + cantitatea exactă. Lista de mai jos e orientativă pentru recunoașterea produselor.
 
 ### Hipercalorice + hiperproteice (zilnic)
 
@@ -440,7 +440,7 @@ Strategie ESMO/ESPEN: crește densitatea nutritivă fără să crească volumul.
 
 ### Interacțiuni cu chimioterapia FLOT (dacă se decide protocolul) — strict de evitat
 
-> **Notă:** decizia FLOT vs. alt protocol vs. tratament paliativ se ia la consult oncolog 30.04.2026 OncoHelp Timișoara, după rezultatul biopsiei. Lista de mai jos e relevantă **doar dacă se confirmă FLOT**.
+> **Notă:** decizia FLOT vs. alt protocol vs. tratament paliativ se ia la consult oncolog 4.05.2026 OncoHelp Timișoara, după rezultatul biopsiei. Lista de mai jos e relevantă **doar dacă se confirmă FLOT**.
 
 | Element                                                             | De ce e periculos                                                                                   |
 | ------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- |
@@ -576,7 +576,7 @@ Strategie ESMO/ESPEN: crește densitatea nutritivă fără să crească volumul.
 
 ## 🧪 Pre-FLOT — pregătire nutrițională (dacă se decide protocolul)
 
-Dacă oncologul (30.04 OncoHelp) recomandă chirurgie + chemoterapie perioperatorie FLOT, există o fereastră de **5–7 zile preoperator** cu beneficii dovedite în meta-analize (Braga, Klek, Farreras):
+Dacă oncologul (4.05 OncoHelp) recomandă chirurgie + chemoterapie perioperatorie FLOT, există o fereastră de **5–7 zile preoperator** cu beneficii dovedite în meta-analize (Braga, Klek, Farreras):
 
 - **Imunonutriție:** **Impact Oral 3×/zi** (Nestlé) — 4,2 g arginină + omega-3 1,1 g + nucleotide per porție. Reduce complicații infecțioase + durata spitalizare post-chirurgie cancer gastric.
 - **Alternativă:** **Cubitan** (Nutricia) 200 mL × 3/zi — 3 g arginină + Zn, Fe, Se, vit. C/E (pro-cicatrizare).
@@ -685,7 +685,7 @@ Dacă oncologul (30.04 OncoHelp) recomandă chirurgie + chemoterapie perioperato
 - **Lactobacillus** + utilizare ≥2 săptămâni = efect maxim
 - **Recomandat în ghiduri internaționale** ca adjuvant standard la triplă/cvadruplă terapie
 
-**Implicație directă pentru pacient:** task P1 din TODO.md privind **testul UBT/antigen fecal HP** + eventuala **terapie de eradicare** beneficiază de adăugarea Lactobacillus (din kefir natural sau supliment). De discutat la oncolog 30.04.
+**Implicație directă pentru pacient:** task P1 din TODO.md privind **testul UBT/antigen fecal HP** + eventuala **terapie de eradicare** beneficiază de adăugarea Lactobacillus (din kefir natural sau supliment). De discutat la oncolog 4.05.
 
 #### 7) Densitate calorică (cașexie + apetit scăzut + stenoză strânsă)
 
@@ -715,7 +715,7 @@ Dacă oncologul (30.04 OncoHelp) recomandă chirurgie + chemoterapie perioperato
 - **Brânzeturi foarte sărate** (telemea veche, burduf sărat) — sodiu peste DASH
 - **Lactate cu fructe acide adăugate** (iaurt cu fructe de pădure acrii) — aciditate pe esofag (NU lactatul, ci fructele)
 
-### Recomandări concrete pentru consultul oncolog 30.04 OncoHelp
+### Recomandări concrete pentru consultul oncolog 4.05 OncoHelp
 
 `[PROBABIL]` De adus în discuție:
 
@@ -730,4 +730,4 @@ Dacă oncologul (30.04 OncoHelp) recomandă chirurgie + chemoterapie perioperato
 
 ---
 
-**Disclaimer:** acest document este un ghid de inspirație pentru gătit + orientare nutrițională, **NU** plan medical individualizat. Recomandările finale pentru cantități exacte ONS, suplimente, integrare cu protocolul FLOT, jejunostomă etc. se stabilesc de **echipa multidisciplinară** (oncolog, chirurg, nutriționist clinic, cardiolog post-stent, farmacist clinic) la consultul din 30.04.2026 OncoHelp Timișoara.
+**Disclaimer:** acest document este un ghid de inspirație pentru gătit + orientare nutrițională, **NU** plan medical individualizat. Recomandările finale pentru cantități exacte ONS, suplimente, integrare cu protocolul FLOT, jejunostomă etc. se stabilesc de **echipa multidisciplinară** (oncolog, chirurg, nutriționist clinic, cardiolog post-stent, farmacist clinic) la consultul din 4.05.2026 OncoHelp Timișoara.
