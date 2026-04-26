@@ -470,24 +470,25 @@ Pentru evaluare mai precisă a expunerii (calculul „pachete-an”).
 
 **Data deschiderii:** 2026-04-25.
 
-### [P2] 🔧 Rafinare R28 System Health Monitor — metric `auto_loaded_md_kb` (NOU 2026-04-25)
+### [P2] ✅ Rafinare R28 System Health Monitor — metric `auto_loaded_md_kb` — FINALIZAT 2026-04-26
 
-**Context:** prima rulare R28 (2026-04-25 18:31) a detectat status `🔴 CRITICAL` pe metricul `total_md_root_kb` (542.3 KB / 500 KB inițial = 108.5%) — fals pozitiv din cauza pragului prea agresiv. CHANGELOG.md (132KB) + SESSION_LOG.md (81KB) cresc natural cu activitatea proiectului și NU sunt auto-loaded la sesiune (doar `CLAUDE.md` e auto-injected). Pragul a fost ridicat la 1024 KB ca soluție temporară.
+**Status:** ✅ **FINALIZAT 2026-04-26 19:30** (sesiunea declanșată de WARNING fals-pozitiv la 61.4% după ingest mail Anater).
 
-**Soluția corectă (rafinare):**
+**Implementat:**
 
-- [ ] Introducere metric nou `auto_loaded_md_kb` în `scripts/system_health_check.py` care însumează DOAR fișierele realmente auto-loaded la pornire sesiune:
+- [x] Metric nou `auto_loaded_md_kb` în `scripts/system_health_check.py` cu prag **150 KB** (calibrat pragmatic: 5 fișiere × ~40 KB oficial CLAUDE.md = ~200 KB teoretic; 150 KB lasă ~50% headroom; la 150 KB ≈ 50K tokens = 25% Sonnet / 5% Opus 1M). Listă fișiere monitorizate:
   - `CLAUDE.md` (root) — always-on
-  - `Dosar_Medical/CLAUDE.md` — încărcat contextual când Claude lucrează în acel subfolder
-  - `Documente_Informative/CLAUDE.md` — idem
-  - opțional: `REGULAMENT.md`, `REGULI_CLAUDE_CODE.md` (citite la prima interacțiune per ordine din root `CLAUDE.md`)
-- [ ] Prag pragmatic: 100KB pentru auto-loaded combined (sub limita oficială Claude Code de ~40KB pentru CLAUDE.md singur, dar permite cumulul nested + reference reads)
-- [ ] Update `REGULI_CLAUDE_CODE.md §Regula 28` cu metricul nou
-- [ ] Demote `total_md_root_kb` la metric secundar (informativ, NU declanșează stop rule) — îl păstrăm pentru igienă proiect
+  - `REGULAMENT.md` — citit la prima interacțiune (per ordine din `CLAUDE.md` root)
+  - `REGULI_CLAUDE_CODE.md` — citit la prima interacțiune
+  - `Dosar_Medical/CLAUDE.md` — nested contextual
+  - `Documente_Informative/CLAUDE.md` — nested contextual
+- [x] `total_md_root_kb` **demote la metric informativ** (NU mai declanșează WARNING/ALERT/CRITICAL — rămâne în output pentru igienă proiect, dar nu contribuie la overall status).
+- [x] Update `REGULI_CLAUDE_CODE.md §Regula 28` cu metricul nou + istoric rafinări (2 rafinări documentate: 2026-04-25 ridicare prag temporar + 2026-04-26 rafinare arhitecturală).
+- [x] Backup R10: `Dosar_Medical/arhiva/context_medical_versiuni/system_health_check_pre-rafinare-r28_2026-04-26_1930.py` + `REGULI_CLAUDE_CODE_pre-rafinare-r28_2026-04-26_1930.md`.
 
-**Why:** R28 trebuie să alerteze pe pericolul real (depășire context window), nu pe igienă cumulativă a logurilor istorice. Fals pozitivul de la 25.04 a forțat o pauză de plan-execuție inutilă (rezolvată prin AskUserQuestion).
+**Rezultat:** WARNING pe `total_md_root_kb` eliminat definitiv. Sistemul alertează acum pe risc REAL (auto-loaded files > 100 KB), nu pe igienă cumulativă a logurilor istorice (CHANGELOG, SESSION_LOG).
 
-**Data deschiderii:** 2026-04-25.
+**Data deschiderii:** 2026-04-25 · **Data finalizării:** 2026-04-26.
 
 ### [P2] HbA1c recent
 

@@ -26,39 +26,23 @@ if hasattr(sys.stdout, "reconfigure"):
 ROOT = Path(__file__).resolve().parent.parent
 OUTPUT = ROOT / "Dosar_Medical" / "SYSTEM_HEALTH.json"
 
-# Limite — vezi Regula 28 (REGULI_CLAUDE_CODE.md)
-# Rafinare 2026-04-26 (ticket P2 din TODO închis):
-#   - INTRODUS metric `auto_loaded_md_kb` (suma fișierelor REALMENTE auto-loaded
-#     la pornire sesiune) cu prag 100 KB. Aceasta este alertă REALĂ pentru
-#     risc context window — independent de logs istorice.
-#   - DEMOTE `total_md_root_kb` la metric INFORMATIV (fără limit/status). Suma
-#     brută `.md` la rădăcină include CHANGELOG.md + SESSION_LOG.md care cresc
-#     natural cu activitatea proiectului și NU sunt auto-injected. Pragul
-#     anterior 1024 KB declanșa fals-pozitive predictibile.
+# Limite — vezi Regula 28
+# Notă (rafinare 2026-04-25): total_md_root_kb ridicat de la 500 → 1024 KB.
+# Justificare: suma brută `.md` la rădăcină include loguri istorice (CHANGELOG.md,
+# SESSION_LOG.md) care NU sunt auto-loaded la pornire sesiune (doar CLAUDE.md e).
+# Metricul care contează cu adevărat pentru context window e
+# `context_tokens_estimate`, care urmărește auto-loaded files. 500KB brut era
+# prea agresiv pentru un proiect cu logs istorice naturale.
+# Refinare ulterioară planificată: metric nou `auto_loaded_md_kb` (doar fișierele
+# realmente auto-loaded la sesiune) cu prag 100KB ca alertă reală — ticket P2 TODO.
 LIMITS = {
     "context_tokens_estimate": {"limit": 200_000, "type": "tokens"},
     "claude_md_size_kb": {"limit": 40, "type": "kb"},
     "memory_md_lines": {"limit": 200, "type": "lines"},
-    # auto_loaded_md_kb prag 150 KB: 5 fișiere auto-loaded × ~40 KB CLAUDE.md
-    # oficial = ~200 KB teoretic; 150 KB lasă headroom ~50% pentru creștere
-    # naturală (reguli noi, update-uri nested) fără fals-pozitive. La 150 KB
-    # ≈ 50K tokens = 25% Sonnet 200k / 5% Opus 1M — încă mult sub critic.
-    "auto_loaded_md_kb": {"limit": 150, "type": "kb"},
+    "total_md_root_kb": {"limit": 1024, "type": "kb"},
     "largest_file_kb": {"limit": 200, "type": "kb"},
     "index_json_size_kb": {"limit": 1024, "type": "kb"},
 }
-
-# Fișiere REALMENTE auto-încărcate la sesiune (CLAUDE.md + nested + reference reads
-# declanșate de CLAUDE.md root la prima interacțiune). Nested CLAUDE.md sunt
-# încărcate contextual (când Claude lucrează în subfolder), dar le includem în
-# total deoarece pot fi sumate la o sesiune obișnuită care traversează folderul.
-AUTO_LOADED_FILES = [
-    "CLAUDE.md",                            # always-on root
-    "REGULAMENT.md",                        # citit la prima interacțiune (per ordine din CLAUDE.md root)
-    "REGULI_CLAUDE_CODE.md",                # citit la prima interacțiune
-    "Dosar_Medical/CLAUDE.md",              # nested contextual
-    "Documente_Informative/CLAUDE.md",      # nested contextual
-]
 
 SKIP_DIRS = (".git", "node_modules", ".claude-outputs", "__pycache__")
 
@@ -110,32 +94,10 @@ def main():
         except OSError as exc:
             metrics["memory_md_lines"] = {"error": str(exc)}
 
-    # auto_loaded_md_kb — suma fișierelor REALMENTE auto-loaded la sesiune
-    # (alertă REALĂ pentru risc context window; independent de logs istorice)
-    auto_loaded_total_kb = 0.0
-    auto_loaded_breakdown = []
-    for rel_path in AUTO_LOADED_FILES:
-        f = ROOT / rel_path
-        if f.exists():
-            try:
-                size_kb = round(f.stat().st_size / 1024, 1)
-                auto_loaded_total_kb += size_kb
-                auto_loaded_breakdown.append({"path": rel_path, "size_kb": size_kb})
-            except OSError:
-                continue
-    metrics["auto_loaded_md_kb"] = {
-        **metric(round(auto_loaded_total_kb, 1), "auto_loaded_md_kb"),
-        "breakdown": auto_loaded_breakdown,
-        "note": "suma fișierelor auto-loaded la pornire sesiune (CLAUDE.md root + REGULAMENT + REGULI + nested CLAUDE.md). Pragul 150 KB e alertă reală pentru risc context window.",
-    }
-
-    # total_md_root_kb — INFORMATIV (NU declanșează status; vezi auto_loaded_md_kb pentru alertă reală)
+    # Total .md root size (doar fișiere din rădăcină, NU subfoldere)
     total_md = sum(f.stat().st_size for f in ROOT.glob("*.md"))
     total_md_kb = round(total_md / 1024, 1)
-    metrics["total_md_root_kb"] = {
-        "current": total_md_kb,
-        "note": "informativ — suma brută `.md` la rădăcină; include logs istorice (CHANGELOG, SESSION_LOG) care NU sunt auto-loaded. Pentru alertă reală vezi `auto_loaded_md_kb`. Demotează 2026-04-26 (ticket P2 închis).",
-    }
+    metrics["total_md_root_kb"] = metric(total_md_kb, "total_md_root_kb")
 
     # Cele mai mari fișiere din proiect (.md / .html / .json)
     largest = []
@@ -168,11 +130,14 @@ def main():
         size_kb = round(index_json.stat().st_size / 1024, 1)
         metrics["index_json_size_kb"] = metric(size_kb, "index_json_size_kb")
 
-    # Estimate context tokens — aliniat cu AUTO_LOADED_FILES (5 fișiere) pentru
-    # consistency cu auto_loaded_md_kb
+    # Estimate context tokens — fișiere auto-loaded la pornire sesiune
+    auto_loaded = [
+        ROOT / "CLAUDE.md",
+        ROOT / "REGULI_CLAUDE_CODE.md",
+        ROOT / "REGULAMENT.md",
+    ]
     texts = []
-    for rel_path in AUTO_LOADED_FILES:
-        f = ROOT / rel_path
+    for f in auto_loaded:
         if f.exists():
             try:
                 texts.append(f.read_text(encoding="utf-8"))
@@ -182,7 +147,7 @@ def main():
     tokens = estimate_tokens(all_text)
     metrics["context_tokens_estimate"] = {
         **metric(tokens, "context_tokens_estimate"),
-        "note": "estimat pe AUTO_LOADED_FILES (5 fișiere: CLAUDE.md root + REGULAMENT + REGULI + nested CLAUDE.md). Read-uri ad-hoc, MEMORY.md auto-injection, sistem-reminders nu sunt incluse — context real e mai mare.",
+        "note": "estimat doar pe fișiere auto-loaded (CLAUDE.md + REGULI_CLAUDE_CODE.md + REGULAMENT.md). Read-uri ad-hoc, MEMORY.md auto-injection, sistem-reminders nu sunt incluse — context real e mai mare.",
     }
 
     # Overall status — cel mai rău dintre toate metricile cu status

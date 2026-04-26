@@ -350,23 +350,13 @@ Dosarul `.Tati` se va încărca progresiv (corespondență, meta.json-uri, JSON-
 | Context tokens estimat la pornire sesiune | 200k Sonnet / 1M Opus | 🟢 <60% / 🟡 60-80% / 🟠 80-95% / 🔴 >95% |
 | `CLAUDE.md` size (root proiect)           | 40KB warning oficial  | 🟢 / 🟡 / 🔴                              |
 | `MEMORY.md` linii                         | 200 (truncat automat) | 🟢 <120 / 🟡 120-180 / 🔴 >180            |
-| **`auto_loaded_md_kb`** (NOU 2026-04-26)  | **150KB**             | 🟢 / 🟡 / 🔴                              |
+| Total `.md` root size                     | 1024KB ⚠ (vezi notă)  | 🟢 / 🟡 / 🔴                              |
 | Fișier individual                         | 200KB sau 5000 linii  | 🟢 / 🟡 / 🔴                              |
 | `INDEX.json` size                         | 1MB                   | 🟢 / 🟡 / 🔴                              |
-| Total `.md` root size                     | informativ            | _no status_ (vezi note)                   |
 
-**Fișiere auto-loaded urmărite în `auto_loaded_md_kb`:**
-
-- `CLAUDE.md` (root) — always-on
-- `REGULAMENT.md` — citit la prima interacțiune (per ordine din `CLAUDE.md` root)
-- `REGULI_CLAUDE_CODE.md` — citit la prima interacțiune
-- `Dosar_Medical/CLAUDE.md` — nested contextual (subfolder)
-- `Documente_Informative/CLAUDE.md` — nested contextual (subfolder)
-
-> **Istoric rafinări:**
+> **Notă rafinare 2026-04-25 — `total_md_root_kb` 500 → 1024 KB:** pragul inițial de 500KB calculat ca sumă brută `.md` la rădăcină era prea agresiv pentru un proiect cu logs istorice naturale (CHANGELOG.md, SESSION_LOG.md cresc liniar cu activitatea). Aceste fișiere NU sunt auto-loaded la pornire sesiune (doar `CLAUDE.md` e auto-injected). Metricul care contează cu adevărat pentru context window e `context_tokens_estimate` (auto-loaded files only). Pragul brut a fost ridicat la 1024 KB ca limită informativă; restructurarea reală vine din rafinarea metricii (vezi sub-secțiunea de mai jos).
 >
-> - **2026-04-25 (rafinare 1):** `total_md_root_kb` 500 → 1024 KB. Justificare: suma brută `.md` la rădăcină e influențată de logs istorice (CHANGELOG.md, SESSION_LOG.md cresc liniar cu activitatea), care NU sunt auto-loaded. Pragul inițial 500 KB declanșa fals-pozitive predictibile. Limită temporară.
-> - **2026-04-26 (rafinare 2 — ticket P2 închis):** introdus metric nou **`auto_loaded_md_kb`** (suma fișierelor REALMENTE auto-loaded la sesiune, prag **150 KB**) ca alertă REALĂ pentru risc context window. Justificare prag: 5 fișiere × ~40 KB oficial CLAUDE.md = ~200 KB teoretic; 150 KB lasă ~50% headroom pentru creștere naturală (reguli noi, update-uri nested) fără fals-pozitive. La 150 KB ≈ 50K tokens = 25% Sonnet 200k / 5% Opus 1M (sub critic). **`total_md_root_kb` demote** la metric **informativ** (NU declanșează status — rămâne pentru igienă proiect, dar nu provoacă WARNING/ALERT/CRITICAL). Plus: aliniere `context_tokens_estimate` cu lista AUTO_LOADED_FILES (5 fișiere) pentru consistency.
+> **Rafinare planificată (P2 TODO):** introducere metric nou `auto_loaded_md_kb` (doar `CLAUDE.md` + nested CLAUDE.md-uri încărcate când lucrezi în subfoldere — `Dosar_Medical/CLAUDE.md`, `Documente_Informative/CLAUDE.md`) cu prag 100KB ca alertă reală pentru risc context-prea-mare. Pragul `total_md_root_kb` rămâne ca metric secundar pentru igienă proiect.
 
 **Acțiuni automate la depășire:**
 
