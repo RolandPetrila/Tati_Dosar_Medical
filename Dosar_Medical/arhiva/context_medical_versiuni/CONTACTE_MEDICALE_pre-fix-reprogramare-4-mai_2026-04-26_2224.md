@@ -1,13 +1,12 @@
 ---
 title: Catalog contacte medicale OncoHelp Timișoara
 scope: doar medici OncoHelp activi (NU istoric extern; pentru istoric vezi CONTEXT_MEDICAL.md §9)
-last_updated: 2026-04-26 22:24
+last_updated: 2026-04-25 19:30
 medici_listati: 2
-version: 1.2
+version: 1.1
 changelog:
-  v1.0_2026-04-25_19:00: creare inițială cu Anater + Vornicu, status Anater per site oncohelp.ro = „Rezident"
-  v1.1_2026-04-25_19:30: corectare status Anater post-ingest Gmail — semnătura email zice „Medic Specialist" (R12 conflict surse)
-  v1.2_2026-04-26_22:24: reflectare reprogramare consult Anater 30.04 → 4.05.2026 per mail Anater 26.04 (motiv: aglomerație zi liberă 1 mai + caz nou care necesită constituire dosar comisie oncologică)
+  v1.0_19:00: creare inițială cu Anater + Vornicu, status Anater per site oncohelp.ro = „Rezident"
+  v1.1_19:30: corectare status Anater post-ingest Gmail — semnătura email zice „Medic Specialist" (R12 conflict surse)
 related_research: cercetari/2026-04-25_cercetare-oncohelp-vornicu-anater.md
 related_correspondence: corespondenta/INDEX.md
 ---
@@ -26,10 +25,10 @@ related_correspondence: corespondenta/INDEX.md
 
 ## Index rapid
 
-| ID                           | Nume                          | Specializare                                                  | Status                           | Telefon directe          | Email primar              |
-| ---------------------------- | ----------------------------- | ------------------------------------------------------------- | -------------------------------- | ------------------------ | ------------------------- |
-| `dr-anater-angelo-christian` | Dr. Anater Angelo - Christian | Medic Specialist Oncologie Medicală ⚠ (vezi notă R12 mai jos) | 🟢 activ — REPROGRAMAT 4.05.2026 | (prin centrală OncoHelp) | angelo.anater@oncohelp.ro |
-| `dr-vornicu-vlad`            | Dr. Vornicu Vlad-Norin        | Medic Specialist Oncolog (oncologie medicală)                 | 🟡 contact furnizat user         | 0762 120 428             | vornicuvlad91@gmail.com   |
+| ID                           | Nume                          | Specializare                                                  | Status                      | Telefon directe          | Email primar              |
+| ---------------------------- | ----------------------------- | ------------------------------------------------------------- | --------------------------- | ------------------------ | ------------------------- |
+| `dr-anater-angelo-christian` | Dr. Anater Angelo - Christian | Medic Specialist Oncologie Medicală ⚠ (vezi notă R12 mai jos) | 🟢 activ — programare 30.04 | (prin centrală OncoHelp) | angelo.anater@oncohelp.ro |
+| `dr-vornicu-vlad`            | Dr. Vornicu Vlad-Norin        | Medic Specialist Oncolog (oncologie medicală)                 | 🟡 contact furnizat user    | 0762 120 428             | vornicuvlad91@gmail.com   |
 
 ---
 
@@ -83,10 +82,10 @@ telefoane: []
 varsta_estimata: ~31 ani (sufix `95` în yahoo sugerează naștere 1995) [PROBABIL]
 status: 🟢 activ
 prim_contact: 2026-04-23
-ultim_contact: 2026-04-26
+ultim_contact: 2026-04-25
 rol: medic oncolog curant — primă linie de contact OncoHelp pentru cazul tata
-tags: [oncolog, oncohelp, medic-curant, programat-4-05, conflict-surse-status]
-version: 1.2
+tags: [oncolog, oncohelp, medic-curant, programat-30-04, conflict-surse-status]
+version: 1.1
 sursa_status_profesional_email: 'semnătură email Dr. Anater 24.04.2026 — „Medic Specialist, Oncologie Medicala, Oncohelp Timisoara"'
 sursa_status_profesional_site: 'oncohelp.ro/echipa-oncohelp/ accesat 2026-04-25 — „Medic Rezident" (probabil neactualizat după promovare)'
 ```
@@ -118,7 +117,7 @@ sursa_status_profesional_site: 'oncohelp.ro/echipa-oncohelp/ accesat 2026-04-25 
 
 - Răspuns prompt (sub 24h) la solicitarea inițială Roland
 - Comunicare structurată, separând componenta oncologică de cea cardiacă (interpretare echilibrată: ascita perihepatică + pelvină + pleurală minoră → „cel mai probabil secundară afecțiunii sale cardiace, NU oncologică primă vedere")
-- Disponibil pentru programare directă (slot consult inițial 30.04.2026 → REPROGRAMAT 4.05.2026 per mail Anater 26.04)
+- Disponibil pentru programare directă (slot consult 30.04.2026 confirmat)
 - Recomandare conservatoare: NU urgentare paracenteză/laparoscopie pre-histopatologic
 - Recomandări concrete pre-consult: markeri tumorali + consult cardiologic recent (<6 luni) + analize sânge generale
 - Stil profesional consistent cu specialist deplin format (per self-id email)
@@ -142,17 +141,15 @@ sursa_status_profesional_site: 'oncohelp.ro/echipa-oncohelp/ accesat 2026-04-25 
 
 - **2026-04-23 (data inițială Roland)** — trimis de Roland: solicitare consult oncologic pentru tata, prezentare context (CT 20.04 + biopsie în așteptare). Thread Gmail: `19dbe7d30cfacbb3` (vezi `corespondenta/2026-04-24_re-solicitare-consult-anater.md` la Task #11).
 - **2026-04-24 10:56** — primit `RE: Solicitare consult oncologic` de la Dr. Anater: cale clinică propusă — așteptare biopsie + consult ulterior.
-- **2026-04-25 18:00** — răspuns trimis manual de user (Roland) — confirmare biopsie 28-29.04 + cerere slot 30.04 + 5 întrebări organizatorice (analize/internare/documente/bilet trimitere/telefon contact).
-- **2026-04-26 10:28** — primit răspuns Dr. Anater: **REPROGRAMARE 30.04 → 4.05.2026** (motiv: aglomerație 1 mai + caz nou necesită mai mult timp pentru constituirea dosarului de comisie oncologică) + clarificări complete la cele 5 întrebări (markeri tumorali specificați CEA + CA 19-9, bilet trimitere medic familie pentru oncologie, consult cardiologic recent extern cu ECG + ECO + scrisoare, plan zi 4.05 — comisie + chirurg eso + NU rămâne internat). Vezi `corespondenta/2026-04-24_re-solicitare-consult-anater.md` (thread închis 26.04) + `corespondenta/INDEX.md`.
+- **2026-04-25 18:00** — răspuns trimis manual de user (Roland) — confirmare biopsie 28-29.04 + cerere slot 30.04 + 5 întrebări organizatorice (analize/internare/documente/bilet trimitere/telefon contact). Așteptare clarificări.
 
 ### Note libere
 
-- Răspuns prompt și atent (24h, apoi 16h la a doua rundă) — semnal pozitiv pentru relația medic-pacient
+- Răspuns prompt și atent (24h) — semnal pozitiv pentru relația medic-pacient
 - A explicat clar că acumulările lichidiene observate la CT pot fi cardiace, nu doar oncologice — abordare echilibrată non-alarmistă
-- **Reprogramarea proactivă** (mutare 30.04 → 4.05 din proprie inițiativă, pentru calitate caz nou) — semnal de seriozitate clinică
-- Următorul pas: telefoane mâine 27.04 (medic familie + cardiolog + Synevo markeri), asamblare dosar fizic post-biopsie 28-30.04, consult **4.05.2026 OncoHelp Timișoara**
+- Următorul pas: așteptare confirmare slot 30.04 + clarificări la cele 5 întrebări organizatorice
 - **Conflict surse status profesional R12** rezolvat în favoarea „Specialist" per self-id email — site oncohelp.ro probabil neactualizat post-promovare
-- Pentru clarificare definitivă, în conversația 4.05 cu Dr. Anater se poate întreba politicos „Care este momentul în care ați promovat specialitatea?" — informație utilă pentru context relație medic-pacient
+- Pentru clarificare definitivă, în conversația 30.04 cu Dr. Anater se poate întreba politicos „Care este momentul în care ați promovat specialitatea?" — informație utilă pentru context relație medic-pacient
 
 ---
 
@@ -251,13 +248,13 @@ sources_verified: 2026-04-25
 
 ### Istoric corespondență
 
-- _Niciun contact direct încă._ Numărul `0762 120 428` furnizat de user 2026-04-25 — context: căutare opțiuni complementare la consultul programat cu Dr. Anater **4.05.2026 OncoHelp** (REPROGRAMAT din 30.04 per mail Anater 26.04).
+- _Niciun contact direct încă._ Numărul `0762 120 428` furnizat de user 2026-04-25 — context: căutare opțiuni complementare la consultul programat cu Dr. Anater 30.04.2026 OncoHelp.
 
 ### Note libere
 
 - _De completat după prima interacțiune._
 - Coincidență validatoare: numărul furnizat de user a fost identificat și ca sursă publică ResearchGate → confirmă că e numărul corect al Dr. Vornicu și nu o eroare de transcriere.
-- Strategie sugerată: așteptăm consultul cu Dr. Anater **4.05** înainte de a apela Dr. Vornicu — dacă Dr. Anater îl include în echipa care discută cazul (tumor board), apelul direct devine inutil.
+- Strategie sugerată: așteptăm consultul cu Dr. Anater 30.04 înainte de a apela Dr. Vornicu — dacă Dr. Anater îl include în echipa care discută cazul (tumor board), apelul direct devine inutil.
 
 ---
 

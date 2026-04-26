@@ -6,6 +6,29 @@
 
 ---
 
+## 2026-04-26 22:24 — [Claude_Opus_4.7] fix-audit-post-21:06-propagare-reprogramare-4-05-close-todo-p2 (R10 + R16 + R18 + R24)
+
+**Scop:** remediere 4 finding-uri audit `2026-04-26_210608` (1 HIGH + 2 MEDIUM + 1 LOW).
+
+**Fișiere modificate:**
+
+- `Dosar_Medical/CONTACTE_MEDICALE.md` v1.1 → v1.2 (8 update-uri reflectând REPROGRAMARE 30.04 → 4.05)
+- `TODO.md` (task [P2] oncolog → ✅ REZOLVAT 2026-04-25 — REGRESIE audit 25.04 L1)
+- `DASHBOARD.html` (var lastRegen update + link GHID_TELEFOANE_27-04 în P0 telefoane)
+- `CHANGELOG.md` (intrare nouă 22:24)
+
+**Backup R10 (3 fișiere):**
+
+- `Dosar_Medical/arhiva/context_medical_versiuni/CONTACTE_MEDICALE_pre-fix-reprogramare-4-mai_2026-04-26_2224.md`
+- `Dosar_Medical/arhiva/context_medical_versiuni/TODO_pre-fix-audit-26-04-21_2026-04-26_2224.md`
+- `Dosar_Medical/arhiva/context_medical_versiuni/DASHBOARD_pre-fix-audit-26-04-21_2026-04-26_2224.html`
+
+**Findings acceptate ca-atare:** L1 (`.ruff_cache` regenerat de ruff, gitignored, fără impact).
+
+**Output audit:** `.claude-outputs/audit/2026-04-26_210608/{audit_report.md, audit_score.json}` (scor 87/100).
+
+---
+
 ## 2026-04-26 19:50 — [Claude_Opus_4.7] ghid-telefoane-27-04-pregatire-apeluri-roland (Regula 19 + R17)
 
 **Scop:** după ingestul mailului Anater 26.04 (sesiunea 19:06) au rezultat 3 telefoane critice pentru mâine 27.04 (medic familie + cardiolog + Synevo). Pentru ca Roland să poată suna eficient dimineața, am creat un document operațional unic cu scripturi „aproape verbatim" + checklist pregătire + obstacole comune + planuri B/C/D.

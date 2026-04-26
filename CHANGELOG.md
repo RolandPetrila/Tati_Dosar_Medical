@@ -4,6 +4,55 @@
 
 ---
 
+## 2026-04-26 22:24 — FIX post-audit 21:06 — Propagare reprogramare 4.05 + close TODO P2 oncolog + sync DASHBOARD
+
+**Tip:** REMEDIERE — finding-uri audit `2026-04-26_210608` (scor 87/100).
+
+### Audit declanșator
+
+Auditul standard rulat la 26.04 21:06 a identificat 5 finding-uri (1 HIGH + 2 MEDIUM + 2 LOW) — toate fiind documentation sync gap-uri post-ingest mail Anater 26.04 (REPROGRAMARE consult 30.04 → 4.05 OncoHelp Timișoara). Conținutul principal era propagat ✅ (CONTEXT_MEDICAL.md, TODO.md, DASHBOARD.html, ALIMENTATIE.md), dar `CONTACTE_MEDICALE.md` neatins post-reprogramare + 1 task TODO regresie (audit 25.04 L1) + DASHBOARD `lastRegen` etichetă stale + `GHID_TELEFOANE_27-04.md` neliniat în DASHBOARD.
+
+### Modificări
+
+**1. `Dosar_Medical/CONTACTE_MEDICALE.md` v1.1 → v1.2 (FIX H1):**
+
+- Frontmatter: `last_updated: 2026-04-26 22:24`, `version: 1.2`, changelog v1.2 entry adăugat
+- Tabel rapid (linia 31): `🟢 activ — programare 30.04` → `🟢 activ — REPROGRAMAT 4.05.2026`
+- YAML Anater: `ultim_contact: 2026-04-25` → `2026-04-26`, tag `programat-30-04` → `programat-4-05`, `version: 1.1` → `1.2`
+- Observație clinică (slot consult): `30.04.2026 confirmat` → `inițial 30.04.2026 → REPROGRAMAT 4.05.2026 per mail Anater 26.04`
+- Istoric corespondență: adăugată intrare nouă **2026-04-26 10:28** cu detalii REPROGRAMARE + 5 clarificări (markeri CEA/CA19-9, bilete trimitere, plan zi 4.05)
+- Note libere Anater: actualizat „Următorul pas" pentru 4.05; conversația 30.04 → 4.05
+- Note libere Vornicu: consultul cu Dr. Anater 30.04 → 4.05 (2 mențiuni)
+
+**2. `TODO.md` (FIX M1 — REGRESIE audit 25.04 L1):**
+
+- Task `[P2] Identificare și contactare oncolog digestiv` (linia 241) → marcat ✅ REZOLVAT 2026-04-25
+- 4 sub-task-uri bifate: oncolog identificat (Anater + Vornicu), recomandare obținută, disponibilitate verificată, programare confirmată 4.05.2026 OncoHelp via thread Gmail Anater
+
+**3. `DASHBOARD.html` (FIX M2 + L2):**
+
+- `var lastRegen` (linia 4197): `"2026-04-25 19:35..."` → `"2026-04-26 22:24 (post-audit fix H1+M1+M2+L2..."`
+- Secțiunea P0 telefoane (zona linia 1694): adăugat link către `Documente_Informative/GHID_TELEFOANE_27-04.md` cu badge document operațional 📋 (vizibilitate maximă pentru Roland înainte de telefoane mâine 27.04)
+
+### Finding-uri audit acceptate ca-atare
+
+- **L1 (`.ruff_cache/` regenerat):** gitignored, regenerat de ruff la fiecare lint, fără impact pe commit/push — acceptat ca-atare conform `.gitignore` proiect
+
+### Backup R10
+
+- `Dosar_Medical/arhiva/context_medical_versiuni/CONTACTE_MEDICALE_pre-fix-reprogramare-4-mai_2026-04-26_2224.md`
+- `Dosar_Medical/arhiva/context_medical_versiuni/TODO_pre-fix-audit-26-04-21_2026-04-26_2224.md`
+- `Dosar_Medical/arhiva/context_medical_versiuni/DASHBOARD_pre-fix-audit-26-04-21_2026-04-26_2224.html`
+
+### Raport audit
+
+- Score JSON: `.claude-outputs/audit/2026-04-26_210608/audit_score.json` (87/100, delta −5 vs 92)
+- Raport markdown: `.claude-outputs/audit/2026-04-26_210608/audit_report.md`
+
+**Făcut de:** Claude Code (Opus 4.7, 1M context) — sesiune 2026-04-26 21:06–22:24.
+
+---
+
 ## 2026-04-26 19:50 — DOC pregătire telefoane luni 27.04 — Ghid operațional 3 apeluri (Regula 19)
 
 **Tip:** document operațional NOU pentru Roland — pregătire P0 telefoane mâine.
