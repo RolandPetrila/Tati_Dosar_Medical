@@ -75,6 +75,17 @@ def extract_between(text, start_pattern, end_pattern):
     return (text[start_match.start():start_match.end()] + rest[:end_offset]).strip()
 
 
+def strip_first_header(text):
+    """Drop primul rând dacă e header markdown (## sau ###) — evită dublura
+    de header când STATUS_SNAPSHOT.md adaugă propriul header de secțiune."""
+    if not text:
+        return text
+    parts = text.split("\n", 1)
+    if parts and re.match(r"^#{2,4}\s", parts[0]):
+        return parts[1].lstrip("\n") if len(parts) > 1 else ""
+    return text
+
+
 def extract_p0_active(todo_text):
     """Extract P0 sections without ✅ in title (active actions)."""
     # Match each ### [P0] block until next ### or ## or ---
@@ -95,21 +106,21 @@ def generate_status_snapshot():
     todo_text = (ROOT / "TODO.md").read_text(encoding="utf-8")
 
     # §1 Date pacient
-    date_pacient = extract_between(
+    date_pacient = strip_first_header(extract_between(
         context_text, r"^## 1\. Date pacient", r"^## 2\."
-    )
+    ))
     # §2.1 Findings principale (TNM)
-    status_clinic = extract_between(
+    status_clinic = strip_first_header(extract_between(
         context_text, r"^### 2\.1 ", r"^### 2\.2"
-    )
+    ))
     # §4 Medicație
-    medicatie = extract_between(
+    medicatie = strip_first_header(extract_between(
         context_text, r"^## 4\. ", r"^## 5"
-    )
+    ))
     # Calendar TODO
-    calendar = extract_between(
+    calendar = strip_first_header(extract_between(
         todo_text, r"^## Calendar", r"^---"
-    )
+    ))
     # P0 active
     p0_active = extract_p0_active(todo_text)
 

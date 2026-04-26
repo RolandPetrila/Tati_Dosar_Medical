@@ -1,8 +1,8 @@
 # STATUS SNAPSHOT — Petrilă Viorel-Mihai
 
-**Generat automat:** 2026-04-27 00:42
-**Ultim commit git:** `37cddf6` (2026-04-26 22:28:47 +0300)
-**Mesaj commit:** [FIX 2026-04-26 22:24] Audit post-21:06: propagare reprogramare 4.05 + close TODO P2 + sync DASHBOARD
+**Generat automat:** 2026-04-27 01:06
+**Ultim commit git:** `9f89809` (2026-04-27 00:43:23 +0300)
+**Mesaj commit:** [NEW R30 2026-04-27] Sistem sync Claude Projects: _projects_sync/ + script regen
 **Sursă de adevăr:** fișierele originale din proiect `.Tati`. Acest snapshot e mirror sintetic generat de `scripts/regen_projects_sync.py` pentru chat Claude Projects (web/mobil).
 
 > **Ordine consultare în chat:** STATUS_SNAPSHOT.md (aici) → CONTEXT_MEDICAL.md (detaliu clinic) → TODO.md (calendar) → CONTACTE_MEDICALE.md (medici) → REGULAMENT.md (reguli) → INDEX.json (index documente) → EXPLICATIE_CONSULT_ONCOLOG_SCENARII.md (glosar + scenarii prognostice).
@@ -10,8 +10,6 @@
 ---
 
 ## 🧑 Date pacient
-
-## 1. Date pacient
 
 | Câmp                | Valoare                                                                                        |
 | ------------------- | ---------------------------------------------------------------------------------------------- |
@@ -36,8 +34,6 @@
 
 ## 🏥 Status clinic curent (sumar TNM)
 
-### 2.1 Findings principale CT 20.04.2026 (impact decizional direct)
-
 **Stadializare imagistică preliminară** `[PROBABIL]` — estimativă per radiolog, necesită corelare cu biopsie pentru confirmare histologică:
 
 | Element       | Estimare CT           | Marcaj       | Note                                                                                                                                         |
@@ -55,8 +51,6 @@
 ---
 
 ## 💊 Medicație activă
-
-## 4. Medicație zilnică
 
 Schema datată **10 noiembrie 2025**. Medic prescriptor **IDENTIFICAT (2026-04-24): Dr. LAZA CRISTINA** (medic primar cardiolog, cod parafă **C07842**) — cross-reference cu ecografia transtoracică efectuată în aceeași zi (sursă tipărită, cod parafă clar vizibil). Consult pre-chirurgie hernie.
 
@@ -100,8 +94,6 @@ Schema datată **10 noiembrie 2025**. Medic prescriptor **IDENTIFICAT (2026-04-2
 ---
 
 ## 📅 Calendar — date cheie
-
-## Calendar — date cheie
 
 | Data                                | Eveniment                                                                                | Status                                                  |
 | ----------------------------------- | ---------------------------------------------------------------------------------------- | ------------------------------------------------------- |
