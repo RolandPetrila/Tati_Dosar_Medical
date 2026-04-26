@@ -1,8 +1,8 @@
 # STATUS SNAPSHOT — Petrilă Viorel-Mihai
 
-**Generat automat:** 2026-04-27 01:19
-**Ultim commit git:** `5531bb0` (2026-04-27 01:07:24 +0300)
-**Mesaj commit:** [ENH R30 2026-04-27] Auto-sync Projects: pre-commit hook + strip headers cosmetici
+**Generat automat:** 2026-04-27 01:47
+**Ultim commit git:** `3f7a167` (2026-04-27 01:19:01 +0300)
+**Mesaj commit:** [TEST 2026-04-27] Auto-sync marker - verificare hook pre-commit + Drive Connector
 **Sursă de adevăr:** fișierele originale din proiect `.Tati`. Acest snapshot e mirror sintetic generat de `scripts/regen_projects_sync.py` pentru chat Claude Projects (web/mobil).
 
 > **Ordine consultare în chat:** STATUS_SNAPSHOT.md (aici) → CONTEXT_MEDICAL.md (detaliu clinic) → TODO.md (calendar) → CONTACTE_MEDICALE.md (medici) → REGULAMENT.md (reguli) → INDEX.json (index documente) → EXPLICATIE_CONSULT_ONCOLOG_SCENARII.md (glosar + scenarii prognostice).

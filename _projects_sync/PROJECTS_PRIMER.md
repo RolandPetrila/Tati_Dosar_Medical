@@ -90,25 +90,40 @@ Dacă STATUS_SNAPSHOT contrazice CONTEXT_MEDICAL → **CONTEXT_MEDICAL prevaleaz
 
 ---
 
-## Mecanism de actualizare
+## Mecanism de actualizare (corectat 2026-04-27 după verificare oficială docs Anthropic)
+
+**Realitate confirmată [CERT]** pe planul Max:
+- Drive Connector în Project knowledge acceptă **DOAR Google Docs nativ** — NU `.md`, NU `.json`
+- Cataloging RAG cu re-index automat (5-30 min) e feature **Enterprise-only**
+- Pe Max → fișierele din Project knowledge sunt **upload static** (drag&drop), înghețate la momentul drop-ului
+
+**Lanțul real:**
 
 ```
-Modificare fișier original (CONTEXT_MEDICAL / TODO / etc.) pe laptop Roland
-    ↓
-python scripts/regen_projects_sync.py    (Roland rulează manual sau prin git post-commit hook)
-    ↓
-_projects_sync/ regenerat (mirror + STATUS_SNAPSHOT.md)
-    ↓
-git commit + push
-    ↓
-Google Drive sync (automat, secunde — proiectul rulează din Drive nativ)
-    ↓
-Drive Connector re-index în Claude Projects (automat Anthropic, [PROBABIL] 5-30 min)
-    ↓
-Disponibil în chat Projects (acest mediu)
+1. Roland editează fișier original local (CONTEXT_MEDICAL.md / TODO.md / etc.)
+2. git commit  →  pre-commit hook auto-detectează fișier sursă
+                  →  rulează scripts/regen_projects_sync.py
+                  →  _projects_sync/ regenerat (mirror + STATUS_SNAPSHOT.md)
+                  →  git add _projects_sync/ → inclus în commit
+3. git push  →  GitHub + Google Drive sync (automat, secunde)
+              ↑ AUTO până aici (zero efort manual)
+
+═══════════════ RUPTURĂ MANUALĂ ═══════════════
+
+4. Pentru ca chat-ul Projects (TU, Claude pe mobil) să vadă update-urile:
+   Roland trebuie manual:
+     a) Deschide Project în claude.ai
+     b) Pentru fiecare fișier modificat: Click ⋯ pe fișier → Remove
+     c) Drag&drop versiunea nouă din G:\My Drive\Roly\.Tati\_projects_sync\
+   ~30 secunde per fișier modificat
 ```
 
-**Pentru utilizator:** dacă răspunsul tău depinde de date care par stale, cere explicit Roland să verifice data în STATUS_SNAPSHOT.md antet și să ruleze scriptul + să aștepte re-index.
+**Pentru utilizator (TU, Claude Projects):** dacă răspunsul tău depinde de date care par stale (ex: date noi pe care Roland le menționează dar nu le vezi în fișiere):
+- Întreabă explicit: „Văd că Project knowledge are TODO.md cu Ultima actualizare X. Tu menționezi date mai noi. Ai re-uploadat fișierele după modificarea respectivă?"
+- NU presupune că ai versiunea curentă — verifică data din STATUS_SNAPSHOT antet
+- La conflict raportat → versiunea pe care o are Roland local (laptop) e autoritativă; ce vezi tu poate fi stale
+
+**Frecvență realistă re-upload:** la decizii medicale majore (ingest mail medic, rezultat analize, modificare diagnostic) — nu zilnic pentru micro-edits.
 
 ---
 
