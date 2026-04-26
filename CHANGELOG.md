@@ -4,6 +4,60 @@
 
 ---
 
+## 2026-04-26 19:50 — DOC pregătire telefoane luni 27.04 — Ghid operațional 3 apeluri (Regula 19)
+
+**Tip:** document operațional NOU pentru Roland — pregătire P0 telefoane mâine.
+
+### Eveniment-cheie
+
+Mailul Dr. Anater 26.04 (ingest 19:06) a generat **3 telefoane critice pentru luni 27.04** — medic familie (2 bilete trimitere) + cardiolog Arad (consult ECG+ECO) + Synevo Arad (CEA + CA 19-9). Informațiile necesare erau dispersate în 4 fișiere (TODO P0 + CONTEXT_MEDICAL §8.1 + corespondență thread Anater + email backup).
+
+**Decizie:** consolidare într-un singur document operațional (pattern `GHID_APEL_ONCOHELP.md` din 23.04) cu scripturi „verbatim" + checklist pregătire + planuri B/C/D obstacole.
+
+### Modificări
+
+**1. `Documente_Informative/GHID_TELEFOANE_27-04.md`** (NOU — Regula 19 destinație canonică):
+
+- Header: destinație Roland + scop + declanșator + versiune 1.0
+- Tabel obiectiv în ordinea recomandată (medic familie → cardiolog → Synevo)
+- Pregătire 5 min înainte de primul apel (datele tata + materiale)
+- 3 secțiuni script apel detaliate (date contact + script deschidere „verbatim" + context util + checklist confirmare + checklist notare după apel)
+- Întrebare critică la cardiolog: „Aspenter + Concor se opresc?" (răspuns așteptat: NU se opresc) `[CERT — practică standard post-stent]`
+- 3 alternative pentru Synevo (Bioclinica / MedLife / OncoHelp internare) — Anater confirmat „laborator extern la fel de bine"
+- Checklist final după toate cele 3 apeluri (calendar + alarme + raportare Claude)
+- Obstacole comune (4 scenarii) cu soluții concrete
+- Numere backup utile (931, OncoHelp, Bioclinica, 112)
+- Marcaje R17 aplicate + secțiunile „Surse" + „Ce NU am găsit" (telefon Dr. Orbán + cabinet Dr. LAZA = `[NEGASIT]`)
+- Atenționare finală standard
+
+**2. `TODO.md`** — secțiunea P0 „MÂINE 27.04 — 3 telefoane": adăugare pointer la documentul operațional la începutul secțiunii (acces rapid pentru Roland înainte de apeluri).
+
+### Acțiuni declanșate
+
+**🔴 Mâine 27.04 — Roland:**
+
+- Citește `GHID_TELEFOANE_27-04.md` (sau printează) — ideal cu 5 min înaintea primului apel
+- Începe cu Dr. Orbán (de el depinde biletul de cardiologie)
+- Continuă cu cardiolog (preferabil Dr. LAZA) și Synevo (în orice ordine)
+- Raportează Claude statusurile (programări confirmate + telefoane noi obținute) pentru update CONTACTE_MEDICALE + TODO
+
+### Why (motivul deciziei)
+
+Documentele dispersate cresc riscul de eroare administrativă dimineața (ex: a uita cererea de bilet cardiologie de la Dr. Orbán → telefon suplimentar inutil). Un document unic „verbatim" + checklist + planuri B/C/D minimizează acest risc + oferă reziliență la obstacole comune.
+
+### Fișiere modificate
+
+- **NOU:** `Documente_Informative/GHID_TELEFOANE_27-04.md` (~13 KB, ~290 linii)
+- **MODIFICAT:** `TODO.md` (1 paragraf adăugat la P0 telefoane)
+- **MODIFICAT:** `SESSION_LOG.md` (entry nou 19:50)
+- **MODIFICAT:** `CHANGELOG.md` (această intrare)
+
+### Backup R10
+
+NU s-a făcut backup R10 — TODO/CHANGELOG/SESSION_LOG = append-only istoric (nu restructurare). Document nou nu cere backup.
+
+---
+
 ## 2026-04-26 19:06 — INGEST mail Dr. Anater 26.04: REPROGRAMARE consult 30.04 → 4 mai 2026 (R27 ciclu 2 — incremental scan)
 
 **Tip:** R27 INGEST GMAIL INCREMENTAL — comandă user implicită „am un mail nou de la anater".

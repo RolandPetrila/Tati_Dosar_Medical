@@ -48,6 +48,8 @@
 
 **Status:** NOU deschis 26.04.2026 19:06 — declanșat de instrucțiunile Dr. Anater 26.04.
 
+**📋 Document operațional pentru Roland:** [`Documente_Informative/GHID_TELEFOANE_27-04.md`](Documente_Informative/GHID_TELEFOANE_27-04.md) — 3 scripturi apel detaliate + checklist pregătire 5 min + obstacole comune + numere backup utile (creat 26.04 19:50). De citit/printat înainte de a forma primul număr.
+
 **1. Medic de familie Dr. Orbán Ecaterina-Maria (Cabinet Medical Individual Nădlac):**
 
 - [ ] Cerere **bilet de trimitere pentru oncologie medicală** (necesar la primul consult OncoHelp 4.05; ulterior nu mai e necesar) [per mail Anater 26.04]

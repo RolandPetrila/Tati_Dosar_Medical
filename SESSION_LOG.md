@@ -6,6 +6,37 @@
 
 ---
 
+## 2026-04-26 19:50 — [Claude_Opus_4.7] ghid-telefoane-27-04-pregatire-apeluri-roland (Regula 19 + R17)
+
+**Scop:** după ingestul mailului Anater 26.04 (sesiunea 19:06) au rezultat 3 telefoane critice pentru mâine 27.04 (medic familie + cardiolog + Synevo). Pentru ca Roland să poată suna eficient dimineața, am creat un document operațional unic cu scripturi „aproape verbatim" + checklist pregătire + obstacole comune + planuri B/C/D.
+
+**Operații:**
+
+1. **Citire CONTACTE_MEDICALE.md + CONTEXT_MEDICAL.md §9** — confirmare că telefon direct Dr. Orbán + cabinet Dr. LAZA NU sunt documentate (catalog OncoHelp limitat la Anater + Vornicu); marcaje `[NEGASIT]` aplicate în ghid.
+2. **Creare `Documente_Informative/GHID_TELEFOANE_27-04.md`** (Regula 19 — destinație canonică pentru documente operaționale familie):
+   - 3 scripturi apel cu deschidere + context util + întrebări de confirmat + checklist notare per apel
+   - Pregătire 5 min înainte de primul număr (datele tata + materiale)
+   - Marcaje certitudine R17 aplicate la fiecare afirmație factuală + secțiunile „Surse" + „Ce NU am găsit"
+   - Obstacole comune (cabinet nu răspunde / fără sloturi / refuz servire familie / cere plată în avans) cu soluții
+   - Numere backup utile (931, OncoHelp, Bioclinica, 112) + alternative laborator (Bioclinica/MedLife/OncoHelp internare)
+   - Atenționare finală standard „NU înlocuiește decizii medicale"
+3. **Update TODO.md** — secțiunea P0 telefoane mâine: adăugare pointer la document operațional la începutul secțiunii (acces rapid pentru Roland).
+4. **NICIO modificare** la `CONTEXT_MEDICAL.md` (date medicale neschimbate), `DASHBOARD.html` (R18 inaplicabil — fără update clinic), `INDEX.json` (fără modificare JSON canonic), `Dosar_Medical/` (fără document medical nou).
+
+**Why:** Roland are 3 apeluri administrative consecutive cu informații dispersate în 4 fișiere (TODO P0 + CONTEXT_MEDICAL §8.1 + corespondență Anater + memory mailului). Un document unic + scripturi „verbatim" reduc frecarea decizională dimineața + previn omiterea unei întrebări critice (ex: „aspirina se oprește?" la cardiolog) + oferă planuri B/C/D pentru obstacole. Pattern consacrat: `GHID_APEL_ONCOHELP.md` (23.04) a funcționat similar pentru apelul OncoHelp.
+
+**How to apply (lecții):**
+
+- Document operațional „verbatim script" = format eficient pentru telefoane administrative cu multe variabile (interlocutor, întrebări, fallback-uri). Diferit de raport DOCX (formal, lung) sau notiță TODO (concentrat dar fără structură de apel).
+- R19 + R17 + R-MINIMAL combinate: documentul stă în `Documente_Informative/`, NU rădăcină; marcaje certitudine la fiecare afirmație clinică (CEA/CA19-9 a jeun; ce medicamente nu se opresc); zero conținut redundant cu TODO/CONTEXT_MEDICAL (doar pointer reciproc).
+- Telefoane lipsă (Dr. Orbán + Dr. LAZA cabinet) explicit marcate `[NEGASIT]` cu instrucțiuni concrete pentru Roland să le obțină (931, Google, Pareri-medici) — NU presupun, NU inventez.
+
+**Fișiere modificate:** `Documente_Informative/GHID_TELEFOANE_27-04.md` (NOU) + `TODO.md` (1 paragraf adăugat la P0 telefoane) + `SESSION_LOG.md` (această intrare) + `CHANGELOG.md`.
+
+**NU s-a făcut backup R10:** TODO modificare = adăugare 1 paragraf, NU restructurare; SESSION_LOG/CHANGELOG = append-only istoric. Documentul nou nu cere backup.
+
+---
+
 ## 2026-04-26 19:06 — [Claude_Opus_4.7] ingest-mail-anater-26-04-reprogramare-consult (R27 — al doilea ingest incremental Gmail)
 
 **Scop:** user a anunțat „am un mail nou de la anater" — declanșat R27 ingest incremental. Mailul Dr. Anater 26.04 10:28 EEST a răspuns la cele 4 întrebări organizatorice ale lui Roland (25.04) + a **REPROGRAMAT consultul de la 30.04 la 4 mai 2026 (luni)** (motiv: aglomerație zi liberă 1 mai). Pipeline R27 propagat strict (corespondență → INDEX.md → CONTEXT_MEDICAL.md → TODO.md → DASHBOARD.html → ALIMENTATIE.md → CHANGELOG.md → INDEX.json).
