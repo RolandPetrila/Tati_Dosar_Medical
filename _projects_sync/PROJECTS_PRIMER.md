@@ -127,6 +127,8 @@ Dacă STATUS_SNAPSHOT contrazice CONTEXT_MEDICAL → **CONTEXT_MEDICAL prevaleaz
 
 **Frecvență realistă re-upload:** la decizii medicale majore (ingest mail medic, rezultat analize, modificare diagnostic) — nu zilnic pentru micro-edits.
 
+**✅ Workflow VALIDAT 28.04.2026:** drag & drop fișiere actualizate din `_projects_sync/` → deschide chat nou → conținut corect și complet (test: analize 29.04 cu CEA + CA 19-9 + HbA1c recunoscute corect). Chat-uri vechi nu se actualizează — deschide întotdeauna chat nou după re-upload.
+
 ---
 
 _Acest fișier e scris manual și nu e regenerat de script. Update-uri rare, când reguli noi sunt definite._
