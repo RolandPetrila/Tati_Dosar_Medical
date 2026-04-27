@@ -16,12 +16,12 @@
 
 ### Status dosar 4.05 după această sesiune
 
-| | Document |
-|---|---|
-| ✅ | CI + bilete trimitere + BCTAP + buletin endo/colono + buletin creatinină/uree + raport CT + CD DICOM |
-| 🔜 29.04 | Analize Bioclinica (CEA · CA 19-9 · HbA1c) |
-| 🔜 30.04 | Consult cardiologic → scrisoare + ECG + ECO + FEVS |
-| ⏳ | Rezultat biopsie (monitor activ ntfy.sh) |
+|          | Document                                                                                             |
+| -------- | ---------------------------------------------------------------------------------------------------- |
+| ✅       | CI + bilete trimitere + BCTAP + buletin endo/colono + buletin creatinină/uree + raport CT + CD DICOM |
+| 🔜 29.04 | Analize Bioclinica (CEA · CA 19-9 · HbA1c)                                                           |
+| 🔜 30.04 | Consult cardiologic → scrisoare + ECG + ECO + FEVS                                                   |
+| ⏳       | Rezultat biopsie (monitor activ ntfy.sh)                                                             |
 
 ---
 
