@@ -6,6 +6,23 @@
 
 ---
 
+## 2026-04-27 — [Claude_Sonnet_4.6] update-programari-29-04-analize-30-04-cardiologic-dosar-oncohelp-4-05 (R16 + TODO)
+
+**Scop:** confirmare programări Roland (analize sânge Bioclinica 29.04 + consult cardiologic 30.04) + actualizare TODO.md pentru dosar complet OncoHelp 4.05.2026.
+
+**Fișiere modificate:**
+
+- `TODO.md` (calendar + P0 telefoane + cronologie revizuită + componente dosar — programări marcate ✅)
+- `SESSION_LOG.md` (această intrare)
+
+**Confirmate 27.04:** analize sânge Bioclinica 29.04 ✅ · consult cardiologic 30.04 ✅
+
+**Confirmat 28.04:** bilete trimitere Dr. Orbán obținute (oncologie + cardiologie) ✅ · CEA + CA 19-9 confirmate în analize Bioclinica 29.04 ✅ · HbA1c adăugat la analize ✅ · CD DICOM Genesis la dosar ✅
+
+**Fișier nou creat:** `Documente_Informative/GHID_CARDIOLOG_30-04.md` — ghid operațional pentru consultul cardiologic 30.04 (ce aduci, ce spui, ce ceri: ECG + ECO + FEVS + aviz scris perioperator + 4 întrebări suplimentare)
+
+---
+
 ## 2026-04-27 01:30 — [Claude_Opus_4.7_1M] new-r30-sistem-sync-claude-projects-pentru-chat-web-mobil (R16 + R20)
 
 **Scop:** sistem nou pentru acces context medical de pe mobil când user nu e la laptop (chat Claude Projects). Setup mirror auto-sync local + drag&drop manual către Project knowledge (limită Max).
@@ -13,7 +30,7 @@
 **Fișiere create:**
 
 - `scripts/regen_projects_sync.py` (~170 linii Python — mirror 6 fișiere sursă + generează STATUS_SNAPSHOT.md prin extragere regex + git log)
-- `.git/hooks/pre-commit` (POSIX shell — detectează staged changes pe fișiere sursă, rulează scriptul, git add _projects_sync/)
+- `.git/hooks/pre-commit` (POSIX shell — detectează staged changes pe fișiere sursă, rulează scriptul, git add \_projects_sync/)
 - `_projects_sync/PROJECTS_PRIMER.md` (manual — instrucțiuni operaționale Claude Projects)
 - `_projects_sync/STATUS_SNAPSHOT.md` (auto-generat)
 - `_projects_sync/{6 mirror copies}` (CONTEXT_MEDICAL, TODO, REGULAMENT, INDEX.json, CONTACTE_MEDICALE, EXPLICATIE_CONSULT_ONCOLOG_SCENARII)

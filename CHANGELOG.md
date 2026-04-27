@@ -4,6 +4,27 @@
 
 ---
 
+## 2026-04-28 — UPDATE — Confirmare programări dosar OncoHelp 4.05 + ghid cardiolog 30.04
+
+**Tip:** UPDATE dosar + document informativ nou
+
+### Modificări
+
+- **`TODO.md`** — calendar + P0 actualizat: programări confirmate (analize Bioclinica 29.04 · cardiolog 30.04), bilete trimitere Dr. Orbán obținute ✅, CEA + CA 19-9 + HbA1c confirmate în analize, CD DICOM la dosar ✅
+- **`Documente_Informative/GHID_CARDIOLOG_30-04.md`** — NOU: ghid operațional pentru consultul cardiologic 30.04 (ce aduci, fraza cheie, ce ceri: ECG + ECO + FEVS + aviz scris perioperator, 4 întrebări suplimentare, tabel semnificații FEVS, notă Aspenter + stent)
+- **`SESSION_LOG.md`** — intrare sesiune 28.04
+
+### Status dosar 4.05 după această sesiune
+
+| | Document |
+|---|---|
+| ✅ | CI + bilete trimitere + BCTAP + buletin endo/colono + buletin creatinină/uree + raport CT + CD DICOM |
+| 🔜 29.04 | Analize Bioclinica (CEA · CA 19-9 · HbA1c) |
+| 🔜 30.04 | Consult cardiologic → scrisoare + ECG + ECO + FEVS |
+| ⏳ | Rezultat biopsie (monitor activ ntfy.sh) |
+
+---
+
 ## 2026-04-27 01:30 — NEW R30 — Sistem sync Claude Projects (chat web/mobil) + pre-commit hook auto-regen
 
 **Tip:** ENHANCEMENT — feature nou pentru acces context medical de pe mobil când Roland nu e la laptop (consult oncolog 4.05.2026 OncoHelp Timișoara apropiat; deciziile critice apar și în week-end / deplasări).
