@@ -8,6 +8,22 @@
 
 ## Changelog versiuni
 
+### 2026-04-28 v12.4 — Cleanup post-PLAN: arhivare kit inițial v1 (L1)
+
+**Trigger:** AUDIT FINAL `2026-04-28_131500` (scor 95/100) a confirmat L1 pendant din audit anterior 03:19 — `Documentatie_Initiala/CLAUDE.md` kit inițial v1 (5.7 KB) auto-load redundant când Claude atinge folderul, conține referințe pre-v12 obsolete (foldere `interpretari/` inexistente).
+
+**Modificări:**
+
+- `Documentatie_Initiala/CLAUDE.md` → `Documentatie_Initiala/INSTRUCTIUNI_INITIALE_v1_archived.md` (git rename — istoric păstrat)
+- Conținutul rămâne accesibil pentru referință istorică, dar NU mai e auto-loaded contextual (numele nu mai e `CLAUDE.md`)
+- Beneficiu: ~1500 tokens economiseți la auto-load când Claude lucrează în `Documentatie_Initiala/`
+
+**Notă:** acest fișier (kit inițial v1) datează din 2026-04-17, înainte de restructurarea v12 (2026-04-23). De la v12, regulile efective sunt în `CLAUDE.md` root + `REGULI_CLAUDE_CODE.md` + nested CLAUDE.md (Dosar_Medical/, Documente_Informative/). Kit inițial v1 = relicvă istorică păstrată pentru context auditat.
+
+**Pereche:** L2 cleanup în același commit — `AUDIT_EXTRAGERE_2026-04-24.md` + `AUDIT_EXTRAGERE_2026-04-26.md` mutate în `Dosar_Medical/arhiva/audituri_extragere/` (igienă R21 — ambele rapoarte COMPLETED).
+
+---
+
 ### 2026-04-23 v12 — Restructurare arhitectură CLAUDE.md
 
 **Trigger:** avertisment Claude Code „Large CLAUDE.md will impact performance (43.4k chars > 40.0k)".

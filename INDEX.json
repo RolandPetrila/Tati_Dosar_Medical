@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-04-28T12:55:27",
+  "generated_at": "2026-04-28T13:29:51",
   "version": "1.0",
   "stats": {
-    "total_files_indexed": 156,
+    "total_files_indexed": 154,
     "medici_oncohelp": 3,
     "threaduri_gmail": 6,
     "documente_canonice": 21,
@@ -421,12 +421,14 @@
       "Documente_Informative/CLAUDE.md",
       "_projects_sync/CONTEXT_MEDICAL.md",
       "_projects_sync/TODO.md",
+      "_projects_sync/CONTACTE_MEDICALE.md",
       "_projects_sync/STATUS_SNAPSHOT.md",
       "Dosar_Medical/documente_sursa/02_cardiologie_2012/2012-02-17_cardiologie_vichy_stent_extragere.md",
       "Dosar_Medical/documente_sursa/15_consult_initial_oncologie_2026/2026-04-28_opis_consult_initial_oncohelp_extragere.md",
+      "INDEX.json",
+      "_projects_sync/INDEX.json",
       "Dosar_Medical/rapoarte_generate/2026-04-19_ghid_cancer_esofagian_complet.meta.json",
-      "Dosar_Medical/rapoarte_generate/2026-04-22_explicatie_consult_oncolog_scenarii.meta.json",
-      "Dosar_Medical/documente_sursa/15_consult_initial_oncologie_2026/2026-04-28_opis_consult_initial_oncohelp.pdf.meta.json"
+      "Dosar_Medical/rapoarte_generate/2026-04-22_explicatie_consult_oncolog_scenarii.meta.json"
     ],
     "Vornicu": [
       "SESSION_LOG.md",
@@ -436,6 +438,7 @@
       "REGULI_CLAUDE_CODE.md",
       "PLAN_IMPLEMENTARE_2026-04-25.md",
       "PLAN_IMPLEMENTARE_2026-04-28.md",
+      "EXECUTOR_AUDIT_LOG_2026-04-28.md",
       "Dosar_Medical/CONTACTE_MEDICALE.md",
       "_projects_sync/CONTEXT_MEDICAL.md",
       "_projects_sync/TODO.md",
@@ -536,30 +539,20 @@
       "size_kb": 33.6,
       "last_modified": "2026-04-27T02:04:15"
     },
-    "AUDIT_EXTRAGERE_2026-04-24.md": {
-      "type": "md",
-      "size_kb": 28.3,
-      "last_modified": "2026-04-24T02:32:57"
-    },
     "PLAN_IMPLEMENTARE_2026-04-25.md": {
       "type": "md",
       "size_kb": 52.4,
       "last_modified": "2026-04-26T01:37:12"
     },
-    "AUDIT_EXTRAGERE_2026-04-26.md": {
-      "type": "md",
-      "size_kb": 20.1,
-      "last_modified": "2026-04-26T01:40:10"
-    },
     "PLAN_IMPLEMENTARE_2026-04-28.md": {
       "type": "md",
-      "size_kb": 28.0,
-      "last_modified": "2026-04-28T12:45:20"
+      "size_kb": 28.4,
+      "last_modified": "2026-04-28T13:11:01"
     },
     "EXECUTOR_AUDIT_LOG_2026-04-28.md": {
       "type": "md",
-      "size_kb": 33.4,
-      "last_modified": "2026-04-28T12:45:28"
+      "size_kb": 51.5,
+      "last_modified": "2026-04-28T13:11:31"
     },
     "Dosar_Medical/PLAN_audit_remediere_v2_2026-04-18.md": {
       "type": "md",
@@ -589,14 +582,14 @@
     "Dosar_Medical/AUDIT_DOCUMENTE_SURSA.md": {
       "type": "md",
       "size_kb": 1.5,
-      "last_modified": "2026-04-28T12:36:05"
+      "last_modified": "2026-04-28T12:55:34"
     },
     "Documentatie_Initiala/README.md": {
       "type": "md",
       "size_kb": 2.0,
       "last_modified": "2026-04-17T15:26:14"
     },
-    "Documentatie_Initiala/CLAUDE.md": {
+    "Documentatie_Initiala/INSTRUCTIUNI_INITIALE_v1_archived.md": {
       "type": "md",
       "size_kb": 5.7,
       "last_modified": "2026-04-17T15:26:14"
@@ -683,8 +676,8 @@
     },
     "Documentatie_Initiala/ROADMAP_POST_2026-04-28.md": {
       "type": "md",
-      "size_kb": 10.6,
-      "last_modified": "2026-04-28T12:54:58"
+      "size_kb": 10.2,
+      "last_modified": "2026-04-28T12:55:22"
     },
     "Documente_Informative/GHID_CONSULT_ONCOLOG.md": {
       "type": "md",
@@ -738,8 +731,8 @@
     },
     "_projects_sync/CONTACTE_MEDICALE.md": {
       "type": "md",
-      "size_kb": 17.3,
-      "last_modified": "2026-04-26T22:25:50"
+      "size_kb": 20.2,
+      "last_modified": "2026-04-28T12:53:51"
     },
     "_projects_sync/EXPLICATIE_CONSULT_ONCOLOG_SCENARII.md": {
       "type": "md",
@@ -749,7 +742,7 @@
     "_projects_sync/STATUS_SNAPSHOT.md": {
       "type": "md",
       "size_kb": 26.2,
-      "last_modified": "2026-04-28T12:42:21"
+      "last_modified": "2026-04-28T12:57:48"
     },
     "Dosar_Medical/cercetari/SINTEZA_CLINICI_ONCOLOGIE.md": {
       "type": "md",
@@ -888,8 +881,8 @@
     },
     "INDEX.json": {
       "type": "json",
-      "size_kb": 40.0,
-      "last_modified": "2026-04-28T12:40:20"
+      "size_kb": 42.6,
+      "last_modified": "2026-04-28T12:55:27"
     },
     "Dosar_Medical/2012-02-17_cardiologie_vichy_stent.json": {
       "type": "json",
@@ -1089,7 +1082,7 @@
     "Dosar_Medical/SYSTEM_HEALTH.json": {
       "type": "json",
       "size_kb": 3.5,
-      "last_modified": "2026-04-28T12:40:25"
+      "last_modified": "2026-04-28T12:55:33"
     },
     "Dosar_Medical/2026-04-17_biopsie_esofagiana_histopatologic.json": {
       "type": "json",
@@ -1103,8 +1096,8 @@
     },
     "_projects_sync/INDEX.json": {
       "type": "json",
-      "size_kb": 40.0,
-      "last_modified": "2026-04-28T12:40:20"
+      "size_kb": 42.6,
+      "last_modified": "2026-04-28T12:55:27"
     },
     "schemas/dosar_medical_v2.json": {
       "type": "json",
