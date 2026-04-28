@@ -1,5 +1,5 @@
 {
-  "checked_at": "2026-04-28T14:21:48",
+  "checked_at": "2026-04-28T15:23:33",
   "status": "🟢 OK",
   "limits": {
     "claude_md_size_kb": {
@@ -9,16 +9,16 @@
       "status": "🟢 OK"
     },
     "memory_md_lines": {
-      "current": 25,
+      "current": 27,
       "limit": 200,
-      "percent": 12.5,
+      "percent": 13.5,
       "status": "🟢 OK"
     },
     "memory_md_path": "C:\\Users\\ALIENWARE\\.claude\\projects\\G--My-Drive-Roly--Tati\\memory\\MEMORY.md",
     "auto_loaded_md_kb": {
-      "current": 83.1,
+      "current": 83.7,
       "limit": 150,
-      "percent": 55.4,
+      "percent": 55.8,
       "status": "🟢 OK",
       "breakdown": [
         {
@@ -31,7 +31,7 @@
         },
         {
           "path": "REGULI_CLAUDE_CODE.md",
-          "size_kb": 33.6
+          "size_kb": 34.2
         },
         {
           "path": "Dosar_Medical/CLAUDE.md",
@@ -45,12 +45,20 @@
       "note": "suma fișierelor auto-loaded la pornire sesiune (CLAUDE.md root + REGULAMENT + REGULI + nested CLAUDE.md). Pragul 150 KB e alertă reală pentru risc context window."
     },
     "total_md_root_kb": {
-      "current": 735.4,
+      "current": 742.5,
       "note": "informativ — suma brută `.md` la rădăcină; include logs istorice (CHANGELOG, SESSION_LOG) care NU sunt auto-loaded. Pentru alertă reală vezi `auto_loaded_md_kb`. Demotează 2026-04-26 (ticket P2 închis)."
     },
     "largest_files": [
       {
         "path": "DASHBOARD.html",
+        "size_kb": 228.5
+      },
+      {
+        "path": "Dosar_Medical/arhiva/context_medical_versiuni/DASHBOARD_pre-telefon-noufal-si-tab-dosar_2026-04-28_1442.html",
+        "size_kb": 199.7
+      },
+      {
+        "path": "Dosar_Medical/arhiva/context_medical_versiuni/DASHBOARD_pre-tab-antecedente-si-update-clinic_2026-04-28_1422.html",
         "size_kb": 194.3
       },
       {
@@ -70,41 +78,40 @@
         "size_kb": 173.8
       },
       {
+        "path": "CHANGELOG.md",
+        "size_kb": 172.6
+      },
+      {
         "path": "Dosar_Medical/arhiva/context_medical_versiuni/DASHBOARD_pre-ingest-mail-anater-26-04_2026-04-26_1906.html",
         "size_kb": 170.1
       },
       {
-        "path": "CHANGELOG.md",
-        "size_kb": 168.8
-      },
-      {
         "path": "Dosar_Medical/arhiva/context_medical_versiuni/DASHBOARD_pre-fix-cors-tab-echipa_2026-04-26_0105.html",
         "size_kb": 129.8
-      },
-      {
-        "path": "Dosar_Medical/arhiva/context_medical_versiuni/CHANGELOG_pre-trimitere-mail-anater_2026-04-25_1826.md",
-        "size_kb": 129.6
-      },
-      {
-        "path": "Dosar_Medical/arhiva/context_medical_versiuni/DASHBOARD_pre-tab-echipa-search_2026-04-25_1932.html",
-        "size_kb": 121.7
       }
     ],
-    "files_over_limit": [],
+    "files_over_limit": [
+      {
+        "path": "DASHBOARD.html",
+        "size_kb": 228.5
+      }
+    ],
     "index_json_size_kb": {
-      "current": 42.4,
+      "current": 57.4,
       "limit": 1024,
-      "percent": 4.1,
+      "percent": 5.6,
       "status": "🟢 OK"
     },
     "context_tokens_estimate": {
-      "current": 27356,
+      "current": 27547,
       "limit": 200000,
-      "percent": 13.7,
+      "percent": 13.8,
       "status": "🟢 OK",
       "note": "estimat pe AUTO_LOADED_FILES (5 fișiere: CLAUDE.md root + REGULAMENT + REGULI + nested CLAUDE.md). Read-uri ad-hoc, MEMORY.md auto-injection, sistem-reminders nu sunt incluse — context real e mai mare."
     }
   },
-  "recommendations": [],
+  "recommendations": [
+    "📄 Fișier mare: DASHBOARD.html (228.5KB) — propune sharding"
+  ],
   "version": "1.0"
 }

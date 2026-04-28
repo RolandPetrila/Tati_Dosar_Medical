@@ -1,8 +1,8 @@
 # STATUS SNAPSHOT — Petrilă Viorel-Mihai
 
-**Generat automat:** 2026-04-28 14:36
-**Ultim commit git:** `306fbe5` (2026-04-28 13:39:48 +0300)
-**Mesaj commit:** [AUDIT POST-FINAL 2026-04-28] Verificări suplimentare — 3 remedieri + 2 confirmări (🟢 ALL CLEAR)
+**Generat automat:** 2026-04-28 15:24
+**Ultim commit git:** `4587832` (2026-04-28 14:44:09 +0300)
+**Mesaj commit:** update DOCX biopsie cu fir narativ unic + persistare stil A+B+C
 **Sursă de adevăr:** fișierele originale din proiect `.Tati`. Acest snapshot e mirror sintetic generat de `scripts/regen_projects_sync.py` pentru chat Claude Projects (web/mobil).
 
 > **Ordine consultare în chat:** STATUS_SNAPSHOT.md (aici) → CONTEXT_MEDICAL.md (detaliu clinic) → TODO.md (calendar) → CONTACTE_MEDICALE.md (medici) → REGULAMENT.md (reguli) → INDEX.json (index documente) → EXPLICATIE_CONSULT_ONCOLOG_SCENARII.md (glosar + scenarii prognostice).

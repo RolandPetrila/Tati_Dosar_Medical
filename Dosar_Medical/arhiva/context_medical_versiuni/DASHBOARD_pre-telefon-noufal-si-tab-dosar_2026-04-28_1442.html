@@ -596,129 +596,6 @@
         background: #ddf4ff;
         color: #0969da;
       }
-      /* === DOSAR MEDICAL — carduri documente === */
-      .card-doc {
-        border: 1px solid #d0d7de;
-        border-radius: 8px;
-        padding: 14px 16px;
-        margin: 10px 0;
-        background: white;
-        cursor: pointer;
-        transition:
-          box-shadow 0.15s ease,
-          border-color 0.15s ease;
-      }
-      .card-doc:hover {
-        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
-        border-color: #0969da;
-      }
-      .card-doc.expanded {
-        background: #f6f8fa;
-        cursor: default;
-      }
-      .card-doc-header {
-        display: flex;
-        justify-content: space-between;
-        align-items: flex-start;
-        gap: 12px;
-        flex-wrap: wrap;
-      }
-      .card-doc-title {
-        margin: 0 0 4px 0;
-        color: #0969da;
-        font-size: 1.05em;
-        font-weight: 600;
-      }
-      .card-doc-meta {
-        font-size: 0.85em;
-        color: #57606a;
-        margin: 0 0 8px 0;
-      }
-      .card-doc-badge {
-        display: inline-block;
-        padding: 3px 10px;
-        border-radius: 12px;
-        font-size: 0.78em;
-        font-weight: 500;
-        background: #ddf4ff;
-        color: #0550ae;
-        white-space: nowrap;
-      }
-      .card-doc-badge.cat-cardio {
-        background: #ffebeb;
-        color: #cf222e;
-      }
-      .card-doc-badge.cat-onco {
-        background: #fff1cc;
-        color: #9a6700;
-      }
-      .card-doc-badge.cat-imag {
-        background: #ddf4ff;
-        color: #0550ae;
-      }
-      .card-doc-badge.cat-lab {
-        background: #dcffe4;
-        color: #1a7f37;
-      }
-      .card-doc-badge.cat-chir {
-        background: #fbe5fb;
-        color: #8250df;
-      }
-      .card-doc-badge.cat-admin {
-        background: #eaeef2;
-        color: #57606a;
-      }
-      .card-doc-preview {
-        font-size: 0.9em;
-        color: #24292f;
-        line-height: 1.5;
-        margin: 6px 0 0 0;
-      }
-      .card-doc-actions {
-        margin-top: 10px;
-        font-size: 0.85em;
-        color: #0969da;
-        font-weight: 500;
-      }
-      .card-doc-content {
-        margin-top: 12px;
-        padding-top: 12px;
-        border-top: 1px dashed #d0d7de;
-        font-size: 0.95em;
-        line-height: 1.6;
-        animation: fadein 0.2s ease;
-      }
-      .card-doc-content h1,
-      .card-doc-content h2,
-      .card-doc-content h3 {
-        color: #0969da;
-        margin-top: 16px;
-        margin-bottom: 8px;
-      }
-      .card-doc-content table {
-        font-size: 0.9em;
-      }
-      .card-doc-content blockquote {
-        border-left: 3px solid #0969da;
-        background: #f6f8fa;
-        padding: 8px 14px;
-        margin: 8px 0;
-        color: #24292f;
-      }
-      .card-doc-status-banner {
-        padding: 6px 10px;
-        background: #fff8c5;
-        border-left: 3px solid #bf8700;
-        border-radius: 4px;
-        font-size: 0.85em;
-        margin-bottom: 10px;
-        color: #633c01;
-      }
-      .card-doc-status-banner.live {
-        background: #dcffe4;
-        border-left-color: #1a7f37;
-        color: #0d4824;
-      }
       .tab-panel {
         display: none;
       }
@@ -1101,9 +978,6 @@
         </button>
         <button class="tab-btn" data-tab="antecedente" role="tab">
           📋 Antecedente
-        </button>
-        <button class="tab-btn" data-tab="dosar" role="tab">
-          📁 Dosar medical
         </button>
         <button class="tab-btn" data-tab="echipa" role="tab">
           👥 Echipă medicală
@@ -1637,12 +1511,7 @@
                 </tr>
                 <tr>
                   <td>Gastroenterologie (endoscopie 17.04.2026)</td>
-                  <td>
-                    Dr. Noufal Abdul Vahab (cod C 11074, medic primar) ·
-                    <a href="tel:+40735447449" class="medic-link"
-                      >📞 0735 447 449</a
-                    >
-                  </td>
+                  <td>Dr. Noufal Abdul Vahab (cod C 11074, medic primar)</td>
                   <td>Genesis Medical Clinic Arad</td>
                 </tr>
                 <tr>
@@ -2364,44 +2233,6 @@
         </div>
       </section>
       <!-- /panel-alimentatie -->
-
-      <section class="tab-panel" id="panel-dosar" role="tabpanel">
-        <div class="card wide">
-          <h2>📁 Dosar medical — toate documentele</h2>
-          <p class="meta">
-            Listă cronologică (cel mai recent sus) a tuturor extragerilor MD din
-            dosar. Click pe card → conținut integral inline. Sursa:
-            <code
-              >Dosar_Medical/documente_sursa/NN_categorie/*_extragere.md</code
-            >
-            via <code>INDEX.json</code> (R18 sync auto). Originalele PDF/JPEG
-            sunt în același folder pe Drive.
-          </p>
-          <input
-            type="text"
-            id="search-dosar"
-            placeholder="🔍 Caută în titlu / categorie / preview..."
-            style="
-              width: 100%;
-              padding: 10px;
-              margin: 12px 0;
-              border: 1px solid #d0d7de;
-              border-radius: 6px;
-              font-size: 1em;
-              box-sizing: border-box;
-            "
-            aria-label="Caută în dosar medical"
-          />
-          <div id="dosar-cards"></div>
-          <p class="meta" style="margin-top: 16px; font-size: 0.85em">
-            Conținutul integral se încarcă <strong>LIVE</strong> la deschidere
-            (fetch MD per card). Pe <code>file://</code> încărcarea live e
-            blocată de browser → afișez badge cu cale absolută Drive pentru
-            deschidere directă.
-          </p>
-        </div>
-      </section>
-      <!-- /panel-dosar -->
 
       <footer class="bottom">
         <div>
@@ -3200,14 +3031,13 @@
 
     <script type="application/json" id="dashboard-index">
       {
-        "generated_at": "2026-04-28T15:17:18",
-        "version": "1.1",
+        "generated_at": "2026-04-28T13:29:51",
+        "version": "1.0",
         "stats": {
-          "total_files_indexed": 155,
+          "total_files_indexed": 154,
           "medici_oncohelp": 3,
           "threaduri_gmail": 6,
           "documente_canonice": 21,
-          "documente_pentru_dashboard": 18,
           "atasamente_listate": 0
         },
         "medici_oncohelp": [
@@ -3577,264 +3407,6 @@
             "file": "Dosar_Medical/2026-04-17_biopsie_esofagiana_histopatologic.json"
           }
         ],
-        "documente_pentru_dashboard": [
-          {
-            "id": "2026-04-28_opis_consult_initial_oncohelp",
-            "titlu": "Documentele necesare la primul consult la Oncologie (per OPIS oficial)",
-            "data": "2026-04-28",
-            "categorie_id": "15_consult_initial_oncologie_2026",
-            "categorie_label": "Consult inițial OncoHelp (30.04.2026)",
-            "md_path": "Dosar_Medical/documente_sursa/15_consult_initial_oncologie_2026/2026-04-28_opis_consult_initial_oncohelp_extragere.md",
-            "size_kb": 7.0,
-            "preview": "Documentele necesare la primul consult la Oncologie (per OPIS oficial) · 1. Bilet de trimitere către Oncologie 2. Buletin (carte de identitate) 3. Card de sănătate 4. Adeverință de salariat (de la locul de muncă) SAU…",
-            "json_paths": []
-          },
-          {
-            "id": "2026-04-20_ct_torace_abdomen_pelvis",
-            "titlu": "CT torace abdomen pelvis (20.04.2026)",
-            "data": "2026-04-20",
-            "categorie_id": "11_CT_stadializare_2026",
-            "categorie_label": "CT stadializare (20.04.2026)",
-            "md_path": "Dosar_Medical/documente_sursa/11_CT_stadializare_2026/2026-04-20_ct_torace_abdomen_pelvis_extragere.md",
-            "size_kb": 6.1,
-            "preview": "1. METADATE DOCUMENT · • Fișier sursă: 2026-04-20_ct_torace_abdomen_pelvis.pdf (redenumit 2026-04-28 din CT - Genesys.pdf) • Tip document: Raport examinare CT torace + abdomen + pelvis, nativ și cu substanță de contrast…",
-            "json_paths": [
-              "Dosar_Medical/2026-04-20_ct_torace_abdomen_pelvis.json"
-            ]
-          },
-          {
-            "id": "2026-04-17_buletin_bioclinica_uree_creatinina",
-            "titlu": "Buletin bioclinica uree creatinina (17.04.2026)",
-            "data": "2026-04-17",
-            "categorie_id": "05_analize_laborator",
-            "categorie_label": "Analize laborator",
-            "md_path": "Dosar_Medical/documente_sursa/05_analize_laborator/2026-04-17_buletin_bioclinica_uree_creatinina_extragere.md",
-            "size_kb": 5.0,
-            "preview": "1. METADATE DOCUMENT · • Fișier sursă: Bioclinica.jpeg • Tip document: Buletin de analize medicale (uree + creatinină) • Număr pagini procesate: 1 (JPEG, pagina 1/1) • AI executor: Claude Opus 4.7 • Data extragerii:…",
-            "json_paths": [
-              "Dosar_Medical/2026-04-17_buletin_bioclinica_uree_creatinina.json",
-              "Dosar_Medical/2026-04-17_bilet_trimitere_CT.json",
-              "Dosar_Medical/2026-04-17_examen_gastroscopic.json",
-              "Dosar_Medical/2026-04-17_examen_colonoscopic.json",
-              "Dosar_Medical/2026-04-17_biopsie_esofagiana_histopatologic.json"
-            ]
-          },
-          {
-            "id": "2026-04-17_examen_colonoscopic",
-            "titlu": "Examen colonoscopic (17.04.2026)",
-            "data": "2026-04-17",
-            "categorie_id": "09_endoscopie_2026_04",
-            "categorie_label": "Endoscopie (17.04.2026)",
-            "md_path": "Dosar_Medical/documente_sursa/09_endoscopie_2026_04/2026-04-17_examen_colonoscopic_extragere.md",
-            "size_kb": 3.0,
-            "preview": "1. METADATE DOCUMENT · • Fișier sursă: Examen_Colonoscopic.jpeg • Tip document: Buletin pentru examen colonoscopic • Număr pagini procesate: 1 (JPEG, orientare rotită la 90°) • AI executor: Claude Opus 4.7 • Data…",
-            "json_paths": [
-              "Dosar_Medical/2026-04-17_buletin_bioclinica_uree_creatinina.json",
-              "Dosar_Medical/2026-04-17_bilet_trimitere_CT.json",
-              "Dosar_Medical/2026-04-17_examen_gastroscopic.json",
-              "Dosar_Medical/2026-04-17_examen_colonoscopic.json",
-              "Dosar_Medical/2026-04-17_biopsie_esofagiana_histopatologic.json"
-            ]
-          },
-          {
-            "id": "2026-04-17_examen_gastroscopic",
-            "titlu": "Examen gastroscopic (17.04.2026)",
-            "data": "2026-04-17",
-            "categorie_id": "09_endoscopie_2026_04",
-            "categorie_label": "Endoscopie (17.04.2026)",
-            "md_path": "Dosar_Medical/documente_sursa/09_endoscopie_2026_04/2026-04-17_examen_gastroscopic_extragere.md",
-            "size_kb": 2.6,
-            "preview": "1. METADATE DOCUMENT · • Fișier sursă: Examen_Gastroscopic.jpeg • Tip document: Buletin pentru examen gastroscopic • Număr pagini procesate: 1 (JPEG) • AI executor: Claude Opus 4.7 • Data extragerii: 2026-04-20 •…",
-            "json_paths": [
-              "Dosar_Medical/2026-04-17_buletin_bioclinica_uree_creatinina.json",
-              "Dosar_Medical/2026-04-17_bilet_trimitere_CT.json",
-              "Dosar_Medical/2026-04-17_examen_gastroscopic.json",
-              "Dosar_Medical/2026-04-17_examen_colonoscopic.json",
-              "Dosar_Medical/2026-04-17_biopsie_esofagiana_histopatologic.json"
-            ]
-          },
-          {
-            "id": "2026-04-17_bilet_trimitere_CT_BCTAP_0631727",
-            "titlu": "Bilet trimitere CT bctap 0631727 (17.04.2026)",
-            "data": "2026-04-17",
-            "categorie_id": "11_CT_stadializare_2026",
-            "categorie_label": "CT stadializare (20.04.2026)",
-            "md_path": "Dosar_Medical/documente_sursa/11_CT_stadializare_2026/2026-04-17_bilet_trimitere_CT_BCTAP_0631727_extragere.md",
-            "size_kb": 6.2,
-            "preview": "1. METADATE DOCUMENT · • Fișier sursă: Bilet_trimitere.jpeg • Tip document: Bilet de trimitere pentru investigații paraclinice decontate de CAS — servicii de înaltă performanță (CT) • Serie bilet: BCTAP • Număr bilet:…",
-            "json_paths": [
-              "Dosar_Medical/2026-04-17_buletin_bioclinica_uree_creatinina.json",
-              "Dosar_Medical/2026-04-17_bilet_trimitere_CT.json",
-              "Dosar_Medical/2026-04-17_examen_gastroscopic.json",
-              "Dosar_Medical/2026-04-17_examen_colonoscopic.json",
-              "Dosar_Medical/2026-04-17_biopsie_esofagiana_histopatologic.json"
-            ]
-          },
-          {
-            "id": "2026-04-17_biopsie_esofagiana_histopatologic",
-            "titlu": "Examen histopatologic — biopsie esofagiană (transcriere strict-extractivă)",
-            "data": "2026-04-17",
-            "categorie_id": "12_biopsie_2026",
-            "categorie_label": "Biopsie esofagiană (2026)",
-            "md_path": "Dosar_Medical/documente_sursa/12_biopsie_2026/2026-04-17_biopsie_esofagiana_histopatologic_extragere.md",
-            "size_kb": 3.2,
-            "preview": "Antet · BIOCLINICA · Pacient: PETRILA VIOREL MIHAI — M, 66 ani · • CNP: 1590518024486 • Data nașterii: 18.05.1959 • Adresa: STR Vasile Goldiș 42, Nădlac, Arad • Punct recoltare: 00003 Bioclinica Vlaicu · Buletin de…",
-            "json_paths": [
-              "Dosar_Medical/2026-04-17_buletin_bioclinica_uree_creatinina.json",
-              "Dosar_Medical/2026-04-17_bilet_trimitere_CT.json",
-              "Dosar_Medical/2026-04-17_examen_gastroscopic.json",
-              "Dosar_Medical/2026-04-17_examen_colonoscopic.json",
-              "Dosar_Medical/2026-04-17_biopsie_esofagiana_histopatologic.json"
-            ]
-          },
-          {
-            "id": "2025-11-28_scrisoare_medicala_anexa43",
-            "titlu": "Scrisoare medicala anexa43 (28.11.2025)",
-            "data": "2025-11-28",
-            "categorie_id": "07_hernie_2025_11",
-            "categorie_label": "Hernie (noiembrie 2025)",
-            "md_path": "Dosar_Medical/documente_sursa/07_hernie_2025_11/2025-11-28_scrisoare_medicala_anexa43_extragere.md",
-            "size_kb": 4.3,
-            "preview": "1. METADATE DOCUMENT · • Fișier sursă: Hernie municipal.pdf • Tip document: Scrisoare medicală — ANEXA 43 • Număr pagini procesate: 2 • AI executor: Claude Opus 4.7 • Data extragerii: 2026-04-20 • Pacient identificat:…",
-            "json_paths": [
-              "Dosar_Medical/2025-11-28_externare_chirurgie_hernie.json"
-            ]
-          },
-          {
-            "id": "2025-11-28_bilet_iesire_spital",
-            "titlu": "Bilet iesire spital (28.11.2025)",
-            "data": "2025-11-28",
-            "categorie_id": "07_hernie_2025_11",
-            "categorie_label": "Hernie (noiembrie 2025)",
-            "md_path": "Dosar_Medical/documente_sursa/07_hernie_2025_11/2025-11-28_bilet_iesire_spital_extragere.md",
-            "size_kb": 11.7,
-            "preview": "1. METADATE DOCUMENT · • Fișier sursă: Iesire din spital.pdf • Tip document: Bilet de ieșire din spital (ANEXA 43) • Număr pagini procesate: 2 • AI executor: Claude Opus 4.7 • Data extragerii: 2026-04-20 • Pacient…",
-            "json_paths": [
-              "Dosar_Medical/2025-11-28_externare_chirurgie_hernie.json"
-            ]
-          },
-          {
-            "id": "2025-11-10_schema_medicamente_manuscris",
-            "titlu": "Schema medicamente manuscris (10.11.2025)",
-            "data": "2025-11-10",
-            "categorie_id": "08_schema_tratament",
-            "categorie_label": "Schemă medicație",
-            "md_path": "Dosar_Medical/documente_sursa/08_schema_tratament/2025-11-10_schema_medicamente_manuscris_extragere.md",
-            "size_kb": 7.4,
-            "preview": "1. METADATE DOCUMENT · • Fișier sursă: Schema_medicamentatie_zilnica.jpeg • Tip document: Fotografie compozită — rețetă manuscrisă + 4 cutii de medicamente fotografiate alături • Număr imagini procesate: 1 (JPEG…",
-            "json_paths": [
-              "Dosar_Medical/2025-11-10_schema_medicamente.json",
-              "Dosar_Medical/2025-11-10_ecografie_transtoracica.json",
-              "Dosar_Medical/2025-11-10_scrisoare_medicala_cardiologie.json"
-            ]
-          },
-          {
-            "id": "2025-11-10_cardiologie_eco_scrisoare",
-            "titlu": "Cardiologie ECO scrisoare (10.11.2025)",
-            "data": "2025-11-10",
-            "categorie_id": "13_cardiologie_ambulator_2025",
-            "categorie_label": "Cardiologie ambulator (2025)",
-            "md_path": "Dosar_Medical/documente_sursa/13_cardiologie_ambulator_2025/2025-11-10_cardiologie_eco_scrisoare_extragere.md",
-            "size_kb": 10.7,
-            "preview": "1. METADATE DOCUMENT · • Fișier sursă: Cardiologie.pdf • Tip document: Document compus (2 pagini) — ecografie transtoracică (pag. 1) + scrisoare medicală cardiologie (pag. 2) • Număr pagini procesate: 2 • AI executor:…",
-            "json_paths": [
-              "Dosar_Medical/2025-11-10_schema_medicamente.json",
-              "Dosar_Medical/2025-11-10_ecografie_transtoracica.json",
-              "Dosar_Medical/2025-11-10_scrisoare_medicala_cardiologie.json"
-            ]
-          },
-          {
-            "id": "2025-11-01_talon_pensie",
-            "titlu": "Talon pensie (01.11.2025)",
-            "data": "2025-11-01",
-            "categorie_id": "10_administrativ_pensie",
-            "categorie_label": "Administrativ (pensie)",
-            "md_path": "Dosar_Medical/documente_sursa/10_administrativ_pensie/2025-11-01_talon_pensie_extragere.md",
-            "size_kb": 4.2,
-            "preview": "1. METADATE DOCUMENT · • Fișier sursă: Cupon_pensie.jpeg • Tip document: Talon mandat plată pensie • Număr pagini procesate: 1 (JPEG) • AI executor: Claude Opus 4.7 • Data extragerii: 2026-04-20 • Titular: PETRILA…",
-            "json_paths": [
-              "Dosar_Medical/2025-11-01_talon_pensie_asigurare.json"
-            ]
-          },
-          {
-            "id": "2025-10-28_scrisoare_urologie_eco_scrotala",
-            "titlu": "Scrisoare urologie ECO scrotala (28.10.2025)",
-            "data": "2025-10-28",
-            "categorie_id": "06_urologie_gastro_2025",
-            "categorie_label": "Urologie + gastro (2025)",
-            "md_path": "Dosar_Medical/documente_sursa/06_urologie_gastro_2025/2025-10-28_scrisoare_urologie_eco_scrotala_extragere.md",
-            "size_kb": 9.4,
-            "preview": "1. METADATE DOCUMENT · • Fișier sursă: Urologie 2025.pdf • Tip document: PDF compus — scrisoare medicală urologie (pag. 1) + ecografie scrotală (pag. 2) + talon pensie (pag. 3) + duplicate buletine endoscopice (pag.…",
-            "json_paths": [
-              "Dosar_Medical/2025-10-28_scrisoare_urologie_gastroenterologie.json"
-            ]
-          },
-          {
-            "id": "2025-06-17_buletin_analize_sange",
-            "titlu": "Buletin analize sange (17.06.2025)",
-            "data": "2025-06-17",
-            "categorie_id": "05_analize_laborator",
-            "categorie_label": "Analize laborator",
-            "md_path": "Dosar_Medical/documente_sursa/05_analize_laborator/2025-06-17_buletin_analize_sange_extragere.md",
-            "size_kb": 8.6,
-            "preview": "1. METADATE DOCUMENT · • Fișier sursă: Analize_2025.pdf • Tip document: Buletin de analize medicale (hematologie + biochimie + imunologie) • Număr pagini procesate: 2 • AI executor: Claude Opus 4.7 • Data extragerii:…",
-            "json_paths": [
-              "Dosar_Medical/2025-06-17_buletin_analize_sange.json"
-            ]
-          },
-          {
-            "id": "2024-06-04_si_2024-09-06_buletine_anti_hp_igg",
-            "titlu": "Si 2024-09-06 buletine ANTI HP IGG (04.06.2024)",
-            "data": "2024-06-04",
-            "categorie_id": "04_helicobacter_2024",
-            "categorie_label": "Helicobacter pylori (2024)",
-            "md_path": "Dosar_Medical/documente_sursa/04_helicobacter_2024/2024-06-04_si_2024-09-06_buletine_anti_hp_igg_extragere.md",
-            "size_kb": 6.7,
-            "preview": "1. METADATE DOCUMENT · • Fișier sursă: Heliobacter.pdf • Tip document: Două buletine de analize medicale (Anticorpi Anti Helicobacter Pylori IgG) • Număr pagini procesate: 2 (câte 1 buletin per pagină) • AI executor:…",
-            "json_paths": [
-              "Dosar_Medical/2024-06-04_anti_helicobacter_pylori_igg_77449.json"
-            ]
-          },
-          {
-            "id": "2024-05-30_dosar_upu_complet",
-            "titlu": "Dosar UPU complet (30.05.2024)",
-            "data": "2024-05-30",
-            "categorie_id": "14_UPU_2024_05_30",
-            "categorie_label": "UPU Arad (30.05.2024)",
-            "md_path": "Dosar_Medical/documente_sursa/14_UPU_2024_05_30/2024-05-30_dosar_upu_complet_extragere.md",
-            "size_kb": 23.0,
-            "preview": "1. METADATE DOCUMENT · • Fișier sursă: PDF 2024 - complet analize.pdf (unificare din 10 imagini JPEG stocate în folderul 2024_Gastro_Complet/) • Tip document: Dosar medical complet dintr-o prezentare la Urgență…",
-            "json_paths": [
-              "Dosar_Medical/2024-05-30_upu_consult_gastro_cardio.json",
-              "Dosar_Medical/2024-05-30_analize_upu_sange_1517243.json",
-              "Dosar_Medical/2024-05-30_analize_upu_urina_1517290.json"
-            ]
-          },
-          {
-            "id": "2023-06-12_carte_identitate",
-            "titlu": "Carte identitate (12.06.2023)",
-            "data": "2023-06-12",
-            "categorie_id": "01_identitate",
-            "categorie_label": "Identitate",
-            "md_path": "Dosar_Medical/documente_sursa/01_identitate/2023-06-12_carte_identitate_extragere.md",
-            "size_kb": 2.7,
-            "preview": "1. METADATE DOCUMENT · • Fișier sursă: C.I. - Petrila Viorel.pdf • Tip document: Carte de Identitate (CI) • Număr pagini procesate: 1 (PDF, față CI) • AI executor: Claude Opus 4.7 • Data extragerii: 2026-04-20 •…",
-            "json_paths": ["Dosar_Medical/2023-06-12_carte_identitate.json"]
-          },
-          {
-            "id": "2012-02-17_cardiologie_vichy_stent",
-            "titlu": "Cardiologie vichy stent (17.02.2012)",
-            "data": "2012-02-17",
-            "categorie_id": "02_cardiologie_2012",
-            "categorie_label": "Cardiologie (Vichy 2012)",
-            "md_path": "Dosar_Medical/documente_sursa/02_cardiologie_2012/2012-02-17_cardiologie_vichy_stent_extragere.md",
-            "size_kb": 16.5,
-            "preview": "Identificare pacient (per documentul original francez tradus) · • Nume: PETRILA VIOREL-MIHAI • Notă transcriere: în PDF figurează „PETRILA PETRILA VIOREL MIHAI\" — probabilă eroare de duplicare • CNP: 1590518024486 •…",
-            "json_paths": [
-              "Dosar_Medical/2012-02-17_cardiologie_vichy_stent.json"
-            ]
-          }
-        ],
         "cross_references": {
           "Anater": [
             "SESSION_LOG.md",
@@ -3849,14 +3421,14 @@
             "Dosar_Medical/CONTACTE_MEDICALE.md",
             "Documente_Informative/GHID_TELEFOANE_27-04.md",
             "Documente_Informative/GHID_CARDIOLOG_30-04.md",
-            "Documente_Informative/STIL_EXPLICATII_FAMILIE.md",
             "_projects_sync/PROJECTS_PRIMER.md",
             "_projects_sync/CONTEXT_MEDICAL.md",
             "_projects_sync/TODO.md",
             "_projects_sync/CONTACTE_MEDICALE.md",
             "_projects_sync/STATUS_SNAPSHOT.md",
             "Dosar_Medical/cercetari/2026-04-25_cercetare-oncohelp-vornicu-anater.md",
-            "Dosar_Medical/corespondenta/2026-04-22_solicitare-dr-cip-recomandare-lusca.md"
+            "Dosar_Medical/corespondenta/2026-04-22_solicitare-dr-cip-recomandare-lusca.md",
+            "Dosar_Medical/corespondenta/2026-04-23_solicitare-sprijin-oncohelp.md"
           ],
           "Mate": [
             "SESSION_LOG.md",
@@ -3869,7 +3441,6 @@
             "Dosar_Medical/CONTACTE_MEDICALE.md",
             "Documentatie_Initiala/ROADMAP_POST_2026-04-28.md",
             "Documente_Informative/CLAUDE.md",
-            "Documente_Informative/STIL_EXPLICATII_FAMILIE.md",
             "_projects_sync/CONTEXT_MEDICAL.md",
             "_projects_sync/TODO.md",
             "_projects_sync/CONTACTE_MEDICALE.md",
@@ -3878,7 +3449,8 @@
             "Dosar_Medical/documente_sursa/15_consult_initial_oncologie_2026/2026-04-28_opis_consult_initial_oncohelp_extragere.md",
             "INDEX.json",
             "_projects_sync/INDEX.json",
-            "Dosar_Medical/rapoarte_generate/2026-04-19_ghid_cancer_esofagian_complet.meta.json"
+            "Dosar_Medical/rapoarte_generate/2026-04-19_ghid_cancer_esofagian_complet.meta.json",
+            "Dosar_Medical/rapoarte_generate/2026-04-22_explicatie_consult_oncolog_scenarii.meta.json"
           ],
           "Vornicu": [
             "SESSION_LOG.md",
@@ -3890,7 +3462,6 @@
             "PLAN_IMPLEMENTARE_2026-04-28.md",
             "EXECUTOR_AUDIT_LOG_2026-04-28.md",
             "Dosar_Medical/CONTACTE_MEDICALE.md",
-            "Documente_Informative/STIL_EXPLICATII_FAMILIE.md",
             "_projects_sync/CONTEXT_MEDICAL.md",
             "_projects_sync/TODO.md",
             "_projects_sync/CONTACTE_MEDICALE.md",
@@ -3900,7 +3471,8 @@
             "Dosar_Medical/corespondenta/INDEX.md",
             "Dosar_Medical/documente_sursa/15_consult_initial_oncologie_2026/2026-04-28_opis_consult_initial_oncohelp_extragere.md",
             "INDEX.json",
-            "_projects_sync/INDEX.json"
+            "_projects_sync/INDEX.json",
+            "Dosar_Medical/documente_sursa/15_consult_initial_oncologie_2026/2026-04-28_opis_consult_initial_oncohelp.pdf.meta.json"
           ]
         },
         "files_by_path": {
@@ -3911,8 +3483,8 @@
           },
           "SESSION_LOG.md": {
             "type": "md",
-            "size_kb": 111.7,
-            "last_modified": "2026-04-28T14:43:15"
+            "size_kb": 109.2,
+            "last_modified": "2026-04-28T10:57:31"
           },
           "WEB_QUERIES.md": {
             "type": "md",
@@ -3941,8 +3513,8 @@
           },
           "STRUCTURA_PROIECT.md": {
             "type": "md",
-            "size_kb": 25.9,
-            "last_modified": "2026-04-28T14:20:21"
+            "size_kb": 23.9,
+            "last_modified": "2026-04-26T19:22:06"
           },
           "BAZA_CUNOSTINTE.md": {
             "type": "md",
@@ -3966,18 +3538,18 @@
           },
           "TODO.md": {
             "type": "md",
-            "size_kb": 46.0,
-            "last_modified": "2026-04-28T13:37:40"
+            "size_kb": 45.5,
+            "last_modified": "2026-04-28T12:39:48"
           },
           "CONTEXT_MEDICAL.md": {
             "type": "md",
             "size_kb": 75.0,
-            "last_modified": "2026-04-28T15:12:20"
+            "last_modified": "2026-04-28T12:28:51"
           },
           "CHANGELOG.md": {
             "type": "md",
-            "size_kb": 172.6,
-            "last_modified": "2026-04-28T14:42:57"
+            "size_kb": 168.8,
+            "last_modified": "2026-04-28T10:56:56"
           },
           "ALIMENTATIE.md": {
             "type": "md",
@@ -3986,8 +3558,8 @@
           },
           "REGULI_CLAUDE_CODE.md": {
             "type": "md",
-            "size_kb": 34.2,
-            "last_modified": "2026-04-28T14:40:35"
+            "size_kb": 33.6,
+            "last_modified": "2026-04-27T02:04:15"
           },
           "PLAN_IMPLEMENTARE_2026-04-25.md": {
             "type": "md",
@@ -4001,8 +3573,8 @@
           },
           "EXECUTOR_AUDIT_LOG_2026-04-28.md": {
             "type": "md",
-            "size_kb": 59.4,
-            "last_modified": "2026-04-28T13:39:20"
+            "size_kb": 51.5,
+            "last_modified": "2026-04-28T13:11:31"
           },
           "Dosar_Medical/PLAN_audit_remediere_v2_2026-04-18.md": {
             "type": "md",
@@ -4016,8 +3588,8 @@
           },
           "Dosar_Medical/CLAUDE.md": {
             "type": "md",
-            "size_kb": 24.5,
-            "last_modified": "2026-04-28T13:38:01"
+            "size_kb": 23.1,
+            "last_modified": "2026-04-28T12:03:22"
           },
           "Dosar_Medical/EXTRAGERI_INCOMPLETE.md": {
             "type": "md",
@@ -4032,7 +3604,7 @@
           "Dosar_Medical/AUDIT_DOCUMENTE_SURSA.md": {
             "type": "md",
             "size_kb": 1.5,
-            "last_modified": "2026-04-28T14:22:12"
+            "last_modified": "2026-04-28T12:55:34"
           },
           "Documentatie_Initiala/README.md": {
             "type": "md",
@@ -4121,8 +3693,8 @@
           },
           "Documentatie_Initiala/HISTORY_CLAUDE_MD.md": {
             "type": "md",
-            "size_kb": 11.1,
-            "last_modified": "2026-04-28T13:30:54"
+            "size_kb": 9.8,
+            "last_modified": "2026-04-23T03:31:25"
           },
           "Documentatie_Initiala/ROADMAP_POST_2026-04-28.md": {
             "type": "md",
@@ -4159,11 +3731,6 @@
             "size_kb": 6.0,
             "last_modified": "2026-04-28T00:18:20"
           },
-          "Documente_Informative/STIL_EXPLICATII_FAMILIE.md": {
-            "type": "md",
-            "size_kb": 9.5,
-            "last_modified": "2026-04-28T14:40:27"
-          },
           "_projects_sync/PROJECTS_PRIMER.md": {
             "type": "md",
             "size_kb": 8.3,
@@ -4176,8 +3743,8 @@
           },
           "_projects_sync/TODO.md": {
             "type": "md",
-            "size_kb": 46.0,
-            "last_modified": "2026-04-28T13:37:40"
+            "size_kb": 45.5,
+            "last_modified": "2026-04-28T12:39:48"
           },
           "_projects_sync/REGULAMENT.md": {
             "type": "md",
@@ -4197,7 +3764,7 @@
           "_projects_sync/STATUS_SNAPSHOT.md": {
             "type": "md",
             "size_kb": 26.2,
-            "last_modified": "2026-04-28T14:36:24"
+            "last_modified": "2026-04-28T12:57:48"
           },
           "Dosar_Medical/cercetari/SINTEZA_CLINICI_ONCOLOGIE.md": {
             "type": "md",
@@ -4336,8 +3903,8 @@
           },
           "INDEX.json": {
             "type": "json",
-            "size_kb": 57.4,
-            "last_modified": "2026-04-28T15:16:31"
+            "size_kb": 42.6,
+            "last_modified": "2026-04-28T12:55:27"
           },
           "Dosar_Medical/2012-02-17_cardiologie_vichy_stent.json": {
             "type": "json",
@@ -4537,7 +4104,7 @@
           "Dosar_Medical/SYSTEM_HEALTH.json": {
             "type": "json",
             "size_kb": 3.5,
-            "last_modified": "2026-04-28T14:21:48"
+            "last_modified": "2026-04-28T12:55:33"
           },
           "Dosar_Medical/2026-04-17_biopsie_esofagiana_histopatologic.json": {
             "type": "json",
@@ -4546,13 +4113,13 @@
           },
           ".claude/settings.local.json": {
             "type": "json",
-            "size_kb": 2.2,
-            "last_modified": "2026-04-28T14:26:51"
+            "size_kb": 2.0,
+            "last_modified": "2026-04-28T11:17:58"
           },
           "_projects_sync/INDEX.json": {
             "type": "json",
-            "size_kb": 42.4,
-            "last_modified": "2026-04-28T14:22:11"
+            "size_kb": 42.6,
+            "last_modified": "2026-04-28T12:55:27"
           },
           "schemas/dosar_medical_v2.json": {
             "type": "json",
@@ -4646,8 +4213,8 @@
           },
           "Dosar_Medical/documente_sursa/11_CT_stadializare_2026/2026-04-20_ct_torace_abdomen_pelvis.pdf.meta.json": {
             "type": "json",
-            "size_kb": 2.9,
-            "last_modified": "2026-04-28T13:37:20"
+            "size_kb": 2.7,
+            "last_modified": "2026-04-28T11:57:28"
           },
           "Dosar_Medical/documente_sursa/12_biopsie_2026/2026-04-17_biopsie_esofagiana_histopatologic.pdf.meta.json": {
             "type": "json",
@@ -4671,8 +4238,8 @@
           },
           "DASHBOARD.html": {
             "type": "html",
-            "size_kb": 199.9,
-            "last_modified": "2026-04-28T15:12:43"
+            "size_kb": 187.3,
+            "last_modified": "2026-04-28T12:51:40"
           },
           "index.html": {
             "type": "html",
@@ -5054,9 +4621,6 @@
             });
         }
 
-        // Expune getIndexData global pentru reutilizare în loadDosar (Tab Dosar medical)
-        window.getIndexData = getIndexData;
-
         getIndexData()
           .then(function (idx) {
             window.__medici_data = idx.medici_oncohelp || [];
@@ -5165,200 +4729,6 @@
         closeBq();
         return out.join("\n");
       }
-
-      // === DOSAR MEDICAL — listă documente cu expand inline (VERSIUNEA SLIM) ===
-      (function loadDosar() {
-        var container = document.getElementById("dosar-cards");
-        var searchInput = document.getElementById("search-dosar");
-        if (!container) return;
-
-        var CAT_BADGE_MAP = {
-          "02_cardiologie_2012": "cat-cardio",
-          "13_cardiologie_ambulator_2025": "cat-cardio",
-          "14_UPU_2024_05_30": "cat-cardio",
-          "11_CT_stadializare_2026": "cat-imag",
-          "09_endoscopie_2026_04": "cat-imag",
-          "12_biopsie_2026": "cat-onco",
-          "15_consult_initial_oncologie_2026": "cat-onco",
-          "04_helicobacter_2024": "cat-lab",
-          "05_analize_laborator": "cat-lab",
-          "06_urologie_gastro_2025": "cat-chir",
-          "07_hernie_2025_11": "cat-chir",
-          "01_identitate": "cat-admin",
-          "10_administrativ_pensie": "cat-admin",
-          "08_schema_tratament": "cat-admin",
-        };
-
-        function escapeHtml(s) {
-          return String(s == null ? "" : s)
-            .replace(/&/g, "&amp;")
-            .replace(/</g, "&lt;")
-            .replace(/>/g, "&gt;")
-            .replace(/"/g, "&quot;");
-        }
-
-        function formatData(iso) {
-          if (!iso) return "—";
-          var m = /^(\d{4})-(\d{2})-(\d{2})/.exec(iso);
-          if (!m) return iso;
-          return m[3] + "." + m[2] + "." + m[1];
-        }
-
-        function renderCard(d) {
-          var badgeClass = CAT_BADGE_MAP[d.categorie_id] || "cat-imag";
-          var jsonCount = d.json_paths ? d.json_paths.length : 0;
-          return (
-            '<div class="card-doc" data-md="' +
-            escapeHtml(d.md_path) +
-            '" data-id="' +
-            escapeHtml(d.id) +
-            '">' +
-            '<div class="card-doc-header">' +
-            "<div>" +
-            '<h3 class="card-doc-title">' +
-            escapeHtml(d.titlu) +
-            "</h3>" +
-            '<p class="card-doc-meta">' +
-            formatData(d.data) +
-            " · " +
-            escapeHtml(d.categorie_label) +
-            " · " +
-            d.size_kb +
-            " KB" +
-            (jsonCount > 0
-              ? " · " + jsonCount + " JSON canonic" + (jsonCount > 1 ? "e" : "")
-              : "") +
-            "</p>" +
-            "</div>" +
-            '<span class="card-doc-badge ' +
-            badgeClass +
-            '">' +
-            escapeHtml(d.categorie_label) +
-            "</span>" +
-            "</div>" +
-            '<p class="card-doc-preview">' +
-            escapeHtml(d.preview) +
-            "</p>" +
-            '<p class="card-doc-actions">📖 Click pentru a citi integral</p>' +
-            "</div>"
-          );
-        }
-
-        function renderList(filter) {
-          if (!window.__dosar_data) {
-            container.innerHTML =
-              '<p style="color:#cf222e;">⚠ INDEX.json încă nu s-a încărcat — rulează <code>python scripts/generate_index.py</code>.</p>';
-            return;
-          }
-          var f = (filter || "").toLowerCase().trim();
-          var filtered = f
-            ? window.__dosar_data.filter(function (d) {
-                return (
-                  (d.titlu && d.titlu.toLowerCase().indexOf(f) !== -1) ||
-                  (d.categorie_label &&
-                    d.categorie_label.toLowerCase().indexOf(f) !== -1) ||
-                  (d.preview && d.preview.toLowerCase().indexOf(f) !== -1) ||
-                  (d.data && d.data.indexOf(f) !== -1)
-                );
-              })
-            : window.__dosar_data;
-          if (!filtered.length) {
-            container.innerHTML =
-              '<p style="color:#57606a;">Niciun document potrivit pentru "<strong>' +
-              escapeHtml(filter) +
-              '</strong>".</p>';
-            return;
-          }
-          container.innerHTML = filtered.map(renderCard).join("");
-        }
-
-        function expandCard(cardEl) {
-          if (cardEl.classList.contains("expanded")) {
-            cardEl.classList.remove("expanded");
-            var existing = cardEl.querySelector(".card-doc-content");
-            if (existing) existing.remove();
-            var actions = cardEl.querySelector(".card-doc-actions");
-            if (actions)
-              actions.textContent = "📖 Click pentru a citi integral";
-            return;
-          }
-          cardEl.classList.add("expanded");
-          var actions = cardEl.querySelector(".card-doc-actions");
-          if (actions) actions.textContent = "▲ Click pentru a închide";
-          var contentDiv = document.createElement("div");
-          contentDiv.className = "card-doc-content";
-          contentDiv.innerHTML = '<p style="color:#57606a;">Se încarcă…</p>';
-          cardEl.appendChild(contentDiv);
-
-          var mdPath = cardEl.dataset.md;
-          var fetchUrl = mdPath + "?t=" + Date.now();
-          fetch(fetchUrl)
-            .then(function (res) {
-              if (!res.ok) throw new Error("HTTP " + res.status);
-              return res.text();
-            })
-            .then(function (md) {
-              contentDiv.innerHTML =
-                '<div class="card-doc-status-banner live">🟢 Încărcat LIVE acum din <code>' +
-                escapeHtml(mdPath) +
-                "</code></div>" +
-                parseMarkdown(md);
-            })
-            .catch(function (err) {
-              if (location.protocol === "file:") {
-                contentDiv.innerHTML =
-                  '<div class="card-doc-status-banner">🟡 Browser blochează citire pe <code>file://</code>. Deschide manual:</div>' +
-                  "<p><strong>Cale Drive:</strong> <code>G:\\My Drive\\Roly\\.Tati\\" +
-                  escapeHtml(mdPath.replace(/\//g, "\\")) +
-                  "</code></p>" +
-                  '<p style="font-size:0.9em;color:#57606a;">Sau pornește server local: <code>cd G:\\My Drive\\Roly\\.Tati && python -m http.server 8765</code></p>';
-              } else {
-                contentDiv.innerHTML =
-                  '<div class="card-doc-status-banner">⚠ Eroare la încărcare: ' +
-                  escapeHtml(err.message) +
-                  ". Verifică că <code>" +
-                  escapeHtml(mdPath) +
-                  "</code> există.</div>";
-              }
-            });
-        }
-
-        container.addEventListener("click", function (e) {
-          var card = e.target.closest(".card-doc");
-          if (!card) return;
-          if (e.target.tagName === "A") return;
-          expandCard(card);
-        });
-
-        if (searchInput) {
-          searchInput.addEventListener("input", function (e) {
-            renderList(e.target.value);
-          });
-        }
-
-        var loader = window.getIndexData;
-        if (typeof loader === "function") {
-          loader()
-            .then(function (idx) {
-              window.__dosar_data = idx.documente_pentru_dashboard || [];
-              if (!window.__dosar_data.length) {
-                container.innerHTML =
-                  '<p style="color:#cf222e;">⚠ Niciun document în <code>INDEX.json.documente_pentru_dashboard</code>. Rulează <code>python scripts/generate_index.py</code> + <code>python scripts/regenerate_structura.py</code>.</p>';
-                return;
-              }
-              renderList("");
-            })
-            .catch(function (err) {
-              container.innerHTML =
-                '<p style="color:#cf222e;">⚠ Eroare la INDEX.json: ' +
-                escapeHtml(err.message) +
-                "</p>";
-            });
-        } else {
-          container.innerHTML =
-            '<p style="color:#cf222e;">⚠ Loaderul <code>getIndexData()</code> nu e disponibil. Reîncarcă pagina.</p>';
-        }
-      })();
 
       // === LOADER: fetch live + fallback embedded ===
       (function () {
