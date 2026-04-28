@@ -1,5 +1,6 @@
 {
-  "source_document": "CT - Genesys.pdf",
+  "source_document": "2026-04-20_ct_torace_abdomen_pelvis.pdf",
+  "source_document_renamed_from": "CT - Genesys.pdf (redenumit 2026-04-28 12:00 conform R26 — convenție canonică YYYY-MM-DD_descriere; eliminare spații și dash din nume)",
   "source_location": "documente_sursa/11_CT_stadializare_2026/",
   "received_date": "2026-04-20 (data examinării) sau ulterior (user a primit PDF-ul)",
   "received_from": "Genesis Medical Clinic Micălaca (denumire în document 'Genesys')",
@@ -12,12 +13,12 @@
   "digitized_by": "PDF digital nativ (export Genesis)",
   "digitized_date": "2026-04-20 - 2026-04-22 (user a primit PDF post-examinare)",
   "transcriber": "Claude_Opus_4.7 (extragere strict-extractivă Batch A audit 2026-04-24)",
-  "extragere_md": "documente_sursa/11_CT_stadializare_2026/CT - Genesys_extragere.md",
+  "extragere_md": "documente_sursa/11_CT_stadializare_2026/2026-04-20_ct_torace_abdomen_pelvis_extragere.md (redenumit 2026-04-28 12:00 conform R26)",
   "ocr_quality": "excellent (PDF digital nativ, text extractabil, fără OCR)",
   "completeness_verified": "2026-04-24",
   "coverage": "100% (post-audit Batch A R23/R24)",
   "validator": "claude-opus-4-7",
   "chain_notes": "Raport CT TAP N+SDC de stadializare pentru proces proliferativ eso-gastric. Findings principale: T3-T4, N0-N1, M0 probabil, Siewert II probabil + ascită perihepatică 15 mm + intrapelvină 28 mm (de exclus carcinomatoză peritoneală). Findings secundare: glanda suprarenală stg hipertrofă, colecție fluidă LID 9.3 mm, leziune chistică perete toracic posterior 22/47.4 mm. Findings colaterale pulmonar: tulburări ventilație LID+LIS (relevant pre-esofagectomie), noduli apicali LSD sechelari TBC posibili. DLP = 2474 mGy·cm². **Mutat de user 2026-04-24 din fostul `99_altele/`** în folder dedicat `11_CT_stadializare_2026/` (declanșator R26). JSON canonic: 2026-04-20_ct_torace_abdomen_pelvis.json + .meta.json (care există deja). Denumirea fișierului `CT - Genesys.pdf` păstrează convenția originală Genesis (cu spații + dash; deviere ușoară de la convenția R26 `YYYY-MM-DD_descriere.ext`, dar nu se redenumește pentru a păstra trasabilitate la PDF-ul original descărcat de la Genesis).",
   "retrospectively_added": "2026-04-24 21:30 — audit R14 batch (meta.json pe documentul sursă, complementar celui pe JSON canonic)",
-  "naming_note": "Numele fișierului nu respectă strict convenția R26 (YYYY-MM-DD_descriere.ext); păstrat denumirea originală Genesis pentru trasabilitate. Dacă regenerare viitoare din sursa originală, poate fi redenumit la '2026-04-20_ct_torace_abdomen_pelvis_genesys.pdf'."
+  "naming_note": "Redenumit 2026-04-28 12:00 (Faza 1 plan implementare cross-terminal) la convenția canonică R26 'YYYY-MM-DD_descriere.ext'. Nume original 'CT - Genesys.pdf' (cu spații + dash) păstrat în câmpul 'source_document_renamed_from' pentru trasabilitate."
 }

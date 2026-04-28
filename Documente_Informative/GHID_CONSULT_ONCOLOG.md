@@ -201,7 +201,7 @@
 
 - [ ] **Bilet BCTAP 0631727 din 17.04.2026** (bilet trimitere CT, emis de Dr. Noufal)
 - [ ] **Buletin endoscopie 17.04.2026** (PDF + copie printată) — `documente_sursa/09_endoscopie_2026_04/2026-04-17_buletin_endoscopie_colonoscopie.pdf`
-- [ ] **Raport CT TAP 20.04.2026** (PDF + copie printată) — `documente_sursa/99_altele/CT - Genesys.pdf`
+- [ ] **Raport CT TAP 20.04.2026** (PDF + copie printată) — `documente_sursa/11_CT_stadializare_2026/2026-04-20_ct_torace_abdomen_pelvis.pdf` (mutat 2026-04-24 din `99_altele/`; redenumit 2026-04-28 din `CT - Genesys.pdf` conform R26)
 - [ ] **CD cu imagini DICOM CT** dacă s-a primit la Genesis Micălaca (verifică — dacă nu, solicită retroactiv)
 - [ ] **Buletin Bioclinica 17.04.2026** (creatinină + uree) — de la Bioclinica Arad
 

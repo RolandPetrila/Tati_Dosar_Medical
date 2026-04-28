@@ -248,28 +248,29 @@ Toate documentele sursă din `Dosar_Medical/documente_sursa/` urmează același 
 
 **Categorii folosite în proiect (status 2026-04-24 post integrare Arhiva_Generala + Boala_Actuala + audit remediere):**
 
-| Folder                           | Conținut așteptat                                                   | Status                                                                              |
-| -------------------------------- | ------------------------------------------------------------------- | ----------------------------------------------------------------------------------- |
-| `01_identitate/`                 | Carte identitate, pașaport                                          | ✅ populat (2023-06-12_carte_identitate.pdf + .meta.json)                           |
-| `02_cardiologie_2012/`           | Stent Vichy 2012                                                    | 🟡 folder gol — PDF de obținut de la familie (tip stent DES vs BMS)                 |
-| `03_hernie_anterior/`            | Hernie anterioară (dată necunoscută)                                | 🟡 folder gol — document de identificat                                             |
-| `04_helicobacter_2024/`          | Serologie H. pylori IgG iunie+septembrie 2024                       | ✅ populat (2024-06-04 + 2024-09-06 buletine integrate în 1 PDF)                    |
-| `05_analize_laborator/`          | Buletine analize sânge / urină / serologie                          | ✅ populat (2025-06-17 panel complet + 2026-04-17 bioclinica uree/creatinină)       |
-| `06_urologie_gastro_2025/`       | Scrisoare urologie + ecografie scrotală 28.10.2025                  | ✅ populat (Dr. Pitea)                                                              |
-| `07_hernie_2025_11/`             | Intervenție hernie noiembrie 2025 (Dr. Papiu)                       | ✅ populat (bilet iesire + scrisoare anexa43)                                       |
-| `08_schema_tratament/`           | Scheme medicație manuscrise                                         | ✅ populat (2025-11-10 + .meta.json)                                                |
-| `09_endoscopie_2026_04/`         | Buletine gastroscopie + colonoscopie 17.04.2026                     | ✅ populat (Dr. Noufal Abdul Vahab, 2 JPEG separate)                                |
-| `10_administrativ_pensie/`       | Talon pensie, dovezi asigurare                                      | ✅ populat (talon 11/2025 + .meta.json)                                             |
-| `11_CT_stadializare_2026/`       | Bilet trimitere CT + raport CT 20.04.2026                           | ✅ populat (BCTAP 0631727 + CT - Genesys.pdf, mutat de user din fostul 99_altele/)  |
-| `12_biopsie_2026/`               | Rezultat biopsie Bioclinica                                         | 🟡 folder gol — așteptare rezultat histopatologic (monitor automat ntfy activ 24/7) |
-| `13_cardiologie_ambulator_2025/` | Consult cardiologie + ECO 10.11.2025 (Dr. LAZA CRISTINA)            | ✅ populat (adăugat 2026-04-24 din Arhiva_Generala)                                 |
-| `14_UPU_2024_05_30/`             | Episod UPU Arad 30.05.2024 (Dr. Post + Dr. Grada + Dr. Pop Florica) | ✅ populat (adăugat 2026-04-24 din Arhiva_Generala; 1 PDF + 10 JPEG pagini)         |
+| Folder                               | Conținut așteptat                                                   | Status                                                                                                                                                                                  |
+| ------------------------------------ | ------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `01_identitate/`                     | Carte identitate, pașaport                                          | ✅ populat (2023-06-12_carte_identitate.pdf + .meta.json)                                                                                                                               |
+| `02_cardiologie_2012/`               | Stent Vichy 2012                                                    | ✅ populat 2026-04-28 (`2012-02-17_cardiologie_vichy_stent.pdf` + meta + extragere MD; redenumit 2026-04-28 din `Document_Cardiologie_Vichy_2012.pdf` conform R26; stent confirmat BMS) |
+| `03_hernie_anterior/`                | Hernie anterioară (dată necunoscută)                                | 🟡 folder gol — document de identificat                                                                                                                                                 |
+| `04_helicobacter_2024/`              | Serologie H. pylori IgG iunie+septembrie 2024                       | ✅ populat (2024-06-04 + 2024-09-06 buletine integrate în 1 PDF)                                                                                                                        |
+| `05_analize_laborator/`              | Buletine analize sânge / urină / serologie                          | ✅ populat (2025-06-17 panel complet + 2026-04-17 bioclinica uree/creatinină)                                                                                                           |
+| `06_urologie_gastro_2025/`           | Scrisoare urologie + ecografie scrotală 28.10.2025                  | ✅ populat (Dr. Pitea)                                                                                                                                                                  |
+| `07_hernie_2025_11/`                 | Intervenție hernie noiembrie 2025 (Dr. Papiu)                       | ✅ populat (bilet iesire + scrisoare anexa43)                                                                                                                                           |
+| `08_schema_tratament/`               | Scheme medicație manuscrise                                         | ✅ populat (2025-11-10 + .meta.json)                                                                                                                                                    |
+| `09_endoscopie_2026_04/`             | Buletine gastroscopie + colonoscopie 17.04.2026                     | ✅ populat (Dr. Noufal Abdul Vahab, 2 JPEG separate)                                                                                                                                    |
+| `10_administrativ_pensie/`           | Talon pensie, dovezi asigurare                                      | ✅ populat (talon 11/2025 + .meta.json)                                                                                                                                                 |
+| `11_CT_stadializare_2026/`           | Bilet trimitere CT + raport CT 20.04.2026                           | ✅ populat (BCTAP 0631727 + 2026-04-20_ct_torace_abdomen_pelvis.pdf, redenumit 2026-04-28 din `CT - Genesys.pdf` conform R26; mutat de user 2026-04-24 din fostul 99_altele/)           |
+| `12_biopsie_2026/`                   | Rezultat biopsie Bioclinica                                         | 🟡 folder gol — așteptare rezultat histopatologic (monitor automat ntfy activ 24/7)                                                                                                     |
+| `13_cardiologie_ambulator_2025/`     | Consult cardiologie + ECO 10.11.2025 (Dr. LAZA CRISTINA)            | ✅ populat (adăugat 2026-04-24 din Arhiva_Generala)                                                                                                                                     |
+| `14_UPU_2024_05_30/`                 | Episod UPU Arad 30.05.2024 (Dr. Post + Dr. Grada + Dr. Pop Florica) | ✅ populat (adăugat 2026-04-24 din Arhiva_Generala; 1 PDF + 10 JPEG pagini intermediare — vezi `intermediate_artifacts` în PDF meta.json)                                               |
+| `15_consult_initial_oncologie_2026/` | OPIS consult inițial OncoHelp 30.04.2026 (Dr. Mate Endre)           | ✅ populat 2026-04-28 (PDF OPIS 8 puncte + meta.json + extragere MD; folder creat 2026-04-28 R26)                                                                                       |
 
 **Note structurale:**
 
-- **Totalul curent: 14 foldere** (01–14, continuu, fără goluri în numerotare). `99_altele/` eliminat 2026-04-24.
-- **Foldere populate: 11/14.** Foldere goale justificate: `02_cardiologie_2012/` (PDF Vichy de obținut), `03_hernie_anterior/` (dată necunoscută), `12_biopsie_2026/` (așteptare rezultat).
-- **La document nou care nu se încadrează în 01–14:** creare folder nou `15_categorie_data/` conform convenției + update acest tabel.
+- **Totalul curent: 15 foldere** (01–15, continuu, fără goluri în numerotare). `99_altele/` eliminat 2026-04-24.
+- **Foldere populate: 13/15.** Foldere goale justificate: `03_hernie_anterior/` (dată necunoscută; per user — documente vechi pierdute), `12_biopsie_2026/` (rezultat primit 28.04 ca PDF, deja ingerat).
+- **La document nou care nu se încadrează în 01–15:** creare folder nou `16_categorie_data/` conform convenției + update acest tabel.
 
 **Obligatoriu (semnalare devieri):**
 

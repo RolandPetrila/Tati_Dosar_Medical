@@ -12,6 +12,8 @@
   "confidence_overall": "high",
   "completeness_verified": "2026-04-28",
   "coverage": "100%",
+  "validator": "claude-opus-4-7",
+  "extragere_md": "documente_sursa/15_consult_initial_oncologie_2026/2026-04-28_opis_consult_initial_oncohelp_extragere.md (creat 2026-04-28 12:00 — Faza 1 plan implementare cross-terminal)",
   "contine_8_puncte": [
     "1. Bilet de trimitere către Oncologie",
     "2. Buletin",

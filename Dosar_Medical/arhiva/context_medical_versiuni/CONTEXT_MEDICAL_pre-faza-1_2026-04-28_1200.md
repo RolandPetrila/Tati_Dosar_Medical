@@ -125,7 +125,7 @@ Acest fișier este **state file intern** (sursă pentru documentele de ieșire),
 ### 2.5 Referință sursă
 
 - **JSON canonic:** `Dosar_Medical/2026-04-20_ct_torace_abdomen_pelvis.json`
-- **PDF sursă:** `Dosar_Medical/documente_sursa/11_CT_stadializare_2026/2026-04-20_ct_torace_abdomen_pelvis.pdf` (mutat de user 2026-04-24 din `99_altele/` în folder dedicat; redenumit 2026-04-28 din `CT - Genesys.pdf` conform R26)
+- **PDF sursă:** `Dosar_Medical/documente_sursa/11_CT_stadializare_2026/CT - Genesys.pdf` (mutat de user 2026-04-24 din `99_altele/` în folder dedicat)
 - **Data extragere JSON:** 2026-04-22
 - **Data audit R24 + restructurare:** 2026-04-24
 - **Marcaj `.meta.json`:** `"completeness_verified": "2026-04-24"`, `"coverage": "100%"` (post-audit Batch A)
@@ -223,7 +223,7 @@ Acest fișier este **state file intern** (sursă pentru documentele de ieșire),
 - Cardiolog curant din România după repatriere 2012 → 2024 (Dr. Post Mihaela 2024 UPU + Dr. LAZA Cristina 2025 ambulator confirmate)
 - Eventuale controale coronarografice ulterioare 2012 — `[NEGASIT]` în dosar
 
-**Sursă:** `Dosar_Medical/2012-02-17_cardiologie_vichy_stent.json` (v2 — Claude Opus 4.7, 2026-04-28, extragere completă din PDF) + `documente_sursa/02_cardiologie_2012/2012-02-17_cardiologie_vichy_stent.pdf` (10 pagini, traducere autorizată Blidar Ioana, autorizație 705/2002 Ministerul Justiției; redenumit 2026-04-28 din `Document_Cardiologie_Vichy_2012.pdf` conform R26) + `2012-02-17_cardiologie_vichy_stent_extragere.md` (MD strict-extractive paralel cu JSON canonic).
+**Sursă:** `Dosar_Medical/2012-02-17_cardiologie_vichy_stent.json` (v2 — Claude Opus 4.7, 2026-04-28, extragere completă din PDF) + `documente_sursa/02_cardiologie_2012/Document_Cardiologie_Vichy_2012.pdf` (10 pagini, traducere autorizată Blidar Ioana, autorizație 705/2002 Ministerul Justiției).
 
 ### Episod UPU 30 mai 2024 (criza HTA + hiperglicemie + troponină dinamică)
 

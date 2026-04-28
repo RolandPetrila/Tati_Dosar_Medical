@@ -1,9 +1,11 @@
 ---
 plan_id: implementare-audit-cleanup-dashboard-pre-consult-2026-04-28
 version: 1.0
-status: 🔴 PENDING
+status: 🟡 IN_PROGRESS
 created_at: 2026-04-28 11:45
+started_at: 2026-04-28 12:00
 created_by: Claude_Opus_4.7_1M (terminal de planificare — auditor)
+executed_by: Claude_Opus_4.7_1M (terminal executor — sesiune curată 28.04 12:00)
 estimated_duration_min: 180
 auditor_terminal: ROL — terminal nou cu context curat (A)
 executor_terminal: ROL — terminal nou cu context curat (B)
@@ -418,13 +420,13 @@ _(gol la creare)_
 
 ## 📊 Status global
 
-| Fază                 | Status     | Început | Sfârșit | Commit hash | Validat auditor |
-| -------------------- | ---------- | ------- | ------- | ----------- | --------------- |
-| Faza 1               | 🔴 PENDING | —       | —       | —           | —               |
-| Faza 2               | 🔴 PENDING | —       | —       | —           | —               |
-| Faza 3               | 🔴 PENDING | —       | —       | —           | —               |
-| Audit final `/audit` | 🔴 PENDING | —       | —       | —           | —               |
-| Memory checkpoint    | 🔴 PENDING | —       | —       | —           | —               |
+| Fază                 | Status     | Început | Sfârșit | Commit hash    | Validat auditor |
+| -------------------- | ---------- | ------- | ------- | -------------- | --------------- |
+| Faza 1               | 🟢 DONE    | 12:00   | 12:30   | (pending push) | (pending audit) |
+| Faza 2               | 🔴 PENDING | —       | —       | —              | —               |
+| Faza 3               | 🔴 PENDING | —       | —       | —              | —               |
+| Audit final `/audit` | 🔴 PENDING | —       | —       | —              | —               |
+| Memory checkpoint    | 🔴 PENDING | —       | —       | —              | —               |
 
 ---
 

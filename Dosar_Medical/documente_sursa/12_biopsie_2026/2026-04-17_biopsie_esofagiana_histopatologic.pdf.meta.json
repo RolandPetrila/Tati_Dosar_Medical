@@ -14,7 +14,7 @@
   "digitized_by": "PDF oficial descărcat de pe portalul Bioclinica de către user (Roland Petrilă) 28.04.2026 09:09",
   "digitized_date": "2026-04-28",
   "transcriber": "Claude_Opus_4.7 (extragere strict-extractivă din PDF digital nativ)",
-  "extragere_md": "documente_sursa/12_biopsie_2026/2026-04-17_biopsie_esofagiana_histopatologic.md",
+  "extragere_md": "documente_sursa/12_biopsie_2026/2026-04-17_biopsie_esofagiana_histopatologic_extragere.md (redenumit 2026-04-28 12:00 din `..._histopatologic.md` pentru consistență sufix `_extragere` — convenție R26 implicită + R14)",
   "ocr_quality": "n/a (PDF digital nativ — text extractabil direct, fără OCR; 93.6 KB)",
   "confidence_overall": "high",
   "completeness_verified": "2026-04-28",

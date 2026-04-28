@@ -5,18 +5,13 @@
     "tip_document": "raport_imagistica_ct",
     "specialitate": "Radiologie și Imagistică Medicală",
     "data_document": "2026-04-20",
-    "sursa_pdf": "2026-04-20_ct_torace_abdomen_pelvis.pdf",
-    "sursa_pdf_renamed_from": "CT - Genesys.pdf (redenumit 2026-04-28 12:00 conform R26 — convenție canonică YYYY-MM-DD_descriere)",
+    "sursa_pdf": "CT - Genesys.pdf",
     "sursa_locatie": "documente_sursa/11_CT_stadializare_2026/",
     "procesat_de": "Claude_Opus_4.7",
     "data_procesare": "2026-04-22",
     "ocr_quality": "good",
     "confidence_overall": "high",
-    "flags": [
-      "key_clinical_event",
-      "stadializare_imagistica",
-      "ascita_de_investigat"
-    ],
+    "flags": ["key_clinical_event", "stadializare_imagistica", "ascita_de_investigat"],
     "notes": "Raport CT TAP N+SDC de stadializare pentru proces proliferativ esofagian. PDF digital (text extractabil nativ). Tumoră primară identificată: segment distal esofagian + joncțiune eso-gastrică (orificiu cardia + cadru gastric fundic) — clasificare probabilă Siewert II, de confirmat cu oncologul. Stadializare imagistică estimativă: T3-T4, N0-N1 (limfonoduli loco-regionali max 7.5 mm), M0 probabil. ATENȚIE CLINICĂ MAJORĂ: colecție fluidă perihepatică 15 mm + intrapelvină 28 mm = ASCITĂ — în context neoplazic esofagian avansat necesită excludere CARCINOMATOZĂ PERITONEALĂ (altfel ar fi stadiu IV). Discuție urgentă cu oncolog. Descoperiri colaterale: glandă suprarenală stângă hipertrofă heterogenă (incidentaloma? adenom?), leziune chistică subcutan perete toracic posterior 22/47.4 mm, colecție fluidă pulmonar bazal LID 9.3 mm, cardiomegalie cu ateromatoza calcara aorto-coronariană (consecvent cu antecedente SCA 2012 + stent IVA). Numele medicului ordonator apare în PDF ca 'NOUPHAL ABDUL VAHAB' (cu 'h' intercalat) — aceeași persoană cu Dr. Noufal Abdul Vahab din dosarul gastroenterologic 17.04.2026. Numele pacientului în PDF: 'PETRILA VIOREL MIHAI' (fără diacritice, prenume cu spațiu) — aceeași persoană (CNP corect)."
   },
   "pacient": {

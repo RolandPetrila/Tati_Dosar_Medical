@@ -1,8 +1,8 @@
 # STATUS SNAPSHOT — Petrilă Viorel-Mihai
 
-**Generat automat:** 2026-04-28 10:58
-**Ultim commit git:** `bafe554` (2026-04-28 09:45:01 +0300)
-**Mesaj commit:** [UPD R-MINIMAL R27 2026-04-28] PDF oficial Bioclinica + ingest 2 mailuri Gmail lipsa
+**Generat automat:** 2026-04-28 12:06
+**Ultim commit git:** `8463d56` (2026-04-28 11:48:55 +0300)
+**Mesaj commit:** [PLAN R29 2026-04-28] Plan cross-terminal: audit+cleanup+DASHBOARD pre-consult 4.05
 **Sursă de adevăr:** fișierele originale din proiect `.Tati`. Acest snapshot e mirror sintetic generat de `scripts/regen_projects_sync.py` pentru chat Claude Projects (web/mobil).
 
 > **Ordine consultare în chat:** STATUS_SNAPSHOT.md (aici) → CONTEXT_MEDICAL.md (detaliu clinic) → TODO.md (calendar) → CONTACTE_MEDICALE.md (medici) → REGULAMENT.md (reguli) → INDEX.json (index documente) → EXPLICATIE_CONSULT_ONCOLOG_SCENARII.md (glosar + scenarii prognostice).

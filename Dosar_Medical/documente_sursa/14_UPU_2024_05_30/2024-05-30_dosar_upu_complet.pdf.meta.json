@@ -22,5 +22,23 @@
   "coverage": "100% (pagini tipărite integrale; manuscris limitat la ce e lizibil — excluderi R25 documentate în JSON)",
   "validator": "claude-opus-4-7",
   "chain_notes": "KEY EVENT — episod clinic major: pacient prezentat UPU cu grețuri+vărsături (post-sarmale) + vertij + criza HTA 200/100 + hiperglicemie decompensată (180.48 mg/dL), troponină dinamică hs-cTnI 4.24 → 4.59 ng/L (trend UP relevant cardiologic), EKG 'Markedly Abnormal'. Consulturi cascade: gastro (diagnostic sindrom dispeptic → Controloc + Debridat) + cardio (scrisoare medicală nr. 0003622 — schemă medicație PRESTARIUM + ASPENTER + SORTIS + CONCOR + NORVASC). NU există serologie H. pylori în acest episod (serologia ulterioară 04.06.2024 + 06.09.2024 la Ultra ClinicaVest). Relevanță pre-oncologică: documentează pacient cardiovascular instabil la distanță → evaluare risc anestezic preoperator pentru esofagectomie. **Medic familie identificat prin acest episod: Dr. Orbán Ecaterina** (referință pentru viitoare bilete trimitere + follow-up cronic). Folderul 14_UPU_2024_05_30/ creat 2026-04-24. JSON-uri canonice derivate: 2024-05-30_upu_consult_gastro_cardio.json + 2024-05-30_analize_upu_sange_1517243.json + 2024-05-30_analize_upu_urina_1517290.json.",
-  "retrospectively_added": "2026-04-24 21:30 — audit R14 batch"
+  "retrospectively_added": "2026-04-24 21:30 — audit R14 batch",
+  "intermediate_artifacts": {
+    "files": [
+      "2024-05-30_dosar_upu_pag0.jpeg",
+      "2024-05-30_dosar_upu_pag1.jpeg",
+      "2024-05-30_dosar_upu_pag2.jpeg",
+      "2024-05-30_dosar_upu_pag3.jpeg",
+      "2024-05-30_dosar_upu_pag4.jpeg",
+      "2024-05-30_dosar_upu_pag5.jpeg",
+      "2024-05-30_dosar_upu_pag6.jpeg",
+      "2024-05-30_dosar_upu_pag7.jpeg",
+      "2024-05-30_dosar_upu_pag8.jpeg",
+      "2024-05-30_dosar_upu_pag9.jpeg"
+    ],
+    "note": "Cele 10 JPEG-uri sunt artefacte intermediare ale conversiei PDF master (paginile individuale ale dosarului UPU). PDF-ul master `2024-05-30_dosar_upu_complet.pdf` e sursa autoritară R23. JPEG-urile NU au .meta.json companion individual — sunt referință vizuală suplimentară (consultare rapidă pe pagina exactă fără deschidere PDF integral).",
+    "decision_date": "2026-04-28",
+    "decision_owner": "Claude_Opus_4.7 (Faza 1 plan implementare cross-terminal)",
+    "decision_reasoning": "Fără chain of custody individual per JPEG (R14 nu cere meta.json companion la artefacte intermediare derivate din PDF master cu meta.json propriu). Coverage R14 asigurat prin meta.json al PDF-ului master + acest câmp `intermediate_artifacts` (link bidirecțional)."
+  }
 }

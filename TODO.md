@@ -465,7 +465,7 @@ Pentru evaluare mai precisă a expunerii (calculul „pachete-an”).
 
 ### [P1] Digitizare documente lipsă
 
-- [x] ✅ **PDF original cardiologie Vichy 2012 — REZOLVAT 2026-04-28**: traducere autorizată română (Blidar Ioana, autorizație 705/2002) procesat integral (10 pagini); **stent confirmat BMS (Bare Metal Stent)** RX VISION 3.5×28 mm Abbott Nr. 1110341 — implicație clinică critică pentru pauza Aspenter pre-chirurgie esofagiană (DAPT scurt, risc tromboză in-stent <1% la 14 ani vechime). Echipa medicală franceză identificată complet. Vezi `Dosar_Medical/2012-02-17_cardiologie_vichy_stent.json` v2 + `documente_sursa/02_cardiologie_2012/Document_Cardiologie_Vichy_2012.pdf` + `CONTEXT_MEDICAL.md §3` (rewrite complet).
+- [x] ✅ **PDF original cardiologie Vichy 2012 — REZOLVAT 2026-04-28**: traducere autorizată română (Blidar Ioana, autorizație 705/2002) procesat integral (10 pagini); **stent confirmat BMS (Bare Metal Stent)** RX VISION 3.5×28 mm Abbott Nr. 1110341 — implicație clinică critică pentru pauza Aspenter pre-chirurgie esofagiană (DAPT scurt, risc tromboză in-stent <1% la 14 ani vechime). Echipa medicală franceză identificată complet. Vezi `Dosar_Medical/2012-02-17_cardiologie_vichy_stent.json` v2 + `documente_sursa/02_cardiologie_2012/2012-02-17_cardiologie_vichy_stent.pdf` (redenumit 2026-04-28 din `Document_Cardiologie_Vichy_2012.pdf` conform R26) + `CONTEXT_MEDICAL.md §3` (rewrite complet).
 - [x] ✅ Document externare episod H. pylori 30.05.2024 — **REZOLVAT 2026-04-24** prin integrarea `2024_Gastro_Complet` (10 pagini UPU + consulturi + analize) → JSON-uri: `2024-05-30_upu_consult_gastro_cardio.json` + `2024-05-30_analize_upu_sange_1517243.json` + `2024-05-30_analize_upu_urina_1517290.json`
 - [ ] Buletin ecografie abdominală 14.04.2026
 

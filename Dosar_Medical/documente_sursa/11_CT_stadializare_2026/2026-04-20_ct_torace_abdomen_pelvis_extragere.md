@@ -1,10 +1,10 @@
-# RAPORT EXTRAGERE: CT - Genesys.pdf
+# RAPORT EXTRAGERE: 2026-04-20_ct_torace_abdomen_pelvis.pdf (redenumit 2026-04-28 din `CT - Genesys.pdf` conform R26)
 
 > **Notă format v2.1 strict-extractiv + restricție handwritten:** Acest fișier conține EXCLUSIV date extrase din documentul sursă. Marcajele [text??] și [???] au fost înlocuite cu [ILIZIBIL] și documentate în §9. Fără interpretare clinică, fără cross-doc inference, fără abrevieri expandate.
 
 ## 1. METADATE DOCUMENT
 
-- **Fișier sursă:** `CT - Genesys.pdf`
+- **Fișier sursă:** `2026-04-20_ct_torace_abdomen_pelvis.pdf` (redenumit 2026-04-28 din `CT - Genesys.pdf`)
 - **Tip document:** Raport examinare CT torace + abdomen + pelvis, nativ și cu substanță de contrast (SDC)
 - **Număr pagini procesate:** 2
 - **AI executor:** Claude Sonnet 4.6

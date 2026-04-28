@@ -1,5 +1,6 @@
 {
-  "source_document": "Document_Cardiologie_Vichy_2012.pdf",
+  "source_document": "2012-02-17_cardiologie_vichy_stent.pdf",
+  "source_document_renamed_from": "Document_Cardiologie_Vichy_2012.pdf (redenumit 2026-04-28 12:00 conform R26 — convenție canonică YYYY-MM-DD_descriere)",
   "source_location": "documente_sursa/02_cardiologie_2012/",
   "received_date": "2026-04-28",
   "received_from": "Roland Petrilă (familie pacient) — PDF în format digital, traducere autorizată",
@@ -27,7 +28,7 @@
   "digitized_by": "Furnizat direct ca PDF digital de către user/familie (probabil scanare a traducerii fizice + arhivare digitală)",
   "digitized_date": "[NEGASIT — anterior 2026-04-28]",
   "transcriber": "Claude_Opus_4.7 (extragere strict-extractivă din PDF traducere română)",
-  "extragere_md": "[NU s-a creat MD strict-extractive — JSON canonic conține toate datele structurat]",
+  "extragere_md": "2012-02-17_cardiologie_vichy_stent_extragere.md (creat 2026-04-28 12:00 — propagare strict-extractivă R23 din PDF 10 pagini traducere autorizată Blidar Ioana, structurat în secțiuni paralele cu JSON canonic)",
   "ocr_quality": "n/a (PDF digital nativ — text traducere autorizată extractabil direct)",
   "confidence_overall": "high",
   "completeness_verified": "2026-04-28",
