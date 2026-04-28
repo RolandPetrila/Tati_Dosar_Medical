@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-28T13:29:51",
+  "generated_at": "2026-04-28T14:22:11",
   "version": "1.0",
   "stats": {
     "total_files_indexed": 154,
@@ -491,8 +491,8 @@
     },
     "STRUCTURA_PROIECT.md": {
       "type": "md",
-      "size_kb": 23.9,
-      "last_modified": "2026-04-26T19:22:06"
+      "size_kb": 25.9,
+      "last_modified": "2026-04-28T14:20:21"
     },
     "BAZA_CUNOSTINTE.md": {
       "type": "md",
@@ -516,8 +516,8 @@
     },
     "TODO.md": {
       "type": "md",
-      "size_kb": 45.5,
-      "last_modified": "2026-04-28T12:39:48"
+      "size_kb": 46.0,
+      "last_modified": "2026-04-28T13:37:40"
     },
     "CONTEXT_MEDICAL.md": {
       "type": "md",
@@ -551,8 +551,8 @@
     },
     "EXECUTOR_AUDIT_LOG_2026-04-28.md": {
       "type": "md",
-      "size_kb": 51.5,
-      "last_modified": "2026-04-28T13:11:31"
+      "size_kb": 59.4,
+      "last_modified": "2026-04-28T13:39:20"
     },
     "Dosar_Medical/PLAN_audit_remediere_v2_2026-04-18.md": {
       "type": "md",
@@ -566,8 +566,8 @@
     },
     "Dosar_Medical/CLAUDE.md": {
       "type": "md",
-      "size_kb": 23.1,
-      "last_modified": "2026-04-28T12:03:22"
+      "size_kb": 24.5,
+      "last_modified": "2026-04-28T13:38:01"
     },
     "Dosar_Medical/EXTRAGERI_INCOMPLETE.md": {
       "type": "md",
@@ -671,8 +671,8 @@
     },
     "Documentatie_Initiala/HISTORY_CLAUDE_MD.md": {
       "type": "md",
-      "size_kb": 9.8,
-      "last_modified": "2026-04-23T03:31:25"
+      "size_kb": 11.1,
+      "last_modified": "2026-04-28T13:30:54"
     },
     "Documentatie_Initiala/ROADMAP_POST_2026-04-28.md": {
       "type": "md",
@@ -721,8 +721,8 @@
     },
     "_projects_sync/TODO.md": {
       "type": "md",
-      "size_kb": 45.5,
-      "last_modified": "2026-04-28T12:39:48"
+      "size_kb": 46.0,
+      "last_modified": "2026-04-28T13:37:40"
     },
     "_projects_sync/REGULAMENT.md": {
       "type": "md",
@@ -742,7 +742,7 @@
     "_projects_sync/STATUS_SNAPSHOT.md": {
       "type": "md",
       "size_kb": 26.2,
-      "last_modified": "2026-04-28T12:57:48"
+      "last_modified": "2026-04-28T13:39:50"
     },
     "Dosar_Medical/cercetari/SINTEZA_CLINICI_ONCOLOGIE.md": {
       "type": "md",
@@ -881,8 +881,8 @@
     },
     "INDEX.json": {
       "type": "json",
-      "size_kb": 42.6,
-      "last_modified": "2026-04-28T12:55:27"
+      "size_kb": 42.4,
+      "last_modified": "2026-04-28T13:29:51"
     },
     "Dosar_Medical/2012-02-17_cardiologie_vichy_stent.json": {
       "type": "json",
@@ -1082,7 +1082,7 @@
     "Dosar_Medical/SYSTEM_HEALTH.json": {
       "type": "json",
       "size_kb": 3.5,
-      "last_modified": "2026-04-28T12:55:33"
+      "last_modified": "2026-04-28T14:21:48"
     },
     "Dosar_Medical/2026-04-17_biopsie_esofagiana_histopatologic.json": {
       "type": "json",
@@ -1091,13 +1091,13 @@
     },
     ".claude/settings.local.json": {
       "type": "json",
-      "size_kb": 2.0,
-      "last_modified": "2026-04-28T11:17:58"
+      "size_kb": 2.1,
+      "last_modified": "2026-04-28T14:18:37"
     },
     "_projects_sync/INDEX.json": {
       "type": "json",
-      "size_kb": 42.6,
-      "last_modified": "2026-04-28T12:55:27"
+      "size_kb": 42.4,
+      "last_modified": "2026-04-28T13:29:51"
     },
     "schemas/dosar_medical_v2.json": {
       "type": "json",
@@ -1191,8 +1191,8 @@
     },
     "Dosar_Medical/documente_sursa/11_CT_stadializare_2026/2026-04-20_ct_torace_abdomen_pelvis.pdf.meta.json": {
       "type": "json",
-      "size_kb": 2.7,
-      "last_modified": "2026-04-28T11:57:28"
+      "size_kb": 2.9,
+      "last_modified": "2026-04-28T13:37:20"
     },
     "Dosar_Medical/documente_sursa/12_biopsie_2026/2026-04-17_biopsie_esofagiana_histopatologic.pdf.meta.json": {
       "type": "json",
@@ -1216,8 +1216,8 @@
     },
     "DASHBOARD.html": {
       "type": "html",
-      "size_kb": 187.3,
-      "last_modified": "2026-04-28T12:51:40"
+      "size_kb": 194.3,
+      "last_modified": "2026-04-28T14:20:21"
     },
     "index.html": {
       "type": "html",

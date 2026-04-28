@@ -1,5 +1,5 @@
 {
-  "checked_at": "2026-04-28T13:37:17",
+  "checked_at": "2026-04-28T14:21:48",
   "status": "🟢 OK",
   "limits": {
     "claude_md_size_kb": {
@@ -16,9 +16,9 @@
     },
     "memory_md_path": "C:\\Users\\ALIENWARE\\.claude\\projects\\G--My-Drive-Roly--Tati\\memory\\MEMORY.md",
     "auto_loaded_md_kb": {
-      "current": 81.7,
+      "current": 83.1,
       "limit": 150,
-      "percent": 54.5,
+      "percent": 55.4,
       "status": "🟢 OK",
       "breakdown": [
         {
@@ -35,7 +35,7 @@
         },
         {
           "path": "Dosar_Medical/CLAUDE.md",
-          "size_kb": 23.1
+          "size_kb": 24.5
         },
         {
           "path": "Documente_Informative/CLAUDE.md",
@@ -45,17 +45,17 @@
       "note": "suma fișierelor auto-loaded la pornire sesiune (CLAUDE.md root + REGULAMENT + REGULI + nested CLAUDE.md). Pragul 150 KB e alertă reală pentru risc context window."
     },
     "total_md_root_kb": {
-      "current": 725.0,
+      "current": 735.4,
       "note": "informativ — suma brută `.md` la rădăcină; include logs istorice (CHANGELOG, SESSION_LOG) care NU sunt auto-loaded. Pentru alertă reală vezi `auto_loaded_md_kb`. Demotează 2026-04-26 (ticket P2 închis)."
     },
     "largest_files": [
       {
-        "path": "Dosar_Medical/arhiva/context_medical_versiuni/DASHBOARD_pre-cleanup-L1-L2_2026-04-28_1325.html",
-        "size_kb": 187.3
+        "path": "DASHBOARD.html",
+        "size_kb": 194.3
       },
       {
-        "path": "DASHBOARD.html",
-        "size_kb": 187.0
+        "path": "Dosar_Medical/arhiva/context_medical_versiuni/DASHBOARD_pre-cleanup-L1-L2_2026-04-28_1325.html",
+        "size_kb": 187.3
       },
       {
         "path": "Dosar_Medical/arhiva/context_medical_versiuni/DASHBOARD_pre-faza-3_2026-04-28_1300.html",
@@ -98,9 +98,9 @@
       "status": "🟢 OK"
     },
     "context_tokens_estimate": {
-      "current": 26883,
+      "current": 27356,
       "limit": 200000,
-      "percent": 13.4,
+      "percent": 13.7,
       "status": "🟢 OK",
       "note": "estimat pe AUTO_LOADED_FILES (5 fișiere: CLAUDE.md root + REGULAMENT + REGULI + nested CLAUDE.md). Read-uri ad-hoc, MEMORY.md auto-injection, sistem-reminders nu sunt incluse — context real e mai mare."
     }
