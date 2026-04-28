@@ -1,8 +1,8 @@
 # STATUS SNAPSHOT — Petrilă Viorel-Mihai
 
-**Generat automat:** 2026-04-28 13:31
-**Ultim commit git:** `9171ae9` (2026-04-28 13:21:37 +0300)
-**Mesaj commit:** [PLAN 2026-04-28] Audit final + lessons learned — SCOR 95/100 (+5 vs 90 baseline)
+**Generat automat:** 2026-04-28 13:39
+**Ultim commit git:** `b488020` (2026-04-28 13:31:56 +0300)
+**Mesaj commit:** [CLEAN R21 2026-04-28] Cleanup post-PLAN — L1 redenumire CLAUDE_initiala v1 + L2 arhivare AUDIT_EXTRAGERE
 **Sursă de adevăr:** fișierele originale din proiect `.Tati`. Acest snapshot e mirror sintetic generat de `scripts/regen_projects_sync.py` pentru chat Claude Projects (web/mobil).
 
 > **Ordine consultare în chat:** STATUS_SNAPSHOT.md (aici) → CONTEXT_MEDICAL.md (detaliu clinic) → TODO.md (calendar) → CONTACTE_MEDICALE.md (medici) → REGULAMENT.md (reguli) → INDEX.json (index documente) → EXPLICATIE_CONSULT_ONCOLOG_SCENARII.md (glosar + scenarii prognostice).

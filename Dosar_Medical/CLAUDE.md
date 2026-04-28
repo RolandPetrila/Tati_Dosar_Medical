@@ -301,4 +301,16 @@ Pentru reguli care se aplică și în `Dosar_Medical/` dar sunt always-on (`REGU
 
 - **Subfoldere:** `arhiva/` (backup-uri), `cercetari/` (sinteze cercetare web validate), `documente_sursa/` (scanuri originale, READ-ONLY), `rapoarte_generate/` (DOCX-uri pentru medici).
 - **JSON-urile medicale** respectă schema documentată în `SCHEMA_JSON_v2.md`. Modificările la schemă se coordonează cu workspace-ul paralel `.Tati_Documente_Medicale` (vezi DECIZII_FORMAT_FISIERE v3.0 propusă acolo).
-- **Documentele sursă** (`.pdf`, `.jpeg`) sunt **READ-ONLY** absolut — nu se suprascriu, redenumesc, șterg.
+- **Documentele sursă** (`.pdf`, `.jpeg`) sunt **READ-ONLY la nivel de conținut bytes** — nu se suprascriu, nu se modifică intern, nu se șterg.
+
+  **Excepție pentru filename — redenumire R26 retroactivă:** redenumirea fișierului e permisă DOAR pentru aplicarea convenției R26 (`YYYY-MM-DD_descriere.ext`) când documentul a fost adăugat înainte de codificarea R26 sau cu nume non-canonic. Condiții obligatorii cumulative:
+  1. **Conținut bytes neatins** — nu se modifică binarul; `git mv` păstrează identitate (R100 sau procent înalt rename detection)
+  2. **Trasabilitate explicită** — câmp `source_document_renamed_from` în `.meta.json` companion cu numele original + data redenumirii + motivul (R26)
+  3. **Naming note** — câmp `naming_note` în `.meta.json` cu istoric redenumire
+  4. **Backup R10 pre-redenumire** — JSON canonic + meta.json (rollback recoverable)
+  5. **Update cross-references** — toate referințele live (CONTEXT_MEDICAL §, DASHBOARD embed, MANIFEST, GHID-uri, alte JSON-uri) actualizate la noul nume
+  6. **Notificare user** — semnalare explicită în mesajul activ + commit message (R26 + R20)
+
+  **Precedent documentat:** Faza 1 plan implementare cross-terminal 2026-04-28 (commit `4c9bdd8`) — 6 redenumiri R26 retroactive în `02_cardiologie_2012/`, `11_CT_stadializare_2026/`, `12_biopsie_2026/`. Backup R10 în `arhiva/context_medical_versiuni/`.
+
+  **Niciodată ștergere** documente sursă — git history păstrează istoric, dar fișierul fizic rămâne accesibil în arborele de lucru pentru consult medical.

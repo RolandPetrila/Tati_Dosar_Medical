@@ -786,6 +786,100 @@ PLAN_IMPLEMENTARE_2026-04-28 e al **3-lea succes consecutiv** R29 cross-terminal
 
 ---
 
+## AUDIT-POST-FINAL — Verificări supplementare · 2026-04-28 13:35
+
+**Validare:** 🟢 ALL CLEAR
+**Auditor:** Claude Opus 4.7 (1M context) — terminal A
+**Trigger:** user a identificat 5 aspecte post-implementare cleanup b488020 pentru verificare adâncă
+
+### Verificare #1 — Contradicție internă `chain_notes` în CT meta.json — 🟢 REMEDIAT
+
+**Issue:** câmpul `chain_notes` (linia 21) conținea text vechi „Denumirea fișierului `CT - Genesys.pdf` păstrează convenția originală Genesis ... dar **nu se redenumește** ..." — direct contradictoriu cu `source_document_renamed_from` (linia 3) și `naming_note` (linia 23) care confirmă redenumirea S-A FĂCUT 2026-04-28 12:00.
+
+**Fix aplicat:** rewrite `chain_notes` să reflecte starea curentă — fișier redenumit 2026-04-28 12:00 din `CT - Genesys.pdf` în `2026-04-20_ct_torace_abdomen_pelvis.pdf` cu trasabilitate via `source_document_renamed_from` + `naming_note`. Eliminat textul auto-contradictoriu „nu se redenumește".
+
+**Verificare:** `2026-04-20_ct_torace_abdomen_pelvis.pdf.meta.json` linia 21 actualizată — coerentă cu liniile 3 și 23. JSON valid.
+
+### Verificare #2 — Tensiune R26 vs R8 (READ-ONLY) clarificare — 🟢 REMEDIAT
+
+**Issue:** `Dosar_Medical/CLAUDE.md` linia 304 zicea „Documentele sursă (.pdf, .jpeg) sunt **READ-ONLY** absolut — nu se suprascriu, redenumesc, șterg" — incoerent cu Faza 1 plan implementare (6 redenumiri R26 retroactive). Executorul a semnalat tensiunea în EXEC-1.1 12:00, dar regula nu fusese clarificată.
+
+**Fix aplicat:** rewrite linia 304 cu structurare explicită:
+
+- READ-ONLY = la nivel de **conținut bytes** (nu binar, nu structură internă, nu ștergere)
+- **Excepție pentru filename** = redenumire R26 retroactivă PERMISĂ cu 6 condiții obligatorii cumulative (conținut neatins + trasabilitate `source_document_renamed_from` + `naming_note` + backup R10 + cross-refs update + notificare user)
+- Precedent documentat: Faza 1 commit `4c9bdd8` (6 redenumiri în 02_cardiologie_2012 + 11_CT_stadializare_2026 + 12_biopsie_2026)
+
+**Verificare:** `Dosar_Medical/CLAUDE.md` secțiunea „Note pentru lucrul în Dosar_Medical/" — clarificare ambiguitate închisă pentru sesiuni viitoare.
+
+### Verificare #3 — Status `pre-commit-config.yaml` (T1 / Task #2.5) — 🟢 CONFIRMAT (a) NEINSTALAT
+
+**Verificat:**
+
+```
+pip show pre-commit         → Package(s) not found
+pip show check-jsonschema   → Package(s) not found
+```
+
+**Confirmare:** scenariul (a) — framework `pre-commit` NU e instalat sistemic. `.pre-commit-config.yaml` la rădăcină este **inert** — nu blochează `git commit` viitoare. Hook-ul `check-jsonschema` nu rulează la commit.
+
+**Niciun fix necesar.** Header-ul fișierului `.pre-commit-config.yaml` (linii 3-9) documentează explicit status-ul DORMANT și instrucțiunile de activare manuală: „Activare: rulează (după confirmare user) `pip install pre-commit check-jsonschema`, apoi `pre-commit install`". Fișierul rămâne `.pre-commit-config.yaml` (nume standard, recunoscut de tool-uri când vor fi instalate post-4.05). NU redenumesc în `.example.yaml` — header-ul + ROADMAP_POST L4 + audit.report L4 documentează clar status-ul.
+
+### Verificare #4 — `TODO.md` frontmatter `last_updated` stale — 🟢 REMEDIAT
+
+**Issue:** linia 5 zicea „Ultima actualizare: 28 aprilie 2026 10:50" dar fișierul a fost modificat în Faza 2 (M3 fix) și Faza 3 (TODO.md update P3 jsonschema).
+
+**Fix aplicat:** update timestamp `28 aprilie 2026 13:35` + sumar concis al modificărilor făcute prin plan în antet (similar pattern multi-eveniment existent): adăugat „PLAN IMPLEMENTARE cross-terminal R29 nr. 3 COMPLETAT" cu listă scurtă a fazelor + audit final scor 95/100 + cleanup commit `b488020` + AUDIT-POST-FINAL în curs.
+
+**Verificare:** `TODO.md` linia 5 actualizată — pattern multi-eveniment respectat.
+
+### Verificare #5 — Cross-references reziduale CHANGELOG/SESSION_LOG — 🟢 CONFIRMAT ISTORIC
+
+**Verificat manual fiecare ocurență:**
+
+| Fișier           | Linie   | Context                                                                                                                          | Verdict    |
+| ---------------- | ------- | -------------------------------------------------------------------------------------------------------------------------------- | ---------- |
+| `CHANGELOG.md`   | 15      | Entry 28.04 dimineață (pre-Faza-1) sursă PDF Vichy 12 MB Blidar Ioana                                                            | ✅ ISTORIC |
+| `CHANGELOG.md`   | 16      | Same entry — confirmare BMS                                                                                                      | ✅ ISTORIC |
+| `CHANGELOG.md`   | 44      | Entry 28.04 — NOU `Document_Cardiologie_Vichy_2012.pdf.meta.json` (R14 retroactiv pentru PDF deja existent la momentul scrierii) | ✅ ISTORIC |
+| `CHANGELOG.md`   | 877     | Entry 2026-04-24 02:50 R26 — context declanșator (user a mutat manual `CT - Genesys.pdf`)                                        | ✅ ISTORIC |
+| `CHANGELOG.md`   | 921     | Entry 2026-04-24 02:50 R26 — paragraf identificare 1 HIGH CT 20.04                                                               | ✅ ISTORIC |
+| `CHANGELOG.md`   | 943-944 | Entry mută `99_altele/CT - Genesys.pdf` → `11_CT_stadializare_2026/CT - Genesys.pdf`                                             | ✅ ISTORIC |
+| `CHANGELOG.md`   | 1495    | Entry sesiune 2026-04-23 — extragere date din PDF original                                                                       | ✅ ISTORIC |
+| `SESSION_LOG.md` | 21      | Entry 2026-04-28 dimineață — fișier `.meta.json` cu numele vechi                                                                 | ✅ ISTORIC |
+| `SESSION_LOG.md` | 532     | Entry 2026-04-24 — cerere user explicită post-reorganizare CT                                                                    | ✅ ISTORIC |
+| `SESSION_LOG.md` | 927     | Entry 2026-04-23 — extragere date din PDF original                                                                               | ✅ ISTORIC |
+
+**Confirmare pattern documentat:** log-urile (CHANGELOG.md, SESSION_LOG.md) sunt **immutable timeline** — entry-urile reflectă starea fișierelor LA MOMENTUL SCRIERII. NU se rescriu retroactiv (= rescrierea istoriei).
+
+**Niciuna nu e referință funcțională** (link activ, pointer live, spec activă). Toate sunt context narativ în jurnale cronologice.
+
+**Niciun fix necesar.**
+
+### Sumar AUDIT-POST-FINAL
+
+| #   | Verificare                         | Verdict              | Acțiune                                                           |
+| --- | ---------------------------------- | -------------------- | ----------------------------------------------------------------- |
+| 1   | Contradicție `chain_notes` CT meta | 🟢 REMEDIAT          | Edit `2026-04-20_ct_torace_abdomen_pelvis.pdf.meta.json` linia 21 |
+| 2   | Clarificare R26 vs R8 READ-ONLY    | 🟢 REMEDIAT          | Edit `Dosar_Medical/CLAUDE.md` linia 304                          |
+| 3   | Status `.pre-commit-config.yaml`   | 🟢 CONFIRMAT (a)     | Niciun fix — config inert, header documentează                    |
+| 4   | TODO.md `last_updated` stale       | 🟢 REMEDIAT          | Edit `TODO.md` linia 5                                            |
+| 5   | Cross-refs CHANGELOG/SESSION_LOG   | 🟢 CONFIRMAT ISTORIC | Niciun fix — pattern documentat, log immutable                    |
+
+### Status final AUDIT-POST-FINAL
+
+🟢 **ALL CLEAR**
+
+3 remedieri aplicate (verificările #1, #2, #4) + 2 confirmări fără fix (verificările #3, #5).
+
+Plan implementare R29 nr. 3 + cleanup + post-final audit = **toate aspectele auditat închise**. Proiect READY pentru consult 4.05.2026 cu baseline curat.
+
+### Următor pas
+
+Commit dedicat `[AUDIT POST-FINAL 2026-04-28] Verificări suplimentare — 3 remedieri + 2 confirmări`. Push origin/main. Reschedule wakeup auditor 1800s idle (loop activ pentru detect alte modificări neanunțate).
+
+---
+
 # 📚 LECȚII ÎNVĂȚATE (lessons learned — la final)
 
 ## Lecții din sesiunea R29 nr. 3 — 2026-04-28 12:00-13:25
