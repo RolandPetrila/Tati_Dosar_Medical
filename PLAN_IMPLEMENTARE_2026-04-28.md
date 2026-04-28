@@ -421,13 +421,13 @@ _(gol la creare)_
 
 ## 📊 Status global
 
-| Fază                 | Status     | Început | Sfârșit | Commit hash | Validat auditor                                                   |
-| -------------------- | ---------- | ------- | ------- | ----------- | ----------------------------------------------------------------- |
-| Faza 1               | 🟢 DONE    | 12:00   | 12:30   | 4c9bdd8     | 🟡 PASS_WITH_NOTES (12:25 — 4 INFO neblocante, vezi AUDIT-FAZA-1) |
-| Faza 2               | 🟢 DONE    | 12:45   | 12:55   | df817d0     | 🟢 PASS (12:58 — BONUS BUG biopsie reparat de schema T1)          |
-| Faza 3               | 🟢 DONE    | 13:00   | 13:10   | 24af7e9     | (pending audit)                                                   |
-| Audit final `/audit` | 🔴 PENDING | —       | —       | —           | —                                                                 |
-| Memory checkpoint    | 🔴 PENDING | —       | —       | —           | —                                                                 |
+| Fază                 | Status  | Început | Sfârșit | Commit hash | Validat auditor                                                                                                            |
+| -------------------- | ------- | ------- | ------- | ----------- | -------------------------------------------------------------------------------------------------------------------------- |
+| Faza 1               | 🟢 DONE | 12:00   | 12:30   | 4c9bdd8     | 🟡 PASS_WITH_NOTES (12:25 — 4 INFO neblocante, vezi AUDIT-FAZA-1)                                                          |
+| Faza 2               | 🟢 DONE | 12:45   | 12:55   | df817d0     | 🟢 PASS (12:58 — BONUS BUG biopsie reparat de schema T1)                                                                   |
+| Faza 3               | 🟢 DONE | 13:00   | 13:10   | 24af7e9     | 🟢 PASS (13:15 — 5 INFO neblocante, vezi AUDIT-FAZA-3)                                                                     |
+| Audit final `/audit` | 🟢 DONE | 13:15   | 13:25   | (skill)     | 🟢 SCOR 95/100 (+5 vs 90 anterior — `.claude-outputs/audit/2026-04-28_131500/`)                                            |
+| Memory checkpoint    | 🟢 DONE | 13:10   | 13:10   | 7613ea0     | salvat `~/.claude/projects/G--My-Drive-Roly--Tati/memory/sesiune_2026-04-28_plan-implementare-cross-terminal-completat.md` |
 
 ---
 
