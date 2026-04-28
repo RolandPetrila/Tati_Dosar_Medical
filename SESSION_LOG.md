@@ -6,6 +6,41 @@
 
 ---
 
+## 2026-04-28 08:45 — [Claude_Opus_4.7_1M] integrare-rezultat-biopsie-17-04-INCONCLUZIV (R10 + R14 + R17 + R18 + R20 + R23 + R26)
+
+**Scop:** integrare rezultat histopatologic biopsie esofagiană 17.04 primit 28.04 de la Bioclinica SA Timișoara (buletin 26417A0362 / cod T26H06044, semnat Dr. Glăja Romanița 27.04). REZULTAT INCONCLUZIV: „țesut de granulație + ulcerație cronică, doar SUGESTIV pentru infiltrat carcinomatos".
+
+**Fișiere create:**
+
+- `Dosar_Medical/documente_sursa/12_biopsie_2026/2026-04-17_biopsie_esofagiana_histopatologic.jpeg` (redenumit din `biopsie_2026.jpeg` per R26)
+- `Dosar_Medical/documente_sursa/12_biopsie_2026/2026-04-17_biopsie_esofagiana_histopatologic.jpeg.meta.json` (R14)
+- `Dosar_Medical/documente_sursa/12_biopsie_2026/2026-04-17_biopsie_esofagiana_histopatologic.md` (transcriere strict-extractivă R23)
+- `Dosar_Medical/2026-04-17_biopsie_esofagiana_histopatologic.json` (JSON canonic)
+- `Documente_Informative/EXPLICATIE_REZULTAT_BIOPSIE_2026-04-28.docx` (pentru familie)
+- `Dosar_Medical/corespondenta/2026-04-28_draft-mail-anater-rezultat-biopsie.md` (draft mail — nu trimis)
+
+**Fișiere modificate:**
+
+- `CONTEXT_MEDICAL.md` (v1.6 → v1.7 — antet + §2 + §2.6 + §7.4 REWRITE + §9 + §10 + §12)
+- `TODO.md` (calendar + monitor finalizat + P0 nou IHC + reprioritizare întrebări oncolog)
+- `CHANGELOG.md` (intrare nouă 28.04 08:45)
+- `SESSION_LOG.md` (această intrare)
+- `INDEX.json` (regenerat via script)
+- `DASHBOARD.html` (regenerare R18 — declanșator #1 analiză nouă)
+- `_projects_sync/*` (auto-regenerat via pre-commit hook)
+
+**Backup R10:** `Dosar_Medical/arhiva/context_medical_versiuni/{CONTEXT_MEDICAL,TODO,DASHBOARD}_pre-biopsie-rezultat_2026-04-28_0845.{md,md,html}`.
+
+**Decizii user (chat — rapide, nu AskUserQuestion formal):**
+
+- Document `.docx` pentru familie: DA (variantă A)
+- Mail draft Dr. Anater: pregătesc text, NU trimit (variantă A)
+- Telefon Bioclinica IHC anticipat: NU — așteptăm decizia oncolog 4.05 (default B)
+
+**Status post-sesiune:** monitor ntfy.sh dezactivat ✅ · suspiciune clinico-imagistică persistă · diagnostic histologic de certitudine pendent (IHC pe blocul T26H06044 sau rebiopsie — decizie consult 4.05).
+
+---
+
 ## 2026-04-27 — [Claude_Sonnet_4.6] update-programari-29-04-analize-30-04-cardiologic-dosar-oncohelp-4-05 (R16 + TODO)
 
 **Scop:** confirmare programări Roland (analize sânge Bioclinica 29.04 + consult cardiologic 30.04) + actualizare TODO.md pentru dosar complet OncoHelp 4.05.2026.

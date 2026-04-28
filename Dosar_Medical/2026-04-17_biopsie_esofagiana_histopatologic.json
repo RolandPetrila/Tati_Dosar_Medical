@@ -1,0 +1,164 @@
+{
+  "_metadata": {
+    "schema_version": "2.0",
+    "nume_fisier": "2026-04-17_biopsie_esofagiana_histopatologic.json",
+    "tip_document": "buletin_examen_histopatologic_biopsie",
+    "specialitate": "Anatomopatologie",
+    "data_recoltare": "2026-04-17",
+    "data_lucrat": "2026-04-17 → 2026-04-27 (procesare laborator Bioclinica Timișoara)",
+    "data_semnare_raport": "2026-04-27",
+    "data_generare_pdf": "2026-04-28T06:46:00",
+    "data_primire_user": "2026-04-28",
+    "buletin_nr": "26417A0362",
+    "cod_diagnostic_lab": "T26H06044",
+    "block_id_lab": "T26H06044-A1",
+    "sursa_pdf": "2026-04-17_biopsie_esofagiana_histopatologic.jpeg",
+    "sursa_locatie": "documente_sursa/12_biopsie_2026/",
+    "procesat_de": "Claude_Opus_4.7",
+    "data_procesare": "2026-04-28",
+    "ocr_quality": "good (digital nativ — text PDF clar, fără OCR)",
+    "confidence_overall": "high",
+    "completeness_verified": "2026-04-28",
+    "coverage": "100%",
+    "validator": "claude-opus-4-7",
+    "flags": [
+      "key_clinical_event",
+      "rezultat_inconcluziv_sugestiv_carcinom",
+      "necesita_imunohistochimie_sau_rebiopsie",
+      "trigger_dashboard_regen",
+      "trigger_context_medical_update"
+    ],
+    "notes": "REZULTAT INTERMEDIAR — NU diagnostic definitiv de cancer. Concluzie: țesut de granulație pe fond de ulcerație cronică, doar SUGESTIV pentru infiltrat carcinomatos. Limitare explicită: număr mic celule epiteliale atipice surprinse. Recomandare laborator: evaluare imunohistochimică pentru diagnostic de certitudine. Pas următor: consult oncolog 4.05.2026 OncoHelp (Dr. Anater) — decizie IHC pe blocul T26H06044 / rebiopsie țintită / EUS."
+  },
+  "pacient": {
+    "nume": "PETRILĂ",
+    "prenume": "VIOREL-MIHAI",
+    "nume_text_original_document": "PETRILA VIOREL MIHAI",
+    "cnp": "1590518024486",
+    "data_nasterii": "1959-05-18",
+    "varsta_la_data_document": 66,
+    "sex": "M",
+    "adresa_in_document": "STR Vasile Goldiș 42, Nădlac, Arad",
+    "confidence_identificare": "high"
+  },
+  "diagnostic_clinic_la_trimitere": "Proces proliferativ.",
+  "examen_histopatologic": {
+    "tehnica": "colorația hematoxilină-eozină (H&E)",
+    "piesa_a": {
+      "tip": "Biopsie",
+      "blocuri_parafina_procesate": 1
+    },
+    "macroscopic": {
+      "descriere_originala": "Doua piese biopsice cu aspect neregulat, cafenii, elastice, cu dimensiuni de 0,2/0,1/0,1 cm ambele. Se orienteaza in totalitate, fara sectionare (T26H06044-A1).",
+      "elemente_cheie": {
+        "numar_piese": 2,
+        "dimensiuni_cm": "0,2 / 0,1 / 0,1 (ambele piese)",
+        "aspect": "neregulat, cafenii, elastice",
+        "orientare": "totală, fără secționare",
+        "block_id": "T26H06044-A1"
+      },
+      "medic_responsabil": "Dr. Teoran Samy Ștefan (medic specialist, cod parafă G70575)",
+      "observatie_clinica_claude": "Cantitate sub-milimetrică de țesut prelevat — relevant pentru limitarea diagnostică menționată în nota laboratorului [PROBABIL]."
+    },
+    "microscopic": {
+      "descriere_originala": "Un fragment tisular biopsic constituit din numeroase structuri vasculare cu endoteliul tumefiat, unele hiperemiate/cu marginatie leucocitara si manson leucocitar, cu orientare perpendiculara pe suprafata acoperita partial de detritus si necroza fibrinoida; prezente deopotriva elemente celulare inflamatorii mononucleate; aparent se disting celule epitelioide de talie medie, cu nucleul nucleolat, cu nucleol eozinofil si citoplasma cantitativ moderata, palid colorata/slab eozinofila, singulare/grupate. Un fragment tisular mic reprezentat in exclusivitate de epiteliu stratificat scuamos necheratinizat, cu aspecte de exocitoza (granulocite neutrofile) si de extravazate hematice, fara suport conjunctiv.",
+      "componenta_inflamatorie_dominantă": {
+        "structuri_vasculare": "numeroase, cu endoteliu tumefiat, unele hiperemiate",
+        "marginatie_leucocitara": "prezentă",
+        "manson_leucocitar": "prezent",
+        "suprafata": "acoperită parțial de detritus și necroză fibrinoidă",
+        "infiltrat_inflamator": "elemente celulare inflamatorii mononucleate prezente",
+        "interpretare_claude": "[CERT] Pattern compatibil cu țesut de granulație pe ulcerație cronică — confirmat în concluzia raportului."
+      },
+      "componenta_atipica_minoritara": {
+        "celule_observate": "epitelioide de talie medie",
+        "caracteristici_nucleare": "nucleu nucleolat, nucleol eozinofil",
+        "citoplasma": "cantitativ moderată, palid colorată / slab eozinofilă",
+        "distributie": "singulare/grupate",
+        "diagnostic_definitiv": "[INCERT] — celule sugestive dar insuficiente pentru carcinom",
+        "interpretare_claude": "[PROBABIL] Caracteristicile nucleare (nucleol eozinofil prominent) sunt compatibile cu adenocarcinom moderat diferențiat — DAR cantitatea redusă de celule atipice împiedică diagnosticul de certitudine. Coroborat cu CT (T3-T4 infiltrativ Siewert II) și cu localizarea joncțiunii eso-gastrice, suspiciunea clinică pentru adenocarcinom rămâne ridicată."
+      },
+      "fragment_secundar": {
+        "tip_epiteliu": "epiteliu stratificat scuamos necheratinizat",
+        "modificari": "exocitoză (granulocite neutrofile), extravazate hematice",
+        "suport_conjunctiv": "absent",
+        "interpretare_claude": "[CERT] Mucoasă esofagiană normală inflamată — fără valoare diagnostică tumorală (țesut sănătos prelevat marginal)."
+      }
+    },
+    "concluzie": {
+      "text_original": "Ansamblul histologic, pe sectiuni seriate si in coloratia uzuala, pledeaza pentru tesut de granulatie pe fond de ulceratie cronica, fiind doar sugestiv pentru infiltrat carcinomatos.",
+      "diagnostic_principal_morfologic": "Țesut de granulație pe fond de ulcerație cronică",
+      "diagnostic_secundar_sugestiv": "Sugestiv (NU confirmat) pentru infiltrat carcinomatos",
+      "verdictul_oncologic": "[INCERT] — biopsie inconcluzivă; NU confirmă, NU infirmă carcinomul",
+      "marcaj_certitudine": "[INCERT]",
+      "interpretare_claude": "[CERT] Rezultat clasic de biopsie superficială pe leziune ulcerată/stenozantă: prelevarea conține în principal țesut de granulație + necroză + detritus de pe suprafața leziunii, cu prea puține celule din stratul tumoral profund pentru diagnostic histologic definitiv."
+    },
+    "nota_laboratorului": {
+      "text_original": "De corelat cu datele endoscopice/imagistice (diagnostic histologic tumoral mult limitat de numarul mic al celulelor epiteliale atipice); eventuala evaluare imunohistochimica pentru diagnostic histologic de certitudine si conduita terapeutica.",
+      "elemente_cheie": {
+        "corelatie_solicitata": "endoscopie + imagistică",
+        "limita_explicita": "număr mic de celule epiteliale atipice surprinse în fragment",
+        "recomandare_principala": "evaluare imunohistochimică (IHC) pentru diagnostic histologic de certitudine",
+        "scop_recomandare": "diagnostic de certitudine + ghidarea conduitei terapeutice"
+      }
+    }
+  },
+  "implicatii_clinice": {
+    "diagnostic_status": "[INCERT] — biopsie inconcluzivă; suspiciunea clinico-imagistică (CT + endoscopie) NU s-a infirmat și nici confirmat histologic",
+    "stadializare_impact": "Niciun impact direct asupra stadializării TNM imagistice (rămâne T3-T4, N0-N1, M0 probabil per CT 20.04). Stadializarea finală necesită confirmare histologică.",
+    "decizii_pendente": [
+      "IHC pe blocul existent T26H06044 (rapid 3-7 zile, fără re-intervenție; markeri propuși clinic: pan-CK, CK7/CK20, CDX-2, p53, eventual HER2 / PD-L1 / MSI dacă se confirmă carcinom)",
+      "Rebiopsie țintită endoscopică cu fragmente mai numeroase, mai profunde — eventual sub ghidaj EUS (ecoendoscopie) pentru a depăși stratul superficial de granulație",
+      "Combinare IHC + rebiopsie programată în paralel (variantă mixtă)"
+    ],
+    "decident_principal": "Dr. Anater Angelo-Christian, OncoHelp Timișoara — consult 4.05.2026",
+    "anatomopatolog_recomandare_explicita": "Dr. Glăja Romanița sugerează în nota laboratorului varianta IHC ca primă opțiune."
+  },
+  "context_documente_corelate": {
+    "endoscopie_recoltare": "Dosar_Medical/2026-04-17_examen_gastroscopic.json (proces proliferativ circumferențial 2/3 inferioară esofag, NEDEPĂȘIBIL endoscopic)",
+    "ct_stadializare": "Dosar_Medical/2026-04-20_ct_torace_abdomen_pelvis.json (T3-T4, N0-N1, M0 probabil, Siewert II, ascită perihepatică + intrapelvină)",
+    "bilet_trimitere_ct_initial": "Dosar_Medical/2026-04-17_bilet_trimitere_CT.json",
+    "creatinina_pre_ct": "Dosar_Medical/2026-04-17_buletin_bioclinica_uree_creatinina.json (același buletin Bioclinica menționa „Examen histopatologic în curs de execuție")",
+    "consult_oncolog_pendent": "4.05.2026 OncoHelp Timișoara — Dr. Anater Angelo-Christian (corespondență `Dosar_Medical/corespondenta/2026-04-24_re-solicitare-consult-anater.md`)"
+  },
+  "medici_unitati": {
+    "anatomopatolog_principal": {
+      "nume": "Dr. Glăja Romanița",
+      "titlu_profesional": "medic primar anatomopatolog",
+      "cod_parafa": "367427",
+      "rol": "semnatar raport histopatologic (concluzie + nota laboratorului)"
+    },
+    "medic_specialist_macroscopie": {
+      "nume": "Dr. Teoran Samy Ștefan",
+      "titlu_profesional": "medic specialist",
+      "cod_parafa": "G70575",
+      "rol": "evaluare macroscopică piesă"
+    },
+    "medic_curant_solicitant_biopsie": {
+      "nume": "Dr. Noufal Abdul Vahab",
+      "titlu_profesional": "medic primar gastroenterologie",
+      "cod_parafa": "C 11074",
+      "unitate": "Genesis Medical Clinic Arad",
+      "rol": "prelevare biopsie endoscopică 17.04.2026 14:21"
+    },
+    "laborator": {
+      "denumire": "Bioclinica SA",
+      "punct_recoltare": "Bioclinica Vlaicu Arad (cod 00003)",
+      "punct_lucrat": "Bioclinica SA, CAL Torontalului 1, Timișoara",
+      "buletin_nr": "26417A0362",
+      "contact": "arad@bioclinica.ro",
+      "site": "bioclinica.ro"
+    }
+  },
+  "monitor_automat": {
+    "sistem": "GitHub Actions + Playwright headless + ntfy.sh (repo privat RolandPetrila/Sistem_Notificari)",
+    "status": "deactivated_2026-04-28",
+    "note_dezactivare": "Rezultat primit; flag .DETECTED activat conform protocol monitor; user a primit notificare ntfy.sh prioritate 5."
+  },
+  "referinte_legate": {
+    "ct_rezultat_stadializare": "Dosar_Medical/2026-04-20_ct_torace_abdomen_pelvis.json",
+    "endoscopie_recoltare": "Dosar_Medical/2026-04-17_examen_gastroscopic.json",
+    "buletin_bioclinica_creatinina": "Dosar_Medical/2026-04-17_buletin_bioclinica_uree_creatinina.json",
+    "bilet_trimitere_ct": "Dosar_Medical/2026-04-17_bilet_trimitere_CT.json"
+  }
+}

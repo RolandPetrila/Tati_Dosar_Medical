@@ -2,45 +2,48 @@
 
 **Fișier de evidență a tuturor acțiunilor de făcut. Se actualizează continuu — la adăugarea și completarea fiecărei acțiuni.**
 
-**Ultima actualizare:** 28 aprilie 2026 (confirmare bilete trimitere ✅ + CEA/CA 19-9 confirmate ✅ + HbA1c adăugat la analize + CD DICOM confirmat ✅).
+**Ultima actualizare:** 28 aprilie 2026 08:45 (**REZULTAT BIOPSIE 17.04 PRIMIT 28.04 — INCONCLUZIV**: „țesut de granulație + ulcerație cronică, doar SUGESTIV pentru carcinom"; recomandare anatomopatolog: IHC pe blocul T26H06044 sau rebiopsie; monitor ntfy.sh dezactivat; întrebări oncolog 4.05 reprioritizate).
 
 ---
 
 ## Calendar — date cheie
 
-| Data                                | Eveniment                                                              | Status                                                                     |
-| ----------------------------------- | ---------------------------------------------------------------------- | -------------------------------------------------------------------------- |
-| 17.04.2026                          | Endoscopie + colonoscopie efectuate                                    | ✅ Finalizat                                                               |
-| 17.04.2026                          | Bilet trimitere CT emis                                                | ✅ Finalizat                                                               |
-| **18.04.2026**                      | **STOP Jamesi (H-48 pre-CT)**                                          | ✅ Finalizat                                                               |
-| ~~19.04.2026 — analize creatinină~~ | ~~de efectuat~~ → ✅ ACOPERIT (buletin Bioclinica 17.04.2026)          | ✅ Finalizat                                                               |
-| 19.04.2026                          | Hidratare activă (plan confirmat de familie)                           | ✅ Finalizat                                                               |
-| **20.04.2026 17:00**                | **CT torace + abdomen + pelvis cu contrast (Genesis Micălaca)**        | ✅ **Finalizat** — raport integrat 22.04.2026                              |
-| **22.04.2026**                      | Reluare Jamesi (H+48 post-CT, creatinină pre-CT normală)               | ✅ **Finalizat** — reluat seara 22.04, fără complicații                    |
-| **25.04.2026 18:00**                | Mail trimis Dr. Anater (programare 30.04 + 5 întrebări organizatorice) | ✅ Trimis                                                                  |
-| **26.04.2026 10:28**                | Răspuns Dr. Anater — reprogramare 30.04 → 4 mai + clarificări complete | ✅ Primit · ingest 26.04 19:06                                             |
-| **27.04.2026**                      | 3 telefoane programări                                                 | ✅ Finalizat — cardiolog 30.04 · analize 29.04 · bilete trimitere obținute |
-| **28-29.04.2026** (estimat)         | **Rezultat biopsie esofagiană** (Bioclinica Arad)                      | 🟢 În așteptare · monitor automat activ 24/7 (ntfy.sh)                     |
-| **29.04.2026**                      | Analize sânge — Bioclinica Arad                                        | 🟢 **PROGRAMAT** [confirmat 27.04]                                         |
-| **30.04.2026**                      | Consult cardiologic — ambulator Arad                                   | 🟢 **PROGRAMAT** [confirmat 27.04]                                         |
-| **28-30.04.2026**                   | Pregătire dosar fizic POST-biopsie pentru consult oncolog              | 🔴 P0 — vezi secțiune dedicată mai jos                                     |
-| ~~30.04.2026~~                      | ~~Consult oncolog digestiv — OncoHelp Timișoara~~                      | ❌ ANULAT 26.04 (motivat: aglomerație 1 mai)                               |
-| **4.05.2026 (luni)** 🔴             | **Consult oncolog digestiv — OncoHelp Timișoara** (REPROGRAMAT)        | 🔴 **PROGRAMAT** [per mail Anater 26.04]                                   |
-| Post-consult oncolog                | Evaluare endocrinologică (glandă suprarenală stângă)                   | 🟡 De programat                                                            |
+| Data                                | Eveniment                                                                                             | Status                                                                                                              |
+| ----------------------------------- | ----------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- |
+| 17.04.2026                          | Endoscopie + colonoscopie efectuate                                                                   | ✅ Finalizat                                                                                                        |
+| 17.04.2026                          | Bilet trimitere CT emis                                                                               | ✅ Finalizat                                                                                                        |
+| **18.04.2026**                      | **STOP Jamesi (H-48 pre-CT)**                                                                         | ✅ Finalizat                                                                                                        |
+| ~~19.04.2026 — analize creatinină~~ | ~~de efectuat~~ → ✅ ACOPERIT (buletin Bioclinica 17.04.2026)                                         | ✅ Finalizat                                                                                                        |
+| 19.04.2026                          | Hidratare activă (plan confirmat de familie)                                                          | ✅ Finalizat                                                                                                        |
+| **20.04.2026 17:00**                | **CT torace + abdomen + pelvis cu contrast (Genesis Micălaca)**                                       | ✅ **Finalizat** — raport integrat 22.04.2026                                                                       |
+| **22.04.2026**                      | Reluare Jamesi (H+48 post-CT, creatinină pre-CT normală)                                              | ✅ **Finalizat** — reluat seara 22.04, fără complicații                                                             |
+| **25.04.2026 18:00**                | Mail trimis Dr. Anater (programare 30.04 + 5 întrebări organizatorice)                                | ✅ Trimis                                                                                                           |
+| **26.04.2026 10:28**                | Răspuns Dr. Anater — reprogramare 30.04 → 4 mai + clarificări complete                                | ✅ Primit · ingest 26.04 19:06                                                                                      |
+| **27.04.2026**                      | 3 telefoane programări                                                                                | ✅ Finalizat — cardiolog 30.04 · analize 29.04 · bilete trimitere obținute                                          |
+| **28.04.2026** ✅                   | **Rezultat biopsie esofagiană PRIMIT** (Bioclinica SA Timișoara — buletin 26417A0362 / cod T26H06044) | ✅ **Primit — INCONCLUZIV** („țesut granulație + ulcerație cronică, doar SUGESTIV carcinom"); monitor ntfy.sh oprit |
+| **29.04.2026**                      | Analize sânge — Bioclinica Arad                                                                       | 🟢 **PROGRAMAT** [confirmat 27.04]                                                                                  |
+| **30.04.2026**                      | Consult cardiologic — ambulator Arad                                                                  | 🟢 **PROGRAMAT** [confirmat 27.04]                                                                                  |
+| **28-30.04.2026**                   | Pregătire dosar fizic POST-biopsie pentru consult oncolog                                             | 🔴 P0 — vezi secțiune dedicată mai jos                                                                              |
+| ~~30.04.2026~~                      | ~~Consult oncolog digestiv — OncoHelp Timișoara~~                                                     | ❌ ANULAT 26.04 (motivat: aglomerație 1 mai)                                                                        |
+| **4.05.2026 (luni)** 🔴             | **Consult oncolog digestiv — OncoHelp Timișoara** (REPROGRAMAT)                                       | 🔴 **PROGRAMAT** [per mail Anater 26.04]                                                                            |
+| Post-consult oncolog                | Evaluare endocrinologică (glandă suprarenală stângă)                                                  | 🟡 De programat                                                                                                     |
 
 ---
 
-## 🔔 Monitor automat rezultat biopsie — ACTIV
+## 🔔 Monitor automat rezultat biopsie — ✅ FINALIZAT 28.04.2026
 
-**Sistem independent** care verifică automat portalul Bioclinica la fiecare 30 min, 24/7, și notifică instant pe telefonul Roland (ntfy.sh, prioritate urgentă) când apare rezultatul histopatologic. **Nu depinde de laptop pornit** — rulează pe GitHub Actions.
+**Sistemul a notificat user-ul de apariția rezultatului** pe portalul Bioclinica. Flag `.DETECTED` activat conform protocol; monitor oprit automat.
 
-- **Repo privat:** `RolandPetrila/Sistem_Notificari` (nu e parte din dosarul `.Tati`, e hub separat pentru notificări reutilizabile)
-- **Folder local:** `C:\Users\ALIENWARE\Desktop\Roly\Sistem_Notificari_Telefon\`
-- **Mecanism:** Playwright headless → login Bioclinica (credențialele — cod buletin, cod acces, CNP — stocate ca GitHub Secrets în repo-ul privat, **nu** în acest dosar) → detecție text „histopatologic" în afara secțiunii „în curs de execuție" → ntfy.sh priority 5 → se oprește automat după prima notificare (flag `.DETECTED`)
-- **Abonament telefon ntfy:** topicul folosit de monitor trăiește doar în Secrets privat + aplicația ntfy pe telefon (nu e scris aici în dosarul public)
-- **Activat:** 2026-04-19 02:27 (commit `cf675ec`)
+- **Rezultat primit:** 28.04.2026 dimineața (PDF generat 06:46) — buletin **26417A0362**, cod **T26H06044**, semnat 27.04 de Dr. Glăja Romanița (Bioclinica SA Timișoara)
+- **Concluzie:** INCONCLUZIVĂ — vezi `CONTEXT_MEDICAL.md §7.4` pentru interpretare clinică completă
+- **Acțiune rămasă pe Sistem_Notificari (separat de `.Tati`):** confirmare workflow disabled / repo arhivat după consultul 4.05 (când ne asigurăm că nu mai apare un rezultat IHC/rebiopsie de monitorizat)
 
-**Acțiune așteptată:** niciuna din partea ta; primești notificare pe telefon când e cazul.
+**Detalii istorice (păstrat pentru referință):**
+
+- Repo privat: `RolandPetrila/Sistem_Notificari` (separat de `.Tati`, hub notificări reutilizabile)
+- Folder local: `C:\Users\ALIENWARE\Desktop\Roly\Sistem_Notificari_Telefon\`
+- Mecanism: Playwright headless → portal Bioclinica → detecție text „histopatologic" în afara „în curs" → ntfy.sh priority 5
+- Activat: 2026-04-19 02:27 (commit `cf675ec`); dezactivat: 2026-04-28 (rezultat detectat)
 
 ---
 
@@ -107,11 +110,11 @@
 
 1. ✅ **27.04.2026** — programări confirmate: analize Bioclinica 29.04 + cardiolog 30.04
 2. ✅ **27-28.04.2026** — bilete trimitere Dr. Orbán obținute (oncologie + cardiologie)
-3. ⏳ **28-29.04.2026** — primire rezultat biopsie (notificare automată ntfy.sh)
+3. ✅ **28.04.2026** — **rezultat biopsie PRIMIT** (Bioclinica 26417A0362 / T26H06044) — INCONCLUZIV, sugestiv carcinom; recomandare anatomopatolog: IHC sau rebiopsie
 4. 🔜 **29.04.2026** — analize Bioclinica: CEA + CA 19-9 + **HbA1c** (hemoglobina glicozilată) + altele
 5. 🔜 **30.04.2026** — consult cardiologic → scrisoare medicală + ECG + ECO
-6. 🔜 **30.04 + 1-3.05** — asamblare dosar fizic complet (printare + organizare)
-7. 🔴 **4.05.2026** — consult OncoHelp Timișoara (comisie oncologică)
+6. 🔜 **30.04 + 1-3.05** — asamblare dosar fizic complet (printare + organizare) + printare buletin biopsie + interpretare scrisă
+7. 🔴 **4.05.2026** — consult OncoHelp Timișoara (comisie oncologică) → **decizie urgentă: IHC pe blocul T26H06044 sau rebiopsie țintită**
 
 **Componente dosar (revizuit 26.04 cu instrucțiuni Anater):**
 
@@ -122,7 +125,7 @@
 - [ ] Buletin Bioclinica creatinină + uree 17.04.2026 (de printat)
 - [x] ✅ **CD DICOM** de la CT 20.04.2026 (Genesis) — la dosar [confirmat 28.04]
 - [ ] **Raport CT 20.04.2026** (printare)
-- [ ] **Rezultat biopsie histopatologic** (element-cheie — printat când apare 28-29.04)
+- [x] ✅ **Rezultat biopsie histopatologic** — primit 28.04.2026 (Bioclinica 26417A0362 / T26H06044). **De printat** atât buletinul Bioclinica cât și interpretarea sintetizată (`CONTEXT_MEDICAL.md §7.4`) + documentul `.docx` pentru familie generat 28.04
 - [x] ✅ **Markeri tumorali CEA + CA 19-9** — confirmat în analizele Bioclinica 29.04 [confirmat 28.04]
 - [x] ✅ **HbA1c (hemoglobina glicozilată A1c)** — adăugat în analizele Bioclinica 29.04 [28.04] — arată controlul glicemic pe 2-3 luni; relevant pre-chimio/chirurgie
 - [ ] **Consult cardiologic** — 🟢 PROGRAMAT 30.04.2026 → de adus scrisoare medicală + ECG + ECO fizic la 04.05
@@ -137,6 +140,27 @@
 - [ ] Listă întrebări pregătite pentru oncolog (secțiunea dedicată mai jos)
 - [ ] **Notă observație** statină nealuată — pentru discuție la consult (vezi `CONTEXT_MEDICAL.md §4`)
 - [ ] (Opțional) `Documente_Informative/EXPLICATIE_CONSULT_ONCOLOG_SCENARII.md` — pentru orientare familie pre-consult
+
+### [P0] 🔴 NOU 28.04 — Decizie IHC pe blocul T26H06044 sau rebiopsie (consult oncolog 4.05)
+
+**Context:** rezultatul biopsiei 17.04 primit 28.04 este **inconcluziv** — concluzie anatomopatolog: „țesut de granulație + ulcerație cronică, doar SUGESTIV pentru infiltrat carcinomatos". Limitare explicită: **număr mic de celule epiteliale atipice surprinse**. Recomandare laborator: „eventuală evaluare imunohistochimică pentru diagnostic histologic de certitudine și conduită terapeutică".
+
+**Status:** 🔴 P0 — depinde de decizia Dr. Anater la consult 4.05.
+
+**Trei opțiuni standard pentru diagnostic de certitudine:**
+
+1. **IHC pe blocul existent T26H06044** [recomandat de anatomopatolog] — markeri tipici: pan-CK, CK7/CK20, CDX-2, p53; eventual HER2 / PD-L1 / MSI dacă se confirmă carcinom (relevanță decizie terapeutică). Avantaj: rapid (3-7 zile), fără reintervenție. Dezavantaj: dacă atipia e prea redusă, IHC poate fi tot inconcluziv.
+2. **Rebiopsie endoscopică țintită** cu fragmente mai numeroase, mai profunde — eventual ghidată **EUS (ecoendoscopie)** pentru a depăși stratul superficial. Avantaj: randament diagnostic superior. Dezavantaj: necesită reintervenție + timp suplimentar.
+3. **Combinare IHC + rebiopsie programată în paralel.**
+
+**Sub-task-uri:**
+
+- [ ] Printare buletin biopsie + interpretare sintetizată + document `.docx` pentru familie (28-30.04, înainte de consult)
+- [ ] La consult 4.05 — întrebare prioritară Dr. Anater (vezi secțiunea „Pentru viitorul oncolog digestiv" mai jos): IHC pe blocul T26H06044 (cu ce markeri) vs rebiopsie țintită vs combinare?
+- [ ] La decizia Dr. Anater — solicitare formală la Bioclinica (poate prin oncolog cu trimitere) sau programare rebiopsie la Genesis/IOCN/OncoHelp
+- [ ] Update CONTEXT_MEDICAL.md §7.4 cu rezultatul IHC sau rebiopsiei, când vine
+
+**Referințe:** `CONTEXT_MEDICAL.md §7.4` (interpretare completă) · `Dosar_Medical/2026-04-17_biopsie_esofagiana_histopatologic.json` · `Documente_Informative/EXPLICATIE_REZULTAT_BIOPSIE_2026-04-28.docx` (28.04 — pentru familie).
 
 ### [P0] 📋 Analiză și prezentare rezultat CT familiei (22.04.2026)
 
@@ -330,17 +354,25 @@ Pentru evaluare mai precisă a expunerii (calculul „pachete-an”).
 - Ne recomandă un oncolog anume (din Arad / Timișoara / Cluj / București)?
 - Avem nevoie de endoscopie cu eco-endoscopie (EUS) pentru stadializarea locală mai precisă?
 
-### Pentru viitorul oncolog digestiv (URGENT — post-CT)
+### Pentru viitorul oncolog digestiv (URGENT — post-CT + post-biopsie inconcluzivă)
+
+**🔴 PRIORITATE 1 — Diagnostic histologic (biopsie 17.04 inconcluzivă, primită 28.04):**
+
+- **Care e următorul pas pentru diagnostic de certitudine: IHC pe blocul T26H06044 (recomandat de anatomopatolog Dr. Glăja) sau rebiopsie țintită endoscopică?**
+- Dacă IHC: cu ce **panel de markeri** — pan-CK / CK7 / CK20 / CDX-2 / p53 + HER2 / PD-L1 / MSI dacă se confirmă carcinom?
+- Dacă rebiopsie: la ce centru o programați și cu ce ghidaj (EUS pentru strat profund)? Cât timp adaugă în plan?
+- Aveți acces direct la blocul T26H06044 la Bioclinica SA Timișoara pentru a demara IHC fără reintervenție?
+- Cât timp adaugă fiecare opțiune în plan-ul terapeutic — cu impact asupra deciziei de începere a tratamentului?
 
 **Despre stadializare:**
 
-- Stadiul TNM exact (după biopsie): T, N, M — și criteriul aplicat?
-- **Cum interpretați ascita observată la CT?** Reactivă vs. carcinomatoză peritoneală?
-- Avem nevoie de **paracenteză diagnostică** pentru citologie peritoneală?
+- Stadiul TNM exact (post-IHC sau post-rebiopsie): T, N, M — și criteriul aplicat?
+- **Cum interpretați ascita observată la CT?** Reactivă (cardiacă, per Anater 24.04) vs. carcinomatoză peritoneală?
+- Avem nevoie de **paracenteză diagnostică** pentru citologie peritoneală — acum sau după clarificare histologică?
 - Avem nevoie de **laparoscopie diagnostică** pentru excluderea carcinomatozei?
 - **PET-CT** recomandat pentru sensibilitate superioară CT-ului standard?
 
-**Despre tipul tumoral și protocol:**
+**Despre tipul tumoral și protocol (după confirmarea histologică):**
 
 - Tipul histologic (adenocarcinom vs. scuamocelular) și grad de diferențiere?
 - Clasificare Siewert I/II/III confirmată? (CT sugerează II)
@@ -348,6 +380,7 @@ Pentru evaluare mai precisă a expunerii (calculul „pachete-an”).
 - Protocol **FLOT** (perioperator) vs. **CROSS** (neoadjuvant chimio-radioterapie)? — decizie bazată pe componenta gastrică?
 - Imunoterapie (pembrolizumab, nivolumab) — indicată dacă PD-L1+ sau MSI-H?
 - Trastuzumab/zolbetuximab — dacă HER2+ sau claudin-18.2+?
+- **Plan provizoriu pentru ambele scenarii** (IHC confirmă carcinom vs IHC negativ și rebiopsie necesară) — cum diferă pașii imediați?
 
 **Despre chirurgie:**
 

@@ -4,6 +4,54 @@
 
 ---
 
+## 2026-04-28 08:45 — KEY EVENT — Rezultat biopsie esofagiană 17.04 PRIMIT (INCONCLUZIV)
+
+**Tip:** integrare document medical critic + propagare CONTEXT_MEDICAL + recalibrare TODO
+
+### Eveniment
+
+Rezultat histopatologic biopsie esofagiană (recoltată 17.04.2026 la endoscopia Genesis Arad) **primit 28.04.2026** de la Bioclinica SA Timișoara — buletin **26417A0362**, cod diagnostic lab **T26H06044**, semnat 27.04 de **Dr. Glăja Romanița** (medic primar anatomopatolog, cod parafă 367427); macroscopie **Dr. Teoran Samy Ștefan** (cod parafă G70575).
+
+### Concluzie raportului `[CERT]` (text original)
+
+> „Ansamblul histologic, pe secțiuni seriate și în colorația uzuală, **pledează pentru țesut de granulație pe fond de ulcerație cronică, fiind doar sugestiv pentru infiltrat carcinomatos**."
+
+**Verdict clinic:** **INCONCLUZIV** — NU confirmă, NU infirmă carcinomul. Suspiciunea clinico-imagistică (CT T3-T4 + endoscopie nedepășibilă + simptome) **persistă**.
+
+**Limitare explicită declarată de laborator:** „diagnostic histologic tumoral mult limitat de numărul mic al celulelor epiteliale atipice" (biopsie sub-milimetrică: 2 piese 0,2/0,1/0,1 cm, 1 bloc parafină — pattern clasic de prelevare superficială pe leziune ulcerată/stenozantă).
+
+**Recomandare anatomopatolog:** „eventuală evaluare imunohistochimică pentru diagnostic histologic de certitudine și conduită terapeutică" → **IHC pe blocul T26H06044** sau **rebiopsie țintită**.
+
+### Documente create / modificate
+
+- **NOU** `Dosar_Medical/documente_sursa/12_biopsie_2026/2026-04-17_biopsie_esofagiana_histopatologic.jpeg` (redenumit din `biopsie_2026.jpeg` per R26 convenție)
+- **NOU** `Dosar_Medical/documente_sursa/12_biopsie_2026/2026-04-17_biopsie_esofagiana_histopatologic.jpeg.meta.json` (chain of custody R14)
+- **NOU** `Dosar_Medical/documente_sursa/12_biopsie_2026/2026-04-17_biopsie_esofagiana_histopatologic.md` (transcriere strict-extractivă R23)
+- **NOU** `Dosar_Medical/2026-04-17_biopsie_esofagiana_histopatologic.json` (JSON canonic — extragere integrală + interpretare clinică marcaje R17)
+- **NOU** `Documente_Informative/EXPLICATIE_REZULTAT_BIOPSIE_2026-04-28.docx` (document pentru familie — explicație simplă + 4 scenarii post-IHC)
+- **NOU** `Dosar_Medical/corespondenta/2026-04-28_draft-mail-anater-rezultat-biopsie.md` (draft mail Dr. Anater — NU trimis, păstrat ca text pentru user)
+- **MOD** `CONTEXT_MEDICAL.md` — antet (v1.7) + §2 introducere + §2.6 acțiuni curente + §7.4 (REWRITE complet — interpretare clinică completă) + §9 echipă (anatomopatologie Bioclinica completată) + §10 evaluare preliminară (recalibrare post-biopsie) + §12 rezumat 3 linii
+- **MOD** `TODO.md` — calendar (28.04 ✅ rezultat) + monitor finalizat ✅ + cronologie revizuită + componente dosar (rezultat ✅ printat) + **NOU [P0] task IHC vs rebiopsie** + reprioritizare întrebări oncolog (PRIORITATE 1 = IHC/rebiopsie)
+- **MOD** `CHANGELOG.md` — această intrare
+- **MOD** `SESSION_LOG.md` — intrare nouă
+- **REGEN** `INDEX.json` (script `generate_index.py`)
+- **REGEN** `_projects_sync/` (auto via pre-commit hook)
+
+### Backup R10
+
+- `Dosar_Medical/arhiva/context_medical_versiuni/CONTEXT_MEDICAL_pre-biopsie-rezultat_2026-04-28_0845.md`
+- `Dosar_Medical/arhiva/context_medical_versiuni/TODO_pre-biopsie-rezultat_2026-04-28_0845.md`
+- `Dosar_Medical/arhiva/context_medical_versiuni/DASHBOARD_pre-biopsie-rezultat_2026-04-28_0845.html`
+
+### Acțiuni propagate
+
+- Monitor automat ntfy.sh / Sistem_Notificari → **dezactivat 28.04** (rezultat detectat, flag .DETECTED)
+- Întrebări oncolog 4.05 reprioritizate cu IHC ca PRIORITATE 1
+- Documentul de familie cu explicație simplă generat și inclus în `Documente_Informative/`
+- Draft mail Dr. Anater pregătit în `Dosar_Medical/corespondenta/` — NU trimis (user decide)
+
+---
+
 ## 2026-04-28 — UPDATE — Confirmare programări dosar OncoHelp 4.05 + ghid cardiolog 30.04
 
 **Tip:** UPDATE dosar + document informativ nou

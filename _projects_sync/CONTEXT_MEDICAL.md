@@ -4,10 +4,10 @@
 
 ---
 
-**Ultima actualizare:** 26 aprilie 2026 19:06 (ingest mail Dr. Anater 26.04 — **REPROGRAMARE consult: 30.04 → 4 mai 2026 OncoHelp Timișoara**; markeri tumorali specificați **CEA + CA 19-9**; bilet trimitere medic familie pentru oncologie medicală; consult cardiologic recent extern cu bilet trimitere; comisie oncologică 4.05 cu chirurg eso pentru evaluare rezecție)
+**Ultima actualizare:** 28 aprilie 2026 08:45 (**REZULTAT BIOPSIE 17.04 PRIMIT** de la Bioclinica — buletin 26417A0362 / cod T26H06044 / semnat Dr. Glăja Romanița 27.04 / generat 28.04 06:46. **Concluzie INCONCLUZIVĂ:** „țesut de granulație pe fond de ulcerație cronică, doar SUGESTIV pentru infiltrat carcinomatos" — nu confirmă, nu infirmă carcinomul. Limitare explicită: număr mic celule epiteliale atipice surprinse. Recomandare laborator: **imunohistochimie (IHC) pe blocul T26H06044** pentru diagnostic de certitudine. Decident: Dr. Anater la consult 4.05 OncoHelp.)
 **Responsabil dosar:** Roland Petrilă (fiul pacientului)
-**Versiune structură:** 1.6 (reprogramare consult oncolog 30.04 → 4.05 + clarificare instrucțiuni pre-consult Anater 26.04)
-**Versiune anterioară arhivată:** `Dosar_Medical/arhiva/context_medical_versiuni/CONTEXT_MEDICAL_pre-ingest-mail-anater-26-04_2026-04-26_1906.md` + versiunile anterioare (vezi arhiva).
+**Versiune structură:** 1.7 (integrare rezultat biopsie 17.04 — INCONCLUZIV, sugestiv pentru carcinom; recalibrare §7.4 + §2.6 + §10 + §12; suspiciunea clinico-imagistică persistă, histologie încă neconfirmată)
+**Versiune anterioară arhivată:** `Dosar_Medical/arhiva/context_medical_versiuni/CONTEXT_MEDICAL_pre-biopsie-rezultat_2026-04-28_0845.md` + versiunile anterioare (vezi arhiva).
 
 ---
 
@@ -49,7 +49,9 @@ Acest fișier este **state file intern** (sursă pentru documentele de ieșire),
 
 **Suspiciune clinică principală:** Proces proliferativ **circumferențial nedepășibil endoscopic** la nivelul 2/3 inferioare a esofagului, cu **extensie la joncțiunea eso-gastrică (orificiul cardia + cadru gastric fundic)** — probabil **Siewert II** (de confirmat cu oncolog). Cod 95, bilet BCTAP 0631727 din 17.04.2026.
 
-**Context:** Leziune identificată la endoscopie digestivă superioară (17.04.2026, Dr. Noufal Abdul Vahab, Genesis Medical Clinic Arad). Biopsie prelevată — rezultat histopatologic încă în lucru la Bioclinica Arad (monitor automat activ, estimat 24.04–01.05.2026). CT TAP N+SDC de stadializare efectuat luni **20.04.2026 ora 17:00** la Genesis Medical Clinic Micălaca, raport semnat de Dr. Buie Florian-Laurențiu (cod parafă A11818) + Dr. Candea Florin-Vasile (cod parafă F52510), ambii medici primari radiologie.
+**Status histologic la 28.04.2026:** Biopsia 17.04 prelevată endoscopic = **INCONCLUZIVĂ** — „țesut de granulație pe fond de ulcerație cronică, doar SUGESTIV pentru infiltrat carcinomatos" `[CERT]`. NU confirmă, NU infirmă carcinomul. Suspiciunea clinico-imagistică (CT + endoscopie + simptome) **persistă**, dar diagnosticul histologic de certitudine necesită **imunohistochimie (IHC) pe blocul existent T26H06044** sau **rebiopsie țintită** (decizie la consult 4.05 OncoHelp). Vezi §7.4.
+
+**Context:** Leziune identificată la endoscopie digestivă superioară (17.04.2026, Dr. Noufal Abdul Vahab, Genesis Medical Clinic Arad). Biopsie prelevată — **rezultat histopatologic primit 28.04.2026 (Bioclinica SA Timișoara, semnat Dr. Glăja Romanița), inconcluziv (vezi §7.4)**. CT TAP N+SDC de stadializare efectuat luni **20.04.2026 ora 17:00** la Genesis Medical Clinic Micălaca, raport semnat de Dr. Buie Florian-Laurențiu (cod parafă A11818) + Dr. Candea Florin-Vasile (cod parafă F52510), ambii medici primari radiologie.
 
 > **Restructurare R24 aplicată 2026-04-24** (post-audit `AUDIT_EXTRAGERE_2026-04-24.md` Batch A): secțiunea 2 reorganizată în 5 sub-secțiuni (Findings principale / secundare / colaterale / parametri tehnici / referință sursă) pentru paritate completă cu `Dosar_Medical/2026-04-20_ct_torace_abdomen_pelvis.json`. Backup pre-restructurare: `Dosar_Medical/arhiva/context_medical_versiuni/CONTEXT_MEDICAL_pre-batchA-r24-CT_2026-04-24_0230.md`.
 
@@ -129,19 +131,18 @@ Acest fișier este **state file intern** (sursă pentru documentele de ieșire),
 - **Marcaj `.meta.json`:** `"completeness_verified": "2026-04-24"`, `"coverage": "100%"` (post-audit Batch A)
 - **Confidence overall:** high (PDF digital nativ, text extractabil, fără OCR)
 
-### 2.6 Acțiuni în curs (status la 2026-04-26 19:06 — post ingest mail Anater 26.04)
+### 2.6 Acțiuni în curs (status la 2026-04-28 08:45 — post primire rezultat biopsie)
 
 - ✅ **CT efectuat 20.04.2026** — raport integrat în dosar
-- 🟢 **Rezultat biopsie esofagiană** — estimat **28-29 aprilie 2026** (confirmat de familie 25.04); monitor automat activ 24/7 (GitHub Actions)
-- 🔴 **Consult oncolog digestiv — REPROGRAMAT: 30.04 → 4 mai 2026 (luni) la OncoHelp Timișoara** [per mail Dr. Anater 2026-04-26 10:28]. Motiv: 30.04 e foarte aglomerată din cauza zilei libere de 1 mai; caz nou care necesită mai mult timp.
-- 🔴 **MÂINE 27.04 — 3 telefoane (P0):**
-  - Medic familie Dr. Orbán → cerere **2 bilete trimitere** (oncologie medicală pentru OncoHelp + cardiologie pentru consult ambulator)
-  - Cardiolog Arad → programare consult (rezultat și document scrise) înainte de 4.05
-  - Synevo Arad → programare **markeri tumorali CEA + CA 19-9** (a jeun, dimineața; ~1 zi rezultat) — opțional dar recomandat: Anater a confirmat „laborator extern la fel de bine"
+- ✅ **Rezultat biopsie esofagiană PRIMIT 28.04.2026** (Bioclinica SA Timișoara, buletin 26417A0362 / cod T26H06044, semnat Dr. Glăja Romanița 27.04). **CONCLUZIE: inconcluzivă — „țesut de granulație + ulcerație cronică, doar SUGESTIV pentru infiltrat carcinomatos"** `[CERT]`. Limitare explicită: număr mic celule epiteliale atipice. **Recomandare laborator: IHC pe blocul T26H06044** pentru diagnostic de certitudine. Vezi §7.4.
+- 🔴 **DECIZIE PENDENTĂ ONCOLOG 4.05** — opțiuni pentru diagnostic histologic de certitudine: **(a) IHC pe blocul existent T26H06044** (rapid, fără reintervenție; recomandat de anatomopatolog), **(b) rebiopsie țintită endoscopică ± EUS**, **(c) combinare**. Decident: Dr. Anater la consult OncoHelp.
+- 🔴 **Monitor automat ntfy.sh** → **DEZACTIVARE necesară** (rezultat primit; flag .DETECTED activat).
+- 🔴 **Consult oncolog digestiv — 4 mai 2026 (luni) la OncoHelp Timișoara** [per mail Dr. Anater 2026-04-26 10:28]. Cu rezultatul biopsiei inconcluziv, agenda consultului include obligatoriu: discuție IHC vs rebiopsie + plan terapeutic provizoriu pentru ambele scenarii (carcinom confirmat IHC vs necesar rebiopsie).
 - 🟡 **Plan zi 4 mai consult [per mail Anater 26.04]:** consult + comisie oncologică (constituire dosar) + opinie chirurg eso pentru posibilitate rezecție. **NU rămâne internat din 4 mai.** Posibilă intervenție laparoscopică ULTERIOR pentru evaluarea peritoneului. Anater va elibera bilet trimitere chirurgie + va lua legătura tintit cu chirurgul.
 - 🟡 **Evaluare endocrinologică** glanda suprarenală stângă — de programat post-consult oncolog
 - ✅ **Jamesi reluat** 22.04.2026 seara, conform schemei standard (1-0-1, 50/1000 mg), **fără complicații** — pauza H-48h → H+48h a funcționat corect, fără simptome renale post-contrast raportate de familie
 - 🟡 **Spirometrie + anamneză pulmonară pre-esofagectomie** (post audit Batch A 2026-04-24) — de discutat cu chirurgul oncolog: tulburările ventilație posterobazal LID+LIS + nodulii apicali sechelari LSD necesită evaluare pulmonară pre-operator (spirometrie + DLCO + posibil consult pneumolog)
+- ✅ **Programări 27.04 confirmate:** analize Bioclinica 29.04 (CEA + CA 19-9 + HbA1c) · cardiolog 30.04 · bilete trimitere Dr. Orbán obținute (oncologie + cardiologie) · CD DICOM la dosar
 
 ---
 
@@ -408,12 +409,55 @@ Efectuată concomitent cu endoscopia la Genesis Medical Clinic Arad (Dr. Noufal 
 
 **Buletin colonoscopie:** JPEG sursă `documente_sursa/09_endoscopie_2026_04/2026-04-17_examen_colonoscopic.jpeg`; JSON canonic `Dosar_Medical/2026-04-17_examen_colonoscopic.json`.
 
-### 7.4 Biopsie esofagiană (în lucru)
+### 7.4 Rezultat biopsie esofagiană 17.04.2026 — PRIMIT 28.04.2026 (INCONCLUZIV)
 
-**Status:** la laboratorul de anatomopatologie Bioclinica Arad.
-**Timp estimat:** 7-14 zile lucrătoare (estimare 24.04-01.05.2026).
-**Monitor automat:** activ (GitHub Actions → ntfy.sh, verificare portal Bioclinica la 30 min, 24/7).
-**Importanță:** diagnostic de certitudine (tip histologic — adenocarcinom vs. scuamocelular, grad de diferențiere, markeri moleculari relevanți pentru decizia terapeutică).
+**Status:** ✅ rezultat primit; monitor automat dezactivat.
+
+**Buletin:** Bioclinica SA, nr. **26417A0362**, cod diagnostic lab **T26H06044**.
+**Recoltat:** 17.04.2026 14:21 (Bioclinica Vlaicu Arad — la endoscopia Genesis, Dr. Noufal).
+**Lucrat:** Bioclinica SA, CAL Torontalului 1, Timișoara.
+**Raport semnat:** 27.04.2026 — Dr. Glăja Romanița (medic primar anatomopatolog, cod parafă **367427**).
+**Macroscopie:** Dr. Teoran Samy Ștefan (medic specialist, cod parafă **G70575**).
+**PDF generat:** 28.04.2026 06:46.
+
+#### Findings
+
+**Macroscopic** `[CERT]`: 2 piese biopsice 0,2 / 0,1 / 0,1 cm — sub-milimetrice, aspect neregulat, cafenii, elastice; 1 bloc parafină procesat, orientare totală fără secționare (block T26H06044-A1).
+
+**Microscopic — componenta dominantă** `[CERT]`: numeroase structuri vasculare cu endoteliu tumefiat, hiperemiate, cu marginație leucocitară + manșon leucocitar; suprafață acoperită parțial de **detritus și necroză fibrinoidă**; elemente celulare inflamatorii mononucleate. Pattern compatibil cu **țesut de granulație** pe ulcerație cronică.
+
+**Microscopic — componenta atipică minoritară** `[INCERT]`: aparent celule epitelioide de talie medie, cu **nucleu nucleolat, nucleol eozinofil**, citoplasmă moderată palid colorată / slab eozinofilă, singulare/grupate. Caracteristici nucleare compatibile cu adenocarcinom moderat diferențiat `[PROBABIL]`, dar **insuficiente cantitativ** pentru diagnostic de certitudine.
+
+**Fragment secundar** `[CERT]`: epiteliu stratificat scuamos nekeratinizat (mucoasă esofagiană normală) cu exocitoză neutrofilă + extravazate hematice — fără valoare diagnostică tumorală.
+
+#### Concluzia raportului `[CERT]` (text original)
+
+> „Ansamblul histologic, pe secțiuni seriate și în colorația uzuală, **pledează pentru țesut de granulație pe fond de ulcerație cronică, fiind doar sugestiv pentru infiltrat carcinomatos.**"
+
+#### Nota laboratorului `[CERT]` (text original)
+
+> „De corelat cu datele endoscopice/imagistice (**diagnostic histologic tumoral mult limitat de numărul mic al celulelor epiteliale atipice**); eventuală evaluare imunohistochimică pentru diagnostic histologic de certitudine și conduită terapeutică."
+
+#### Interpretare clinică sintetizată
+
+| Element                                          | Verdict                                                                                                                                                                                                                                                                                    |
+| ------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| Confirmare histologică de cancer                 | **Niciuna** `[CERT]` — sugestiv ≠ confirmat                                                                                                                                                                                                                                                |
+| Infirmare carcinom                               | **Nu** `[CERT]` — celule atipice prezente; absența confirmării e _tehnică_ (cantitate de țesut), nu definitivă                                                                                                                                                                             |
+| Suspiciune clinico-imagistică                    | **Persistă ridicată** `[PROBABIL]` (CT T3-T4, stenoză circumferențială, ascită, simptome — neschimbate)                                                                                                                                                                                    |
+| Tip tumoral                                      | **Nedeterminat** `[INCERT]` — celulele atipice par epitelioide/glandulare → compatibil adenocarcinom, dar fără IHC nu se poate confirma                                                                                                                                                    |
+| Stadializare imagistică                          | **Neschimbată** `[CERT]` — rămâne T3-T4 / N0-N1 / M0 probabil per CT 20.04 până la confirmare histologică                                                                                                                                                                                  |
+| Cauză probabilă a inconcluzivității `[PROBABIL]` | Pattern clasic la biopsii prelevate de pe leziuni stenozante/ulcerate: prelevarea conține în principal _crusta inflamatorie superficială_ (granulație + necroză + detritus) și prea puține celule din _stratul tumoral profund_; consistent cu CT „infiltrativ" + endoscopie „nedepășibil" |
+
+#### Pași următori — opțiuni standard pentru diagnostic de certitudine
+
+1. **IHC pe blocul existent T26H06044** `[PROBABIL — recomandat de anatomopatolog]` — markeri propuși clinic: pan-CK (citokeratine), CK7/CK20, CDX-2, p53; eventual HER2 / PD-L1 / MSI dacă se confirmă carcinom (relevanță decizie terapeutică). **Avantaj:** rapid (3-7 zile), fără reintervenție. **Dezavantaj:** dacă celulele atipice sunt prea puține, IHC poate fi tot inconcluziv.
+2. **Rebiopsie endoscopică țintită** cu fragmente mai numeroase, mai profunde — eventual sub ghidaj **EUS (ecoendoscopie)** pentru biopsie din strat profund. **Avantaj:** randament diagnostic superior. **Dezavantaj:** necesită reintervenție + timp suplimentar.
+3. **Combinare IHC + rebiopsie programată în paralel** — variantă mixtă, decisă de oncolog/comisie tumor board.
+
+**Decident:** Dr. Anater Angelo-Christian, consult **4.05.2026 OncoHelp Timișoara** (comisie oncologică prevăzută în aceeași zi).
+
+**Sursă document:** `Dosar_Medical/2026-04-17_biopsie_esofagiana_histopatologic.json` + `documente_sursa/12_biopsie_2026/2026-04-17_biopsie_esofagiana_histopatologic.{jpeg,md,jpeg.meta.json}`.
 
 ### 7.5 Bilet trimitere CT (17 aprilie 2026) — document administrativ declanșator
 
@@ -505,26 +549,26 @@ Componente prevăzute (revizuit 26.04 cu instrucțiuni Anater):
 
 ## 9. Echipă medicală
 
-| Specialitate                                                 | Medic                                                                                                                                                                                                                        | Unitate                                                          | Contact                                             |
-| ------------------------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------- | --------------------------------------------------- |
-| **Medic de familie**                                         | **Dr. ORBÁN ECATERINA-MARIA** (medic specialist medicină generală-pediatrie, cod parafă **718705**, CUI **20263730**)                                                                                                        | **Cabinet Medical Individual, Nădlac**                           | De completat                                        |
-| Gastroenterologie (endoscopie 17.04.2026)                    | Dr. Noufal Abdul Vahab (medic primar, cod parafă **C 11074**)                                                                                                                                                                | Genesis Medical Clinic Arad                                      | De completat                                        |
-| **Radiologie și Imagistică (CT 20.04.2026)**                 | **Dr. Buie Florian-Laurențiu (cod A11818)** + **Dr. Candea Florin-Vasile (cod F52510)** — ambii medici primari                                                                                                               | **Genesis Medical Clinic Micălaca**                              | Prin Genesis                                        |
-| Anatomopatologie (biopsie esofag)                            | De identificat (Bioclinica Arad)                                                                                                                                                                                             | Bioclinica Arad                                                  | `arad@bioclinica.ro`                                |
-| Laborator clinic (pre-CT 17.04.2026)                         | Dr. Statnic Maria Luminița (medic primar medicina de laborator, cod **A08064**)                                                                                                                                              | Bioclinica SRL Arad, punct recoltare Vlaicu                      | `arad@bioclinica.ro`                                |
-| **Cardiologie ambulator (consult pre-chirurgie 10.11.2025)** | **Dr. LAZA CRISTINA** (medic primar cardiolog, cod parafă **C07842**) — prescriptor schemă medicație actuală                                                                                                                 | Arad (cabinet de identificat)                                    | —                                                   |
-| Cardiologie (SCA ST+ 2012)                                   | Echipa Vichy, Franța — de identificat pe PDF                                                                                                                                                                                 | Centre Hospitalier de Vichy (de confirmat)                       | —                                                   |
-| Cardiologie (episod UPU 30.05.2024)                          | Dr. Post Mihaela (medic specialist cardiologie, cod **A13550** / **A14555** — 2 coduri pe 2 ștampile diferite)                                                                                                               | Spitalul Clinic Județean de Urgență Arad + ambulator             | —                                                   |
-| Gastroenterologie (episod UPU 30.05.2024)                    | Dr. Grada Sebastian (medic specialist gastroenterologie, cod **G15512**)                                                                                                                                                     | Spitalul Clinic Județean de Urgență Arad                         | —                                                   |
-| Medicină de urgență (UPU 30.05.2024)                         | Dr. Pop Florica (medic primar medicină de urgență, cod **C79981**)                                                                                                                                                           | Spitalul Clinic Județean de Urgență Arad — UPU Adulți            | —                                                   |
-| **Chirurgie Generală (hernie 28.11.2025)**                   | **Dr. Papiu Horațiu-Sabin (medic primar chirurgie, cod parafă 775468)**                                                                                                                                                      | Spitalul Clinic Județean de Urgență Arad — Chirurgie Generală II | —                                                   |
-| **Urologie (consult 28.10.2025)**                            | **Dr. PITEA ALEXANDRU (medic primar urologie, cod A13044)**                                                                                                                                                                  | Complex Medical Pitea & Pitea SRL, Arad, Revoluției 45           | **0749111455**                                      |
-| Laborator clinic (serologie HP + analize 2025)               | Dr. Cret Anamaria (medic primar laborator, cod A 0769)                                                                                                                                                                       | SC Ultra ClinicaVest SRL Pecica                                  | `laborator@ultraclinicavest.ro`                     |
-| Laborator clinic (UPU 30.05.2024)                            | Dr. Igas Angelica (cod 119856) + Dr. Avram Cecilia — ambii medici primari medicina de laborator                                                                                                                              | Spitalul Clinic Județean de Urgență Arad — Laborator Central     | —                                                   |
-| **Oncologie digestivă** (consult 🔴 reprogramat 4.05.2026)   | **Dr. Anater Angelo - Christian** (Medic Specialist Oncologie Medicală — per self-id email; site oncohelp.ro listează „Rezident", R12 conflict surse) — vezi `Dosar_Medical/CONTACTE_MEDICALE.md#dr-anater-angelo-christian` | **OncoHelp Timișoara** (Str. C. Porumbescu 57-59, 300239)        | `angelo.anater@oncohelp.ro` · centrală 0256 495403  |
-| Oncologie (contact direct furnizat user 25.04)               | **Dr. Vornicu Vlad-Norin** (Medic Specialist Oncolog, Asistent Univ PhD UMFT, focus oncologie pulmonară) — opțiune second opinion / specialist complementar                                                                  | OncoHelp Timișoara                                               | `0762 120 428` · `vornicuvlad91@gmail.com`          |
-| Oncologie second opinion (IOCN Cluj — răspuns 24.04)         | **Șef Lucrări Dr. Andra Meșter** (Medic Specialist Oncologie Medicală)                                                                                                                                                       | Institutul Oncologic „Prof. Dr. Ion Chiricuță", Cluj-Napoca      | `drmester.iocn@gmail.com` · `0264 598 362 int. 347` |
-| Endocrinologie (glandă suprarenală, follow-up)               | De stabilit post-consult oncolog                                                                                                                                                                                             | —                                                                | —                                                   |
+| Specialitate                                                 | Medic                                                                                                                                                                                                                        | Unitate                                                                                                         | Contact                                             |
+| ------------------------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- | --------------------------------------------------- |
+| **Medic de familie**                                         | **Dr. ORBÁN ECATERINA-MARIA** (medic specialist medicină generală-pediatrie, cod parafă **718705**, CUI **20263730**)                                                                                                        | **Cabinet Medical Individual, Nădlac**                                                                          | De completat                                        |
+| Gastroenterologie (endoscopie 17.04.2026)                    | Dr. Noufal Abdul Vahab (medic primar, cod parafă **C 11074**)                                                                                                                                                                | Genesis Medical Clinic Arad                                                                                     | De completat                                        |
+| **Radiologie și Imagistică (CT 20.04.2026)**                 | **Dr. Buie Florian-Laurențiu (cod A11818)** + **Dr. Candea Florin-Vasile (cod F52510)** — ambii medici primari                                                                                                               | **Genesis Medical Clinic Micălaca**                                                                             | Prin Genesis                                        |
+| **Anatomopatologie (biopsie esofag 17.04.2026)**             | **Dr. Glăja Romanița** (medic primar anatomopatolog, cod parafă **367427**) — semnatar raport histopatologic 27.04.2026 + **Dr. Teoran Samy Ștefan** (medic specialist, cod parafă **G70575**) — evaluare macroscopică       | **Bioclinica SA** — laborator anatomopatologie CAL Torontalului 1, Timișoara (recoltare Bioclinica Vlaicu Arad) | `arad@bioclinica.ro`                                |
+| Laborator clinic (pre-CT 17.04.2026)                         | Dr. Statnic Maria Luminița (medic primar medicina de laborator, cod **A08064**)                                                                                                                                              | Bioclinica SRL Arad, punct recoltare Vlaicu                                                                     | `arad@bioclinica.ro`                                |
+| **Cardiologie ambulator (consult pre-chirurgie 10.11.2025)** | **Dr. LAZA CRISTINA** (medic primar cardiolog, cod parafă **C07842**) — prescriptor schemă medicație actuală                                                                                                                 | Arad (cabinet de identificat)                                                                                   | —                                                   |
+| Cardiologie (SCA ST+ 2012)                                   | Echipa Vichy, Franța — de identificat pe PDF                                                                                                                                                                                 | Centre Hospitalier de Vichy (de confirmat)                                                                      | —                                                   |
+| Cardiologie (episod UPU 30.05.2024)                          | Dr. Post Mihaela (medic specialist cardiologie, cod **A13550** / **A14555** — 2 coduri pe 2 ștampile diferite)                                                                                                               | Spitalul Clinic Județean de Urgență Arad + ambulator                                                            | —                                                   |
+| Gastroenterologie (episod UPU 30.05.2024)                    | Dr. Grada Sebastian (medic specialist gastroenterologie, cod **G15512**)                                                                                                                                                     | Spitalul Clinic Județean de Urgență Arad                                                                        | —                                                   |
+| Medicină de urgență (UPU 30.05.2024)                         | Dr. Pop Florica (medic primar medicină de urgență, cod **C79981**)                                                                                                                                                           | Spitalul Clinic Județean de Urgență Arad — UPU Adulți                                                           | —                                                   |
+| **Chirurgie Generală (hernie 28.11.2025)**                   | **Dr. Papiu Horațiu-Sabin (medic primar chirurgie, cod parafă 775468)**                                                                                                                                                      | Spitalul Clinic Județean de Urgență Arad — Chirurgie Generală II                                                | —                                                   |
+| **Urologie (consult 28.10.2025)**                            | **Dr. PITEA ALEXANDRU (medic primar urologie, cod A13044)**                                                                                                                                                                  | Complex Medical Pitea & Pitea SRL, Arad, Revoluției 45                                                          | **0749111455**                                      |
+| Laborator clinic (serologie HP + analize 2025)               | Dr. Cret Anamaria (medic primar laborator, cod A 0769)                                                                                                                                                                       | SC Ultra ClinicaVest SRL Pecica                                                                                 | `laborator@ultraclinicavest.ro`                     |
+| Laborator clinic (UPU 30.05.2024)                            | Dr. Igas Angelica (cod 119856) + Dr. Avram Cecilia — ambii medici primari medicina de laborator                                                                                                                              | Spitalul Clinic Județean de Urgență Arad — Laborator Central                                                    | —                                                   |
+| **Oncologie digestivă** (consult 🔴 reprogramat 4.05.2026)   | **Dr. Anater Angelo - Christian** (Medic Specialist Oncologie Medicală — per self-id email; site oncohelp.ro listează „Rezident", R12 conflict surse) — vezi `Dosar_Medical/CONTACTE_MEDICALE.md#dr-anater-angelo-christian` | **OncoHelp Timișoara** (Str. C. Porumbescu 57-59, 300239)                                                       | `angelo.anater@oncohelp.ro` · centrală 0256 495403  |
+| Oncologie (contact direct furnizat user 25.04)               | **Dr. Vornicu Vlad-Norin** (Medic Specialist Oncolog, Asistent Univ PhD UMFT, focus oncologie pulmonară) — opțiune second opinion / specialist complementar                                                                  | OncoHelp Timișoara                                                                                              | `0762 120 428` · `vornicuvlad91@gmail.com`          |
+| Oncologie second opinion (IOCN Cluj — răspuns 24.04)         | **Șef Lucrări Dr. Andra Meșter** (Medic Specialist Oncologie Medicală)                                                                                                                                                       | Institutul Oncologic „Prof. Dr. Ion Chiricuță", Cluj-Napoca                                                     | `drmester.iocn@gmail.com` · `0264 598 362 int. 347` |
+| Endocrinologie (glandă suprarenală, follow-up)               | De stabilit post-consult oncolog                                                                                                                                                                                             | —                                                                                                               | —                                                   |
 
 > **Corespondență oncologică completă** (toate threadurile email cu medici și clinici): vezi `Dosar_Medical/corespondenta/INDEX.md` (R27 — primul ingest Gmail full-history 2026-04-25). Conține 5 fișiere thread (Anater, Mester, broadcast 5 clinici, OncoHelp inițial, Cip adjuvant).
 
@@ -569,10 +613,12 @@ Componente prevăzute (revizuit 26.04 cu instrucțiuni Anater):
 
 **Decizia finală se bazează EXCLUSIV pe:**
 
-- Rezultatul histopatologic al biopsiei (tip celular, grad de diferențiere, markeri moleculari HER2, PD-L1, MSI)
+- **Rezultatul histopatologic al biopsiei — primit 28.04.2026, INCONCLUZIV** `[CERT]` (vezi §7.4): ține pasul „diagnostic de certitudine" deschis până la **IHC pe blocul T26H06044** sau **rebiopsie țintită** (decizie consult 4.05). Fără diagnostic histologic ferm, alegerea protocolului (FLOT / CROSS / paliativ) **NU poate fi finalizată**.
 - Clarificarea etiologiei ascitei (reactivă vs. carcinomatoză — poate necesita paracenteză + citologie sau laparoscopie)
 - Evaluarea de către medicul oncolog digestiv
 - Eventual PET-CT pentru activitate metabolică și confirmare M0 cu sensibilitate superioară CT-ului
+
+**Recalibrare 28.04.2026 post-biopsie:** Inconcluzivitatea biopsiei NU schimbă suspiciunea clinico-imagistică `[CERT]` — toate elementele care susțin neoplazia avansată (stenoză „nedepășibilă", proces infiltrativ T3-T4, ascită) rămân valide. Modifică doar _ritmul deciziei terapeutice_: pasul histologic de certitudine necesită IHC sau rebiopsie înainte de inițierea unui protocol oncologic. Probabilitatea ca leziunea să fie **non-tumorală** (ulcerație cronică pură, esofagită severă, etc.) rămâne **mică** `[PROBABIL]` dar NU zero — diagnostic diferențial care va fi clarificat prin IHC/rebiopsie.
 
 ---
 
@@ -592,13 +638,13 @@ Componente prevăzute (revizuit 26.04 cu instrucțiuni Anater):
 
 ---
 
-## 12. Rezumat în 3 linii (pentru preluare rapidă — actualizat 26.04.2026)
+## 12. Rezumat în 3 linii (pentru preluare rapidă — actualizat 28.04.2026)
 
 1. Pacient masculin, 66 ani, diabetic, post-stent cardiac 2012, ex-fumător 35 ani. CNP 1590518024486.
 2. Proces proliferativ **circumferențial nedepășibil endoscopic** la joncțiunea eso-gastrică (Siewert II probabil); CT 20.04.2026 arată **T3-T4, N0-N1, M0 probabil**, cu ASCITĂ probabil cardiacă per Anater (de elucidat eventual cu laparoscopie ulterior).
-3. Biopsia în lucru (Bioclinica, estimat 28-29.04); **consult oncolog reprogramat 4 mai 2026 (luni) la OncoHelp Timișoara** (Dr. Anater + chirurg eso, comisie oncologică) — posibil protocol FLOT; mâine 27.04 telefoane: medic familie (2 bilete trimitere), cardiolog, Synevo (CEA + CA 19-9).
+3. **Biopsie 17.04 primită 28.04 — INCONCLUZIVĂ** („țesut de granulație + ulcerație cronică, doar SUGESTIV pentru carcinom"; cod T26H06044, Dr. Glăja Romanița 27.04); recomandare anatomopatolog: **IHC pe blocul T26H06044** sau rebiopsie. Suspiciunea clinico-imagistică persistă. **Consult oncolog 4 mai 2026 (luni) OncoHelp Timișoara** — Dr. Anater + comisie oncologică + chirurg eso → decizie IHC vs rebiopsie + plan terapeutic provizoriu pe ambele scenarii.
 
 ---
 
 **Istoric versiuni:** vezi `arhiva/` pentru versiunile anterioare ale acestui fișier.
-**Următoarea actualizare planificată:** la primirea rezultatului biopsiei (histologie) SAU la primul consult oncolog digestiv.
+**Următoarea actualizare planificată:** la consultul oncolog 4.05.2026 (decizie IHC/rebiopsie) sau la primirea rezultatului IHC (dacă se inițiază înainte de 4.05).

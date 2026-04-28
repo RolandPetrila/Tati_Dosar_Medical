@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-04-26T19:21:56",
+  "generated_at": "2026-04-28T09:01:55",
   "version": "1.0",
   "stats": {
-    "total_files_indexed": 132,
+    "total_files_indexed": 146,
     "medici_oncohelp": 2,
-    "threaduri_gmail": 5,
+    "threaduri_gmail": 6,
     "documente_canonice": 20,
     "atasamente_listate": 0
   },
@@ -28,16 +28,16 @@
       "varsta_estimata": "~31 ani (sufix `95` în yahoo sugerează naștere 1995) [PROBABIL]",
       "status": "🟢 activ",
       "prim_contact": "2026-04-23",
-      "ultim_contact": "2026-04-25",
+      "ultim_contact": "2026-04-26",
       "rol": "medic oncolog curant — primă linie de contact OncoHelp pentru cazul tata",
       "tags": [
         "oncolog",
         "oncohelp",
         "medic-curant",
-        "programat-30-04",
+        "programat-4-05",
         "conflict-surse-status"
       ],
-      "version": 1.1,
+      "version": 1.2,
       "sursa_status_profesional_email": "semnătură email Dr. Anater 24.04.2026 — „Medic Specialist, Oncologie Medicala, Oncohelp Timisoara\"",
       "sursa_status_profesional_site": "oncohelp.ro/echipa-oncohelp/ accesat 2026-04-25 — „Medic Rezident\" (probabil neactualizat după promovare)",
       "file": "Dosar_Medical/CONTACTE_MEDICALE.md#dr-anater-angelo-christian"
@@ -240,6 +240,18 @@
         "19db78a7c0a1758d (broadcast OncoHelp)"
       ],
       "file": "Dosar_Medical/corespondenta/2026-04-24_raspuns-iocn-mester.md"
+    },
+    {
+      "status": "🟡 DRAFT — neexpediat",
+      "data_creare": "2026-04-28 08:55",
+      "autor_draft": "Claude Opus 4.7 (la cererea Roland)",
+      "destinatar": "Dr. Anater Angelo-Christian",
+      "email_destinatar": "angelo.anater@oncohelp.ro",
+      "trimis_de_user": "false",
+      "referinta_thread": "19dbe7d30cfacbb3 (continuare thread RE: Solicitare consult oncologic)",
+      "context": "rezultat biopsie 17.04 primit 28.04 — INCONCLUZIV; user (Roland) decide dacă/când îl trimite",
+      "note_securitate": "NU expune CNP / parolă / date sensibile dincolo de minimumul necesar (nume + dată naștere + cod buletin lab e suficient pentru identificare în context oncologic)",
+      "file": "Dosar_Medical/corespondenta/2026-04-28_draft-mail-anater-rezultat-biopsie.md"
     }
   ],
   "documente_canonice": [
@@ -340,38 +352,47 @@
       "REGULI_CLAUDE_CODE.md",
       "PLAN_IMPLEMENTARE_2026-04-25.md",
       "Dosar_Medical/CONTACTE_MEDICALE.md",
+      "Documente_Informative/GHID_TELEFOANE_27-04.md",
+      "Documente_Informative/GHID_CARDIOLOG_30-04.md",
+      "_projects_sync/PROJECTS_PRIMER.md",
+      "_projects_sync/CONTEXT_MEDICAL.md",
+      "_projects_sync/TODO.md",
+      "_projects_sync/CONTACTE_MEDICALE.md",
+      "_projects_sync/STATUS_SNAPSHOT.md",
       "Dosar_Medical/cercetari/2026-04-25_cercetare-oncohelp-vornicu-anater.md",
       "Dosar_Medical/corespondenta/2026-04-22_solicitare-dr-cip-recomandare-lusca.md",
       "Dosar_Medical/corespondenta/2026-04-23_solicitare-sprijin-oncohelp.md",
       "Dosar_Medical/corespondenta/2026-04-23_broadcast-solicitari-clinici.md",
-      "Dosar_Medical/corespondenta/2026-04-24_re-solicitare-consult-anater.md",
-      "Dosar_Medical/corespondenta/2026-04-24_raspuns-iocn-mester.md",
-      "Dosar_Medical/corespondenta/INDEX.md",
-      "INDEX.json"
+      "Dosar_Medical/corespondenta/2026-04-24_re-solicitare-consult-anater.md"
     ],
     "Vornicu": [
       "SESSION_LOG.md",
+      "TODO.md",
       "CONTEXT_MEDICAL.md",
       "CHANGELOG.md",
       "REGULI_CLAUDE_CODE.md",
       "PLAN_IMPLEMENTARE_2026-04-25.md",
       "Dosar_Medical/CONTACTE_MEDICALE.md",
+      "_projects_sync/CONTEXT_MEDICAL.md",
+      "_projects_sync/TODO.md",
+      "_projects_sync/CONTACTE_MEDICALE.md",
       "Dosar_Medical/cercetari/SINTEZA_CLINICI_ONCOLOGIE.md",
       "Dosar_Medical/cercetari/2026-04-25_cercetare-oncohelp-vornicu-anater.md",
       "Dosar_Medical/corespondenta/INDEX.md",
-      "INDEX.json"
+      "INDEX.json",
+      "_projects_sync/INDEX.json"
     ]
   },
   "files_by_path": {
     "CLAUDE.md": {
       "type": "md",
-      "size_kb": 9.4,
-      "last_modified": "2026-04-25T18:13:18"
+      "size_kb": 9.6,
+      "last_modified": "2026-04-27T02:04:50"
     },
     "SESSION_LOG.md": {
       "type": "md",
-      "size_kb": 97.2,
-      "last_modified": "2026-04-26T19:20:41"
+      "size_kb": 106.8,
+      "last_modified": "2026-04-28T08:54:25"
     },
     "WEB_QUERIES.md": {
       "type": "md",
@@ -401,7 +422,7 @@
     "STRUCTURA_PROIECT.md": {
       "type": "md",
       "size_kb": 23.9,
-      "last_modified": "2026-04-26T01:35:37"
+      "last_modified": "2026-04-26T19:22:06"
     },
     "BAZA_CUNOSTINTE.md": {
       "type": "md",
@@ -425,18 +446,18 @@
     },
     "TODO.md": {
       "type": "md",
-      "size_kb": 37.6,
-      "last_modified": "2026-04-26T19:13:33"
+      "size_kb": 43.6,
+      "last_modified": "2026-04-28T08:53:27"
     },
     "CONTEXT_MEDICAL.md": {
       "type": "md",
-      "size_kb": 53.2,
-      "last_modified": "2026-04-26T19:11:10"
+      "size_kb": 62.2,
+      "last_modified": "2026-04-28T08:51:37"
     },
     "CHANGELOG.md": {
       "type": "md",
-      "size_kb": 149.5,
-      "last_modified": "2026-04-26T19:21:31"
+      "size_kb": 164.4,
+      "last_modified": "2026-04-28T08:54:04"
     },
     "ALIMENTATIE.md": {
       "type": "md",
@@ -445,8 +466,8 @@
     },
     "REGULI_CLAUDE_CODE.md": {
       "type": "md",
-      "size_kb": 30.0,
-      "last_modified": "2026-04-25T19:08:47"
+      "size_kb": 33.6,
+      "last_modified": "2026-04-27T02:04:15"
     },
     "AUDIT_EXTRAGERE_2026-04-24.md": {
       "type": "md",
@@ -485,8 +506,8 @@
     },
     "Dosar_Medical/CONTACTE_MEDICALE.md": {
       "type": "md",
-      "size_kb": 16.2,
-      "last_modified": "2026-04-25T19:24:59"
+      "size_kb": 17.3,
+      "last_modified": "2026-04-26T22:25:50"
     },
     "Documentatie_Initiala/README.md": {
       "type": "md",
@@ -598,6 +619,51 @@
       "size_kb": 3.5,
       "last_modified": "2026-04-23T03:27:40"
     },
+    "Documente_Informative/GHID_TELEFOANE_27-04.md": {
+      "type": "md",
+      "size_kb": 14.1,
+      "last_modified": "2026-04-26T20:33:25"
+    },
+    "Documente_Informative/GHID_CARDIOLOG_30-04.md": {
+      "type": "md",
+      "size_kb": 6.0,
+      "last_modified": "2026-04-28T00:18:20"
+    },
+    "_projects_sync/PROJECTS_PRIMER.md": {
+      "type": "md",
+      "size_kb": 8.3,
+      "last_modified": "2026-04-28T01:35:51"
+    },
+    "_projects_sync/CONTEXT_MEDICAL.md": {
+      "type": "md",
+      "size_kb": 53.2,
+      "last_modified": "2026-04-26T19:11:10"
+    },
+    "_projects_sync/TODO.md": {
+      "type": "md",
+      "size_kb": 38.6,
+      "last_modified": "2026-04-28T00:18:05"
+    },
+    "_projects_sync/REGULAMENT.md": {
+      "type": "md",
+      "size_kb": 11.9,
+      "last_modified": "2026-04-23T11:12:30"
+    },
+    "_projects_sync/CONTACTE_MEDICALE.md": {
+      "type": "md",
+      "size_kb": 17.3,
+      "last_modified": "2026-04-26T22:25:50"
+    },
+    "_projects_sync/EXPLICATIE_CONSULT_ONCOLOG_SCENARII.md": {
+      "type": "md",
+      "size_kb": 74.5,
+      "last_modified": "2026-04-22T18:33:23"
+    },
+    "_projects_sync/STATUS_SNAPSHOT.md": {
+      "type": "md",
+      "size_kb": 21.8,
+      "last_modified": "2026-04-28T00:39:11"
+    },
     "Dosar_Medical/cercetari/SINTEZA_CLINICI_ONCOLOGIE.md": {
       "type": "md",
       "size_kb": 34.3,
@@ -637,6 +703,11 @@
       "type": "md",
       "size_kb": 7.3,
       "last_modified": "2026-04-26T19:09:19"
+    },
+    "Dosar_Medical/corespondenta/2026-04-28_draft-mail-anater-rezultat-biopsie.md": {
+      "type": "md",
+      "size_kb": 7.0,
+      "last_modified": "2026-04-28T09:01:29"
     },
     "Dosar_Medical/documente_sursa/01_identitate/2023-06-12_carte_identitate_extragere.md": {
       "type": "md",
@@ -703,6 +774,11 @@
       "size_kb": 5.9,
       "last_modified": "2026-04-24T18:06:20"
     },
+    "Dosar_Medical/documente_sursa/12_biopsie_2026/2026-04-17_biopsie_esofagiana_histopatologic.md": {
+      "type": "md",
+      "size_kb": 3.0,
+      "last_modified": "2026-04-28T08:47:16"
+    },
     "Dosar_Medical/documente_sursa/13_cardiologie_ambulator_2025/2025-11-10_cardiologie_eco_scrisoare_extragere.md": {
       "type": "md",
       "size_kb": 10.7,
@@ -715,8 +791,8 @@
     },
     "INDEX.json": {
       "type": "json",
-      "size_kb": 34.1,
-      "last_modified": "2026-04-26T01:35:30"
+      "size_kb": 34.2,
+      "last_modified": "2026-04-26T19:21:56"
     },
     "Dosar_Medical/2012-02-17_cardiologie_vichy_stent.json": {
       "type": "json",
@@ -915,13 +991,23 @@
     },
     "Dosar_Medical/SYSTEM_HEALTH.json": {
       "type": "json",
-      "size_kb": 2.3,
-      "last_modified": "2026-04-26T18:16:28"
+      "size_kb": 3.3,
+      "last_modified": "2026-04-28T08:26:21"
+    },
+    "Dosar_Medical/2026-04-17_biopsie_esofagiana_histopatologic.json": {
+      "type": "json",
+      "size_kb": 10.5,
+      "last_modified": "2026-04-28T08:48:05"
     },
     ".claude/settings.local.json": {
       "type": "json",
       "size_kb": 1.9,
       "last_modified": "2026-04-26T01:12:53"
+    },
+    "_projects_sync/INDEX.json": {
+      "type": "json",
+      "size_kb": 34.2,
+      "last_modified": "2026-04-26T19:21:56"
     },
     "Dosar_Medical/rapoarte_generate/2026-04-19_ghid_cancer_esofagian_complet.meta.json": {
       "type": "json",
@@ -1003,6 +1089,11 @@
       "size_kb": 2.5,
       "last_modified": "2026-04-24T22:28:45"
     },
+    "Dosar_Medical/documente_sursa/12_biopsie_2026/2026-04-17_biopsie_esofagiana_histopatologic.jpeg.meta.json": {
+      "type": "json",
+      "size_kb": 2.5,
+      "last_modified": "2026-04-28T08:46:31"
+    },
     "Dosar_Medical/documente_sursa/13_cardiologie_ambulator_2025/2025-11-10_cardiologie_eco_scrisoare.pdf.meta.json": {
       "type": "json",
       "size_kb": 1.8,
@@ -1015,8 +1106,8 @@
     },
     "DASHBOARD.html": {
       "type": "html",
-      "size_kb": 175.4,
-      "last_modified": "2026-04-26T19:18:48"
+      "size_kb": 176.3,
+      "last_modified": "2026-04-26T22:27:14"
     },
     "index.html": {
       "type": "html",
