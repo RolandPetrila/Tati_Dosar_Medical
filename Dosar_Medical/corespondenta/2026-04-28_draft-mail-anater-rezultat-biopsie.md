@@ -1,66 +1,62 @@
 ---
-status: 🟡 DRAFT v2 — neexpediat (rescris la cererea user 28.04: ton Roland anterior + ATAȘAMENT biopsie + cerere SFAT deschis + reconfirmare cardiolog)
+status: 🟢 FINAL v3 — VALIDAT user, gata de trimitere (manual)
 data_creare: 2026-04-28 08:55
-data_revizie: 2026-04-28 09:30
-autor_draft: Claude Opus 4.7 (la cererea Roland)
-destinatar: Dr. Anater Angelo-Christian
-email_destinatar: angelo.anater@oncohelp.ro
+data_revizie_v2: 2026-04-28 09:30
+data_revizie_v3: 2026-04-28 09:50 (text user corectat de greseli + eliminat diacritice + 3 destinatari)
+autor_draft: Roland Petrila (text original) + Claude Opus 4.7 (corecturi gramaticale + eliminare diacritice + ajustare ton)
+destinatar_to: angelo.anater@oncohelp.ro
+destinatar_cc:
+  - programari@oncohelp.ro
+  - office@oncohelp.ro
 trimis_de_user: false
 referinta_thread: 19dbe7d30cfacbb3 (continuare thread "RE: Solicitare consult oncologic")
-context: rezultat biopsie 17.04 primit 28.04 — INCONCLUZIV; Roland va atașa PDF-ul Bioclinica și va cere sfat deschis (NU sugerez IHC explicit) + reconfirmare cardiolog
+context: rezultat biopsie 17.04 primit 28.04 — INCONCLUZIV; user a scris textul, eu am corectat; intrebari concrete: pasi post-biopsie + ce sa ceri cardiologului + confirmare data 4.05 + ora
 ---
 
-# DRAFT v2 mail Dr. Anater — Înștiințare rezultat biopsie + cerere sfat + reconfirmare cardiolog
+# DRAFT v3 FINAL mail Dr. Anater — Înstiintare rezultat biopsie + 3 intrebari (text user, corectat)
 
-> **Draft pregătit pentru tine, Roland.** NU a fost trimis. Verifică-l, ajustează telefonul/diacriticele dacă vrei, atașezi PDF-ul biopsiei (de pe portalul Bioclinica), apoi îl trimiți manual din Gmail (Reply pe thread-ul existent cu Dr. Anater).
->
-> **Diferențe față de v1:** ton aliniat cu mailul tău din 25.04 ("Stimate domnule doctor Anater" + frazare politicoasă cu mulțumiri + bullets + "aștept un cuvânt de la dumneavoastră"); cer **sfatul lui deschis** (NU sugerez IHC explicit — îl las pe el să decidă); adaug **reconfirmare cardiolog** (pentru consultul de joi 30.04).
-
----
-
-## Destinatar și subiect
-
-**To:** angelo.anater@oncohelp.ro
-**Subiect (Reply pe thread):** Re: Solicitare consult oncologic — rezultatul biopsiei
-
-**Atașament:** PDF-ul oficial Bioclinica al rezultatului histopatologic (descarcă-l de pe portal și atașează-l direct în Gmail).
+> **Status:** versiune validata user pe baza textului scris de Roland; corectata gramatical, eliminate diacriticele, ajustat la 3 destinatari (To Anater + CC programari + office), pregatita pentru copy-paste in Gmail. NU este trimisa inca — decizia trimiterii e a user-ului.
 
 ---
 
-## Corp mesaj — pentru copy-paste
+## Detalii trimitere
+
+| Camp | Valoare |
+| --- | --- |
+| **To** | `angelo.anater@oncohelp.ro` |
+| **CC** | `programari@oncohelp.ro`, `office@oncohelp.ro` |
+| **Subiect** | `Re: Solicitare consult oncologic - rezultatul biopsiei` |
+| **Reply pe thread** | DA - thread `19dbe7d30cfacbb3` |
+| **Atasament** | PDF oficial Bioclinica (descarcat de pe portal); recomandat nume: `Petrila_Viorel_Mihai_biopsie_17042026_buletin_26417A0362.pdf` |
+
+---
+
+## Corp mesaj final — pentru copy-paste
 
 ```
-Stimate domnule doctor Anater,
+Buna dimineata,
 
-Vă mulțumesc încă o dată pentru explicațiile clare și pentru
-disponibilitate.
-
-Vă scriu să vă înștiințez că am primit astăzi (28 aprilie 2026)
+Va scriu sa va instiintez ca am primit astazi (28 aprilie 2026)
 rezultatul examenului histopatologic de la Bioclinica Arad pentru
-biopsia prelevată la endoscopia din 17.04.2026. Vi-l atașez la acest
-mail în forma originală.
+biopsia prelevata la endoscopia din 17.04.2026. Vi-l atasez la acest
+mail in forma originala.
 
-Pe scurt, anatomopatologul (Dr. Glăja Romanița) concluzionează că
-„ansamblul histologic pledează pentru țesut de granulație pe fond de
-ulcerație cronică, fiind doar sugestiv pentru infiltrat carcinomatos",
-cu mențiunea că „diagnosticul histologic tumoral este mult limitat de
-numărul mic al celulelor epiteliale atipice" și recomandare pentru
-„eventuală evaluare imunohistochimică pentru diagnostic histologic de
-certitudine și conduită terapeutică".
+Va rog sa-mi spuneti, conform acestui rezultat, ce considerati ca ar
+fi util sa facem mai departe - atat pana la consultul de luni 4 mai,
+cat si ca pasi concreti dupa aceea. Ne bazam pe sfatul dumneavoastra.
 
-Vă rog să-mi spuneți, în lumina acestui rezultat, ce considerați că ar
-fi util să facem mai departe — atât până la consultul de luni 4 mai,
-cât și ca pași concreți după aceea. Ne bazăm pe sfatul dumneavoastră.
+Si o ultima rugaminte: pentru consultul cardiologic pe care il avem
+programat joi, 30 aprilie 2026, v-as ruga sa imi spuneti ce anume sa
+ii cer cardiologului sa verifice si ce sa includa in scrisoarea
+medicala, pentru ca aceasta sa acopere tot ce va este necesar pentru
+consultul din 4 mai.
 
-Și o ultimă rugăminte: pentru consultul cardiologic pe care îl avem
-programat joi, 30 aprilie 2026, aș vrea să mă asigur încă o dată ce
-anume ar fi cel mai util să-i cerem cardiologului — un ECG și o
-ecografie cardiacă recente, o scrisoare medicală cu FEVS și avizul
-perioperator, sau există ceva specific de care veți avea nevoie pentru
-a putea construi planul terapeutic la consultul de luni? Vrem să venim
-cu tot ce vă este necesar.
+De asemenea, va rog sa imi spuneti daca, in urma rezultatului
+biopsiei, se modifica data consultului sau daca ramane pentru
+4 mai 2026. Va rog sa imi confirmati si sa imi specificati ora la
+care sa ne prezentam.
 
-Vă mulțumesc încă o dată și aștept un cuvânt de la dumneavoastră.
+Multumesc frumos. Astept raspunsul dumneavoastra.
 
 Cu respect,
 
@@ -68,45 +64,70 @@ Petrila Roland
 Fiul pacientului Petrila Viorel-Mihai
 Telefon: 0747 941 861
 Email: petrilarolly@gmail.com
-Nădlac, județul Arad
+Nadlac, judetul Arad
 ```
 
 ---
 
-## Note pentru tine, Roland
+## Ce raspuns asteptam de la Anater
 
-1. **Tonul** e identic cu mailul tău din 25.04 — salutare "Stimate domnule doctor Anater", mulțumiri la început, frazare directă cu bullets minime, închidere "aștept un cuvânt de la dumneavoastră", semnătură completă cu telefon.
-2. **Nu sugerez explicit IHC** în mail — am preluat doar citatul anatomopatologului (care apare oricum în PDF-ul atașat) și am cerut sfatul lui deschis. El decide IHC vs rebiopsie vs altceva.
-3. **Reconfirmarea cardiolog** e formulată politicos — îi dau opțiunile concrete (ECG / ECO / FEVS / aviz perioperator) ca să-l ajut să răspundă rapid, dar las loc și pentru "altceva specific" dacă are în minte.
-4. **Atașament:** descarcă PDF-ul oficial Bioclinica de pe portal (același de unde monitorul automat ne-a notificat). Numele fișierului recomandat: `Petrila_Viorel_Mihai_biopsie_17042026_buletin_26417A0362.pdf` (sau orice nume descriptiv care nu lasă loc de confuzie). NU atașa JPEG-ul nostru — PDF-ul oficial e sursa autoritară.
-5. **NU CC** la `programari@` sau `office@oncohelp.ro` de data asta — la mailul din 25.04 a fost util fiindcă întrebai și de aspecte logistice (programări); aici e pură discuție clinică cu medicul curant.
-6. **Diacriticele** — am pus diacritice complete (ca în mailul tău din 25.04). Dacă Gmail-ul tău are autocorect dezactivat și introduce greșeli, verifică „ț", „ș", „ă", „â", „î".
+Mailul cere 3 lucruri clare. Asteptam ca Anater sa raspunda concret la fiecare:
+
+1. **Pasi clinici dupa rezultat biopsie** - va indica IHC pe blocul T26H06044 (la Bioclinica), rebiopsie tintita endoscopica, sau alt plan
+2. **Cardiolog 30.04** - ce specific sa ceara cardiologului (probabil: ECG + ECO recente + scrisoare cu FEVS + aviz perioperator)
+3. **Data + ora consult** - confirmare 4.05 cu ora specifica, SAU reprogramare (urgentare daca biopsia inconcluziva schimba urgenta cazului)
 
 ---
 
-## La trimitere — actualizează acest fișier
+## Modificari fata de textul original al user-ului (pentru transparenta)
+
+10 corecturi minore aplicate:
+
+1. `saverifice` -> `sa verifice` (spatiu lipsa)
+2. `saacopere` -> `sa acopere` (spatiu lipsa)
+3. `conform rezultat biopsie` -> `in urma rezultatului biopsiei` (acord gramatical)
+4. `data programarii` -> `data consultului` (claritate semantica)
+5. `De asemenea va rog` -> `De asemenea, va rog` (virgula obligatorie)
+6. `Multumesc frumos , astept raspunsul dvs` -> `Multumesc frumos. Astept raspunsul dumneavoastra.` (punctuatie + cuvant complet)
+7. Eliminat `la control` din propozitia cu ora (inconsistenta cu restul textului care zice „consult")
+8. Adaugata virgula dupa `Buna dimineata`
+9. Adaugata semnatura completa (ca in mailul Roland 25.04: telefon + Nadlac)
+10. Eliminate toate diacriticele (cerinta user)
+
+Em-dash `—` inlocuit cu liniuta simpla `-` pentru compatibilitate maxima cu clienti de mail.
+
+Niciun continut clinic nou adaugat - am pastrat fidel intentia user-ului (cere sfat deschis, nu sugereaza IHC explicit).
+
+---
+
+## Checklist 30 secunde inainte de SEND
+
+- [ ] Descarcat **PDF oficial Bioclinica** de pe portal (NU JPEG-ul nostru)
+- [ ] Redenumit atasamentul descriptiv (recomandare: `Petrila_Viorel_Mihai_biopsie_17042026_buletin_26417A0362.pdf`)
+- [ ] Verificat destinatari: To Anater, CC programari + office
+- [ ] **Reply** pe thread-ul existent (nu mesaj nou)
+- [ ] Citit textul o data inca - se aliniaza cu intentia ta?
+
+---
+
+## La trimitere efectiva, actualizeaza acest fisier
 
 ```yaml
 status: ✅ TRIMIS
 data_trimitere: 2026-04-28 HH:MM
 thread_id_continuat: 19dbe7d30cfacbb3
-corp_trimis_efectiv: [link la copia exactă, dacă diferă de draft]
-atasament: Petrila_Viorel_Mihai_biopsie_17042026_buletin_26417A0362.pdf (sau nume real)
+corp_trimis_efectiv: identic cu draft v3 (sau notat unde difera)
+atasament: [nume PDF efectiv atasat]
 ```
 
-Apoi mă anunți și actualizez `corespondenta/INDEX.md` + thread file existent (`2026-04-24_re-solicitare-consult-anater.md` — extindere cronologie cu mesaj nou + redeschidere status `⚪ încheiat` → `🟢 activ`).
+Apoi update `corespondenta/INDEX.md` + thread-ul `2026-04-24_re-solicitare-consult-anater.md` (extindere cronologie + redeschidere status `⚪ incheiat` -> `🟢 activ`).
 
 ---
 
-## R-SEC — verificare expunere date
+## R-SEC verificare
 
-- ✅ Nume + dată naștere — public deja la Anater (din corespondență anterioară)
-- ✅ Citate din raport — sunt în PDF-ul atașat oricum
-- ✅ Cod buletin Bioclinica + cod T26H06044 — sunt în atașament
-- ❌ NU am inclus CNP, nu am atașat alte documente externe (CT, schemă medicație etc. — Anater le are din thread-ul anterior sau le va vedea la consult)
-
----
-
-## Status
-
-**DRAFT v2 finalizat.** Aștept să-l trimiți tu manual.
+- ✅ Nume + data nastere - public deja la Anater (corespondenta anterioara)
+- ✅ Citate din raport - sunt in PDF-ul atasat oricum (nu am scris citate explicit in corp)
+- ✅ Cod buletin Bioclinica + cod T26H06044 - sunt in atasament
+- ❌ NU se include CNP, nu se ataseaza alte documente externe
+- ✅ CC `programari@` + `office@` la fel ca in mailul Roland 25.04 - relatie pacient-clinica deja stabilita
