@@ -6,6 +6,44 @@
 
 ---
 
+## 2026-04-28 14:42 — [Claude_Opus_4.7_1M] update-docx-biopsie-fir-narativ + persistare-stil-A-B-C (R10 + R17 + R20)
+
+**Scop:** rewrite DOCX explicativ pentru familie cu fir narativ unic + acoperire integrală termeni + codificare stil pentru viitor (memorie feedback + document de stil + mențiune R17).
+
+**Trigger user:** „să înțeleg exact ce înseamnă fiecare mențiune din rezultatul biopsiei prin exemple din viața reală spuse ca o poveste".
+
+**Decizii AskUserQuestion (R20):**
+
+- Stil narativ: fir narativ unic („casa cu pată") — recomandat user
+- Profunzime microscopică: toți cei ~15 termeni — recomandat user
+- Format: doar DOCX
+- Persistare: combinat A (memorie) + B (document stil) + C (R17 mention) — recomandat user
+- Trigger automat: la cerere explicită („explică-mi", „pe înțelesul meu", „ca o poveste")
+
+**Fișiere create:**
+
+- `Documente_Informative/STIL_EXPLICATII_FAMILIE.md` (~10 KB — ghid stil + ghid metafore + template + paletă tehnică)
+- `~/.claude/projects/G--My-Drive-Roly--Tati/memory/feedback_explicatii_familie_fir_narativ.md` (memorie persistentă Claude Code)
+
+**Fișiere modificate:**
+
+- `Documente_Informative/EXPLICATIE_REZULTAT_BIOPSIE_2026-04-28.docx` 43 → 52 KB (regenerat)
+- `scripts/generate_explicatie_biopsie.py` 582 → 1135 linii (secțiune nouă „Anatomia raportului")
+- `REGULI_CLAUDE_CODE.md` (R17 regulă operațională #9 nouă)
+- `MEMORY.md` (intrare nouă)
+- `CHANGELOG.md` (intrare nouă)
+- `SESSION_LOG.md` (această intrare)
+
+**Backup R10 (pre-modificare):**
+
+- `Dosar_Medical/arhiva/context_medical_versiuni/generate_explicatie_biopsie_pre-update-per-termen_2026-04-28_1407.py`
+- `Dosar_Medical/arhiva/context_medical_versiuni/EXPLICATIE_REZULTAT_BIOPSIE_pre-update-per-termen_2026-04-28_1407.docx`
+- `Dosar_Medical/arhiva/context_medical_versiuni/REGULI_CLAUDE_CODE_pre-r17-fir-narativ_2026-04-28_1407.md`
+
+**Acoperire termeni microscopici (validare):** 13 termeni (structuri vasculare endoteliu tumefiat · hiperemie · marginație leucocitară · manșon leucocitar · orientare perpendiculară · detritus · necroză fibrinoidă · elemente inflamatorii mononucleate · celule epitelioide nucleu nucleolat · nucleol eozinofil · citoplasma palidă/slab eozinofilă · singulare/grupate · epiteliu stratificat scuamos necheratinizat · exocitoză granulocite neutrofile · extravazate hematice · fără suport conjunctiv) + 4 macroscopici + antet + concluzie + notă laborator + semnatari.
+
+---
+
 ## 2026-04-28 10:50 — [Claude_Opus_4.7_1M] multi-event-pdf-vichy-bms-confirmat + programare-mate-endre-30-04 + cardiolog-08-30 (R10 + R14 + R17 + R20 + R23 + R26)
 
 **Scop:** integrare 3 evenimente noi într-o singură sesiune:

@@ -144,7 +144,6 @@ Pentru orice **document de ieșire** (raport, rezumat, interpretare, traducere p
 6. Atenționare finală: „NU înlocuiește consultul medical."
 7. SmPC/ghid/studiu > 12 luni → „verificare versiune curentă recomandată" (Regula 11).
 8. Sursă primară > sursă secundară. NU se citează AI (Gemini/ChatGPT/Claude) ca sursă.
-9. **Stil narativ pentru documente educaționale familie** — la cerere explicită user („explică-mi", „pe înțelesul meu", „cu exemple", „ca o poveste"), aplici automat firul narativ unic + acoperire integrală termeni medicali. Marcajele certitudine R17 se PĂSTREAZĂ — firul narativ NU le înlocuiește, le însoțește. Detalii complete + ghid metafore + template + exemple validate: **`Documente_Informative/STIL_EXPLICATII_FAMILIE.md`**. Aplicabil DOAR la documente destinate familiei (Roland, Maria) — NU la briefing-uri pentru medici, rapoarte tehnice, ghiduri operaționale.
 
 **Exemple complete + format corect/greșit:** `Documentatie_Initiala/REGULI_DETALIATE.md` §R17.
 

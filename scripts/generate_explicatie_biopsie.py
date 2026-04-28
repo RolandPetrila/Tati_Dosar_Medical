@@ -269,8 +269,8 @@ def main():
         kind="info",
     )
 
-    # ============ CE SCRIE EXACT ============
-    add_h1(doc, "1. Ce scrie exact în raport")
+    # ============ 1. CITATUL TEXTUAL ============
+    add_h1(doc, "1. Citatul textual al raportului")
 
     add_para(
         doc,
@@ -292,61 +292,615 @@ def main():
         kind="info",
     )
 
-    add_h2(doc, "Ce înseamnă fiecare bucată — pe rând")
-
-    add_h3(doc, "» " + q("țesut de granulație pe fond de ulcerație cronică"))
     add_para(
         doc,
-        "Țesut de granulație = țesut de reparație, ca o crustă vie care apare când o suprafață e rănită "
-        "și organismul încearcă să se vindece. Ulcerație cronică = o rană care durează de mult timp.",
-    )
-    add_para(doc, "Acest tip de țesut apare în multe situații:")
-    add_bullet(doc, "ulcer peptic (rană de stomac/esofag fără cancer)")
-    add_bullet(doc, "esofagită severă cronică")
-    add_bullet(doc, "PESTE / DEASUPRA unei tumori (zona de crustă care acoperă tumora propriu-zisă)")
-
-    add_para(
-        doc,
-        "Cu alte cuvinte: țesutul de granulație SINGUR nu spune nici cancer, nici nu e cancer. "
-        "E doar un strat superficial inflamat.",
+        "În capitolul următor explic FIECARE termen folosit în raport — antet, descrieri, concluzie — "
+        "prin firul narativ unic " + q("casa cu o pată suspectă pe perete") + ", așa încât să înțelegi "
+        "fără jargon medical exact ce a văzut Dr. Glăja la microscop și DE CE concluzia ei e " + q("sugestiv")
+        + " în loc de " + q("confirmat") + ".",
     )
 
-    add_h3(doc, "» " + q("doar SUGESTIV pentru infiltrat carcinomatos"))
-    add_para(
+    # ============ 2. ANATOMIA RAPORTULUI ============
+    add_h1(doc, "2. Anatomia raportului — fiecare mențiune, explicată")
+
+    add_h2(doc, "Firul narativ: casa cu o pată suspectă pe perete")
+
+    add_callout(
         doc,
-        "În proba prelevată, anatomopatologul a văzut și CÂTEVA celule cu aspect care POATE indica un cancer "
-        "(celule epitelioide cu nucleu nucleolat, cu nucleol eozinofil — caracteristici tipice pentru adenocarcinom). "
-        "DAR " + EM + " și aici e cuvântul-cheie " + EM + " au fost prea puține celule de tipul ăsta pentru a "
-        "putea pune un diagnostic ferm. Sugestiv e un termen anatomopatologic care înseamnă "
-        "indicii da, certitudine nu.",
+        "Povestea de bază pe care o vom folosi pe parcurs:",
+        "Imaginează-ți pacientul ca pe o CASĂ. Esofagul tatălui tău e UN PERETE din această casă. "
+        "Pe perete a apărut o PATĂ NEREGULATĂ — o crustă/leziune care s-a îngroșat circumferențial.\n\n"
+        "Dr. Noufal (gastroenterologul) a fost INSPECTORUL care a venit cu lanterna (endoscopul) și a "
+        "verificat peretele. Văzând pata, a luat cu o " + q("pensă") + " 2 firimituri MINUSCULE de tencuială "
+        "(biopsia) și le-a trimis la laboratorul central din Timișoara.\n\n"
+        "La laborator, EXPERTUL ANATOMOPATOLOG (Dr. Glăja) e ca un specialist care examinează "
+        "firimiturile cu o " + q("lupă cu putere extremă") + " (microscopul) după ce le-a tratat cu "
+        "" + q("vopsele speciale") + " (coloranți). Apoi scrie un RAPORT despre ce vede în firimituri — "
+        "dar nu despre întreaga pată, ci doar despre fragmentele pe care le are în față.\n\n"
+        "Pe acest fir narativ vom merge mai departe — termen cu termen, citat cu citat.",
+        kind="analogy",
     )
 
-    add_h3(doc, "» De ce nu a fost suficient?")
-    add_para(
+    # --- 2.1 Antetul ---
+    add_h2(doc, "2.1 Antetul — cine, ce, când, unde")
+
+    add_para(doc, "Raportul începe cu un antet care identifică pacientul, proba și laboratorul:")
+    add_bullet(doc, "PETRILA VIOREL MIHAI, M, 66 ani — pacientul.", bold_prefix="Pacient:")
+    add_bullet(doc, "1590518024486 — codul numeric personal.", bold_prefix="CNP:")
+    add_bullet(doc, "18.05.1959 (66 ani împliniți).", bold_prefix="Data nașterii:")
+    add_bullet(doc, "Str. Vasile Goldiș 42, Nădlac, Arad.", bold_prefix="Adresa:")
+    add_bullet(doc, "00003 Bioclinica Vlaicu (Arad) — locul unde au ajuns firimiturile imediat după prelevare.", bold_prefix="Punct recoltare:")
+    add_bullet(doc, "26417A0362 — codul administrativ al întregii investigații.", bold_prefix="Buletin nr.:")
+    add_bullet(doc, "17.04.2026 14:21 (în timpul endoscopiei la Genesis Arad).", bold_prefix="Recoltat:")
+    add_bullet(doc, "Bioclinica SA, Calea Torontalului 1, Timișoara — laboratorul central de anatomopatologie.", bold_prefix="Lucrat:")
+    add_bullet(doc, "28.04.2026 06:46 (când raportul a fost publicat pe portalul Bioclinica).", bold_prefix="Generat PDF:")
+
+    add_callout(
         doc,
-        "Răspunsul e în nota laboratorului: " + q("diagnostic histologic tumoral mult limitat de numărul "
-        "mic al celulelor epiteliale atipice") + ".",
+        "De ce e recoltat la Arad și lucrat la Timișoara?",
+        "Bioclinica are puncte de recoltare în mai multe orașe (Vlaicu = punctul din Arad), "
+        "dar examinarea histopatologică se face într-un laborator central cu echipamente specializate "
+        "și experți medici primari (Dr. Glăja, Dr. Teoran).\n\n"
+        "Pe firul nostru: Dr. Noufal a luat firimiturile la Arad, le-a împachetat și le-a trimis "
+        "(tipic prin curier) la laboratorul central din Timișoara unde sunt experții cu lupele puternice. "
+        "După analiză, raportul a fost publicat pe portal pe 28.04.",
+        kind="analogy",
     )
+
+    # --- 2.2 Cod diagnostic ---
+    add_h2(doc, "2.2 " + q("Cod diagnostic T26H06044"))
+
     add_para(
         doc,
-        "Cu alte cuvinte: cele 2 fragmente prelevate au fost foarte mici (sub-milimetrice — 2 piese de "
-        "0,2 / 0,1 / 0,1 cm fiecare) și au conținut în principal stratul superficial (granulație + necroză), "
-        "nu stratul tumoral profund. Asta NU e o eroare a Dr. Noufal " + EM + " e foarte greu să prelevezi adânc "
-        "dintr-o leziune circumferențială stenozantă fără să riști sângerare sau perforație.",
+        "Codul T26H06044 e un IDENTIFICATOR UNIC al biopsiei tatălui tău în baza de date Bioclinica. "
+        "El rămâne legat permanent de blocul de parafină (cubul de ceară cu firimiturile incluse) — "
+        "așa anatomopatologul poate cere oricând " + q("felii noi tăiate din T26H06044") + " pentru analize "
+        "suplimentare (cum ar fi IHC), fără să mai fie nevoie de o biopsie nouă.",
     )
 
     add_callout(
         doc,
-        "Analogie pentru a înțelege:",
-        "E ca și cum ai vrea să afli ce e într-o casă, dar te uiți doar pe geamul de la intrare. "
-        "Vezi clar holul (stratul superficial = granulație), poate vezi un colț din salon "
-        "(câteva celule atipice), dar nu poți să spui sigur câte camere are casa, ce mobilier e, "
-        "cine locuiește acolo. Ai nevoie să intri și să te uiți cu atenție în fiecare cameră.",
+        "Pe firul nostru:",
+        "Codul T26H06044 e ca " + q("numărul de inventar") + " al unui obiect dintr-un muzeu — "
+        "oricine din lume poate cere acel obiect anume folosind codul. Dacă oncologul de luni 4 mai "
+        "decide IHC, va trimite la Bioclinica o solicitare cu codul T26H06044 și laboratorul va găsi "
+        "exact CUBUL DE CEARĂ al tatălui tău (nu altul).",
         kind="analogy",
     )
 
+    # --- 2.3 Examen histopatologic + colorație H&E ---
+    add_h2(doc, "2.3 " + q("Examen histopatologic (colorația hematoxilină-eozină)"))
+
+    add_h3(doc, "» Ce înseamnă " + q("histopatologic"))
+    add_para(
+        doc,
+        "" + q("Histo") + " = țesut. " + q("Pato") + " = boală. " + q("Logic") + " = studiu. "
+        "Histopatologic = examinarea ȚESUTURILOR la microscop pentru a căuta semne de boală. E diferit "
+        "de " + q("citologic") + " (care studiază celule individuale, ex. test Babeș-Papanicolau), "
+        "pentru că se uită la cum sunt celulele ORGANIZATE între ele și cu structurile din jur "
+        "(vase de sânge, țesut conjunctiv, glande).",
+    )
+
+    add_h3(doc, "» Ce înseamnă " + q("colorația hematoxilină-eozină") + " (H&E)")
+    add_para(
+        doc,
+        "E STANDARDUL UNIVERSAL în anatomopatologie. Două vopsele aplicate pe felii ultrasubțiri de țesut:",
+    )
+    add_bullet(doc, "colorează în ALBASTRU/VIOLET nucleii celulelor (partea cu ADN-ul).", bold_prefix="Hematoxilina")
+    add_bullet(doc, "colorează în ROZ/ROȘU citoplasma și fibrele de țesut conjunctiv din jur.", bold_prefix="Eozina")
+
+    add_callout(
+        doc,
+        "Pe firul nostru:",
+        "Fără coloranți, firimiturile ar fi gri-transparente la microscop și ar fi imposibil să distingi "
+        "structurile. Cu H&E, totul devine ca o HARTĂ CU DOUĂ CULORI: orașele albastre (nucleii celulelor — "
+        "unde " + q("locuiește") + " ADN-ul) și șoselele/țesutul roz (citoplasma + fibrele). Toate "
+        "biopsiile încep cu această colorație de bază; coloranții speciali (IHC) sunt o etapă suplimentară "
+        "ulterioară.",
+        kind="analogy",
+    )
+
+    # --- 2.4 Diagnostic clinic ---
+    add_h2(doc, "2.4 " + q("Diagnostic clinic: Proces proliferativ"))
+
+    add_para(
+        doc,
+        "Aceasta NU e concluzia anatomopatologului. E ce a SCRIS Dr. Noufal pe biletul de trimitere "
+        "către laborator, ÎNAINTE de analiză:",
+    )
+    add_bullet(doc, "= se înmulțește activ, crește.", bold_prefix="Proliferativ")
+    add_bullet(doc, "= ceva care se petrece, în desfășurare.", bold_prefix="Proces")
+    add_para(
+        doc,
+        "Adică Dr. Noufal a scris: " + q("Bănuiesc că pe peretele esofagian se petrece ceva care creste "
+        "activ. Vă rog să-mi spuneți ce e.") + " Nu spune " + q("cancer") + " — spune " + q("ceva care "
+        "se înmulțește, analizați și spuneți-mi ce e") + ". E începutul investigației, nu concluzia.",
+    )
+
+    # --- 2.5 Piesa A + bloc parafină ---
+    add_h2(doc, "2.5 " + q("Piesa A — Biopsie. Număr blocuri de parafină procesate: 1"))
+
+    add_h3(doc, "» " + q("Piesa A"))
+    add_para(
+        doc,
+        "Primul (și singurul) lot de fragmente prelevate. Dacă Dr. Noufal ar fi luat biopsii din 2 zone "
+        "diferite (ex. esofag + stomac), ar fi avut " + q("Piesa A") + " și " + q("Piesa B") + ". Aici "
+        "există o singură zonă biopsiată — leziunea esofagiană.",
+    )
+
+    add_h3(doc, "» " + q("Biopsie"))
+    add_para(doc, "Prelevare de țesut viu pentru analiză la microscop.")
+
+    add_h3(doc, "» " + q("Bloc de parafină") + " (procesare standard)")
+    add_para(doc, "După ce firimiturile ajung la laborator, urmează o procedură standard:")
+    add_bullet(doc, "Sunt " + q("fixate") + " într-o soluție (formol) — ca să nu se descompună.")
+    add_bullet(doc, "Sunt incluse în PARAFINĂ topită (un fel de ceară), care se solidifică într-un MIC CUB.")
+    add_bullet(doc, "Cubul e tăiat cu un cuțit special (microtom) în " + q("felii ultrasubțiri") + " — 3-5 micrometri (miimi de milimetru) — cum ai tăia un salam la felii foarte subțiri.")
+    add_bullet(doc, "Feliile se pun pe LAME DE STICLĂ.")
+    add_bullet(doc, "Lamele se colorează cu H&E (vezi 2.3) și se examinează la microscop.")
+
+    add_h3(doc, "» " + q("Procesate: 1") + " (un singur bloc)")
+    add_para(
+        doc,
+        "Cele DOUĂ firimituri prelevate de Dr. Noufal au fost atât de mici (sub-milimetrice) încât au "
+        "încăput împreună într-un singur bloc de parafină. Asta e prima limitare materială — material "
+        "puțin pentru analiză.",
+    )
+
+    add_callout(
+        doc,
+        "Pe firul nostru:",
+        "Firimiturile de tencuială au fost băgate într-un cub de ceară. Cubul a fost tăiat în felii ca "
+        "salamul, fiecare felie a fost lipită pe o " + q("oglindă") + " (lama de sticlă), vopsită cu "
+        "albastru și roșu (H&E), și pusă sub lupa expertului. Pentru că firimiturile au fost minuscule, "
+        "s-a făcut DOAR UN SINGUR cub — restul depinde de ce vede expertul în feliile rezultate.",
+        kind="analogy",
+    )
+
+    # --- 2.6 Macroscopic ---
+    add_h2(doc, "2.6 MACROSCOPIC — descrierea Dr. Teoran (medic specialist)")
+
+    add_para(
+        doc,
+        "" + q("Macroscopic") + " = cum arată firimiturile la OCHIUL LIBER (sau lupă mică), ÎNAINTE de a "
+        "fi tăiate în felii și colorate. E primul pas: o descriere fizică simplă.",
+    )
+
+    add_callout(
+        doc,
+        "Textul exact din raport:",
+        q("Două piese biopsice cu aspect neregulat, cafenii, elastice, cu dimensiuni de 0,2/0,1/0,1 cm "
+          "ambele. Se orientează în totalitate, fără secționare (T26H06044-A1)."),
+        kind="info",
+    )
+
+    add_h3(doc, "» " + q("Două piese biopsice"))
+    add_para(doc, "Dr. Noufal a prelevat DOI fragmente separate — nu unul singur.")
+
+    add_h3(doc, "» " + q("aspect neregulat"))
+    add_para(
+        doc,
+        "Nu sunt rotunde sau ovale — au formă neregulată, ruptă. E NORMAL pentru o biopsie cu pensa "
+        "endoscopică (pensa rupe, nu taie precis).",
+    )
+
+    add_h3(doc, "» " + q("cafenii"))
+    add_para(
+        doc,
+        "Culoare maro-deschis, brună. E culoarea normală a țesutului viu fixat în formol (proteinele se "
+        "colorează ușor brun după fixare).",
+    )
+
+    add_h3(doc, "» " + q("elastice"))
+    add_para(
+        doc,
+        "Țesutul are oarecare elasticitate când e atins — semn că e țesut moale, viu, NU necrozat dur, "
+        "NU calcificat, NU putrid. Nimic alarmant aici; descrierea e standard pentru o biopsie de mucoasă.",
+    )
+
+    add_h3(doc, "» " + q("dimensiuni de 0,2/0,1/0,1 cm ambele") + " — ATENȚIE, cifră CHEIE")
+    add_para(
+        doc,
+        "0,2 cm = 2 milimetri (cea mai mare dimensiune a firimiturii). 0,1 cm = 1 milimetru (celelalte 2 "
+        "dimensiuni). Volum aproximativ: ~2 mm³ per firimitură. AMBELE firimituri au exact aceleași "
+        "dimensiuni (2 × 1 × 1 mm).",
+    )
+
+    add_callout(
+        doc,
+        "Pe firul nostru — limitarea cheie:",
+        "Fiecare firimitură e MAI MICĂ decât un bob de orez. Inspectorul a luat 2 grăunțe minuscule de "
+        "tencuială — fiecare cât un grăunte de nisip ușor mai mare. Cu așa de puțin material, ai foarte "
+        "puține " + q("camere") + " de explorat la microscop.\n\n"
+        "ASTA E LIMITAREA principală care a făcut concluzia să fie " + q("doar sugestiv") + " — nu suficient "
+        "pentru " + q("certitudine") + ".",
+        kind="warn",
+    )
+
+    add_h3(doc, "» " + q("Se orientează în totalitate, fără secționare (T26H06044-A1)"))
+    add_para(doc, "Trei elemente tehnice de procesare:")
+    add_bullet(doc, "= se așează cu o anumită orientare în blocul de parafină, ca să poată fi tăiate corect (perpendicular pe suprafața lor — să se vadă " + q("toată grosimea") + ").", bold_prefix="se orientează")
+    add_bullet(doc, "= se folosesc TOATE cele 2 firimituri (nu se aruncă nimic, nu se păstrează rezerve — pentru că sunt prea mici).", bold_prefix="în totalitate")
+    add_bullet(doc, "= nu sunt tăiate în prealabil în bucățele și mai mici — sunt incluse așa cum au fost prelevate.", bold_prefix="fără secționare")
+    add_bullet(doc, "= cod subtotal (T26H06044 = codul biopsiei, A1 = primul bloc din " + q("Piesa A") + ").", bold_prefix="T26H06044-A1")
+
+    # --- 2.7 Microscopic ---
+    add_h2(doc, "2.7 MICROSCOPIC — descrierea Dr. Glăja (medic primar)")
+
+    add_para(
+        doc,
+        "Aici vine analiza la microscop, după ce feliile au fost tăiate, lipite pe lame și colorate H&E. "
+        "Descrierea e ÎMPĂRȚITĂ pe cele DOUĂ firimituri prelevate — pentru că au conținut țesut diferit.",
+    )
+
+    add_h3(doc, "FRAGMENTUL 1 — descriere detaliată")
+
+    add_callout(
+        doc,
+        "Textul exact (fragmentul 1):",
+        q("Un fragment tisular biopsic constituit din numeroase structuri vasculare cu endoteliul "
+          "tumefiat, unele hiperemiate / cu marginație leucocitară și manșon leucocitar, cu orientare "
+          "perpendiculară pe suprafața acoperită parțial de detritus și necroză fibrinoidă; prezente "
+          "deopotrivă elemente celulare inflamatorii mononucleate; aparent se disting celule epitelioide "
+          "de talie medie, cu nucleul nucleolat, cu nucleol eozinofil și citoplasma cantitativ moderată, "
+          "palid colorată / slab eozinofilă, singulare/grupate."),
+        kind="info",
+    )
+
+    # --- termen 1: structuri vasculare cu endoteliu tumefiat ---
+    add_h3(doc, "» " + q("structuri vasculare cu endoteliul tumefiat"))
+    add_bullet(doc, "= vase de sânge mici (capilare).", bold_prefix="Structuri vasculare")
+    add_bullet(doc, "= stratul subțire de celule care căptușește pe interior peretele unui vas de sânge — ca o tapiserie pe interiorul unui tub.", bold_prefix="Endoteliul")
+    add_bullet(doc, "= umflat, mărit de volum.", bold_prefix="Tumefiat")
+    add_callout(
+        doc,
+        "Pe firul nostru:",
+        "În firimitura 1, expertul vede ȚEVI DE CUPRU SUBȚIRI (capilare) cu pereții lor interiori umflați "
+        "— ca o țeavă veche cu rugină pe dinăuntru: pereții devin mai groși, lumenul se îngustează. Asta "
+        "arată INFLAMAȚIE locală — vasele reacționează la o agresiune (o rană, o iritație, un infiltrat).",
+        kind="analogy",
+    )
+
+    # --- termen 2: hiperemiate, marginație, manșon leucocitar ---
+    add_h3(doc, "» " + q("unele hiperemiate / cu marginație leucocitară și manșon leucocitar"))
+    add_bullet(doc, "" + EM + " = pline cu sânge (HIPER = mult, EMIE = sânge). Vasele sunt dilatate, congestionate.", bold_prefix="Hiperemiate")
+    add_bullet(doc, "= globulele albe (leucocite) se așază LA MARGINEA peretelui interior al vasului, gata să iasă în țesut. E etapa 1 a unei reacții inflamatorii — globulele albe vin la " + q("locul faptei") + ".", bold_prefix="Marginație leucocitară")
+    add_bullet(doc, "= globulele albe deja au IEȘIT din vase și formează un INEL de jur-împrejurul vasului, ca o gardă strânsă în jurul țevii. " + q("Manșon") + " = tubul îngust, gulerul.", bold_prefix="Manșon leucocitar")
+    add_callout(
+        doc,
+        "Pe firul nostru:",
+        "Țevile sunt PLINE cu apă (hiperemie). Pe pereții lor s-au adunat ZECI de polițiști gata să sară "
+        "(marginație). Alți polițiști deja au coborât din țeavă și formează un CERC STRÂNS de jur-împrejurul "
+        "ei (manșon). E imaginea CLASICĂ a unei zone unde a sosit " + q("echipa de intervenție inflamatorie")
+        + " — semn de inflamație activă în jurul leziunii.",
+        kind="analogy",
+    )
+
+    # --- termen 3: orientare perpendiculară ---
+    add_h3(doc, "» " + q("cu orientare perpendiculară pe suprafață"))
+    add_para(
+        doc,
+        "Vasele sunt așezate VERTICAL pe suprafața mucoasei (urcă din profund spre superficial). "
+        "E orientarea NORMALĂ pentru capilarele care hrănesc mucoasa — nu o anomalie. E un detaliu de "
+        "context spațial care îi arată anatomopatologului că secțiunea a fost tăiată corect.",
+    )
+
+    # --- termen 4: detritus + necroza fibrinoida ---
+    add_h3(doc, "» " + q("acoperită parțial de detritus și necroză fibrinoidă"))
+    add_bullet(doc, "= resturi celulare moarte, fragmente de țesut degradat — ca " + q("murdăria") + " care se acumulează la suprafața unei răni.", bold_prefix="Detritus")
+    add_bullet(doc, "= un tip particular de moarte celulară unde țesutul mort e îmbibat cu FIBRINĂ (proteina din cheaguri de sânge). Apare ca o pojghiță roșie-roz, omogenă, fără structură celulară clară.", bold_prefix="Necroză fibrinoidă")
+    add_callout(
+        doc,
+        "Pe firul nostru:",
+        "SUPRAFAȚA peretelui (mucoasa) e acoperită PARȚIAL cu o pojghiță maro-roșiatică formată din: "
+        "resturi de tencuială căzută (detritus) + un STRAT DE PANSAMENT NATURAL cu cheaguri "
+        "(necroză fibrinoidă). E exact ce ai vedea pe o RANĂ DESCHISĂ VECHE care a tot încercat să se "
+        "vindece, dar n-a reușit complet — crustă peste crustă, vie și moartă amestecate.",
+        kind="analogy",
+    )
+
+    # --- termen 5: elemente celulare inflamatorii mononucleate ---
+    add_h3(doc, "» " + q("prezente deopotrivă elemente celulare inflamatorii mononucleate"))
+    add_bullet(doc, "= globule albe (leucocite) responsabile de inflamație.", bold_prefix="Elemente celulare inflamatorii")
+    add_bullet(doc, "= au UN SINGUR nucleu (spre deosebire de neutrofile, care au mai mulți lobi nucleari). Mononuclearele includ: limfocite (memorie imunitară), plasmocite (produc anticorpi), macrofage (curăță detritusul), monocite (precursorii macrofagelor).", bold_prefix="Mononucleate")
+    add_callout(
+        doc,
+        "Pe firul nostru:",
+        "Pe lângă " + q("echipa de intervenție rapidă") + " (neutrofile, care vin în inflamațiile acute), "
+        "au sosit și ECHIPELE DE SPECIALIȘTI PE TERMEN LUNG — limfocite, macrofage, plasmocite. "
+        "E semnul unei INFLAMAȚII CRONICE (de durată), nu doar acute. Asta confirmă " + q("ulcerația cronică")
+        + " din concluzie.",
+        kind="analogy",
+    )
+
+    # --- termen 6: aparent se disting celule epitelioide ---
+    add_h3(doc, "» " + q("aparent se disting celule epitelioide de talie medie"))
+    add_bullet(doc, "— anatomopatologul folosește acest cuvânt CU PRECAUȚIE. Înseamnă " + q("par să fie") + ", " + q("cred că văd") + ", NU " + q("sunt sigur") + ".", bold_prefix="Aparent")
+    add_bullet(doc, "= celule cu aspect de celulă EPITELIALĂ (din epiteliu — stratul de celule care căptușește mucoasele). E TIPUL de celulă care formează ADENOCARCINOAMELE (cancere care apar pornind din epiteliu).", bold_prefix="Celule epitelioide")
+    add_bullet(doc, "— nu sunt nici foarte mari, nici foarte mici (dimensiune intermediară).", bold_prefix="De talie medie")
+    add_callout(
+        doc,
+        "Pe firul nostru — momentul-cheie:",
+        "Aici e exact PUNCTUL DE INCERTITUDINE. Expertul vede CÂTEVA celule care " + q("seamănă") + " cu "
+        "cele care formează căptușeala peretelui (epiteliu). Dacă ar fi fost MULTE și CLAR ATIPICE, ar fi "
+        "spus " + q("CANCER") + ". Dar fiind PUȚINE și " + q("aparent") + ", spune doar " + q("par să fie")
+        + ". E motivul pentru care concluzia nu poate fi clară.",
+        kind="warn",
+    )
+
+    # --- termen 7: nucleu nucleolat, nucleol eozinofil ---
+    add_h3(doc, "» " + q("cu nucleul nucleolat, cu nucleol eozinofil"))
+    add_bullet(doc, "= " + q("creierul") + " celulei, conține ADN-ul.", bold_prefix="Nucleu")
+    add_bullet(doc, "= are NUCLEOL (un punct mai DENS din interiorul nucleului — fabrica de ribozomi, locul unde celula " + q("scrie") + " proteinele).", bold_prefix="Nucleolat")
+    add_bullet(doc, "= nucleolul se colorează în ROȘU/ROZ cu eozina — semn că e plin cu proteine și " + q("lucrează intens") + ".", bold_prefix="Nucleol eozinofil")
+    add_callout(
+        doc,
+        "Pe firul nostru — atenție la nuanță:",
+        "Celulele nu doar EXISTĂ în firimitură, ci au și " + q("motorașe interne mari și active") + " "
+        "(nucleoli prominenți eozinofili) — semn că celulele sunt în PROLIFERARE rapidă, exact așa cum apar "
+        "celulele tumorale.\n\n"
+        "DAR " + EM + " atenție: nucleolul prominent NU e patognomonic (specific cancerului). Apare și în "
+        "celule NORMALE care " + q("lucrează tare") + " — celule reactive în inflamație, celule de "
+        "regenerare. De aceea Dr. Glăja nu poate spune " + q("cancer") + " doar pe baza acestui detaliu.",
+        kind="analogy",
+    )
+
+    # --- termen 8: citoplasma moderată, palid colorată/slab eozinofilă ---
+    add_h3(doc, "» " + q("citoplasma cantitativ moderată, palid colorată / slab eozinofilă"))
+    add_bullet(doc, "= " + q("interiorul") + " celulei (în afara nucleului), unde au loc procesele metabolice.", bold_prefix="Citoplasma")
+    add_bullet(doc, "= celula are nici puțină, nici multă citoplasma.", bold_prefix="Cantitativ moderată")
+    add_bullet(doc, "= citoplasma se colorează SLAB cu eozina (apare roz pal, nu intens roz/roșu).", bold_prefix="Palid colorată / slab eozinofilă")
+    add_callout(
+        doc,
+        "Pe firul nostru:",
+        "Celulele suspecte au " + q("corpul") + " de mărime medie, ușor decolorat — nici intens roșu "
+        "(ca celulele musculare), nici transparent. E o caracteristică INTERMEDIARĂ, ambiguă, care nu trage "
+        "spre o concluzie clară (nici tipic tumoral, nici tipic reactiv).",
+        kind="analogy",
+    )
+
+    # --- termen 9: singulare/grupate ---
+    add_h3(doc, "» " + q("singulare / grupate"))
+    add_para(doc, "Celulele atipice sunt văzute uneori una câte una izolate (SINGULARE), uneori în mici aglomerări de 2-3 celule împreună (GRUPATE).")
+    add_callout(
+        doc,
+        "Pe firul nostru — al doilea criteriu lipsă:",
+        "Dacă expertul ar fi văzut GRUPURI MARI de celule atipice, formând " + q("cuiburi") + " sau "
+        "structuri organizate (glande tumorale, formațiuni infiltrative), ar fi putut spune cu mai multă "
+        "certitudine " + q("ADENOCARCINOM") + ". Aici sunt prea răzlețe pentru a putea identifica un "
+        + q("model arhitectural tumoral") + ".",
+        kind="warn",
+    )
+
+    add_h3(doc, "FRAGMENTUL 2 — descriere scurtă")
+
+    add_callout(
+        doc,
+        "Textul exact (fragmentul 2):",
+        q("Un fragment tisular mic reprezentat în exclusivitate de epiteliu stratificat scuamos "
+          "necheratinizat, cu aspecte de exocitoză (granulocite neutrofile) și de extravazate hematice, "
+          "fără suport conjunctiv."),
+        kind="info",
+    )
+
+    # --- termen 10: epiteliu stratificat scuamos necheratinizat ---
+    add_h3(doc, "» " + q("epiteliu stratificat scuamos necheratinizat"))
+    add_para(doc, "STRATUL NORMAL care căptușește esofagul. Patru cuvinte explicate:")
+    add_bullet(doc, "= strat de celule de suprafață.", bold_prefix="Epiteliu")
+    add_bullet(doc, "= mai multe straturi de celule SUPRAPUSE (nu un singur rând).", bold_prefix="Stratificat")
+    add_bullet(doc, "= forma celulelor e turtită, ca SOLZII DE PEȘTE (squamous = solz în latină).", bold_prefix="Scuamos")
+    add_bullet(doc, "= stratul de la suprafață NU produce cheratină (proteina dură care face pielea uscată). Mucoasele interne sunt umede, moi.", bold_prefix="Necheratinizat")
+    add_callout(
+        doc,
+        "Pe firul nostru:",
+        "Al doilea firimitur (cel mai mic) e DOAR TAPISERIA NORMALĂ a peretelui — fără pată, fără "
+        "leziune, fără celule suspecte. Doar mucoasa esofagiană sănătoasă, cum trebuie să arate. Asta e "
+        "un lucru BUN " + EM + " înseamnă că zona din jurul leziunii e structural normală.",
+        kind="ok",
+    )
+
+    # --- termen 11: exocitoză (granulocite neutrofile) ---
+    add_h3(doc, "» " + q("aspecte de exocitoză (granulocite neutrofile)"))
+    add_bullet(doc, "= IEȘIREA celulelor (în cazul de față, globule albe) DIN vase ÎN epiteliu/țesut. " + q("Exo") + " = în afara, " + q("cytosis") + " = mișcare celulară.", bold_prefix="Exocitoză")
+    add_bullet(doc, "= un tip de globule albe cu NUCLEU MULTI-LOBAT și granule fine în citoplasma. Sunt " + q("pompierii") + " sistemului imun — primii care vin la o inflamație acută.", bold_prefix="Granulocite neutrofile")
+    add_callout(
+        doc,
+        "Pe firul nostru:",
+        "În al 2-lea firimitur (mucoasa normală), se văd globule albe care INFILTREAZĂ țesutul — semn de "
+        "inflamație activă chiar și aici. E ca și cum chiar și în zona FĂRĂ pată a peretelui se găsesc "
+        "câțiva pompieri în alertă, semn că leziunea iritează zone vecine.",
+        kind="analogy",
+    )
+
+    # --- termen 12: extravazate hematice ---
+    add_h3(doc, "» " + q("extravazate hematice"))
+    add_bullet(doc, "= ieșit DIN vasele de sânge (extra = în afara, vas = vas).", bold_prefix="Extravazate")
+    add_bullet(doc, "= sânge.", bold_prefix="Hematice")
+    add_para(
+        doc,
+        "Vase mici care s-au " + q("spart") + " și au lăsat să curgă sânge în țesutul din jur (mici "
+        "hemoragii punctiforme). Pe biopsia esofagiană e FRECVENT — pensa de biopsie poate produce mici "
+        "extravazate la prelevare. NU e un semn alarmant.",
+    )
+
+    # --- termen 13: fără suport conjunctiv ---
+    add_h3(doc, "» " + q("fără suport conjunctiv") + " — limitarea tehnică-cheie")
+    add_bullet(doc, "= stratul de țesut conjunctiv (lamina propria + submucoasa) care se află SUB epiteliu și îl SUSȚINE.", bold_prefix="Suport conjunctiv")
+    add_para(
+        doc,
+        "În fragmentul 2 NU e prezent — adică firimitura conține DOAR EPITELIUL SUPERFICIAL, nu și "
+        "straturile profunde.",
+    )
+    add_callout(
+        doc,
+        "Pe firul nostru — DE CE biopsia a fost insuficientă:",
+        "Al 2-lea firimitur e DOAR " + q("tapiseria de pe perete") + " (epiteliul) — FĂRĂ tencuiala "
+        "suportoare de dedesubt (țesut conjunctiv). Pensa de biopsie a luat doar SUPRAFAȚA — nu a ajuns mai "
+        "adânc.\n\n"
+        "ASTA e motivul tehnic pentru care biopsia n-a putut surprinde STRATUL TUMORAL PROFUND — "
+        "fragmentele au fost prea superficiale. Tumorile esofagiene infiltrează ÎN PROFUNZIME (lamina "
+        "propria, submucoasa, musculara), iar pensa endoscopică ajunge tipic doar la suprafață.",
+        kind="warn",
+    )
+
+    # --- 2.8 Concluzia ---
+    add_h2(doc, "2.8 Concluzia — explicat termen cu termen")
+
+    add_callout(
+        doc,
+        "Textul exact al concluziei:",
+        q("Ansamblul histologic, pe secțiuni seriate și în colorația uzuală, pledează pentru ȚESUT DE "
+          "GRANULAȚIE pe fond de ULCERAȚIE CRONICĂ, fiind doar SUGESTIV pentru infiltrat carcinomatos."),
+        kind="info",
+    )
+
+    add_h3(doc, "» " + q("Ansamblul histologic, pe secțiuni seriate și în colorația uzuală"))
+    add_bullet(doc, "= imaginea de ansamblu, cum arată întregul țesut analizat.", bold_prefix="Ansamblul histologic")
+    add_bullet(doc, "= mai multe felii TĂIATE LA RÂND din același bloc de parafină, la diferite niveluri (3-5 felii diferite). Ai astfel o imagine din mai multe " + q("planuri") + ", nu doar dintr-unul.", bold_prefix="Secțiuni seriate")
+    add_bullet(doc, "= colorația H&E (vezi 2.3) — standardul universal.", bold_prefix="Colorația uzuală")
+    add_para(doc, "Tradus: " + q("Pe baza tuturor feliilor pe care le-am examinat, cu coloranții obișnuiți, văd...") + ".")
+
+    add_h3(doc, "» " + q("pledează pentru"))
+    add_para(
+        doc,
+        "Termen anatomopatologic pentru " + q("seamănă cel mai mult cu") + ", " + q("aspectul dominant "
+        "este") + ". E o formulare PRUDENTĂ — nu spune " + q("este") + ", ci " + q("argumentează în "
+        "favoarea") + ". Lasă deschisă posibilitatea altor interpretări.",
+    )
+
+    add_h3(doc, "» " + q("țesut de granulație pe fond de ulcerație cronică"))
+    add_bullet(doc, "= țesut de REPARAȚIE, ca o " + q("crustă vie") + " care apare când o suprafață e rănită și organismul încearcă să se vindece. Conține multe vase mici noi (capilare), fibre de țesut și celule inflamatorii.", bold_prefix="Țesut de granulație")
+    add_bullet(doc, "= o RANĂ care durează DE MULT timp (săptămâni-luni). " + q("Ulcerație") + " = pierdere de țesut superficial; " + q("cronică") + " = de durată.", bold_prefix="Ulcerație cronică")
+    add_para(doc, "Acest tip de țesut apare în multe situații:")
+    add_bullet(doc, "ulcer peptic (rană de stomac/esofag fără cancer)")
+    add_bullet(doc, "esofagită severă cronică")
+    add_bullet(doc, "PESTE / DEASUPRA unei tumori (zona de crustă care acoperă tumora propriu-zisă)")
+    add_para(
+        doc,
+        "Cu alte cuvinte: țesutul de granulație SINGUR nu spune nici cancer, nici nu e cancer. E doar un "
+        "STRAT SUPERFICIAL INFLAMAT — care POATE acoperi o tumoare, sau POATE fi o ulcerație non-tumorală.",
+    )
+
+    add_h3(doc, "» " + q("doar SUGESTIV pentru infiltrat carcinomatos"))
+    add_bullet(doc, "= termen ANATOMOPATOLOGIC. Înseamnă " + q("indicii da, certitudine nu") + ". Sunt câteva semne, dar nu suficiente pentru un diagnostic ferm.", bold_prefix="Sugestiv")
+    add_bullet(doc, "= INFILTRAT CARCINOMATOS = celule de carcinom (un tip de cancer pornit din epiteliu) care infiltrează (= pătrund) în țesuturile din jur. " + q("Adenocarcinom") + " = un sub-tip specific de carcinom care provine din celule glandulare, frecvent în esofag-stomac.", bold_prefix="Infiltrat carcinomatos")
+    add_callout(
+        doc,
+        "Pe firul nostru — sinteza expertului:",
+        "Ce a văzut Dr. Glăja, în limba ta:\n\n"
+        "" + q("Am examinat cu atenție firimiturile, am tăiat felii la mai multe nivele, am colorat "
+        "uzual. Pe baza a ce am văzut, IMPRESIA DOMINANTĂ e CRUSTĂ VIE PE O RANĂ VECHE care încearcă "
+        "să se vindece (granulație + ulcerație cronică). Am văzut și CÂTEVA CELULE care POT fi de "
+        "cancer — sunt indicii. Dar firimiturile au fost prea mici, am avut prea puține celule "
+        "atipice, nu pot să spun cu certitudine că e cancer. Sunt SUGESTII, nu DOVEZI.") + "",
+        kind="analogy",
+    )
+
+    # --- 2.9 Nota laboratorului ---
+    add_h2(doc, "2.9 Nota laboratorului — recomandarea finală")
+
+    add_callout(
+        doc,
+        "Textul exact al notei:",
+        q("De corelat cu datele endoscopice/imagistice (diagnostic histologic tumoral mult limitat de "
+          "numărul mic al celulelor epiteliale atipice); eventuala evaluare imunohistochimică pentru "
+          "diagnostic histologic de certitudine și conduită terapeutică."),
+        kind="info",
+    )
+
+    add_h3(doc, "» " + q("De corelat cu datele endoscopice/imagistice"))
+    add_para(
+        doc,
+        "= " + q("Vă rog să luați în considerare ce s-a văzut la endoscopie și la CT/RMN, NU doar "
+        "raportul meu") + ". Anatomopatologul își pune concluzia în CONTEXTUL clinic global. Singur, "
+        "raportul nu e suficient pentru o decizie.",
+    )
+
+    add_h3(doc, "» " + q("diagnostic histologic tumoral mult limitat de numărul mic al celulelor epiteliale atipice"))
+    add_para(
+        doc,
+        "Tradus exact: " + q("Nu pot pune diagnosticul de tumoră cu certitudine, pentru că am avut prea "
+        "puține celule cu aspect atipic în firimiturile primite") + ". E o RECUNOAȘTERE EXPLICITĂ a "
+        "limitării materialului. NU e o eroare a Dr. Glăja — e adevărul tehnic al situației.",
+    )
+
+    add_h3(doc, "» " + q("eventuala evaluare imunohistochimică pentru diagnostic histologic de certitudine"))
+    add_bullet(doc, "= " + q("ar fi util să faceți IHC") + " (NU obligatoriu, dar puternic recomandat).", bold_prefix="Eventuala evaluare imunohistochimică")
+    add_bullet(doc, "= ca să avem confirmarea HISTOLOGICĂ (din țesut, prin microscop) că E sau NU cancer.", bold_prefix="Pentru diagnostic histologic de certitudine")
+    add_bullet(doc, "= și ca să știm ce TRATAMENT să aplicăm (FLOT, imunoterapie, terapie țintită — depinde de markeri).", bold_prefix="Și conduită terapeutică")
+    add_callout(
+        doc,
+        "Pe firul nostru — recomandarea expertului:",
+        "Expertul scrie, în concluzia lui finală: " + q("Asta-i tot ce pot să spun cu firimiturile astea. "
+        "Dacă vreți răspuns clar (cancer DA / cancer NU), faceți teste suplimentare cu coloranți speciali "
+        "(IHC) pe ce mai am eu aici (blocul T26H06044). De aceste teste depinde ce tratament veți alege.")
+        + "\n\nEXACT acesta e motivul pentru care la consultul de luni 4 mai cu Dr. Anater, prima decizie "
+        "va fi: IHC pe blocul existent, sau rebiopsie țintită nouă.",
+        kind="ok",
+    )
+
+    # --- 2.10 Cei doi medici ---
+    add_h2(doc, "2.10 Cei doi medici care au semnat raportul")
+
+    add_h3(doc, "Dr. Teoran Samy Ștefan — medic specialist (cod parafă G70575)")
+    add_para(
+        doc,
+        "A făcut DESCRIEREA MACROSCOPICĂ (cum arătau firimiturile la ochiul liber). " + q("Specialist") + " "
+        "= nivel de competență 2 (după rezidențiat de 4 ani + examen specialitate). Are dreptul să "
+        "examineze biopsii și să facă diagnostice.",
+    )
+
+    add_h3(doc, "Dr. Glăja Romanița — medic PRIMAR anatomopatolog (cod parafă 367427)")
+    add_para(
+        doc,
+        "A făcut DESCRIEREA MICROSCOPICĂ + a SEMNAT raportul cu CONCLUZIA. " + q("Primar") + " = nivel "
+        "de competență 3 (cel mai înalt: specialist + minim 5 ani experiență + examen primariat). E cea mai "
+        "înaltă autoritate medicală în domeniul anatomopatologiei. Codul 367427 e codul unic în Registrul "
+        "Național al Medicilor.",
+    )
+
+    add_callout(
+        doc,
+        "Pe firul nostru:",
+        "La inspecția peretelui sunt 2 oameni:\n\n"
+        "• " + q("Inspectorul JUNIOR") + " (medic specialist Teoran) face descrierea " + q("cum arată "
+        "firimiturile") + " la primă vedere.\n\n"
+        "• " + q("Inspectorul ȘEF") + " (medic primar Glăja, expert recunoscut) ia firimiturile la "
+        "microscop, scrie raportul oficial și pune SEMNĂTURA OFICIALĂ. Concluzia raportului e "
+        "RESPONSABILITATEA Dr. Glăja, nu a Dr. Teoran. Semnătura ei + ștampila + codul 367427 dau "
+        "raportului GREUTATE LEGALĂ ȘI MEDICALĂ.",
+        kind="analogy",
+    )
+
+    add_para(
+        doc,
+        "Dr. Glăja a semnat raportul cu data " + q("27.04.2026") + " (când a finalizat analiza). "
+        "PDF-ul a fost generat automat de sistem pe " + q("28.04.2026 06:46") + " (când a fost publicat "
+        "pe portalul Bioclinica).",
+        italic=True,
+    )
+
+    # --- 2.11 Sinteza microscopică ---
+    add_h2(doc, "2.11 Pe scurt — ce înseamnă ÎMPREUNĂ toate aceste detalii")
+
+    add_callout(
+        doc,
+        "Sinteza descrierii microscopice, în limba ta:",
+        "Pe firimiturile prelevate, expertul a văzut:\n\n"
+        "• o SUPRAFAȚĂ ULCERATĂ acoperită cu o crustă vie (granulație + necroză fibrinoidă);\n"
+        "• vase de sânge inflamate, cu globule albe care invadează țesutul (mononucleare cronice + neutrofile acute);\n"
+        "• mici hemoragii punctiforme (extravazate);\n"
+        "• CÂTEVA celule cu aspect care POATE indica adenocarcinom (epitelioide, cu nucleoli prominenți), "
+        "dar PUȚINE și răzlețe;\n"
+        "• un al doilea fragment a fost doar mucoasă superficială fără strat profund.\n\n"
+        "În concluzie: NU a putut vedea miezul tumorii din cauza dimensiunii mici a probelor și a faptului "
+        "că ele au fost prelevate din zona de crustă superficială, nu din profunzime. A văzut INDICII de "
+        "cancer, dar nu DOVADĂ histologică.",
+        kind="info",
+    )
+
     # ============ CE NU ÎNSEAMNĂ ============
-    add_h1(doc, "2. Ce NU înseamnă acest rezultat")
+    add_h1(doc, "3. Ce NU înseamnă acest rezultat")
 
     add_callout(
         doc,
@@ -385,7 +939,7 @@ def main():
     )
 
     # ============ CE URMEAZA ============
-    add_h1(doc, "3. Ce urmează — 3 opțiuni standard")
+    add_h1(doc, "4. Ce urmează — 3 opțiuni standard")
 
     add_para(
         doc,
@@ -457,7 +1011,7 @@ def main():
     )
 
     # ============ DE CE E IMPORTANT ============
-    add_h1(doc, "4. De ce e important să avem răspunsul în câteva săptămâni")
+    add_h1(doc, "5. De ce e important să avem răspunsul în câteva săptămâni")
 
     add_para(
         doc,
@@ -479,7 +1033,7 @@ def main():
     )
 
     # ============ CE FACEM CONCRET ============
-    add_h1(doc, "5. Ce facem concret până luni 4 mai")
+    add_h1(doc, "6. Ce facem concret până luni 4 mai")
 
     add_h2(doc, "Acțiuni rămase pentru pregătirea consultului")
 
@@ -507,7 +1061,7 @@ def main():
     )
 
     # ============ MORAL ============
-    add_h1(doc, "6. Pe scurt, pentru moral")
+    add_h1(doc, "7. Pe scurt, pentru moral")
 
     add_callout(
         doc,

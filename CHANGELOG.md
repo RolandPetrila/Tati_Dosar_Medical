@@ -4,6 +4,61 @@
 
 ---
 
+## 2026-04-28 14:42 — Update DOCX biopsie cu fir narativ unic + acoperire integrală termeni + persistare stil (R17 + memorie + STIL_EXPLICATII_FAMILIE)
+
+**Tip:** rewrite document explicativ familie + codificare stil pentru viitor
+
+### Context
+
+User a cerut explicit: „să înțeleg exact ce înseamnă fiecare mențiune din rezultatul biopsiei prin exemple din viața reală spuse ca o poveste". Versiunea anterioară a DOCX-ului explica doar concluzia + 1 analogie generică („casa cu geam"); termenii descrierii microscopice (15+) erau neexplicați.
+
+### Modificări
+
+**1. DOCX rescris integral:**
+
+- `Documente_Informative/EXPLICATIE_REZULTAT_BIOPSIE_2026-04-28.docx` 43.1 KB → **52.0 KB** (231 paragrafe, 41 callouts)
+- `scripts/generate_explicatie_biopsie.py` 582 → **1135 linii** (~+95% conținut)
+- Structură finală: TL;DR → 1. Citatul textual → **2. Anatomia raportului — fiecare mențiune, explicată** (NOU MASIV: introducere fir narativ + 11 sub-secțiuni cu fiecare termen pe rând) → 3. Ce NU înseamnă → 4. 3 opțiuni → 5. Importanță → 6. Concret până 4.05 → 7. Moral
+- **Fir narativ unic:** „casa cu o pată suspectă pe perete" — pacient = casa, esofag = perete, leziune = pată, biopsie = firimituri tencuială, anatomopatolog = expert cu lupă
+- **Termeni acoperiți integral:** antet (9 elemente) + cod diagnostic + examen histopatologic + colorație H&E + diagnostic clinic + piesa A + bloc parafină + 4 termeni macroscopici + 13 termeni microscopici + concluzie (4 sub-părți) + nota laboratorului + 2 medici semnatari (Teoran specialist + Glăja primar)
+
+**2. Persistare stil pentru viitor (decisă cu user prin AskUserQuestion: combinat A + B + C):**
+
+- **(A) Memorie feedback Claude Code** — `~/.claude/projects/G--My-Drive-Roly--Tati/memory/feedback_explicatii_familie_fir_narativ.md` + intrare nouă în `MEMORY.md`. Trigger: „explică-mi"/„pe înțelesul meu"/„cu exemple"/„ca o poveste"
+- **(B) Document de stil dedicat** — `Documente_Informative/STIL_EXPLICATII_FAMILIE.md` (~10 KB) cu cele 4 principii + ghid alegere metaforă centrală (7 propuneri pentru biopsie/CT/chemo/imuno/chirurgie/markeri/TNM) + template structurat + paletă tehnică Python + exemple validate
+- **(C) Mențiune scurtă în Regula 17** (`REGULI_CLAUDE_CODE.md`) — regula operațională #9 cu pointer către documentul de stil. Aplicabil DOAR la documente destinate familiei, NU briefing-uri medici sau ghiduri operaționale.
+
+**3. Backup R10 (pre-modificare):**
+
+- `Dosar_Medical/arhiva/context_medical_versiuni/generate_explicatie_biopsie_pre-update-per-termen_2026-04-28_1407.py`
+- `Dosar_Medical/arhiva/context_medical_versiuni/EXPLICATIE_REZULTAT_BIOPSIE_pre-update-per-termen_2026-04-28_1407.docx`
+- `Dosar_Medical/arhiva/context_medical_versiuni/REGULI_CLAUDE_CODE_pre-r17-fir-narativ_2026-04-28_1407.md`
+
+### Fișiere create
+
+- `Documente_Informative/STIL_EXPLICATII_FAMILIE.md` (NEW — document de stil)
+- `~/.claude/projects/.../memory/feedback_explicatii_familie_fir_narativ.md` (NEW — memorie feedback persistentă)
+
+### Fișiere modificate
+
+- `Documente_Informative/EXPLICATIE_REZULTAT_BIOPSIE_2026-04-28.docx` (regenerat — 52 KB)
+- `scripts/generate_explicatie_biopsie.py` (1135 linii — secțiune „Anatomia raportului" adăugată + renumerotare 2-6 → 3-7)
+- `REGULI_CLAUDE_CODE.md` (R17 regulă operațională #9 nouă cu pointer)
+- `MEMORY.md` (intrare nouă pentru feedback fir narativ)
+- `CHANGELOG.md` (această intrare)
+- `SESSION_LOG.md` (intrare nouă)
+
+### Marcaje certitudine
+
+Toate afirmațiile medicale din DOCX-ul nou păstrează marcajele R17 — firul narativ NU le înlocuiește, le însoțește.
+
+### Acțiuni rămase
+
+- Roland verifică DOCX-ul în Word + confirmă stilul pentru consult 4.05
+- La cerere viitoare cu trigger („explică-mi"...) — aplic automat stilul fără confirmare suplimentară
+
+---
+
 ## 2026-04-28 10:50 — MULTI-EVENT — PDF Vichy 2012 BMS confirmat + programare 30.04 Mate Endre + cardiolog 08:30
 
 **Tip:** integrare 3 documente noi + 1 programare nouă + clarificare flow OncoHelp
