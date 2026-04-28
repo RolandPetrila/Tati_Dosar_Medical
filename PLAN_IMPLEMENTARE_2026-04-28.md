@@ -420,13 +420,13 @@ _(gol la creare)_
 
 ## 📊 Status global
 
-| Fază                 | Status     | Început | Sfârșit | Commit hash    | Validat auditor |
-| -------------------- | ---------- | ------- | ------- | -------------- | --------------- |
-| Faza 1               | 🟢 DONE    | 12:00   | 12:30   | (pending push) | (pending audit) |
-| Faza 2               | 🔴 PENDING | —       | —       | —              | —               |
-| Faza 3               | 🔴 PENDING | —       | —       | —              | —               |
-| Audit final `/audit` | 🔴 PENDING | —       | —       | —              | —               |
-| Memory checkpoint    | 🔴 PENDING | —       | —       | —              | —               |
+| Fază                 | Status     | Început | Sfârșit | Commit hash | Validat auditor                                                   |
+| -------------------- | ---------- | ------- | ------- | ----------- | ----------------------------------------------------------------- |
+| Faza 1               | 🟢 DONE    | 12:00   | 12:30   | 4c9bdd8     | 🟡 PASS_WITH_NOTES (12:25 — 4 INFO neblocante, vezi AUDIT-FAZA-1) |
+| Faza 2               | 🔴 PENDING | —       | —       | —           | —                                                                 |
+| Faza 3               | 🔴 PENDING | —       | —       | —           | —                                                                 |
+| Audit final `/audit` | 🔴 PENDING | —       | —       | —           | —                                                                 |
+| Memory checkpoint    | 🔴 PENDING | —       | —       | —           | —                                                                 |
 
 ---
 

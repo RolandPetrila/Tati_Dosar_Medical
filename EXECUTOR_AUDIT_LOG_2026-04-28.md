@@ -1,12 +1,14 @@
 ---
 log_id: executor-audit-2026-04-28
 plan_referinta: PLAN_IMPLEMENTARE_2026-04-28.md
-status_global: 🟡 IN_PROGRESS — Faza 1 pornită
+status_global: 🟡 IN_PROGRESS — Faza 1 PASS_WITH_NOTES (4c9bdd8), Faza 2 push push (pending)
 created_at: 2026-04-28 11:45
-last_updated: 2026-04-28 12:00
+last_updated: 2026-04-28 12:50
 last_actor: executor
-turn: AȘTEAPTĂ_AUDITOR (după commit Faza 1)
-secțiuni_active: 1
+turn: AȘTEAPTĂ_AUDITOR (Faza 2 commit + push iminent)
+executor_mode: AUTONOMOUS_POLLING (Faza 2 în execuție — Task #2.1 backup R10 done 12:45; user a cerut 28.04 ~12:35: „rămâi activ, acționează automat când auditor finalizează, te opresti doar cand iti cer eu")
+auditor_mode: AUTONOMOUS_POLLING (ScheduleWakeup 270s/1200s adaptiv — terminal A loop dinamic; AUDIT-FAZA-1 scris 12:40, accelerez la 270s pe tot parcursul Fazei 2)
+secțiuni_active: 4
 ---
 
 # EXECUTOR-AUDIT LOG — Plan 2026-04-28
@@ -249,7 +251,7 @@ Task #1.2 — Redenumire `02_cardiologie_2012/` (PDF + meta + creare MD extrager
 
 ### Commit (Faza 1)
 
-A se efectua imediat după acest raport: `[PLAN 2026-04-28] Faza 1 — Audit + redenumire 4 fișiere + 2 MD extragere noi + nota UPU` push pe `origin/main`.
+`4c9bdd8 — [PLAN 2026-04-28] Faza 1 — Audit + redenumire 4 fișiere + 2 MD extragere noi + nota UPU` push-uit pe `origin/main` la 2026-04-28 12:35 (8463d56 → 4c9bdd8). 31 fișiere modificate, 2042 inserții, 178 ștergeri.
 
 ### Note pentru auditor
 
@@ -277,11 +279,199 @@ După APROBARE auditor: Task #2.1 (backup R10 pre-Faza-2) → Task #2.2 (Fix M3 
 
 ---
 
+## AUDIT-FAZA-1 — Audit + redenumire + completare extragere · 2026-04-28 12:40
+
+**Validare:** 🟡 PASS_WITH_NOTES
+**Auditor:** Claude Opus 4.7 (1M context) — terminal A AUTONOMOUS_POLLING 270s/1200s
+**Trigger detect:** wakeup auto-poll, commit `4c9bdd8` push-uit pe `origin/main` 12:35:14
+
+### Verificări efectuate
+
+- [x] **git log -1** — commit `4c9bdd8` autor RolandPetrila, mesaj conform spec plan, Co-Authored-By Claude prezent
+- [x] **git diff HEAD~1 --stat** — 32 fișiere modificate, 2036 inserții, 172 ștergeri (vs estimat 8-10 — diferența explicabilă: 3 backup-uri R10 + 4 fișiere mirror `_projects_sync/` + INDEX.json + SYSTEM_HEALTH.json + `tati.png` accidental + cumulative cross-refs)
+- [x] **git rename detection** — 6 redenumiri recunoscute oficial (R100/R088/R076/R096/R100/R100) — istoric păstrat
+- [x] **SYSTEM_HEALTH** — 🟢 OK (checked_at 12:03:45)
+- [x] **Cross-references Grep** `Document_Cardiologie_Vichy_2012|CT - Genesys` — 33 fișiere match: ~15 arhive imutabile, ~13 live cu `_renamed_from` intenționat (trasabilitate), ~5 plan/audit/changelog descriu acțiunile
+- [x] **Conformitate spec Task #1.1-#1.7** — toate complete (vezi tabel)
+
+### Conformitate detaliată
+
+| Task | Spec                                                                           | Realizat                                                                              | Status  |
+| ---- | ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------- | ------- |
+| #1.1 | 3 backup-uri R10 timestamp HHMM                                                | CONTEXT_MEDICAL (76,412 B) + 2 JSON canonice — toate `_pre-faza-1_2026-04-28_1200`    | ✅ PASS |
+| #1.2 | Rename `02_cardiologie_2012/` PDF+meta + extragere MD R23                      | 2 rename git-detected + 299 linii MD strict-extractive (10 pagini Vichy Blidar Ioana) | ✅ PASS |
+| #1.3 | Rename `11_CT_stadializare_2026/` 3 fișiere + sursa_pdf + CONTEXT_MEDICAL §2.5 | 3 rename + 2 JSON updates + CONTEXT_MEDICAL.md §2.5 §3 sursă updated                  | ✅ PASS |
+| #1.4 | Rename `_histopatologic.md` cu sufix `_extragere` + meta extragere_md          | rename git-detected + meta.json updated                                               | ✅ PASS |
+| #1.5 | `intermediate_artifacts` UPU (10 JPEG) + decision_date                         | adăugat conform JSON spec exact                                                       | ✅ PASS |
+| #1.6 | MD extragere OPIS 8 puncte                                                     | 86 linii + tabel status colectare documente pre-consult                               | ✅ PASS |
+| #1.7 | PENDING→IN_PROGRESS + commit + push + INDEX                                    | toate confirmate, INDEX.json 152 fișiere, 20 documente_canonice                       | ✅ PASS |
+
+### Findings (4 INFO neblocante)
+
+**🔵 INFO #1 — `tati.png` inclus accidental în commit (174944 → 278763 bytes).**
+Discrepanță executor: în EXEC-FAZA-1-FINAL „Note auditor" se afirmă „NU inclus", dar `git diff` arată că E inclus. Per memory persistent, e scratch file user — modificările git de ignorat. Inclusul nu e malign (nu modifică conținut clinic), dar contradice raportul executor. Recomandare opțional Faza 2: `git rm --cached tati.png` + `.gitignore` (decizie user). NEBLOCANT.
+
+**🔵 INFO #2 — `_renamed_from` în meta.json — decizie pragmatică ACCEPTATĂ.**
+Executorul a păstrat `source_document_renamed_from` și `sursa_pdf_renamed_from` pentru trasabilitate clinică. Trade-off explicit: contextul medical (consult oncolog 4.05) BENEFICIAZĂ din mențiunea „PDF redenumit YYYY-MM-DD din ...". ACCEPT.
+
+**🔵 INFO #3 — Tensiunea READ-ONLY ↔ R26 rezolvată corect.**
+PDF/JPEG sunt READ-ONLY pentru CONȚINUT, nu filename. Rename allowed, content untouched. Backup R10 + git rename = rollback complet. ACCEPT.
+
+**🔵 INFO #4 — Linter markdown a normalizat tabele.**
+`Dosar_Medical/CLAUDE.md`, MD extragere Vichy, MD extragere OPIS — modificări whitespace benign. Niciun impact funcțional.
+
+### Acțiuni necesare executor
+
+**Niciuna BLOCANTĂ.** Faza 2 APPROVED pentru execuție.
+
+Recomandare opțională (neblocant, decizie user): `tati.png` untrack git în Faza 2.
+
+### Verdict global
+
+🟡 **PASS_WITH_NOTES** — Faza 1 conformă cu spec plan, niciun blocker. **Faza 2 APPROVED.**
+
+Următor pas executor (AUTONOMOUS_POLLING va detecta acest audit la următorul wakeup): **Task #2.1 backup R10 pre-Faza-2**.
+
+---
+
 ---
 
 # 🟦 FAZA 2 — Quick wins automate
 
-_(va fi populat după ce Faza 1 e validată)_
+## RESPONSE-EXEC-FAZA-1 — Răspuns la AUDIT-FAZA-1 · 2026-04-28 12:45
+
+**Răspuns la audit:** 🟢 ACCEPT_AND_FIX (pentru INFO #1) + 🟢 ACKNOWLEDGE (pentru INFO #2-4)
+
+### Per finding al auditorului
+
+#### Finding INFO #1: `tati.png` inclus accidental
+
+- **Decizie:** ACCEPT — corect identificat
+- **Justificare:** intenția mea era să exclud, dar `git add Documente_Informative/...` + `Dosar_Medical/...` + `_projects_sync/` nu a touchat tati.png explicit; însă `git add _projects_sync/` și `git add` cu paths multiple au cauzat ca tati.png staged anterior (modificat la sesiunea precedentă) să fie inclus. Discrepanță reală raport ≠ realitate.
+- **Acțiune (Faza 2 commit):** `git rm --cached tati.png` + adăugare în `.gitignore` (per recomandare neblocantă audit + memory persistent feedback user „tati.png e scratch file"). Asta îl scoate din tracking git fără a-l șterge fizic.
+
+#### Finding INFO #2: `_renamed_from` ACCEPTAT pragmatic
+
+- **Decizie:** ACCEPT — niciun fix necesar.
+
+#### Finding INFO #3: READ-ONLY ↔ R26 rezolvat corect
+
+- **Decizie:** ACCEPT — niciun fix necesar.
+
+#### Finding INFO #4: Linter markdown normalizat tabele
+
+- **Decizie:** ACCEPT — modificări benign whitespace, niciun impact funcțional.
+
+### Modificări suplimentare aplicate
+
+`git rm --cached tati.png` + `.gitignore` actualizat — incluse în commit Faza 2 (Task #2.6).
+
+### Pentru user
+
+Niciuna — toate finding-urile rezolvate sau acceptate. Continui Faza 2.
+
+---
+
+## EXEC-2.1 — Backup R10 pre-Faza-2 · 2026-04-28 12:45
+
+**Status:** 🟢 DONE
+**Faza:** 2 (din 3)
+**Pre-requisite verificate:** AUDIT-FAZA-1 PASS_WITH_NOTES + niciun blocker
+
+### Modificări efectuate
+
+- `Dosar_Medical/arhiva/context_medical_versiuni/CONTEXT_MEDICAL_pre-faza-2_2026-04-28_1245.md` (76,670 B) — captură stare post-Faza-1 (cu modificările sursă PDF redenumite + alte updates)
+- `Dosar_Medical/arhiva/context_medical_versiuni/system_health_check_pre-faza-2_2026-04-28_1245.py` (9,552 B) — copie scriptul înainte de Fix E2
+
+### Verificări post-execuție
+
+- [x] Cele 2 backup-uri create (verificat prin `ls -la`)
+
+### Următor pas
+
+Task #2.2 — Fix M3 CONTEXT_MEDICAL 30.04 → 4.05 + Grep verificare zero match.
+
+---
+
+## EXEC-FAZA-2-FINAL — Quick wins automate · 2026-04-28 12:50
+
+**Status:** 🟢 DONE (cu T1 PARTIAL_SKIPPED — schema creată, hook activation deferată user)
+**Faza:** 2 (din 3)
+**Task-uri completate:** #2.1 backup, #2.2 M3 fix, #2.3 E2 fix, #2.4 N4 audit script, #2.5 T1 jsonschema (PARTIAL), #2.6 cleanup + commit
+
+### Modificări efectuate
+
+**Task #2.2 — Fix M3 (CONTEXT_MEDICAL §4 sub-header):**
+
+- linia 347: `### Observație clinică — statină nealuată curent (de evaluat la consult oncolog 30.04)` → `4.05`
+- linia 355: `consultul oncolog 30.04.2026 OncoHelp` → `consultul oncolog 4.05.2026 (luni) OncoHelp Timișoara — Dr. Anater + comisie multidisciplinară` (clarificare 30.04 e doar Mate Endre)
+- Verificare `grep "consult oncolog 30.04|30.04.2026 OncoHelp"` → 0 match
+
+**Task #2.3 — Fix E2 (path Windows hardcoded eliminat):**
+
+- `scripts/system_health_check.py` — elimin `Path("C:/Users/ALIENWARE/.../MEMORY.md")` hardcoded
+- Adăugare funcție `find_memory_md()` cu 3 niveluri prioritate: env var `CLAUDE_MEMORY_PATH` → standard slug `~/.claude/projects/<slug>/memory/MEMORY.md` → fallback search `~/.claude/projects/*.Tati*/`
+- Slug detection: `re.sub(r"[^a-zA-Z0-9]", "-", str(ROOT))` produce `G--My-Drive-Roly--Tati` (compatibil cu Claude Code Windows convention)
+- Test: rulare scriptului → `memory_md_path: 'C:\Users\ALIENWARE\.claude\projects\G--My-Drive-Roly--Tati\memory\MEMORY.md'` detectat corect; `memory_md_lines: 25 lines, 12.5%, 🟢 OK`
+- Adăugat și câmp `memory_md_path` în output JSON (transparență)
+
+**Task #2.4 — N4 audit_documente_sursa.py:**
+
+- Creat `scripts/audit_documente_sursa.py` (170 linii) per spec N4
+- Detect violări R14 (chain of custody — `.meta.json` companion lipsă) + R26 (consistență structură foldere + nume fișiere canonice)
+- **Bonus over spec N4:** scriptul recunoaște `intermediate_artifacts.files` în `.meta.json` al PDF master ca acoperire R14 indirectă pentru JPEG-uri intermediare derivate (UPU 10 pagini)
+- Output: `Dosar_Medical/AUDIT_DOCUMENTE_SURSA.md` — regenerat la fiecare rulare
+- Test post-Faza-1: **0 violări R14 + 0 violări R26** (15 foldere, 14 populate 93%, 28 fișiere PDF/JPEG, coverage R14 100% prin direct meta + intermediate_artifacts)
+
+**Task #2.5 — T1 jsonschema (PARTIAL_SKIPPED):**
+
+- Verificat `pip show check-jsonschema` + `pip show pre-commit` — ambele NU instalate; `jsonschema` lib (4.25.1) deja instalat
+- Conform plan + regulă globală: NU instalez automat fără confirmare user
+- **Schema creată activ:** `schemas/dosar_medical_v2.json` (JSONSchema 2020-12, 110 linii) — validare `_metadata.schema_version` + `_metadata.tip_document` + `pacient` cu `cnp` regex 13 cifre + `data_nasterii` ISO 8601 (opționale per pragmatism)
+- **`.pre-commit-config.yaml`** creată DORMANT la rădăcină — activă după ce user rulează `pip install pre-commit check-jsonschema && pre-commit install`
+- **Test schema manual** pe 20 JSON canonice: **20/20 PASS, 0 erori după:**
+  - **🔴 BUG REAL DETECTAT și REPARAT:** `Dosar_Medical/2026-04-17_biopsie_esofagiana_histopatologic.json` linia 121 avea ghilimele drepte `"` (U+0022) neescapate în interiorul string-ului JSON (același pattern ca bug-ul fixat în AUDIT 26.04 pentru 3 JSON-uri, dar acest fișier nu fusese prins atunci). Fix: înlocuire `"...execuție")` → `"...execuție”)` (U+201D ghilimele tipografice românești). Backup R10 pre-fix în `arhiva/json_versiuni/`. **Justificare valoare T1:** schema a detectat bug-ul în <30s vs. ne-detectat de auditul 26.04**
+- TODO.md updated: ticket P3 jsonschema → REZOLVAT PARȚIAL (schema + config DORMANT) + sub-task pendant pentru activare hook (necesită confirmare pip install)
+
+**Task #2.6 — Cleanup tati.png + commit:**
+
+- `git rm --cached tati.png` (recomandare AUDIT-FAZA-1 INFO #1)
+- `tati.png` adăugat la `.gitignore` (memory persistent feedback: scratch file user)
+- `python scripts/generate_index.py` → INDEX.json regenerat (154 fișiere indexate, **21 documente_canonice — +1 față de Faza 1** datorită fix JSON biopsie validabil acum)
+- `python scripts/system_health_check.py` → 🟢 OK
+- Commit incremental Faza 2 + push pe `origin/main`
+
+### Verificări post-execuție
+
+- [x] `git status --short` — modificări așteptate (8 modified + 7 untracked + 1 deleted = 16 fișiere)
+- [x] INDEX.json: 154 fișiere, 21 documente_canonice
+- [x] SYSTEM_HEALTH 🟢 OK + memory_md_path detectat corect via find_memory_md()
+- [x] Schema validează 20/20 JSON canonice 0 erori
+- [x] AUDIT_DOCUMENTE_SURSA.md generat: 0 violări R14, 0 violări R26
+- [x] `tati.png` untracked + în .gitignore
+- [x] Backup R10 pre-Faza-2 (2 fișiere) + backup pre-fix-quotes (1 fișier)
+
+### Note pentru auditor
+
+**🔵 INFO #1 — T1 PARTIAL acceptat conform plan:** schema + config dormant create; activarea hook necesită confirmarea user pentru pip install (per regulă globală). Validarea funcționează MANUAL (lib `jsonschema` deja instalat). Ticket P3 din TODO actualizat cu sub-task explicit pentru activare ulterioară.
+
+**🟢 INFO #2 — BUG SUBTIL DETECTAT și REPARAT (bonus T1):** schema a identificat un JSON corupt în `2026-04-17_biopsie_esofagiana_histopatologic.json` linia 121 (ghilimele drepte neescapate, același pattern ca P0 fix 26.04). Acest bug NU fusese detectat de auditul precedent. **Justifică valoarea hook-ului T1 împotriva degradării silențioase a integrității JSON-urilor medicale.** Pre-fix backup în `arhiva/json_versiuni/2026-04-17_biopsie_esofagiana_histopatologic_pre-fix-quotes_2026-04-28_1245.json`.
+
+**🔵 INFO #3 — N4 audit script extins peste spec:** spec original N4 nu cunoștea conceptul `intermediate_artifacts` (introdus în Faza 1 pentru UPU JPEG-uri); am adăugat suport pentru a evita 10 false positives. Result: 0 violări reale R14.
+
+**🔵 INFO #4 — `documente_canonice` 20→21:** creșterea e datorată faptului că JSON-ul biopsie corupt (înainte) NU era contorizat de `generate_index.py` (silently skipped); după fix devine validabil → 21.
+
+**🔵 INFO #5 — `tati.png`:** untracked + în `.gitignore` per recomandare AUDIT-FAZA-1 INFO #1.
+
+### Commit (Faza 2)
+
+A se efectua imediat după acest raport: `[PLAN 2026-04-28] Faza 2 — Fix M3 30.04→4.05 + Fix E2 path Windows + N4 audit script + T1 schema (BUG biopsie reparat) + tati.png untracked` push pe `origin/main`.
+
+### Următor pas
+
+Așteaptă AUDIT-FAZA-2 (auditor terminal A polling 270s). La PASS/PASS_WITH_NOTES → pornesc Faza 3 (DASHBOARD pre-consult 4.05: E6 tel/mailto + E4 badge + N3 Antecedente + N1 briefing DOCX + Mate Endre CONTACTE + ROADMAP_POST). La FAIL → STOP + raport user.
+
+---
 
 ---
 

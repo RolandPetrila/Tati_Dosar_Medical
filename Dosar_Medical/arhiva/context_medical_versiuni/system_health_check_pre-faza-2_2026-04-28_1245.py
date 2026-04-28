@@ -11,8 +11,6 @@ Output: Dosar_Medical/SYSTEM_HEALTH.json (auto-generat la SessionStart hook).
 """
 
 import json
-import os
-import re
 import sys
 from datetime import datetime
 from pathlib import Path
@@ -29,55 +27,40 @@ ROOT = Path(__file__).resolve().parent.parent
 OUTPUT = ROOT / "Dosar_Medical" / "SYSTEM_HEALTH.json"
 
 # Limite — vezi Regula 28 (REGULI_CLAUDE_CODE.md)
+# Rafinare 2026-04-26 (ticket P2 din TODO închis):
+#   - INTRODUS metric `auto_loaded_md_kb` (suma fișierelor REALMENTE auto-loaded
+#     la pornire sesiune) cu prag 100 KB. Aceasta este alertă REALĂ pentru
+#     risc context window — independent de logs istorice.
+#   - DEMOTE `total_md_root_kb` la metric INFORMATIV (fără limit/status). Suma
+#     brută `.md` la rădăcină include CHANGELOG.md + SESSION_LOG.md care cresc
+#     natural cu activitatea proiectului și NU sunt auto-injected. Pragul
+#     anterior 1024 KB declanșa fals-pozitive predictibile.
 LIMITS = {
     "context_tokens_estimate": {"limit": 200_000, "type": "tokens"},
     "claude_md_size_kb": {"limit": 40, "type": "kb"},
     "memory_md_lines": {"limit": 200, "type": "lines"},
+    # auto_loaded_md_kb prag 150 KB: 5 fișiere auto-loaded × ~40 KB CLAUDE.md
+    # oficial = ~200 KB teoretic; 150 KB lasă headroom ~50% pentru creștere
+    # naturală (reguli noi, update-uri nested) fără fals-pozitive. La 150 KB
+    # ≈ 50K tokens = 25% Sonnet 200k / 5% Opus 1M — încă mult sub critic.
     "auto_loaded_md_kb": {"limit": 150, "type": "kb"},
     "largest_file_kb": {"limit": 200, "type": "kb"},
     "index_json_size_kb": {"limit": 1024, "type": "kb"},
 }
 
+# Fișiere REALMENTE auto-încărcate la sesiune (CLAUDE.md + nested + reference reads
+# declanșate de CLAUDE.md root la prima interacțiune). Nested CLAUDE.md sunt
+# încărcate contextual (când Claude lucrează în subfolder), dar le includem în
+# total deoarece pot fi sumate la o sesiune obișnuită care traversează folderul.
 AUTO_LOADED_FILES = [
-    "CLAUDE.md",
-    "REGULAMENT.md",
-    "REGULI_CLAUDE_CODE.md",
-    "Dosar_Medical/CLAUDE.md",
-    "Documente_Informative/CLAUDE.md",
+    "CLAUDE.md",                            # always-on root
+    "REGULAMENT.md",                        # citit la prima interacțiune (per ordine din CLAUDE.md root)
+    "REGULI_CLAUDE_CODE.md",                # citit la prima interacțiune
+    "Dosar_Medical/CLAUDE.md",              # nested contextual
+    "Documente_Informative/CLAUDE.md",      # nested contextual
 ]
 
 SKIP_DIRS = (".git", "node_modules", ".claude-outputs", "__pycache__")
-
-
-def find_memory_md():
-    """Detect MEMORY.md path via Claude Code conventions.
-
-    Priority: env var CLAUDE_MEMORY_PATH > standard ~/.claude/projects/<slug>/memory/MEMORY.md > manual search in ~/.claude/projects/ for `.Tati` directories. Returns Path or None.
-    Eliminates hardcoded Windows path (E2 fix 2026-04-28 Faza 2 plan).
-
-    Convenția slug Claude Code: înlocuiește toate caracterele non-alphanumerice
-    cu `-` (spațiu, `:`, `\\`, `/`, `.`, etc.). Ex pe Windows:
-      `G:\\My Drive\\Roly\\.Tati` → `G--My-Drive-Roly--Tati`.
-    """
-    env_path = os.environ.get("CLAUDE_MEMORY_PATH")
-    if env_path and Path(env_path).exists():
-        return Path(env_path)
-
-    home = Path.home()
-    project_slug = re.sub(r"[^a-zA-Z0-9]", "-", str(ROOT))
-    candidate = home / ".claude" / "projects" / project_slug / "memory" / "MEMORY.md"
-    if candidate.exists():
-        return candidate
-
-    claude_projects = home / ".claude" / "projects"
-    if claude_projects.exists():
-        for proj_dir in claude_projects.iterdir():
-            if proj_dir.is_dir() and ".Tati" in proj_dir.name:
-                memory = proj_dir / "memory" / "MEMORY.md"
-                if memory.exists():
-                    return memory
-
-    return None
 
 
 def status_for(percent):
@@ -91,6 +74,7 @@ def status_for(percent):
 
 
 def estimate_tokens(text):
+    # Aproximare conservatoare: ~3.5 chars/token în română (limba dominantă în proiect)
     return len(text) // 3 if text else 0
 
 
@@ -108,25 +92,26 @@ def metric(current, limit_key):
 def main():
     metrics = {}
 
+    # CLAUDE.md size
     claude_md = ROOT / "CLAUDE.md"
     if claude_md.exists():
         size_kb = round(claude_md.stat().st_size / 1024, 1)
         metrics["claude_md_size_kb"] = metric(size_kb, "claude_md_size_kb")
 
-    memory_md = find_memory_md()
-    if memory_md:
+    # MEMORY.md lines (calea pentru auto-memory)
+    memory_md = Path(
+        "C:/Users/ALIENWARE/.claude/projects/G--My-Drive-Roly--Tati/memory/MEMORY.md"
+    )
+    if memory_md.exists():
         try:
             with open(memory_md, encoding="utf-8") as fh:
                 lines = sum(1 for _ in fh)
             metrics["memory_md_lines"] = metric(lines, "memory_md_lines")
-            metrics["memory_md_path"] = str(memory_md)
         except OSError as exc:
             metrics["memory_md_lines"] = {"error": str(exc)}
-    else:
-        metrics["memory_md_lines"] = {
-            "error": "MEMORY.md not found in any expected location (env CLAUDE_MEMORY_PATH / ~/.claude/projects/<slug>/memory/MEMORY.md / fallback search)"
-        }
 
+    # auto_loaded_md_kb — suma fișierelor REALMENTE auto-loaded la sesiune
+    # (alertă REALĂ pentru risc context window; independent de logs istorice)
     auto_loaded_total_kb = 0.0
     auto_loaded_breakdown = []
     for rel_path in AUTO_LOADED_FILES:
@@ -144,6 +129,7 @@ def main():
         "note": "suma fișierelor auto-loaded la pornire sesiune (CLAUDE.md root + REGULAMENT + REGULI + nested CLAUDE.md). Pragul 150 KB e alertă reală pentru risc context window.",
     }
 
+    # total_md_root_kb — INFORMATIV (NU declanșează status; vezi auto_loaded_md_kb pentru alertă reală)
     total_md = sum(f.stat().st_size for f in ROOT.glob("*.md"))
     total_md_kb = round(total_md / 1024, 1)
     metrics["total_md_root_kb"] = {
@@ -151,6 +137,7 @@ def main():
         "note": "informativ — suma brută `.md` la rădăcină; include logs istorice (CHANGELOG, SESSION_LOG) care NU sunt auto-loaded. Pentru alertă reală vezi `auto_loaded_md_kb`. Demotează 2026-04-26 (ticket P2 închis).",
     }
 
+    # Cele mai mari fișiere din proiect (.md / .html / .json)
     largest = []
     for ext in ("*.md", "*.html", "*.json"):
         try:
@@ -165,7 +152,8 @@ def main():
             continue
     largest.sort(reverse=True)
     metrics["largest_files"] = [
-        {"path": p.replace("\\", "/"), "size_kb": round(s, 1)} for s, p in largest[:10]
+        {"path": p.replace("\\", "/"), "size_kb": round(s, 1)}
+        for s, p in largest[:10]
     ]
     over_limit_threshold = LIMITS["largest_file_kb"]["limit"]
     metrics["files_over_limit"] = [
@@ -174,11 +162,14 @@ def main():
         if s > over_limit_threshold
     ]
 
+    # INDEX.json size (dacă există — generat în Task #12)
     index_json = ROOT / "INDEX.json"
     if index_json.exists():
         size_kb = round(index_json.stat().st_size / 1024, 1)
         metrics["index_json_size_kb"] = metric(size_kb, "index_json_size_kb")
 
+    # Estimate context tokens — aliniat cu AUTO_LOADED_FILES (5 fișiere) pentru
+    # consistency cu auto_loaded_md_kb
     texts = []
     for rel_path in AUTO_LOADED_FILES:
         f = ROOT / rel_path
@@ -194,12 +185,16 @@ def main():
         "note": "estimat pe AUTO_LOADED_FILES (5 fișiere: CLAUDE.md root + REGULAMENT + REGULI + nested CLAUDE.md). Read-uri ad-hoc, MEMORY.md auto-injection, sistem-reminders nu sunt incluse — context real e mai mare.",
     }
 
+    # Overall status — cel mai rău dintre toate metricile cu status
     severity_order = ["🔴 CRITICAL", "🟠 ALERT", "🟡 WARNING", "🟢 OK"]
     statuses = [
-        v["status"] for v in metrics.values() if isinstance(v, dict) and "status" in v
+        v["status"]
+        for v in metrics.values()
+        if isinstance(v, dict) and "status" in v
     ]
     overall = next((s for s in severity_order if s in statuses), "🟢 OK")
 
+    # Recomandări
     recommendations = []
     for key, val in metrics.items():
         if not isinstance(val, dict) or "status" not in val:
@@ -207,13 +202,21 @@ def main():
         st = val["status"]
         pc = val.get("percent")
         if st.startswith("🟡"):
-            recommendations.append(f"⚠ {key}: la {pc}% — propune restructurare proactivă")
+            recommendations.append(
+                f"⚠ {key}: la {pc}% — propune restructurare proactivă"
+            )
         elif st.startswith("🟠"):
-            recommendations.append(f"🟠 {key}: la {pc}% — REFUZ scrieri masive până la restructurare")
+            recommendations.append(
+                f"🟠 {key}: la {pc}% — REFUZ scrieri masive până la restructurare"
+            )
         elif st.startswith("🔴"):
-            recommendations.append(f"🔴 {key}: la {pc}% — STOP scrieri. Restructurare urgentă.")
+            recommendations.append(
+                f"🔴 {key}: la {pc}% — STOP scrieri. Restructurare urgentă."
+            )
     for f in metrics.get("files_over_limit", []):
-        recommendations.append(f"📄 Fișier mare: {f['path']} ({f['size_kb']}KB) — propune sharding")
+        recommendations.append(
+            f"📄 Fișier mare: {f['path']} ({f['size_kb']}KB) — propune sharding"
+        )
 
     output = {
         "checked_at": datetime.now().isoformat(timespec="seconds"),
@@ -224,7 +227,9 @@ def main():
     }
 
     OUTPUT.parent.mkdir(parents=True, exist_ok=True)
-    OUTPUT.write_text(json.dumps(output, ensure_ascii=False, indent=2), encoding="utf-8")
+    OUTPUT.write_text(
+        json.dumps(output, ensure_ascii=False, indent=2), encoding="utf-8"
+    )
     print(f"SYSTEM_HEALTH check: {overall}")
     print(f"  Output: {OUTPUT}")
     if recommendations:

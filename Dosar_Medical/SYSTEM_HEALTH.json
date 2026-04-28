@@ -1,5 +1,5 @@
 {
-  "checked_at": "2026-04-28T12:03:45",
+  "checked_at": "2026-04-28T12:40:25",
   "status": "🟢 OK",
   "limits": {
     "claude_md_size_kb": {
@@ -14,6 +14,7 @@
       "percent": 12.5,
       "status": "🟢 OK"
     },
+    "memory_md_path": "C:\\Users\\ALIENWARE\\.claude\\projects\\G--My-Drive-Roly--Tati\\memory\\MEMORY.md",
     "auto_loaded_md_kb": {
       "current": 81.7,
       "limit": 150,
@@ -44,7 +45,7 @@
       "note": "suma fișierelor auto-loaded la pornire sesiune (CLAUDE.md root + REGULAMENT + REGULI + nested CLAUDE.md). Pragul 150 KB e alertă reală pentru risc context window."
     },
     "total_md_root_kb": {
-      "current": 727.4,
+      "current": 742.9,
       "note": "informativ — suma brută `.md` la rădăcină; include logs istorice (CHANGELOG, SESSION_LOG) care NU sunt auto-loaded. Pentru alertă reală vezi `auto_loaded_md_kb`. Demotează 2026-04-26 (ticket P2 închis)."
     },
     "largest_files": [
@@ -91,7 +92,7 @@
     ],
     "files_over_limit": [],
     "index_json_size_kb": {
-      "current": 39.6,
+      "current": 40.0,
       "limit": 1024,
       "percent": 3.9,
       "status": "🟢 OK"

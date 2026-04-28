@@ -1,11 +1,11 @@
 {
-  "generated_at": "2026-04-28T12:03:38",
+  "generated_at": "2026-04-28T12:40:20",
   "version": "1.0",
   "stats": {
-    "total_files_indexed": 152,
+    "total_files_indexed": 154,
     "medici_oncohelp": 2,
     "threaduri_gmail": 6,
-    "documente_canonice": 20,
+    "documente_canonice": 21,
     "atasamente_listate": 0
   },
   "medici_oncohelp": [
@@ -349,6 +349,10 @@
     {
       "id": "2024-09-06_anti_helicobacter_pylori_igg_79765",
       "file": "Dosar_Medical/2024-09-06_anti_helicobacter_pylori_igg_79765.json"
+    },
+    {
+      "id": "2026-04-17_biopsie_esofagiana_histopatologic",
+      "file": "Dosar_Medical/2026-04-17_biopsie_esofagiana_histopatologic.json"
     }
   ],
   "cross_references": {
@@ -459,13 +463,13 @@
     },
     "TODO.md": {
       "type": "md",
-      "size_kb": 44.7,
-      "last_modified": "2026-04-28T12:00:55"
+      "size_kb": 45.5,
+      "last_modified": "2026-04-28T12:39:48"
     },
     "CONTEXT_MEDICAL.md": {
       "type": "md",
-      "size_kb": 74.9,
-      "last_modified": "2026-04-28T11:58:45"
+      "size_kb": 75.0,
+      "last_modified": "2026-04-28T12:28:51"
     },
     "CHANGELOG.md": {
       "type": "md",
@@ -499,13 +503,13 @@
     },
     "PLAN_IMPLEMENTARE_2026-04-28.md": {
       "type": "md",
-      "size_kb": 27.7,
-      "last_modified": "2026-04-28T11:52:57"
+      "size_kb": 28.0,
+      "last_modified": "2026-04-28T12:24:36"
     },
     "EXECUTOR_AUDIT_LOG_2026-04-28.md": {
       "type": "md",
-      "size_kb": 7.1,
-      "last_modified": "2026-04-28T11:53:45"
+      "size_kb": 21.4,
+      "last_modified": "2026-04-28T12:28:34"
     },
     "Dosar_Medical/PLAN_audit_remediere_v2_2026-04-18.md": {
       "type": "md",
@@ -531,6 +535,11 @@
       "type": "md",
       "size_kb": 17.3,
       "last_modified": "2026-04-26T22:25:50"
+    },
+    "Dosar_Medical/AUDIT_DOCUMENTE_SURSA.md": {
+      "type": "md",
+      "size_kb": 1.5,
+      "last_modified": "2026-04-28T12:36:05"
     },
     "Documentatie_Initiala/README.md": {
       "type": "md",
@@ -659,13 +668,13 @@
     },
     "_projects_sync/CONTEXT_MEDICAL.md": {
       "type": "md",
-      "size_kb": 74.6,
-      "last_modified": "2026-04-28T10:55:01"
+      "size_kb": 74.9,
+      "last_modified": "2026-04-28T11:58:45"
     },
     "_projects_sync/TODO.md": {
       "type": "md",
-      "size_kb": 44.6,
-      "last_modified": "2026-04-28T10:55:47"
+      "size_kb": 44.7,
+      "last_modified": "2026-04-28T12:00:55"
     },
     "_projects_sync/REGULAMENT.md": {
       "type": "md",
@@ -685,7 +694,7 @@
     "_projects_sync/STATUS_SNAPSHOT.md": {
       "type": "md",
       "size_kb": 26.0,
-      "last_modified": "2026-04-28T10:58:14"
+      "last_modified": "2026-04-28T12:06:34"
     },
     "Dosar_Medical/cercetari/SINTEZA_CLINICI_ONCOLOGIE.md": {
       "type": "md",
@@ -824,8 +833,8 @@
     },
     "INDEX.json": {
       "type": "json",
-      "size_kb": 38.7,
-      "last_modified": "2026-04-28T10:57:34"
+      "size_kb": 39.6,
+      "last_modified": "2026-04-28T12:03:38"
     },
     "Dosar_Medical/2012-02-17_cardiologie_vichy_stent.json": {
       "type": "json",
@@ -1024,13 +1033,13 @@
     },
     "Dosar_Medical/SYSTEM_HEALTH.json": {
       "type": "json",
-      "size_kb": 3.4,
-      "last_modified": "2026-04-28T11:49:43"
+      "size_kb": 3.5,
+      "last_modified": "2026-04-28T12:34:09"
     },
     "Dosar_Medical/2026-04-17_biopsie_esofagiana_histopatologic.json": {
       "type": "json",
       "size_kb": 10.6,
-      "last_modified": "2026-04-28T09:41:16"
+      "last_modified": "2026-04-28T12:38:46"
     },
     ".claude/settings.local.json": {
       "type": "json",
@@ -1039,8 +1048,13 @@
     },
     "_projects_sync/INDEX.json": {
       "type": "json",
-      "size_kb": 38.7,
-      "last_modified": "2026-04-28T10:57:34"
+      "size_kb": 39.6,
+      "last_modified": "2026-04-28T12:03:38"
+    },
+    "schemas/dosar_medical_v2.json": {
+      "type": "json",
+      "size_kb": 3.9,
+      "last_modified": "2026-04-28T12:39:11"
     },
     "Dosar_Medical/rapoarte_generate/2026-04-19_ghid_cancer_esofagian_complet.meta.json": {
       "type": "json",

@@ -1,0 +1,27 @@
+# Pre-commit hooks pentru proiectul .Tati Dosar Medical
+#
+# Status 2026-04-28: DORMANT — necesită instalare framework + tool extern.
+# Activare: rulează (după confirmare user) `pip install pre-commit check-jsonschema`,
+#          apoi `pre-commit install` în repo (creează .git/hooks/pre-commit nou).
+#
+# IMPORTANT: există deja un git hook custom în .git/hooks/pre-commit (regen _projects_sync).
+# La activare framework `pre-commit`, hook-urile se vor combina (pre-commit framework rulează
+# înainte de hook-ul custom). Verifică nu există conflict cu logica regen.
+#
+# Fișier creat ca parte din Faza 2 plan implementare cross-terminal (recomandare T1
+# din .claude-outputs/imbunatatiri/2026-04-28_032030/), ticket P3 din TODO 26.04 escalated.
+repos:
+  - repo: https://github.com/python-jsonschema/check-jsonschema
+    rev: 0.30.0
+    hooks:
+      - id: check-jsonschema
+        name: Validate Dosar Medical JSON schema v2.0
+        files: ^Dosar_Medical/.*\.json$
+        exclude: ^Dosar_Medical/.*\.meta\.json$|MANIFEST\.json|SYSTEM_HEALTH\.json|INDEX\.json|AUDIT_DOCUMENTE_SURSA\.md|EXTRAGERI_INCOMPLETE\.md|arhiva/
+        args:
+          - --schemafile
+          - schemas/dosar_medical_v2.json
+      - id: check-json
+        name: Generic JSON syntax validation
+        files: \.json$
+        exclude: ^Dosar_Medical/arhiva/

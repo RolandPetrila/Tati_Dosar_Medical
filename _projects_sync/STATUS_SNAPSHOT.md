@@ -1,8 +1,8 @@
 # STATUS SNAPSHOT — Petrilă Viorel-Mihai
 
-**Generat automat:** 2026-04-28 12:06
-**Ultim commit git:** `8463d56` (2026-04-28 11:48:55 +0300)
-**Mesaj commit:** [PLAN R29 2026-04-28] Plan cross-terminal: audit+cleanup+DASHBOARD pre-consult 4.05
+**Generat automat:** 2026-04-28 12:42
+**Ultim commit git:** `4c9bdd8` (2026-04-28 12:06:32 +0300)
+**Mesaj commit:** [PLAN 2026-04-28] Faza 1 — Audit + redenumire 4 fișiere + 2 MD extragere noi + nota UPU
 **Sursă de adevăr:** fișierele originale din proiect `.Tati`. Acest snapshot e mirror sintetic generat de `scripts/regen_projects_sync.py` pentru chat Claude Projects (web/mobil).
 
 > **Ordine consultare în chat:** STATUS_SNAPSHOT.md (aici) → CONTEXT_MEDICAL.md (detaliu clinic) → TODO.md (calendar) → CONTACTE_MEDICALE.md (medici) → REGULAMENT.md (reguli) → INDEX.json (index documente) → EXPLICATIE_CONSULT_ONCOLOG_SCENARII.md (glosar + scenarii prognostice).
@@ -67,7 +67,7 @@ Schema datată **10 noiembrie 2025**. Medic prescriptor **IDENTIFICAT (2026-04-2
 
 **Sursă:** `Dosar_Medical/2025-11-10_schema_medicamente.json` (manuscris parțial + fotografii cutii). Medicamentele, dozele și ritmul de administrare sunt `[CERT]` (fotografii cutii + manuscris lizibil pentru ritm). Medicul prescriptor identificat retroactiv 2026-04-24: **Dr. LAZA CRISTINA (cod parafă C07842)** via cross-reference ECO tipărită aceeași zi.
 
-### Observație clinică — statină nealuată curent (de evaluat la consult oncolog 30.04)
+### Observație clinică — statină nealuată curent (de evaluat la consult oncolog 4.05)
 
 **Context (clarificat de user 2026-04-25):** scrisoarea medicală Dr. LAZA CRISTINA din 10.11.2025 (`2025-11-10_scrisoare_medicala_cardiologie.json`) prescrisese **TORVACARD 10/20 mg 0-0-1 seara**, însă pacientul **NU îl administrează curent** — schema reală în vigoare este cea manuscrisă în aceeași zi (cele 4 medicamente din tabelul de mai sus, fără statină). Documentele sursă confirmă: folder `Dosar_Medical/documente_sursa/08_schema_tratament/` (manuscris talon + foto cutii Aspenter, Concor, Triplixam, Jamesi).
 
@@ -75,7 +75,7 @@ Schema datată **10 noiembrie 2025**. Medic prescriptor **IDENTIFICAT (2026-04-2
 
 - Pacient post-stent coronarian 2012 → ghidurile AHA/ESC recomandă statină continuă pentru prevenție CV secundară
 - **Lipidogramă 17.06.2025** (`Dosar_Medical/2025-06-17_buletin_analize_sange.json`): colesterol total 189, **LDL 133 mg/dL** — țintă ESC 2019/2021 post-stent: <70 mg/dL → ținta neatinsă
-- De ridicat la **consultul oncolog 30.04.2026 OncoHelp Timișoara** + medicul de familie Dr. Orbán: reevaluare prevenție CV secundară pre-chirurgie esofagiană
+- De ridicat la **consultul oncolog 4.05.2026 (luni) OncoHelp Timișoara — Dr. Anater + comisie multidisciplinară** + medicul de familie Dr. Orbán: reevaluare prevenție CV secundară pre-chirurgie esofagiană (NU la consultul inițial 30.04 cu Dr. Mate Endre — acela e doar înregistrare pacient)
 
 **Paritate R24:** TORVACARD apare în JSON-ul scrisorii (chain of custody intact — nu se modifică sursa) și este reflectat aici ca observație clinică, nu ca prescripție efectivă.
 

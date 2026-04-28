@@ -118,7 +118,7 @@
     "endoscopie_recoltare": "Dosar_Medical/2026-04-17_examen_gastroscopic.json (proces proliferativ circumferențial 2/3 inferioară esofag, NEDEPĂȘIBIL endoscopic)",
     "ct_stadializare": "Dosar_Medical/2026-04-20_ct_torace_abdomen_pelvis.json (T3-T4, N0-N1, M0 probabil, Siewert II, ascită perihepatică + intrapelvină)",
     "bilet_trimitere_ct_initial": "Dosar_Medical/2026-04-17_bilet_trimitere_CT.json",
-    "creatinina_pre_ct": "Dosar_Medical/2026-04-17_buletin_bioclinica_uree_creatinina.json (același buletin Bioclinica menționa „Examen histopatologic în curs de execuție”)",
+    "creatinina_pre_ct": "Dosar_Medical/2026-04-17_buletin_bioclinica_uree_creatinina.json (același buletin Bioclinica menționa „Examen histopatologic în curs de execuție")",
     "consult_oncolog_pendent": "4.05.2026 OncoHelp Timișoara — Dr. Anater Angelo-Christian (corespondență `Dosar_Medical/corespondenta/2026-04-24_re-solicitare-consult-anater.md`)"
   },
   "medici_unitati": {

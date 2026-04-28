@@ -463,6 +463,12 @@ Pentru evaluare mai precisă a expunerii (calculul „pachete-an”).
 - [x] JSON-uri canonice create din extrageri strict-extractive (12 noi)
 - [x] Folderul `99_altele/` **ȘTERS** integral (nu arhivat — conform cererii user)
 
+### [P3] Pre-commit hook pentru lint JSON — REZOLVAT PARȚIAL 2026-04-28
+
+- [x] ✅ **Schema JSONSchema v2.0** (`schemas/dosar_medical_v2.json`) creată 2026-04-28 — validare câmpuri obligatorii (`_metadata.schema_version`, `_metadata.tip_document`, `pacient`). Validare manuală pe cele 20 JSON canonice → **20/20 PASS, 0 erori** (după fix bug detectat schema în `2026-04-17_biopsie_esofagiana_histopatologic.json` — ghilimele drepte U+0022 → U+201D)
+- [x] ✅ **`.pre-commit-config.yaml`** creată 2026-04-28 — config DORMANT
+- [ ] ⏸ **Activare hook automat** — necesită confirmare user pentru `pip install pre-commit check-jsonschema` + `pre-commit install`. Validarea funcționează manual între timp via `python -c "from jsonschema import validate; ..."` (lib `jsonschema` 4.25.1 deja instalat).
+
 ### [P1] Digitizare documente lipsă
 
 - [x] ✅ **PDF original cardiologie Vichy 2012 — REZOLVAT 2026-04-28**: traducere autorizată română (Blidar Ioana, autorizație 705/2002) procesat integral (10 pagini); **stent confirmat BMS (Bare Metal Stent)** RX VISION 3.5×28 mm Abbott Nr. 1110341 — implicație clinică critică pentru pauza Aspenter pre-chirurgie esofagiană (DAPT scurt, risc tromboză in-stent <1% la 14 ani vechime). Echipa medicală franceză identificată complet. Vezi `Dosar_Medical/2012-02-17_cardiologie_vichy_stent.json` v2 + `documente_sursa/02_cardiologie_2012/2012-02-17_cardiologie_vichy_stent.pdf` (redenumit 2026-04-28 din `Document_Cardiologie_Vichy_2012.pdf` conform R26) + `CONTEXT_MEDICAL.md §3` (rewrite complet).
