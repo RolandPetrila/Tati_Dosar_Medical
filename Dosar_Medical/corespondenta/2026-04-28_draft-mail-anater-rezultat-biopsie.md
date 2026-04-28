@@ -21,13 +21,13 @@ context: rezultat biopsie 17.04 primit 28.04 — INCONCLUZIV; user a scris textu
 
 ## Detalii trimitere
 
-| Camp | Valoare |
-| --- | --- |
-| **To** | `angelo.anater@oncohelp.ro` |
-| **CC** | `programari@oncohelp.ro`, `office@oncohelp.ro` |
-| **Subiect** | `Re: Solicitare consult oncologic - rezultatul biopsiei` |
-| **Reply pe thread** | DA - thread `19dbe7d30cfacbb3` |
-| **Atasament** | PDF oficial Bioclinica (descarcat de pe portal); recomandat nume: `Petrila_Viorel_Mihai_biopsie_17042026_buletin_26417A0362.pdf` |
+| Camp                | Valoare                                                                                                                          |
+| ------------------- | -------------------------------------------------------------------------------------------------------------------------------- |
+| **To**              | `angelo.anater@oncohelp.ro`                                                                                                      |
+| **CC**              | `programari@oncohelp.ro`, `office@oncohelp.ro`                                                                                   |
+| **Subiect**         | `Re: Solicitare consult oncologic - rezultatul biopsiei`                                                                         |
+| **Reply pe thread** | DA - thread `19dbe7d30cfacbb3`                                                                                                   |
+| **Atasament**       | PDF oficial Bioclinica (descarcat de pe portal); recomandat nume: `Petrila_Viorel_Mihai_biopsie_17042026_buletin_26417A0362.pdf` |
 
 ---
 

@@ -457,7 +457,9 @@ Efectuată concomitent cu endoscopia la Genesis Medical Clinic Arad (Dr. Noufal 
 
 **Decident:** Dr. Anater Angelo-Christian, consult **4.05.2026 OncoHelp Timișoara** (comisie oncologică prevăzută în aceeași zi).
 
-**Sursă document:** `Dosar_Medical/2026-04-17_biopsie_esofagiana_histopatologic.json` + `documente_sursa/12_biopsie_2026/2026-04-17_biopsie_esofagiana_histopatologic.{jpeg,md,jpeg.meta.json}`.
+**Sursă document:** `Dosar_Medical/2026-04-17_biopsie_esofagiana_histopatologic.json` + `documente_sursa/12_biopsie_2026/2026-04-17_biopsie_esofagiana_histopatologic.{pdf,md,pdf.meta.json}` (PDF oficial Bioclinica descărcat de user 28.04 09:09; JPEG intermediar șters R-MINIMAL).
+
+**Trimis Dr. Anater + OncoHelp:** mailul cu PDF atașat trimis de user pe 28.04.2026 09:37 ora României (mesaj `19dd2ce9816692eb` în thread `19dbe7d30cfacbb3`); destinatari: `angelo.anater@oncohelp.ro` + `angelo.anater95@yahoo.com` + `programari@oncohelp.ro` + `office@oncohelp.ro`. Vezi `Dosar_Medical/corespondenta/2026-04-24_re-solicitare-consult-anater.md` (cronologie extinsă) — așteptăm răspuns Anater.
 
 ### 7.5 Bilet trimitere CT (17 aprilie 2026) — document administrativ declanșator
 

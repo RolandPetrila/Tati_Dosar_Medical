@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-28T09:01:55",
+  "generated_at": "2026-04-28T09:44:28",
   "version": "1.0",
   "stats": {
     "total_files_indexed": 146,
@@ -194,22 +194,27 @@
         "office@oncohelp.ro (CC pe răspuns Roland 25.04)"
       ],
       "data_start": "2026-04-24",
-      "data_ultim": "2026-04-26",
-      "status": "⚪ încheiat — răspuns clarificări complet primit, programare consult 4 mai 2026 (reprogramat de Anater de la 30.04)",
+      "data_ultim": "2026-04-28",
+      "status": "🟢 activ — așteptăm răspuns Anater după ingest mailuri 27.04 (cardiolog + ora 4.05) + 28.04 (rezultat biopsie atașat + reconfirmare cardiolog + dată consult)",
       "tags": [
         "oncohelp",
         "anater",
         "consult-oncolog",
         "programare-04-05",
-        "biopsie-asteptare",
+        "biopsie-rezultat-inconcluziv",
         "ascita-cardiaca",
         "markeri-tumorali",
         "bilet-trimitere",
-        "comisie-oncologica"
+        "comisie-oncologica",
+        "cardiolog-30-04",
+        "ihc-pendent"
       ],
-      "mesaje_count": "5",
-      "atasamente_count": "0",
-      "version": "2.0",
+      "mesaje_count": "7",
+      "atasamente_count": "1",
+      "atasamente_lista": [
+        "\"2026-04-17_biopsie_esofagiana_histopatologic.pdf (93.6 KB) — atașat de Roland în mesajul 28.04 09:37 (mesaj ID 19dd2ce9816692eb); buletin Bioclinica 26417A0362 / cod T26H06044\""
+      ],
+      "version": "3.0",
       "related_threads": [
         "19db78a7c0a1758d (solicitare inițială OncoHelp)"
       ],
@@ -242,15 +247,19 @@
       "file": "Dosar_Medical/corespondenta/2026-04-24_raspuns-iocn-mester.md"
     },
     {
-      "status": "🟡 DRAFT — neexpediat",
+      "status": "🟢 FINAL v3 — VALIDAT user, gata de trimitere (manual)",
       "data_creare": "2026-04-28 08:55",
-      "autor_draft": "Claude Opus 4.7 (la cererea Roland)",
-      "destinatar": "Dr. Anater Angelo-Christian",
-      "email_destinatar": "angelo.anater@oncohelp.ro",
+      "data_revizie_v2": "2026-04-28 09:30",
+      "data_revizie_v3": "2026-04-28 09:50 (text user corectat de greseli + eliminat diacritice + 3 destinatari)",
+      "autor_draft": "Roland Petrila (text original) + Claude Opus 4.7 (corecturi gramaticale + eliminare diacritice + ajustare ton)",
+      "destinatar_to": "angelo.anater@oncohelp.ro",
+      "destinatar_cc": [
+        "programari@oncohelp.ro",
+        "office@oncohelp.ro"
+      ],
       "trimis_de_user": "false",
-      "referinta_thread": "19dbe7d30cfacbb3 (continuare thread RE: Solicitare consult oncologic)",
-      "context": "rezultat biopsie 17.04 primit 28.04 — INCONCLUZIV; user (Roland) decide dacă/când îl trimite",
-      "note_securitate": "NU expune CNP / parolă / date sensibile dincolo de minimumul necesar (nume + dată naștere + cod buletin lab e suficient pentru identificare în context oncologic)",
+      "referinta_thread": "19dbe7d30cfacbb3 (continuare thread \"RE: Solicitare consult oncologic\")",
+      "context": "rezultat biopsie 17.04 primit 28.04 — INCONCLUZIV; user a scris textul, eu am corectat; intrebari concrete: pasi post-biopsie + ce sa ceri cardiologului + confirmare data 4.05 + ora",
       "file": "Dosar_Medical/corespondenta/2026-04-28_draft-mail-anater-rezultat-biopsie.md"
     }
   ],
@@ -451,8 +460,8 @@
     },
     "CONTEXT_MEDICAL.md": {
       "type": "md",
-      "size_kb": 62.2,
-      "last_modified": "2026-04-28T08:51:37"
+      "size_kb": 62.7,
+      "last_modified": "2026-04-28T09:41:49"
     },
     "CHANGELOG.md": {
       "type": "md",
@@ -636,13 +645,13 @@
     },
     "_projects_sync/CONTEXT_MEDICAL.md": {
       "type": "md",
-      "size_kb": 53.2,
-      "last_modified": "2026-04-26T19:11:10"
+      "size_kb": 62.2,
+      "last_modified": "2026-04-28T08:51:37"
     },
     "_projects_sync/TODO.md": {
       "type": "md",
-      "size_kb": 38.6,
-      "last_modified": "2026-04-28T00:18:05"
+      "size_kb": 43.6,
+      "last_modified": "2026-04-28T08:53:27"
     },
     "_projects_sync/REGULAMENT.md": {
       "type": "md",
@@ -661,8 +670,8 @@
     },
     "_projects_sync/STATUS_SNAPSHOT.md": {
       "type": "md",
-      "size_kb": 21.8,
-      "last_modified": "2026-04-28T00:39:11"
+      "size_kb": 25.6,
+      "last_modified": "2026-04-28T09:05:42"
     },
     "Dosar_Medical/cercetari/SINTEZA_CLINICI_ONCOLOGIE.md": {
       "type": "md",
@@ -691,8 +700,8 @@
     },
     "Dosar_Medical/corespondenta/2026-04-24_re-solicitare-consult-anater.md": {
       "type": "md",
-      "size_kb": 12.4,
-      "last_modified": "2026-04-26T19:08:30"
+      "size_kb": 16.0,
+      "last_modified": "2026-04-28T09:43:00"
     },
     "Dosar_Medical/corespondenta/2026-04-24_raspuns-iocn-mester.md": {
       "type": "md",
@@ -701,13 +710,13 @@
     },
     "Dosar_Medical/corespondenta/INDEX.md": {
       "type": "md",
-      "size_kb": 7.3,
-      "last_modified": "2026-04-26T19:09:19"
+      "size_kb": 8.2,
+      "last_modified": "2026-04-28T09:43:49"
     },
     "Dosar_Medical/corespondenta/2026-04-28_draft-mail-anater-rezultat-biopsie.md": {
       "type": "md",
-      "size_kb": 7.0,
-      "last_modified": "2026-04-28T09:01:29"
+      "size_kb": 6.2,
+      "last_modified": "2026-04-28T09:35:31"
     },
     "Dosar_Medical/documente_sursa/01_identitate/2023-06-12_carte_identitate_extragere.md": {
       "type": "md",
@@ -776,8 +785,8 @@
     },
     "Dosar_Medical/documente_sursa/12_biopsie_2026/2026-04-17_biopsie_esofagiana_histopatologic.md": {
       "type": "md",
-      "size_kb": 3.0,
-      "last_modified": "2026-04-28T08:47:16"
+      "size_kb": 3.2,
+      "last_modified": "2026-04-28T09:41:20"
     },
     "Dosar_Medical/documente_sursa/13_cardiologie_ambulator_2025/2025-11-10_cardiologie_eco_scrisoare_extragere.md": {
       "type": "md",
@@ -791,8 +800,8 @@
     },
     "INDEX.json": {
       "type": "json",
-      "size_kb": 34.2,
-      "last_modified": "2026-04-26T19:21:56"
+      "size_kb": 37.6,
+      "last_modified": "2026-04-28T09:01:55"
     },
     "Dosar_Medical/2012-02-17_cardiologie_vichy_stent.json": {
       "type": "json",
@@ -996,8 +1005,8 @@
     },
     "Dosar_Medical/2026-04-17_biopsie_esofagiana_histopatologic.json": {
       "type": "json",
-      "size_kb": 10.5,
-      "last_modified": "2026-04-28T08:48:05"
+      "size_kb": 10.6,
+      "last_modified": "2026-04-28T09:41:16"
     },
     ".claude/settings.local.json": {
       "type": "json",
@@ -1006,8 +1015,8 @@
     },
     "_projects_sync/INDEX.json": {
       "type": "json",
-      "size_kb": 34.2,
-      "last_modified": "2026-04-26T19:21:56"
+      "size_kb": 37.6,
+      "last_modified": "2026-04-28T09:01:55"
     },
     "Dosar_Medical/rapoarte_generate/2026-04-19_ghid_cancer_esofagian_complet.meta.json": {
       "type": "json",
@@ -1089,10 +1098,10 @@
       "size_kb": 2.5,
       "last_modified": "2026-04-24T22:28:45"
     },
-    "Dosar_Medical/documente_sursa/12_biopsie_2026/2026-04-17_biopsie_esofagiana_histopatologic.jpeg.meta.json": {
+    "Dosar_Medical/documente_sursa/12_biopsie_2026/2026-04-17_biopsie_esofagiana_histopatologic.pdf.meta.json": {
       "type": "json",
-      "size_kb": 2.5,
-      "last_modified": "2026-04-28T08:46:31"
+      "size_kb": 3.3,
+      "last_modified": "2026-04-28T09:41:38"
     },
     "Dosar_Medical/documente_sursa/13_cardiologie_ambulator_2025/2025-11-10_cardiologie_eco_scrisoare.pdf.meta.json": {
       "type": "json",
@@ -1106,8 +1115,8 @@
     },
     "DASHBOARD.html": {
       "type": "html",
-      "size_kb": 176.3,
-      "last_modified": "2026-04-26T22:27:14"
+      "size_kb": 177.4,
+      "last_modified": "2026-04-28T09:03:37"
     },
     "index.html": {
       "type": "html",

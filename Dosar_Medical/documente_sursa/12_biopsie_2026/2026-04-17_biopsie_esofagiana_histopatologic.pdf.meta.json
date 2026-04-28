@@ -1,0 +1,45 @@
+{
+  "source_document": "2026-04-17_biopsie_esofagiana_histopatologic.pdf",
+  "source_location": "documente_sursa/12_biopsie_2026/",
+  "received_date": "2026-04-28",
+  "received_from": "Bioclinica SA — laborator anatomopatologie (CAL Torontalului 1, Timișoara) prin punct recoltare Bioclinica Vlaicu Arad",
+  "medic_anatomopatolog_principal": "Dr. Glăja Romanița (medic primar anatomopatolog, cod parafă 367427)",
+  "medic_specialist_macroscopie": "Dr. Teoran Samy Ștefan (cod parafă G70575)",
+  "buletin_nr": "26417A0362",
+  "cod_diagnostic": "T26H06044",
+  "data_recoltare": "2026-04-17 14:21",
+  "data_lucrat": "Bioclinica SA, CAL Torontalului 1, Timișoara",
+  "data_semnare_raport": "2026-04-27",
+  "data_generare_pdf": "2026-04-28 06:46",
+  "digitized_by": "PDF oficial descărcat de pe portalul Bioclinica de către user (Roland Petrilă) 28.04.2026 09:09",
+  "digitized_date": "2026-04-28",
+  "transcriber": "Claude_Opus_4.7 (extragere strict-extractivă din PDF digital nativ)",
+  "extragere_md": "documente_sursa/12_biopsie_2026/2026-04-17_biopsie_esofagiana_histopatologic.md",
+  "ocr_quality": "n/a (PDF digital nativ — text extractabil direct, fără OCR; 93.6 KB)",
+  "confidence_overall": "high",
+  "completeness_verified": "2026-04-28",
+  "coverage": "100%",
+  "validator": "claude-opus-4-7",
+  "version_history": {
+    "v1_2026-04-28_08:46": "JPEG screenshot capturat de user (134.7 KB) — folosit temporar până la primirea PDF-ului oficial",
+    "v2_2026-04-28_09:40": "PDF oficial Bioclinica (93.6 KB) descărcat de user de pe portal — sursa autoritară definitivă; JPEG ȘTERS conform R-MINIMAL (păstrăm originalul)"
+  },
+  "chain_notes": "Rezultat histopatologic biopsie esofagiană prelevată la endoscopia 17.04.2026 (Genesis Arad, Dr. Noufal Abdul Vahab). Procesare la Bioclinica SA Timișoara. PDF oficial Bioclinica descărcat de user de pe portalul Bioclinica pe 28.04 dimineața (după notificarea automată ntfy.sh) și salvat în folderul biopsie. CONCLUZIE INTERMEDIARĂ — NU diagnostic definitiv: 'Țesut de granulație pe fond de ulcerație cronică, doar SUGESTIV pentru infiltrat carcinomatos'. Limitare explicită: număr mic celule epiteliale atipice surprinse în fragment. RECOMANDARE laborator: 'eventuală evaluare imunohistochimică (IHC) pentru diagnostic histologic de certitudine și conduită terapeutică'. Macroscopic: 2 piese 0.2/0.1/0.1 cm sub-milimetrice. Microscopic: țesut granulație + necroză fibrinoidă + inflamație + câteva celule epitelioide cu nucleu nucleolat (compatibil adenocarcinom dar insuficient pentru diagnostic). PDF-ul a fost atașat de user în mailul către Dr. Anater + Anater yahoo + programari@oncohelp.ro + office@oncohelp.ro pe 28.04.2026 09:37 ora României (thread Gmail 19dbe7d30cfacbb3, mesaj 19dd2ce9816692eb).",
+  "key_clinical_event": true,
+  "trigger_dashboard_regen": true,
+  "trigger_context_medical_update": true,
+  "monitor_ntfy_status": "deactivated_2026-04-28 — rezultat primit, monitor automat oprit",
+  "blocuri_parafina": 1,
+  "block_id_lab": "T26H06044-A1",
+  "trimis_la_oncolog_anater": {
+    "data_trimitere": "2026-04-28 09:37 ora României (06:37 UTC)",
+    "thread_gmail_id": "19dbe7d30cfacbb3",
+    "mesaj_id": "19dd2ce9816692eb",
+    "destinatari": [
+      "angelo.anater@oncohelp.ro",
+      "angelo.anater95@yahoo.com",
+      "programari@oncohelp.ro",
+      "office@oncohelp.ro"
+    ]
+  }
+}

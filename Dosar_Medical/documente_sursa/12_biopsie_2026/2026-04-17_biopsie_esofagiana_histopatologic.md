@@ -74,6 +74,6 @@ _Rezultatele se referă numai la proba analizată. Reproducerea totală sau par�
 
 ---
 
-**Fișier sursă:** `2026-04-17_biopsie_esofagiana_histopatologic.jpeg` (134.7 KB)
+**Fișier sursă:** `2026-04-17_biopsie_esofagiana_histopatologic.pdf` (93.6 KB — PDF oficial Bioclinica descărcat de user de pe portal 28.04.2026 09:09; JPEG-ul intermediar de captură ecran a fost șters conform R-MINIMAL — păstrăm doar originalul)
 **Procesat de:** Claude_Opus_4.7 (extragere strict-extractivă, R23)
 **Data procesării:** 2026-04-28

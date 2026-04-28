@@ -1,8 +1,8 @@
 # STATUS SNAPSHOT — Petrilă Viorel-Mihai
 
-**Generat automat:** 2026-04-28 09:05
-**Ultim commit git:** `f2a2ed5` (2026-04-28 01:36:23 +0300)
-**Mesaj commit:** [DOC R30 2026-04-28] Workflow Projects validat: drag&drop + chat nou
+**Generat automat:** 2026-04-28 09:45
+**Ultim commit git:** `ef00727` (2026-04-28 09:35:24 +0300)
+**Mesaj commit:** [DOC 2026-04-28] Draft v3 FINAL mail Anater - text user corectat + diacritice eliminate + 3 destinatari
 **Sursă de adevăr:** fișierele originale din proiect `.Tati`. Acest snapshot e mirror sintetic generat de `scripts/regen_projects_sync.py` pentru chat Claude Projects (web/mobil).
 
 > **Ordine consultare în chat:** STATUS_SNAPSHOT.md (aici) → CONTEXT_MEDICAL.md (detaliu clinic) → TODO.md (calendar) → CONTACTE_MEDICALE.md (medici) → REGULAMENT.md (reguli) → INDEX.json (index documente) → EXPLICATIE_CONSULT_ONCOLOG_SCENARII.md (glosar + scenarii prognostice).

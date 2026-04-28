@@ -1,11 +1,11 @@
 ---
 title: Index master corespondență medicală tata
-last_scan: 2026-04-26 19:06
-scan_type: incremental (R27 — comandă user „verifică gmail nou" implicită „am un mail nou de la anater")
+last_scan: 2026-04-28 09:50
+scan_type: incremental (R27 — verificare thread Anater pentru ingest mail trimis 28.04 09:37 + descoperire mail anterior 27.04 10:51 nedocumentat)
 threads_total: 11
-threads_active: 0
-last_processed_thread_id: 19dc8c8db3dd4d2c (forward intern Roland 26.04 10:54, după răspuns Dr. Anater 26.04 10:28 în thread 19dbe7d30cfacbb3)
-version: 1.1
+threads_active: 1 (thread Anater redeschis — așteptăm răspuns)
+last_processed_thread_id: 19dd2ce9816692eb (Roland 28.04 09:37 — mail rezultat biopsie + 5 întrebări către Anater + OncoHelp)
+version: 1.2
 auto_loaded: false (citește la cerere)
 ---
 
@@ -23,15 +23,16 @@ auto_loaded: false (citește la cerere)
 
 ## Threaduri active
 
-_(niciunul — toate au răspuns primit)_
+| Data       | Thread                                                                     | Subiect                          | Participanți                                                  | Status                                                                                                                                                                                                                                                             |
+| ---------- | -------------------------------------------------------------------------- | -------------------------------- | ------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| 2026-04-28 | [re-solicitare-consult-anater](2026-04-24_re-solicitare-consult-anater.md) | Re: Solicitare consult oncologic | Roland ↔ Dr. Anater + Anater yahoo + programari@ + office@ OH | 🟢 **REDESCHIS 28.04 09:37** — Roland a trimis rezultat biopsie inconcluziv (PDF atașat) + 5 întrebări deschise (pași post-biopsie + cardiolog 30.04 + dată 4.05 + ora + medicație/mâncare pre-consult). Așteptăm răspuns Anater. Pattern istoric: răspuns 16-24h. |
 
 ## Threaduri încheiate (cu răspuns medic)
 
-| Data       | Thread                                                                                   | Subiect                                                              | Participanți               | Status                                                                                                                       |
-| ---------- | ---------------------------------------------------------------------------------------- | -------------------------------------------------------------------- | -------------------------- | ---------------------------------------------------------------------------------------------------------------------------- |
-| 2026-04-26 | [re-solicitare-consult-anater](2026-04-24_re-solicitare-consult-anater.md)               | Re: Solicitare consult oncologic                                     | Roland ↔ Dr. Anater        | ⚪ încheiat 26.04 — reprogramare **30.04 → 4 mai** + răspunsuri complete (markeri CEA/CA19-9, bilet trimitere, plan zi 4.05) |
-| 2026-04-24 | [raspuns-iocn-mester](2026-04-24_raspuns-iocn-mester.md)                                 | Raspuns IOCN -solicitare consult oncologic                           | Dr. Mester (IOCN) → Roland | ⚪ încheiat — second opinion disponibilă                                                                                     |
-| 2026-04-22 | [solicitare-dr-cip-recomandare-lusca](2026-04-22_solicitare-dr-cip-recomandare-lusca.md) | Solicitare sfat medical pentru tatăl meu (66 ani) - proces esofagian | Roland ↔ Dr. Cip           | ⚪ încheiat — recomandare adjuvant Zeolit/AHCC (de discutat la consult 4.05)                                                 |
+| Data       | Thread                                                                                   | Subiect                                                              | Participanți               | Status                                                                       |
+| ---------- | ---------------------------------------------------------------------------------------- | -------------------------------------------------------------------- | -------------------------- | ---------------------------------------------------------------------------- |
+| 2026-04-24 | [raspuns-iocn-mester](2026-04-24_raspuns-iocn-mester.md)                                 | Raspuns IOCN -solicitare consult oncologic                           | Dr. Mester (IOCN) → Roland | ⚪ încheiat — second opinion disponibilă                                     |
+| 2026-04-22 | [solicitare-dr-cip-recomandare-lusca](2026-04-22_solicitare-dr-cip-recomandare-lusca.md) | Solicitare sfat medical pentru tatăl meu (66 ani) - proces esofagian | Roland ↔ Dr. Cip           | ⚪ încheiat — recomandare adjuvant Zeolit/AHCC (de discutat la consult 4.05) |
 
 ## Threaduri broadcast (fără răspuns uman)
 

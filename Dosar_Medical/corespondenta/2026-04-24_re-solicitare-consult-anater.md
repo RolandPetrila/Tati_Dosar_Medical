@@ -8,12 +8,14 @@ participanti:
   - programari@oncohelp.ro (CC pe răspuns Roland 25.04)
   - office@oncohelp.ro (CC pe răspuns Roland 25.04)
 data_start: 2026-04-24
-data_ultim: 2026-04-26
-status: ⚪ încheiat — răspuns clarificări complet primit, programare consult 4 mai 2026 (reprogramat de Anater de la 30.04)
-tags: [oncohelp, anater, consult-oncolog, programare-04-05, biopsie-asteptare, ascita-cardiaca, markeri-tumorali, bilet-trimitere, comisie-oncologica]
-mesaje_count: 5
-atasamente_count: 0
-version: 2.0
+data_ultim: 2026-04-28
+status: 🟢 activ — așteptăm răspuns Anater după ingest mailuri 27.04 (cardiolog + ora 4.05) + 28.04 (rezultat biopsie atașat + reconfirmare cardiolog + dată consult)
+tags: [oncohelp, anater, consult-oncolog, programare-04-05, biopsie-rezultat-inconcluziv, ascita-cardiaca, markeri-tumorali, bilet-trimitere, comisie-oncologica, cardiolog-30-04, ihc-pendent]
+mesaje_count: 7
+atasamente_count: 1
+atasamente_lista:
+  - "2026-04-17_biopsie_esofagiana_histopatologic.pdf (93.6 KB) — atașat de Roland în mesajul 28.04 09:37 (mesaj ID 19dd2ce9816692eb); buletin Bioclinica 26417A0362 / cod T26H06044"
+version: 3.0
 related_threads: [19db78a7c0a1758d (solicitare inițială OncoHelp)]
 ---
 
@@ -234,9 +236,86 @@ Subject: Re: Solicitare consult oncologic
 
 ---
 
+### 2026-04-27 10:51 — Roland Petrila (petrilarolly@gmail.com → angelo.anater@oncohelp.ro)
+
+```
+Buna ziua,
+
+Vă mulțumesc încă o dată pentru clarificările din mailul precedent.
+
+Urmează să fac programarea la cardiolog precum ne-ați recomandat, v-aș ruga
+să îmi spuneți ce anume să îi cer cardiologului să
+verifice și ce să includă în scrisoarea medicală, pentru ca aceasta să
+acopere tot ce vă este necesar pentru consultul din 4 mai.
+Dacă reușim vom face și analizele de sânge, să fie dosarul cât mai complet
+când ajungem la dumneavoastră.
+
+De asemenea vreau sa confirm programarea pt data de 04.05.2026. Va rog să
+îmi menționați la ce ora să ne prezentăm și dacă tata poate sau nu să
+mănânce sau să îmi bea medicamentele zilnice înainte de consult.
+
+Vă mulțumesc și aștept un cuvânt de la dumneavoastră.
+
+Cu respect,
+
+Petrila Roland
+```
+
+**Mesaj ID Gmail:** `19dcdebd301a0f1c`. **Întrebări deschise:** (1) ce să ceară cardiologului să verifice + ce să includă în scrisoare; (2) confirmare programare 4.05 + ora; (3) tata poate mânca/lua medicamentele zilnice înainte de consult? **Status:** fără răspuns Anater (până la 28.04 09:37).
+
+---
+
+### 2026-04-28 09:37 — Roland Petrila (petrilarolly@gmail.com → angelo.anater@oncohelp.ro + angelo.anater95@yahoo.com + CC programari@oncohelp.ro + office@oncohelp.ro)
+
+**Atașament:** `2026-04-17_biopsie_esofagiana_histopatologic.pdf` (93.6 KB — PDF oficial Bioclinica, buletin 26417A0362 / cod T26H06044, semnat Dr. Glăja Romanița 27.04).
+
+```
+Buna dimineata,
+
+Va scriu sa va instiintez ca am primit astazi (28 aprilie 2026)
+rezultatul examenului histopatologic de la Bioclinica Arad pentru
+biopsia prelevata la endoscopia din 17.04.2026. Vi-l atasez la acest
+mail in forma originala.
+
+Va rog sa-mi spuneti, conform acestui rezultat, ce considerati ca ar
+fi util sa facem mai departe - atat pana la consultul de luni 4 mai,
+cat si ca pasi concreti dupa aceea. Ne bazam pe sfatul dumneavoastra.
+
+Si o ultima rugaminte: pentru consultul cardiologic pe care il avem
+programat joi, 30 aprilie 2026, v-as ruga sa imi spuneti ce anume sa
+ii cer cardiologului sa verifice si ce sa includa in scrisoarea
+medicala, pentru ca aceasta sa acopere tot ce va este necesar pentru
+consultul din 4 mai.
+
+De asemenea, va rog sa imi spuneti daca, in urma rezultatului
+biopsiei, se modifica data consultului sau daca ramane pentru
+4 mai 2026. Va rog sa imi confirmati si sa imi specificati ora la
+care sa ne prezentam.
+
+Multumesc frumos. Astept raspunsul dumneavoastra.
+
+Cu respect,
+
+Petrila Roland
+Fiul pacientului Petrila Viorel-Mihai
+Telefon: 0747 941 861.
+```
+
+**Mesaj ID Gmail:** `19dd2ce9816692eb`. **Întrebări deschise (sintetizate cu mailul 27.04):**
+
+1. **Pași clinici post-biopsie inconcluzivă** — ce consideră util să facem până la consult + ca pași concreți după
+2. **Cardiolog 30.04** — ce specific să ceară cardiologului să verifice + ce să includă în scrisoare
+3. **Confirmare data consult** — rămâne 4.05 sau se modifică?
+4. **Ora consultului** — la ce oră să se prezinte
+5. **Pre-consult logistică** — tata poate mânca / lua medicamentele zilnice înainte? (din mailul 27.04, nereluat în 28.04 dar întrebare validă)
+
+**Status:** 🟢 ÎN AȘTEPTARE răspuns Anater. Bazat pe pattern istoric (16-24h), răspuns așteptat 28.04 seara - 29.04 dimineața.
+
+---
+
 ## Note
 
-- **Status thread:** ⚪ ÎNCHEIAT 26.04 — toate cele 4 întrebări au răspuns explicit + reprogramare confirmată. Anater va furniza telefon contact la consult; nu mai sunt elemente deschise.
+- **Status thread:** 🟢 REDESCHIS 28.04 09:37 — primit rezultat biopsie inconcluziv, trimis la Anater + OncoHelp logistică cu PDF atașat. Aștept răspuns la 5 întrebări concrete deschise (vezi mesajul 28.04). Pattern Anater: răspuns în 16-24h.
 - **Acțiuni declanșate de mailul 26.04 (de executat):**
   - **Mâine 27.04:** 3 telefoane → medic familie (2 bilete trimitere: oncologie medicală + cardiologie) · cardiolog (programare consult) · Synevo Arad (programare CEA + CA 19-9)
   - **4 mai 2026:** consult OncoHelp Timișoara (comisie oncologică + chirurg eso) — NU rămâne internat
