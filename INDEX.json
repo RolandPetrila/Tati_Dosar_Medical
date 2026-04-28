@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-04-28T09:44:28",
+  "generated_at": "2026-04-28T10:57:34",
   "version": "1.0",
   "stats": {
-    "total_files_indexed": 146,
+    "total_files_indexed": 148,
     "medici_oncohelp": 2,
     "threaduri_gmail": 6,
     "documente_canonice": 20,
@@ -389,7 +389,8 @@
       "Dosar_Medical/cercetari/2026-04-25_cercetare-oncohelp-vornicu-anater.md",
       "Dosar_Medical/corespondenta/INDEX.md",
       "INDEX.json",
-      "_projects_sync/INDEX.json"
+      "_projects_sync/INDEX.json",
+      "Dosar_Medical/documente_sursa/15_consult_initial_oncologie_2026/2026-04-28_opis_consult_initial_oncohelp.pdf.meta.json"
     ]
   },
   "files_by_path": {
@@ -400,8 +401,8 @@
     },
     "SESSION_LOG.md": {
       "type": "md",
-      "size_kb": 106.8,
-      "last_modified": "2026-04-28T08:54:25"
+      "size_kb": 109.2,
+      "last_modified": "2026-04-28T10:57:10"
     },
     "WEB_QUERIES.md": {
       "type": "md",
@@ -455,18 +456,18 @@
     },
     "TODO.md": {
       "type": "md",
-      "size_kb": 43.6,
-      "last_modified": "2026-04-28T08:53:27"
+      "size_kb": 44.6,
+      "last_modified": "2026-04-28T10:55:47"
     },
     "CONTEXT_MEDICAL.md": {
       "type": "md",
-      "size_kb": 62.7,
-      "last_modified": "2026-04-28T09:41:49"
+      "size_kb": 74.6,
+      "last_modified": "2026-04-28T10:55:01"
     },
     "CHANGELOG.md": {
       "type": "md",
-      "size_kb": 164.4,
-      "last_modified": "2026-04-28T08:54:04"
+      "size_kb": 168.8,
+      "last_modified": "2026-04-28T10:56:56"
     },
     "ALIMENTATIE.md": {
       "type": "md",
@@ -645,8 +646,8 @@
     },
     "_projects_sync/CONTEXT_MEDICAL.md": {
       "type": "md",
-      "size_kb": 62.2,
-      "last_modified": "2026-04-28T08:51:37"
+      "size_kb": 62.7,
+      "last_modified": "2026-04-28T09:41:49"
     },
     "_projects_sync/TODO.md": {
       "type": "md",
@@ -671,7 +672,7 @@
     "_projects_sync/STATUS_SNAPSHOT.md": {
       "type": "md",
       "size_kb": 25.6,
-      "last_modified": "2026-04-28T09:05:42"
+      "last_modified": "2026-04-28T09:45:02"
     },
     "Dosar_Medical/cercetari/SINTEZA_CLINICI_ONCOLOGIE.md": {
       "type": "md",
@@ -800,13 +801,13 @@
     },
     "INDEX.json": {
       "type": "json",
-      "size_kb": 37.6,
-      "last_modified": "2026-04-28T09:01:55"
+      "size_kb": 38.1,
+      "last_modified": "2026-04-28T09:44:28"
     },
     "Dosar_Medical/2012-02-17_cardiologie_vichy_stent.json": {
       "type": "json",
-      "size_kb": 3.4,
-      "last_modified": "2026-04-18T02:01:54"
+      "size_kb": 18.2,
+      "last_modified": "2026-04-28T10:50:06"
     },
     "Dosar_Medical/2025-06-17_buletin_analize_sange.json": {
       "type": "json",
@@ -1015,8 +1016,8 @@
     },
     "_projects_sync/INDEX.json": {
       "type": "json",
-      "size_kb": 37.6,
-      "last_modified": "2026-04-28T09:01:55"
+      "size_kb": 38.1,
+      "last_modified": "2026-04-28T09:44:28"
     },
     "Dosar_Medical/rapoarte_generate/2026-04-19_ghid_cancer_esofagian_complet.meta.json": {
       "type": "json",
@@ -1037,6 +1038,11 @@
       "type": "json",
       "size_kb": 0.9,
       "last_modified": "2026-04-18T02:16:26"
+    },
+    "Dosar_Medical/documente_sursa/02_cardiologie_2012/Document_Cardiologie_Vichy_2012.pdf.meta.json": {
+      "type": "json",
+      "size_kb": 3.6,
+      "last_modified": "2026-04-28T10:50:41"
     },
     "Dosar_Medical/documente_sursa/04_helicobacter_2024/2024-06-04_si_2024-09-06_buletine_anti_hp_igg.pdf.meta.json": {
       "type": "json",
@@ -1112,6 +1118,11 @@
       "type": "json",
       "size_kb": 2.7,
       "last_modified": "2026-04-24T22:29:25"
+    },
+    "Dosar_Medical/documente_sursa/15_consult_initial_oncologie_2026/2026-04-28_opis_consult_initial_oncohelp.pdf.meta.json": {
+      "type": "json",
+      "size_kb": 2.6,
+      "last_modified": "2026-04-28T10:28:06"
     },
     "DASHBOARD.html": {
       "type": "html",

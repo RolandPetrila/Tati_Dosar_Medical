@@ -2,91 +2,366 @@
   "_metadata": {
     "schema_version": "2.0",
     "nume_fisier": "2012-02-17_cardiologie_vichy_stent.json",
-    "tip_document": "raport_spitalizare_angioplastie",
+    "tip_document": "raport_spitalizare_angioplastie_complet",
     "specialitate": "Cardiologie Intervențională",
-    "data_document": "2012-02-17",
-    "sursa_pdf": "de_identificat_din_arhiva_pacient",
+    "data_eveniment": "2012-02-17",
+    "data_procedura_angioplastie": "2012-02-19",
+    "data_externare": "2012-02-23 (sau 24 — întoarcere România cu mașina)",
+    "sursa_pdf": "Document_Cardiologie_Vichy_2012.pdf",
     "sursa_locatie": "documente_sursa/02_cardiologie_2012/",
-    "procesat_de": "Gemini",
-    "data_procesare": "2026-04-17",
+    "tip_sursa": "traducere autorizată în limba română (Blidar Ioana, autorizație 705/2002 Ministerul Justiției) după document original în limba franceză",
+    "procesat_de": "Gemini (versiunea v1, 2026-04-17, doar pe baza extraselor)",
     "revizuit_de": "Claude_Opus_4.7",
-    "data_revizuire": "2026-04-18",
-    "ocr_quality": "good",
+    "data_revizuire_pdf": "2026-04-28",
+    "ocr_quality": "n/a (PDF traducere autorizată — text clar; mențiune traducător: «Documentul nu este semnat și nici ștampilat de emitent» — semnătura tradusă lipsește)",
     "confidence_overall": "high",
-    "flags": ["migrated_from_v1"],
-    "notes": "Documentul original provine din Vichy, Franța (SCA ST+ antero-septo-apical, 17.02.2012, stent RX VISION 3.5x28 mm pe IVA). Scanul PDF nu e încă în dosar; de solicitat de la familie."
+    "completeness_verified": "2026-04-28",
+    "coverage": "100%",
+    "validator": "claude-opus-4-7",
+    "version_history": {
+      "v1_2026-04-17": "Gemini — extrage parțial doar stent + medicamente, fără detalii complete",
+      "v2_2026-04-28": "Claude_Opus_4.7 — extragere integrală din PDF (10 pagini), confirmare BMS, identificare echipă completă, detalii hemodinamice + materiale + cronologie"
+    },
+    "flags": [
+      "pdf_complet_obtinut_2026-04-28",
+      "stent_bms_confirmat",
+      "anomalie_inaltime_168_vs_178"
+    ],
+    "notes": "Documentul original franceză + traducere autorizată în română. Stent confirmat ca BMS (Bare Metal Stent — «stent gol») RX VISION 3.5 x 28 mm Abbott Nr. 1110341 — important clinic pentru deciziile pre-chirurgie esofagiană (DAPT scurt, risc tromboză in-stent foarte scăzut la 14 ani vechime). Discrepanță transcriere: în coronarografie 178 cm, în angioplastie 168 cm — probabilă eroare de transcriere; greutatea 85 kg + diagnostic «Obezitate» sugerează 168 cm e mai probabil corect (IMC 30.1 vs 26.8); de clarificat cu user."
   },
   "pacient": {
-    "nume": "PETRILĂ",
+    "nume": "PETRILA",
     "prenume": "VIOREL-MIHAI",
+    "nume_text_original_document": "PETRILA PETRILA VIOREL MIHAI (probabil eroare de transcriere)",
     "cnp": "1590518024486",
     "data_nasterii": "1959-05-18",
-    "varsta_la_data_document": 52,
+    "varsta_la_data_eveniment": 52,
     "sex": "M",
+    "ocupatie_la_data_eveniment": "șofer de camion",
+    "stare_civila_la_data_eveniment": "căsătorit",
+    "limbi_vorbite_la_data_eveniment": "română (matern); italiană (puțin); franceză (nu vorbește)",
+    "inaltime_kg_la_data_eveniment": {
+      "valoare_mentionata_coronarografie_17_02": "178 cm",
+      "valoare_mentionata_angioplastie_19_02": "168 cm",
+      "discrepanta_observata": "10 cm — probabilă eroare de transcriere; per IMC + diagnostic 'Obezitate' din raport, 168 cm e mai probabil corect [INCERT — de clarificat cu user]"
+    },
+    "greutate_kg_la_data_eveniment": 85,
+    "imc_calculat_la_data_eveniment": "30.1 (la 168 cm) sau 26.8 (la 178 cm) — clasificare 'obezitate clasa I' (la 168) sau 'supraponderal' (la 178)",
+    "dosar_nr_spital_vichy": "112004096",
     "confidence_identificare": "high"
   },
-  "diagnostic": [
+  "context_clinic": {
+    "motivul_internarii": "Dureri toracice",
+    "antecedente_personale_la_data_eveniment": [
+      "Niciuna semnificativă declarată",
+      "Tabagism activ (intoxicație tabagică)",
+      "Obezitate"
+    ],
+    "factori_de_risc_cardiovascular": [
+      "Tabagism activ",
+      "Obezitate",
+      "Sex masculin >50 ani"
+    ],
+    "antecedent_diabet_zaharat_la_2012": "[NEGASIT — neînregistrat în acest document; DZ tip 2 a fost dezvoltat probabil ulterior 2012]",
+    "antecedent_HTA_la_2012": "[NEGASIT — neînregistrat în acest document]"
+  },
+  "cronologie_clinica": [
     {
-      "cod_icd10": "I21.0",
-      "descriere_oficiala": "Infarct miocardic acut al peretelui anterior",
-      "descriere_originala": "Sindrom coronarian acut ST + în antero-septo-apical",
-      "tip": "principal",
-      "confidence_ocr": "high"
+      "data": "2012-02-13 (estimat — «în urmă cu trei zile»)",
+      "eveniment": "Prima durere toracică la efort (~10 minute), în timpul ridicării de greutăți"
     },
+    {
+      "data": "2012-02-16 noaptea",
+      "eveniment": "Recidivă durere toracică care l-a sculat din somn (durată scurtă)"
+    },
+    {
+      "data": "2012-02-17 ~04:00",
+      "eveniment": "Durere toracică continuă în legătură cu necroză anterioară — preluare de SAMU pentru sindrom coronarian acut"
+    },
+    {
+      "data": "2012-02-17 07:45",
+      "eveniment": "Fibrinoliza cu metalize (tenecteplază) — efectuată la SAMU"
+    },
+    {
+      "data": "2012-02-17 09:54-10:37",
+      "eveniment": "Coronarografie de control la Centrul Spitalicesc Vichy (Procedura nr. 11829) — Dr. Pierre LAVAUD operator"
+    },
+    {
+      "data": "2012-02-17",
+      "eveniment": "Decizie: NU se efectuează angioplastie imediat (flux TIMI 3 obținut prin fibrinoliză, durere dispărută); reluare în 24-48h"
+    },
+    {
+      "data": "2012-02-19 16:05 — 00:00",
+      "eveniment": "Coronarografie de control + angioplastie coronariană (Procedura nr. 11836) — Dr. Xavier MARCAGGI operator + Dr. Gabriel BITAR (A.OP)"
+    },
+    {
+      "data": "2012-02-19 (CS — sinteză zi 19.02)",
+      "eveniment": "Aparent fără recidivă durere toracică. Vârf troponină 150 cu descreștere. ECG persistent supradenivelare ST V2V3. Contact cu Dr. ORBAN Ecaterina (medic familie Nădlac, telefon 0040 723 560 193?)"
+    },
+    {
+      "data": "2012-02-21",
+      "eveniment": "Asimptomatic. Examen clinic fără particularități. Transfer la cardiologie. Mobilizare. — CS Dr. Armel NANA (Intern)"
+    },
+    {
+      "data": "2012-02-23",
+      "eveniment": "CDU Dr. Xavier CHABIN (Intern) — examen clinic fără semne insuficiență cardiacă, fără durere toracică, persistență supradenivelare ST V2V3, fără anomalii repolarizare"
+    },
+    {
+      "data": "2012-02-24 (estimat)",
+      "eveniment": "Întoarcere în România cu mașina, împreună cu soția"
+    }
+  ],
+  "diagnostic_principal": {
+    "cod_icd10": "I21.0",
+    "descriere_oficiala": "Infarct miocardic acut al peretelui anterior",
+    "descriere_originala_document": "Sindrom coronarian acut ST + în antero-septo-apical",
+    "tip": "principal",
+    "confidence_ocr": "high"
+  },
+  "diagnostice_secundare": [
     {
       "cod_icd10": "I25.1",
       "descriere_oficiala": "Boală cardiacă aterosclerotică",
-      "descriere_originala": "Stenoză a arterei interventriculare anterioare proximale și mijlocii",
+      "descriere_originala_document": "Stenoză foarte compactă (70-90%) artera interventriculară anterioară (IVA) proximală + stenoză subocluzivă (90-99%) IVA mijlocie",
       "tip": "secundar",
       "confidence_ocr": "high"
     },
     {
       "cod_icd10": "E66.9",
       "descriere_oficiala": "Obezitate, nespecificată",
-      "descriere_originala": "Obezitate",
+      "descriere_originala_document": "Obezitate",
       "tip": "asociat",
       "confidence_ocr": "high"
     },
     {
       "cod_icd10": "F17.200",
       "descriere_oficiala": "Dependență de nicotină, nespecificată, necomplicată",
-      "descriere_originala": "Tabagism activ",
+      "descriere_originala_document": "Tabagism activ",
       "tip": "asociat",
       "confidence_ocr": "high",
-      "note": "Pacientul a renunțat la fumat în 2012 post-eveniment cardiac."
+      "note": "Pacientul a renunțat la fumat în 2012 post-eveniment cardiac (per CONTEXT_MEDICAL.md §5)."
+    },
+    {
+      "descriere_oficiala": "Anghină pectorală instabilă (indicație angioplastie 19.02)",
+      "descriere_originala_document": "ANGHINĂ PECTORALĂ INSTABILĂ (indicații pentru angioplastie)",
+      "tip": "asociat",
+      "confidence_ocr": "high"
     }
   ],
-  "analize_laborator": [],
-  "tratament": [
-    {
-      "medicament_sau_procedura": "Fibrinoliza cu tenecteplază",
-      "substanta_activa": "tenecteplaza",
-      "indicatie": "tromboliză acută STEMI",
-      "detalii_originale": "Fibrinoliza prin metaliză",
-      "confidence_ocr": "high"
+  "examinari_efectuate": {
+    "coronarografie_initiala_17_02": {
+      "procedura_nr": "11829",
+      "data": "2012-02-17",
+      "ora_inceput": "09:54",
+      "ora_sfarsit": "10:37",
+      "durata_minute": 43,
+      "operator": "Dr. Pierre LAVAUD",
+      "asistente": ["Me. LACOGNE Sylvie"],
+      "manipulator": "Me. PAQUET (A.OP)",
+      "cale_abordare": "artera radială dreaptă - 6 French",
+      "grad_urgenta": "Urgent — spitalizat (internat)",
+      "timp_scopie_minute": 2.37,
+      "doza_totala_cgycm2": 2586.2,
+      "produs_contrast": "IOMERON 350, 63 ml",
+      "complicatii": "niciuna",
+      "rezultate": {
+        "hemodinamica": {
+          "frecventa_cardiaca_pe_min": 60,
+          "ritm_cardiac": "ritm sinusal",
+          "TA_aortica_mmHg": "117/77",
+          "TA_medie_mmHg": 96
+        },
+        "retea_coronara_stanga": {
+          "trunchi_comun": "normal, fără stenoză",
+          "IVA_proximala": "stenoză foarte compactă (70-90%)",
+          "IVA_mijlocie": "stenoză subocluzivă (90-99%)",
+          "circumflexa": "fără leziuni semnificative (stenoză inferioară de 50% pe marginală — per Dr. P LAVAUD 17.02)",
+          "coronara_dreapta": "fără leziuni"
+        },
+        "interpretare_clinica": "Stenoză lungă compactă la primul segment și începutul celui de-al doilea segment IVA, înglobând începutul primei diagonale; strat în aval IVA subțire și cu convulsii (spasmatic). Fluxul TIMI 3 restabilit prin fibrinoliză."
+      }
     },
-    {
-      "medicament_sau_procedura": "Dublă antiagregare + anticoagulant (tratament adjuvant)",
-      "detalii_originale": "PLAVIX, ASPEGIC, LOVENOX",
-      "substanta_activa": "clopidogrel, acid acetilsalicilic, enoxaparină sodică",
-      "confidence_ocr": "high"
-    },
-    {
-      "medicament_sau_procedura": "Coronarografie + angioplastie coronariană primară",
+    "angioplastie_19_02": {
+      "procedura_nr": "11836",
       "data": "2012-02-19",
-      "detalii_originale": "Coronarografie și Angioplastie (19.02.2012)",
-      "detalii_tehnice": "Implantare stent RX VISION 3.5 x 28 mm pe IVA",
-      "tip_stent": "RX VISION (tip nespecificat în document — de clarificat: activ medicamentos sau pasiv metalic)",
-      "confidence_ocr": "high"
+      "ora_inceput": "16:05",
+      "ora_sfarsit_declarat_in_doc": "00:00 (probabilă eroare de transcriere)",
+      "durata_declarata_minute": 965,
+      "comentariu_durata": "[INCERT] 965 minute = ~16h, probabil eroare de transcriere; o angioplastie standard durează 30-90 minute",
+      "operatori": [
+        "Dr. Xavier MARCAGGI (operator principal)",
+        "Dr. Gabriel BITAR (A.OP — ajutor operație)"
+      ],
+      "corespondent": "URP",
+      "asistente": ["Me. THEVENON ESTELLE"],
+      "manipulatori": ["Me. REBOT Patricia"],
+      "cale_abordare": "artera radială dreaptă - 6 French",
+      "indicatii": "ANGHINĂ PECTORALĂ INSTABILĂ",
+      "grad_urgenta": "Urgent amânat — spitalizat (internat) — zi nelucrătoare (sărbătoare, duminică)",
+      "produs_contrast": "IOMERON 350 ml",
+      "hemodinamica_la_inceput": {
+        "frecventa_cardiaca_pe_min": 70,
+        "ritm_cardiac": "ritm sinusal",
+        "TA_aortica_mmHg": "101/75",
+        "TA_medie_mmHg": 86
+      },
+      "material_utilizat": {
+        "ghid_dispozitive_ghidare": [
+          { "nume": "TERUMO în J (Terumo)", "nr_serie": "110711" },
+          { "nume": "Ghidaj de sârmă BMW (Abbott)", "nr_serie": "1111271" }
+        ],
+        "cateter_angioplastie": {
+          "nume": "LAUNCHER EBU 3.5 6F 100 cm (Medtronic)",
+          "nr_serie": "0006023892 (sau 0006023893 — apare în ambele forme în doc)"
+        },
+        "balon": {
+          "nume": "Balon Apex monorail 2.5 x 20 (Boston Scientific)",
+          "nr_serie": "14985066",
+          "predilatare": "presiune maximă 10 ATM, durată 30 secunde"
+        },
+        "stent_coronarian": {
+          "nume_dispozitiv": "RX VISION 3.5 x 28 mm (Abbott)",
+          "nr_serie": "1110341",
+          "tip_stent": "BMS (Bare Metal Stent) — «stent gol»",
+          "confirmare_BMS_in_document": [
+            "«aplicat cu un stent gol VISION 3.5 x 28 mm cu un rezultat primar satisfăcător» (text Dr. MARCAGGI 19.02)",
+            "«Succes primar de angioplastie a arterei interventriculare anterioare proximale cu implantare a unui stent gol» (concluzie raport)"
+          ],
+          "presiune_durata": "10 ATM, durată 20 secunde"
+        }
+      },
+      "rezultate": {
+        "control_angiografic_final": "artera interventriculară anterioară proximală lipsită de leziune semnificativă",
+        "flux_coronar_final": "TIMI 3 (normal)",
+        "concluzie_oficiala": "Succes primar de angioplastie a arterei interventriculare anterioare proximale cu implantare a unui stent gol"
+      },
+      "complicatii": "niciuna"
     }
-  ],
-  "recomandari": [
-    "Repatriere la Timișoara cu asistență medicală",
-    "Transfer la secția de cardiologie pentru mobilizare"
+  },
+  "tratament_in_acut": {
+    "fibrinoliza": {
+      "medicament": "tenecteplază (TNK-tPA)",
+      "denumire_comerciala_franta": "Metalyse (Metaliză)",
+      "data_administrare": "2012-02-17 07:45",
+      "indicatie": "STEMI antero-septo-apical — fibrinoliza primară pre-spital (SAMU)",
+      "rezultat": "succes — flux TIMI 3 obținut, durere toracică dispărută"
+    },
+    "antiagregante_anticoagulant_dupa_internare": [
+      {
+        "medicament": "PLAVIX",
+        "substanta_activa": "clopidogrel",
+        "rol": "antiagregant plachetar (P2Y12 inhibitor)"
+      },
+      {
+        "medicament": "ASPEGIC",
+        "substanta_activa": "acid acetilsalicilic (aspirina)",
+        "rol": "antiagregant plachetar (COX-1 inhibitor)"
+      },
+      {
+        "medicament": "LOVENOX",
+        "substanta_activa": "enoxaparină sodică",
+        "rol": "anticoagulant injectabil (LMWH)"
+      }
+    ],
+    "examinare_la_primire_17_02": {
+      "stare_pacient": "conștient, cooperant",
+      "durere_toracica": "fără recidivă post-fibrinoliză",
+      "auscultatie_cardio_pulmonara": "fără particularități, constante hemodinamice bune",
+      "ecg_evolutie": [
+        "17.02: persistență supraelevare ST",
+        "23.02: persistență supraelevare ST în V2V3, fără anomalii repolarizare"
+      ]
+    }
+  },
+  "biomarkeri_dinamica": {
+    "troponina_varf": {
+      "valoare": 150,
+      "unitate_neclarificata": "[INCERT — unitatea de măsură nu apare explicit în traducere; probabilă pg/mL sau ng/L per pattern francez]",
+      "evolutie": "în descreștere la 19.02"
+    }
+  },
+  "recomandari_externare": [
+    "Repatriere la Timișoara cu asistență medicală (oferit de spital)",
+    "Pacientul a preferat întoarcere cu mașina împreună cu soția",
+    "Transfer la secția de cardiologie pentru mobilizare (intern)",
+    "Continuare DAPT (PLAVIX + ASPEGIC) — durata neexplicită în document"
   ],
   "medici_unitati": {
-    "unitate": "Centre Hospitalier de Vichy (Franța) — de confirmat denumirea exactă",
-    "sectie": "Cardiologie Intervențională",
-    "medic_curant": "de identificat din documentul original"
+    "spital_principal": {
+      "denumire_oficiala": "Centrul Spitalicesc Jacques Lacarin Vichy",
+      "subtitlu": "Spital în serviciul vieții",
+      "adresa": "Bulevardul Denière - Cutia poștală 2757 - 03207 Vichy Cedex, Franța",
+      "telefoane_ingrijiri_intensive_vichy": [
+        "04.70.97.33.48",
+        "04.70.97.33.97"
+      ],
+      "fax_secretariat_vichy": ["04.70.97.22.57", "04.70.97.33.47"]
+    },
+    "spital_secundar_interventie": {
+      "denumire_oficiala": "Centrul Spitalicesc Moulins Yzeure",
+      "rol": "Centrul de Cardiologie de Intervenție din Allier (CCIA) — unde s-a efectuat angioplastia",
+      "telefoane_ingrijiri_intensive": ["04.70.35.77.95", "04.70.35.76.73"],
+      "fax_secretariat": ["04.70.35.77.63", "04.70.35.76.79"]
+    },
+    "structura_clinica": "Centru (Polul) de Medicină — Structură internă de medicină pentru specialitatea Cardiologie și îngrijiri intensive de cardiologie",
+    "echipa_medicala_completa": {
+      "coordonator": "Dr. Xavier MARCAGGI (coordonator Centrul de Cardiologie de Intervenție din Allier; operator angioplastie 19.02)",
+      "sefii_sectiei": [
+        "Dr. Eddie PIERRE-JUSTIN (Șeful secției)",
+        "Dr. Georges AMAT (Șeful secției)"
+      ],
+      "medici_generalisti": [
+        "Dr. Jean Jacques CLOIX (Moulins)",
+        "Dr. Gabriel BITAR (Vichy — A.OP angioplastie 19.02)",
+        "Dr. Raphael RODRIGUEZ (Moulins)"
+      ],
+      "medic_atasat": "Dr. Pierre LAVAUD (Vichy — operator coronarografie 17.02)",
+      "interni_implicati": [
+        "Djamel ADJTOUTAH (raport spitalizare 17.02)",
+        "Xavier CHABIN (CS 19.02 + CDU 23.02)",
+        "Armel NANA (CS 21.02)"
+      ],
+      "asistente_si_manipulatori": [
+        "Me. LACOGNE Sylvie (asistentă coronarografie)",
+        "Me. PAQUET (manipulator A.OP coronarografie)",
+        "Me. THEVENON ESTELLE (asistentă angioplastie)",
+        "Me. REBOT Patricia (manipulator angioplastie)"
+      ]
+    },
+    "medic_familie_la_data_eveniment_2012": {
+      "nume": "Dr. ORBAN Ecaterina",
+      "telefon_la_data_eveniment": "0040 723 560 193 (per documentul francez)",
+      "resedinta": "Nadlac",
+      "observatie_continuitate": "[CERT] Aceeași persoană ca medicul familie actual în 2026 (Dr. Orbán Ecaterina-Maria, Cabinet Medical Individual Nădlac, cod parafă 718705) — continuitate de 14 ani"
+    }
+  },
+  "note_traducere": {
+    "traducator": "Blidar Ioana",
+    "autorizatie": "705/2002 Ministerul Justiției",
+    "limba_originala": "franceză",
+    "limba_traducere": "română",
+    "nota_traducator": "«Documentul nu este semnat și nici ștampilat de emitent» — repetat pe fiecare pagină",
+    "implicatie_lipsa_semnatura": "Documentul francez original poate fi un raport de spital intern fără semnătură olografă; traducerea autorizată e validă legal"
+  },
+  "implicatii_clinice_2026_pentru_oncologie": {
+    "tip_stent_BMS_implicatii": [
+      "[CERT] BMS (Bare Metal Stent) implantat 2012-02-19 → endotelizare completă în 4-6 săptămâni → la 14 ani vechime risc de tromboză in-stent foarte scăzut",
+      "[PROBABIL] DAPT (dual antiplatelet therapy) standard pentru BMS = 1 lună post-stent (vs 6-12 luni pentru DES) — pacientul a continuat doar Aspenter (monoterapie aspirina) post-2012",
+      "[PROBABIL — per ghiduri ESC 2017 + ACC/AHA] Pentru chirurgie majoră non-cardiacă la pacient post-BMS >12 luni, pauza Aspenter 5-7 zile pre-op este în general sigură (risc tromboză in-stent <1%)",
+      "[CERT] Aceasta e informație CRUCIALĂ pentru chirurgul oncolog care va evalua posibilitatea esofagectomiei — risc cardiovascular perioperator scade semnificativ vs. ipoteza unui DES"
+    ],
+    "ldl_actual_2025": {
+      "valoare": "133 mg/dL (buletin 17.06.2025)",
+      "tinta_ESC_post_stent": "<70 mg/dL",
+      "tinta_neatinsa": true,
+      "context": "Pacientul nu administrează curent statină (TORVACARD prescris 10.11.2025 dar nu luat — clarificat user 25.04.2026). De ridicat la consult oncolog 4.05 + medic familie."
+    },
+    "evolutie_simptomatica_post_2012": "Fără recidivă SCA documentată în acest dosar — pacientul a fost stabil cardiologic 14 ani sub Aspenter + Concor + Triplixam. Episodul UPU 30.05.2024 a arătat «hs-cTnI dinamic 4.24 → 4.59 ng/L trending UP» și ECG «Markedly Abnormal» — de monitorizat, dar nu re-internat pentru SCA"
+  },
+  "referinte_legate": {
+    "context_medical_md": "CONTEXT_MEDICAL.md §3 (Boală cardiacă ischemică cu stent — februarie 2012) + §5 (Stil de viață — fumat 1977-2012)",
+    "schema_medicatie_actuala": "Dosar_Medical/2025-11-10_schema_medicamente.json (Aspenter 75 mg 0-1-0 — antiagregare post-stent)",
+    "consult_cardiologie_recent": "Dosar_Medical/2025-11-10_scrisoare_medicala_cardiologie.json (Dr. LAZA CRISTINA, cod parafă C07842) + ECO transtoracic FE 55%",
+    "episod_UPU_2024": "Dosar_Medical/2024-05-30_upu_consult_gastro_cardio.json (consult cardiologic Dr. Post Mihaela)"
   }
 }

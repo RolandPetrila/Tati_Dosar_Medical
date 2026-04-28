@@ -6,6 +6,39 @@
 
 ---
 
+## 2026-04-28 10:50 — [Claude_Opus_4.7_1M] multi-event-pdf-vichy-bms-confirmat + programare-mate-endre-30-04 + cardiolog-08-30 (R10 + R14 + R17 + R20 + R23 + R26)
+
+**Scop:** integrare 3 evenimente noi într-o singură sesiune:
+
+1. PDF cardiologie Vichy 2012 procesat integral (10 pagini, traducere autorizată) — stent confirmat **BMS** (Bare Metal Stent), nu DES
+2. Programare nouă 30.04 ora 12:00 OncoHelp Timișoara cu Dr. Mate Endre (recomandare Vornicu telefonică)
+3. Confirmare oră cardiolog 30.04: 08:30 → secvență coerentă cardio Arad dimineața → consult Timișoara prânz
+
+**Fișiere create:**
+
+- `Dosar_Medical/documente_sursa/15_consult_initial_oncologie_2026/2026-04-28_opis_consult_initial_oncohelp.pdf` (mutat din rădăcină + redenumit R26)
+- `Dosar_Medical/documente_sursa/15_consult_initial_oncologie_2026/2026-04-28_opis_consult_initial_oncohelp.pdf.meta.json`
+- `Dosar_Medical/documente_sursa/02_cardiologie_2012/Document_Cardiologie_Vichy_2012.pdf.meta.json` (R14 retroactiv)
+
+**Fișiere modificate:**
+
+- `Dosar_Medical/2012-02-17_cardiologie_vichy_stent.json` v1 → v2 (extragere integrală 10 pagini)
+- `CONTEXT_MEDICAL.md` v1.7 → v1.8 (antet + §2.6 secvență 30.04 + §3 REWRITE Vichy + §9 echipă)
+- `TODO.md` (calendar 30.04 — 2 sloturi cardio 08:30 + Mate Endre 12:00 + închidere P1 Vichy)
+- `CHANGELOG.md` (intrare nouă 28.04 10:50)
+- `SESSION_LOG.md` (această intrare)
+- `INDEX.json` (regenerat)
+
+**Backup R10:** `Dosar_Medical/arhiva/context_medical_versiuni/{CONTEXT_MEDICAL_pre-vichy-stent-bms,cardiologie_vichy_stent_pre-update-pdf}_2026-04-28_1045.{md,json}`
+
+**Cercetare web:** Dr. Mate Endre — surse oncohelp.ro/echipa-oncohelp/, LinkedIn matendre, OHSS 2025 program. Status confirmat: Medic Rezident Oncologie Medicală OncoHelp Timișoara, training internațional (Marseille + Paris Saint-Louis AP-HP), focus imunoterapie. NEGASIT: publicații, recenzii pacienți, telefon direct, cod parafă.
+
+**Constatare clinică majoră:** stent BMS (NU DES) la 14 ani vechime → DAPT scurt + risc tromboză in-stent <1% la pauza Aspenter pre-op → schimbă substanțial calculul perioperator pentru chirurgia esofagiană (relevant pentru consult oncolog 4.05 + chirurg eso).
+
+**Status post-sesiune:** thread Anater încă în așteptare răspuns; toate documentele OPIS pre-30.04 confirmate disponibile; `[INCERT]` rămase: înălțime 168 vs 178 cm 2012 (de clarificat cu user); coordonare directă Anater-Mate Endre (probabil intern OncoHelp).
+
+---
+
 ## 2026-04-28 08:45 — [Claude_Opus_4.7_1M] integrare-rezultat-biopsie-17-04-INCONCLUZIV (R10 + R14 + R17 + R18 + R20 + R23 + R26)
 
 **Scop:** integrare rezultat histopatologic biopsie esofagiană 17.04 primit 28.04 de la Bioclinica SA Timișoara (buletin 26417A0362 / cod T26H06044, semnat Dr. Glăja Romanița 27.04). REZULTAT INCONCLUZIV: „țesut de granulație + ulcerație cronică, doar SUGESTIV pentru infiltrat carcinomatos".

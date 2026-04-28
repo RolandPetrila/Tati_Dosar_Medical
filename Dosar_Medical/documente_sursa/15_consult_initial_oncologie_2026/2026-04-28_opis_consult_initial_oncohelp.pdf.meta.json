@@ -1,0 +1,37 @@
+{
+  "source_document": "2026-04-28_opis_consult_initial_oncohelp.pdf",
+  "source_location": "documente_sursa/15_consult_initial_oncologie_2026/",
+  "received_date": "2026-04-28",
+  "received_from": "OncoHelp Timișoara — Centrul de Oncologie (transmis user/familie ca borderou documente pre-consult Dr. Mate Endre 30.04.2026 ora 12:00)",
+  "tip_document": "OPIS — Borderou de documente pentru primul consult oncologie",
+  "emitent": "OncoHelp Timișoara (probabil departamentul programări / recepție OncoMed)",
+  "digitized_by": "PDF furnizat direct de OncoHelp în formă digitală (probabil prin email sau descărcare portal)",
+  "digitized_date": "2026-04-28",
+  "transcriber": "Claude_Opus_4.7 (extragere strict-extractivă din PDF digital)",
+  "ocr_quality": "n/a (PDF digital nativ — text extractabil direct, fără OCR; 273.3 KB, 1 pagină)",
+  "confidence_overall": "high",
+  "completeness_verified": "2026-04-28",
+  "coverage": "100%",
+  "contine_8_puncte": [
+    "1. Bilet de trimitere către Oncologie",
+    "2. Buletin",
+    "3. Card de sănătate",
+    "4. Adeverință de salariat SAU cupon de pensie",
+    "5. COPIE după rezultatul examenului histopatologic (BIOPSIE)",
+    "6. COPIE după scrisoarea medicală / biletul de ieșire din spital unde s-a efectuat biopsia / operația",
+    "7. COPIE după ALTE DOCUMENTE MEDICALE care susțin diagnosticul altor boli cronice (diabet zaharat, boli renale, pulmonare, HTA, infarct miocardic, hipercolesterolemie, neurologice, digestive, psihiatrice sau alte boli cronice)",
+    "8. Schemă cu medicamentele pe care și le administrează și modul (momentul + doza)"
+  ],
+  "context_consult": {
+    "data": "2026-04-30 12:00",
+    "medic_programat": "Dr. Mate Endre (Medic Rezident Oncologie Medicală)",
+    "unitate": "OncoHelp Timișoara, Str. Ciprian Porumbescu 57-59, 300239",
+    "scop_consult": "Înregistrare pacient în baza de date OncoHelp + stabilire pași suplimentari pentru diagnostic exact (post-biopsie inconcluzivă)",
+    "recomandare_obtinuta_de_la": "Dr. Vornicu Vlad-Norin (telefon, 2026-04-28)",
+    "tata_prezent": "OPȚIONAL — Vornicu a recomandat că pot veni doar Roland + Maria cu documentația, NU obligatoriu cu pacientul"
+  },
+  "chain_notes": "OPIS oficial OncoHelp primit de Roland în context programare consult inițial 30.04.2026 cu Dr. Mate Endre. User a salvat PDF-ul la rădăcina Dosar_Medical/, mutat de Claude în folder dedicat 15_consult_initial_oncologie_2026/ conform R26 (consistență structură foldere documente sursă). Folder nou creat (al 15-lea în structură).",
+  "key_clinical_event": false,
+  "trigger_dashboard_regen": true,
+  "trigger_context_medical_update": true
+}

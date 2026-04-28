@@ -1,0 +1,56 @@
+{
+  "source_document": "Document_Cardiologie_Vichy_2012.pdf",
+  "source_location": "documente_sursa/02_cardiologie_2012/",
+  "received_date": "2026-04-28",
+  "received_from": "Roland Petrilă (familie pacient) — PDF în format digital, traducere autorizată",
+  "tip_document": "Raport spitalizare cardiologică + coronarografie + angioplastie + raport evoluție",
+  "lang_original": "franceză",
+  "lang_traducere": "română",
+  "traducator_autorizat": {
+    "nume": "Blidar Ioana",
+    "autorizatie_nr": "705/2002",
+    "emis_de": "Ministerul Justiției"
+  },
+  "data_eveniment_clinic": "2012-02-17 → 2012-02-23",
+  "spital_principal": "Centrul Spitalicesc Jacques Lacarin Vichy (Bulevardul Denière, 03207 Vichy Cedex, Franța)",
+  "spital_secundar_interventie": "Centrul Spitalicesc Moulins Yzeure — Centrul de Cardiologie de Intervenție din Allier",
+  "coordonator_echipa": "Dr. Xavier MARCAGGI",
+  "operator_principal_angioplastie": "Dr. Xavier MARCAGGI + Dr. Gabriel BITAR (A.OP)",
+  "operator_coronarografie_initiala": "Dr. Pierre LAVAUD",
+  "diagnostic_principal": "Sindrom coronarian acut ST + în antero-septo-apical (STEMI antero-septo-apical)",
+  "interventie_majora": "Angioplastie cu implantare stent BMS (Bare Metal Stent) RX VISION 3.5 x 28 mm (Abbott) Nr. 1110341 pe IVA proximală — 19.02.2012",
+  "procedura_nr": [
+    "11829 (coronarografie 17.02)",
+    "11836 (angioplastie 19.02)"
+  ],
+  "dosar_nr_spital": "112004096",
+  "digitized_by": "Furnizat direct ca PDF digital de către user/familie (probabil scanare a traducerii fizice + arhivare digitală)",
+  "digitized_date": "[NEGASIT — anterior 2026-04-28]",
+  "transcriber": "Claude_Opus_4.7 (extragere strict-extractivă din PDF traducere română)",
+  "extragere_md": "[NU s-a creat MD strict-extractive — JSON canonic conține toate datele structurat]",
+  "ocr_quality": "n/a (PDF digital nativ — text traducere autorizată extractabil direct)",
+  "confidence_overall": "high",
+  "completeness_verified": "2026-04-28",
+  "coverage": "100% (10 pagini procesate)",
+  "validator": "claude-opus-4-7",
+  "key_clinical_findings": {
+    "tip_stent_confirmat": "BMS — Bare Metal Stent (stent gol)",
+    "implicatie_clinica_2026": "Risc tromboză in-stent foarte scăzut la 14 ani vechime; pauza Aspenter pre-chirurgie esofagiană e mai sigură vs. ipoteza DES — relevant pentru consult oncolog 4.05 + chirurg eso",
+    "stenoze_initiale": {
+      "IVA_proximala": "70-90%",
+      "IVA_mijlocie": "90-99% (subocluzivă)"
+    },
+    "complicatii_procedurale": "niciuna",
+    "rezultat_final": "succes primar — flux TIMI 3 normal, fără leziuni reziduale semnificative"
+  },
+  "anomalii_traducere_observate": [
+    "Înălțime declarată în coronarografie: 178 cm vs. în angioplastie: 168 cm — discrepanță 10 cm; per IMC + diagnostic 'Obezitate', 168 cm e mai probabil corect [INCERT]",
+    "Durată angioplastie declarată 965 minute (= 16h) — probabilă eroare de transcriere; angioplastie standard durează 30-90 min",
+    "Nume pacient transcris 'PETRILA PETRILA VIOREL MIHAI' — probabilă eroare de duplicare (corect: PETRILA VIOREL MIHAI)",
+    "Telefon Dr. ORBAN: '0040 723 560 193?' — semnul întrebării sugerează incertitudine la transcriere"
+  ],
+  "chain_notes": "PDF Vichy 2012 - traducere română autorizată Blidar Ioana 705/2002 - obținut și procesat 2026-04-28. Confirmare critică BMS (NU DES) - schimbă substanțial planificarea pre-esofagectomie. Echipa medicală franceză identificată complet pentru context istoric. Continuitatea Dr. Orbán medic familie din 2012 până 2026 confirmată.",
+  "key_clinical_event": true,
+  "trigger_dashboard_regen": false,
+  "trigger_context_medical_update": true
+}

@@ -4,6 +4,58 @@
 
 ---
 
+## 2026-04-28 10:50 — MULTI-EVENT — PDF Vichy 2012 BMS confirmat + programare 30.04 Mate Endre + cardiolog 08:30
+
+**Tip:** integrare 3 documente noi + 1 programare nouă + clarificare flow OncoHelp
+
+### Evenimente
+
+**1. PDF cardiologie Vichy 2012 procesat integral (10 pagini)**
+
+- Sursă: `documente_sursa/02_cardiologie_2012/Document_Cardiologie_Vichy_2012.pdf` (12 MB, traducere autorizată Blidar Ioana, autorizație 705/2002 Ministerul Justiției)
+- **CONFIRMARE CRITICĂ:** stent = **BMS (Bare Metal Stent)** RX VISION 3.5 × 28 mm Abbott Nr. 1110341 — confirmat dublu în doc („stent gol" + „implantare a unui stent gol")
+- **Implicație clinică majoră `[PROBABIL — per ESC 2017 + ACC/AHA]`:** la 14 ani vechime, BMS endotelizat → risc tromboză in-stent <1% la pauza Aspenter 5-7 zile pre-op → schimbă substanțial calculul perioperator pentru chirurgia esofagiană
+- Echipa medicală franceză identificată complet: Dr. Xavier MARCAGGI (coordonator + operator angioplastie), Dr. Pierre LAVAUD (operator coronarografie), Dr. Gabriel BITAR (A.OP), Dr. Pierre-Justin + Dr. AMAT (șefii secției), interni Adjtoutah/Chabin/Nana, asistente Lacogne/Thévenon, manipulatori Paquet/Rebot
+- Spital principal: Centrul Spitalicesc Jacques Lacarin Vichy + intervenție: Centrul Spitalicesc Moulins-Yzeure (Centrul de Cardiologie de Intervenție din Allier)
+- Continuitate `[CERT]`: Dr. Orbán Ecaterina (medic familie Nădlac, telefon 0040 723 560 193 per doc francez 2012) = aceeași persoană cu medicul familie actual 2026 (continuitate 14 ani)
+- Anomalie semnalată `[INCERT]`: înălțime 178 cm (coronarografie) vs 168 cm (angioplastie) — discrepanță 10 cm; per IMC + diagnostic „Obezitate" 168 cm e mai probabil corect; de clarificat cu user
+
+**2. Programare nouă 30.04.2026 ora 12:00 OncoHelp Timișoara cu Dr. Mate Endre**
+
+- Obținută telefonic 28.04 prin Dr. Vornicu Vlad-Norin
+- Scop: înregistrare pacient în baza de date OncoHelp + stabilire pași suplimentari diagnostic post-biopsie inconcluzivă
+- Tata OPȚIONAL — pot veni doar Roland + Maria cu documentația
+- Document `OPIS consult inițial Oncologie.pdf` mutat de la rădăcina `Dosar_Medical/` în folder dedicat `documente_sursa/15_consult_initial_oncologie_2026/` (folder NOU per R26 — al 15-lea)
+- Cercetare Dr. Mate Endre realizată: Medic Rezident Oncologie Medicală OncoHelp (per oncohelp.ro), training UMF Victor Babeș Timișoara + Aix-Marseille Université + Hôpital Saint-Louis AP-HP Paris (former intern), focus declarat imunoterapie (LinkedIn matendre)
+
+**3. Confirmare oră cardiolog 30.04: 08:30**
+
+- Permite secvența coerentă: Arad 08:30 → plecare ~10:00 → Timișoara 12:00 (cu rezerva pentru deplasare ~50 km)
+
+**4. Flow OncoHelp clarificat per documente oficiale**
+
+- Per oncohelp.ro/servicii-medicale-oncomed/primul-consult/: la programare se alocă medicul curant inițial (Dr. Mate Endre); cazurile complexe se discută în comisie tumor board care decide protocolul + medicul curant principal pe termen lung
+- Cele două programări (30.04 Mate Endre + 4.05 Anater) sunt **complementare**, NU duplicate
+
+### Documente create / modificate
+
+- **NOU** `Dosar_Medical/documente_sursa/15_consult_initial_oncologie_2026/2026-04-28_opis_consult_initial_oncohelp.pdf` (mutat din rădăcina Dosar_Medical/, redenumit conform R26)
+- **NOU** `Dosar_Medical/documente_sursa/15_consult_initial_oncologie_2026/2026-04-28_opis_consult_initial_oncohelp.pdf.meta.json` (R14 chain of custody)
+- **NOU** `Dosar_Medical/documente_sursa/02_cardiologie_2012/Document_Cardiologie_Vichy_2012.pdf.meta.json` (R14 — pentru PDF deja existent)
+- **MOD** `Dosar_Medical/2012-02-17_cardiologie_vichy_stent.json` v1 → v2 (extragere completă din PDF, BMS confirmat, echipă identificată, cronologie clinică, hemodinamică, materiale procedură)
+- **MOD** `CONTEXT_MEDICAL.md` v1.7 → v1.8 (antet + §2.6 secvență 30.04 + §3 REWRITE complet cu detalii Vichy + §9 echipă medicală — adăugare Mate Endre + completare Vichy)
+- **MOD** `TODO.md` (calendar 30.04 cu 2 sloturi + închidere [P1] PDF Vichy obținut)
+- **MOD** `CHANGELOG.md` (această intrare)
+- **MOD** `SESSION_LOG.md` (intrare nouă)
+- **REGEN** `INDEX.json` (script `generate_index.py`)
+
+### Backup R10
+
+- `Dosar_Medical/arhiva/context_medical_versiuni/CONTEXT_MEDICAL_pre-vichy-stent-bms_2026-04-28_1045.md`
+- `Dosar_Medical/arhiva/context_medical_versiuni/cardiologie_vichy_stent_pre-update-pdf_2026-04-28_1045.json`
+
+---
+
 ## 2026-04-28 08:45 — KEY EVENT — Rezultat biopsie esofagiană 17.04 PRIMIT (INCONCLUZIV)
 
 **Tip:** integrare document medical critic + propagare CONTEXT_MEDICAL + recalibrare TODO
