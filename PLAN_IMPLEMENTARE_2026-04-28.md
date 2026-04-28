@@ -423,7 +423,7 @@ _(gol la creare)_
 | Fază                 | Status     | Început | Sfârșit | Commit hash | Validat auditor                                                   |
 | -------------------- | ---------- | ------- | ------- | ----------- | ----------------------------------------------------------------- |
 | Faza 1               | 🟢 DONE    | 12:00   | 12:30   | 4c9bdd8     | 🟡 PASS_WITH_NOTES (12:25 — 4 INFO neblocante, vezi AUDIT-FAZA-1) |
-| Faza 2               | 🔴 PENDING | —       | —       | —           | —                                                                 |
+| Faza 2               | 🟢 DONE    | 12:45   | 12:55   | df817d0     | 🟢 PASS (12:58 — BONUS BUG biopsie reparat de schema T1)          |
 | Faza 3               | 🔴 PENDING | —       | —       | —           | —                                                                 |
 | Audit final `/audit` | 🔴 PENDING | —       | —       | —           | —                                                                 |
 | Memory checkpoint    | 🔴 PENDING | —       | —       | —           | —                                                                 |

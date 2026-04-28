@@ -263,73 +263,6 @@
         background: #e2e8f0;
         color: var(--text-muted);
       }
-      .medic-link {
-        display: inline-block;
-        padding: 4px 10px;
-        margin: 2px 4px 2px 0;
-        border-radius: 6px;
-        background: var(--primary-light);
-        color: var(--primary);
-        text-decoration: none;
-        font-size: 13px;
-        transition: background 0.15s;
-      }
-      .medic-link:hover,
-      .medic-link:focus {
-        background: var(--primary);
-        color: white;
-        outline: 2px solid var(--primary-light);
-        outline-offset: 2px;
-      }
-      .antecedente-table {
-        width: 100%;
-        border-collapse: collapse;
-        font-size: 14px;
-      }
-      .antecedente-table th,
-      .antecedente-table td {
-        text-align: left;
-        padding: 10px 12px;
-        border-bottom: 1px solid #e2e8f0;
-        vertical-align: top;
-      }
-      .antecedente-table th {
-        background: var(--primary-light);
-        color: var(--primary);
-        font-weight: 700;
-      }
-      .antecedente-table tr.severity-active {
-        background: #fff7e6;
-      }
-      .antecedente-table tr.severity-resolved {
-        opacity: 0.85;
-      }
-      .antecedente-table .ante-link {
-        color: var(--primary);
-        text-decoration: none;
-        font-family: ui-monospace, monospace;
-        font-size: 12px;
-      }
-      .antecedente-table .ante-link:hover {
-        text-decoration: underline;
-      }
-      @media print {
-        .antecedente-table th {
-          background: #eee !important;
-          -webkit-print-color-adjust: exact;
-        }
-        .antecedente-table tr.severity-active {
-          background: #fff !important;
-          border: 1px solid #999;
-        }
-        .tabs,
-        .tab-btn {
-          display: none !important;
-        }
-        #panel-antecedente {
-          display: block !important;
-        }
-      }
       .pill-status {
         display: inline-flex;
         align-items: center;
@@ -2112,20 +2045,6 @@
         </div>
       </section>
       <!-- /panel-medical -->
-
-      <section class="tab-panel" id="panel-antecedente" role="tabpanel">
-        <div class="card wide">
-          <h2>📋 Antecedente medicale (sumar pentru consult oncolog 4.05)</h2>
-          <p class="meta">
-            Sumar agregat al evenimentelor clinice majore — date din JSON-uri
-            canonice
-            <code>Dosar_Medical/*.json</code>. Pentru briefing imprimat 4.05 →
-            <code>scripts/generate_consult_briefing.py</code>.
-          </p>
-          <div id="antecedente-container"></div>
-        </div>
-      </section>
-      <!-- /panel-antecedente -->
 
       <section class="tab-panel" id="panel-echipa" role="tabpanel">
         <div class="card wide">
@@ -4015,82 +3934,6 @@
         });
       })();
 
-      // === N3 ANTECEDENTE — sumar agregat 5+1 evenimente clinice majore ===
-      (function () {
-        var container = document.getElementById("antecedente-container");
-        if (!container) return;
-        var ANTECEDENTE_DATA = [
-          {
-            data: "2012-02-19",
-            categorie: "Cardiologie intervențională",
-            descriere: "STEMI antero-septo-apical → angioplastie cu stent BMS (Bare Metal Stent) RX VISION 3.5×28 mm Abbott Nr. 1110341 pe IVA proximală (Vichy, Franța, Dr. Marcaggi)",
-            severity: "resolved",
-            implicatii_2026: "Risc tromboză in-stent <1% la 14 ani vechime (BMS endotelizat); pauza Aspenter 5-7 zile pre-chirurgie esofagiană sigură",
-            json_canonic: "Dosar_Medical/2012-02-17_cardiologie_vichy_stent.json"
-          },
-          {
-            data: "2024-05-30",
-            categorie: "Episod UPU",
-            descriere: "Criza HTA 200/100 + hiperglicemie 177 mg% + hs-cTnI dinamic 4.24→4.59 ng/L + ECG „Markedly Abnormal" (UPU Arad, Dr. Pop Florica + Dr. Post + Dr. Grada)",
-            severity: "resolved",
-            implicatii_2026: "Documentează pacient cardiovascular instabil la distanță → evaluare risc anestezic preoperator pentru esofagectomie",
-            json_canonic: "Dosar_Medical/2024-05-30_upu_consult_gastro_cardio.json"
-          },
-          {
-            data: "2024-06-04 / 2024-09-06",
-            categorie: "Infecție H. pylori",
-            descriere: "Serologie IgG H. pylori pozitivă (2 buletine consecutive Ultra ClinicaVest)",
-            severity: "active",
-            implicatii_2026: "Posibilă cauză inflamație cronică gastrică precanceroasă; eradicare H. pylori standard pre-chirurgie",
-            json_canonic: "Dosar_Medical/2024-06-04_serologie_helicobacter.json"
-          },
-          {
-            data: "2025-11-10",
-            categorie: "Schemă tratament",
-            descriere: "Aspenter 75 0-1-0 + Concor 2.5 1-0-0 + Triplixam 5/1.25/5 1-0-0 + Jamesi (sitagliptin) 100 1-0-0 + interdicție TORVACARD 10/20 (prescris dar NU administrat per user 25.04)",
-            severity: "active",
-            implicatii_2026: "LDL 133 mg/dL > țintă ESC <70; statină de reluat la consult 4.05 + medic familie",
-            json_canonic: "Dosar_Medical/2025-11-10_schema_medicamente.json"
-          },
-          {
-            data: "2025-11",
-            categorie: "Chirurgie generală",
-            descriere: "Intervenție hernie 11/2025 (Dr. Papiu) — bilet ieșire spital + scrisoare anexa43",
-            severity: "resolved",
-            implicatii_2026: "Cicatricea abdominală + tolerantă chirurgicală anterioră bună",
-            json_canonic: "Dosar_Medical/2025-11_hernie_papiu.json"
-          },
-          {
-            data: "2026-04-17 / 2026-04-20 / 2026-04-27",
-            categorie: "Suspiciune neoplazică actuală",
-            descriere: "Endoscopie Genesis (Dr. Noufal) → CT TAP T3-T4, N0-N1, M0 probabil, Siewert II + ascită; biopsie INCONCLUZIV (Bioclinica) — recomandare IHC pe blocul T26H06044 sau rebiopsie",
-            severity: "active",
-            implicatii_2026: "🔴 IN INVESTIGAȚIE — consult oncolog 4.05 OncoHelp Dr. Anater + comisie multidisciplinară",
-            json_canonic: "Dosar_Medical/2026-04-17_biopsie_esofagiana_histopatologic.json"
-          }
-        ];
-
-        function renderAntecedente() {
-          var rows = ANTECEDENTE_DATA.map(function (a) {
-            return (
-              '<tr class="severity-' + a.severity + '">' +
-              '<td><strong>' + a.data + '</strong></td>' +
-              '<td>' + a.categorie + '</td>' +
-              '<td>' + a.descriere + '</td>' +
-              '<td><em>' + a.implicatii_2026 + '</em></td>' +
-              '<td><a class="ante-link" href="' + a.json_canonic + '" target="_blank" rel="noopener">📄 JSON</a></td>' +
-              '</tr>'
-            );
-          }).join("");
-          container.innerHTML =
-            '<table class="antecedente-table" role="table" aria-label="Antecedente medicale agregat">' +
-            '<thead><tr><th>Dată</th><th>Categorie</th><th>Descriere</th><th>Implicații 2026</th><th>Sursă</th></tr></thead>' +
-            '<tbody>' + rows + '</tbody></table>';
-        }
-
-        renderAntecedente();
-      })();
-
       // === ECHIPA MEDICALA — load INDEX.json + render cards + search ===
       (function loadEchipa() {
         var container = document.getElementById("echipa-cards");
@@ -4166,43 +4009,31 @@
               ? "<p><strong>Telefon:</strong> " +
                 phones
                   .map(function (p) {
-                    var tel = p.replace(/[\s.-]/g, "");
-                    if (!tel.startsWith("+")) {
-                      tel = tel.startsWith("0") ? "+4" + tel : "+4" + tel;
-                    }
+                    var tel = p.replace(/\s+/g, "");
                     return (
                       '<a href="tel:' +
                       escapeHtml(tel) +
-                      '" class="medic-link" aria-label="Sună ' +
-                      escapeHtml(m.nume || "medic") +
-                      '">📞 ' +
+                      '">' +
                       escapeHtml(p) +
                       "</a>"
                     );
                   })
-                  .join(" ") +
+                  .join(", ") +
                 "</p>"
               : "") +
             (emails.length
               ? "<p><strong>Email:</strong> " +
                 emails
                   .map(function (e) {
-                    var subject = encodeURIComponent(
-                      "Solicitare info medicală — Petrilă Viorel-Mihai",
-                    );
                     return (
                       '<a href="mailto:' +
                       escapeHtml(e) +
-                      "?subject=" +
-                      subject +
-                      '" class="medic-link" aria-label="Email ' +
-                      escapeHtml(m.nume || "medic") +
-                      '">✉️ ' +
+                      '">' +
                       escapeHtml(e) +
                       "</a>"
                     );
                   })
-                  .join(" ") +
+                  .join(" · ") +
                 "</p>"
               : "") +
             (m.rol
@@ -4242,72 +4073,14 @@
           container.innerHTML = filtered.map(renderCard).join("");
         }
 
-        // E4 — Badge sursă date (file:// 🟡 cache vs http:// 🟢 live, R28 transparență)
-        function formatRelative(date) {
-          if (!date) return "necunoscut";
-          var diffMin = Math.round((new Date() - date) / 60000);
-          if (diffMin < 60) return "acum " + diffMin + " min";
-          var diffH = Math.round(diffMin / 60);
-          if (diffH < 24) return "acum " + diffH + " h";
-          return "acum " + Math.round(diffH / 24) + " zile";
-        }
-
-        function createDataSourceBadge() {
-          var badge = document.createElement("span");
-          badge.id = "data-source-badge";
-          badge.style.cssText =
-            "display:inline-block;padding:4px 10px;border-radius:6px;color:white;font-size:12px;font-weight:600;margin-left:12px;";
-          var target =
-            document.querySelector("header.top .meta") ||
-            document.querySelector("header .meta") ||
-            document.querySelector("header") ||
-            document.body;
-          target.appendChild(badge);
-          return badge;
-        }
-
-        function showDataSourceBadge(source, timestamp) {
-          var badge =
-            document.getElementById("data-source-badge") ||
-            createDataSourceBadge();
-          var generated = timestamp ? new Date(timestamp) : null;
-          var ageHours = generated
-            ? (new Date() - generated) / 3600000
-            : Infinity;
-          var label, color;
-          if (source === "live-fetch") {
-            label = "🟢 Live · " + formatRelative(generated);
-            color = "#1a7f37";
-          } else if (source === "embedded-cache" && ageHours < 6) {
-            label = "🟡 Cache local · " + formatRelative(generated);
-            color = "#bf8700";
-          } else if (source === "embedded-fallback") {
-            label = "🟠 Fallback offline · " + formatRelative(generated);
-            color = "#bf8700";
-          } else {
-            label =
-              "🔴 STALE · " +
-              formatRelative(generated) +
-              " — re-deschide pe http://";
-            color = "#cf222e";
-          }
-          badge.style.background = color;
-          badge.textContent = label;
-          badge.title =
-            "Sursa: " + source + "\nGenerat: " + (generated || "necunoscut");
-        }
-
         // Hibrid loader — pe file:// citește din <script id="dashboard-index">,
         // pe HTTP(S) folosește fetch; fallback final la embed dacă fetch eșuează.
-        // E4 (2026-04-28): apelează showDataSourceBadge() la fiecare branch pentru transparență.
         function getIndexData() {
           if (location.protocol === "file:") {
             var embedded = document.getElementById("dashboard-index");
             if (embedded && embedded.textContent.trim()) {
               try {
-                var data = JSON.parse(embedded.textContent);
-                showDataSourceBadge("embedded-cache", data.generated_at);
-                return Promise.resolve(data);
+                return Promise.resolve(JSON.parse(embedded.textContent));
               } catch (e) {
                 console.warn("Embedded INDEX.json invalid JSON:", e);
               }
@@ -4318,17 +4091,11 @@
               if (!res.ok) throw new Error("HTTP " + res.status);
               return res.json();
             })
-            .then(function (data) {
-              showDataSourceBadge("live-fetch", data.generated_at);
-              return data;
-            })
             .catch(function (err) {
               var embedded = document.getElementById("dashboard-index");
               if (embedded && embedded.textContent.trim()) {
                 try {
-                  var data = JSON.parse(embedded.textContent);
-                  showDataSourceBadge("embedded-fallback", data.generated_at);
-                  return data;
+                  return JSON.parse(embedded.textContent);
                 } catch (e) {
                   /* propagă err original */
                 }

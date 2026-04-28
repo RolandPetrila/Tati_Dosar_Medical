@@ -1,14 +1,13 @@
 ---
 title: Catalog contacte medicale OncoHelp Timișoara
 scope: doar medici OncoHelp activi (NU istoric extern; pentru istoric vezi CONTEXT_MEDICAL.md §9)
-last_updated: 2026-04-28 13:00
-medici_listati: 3
-version: 1.3
+last_updated: 2026-04-26 22:24
+medici_listati: 2
+version: 1.2
 changelog:
   v1.0_2026-04-25_19:00: creare inițială cu Anater + Vornicu, status Anater per site oncohelp.ro = „Rezident"
   v1.1_2026-04-25_19:30: corectare status Anater post-ingest Gmail — semnătura email zice „Medic Specialist" (R12 conflict surse)
   v1.2_2026-04-26_22:24: reflectare reprogramare consult Anater 30.04 → 4.05.2026 per mail Anater 26.04 (motiv: aglomerație zi liberă 1 mai + caz nou care necesită constituire dosar comisie oncologică)
-  v1.3_2026-04-28_13:00: adăugare Dr. Mate Endre (Medic Rezident OncoHelp) — recomandare Vornicu telefonic 28.04, programare consult inițial 30.04.2026 12:00 (înregistrare pacient + pași suplimentari diagnostic; distinct de consultul Anater + comisie 4.05). Faza 3 plan implementare cross-terminal.
 related_research: cercetari/2026-04-25_cercetare-oncohelp-vornicu-anater.md
 related_correspondence: corespondenta/INDEX.md
 ---
@@ -30,7 +29,6 @@ related_correspondence: corespondenta/INDEX.md
 | ID                           | Nume                          | Specializare                                                  | Status                           | Telefon directe          | Email primar              |
 | ---------------------------- | ----------------------------- | ------------------------------------------------------------- | -------------------------------- | ------------------------ | ------------------------- |
 | `dr-anater-angelo-christian` | Dr. Anater Angelo - Christian | Medic Specialist Oncologie Medicală ⚠ (vezi notă R12 mai jos) | 🟢 activ — REPROGRAMAT 4.05.2026 | (prin centrală OncoHelp) | angelo.anater@oncohelp.ro |
-| `dr-mate-endre`              | Dr. Mate Endre                | Medic Rezident Oncologie Medicală                             | 🟢 PROGRAMAT 30.04.2026 12:00    | (prin centrală OncoHelp) | (necunoscut public)       |
 | `dr-vornicu-vlad`            | Dr. Vornicu Vlad-Norin        | Medic Specialist Oncolog (oncologie medicală)                 | 🟡 contact furnizat user         | 0762 120 428             | vornicuvlad91@gmail.com   |
 
 ---
@@ -139,50 +137,6 @@ sursa_status_profesional_site: 'oncohelp.ro/echipa-oncohelp/ accesat 2026-04-25 
 - https://oncohelp.ro/wp-content/uploads/2023/06/OSS-ed-VI-2023-Agenda-conferinta-1.pdf (program 2023)
 - ResearchGate / Google Scholar / PubMed [NEGASIT 25.04.2026]
 - LinkedIn / DocPlanner / Pareri-medici [NEGASIT public 25.04.2026]
-
----
-
-## Dr. Mate Endre {#dr-mate-endre}
-
-```yaml
-id: dr-mate-endre
-nume: Mate Endre
-titlu: Dr.
-titlu_profesional: Medic Rezident Oncologie Medicală
-specializare: [oncologie medicala]
-unitate: OncoHelp Timișoara
-unitate_id: oncohelp-timisoara
-departament: Secția de Oncologie
-emails:
-  primar: "[NEGASIT public 28.04.2026 — folosește centrala office@oncohelp.ro pentru contact]"
-telefoane: []
-status: 🟢 activ — PROGRAMAT consult inițial 30.04.2026 12:00
-prim_contact: 2026-04-28 (recomandare telefonică Dr. Vornicu)
-ultim_contact: 2026-04-28
-rol: medic rezident oncolog desemnat pentru consultul inițial OncoHelp 30.04 — înregistrare pacient + stabilire pași suplimentari pentru diagnostic exact (post-biopsie inconcluzivă)
-tags: [oncolog, oncohelp, medic-rezident, programat-30-04, consult-initial]
-version: 1.0
-sursa_recomandare: "telefon Dr. Vornicu Vlad 2026-04-28 — a recomandat slot 30.04 12:00 cu Dr. Mate Endre"
-```
-
-### Profil profesional [cercetare 2026-04-28]
-
-- **Status profesional:** Medic Rezident Oncologie Medicală OncoHelp Timișoara
-- **Training:** UMFT Timișoara (background România) + stagii Marseille (Franța) + Paris Saint-Louis AP-HP (Asistance Publique-Hôpitaux de Paris) — formare europeană în oncologie medicală
-- **Focus declarat:** imunoterapie oncologică (per discuție telefonică Vornicu)
-- **Rol în cazul tata:** consultul inițial pentru înregistrare pacient în baza OncoHelp + stabilire pași suplimentari diagnostic înainte de consult oncolog principal cu Dr. Anater + comisie multidisciplinară (4.05.2026)
-- **Implicit din rol:** acces la întreaga echipă OncoHelp prin Dr. Mate Endre (NU înlocuiește consultul cu Dr. Anater + comisie)
-
-### Surse cercetare
-
-- Recomandare telefonică Dr. Vornicu 2026-04-28 (sursă orală — fără înregistrare scrisă)
-- Site oficial oncohelp.ro/echipa-oncohelp/ — căutat 28.04.2026 [PROFIL public NEGASIT — probabil neadăugat încă la pagina echipă]
-- ResearchGate / Google Scholar / PubMed / LinkedIn — [NEGASIT public 28.04.2026]
-
-### Observație R17
-
-- Toate informațiile profil profesional Mate Endre sunt **[PROBABIL]** până la verificare directă la consultul 30.04 (sursă unică = recomandare orală Vornicu).
-- Email primar **[NEGASIT public]** — pentru contact pre-consult, folosește centrală OncoHelp `office@oncohelp.ro` cu mențiune „pentru Dr. Mate Endre, consult 30.04.2026 12:00".
 
 ### Istoric corespondență
 

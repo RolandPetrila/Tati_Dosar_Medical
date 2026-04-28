@@ -1,0 +1,19 @@
+{
+  "tip_document": "briefing_consult_DOCX",
+  "consult_type": "oncolog",
+  "data_consult": "2026-05-04",
+  "medic": "Dr. Anater Angelo-Christian",
+  "unitate": "OncoHelp Timișoara",
+  "generated_at": "2026-04-28T12:52:47",
+  "generator": "scripts/generate_consult_briefing.py",
+  "source_data": "CONTEXT_MEDICAL.md + JSON-uri canonice Dosar_Medical/",
+  "structura": [
+    "1. Date pacient",
+    "2. Status oncologic actual",
+    "3. Medicație curentă",
+    "4. Antecedent cardiologic STEMI 2012 BMS",
+    "5. Checklist documente OPIS",
+    "6. Întrebări consult",
+    "7. Notes consult (spațiu liber)"
+  ]
+}

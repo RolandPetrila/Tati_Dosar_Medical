@@ -1,9 +1,9 @@
 {
-  "generated_at": "2026-04-28T12:40:20",
+  "generated_at": "2026-04-28T12:55:27",
   "version": "1.0",
   "stats": {
-    "total_files_indexed": 154,
-    "medici_oncohelp": 2,
+    "total_files_indexed": 156,
+    "medici_oncohelp": 3,
     "threaduri_gmail": 6,
     "documente_canonice": 21,
     "atasamente_listate": 0
@@ -41,6 +41,36 @@
       "sursa_status_profesional_email": "semnătură email Dr. Anater 24.04.2026 — „Medic Specialist, Oncologie Medicala, Oncohelp Timisoara\"",
       "sursa_status_profesional_site": "oncohelp.ro/echipa-oncohelp/ accesat 2026-04-25 — „Medic Rezident\" (probabil neactualizat după promovare)",
       "file": "Dosar_Medical/CONTACTE_MEDICALE.md#dr-anater-angelo-christian"
+    },
+    {
+      "id": "dr-mate-endre",
+      "nume": "Mate Endre",
+      "titlu": "Dr.",
+      "titlu_profesional": "Medic Rezident Oncologie Medicală",
+      "specializare": [
+        "oncologie medicala"
+      ],
+      "unitate": "OncoHelp Timișoara",
+      "unitate_id": "oncohelp-timisoara",
+      "departament": "Secția de Oncologie",
+      "emails": {
+        "primar": "[NEGASIT public 28.04.2026 — folosește centrala office@oncohelp.ro pentru contact]"
+      },
+      "telefoane": [],
+      "status": "🟢 activ — PROGRAMAT consult inițial 30.04.2026 12:00",
+      "prim_contact": "2026-04-28 (recomandare telefonică Dr. Vornicu)",
+      "ultim_contact": "2026-04-28",
+      "rol": "medic rezident oncolog desemnat pentru consultul inițial OncoHelp 30.04 — înregistrare pacient + stabilire pași suplimentari pentru diagnostic exact (post-biopsie inconcluzivă)",
+      "tags": [
+        "oncolog",
+        "oncohelp",
+        "medic-rezident",
+        "programat-30-04",
+        "consult-initial"
+      ],
+      "version": 1.0,
+      "sursa_recomandare": "telefon Dr. Vornicu Vlad 2026-04-28 — a recomandat slot 30.04 12:00 cu Dr. Mate Endre",
+      "file": "Dosar_Medical/CONTACTE_MEDICALE.md#dr-mate-endre"
     },
     {
       "id": "dr-vornicu-vlad",
@@ -365,6 +395,7 @@
       "REGULI_CLAUDE_CODE.md",
       "PLAN_IMPLEMENTARE_2026-04-25.md",
       "PLAN_IMPLEMENTARE_2026-04-28.md",
+      "EXECUTOR_AUDIT_LOG_2026-04-28.md",
       "Dosar_Medical/CONTACTE_MEDICALE.md",
       "Documente_Informative/GHID_TELEFOANE_27-04.md",
       "Documente_Informative/GHID_CARDIOLOG_30-04.md",
@@ -375,8 +406,27 @@
       "_projects_sync/STATUS_SNAPSHOT.md",
       "Dosar_Medical/cercetari/2026-04-25_cercetare-oncohelp-vornicu-anater.md",
       "Dosar_Medical/corespondenta/2026-04-22_solicitare-dr-cip-recomandare-lusca.md",
-      "Dosar_Medical/corespondenta/2026-04-23_solicitare-sprijin-oncohelp.md",
-      "Dosar_Medical/corespondenta/2026-04-23_broadcast-solicitari-clinici.md"
+      "Dosar_Medical/corespondenta/2026-04-23_solicitare-sprijin-oncohelp.md"
+    ],
+    "Mate": [
+      "SESSION_LOG.md",
+      "TODO.md",
+      "CONTEXT_MEDICAL.md",
+      "CHANGELOG.md",
+      "PLAN_IMPLEMENTARE_2026-04-28.md",
+      "EXECUTOR_AUDIT_LOG_2026-04-28.md",
+      "Dosar_Medical/CLAUDE.md",
+      "Dosar_Medical/CONTACTE_MEDICALE.md",
+      "Documentatie_Initiala/ROADMAP_POST_2026-04-28.md",
+      "Documente_Informative/CLAUDE.md",
+      "_projects_sync/CONTEXT_MEDICAL.md",
+      "_projects_sync/TODO.md",
+      "_projects_sync/STATUS_SNAPSHOT.md",
+      "Dosar_Medical/documente_sursa/02_cardiologie_2012/2012-02-17_cardiologie_vichy_stent_extragere.md",
+      "Dosar_Medical/documente_sursa/15_consult_initial_oncologie_2026/2026-04-28_opis_consult_initial_oncohelp_extragere.md",
+      "Dosar_Medical/rapoarte_generate/2026-04-19_ghid_cancer_esofagian_complet.meta.json",
+      "Dosar_Medical/rapoarte_generate/2026-04-22_explicatie_consult_oncolog_scenarii.meta.json",
+      "Dosar_Medical/documente_sursa/15_consult_initial_oncologie_2026/2026-04-28_opis_consult_initial_oncohelp.pdf.meta.json"
     ],
     "Vornicu": [
       "SESSION_LOG.md",
@@ -504,12 +554,12 @@
     "PLAN_IMPLEMENTARE_2026-04-28.md": {
       "type": "md",
       "size_kb": 28.0,
-      "last_modified": "2026-04-28T12:24:36"
+      "last_modified": "2026-04-28T12:45:20"
     },
     "EXECUTOR_AUDIT_LOG_2026-04-28.md": {
       "type": "md",
-      "size_kb": 21.4,
-      "last_modified": "2026-04-28T12:28:34"
+      "size_kb": 33.4,
+      "last_modified": "2026-04-28T12:45:28"
     },
     "Dosar_Medical/PLAN_audit_remediere_v2_2026-04-18.md": {
       "type": "md",
@@ -533,8 +583,8 @@
     },
     "Dosar_Medical/CONTACTE_MEDICALE.md": {
       "type": "md",
-      "size_kb": 17.3,
-      "last_modified": "2026-04-26T22:25:50"
+      "size_kb": 20.2,
+      "last_modified": "2026-04-28T12:53:51"
     },
     "Dosar_Medical/AUDIT_DOCUMENTE_SURSA.md": {
       "type": "md",
@@ -631,6 +681,11 @@
       "size_kb": 9.8,
       "last_modified": "2026-04-23T03:31:25"
     },
+    "Documentatie_Initiala/ROADMAP_POST_2026-04-28.md": {
+      "type": "md",
+      "size_kb": 10.6,
+      "last_modified": "2026-04-28T12:54:58"
+    },
     "Documente_Informative/GHID_CONSULT_ONCOLOG.md": {
       "type": "md",
       "size_kb": 22.6,
@@ -668,13 +723,13 @@
     },
     "_projects_sync/CONTEXT_MEDICAL.md": {
       "type": "md",
-      "size_kb": 74.9,
-      "last_modified": "2026-04-28T11:58:45"
+      "size_kb": 75.0,
+      "last_modified": "2026-04-28T12:28:51"
     },
     "_projects_sync/TODO.md": {
       "type": "md",
-      "size_kb": 44.7,
-      "last_modified": "2026-04-28T12:00:55"
+      "size_kb": 45.5,
+      "last_modified": "2026-04-28T12:39:48"
     },
     "_projects_sync/REGULAMENT.md": {
       "type": "md",
@@ -693,8 +748,8 @@
     },
     "_projects_sync/STATUS_SNAPSHOT.md": {
       "type": "md",
-      "size_kb": 26.0,
-      "last_modified": "2026-04-28T12:06:34"
+      "size_kb": 26.2,
+      "last_modified": "2026-04-28T12:42:21"
     },
     "Dosar_Medical/cercetari/SINTEZA_CLINICI_ONCOLOGIE.md": {
       "type": "md",
@@ -833,8 +888,8 @@
     },
     "INDEX.json": {
       "type": "json",
-      "size_kb": 39.6,
-      "last_modified": "2026-04-28T12:03:38"
+      "size_kb": 40.0,
+      "last_modified": "2026-04-28T12:40:20"
     },
     "Dosar_Medical/2012-02-17_cardiologie_vichy_stent.json": {
       "type": "json",
@@ -1034,7 +1089,7 @@
     "Dosar_Medical/SYSTEM_HEALTH.json": {
       "type": "json",
       "size_kb": 3.5,
-      "last_modified": "2026-04-28T12:34:09"
+      "last_modified": "2026-04-28T12:40:25"
     },
     "Dosar_Medical/2026-04-17_biopsie_esofagiana_histopatologic.json": {
       "type": "json",
@@ -1048,8 +1103,8 @@
     },
     "_projects_sync/INDEX.json": {
       "type": "json",
-      "size_kb": 39.6,
-      "last_modified": "2026-04-28T12:03:38"
+      "size_kb": 40.0,
+      "last_modified": "2026-04-28T12:40:20"
     },
     "schemas/dosar_medical_v2.json": {
       "type": "json",
@@ -1070,6 +1125,11 @@
       "type": "json",
       "size_kb": 3.0,
       "last_modified": "2026-04-26T01:33:11"
+    },
+    "Dosar_Medical/rapoarte_generate/2026-05-04_briefing_consult_oncolog.docx.meta.json": {
+      "type": "json",
+      "size_kb": 0.6,
+      "last_modified": "2026-04-28T12:52:47"
     },
     "Dosar_Medical/documente_sursa/01_identitate/2023-06-12_carte_identitate.pdf.meta.json": {
       "type": "json",
@@ -1163,8 +1223,8 @@
     },
     "DASHBOARD.html": {
       "type": "html",
-      "size_kb": 177.4,
-      "last_modified": "2026-04-28T11:59:52"
+      "size_kb": 187.3,
+      "last_modified": "2026-04-28T12:51:40"
     },
     "index.html": {
       "type": "html",

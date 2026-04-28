@@ -1,8 +1,8 @@
 # STATUS SNAPSHOT — Petrilă Viorel-Mihai
 
-**Generat automat:** 2026-04-28 12:42
-**Ultim commit git:** `4c9bdd8` (2026-04-28 12:06:32 +0300)
-**Mesaj commit:** [PLAN 2026-04-28] Faza 1 — Audit + redenumire 4 fișiere + 2 MD extragere noi + nota UPU
+**Generat automat:** 2026-04-28 12:57
+**Ultim commit git:** `df817d0` (2026-04-28 12:42:20 +0300)
+**Mesaj commit:** [PLAN 2026-04-28] Faza 2 — Fix M3 30.04→4.05 + Fix E2 path Windows + N4 audit script + T1 schema (BUG biopsie reparat) + tati.png untracked
 **Sursă de adevăr:** fișierele originale din proiect `.Tati`. Acest snapshot e mirror sintetic generat de `scripts/regen_projects_sync.py` pentru chat Claude Projects (web/mobil).
 
 > **Ordine consultare în chat:** STATUS_SNAPSHOT.md (aici) → CONTEXT_MEDICAL.md (detaliu clinic) → TODO.md (calendar) → CONTACTE_MEDICALE.md (medici) → REGULAMENT.md (reguli) → INDEX.json (index documente) → EXPLICATIE_CONSULT_ONCOLOG_SCENARII.md (glosar + scenarii prognostice).
