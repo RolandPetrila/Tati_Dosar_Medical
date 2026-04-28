@@ -4,6 +4,58 @@
 
 ---
 
+## 2026-04-28 15:00 — Revize STIL_EXPLICATII v1.0 → v2.0 + workflow AskUserQuestion obligatoriu (lecție din exemplu user)
+
+**Tip:** rafinare ghid stil + workflow nou pre-execuție
+
+### Context
+
+User a furnizat `C:\Users\ALIENWARE\Downloads\2026-04-22_explicatie_consult_oncolog_scenarii.docx` (65 KB, 476 paragrafe, 12 tabele) ca exemplu reprezentativ pentru stilul preferat. Comparație cu DOCX biopsie generat la 14:42:
+
+- **Exemplu user (preferat):** poveste curgătoare integrată, analogii embed-uite în propoziții, format 4-paragrafe (Analogie/Medical/Cum se face/Impact), cuprins explicit, „Întrebări tale — răspunsuri directe", investigații cu format „Cum se face/Ce vede/Risc/Cost/Durată", scenarii cu probabilități, FAQ familie, timeline, mesaj 30s, glossar tabel 3-col cu 40 termeni
+- **DOCX biopsie 14:42 (eu — v1):** structură rigidă termen-cu-termen cu callouts „Pe firul nostru" separate, fără cuprins, fără secțiuni standard de la exemplu
+
+User a confirmat **doar update documente stil + memorie** (NU refacere DOCX biopsie acum). PLUS regulă nouă: la cereri viitoare cu trigger explicit, **OBLIGATORIU `AskUserQuestion` ÎNAINTE de execuție** cu meniu opțiuni documentului.
+
+### Modificări
+
+**1. `Documente_Informative/STIL_EXPLICATII_FAMILIE.md` v1.0 → v2.0:**
+
+- ELIMINAT: callouts „Pe firul nostru" (rigid) + structura h3 termen + bullet definiție + callout analogie
+- ADĂUGAT: secțiunea „2. Workflow obligatoriu — `AskUserQuestion` ÎNAINTE de execuție" cu listă completă opțiuni de propus (capitole multiSelect, lungime, metafora centrală, format)
+- ADĂUGAT: format 4-paragrafe pentru concepte tehnice (Analogie/Medical/Cum se face/Impact) cu variante per tip (Procedură, Marker, Cauză, Scenariu)
+- ADĂUGAT: structură document standard (Cover→Cuprins→Mesaj 30s→Povestea→Anatomia→Întrebări tale→Investigații→Scenarii→Ce să faci tu→Timeline→Mesaj 30s recap→Glossar→Surse→R17)
+- ADĂUGAT: tabel metafore validate (9 subiecte) cu status (✅ Validat / 📌 Propus)
+- ADĂUGAT: secțiunea „6.1 Exemplu reprezentativ" cu pointer la `2026-04-22_explicatie_consult_oncolog_scenarii.docx`
+- ELIMINAT din paletă: `analogy` callouts (ELIMINAT v2.0)
+
+**2. `feedback_explicatii_familie_fir_narativ.md` (memorie Claude Code) v1 → v2:**
+
+- Trigger rămâne același
+- Adăugat workflow obligatoriu pre-execuție (5 pași)
+- Modificat cele 5 principii ale stilului (poveste curgătoare integrată, format 4-paragrafe, marcaje fluide, limbaj conversațional)
+- Adăugată secțiune „Schimbări față de v1.0"
+
+**3. `REGULI_CLAUDE_CODE.md` regula #9 (R17):**
+
+- Modificată din „aplici automat firul narativ unic" → „NU executa direct. Workflow obligatoriu: citești surse → propui `AskUserQuestion` cu 3-4 întrebări (capitole, lungime, metaforă, format) → aștepți confirmarea → execuți strict stilul `poveste curgătoare integrată`"
+
+**4. `MEMORY.md` index intrare actualizată** cu noul rezumat al feedback-ului v2.
+
+**5. Backup R10 (pre-modificare):**
+
+- `Dosar_Medical/arhiva/context_medical_versiuni/STIL_EXPLICATII_FAMILIE_v1_pre-revize-poveste-integrata_2026-04-28_1500.md`
+
+### Decizia user pe DOCX biopsie
+
+DOCX-ul `EXPLICATIE_REZULTAT_BIOPSIE_2026-04-28.docx` generat la 14:42 cu stilul v1.0 (callouts „Pe firul nostru") **rămâne neschimbat în proiect**. Refacere la stilul v2.0 NU se face automat — doar la cerere explicită user în viitor.
+
+### Acțiuni rămase
+
+- La viitoare cerere user cu trigger („explică-mi"/„pe înțelesul meu"/„ca o poveste"/„cu exemple") — aplic workflow nou: citesc surse → propun `AskUserQuestion` cu 3-4 întrebări → execut după confirmare
+
+---
+
 ## 2026-04-28 14:42 — Update DOCX biopsie cu fir narativ unic + acoperire integrală termeni + persistare stil (R17 + memorie + STIL_EXPLICATII_FAMILIE)
 
 **Tip:** rewrite document explicativ familie + codificare stil pentru viitor

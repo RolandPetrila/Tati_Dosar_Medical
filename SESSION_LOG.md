@@ -6,6 +6,36 @@
 
 ---
 
+## 2026-04-28 15:00 — [Claude_Opus_4.7_1M] revize-stil-v2 + workflow-askuserquestion-obligatoriu (R10 + R17 + R20)
+
+**Scop:** rafinare ghid stil pentru documente educaționale familie după user a furnizat `2026-04-22_explicatie_consult_oncolog_scenarii.docx` (65 KB, 476 paragrafe, 12 tabele) ca exemplu reprezentativ.
+
+**Comparație stil exemplu vs DOCX biopsie 14:42 (v1):**
+
+- Exemplu: poveste curgătoare, analogii în propoziții, format 4-paragrafe, cuprins, FAQ, glossar 40 termeni
+- v1: structură rigidă termen-cu-termen cu callouts „Pe firul nostru"
+
+**Decizie user (AskUserQuestion):**
+
+- Update DOAR documente stil + memorie (NU refac DOCX biopsie acum)
+- PLUS regulă nouă obligatorie: `AskUserQuestion` ÎNAINTE de execuție la cereri viitoare cu trigger
+
+**Fișiere modificate:**
+
+- `Documente_Informative/STIL_EXPLICATII_FAMILIE.md` v1.0 → v2.0 (revize majoră)
+- `~/.claude/projects/G--My-Drive-Roly--Tati/memory/feedback_explicatii_familie_fir_narativ.md` v1 → v2 (workflow nou + 5 principii noi)
+- `REGULI_CLAUDE_CODE.md` regula #9 — workflow `AskUserQuestion` obligatoriu pre-execuție
+- `MEMORY.md` (intrare actualizată feedback v2)
+- `CHANGELOG.md` + `SESSION_LOG.md` (această intrare)
+
+**Backup R10:**
+
+- `Dosar_Medical/arhiva/context_medical_versiuni/STIL_EXPLICATII_FAMILIE_v1_pre-revize-poveste-integrata_2026-04-28_1500.md`
+
+**DOCX biopsie 14:42:** rămâne neschimbat (cu callouts), refacere DOAR la cerere user explicită.
+
+---
+
 ## 2026-04-28 14:42 — [Claude_Opus_4.7_1M] update-docx-biopsie-fir-narativ + persistare-stil-A-B-C (R10 + R17 + R20)
 
 **Scop:** rewrite DOCX explicativ pentru familie cu fir narativ unic + acoperire integrală termeni + codificare stil pentru viitor (memorie feedback + document de stil + mențiune R17).

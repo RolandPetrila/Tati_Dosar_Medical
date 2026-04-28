@@ -144,7 +144,13 @@ Pentru orice **document de ieșire** (raport, rezumat, interpretare, traducere p
 6. Atenționare finală: „NU înlocuiește consultul medical."
 7. SmPC/ghid/studiu > 12 luni → „verificare versiune curentă recomandată" (Regula 11).
 8. Sursă primară > sursă secundară. NU se citează AI (Gemini/ChatGPT/Claude) ca sursă.
-9. **Stil narativ pentru documente educaționale familie** — la cerere explicită user („explică-mi", „pe înțelesul meu", „cu exemple", „ca o poveste"), aplici automat firul narativ unic + acoperire integrală termeni medicali. Marcajele certitudine R17 se PĂSTREAZĂ — firul narativ NU le înlocuiește, le însoțește. Detalii complete + ghid metafore + template + exemple validate: **`Documente_Informative/STIL_EXPLICATII_FAMILIE.md`**. Aplicabil DOAR la documente destinate familiei (Roland, Maria) — NU la briefing-uri pentru medici, rapoarte tehnice, ghiduri operaționale.
+9. **Stil narativ pentru documente educaționale familie** — la cerere explicită user („explică-mi", „pe înțelesul meu", „cu exemple", „ca o poveste"), **NU executa direct**. Workflow obligatoriu (validat 2026-04-28):
+   1. Citești sursele (PDF medical, JSON canonice, transcrieri MD existente) pentru context
+   2. Propui `AskUserQuestion` cu **3-4 întrebări** despre opțiunile documentului — capitole de inclus (multiSelect: Cover+Cuprins, Mesaj 30s, Povestea, Anatomia raportului, Întrebări tale, Investigații, Scenarii, FAQ, Ce să faci tu, Timeline, Glossar), lungime (scurt/mediu/extins), metafora centrală (2-3 propuneri adecvate subiectului), format (DOCX/MD)
+   3. Aștepți confirmarea
+   4. Execuți strict ce s-a confirmat folosind stilul **„poveste curgătoare integrată"** (NU callouts „Pe firul nostru" — ELIMINAT v2.0): povestea narativă cu metafora centrală embed-uită în text + format 4-paragrafe pentru concepte tehnice (Analogie / Medical / Cum se face / Impact) + marcaje certitudine R17 ca prefixe la afirmații (NU în callouts) + glossar tabel 3-coloane la final.
+
+   Detalii complete + lista capitole + ghid metafore + format 4-paragrafe + paletă tehnică + exemple validate: **`Documente_Informative/STIL_EXPLICATII_FAMILIE.md` v2.0**. Aplicabil DOAR la documente destinate familiei (Roland, Maria) — NU la briefing-uri pentru medici, rapoarte tehnice, ghiduri operaționale.
 
 **Exemple complete + format corect/greșit:** `Documentatie_Initiala/REGULI_DETALIATE.md` §R17.
 
