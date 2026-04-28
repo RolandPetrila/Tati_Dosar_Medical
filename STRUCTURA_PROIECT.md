@@ -273,15 +273,15 @@ Structura descrisă în acest fișier **nu se modifică decât cu acordul explic
 
 ## 🗺 Hartă completă auto-generată
 
-> ⚙️ **Generat automat:** 2026-04-28T15:20:50 de `scripts/regenerate_structura.py`. NU edita manual această secțiune — modificările se pierd la următoarea regenerare. Pentru cuprinsul fix vezi secțiunile non-auto de mai sus.
+> ⚙️ **Generat automat:** 2026-04-28T16:34:46 de `scripts/regenerate_structura.py`. NU edita manual această secțiune — modificările se pierd la următoarea regenerare. Pentru cuprinsul fix vezi secțiunile non-auto de mai sus.
 
 ### 📊 Statistici live
 
-- **Total fișiere proiect (excl. .git):** 288
-- **Markdown (.md):** 125
+- **Total fișiere proiect (excl. .git):** 294
+- **Markdown (.md):** 126
 - **JSON (.json):** 76
 - **HTML (.html):** 13
-- **Total size:** 65754.2 KB
+- **Total size:** 65989.6 KB
 
 ### 🧭 Index thematic (caut...)
 
@@ -303,13 +303,14 @@ Structura descrisă în acest fișier **nu se modifică decât cu acordul explic
 ### 🌳 Arbore folder (depth 3)
 
 ```
-.Tati/  (10 subfoldere, 28 fișiere root)
+.Tati/  (10 subfoldere, 29 fișiere root)
 ├── .claude/  (2 fișiere)
 │   ├── scheduled_tasks.lock  (0.1 KB)
 │   ├── settings.local.json  (2.2 KB)
-├── .playwright-mcp/  (9 fișiere)
+├── .playwright-mcp/  (13 fișiere)
 │   ├── console-2026-04-28T11-14-56-816Z.log  (0.0 KB)
 │   ├── console-2026-04-28T11-17-17-170Z.log  (0.0 KB)
+│   ├── console-2026-04-28T13-11-48-313Z.log  (0.1 KB)
 │   ├── page-2026-04-28T11-14-59-250Z.yml  (54.3 KB)
 │   ├── page-2026-04-28T11-17-17-989Z.yml  (54.3 KB)
 │   ├── page-2026-04-28T11-17-40-051Z.yml  (54.5 KB)
@@ -317,6 +318,9 @@ Structura descrisă în acest fișier **nu se modifică decât cu acordul explic
 │   ├── page-2026-04-28T11-18-51-187Z.yml  (80.8 KB)
 │   ├── page-2026-04-28T11-20-58-988Z.yml  (54.5 KB)
 │   ├── page-2026-04-28T11-34-07-444Z.yml  (59.3 KB)
+│   ├── page-2026-04-28T12-21-11-371Z.yml  (59.4 KB)
+│   ├── page-2026-04-28T12-22-15-965Z.yml  (59.6 KB)
+│   ├── page-2026-04-28T13-11-50-409Z.yml  (59.6 KB)
 ├── .ruff_cache/  (4 fișiere)
 │   ├── 0.14.2/  (2 fișiere)
 │   │   ├── 11311870640459399777  (0.1 KB)
@@ -327,10 +331,10 @@ Structura descrisă în acest fișier **nu se modifică decât cu acordul explic
 │   ├── CONTACTE_MEDICALE.md  (20.2 KB)
 │   ├── CONTEXT_MEDICAL.md  (75.0 KB)
 │   ├── EXPLICATIE_CONSULT_ONCOLOG_SCENARII.md  (74.5 KB)
-│   ├── INDEX.json  (42.4 KB)
+│   ├── INDEX.json  (57.4 KB)
 │   ├── PROJECTS_PRIMER.md  (8.3 KB)
 │   ├── REGULAMENT.md  (11.9 KB)
-│   ├── STATUS_SNAPSHOT.md  (26.2 KB)
+│   ├── STATUS_SNAPSHOT.md  (26.1 KB)
 │   ├── TODO.md  (46.0 KB)
 ├── assets/  (4 fișiere)
 │   ├── generate_icons.py  (2.2 KB)
@@ -366,11 +370,11 @@ Structura descrisă în acest fișier **nu se modifică decât cu acordul explic
 │   ├── GHID_CARDIOLOG_30-04.md  (6.0 KB)
 │   ├── GHID_CONSULT_ONCOLOG.md  (22.6 KB)
 │   ├── GHID_TELEFOANE_27-04.md  (14.1 KB)
-│   ├── STIL_EXPLICATII_FAMILIE.md  (9.5 KB)
-├── Dosar_Medical/  (197 fișiere)
-│   ├── arhiva/  (63 fișiere)
+│   ├── STIL_EXPLICATII_FAMILIE.md  (14.7 KB)
+├── Dosar_Medical/  (198 fișiere)
+│   ├── arhiva/  (64 fișiere)
 │   │   ├── audituri_extragere/  (2 fișiere)
-│   │   ├── context_medical_versiuni/  (39 fișiere)
+│   │   ├── context_medical_versiuni/  (40 fișiere)
 │   │   ├── json_versiuni/  (4 fișiere)
 │   │   ├── versiuni_config/  (18 fișiere)
 │   ├── cercetari/  (2 fișiere)
@@ -464,7 +468,7 @@ Structura descrisă în acest fișier **nu se modifică decât cu acordul explic
 │   ├── MANIFEST.json  (14.9 KB)
 │   ├── PLAN_audit_remediere_v2_2026-04-18.md  (7.3 KB)
 │   ├── SCHEMA_JSON_v2.md  (7.6 KB)
-│   ├── SYSTEM_HEALTH.json  (3.5 KB)
+│   ├── SYSTEM_HEALTH.json  (3.7 KB)
 ├── schemas/  (1 fișiere)
 │   ├── dosar_medical_v2.json  (3.9 KB)
 ├── scripts/  (7 fișiere)
@@ -473,16 +477,17 @@ Structura descrisă în acest fișier **nu se modifică decât cu acordul explic
 │   ├── generate_explicatie_biopsie.py  (55.9 KB)
 │   ├── generate_index.py  (15.6 KB)
 │   ├── regen_projects_sync.py  (8.3 KB)
-│   ├── regenerate_structura.py  (8.6 KB)
+│   ├── regenerate_structura.py  (11.5 KB)
 │   ├── system_health_check.py  (8.4 KB)
 ├── .gitignore  (1.0 KB)
+├── .nojekyll  (0.0 KB)
 ├── .pre-commit-config.yaml  (1.3 KB)
 ├── ALIMENTATIE.md  (48.0 KB)
 ├── BAZA_CUNOSTINTE.md  (9.4 KB)
-├── CHANGELOG.md  (172.6 KB)
+├── CHANGELOG.md  (176.3 KB)
 ├── CLAUDE.md  (9.6 KB)
 ├── CONTEXT_MEDICAL.md  (75.0 KB)
-├── DASHBOARD.html  (212.0 KB)
+├── DASHBOARD.html  (229.9 KB)
 ├── EXECUTOR_AUDIT_LOG_2026-04-28.md  (59.4 KB)
 ├── GLOSAR.md  (10.6 KB)
 ├── index.html  (0.3 KB)
@@ -493,10 +498,10 @@ Structura descrisă în acest fișier **nu se modifică decât cu acordul explic
 ├── PLAN_IMPLEMENTARE_2026-04-28.md  (28.4 KB)
 ├── README.md  (2.0 KB)
 ├── REGULAMENT.md  (11.9 KB)
-├── REGULI_CLAUDE_CODE.md  (34.2 KB)
-├── SESSION_LOG.md  (111.7 KB)
+├── REGULI_CLAUDE_CODE.md  (35.0 KB)
+├── SESSION_LOG.md  (113.1 KB)
 ├── START.md  (3.8 KB)
-├── STRUCTURA_PROIECT.md  (25.9 KB)
+├── STRUCTURA_PROIECT.md  (26.1 KB)
 ├── SURSE_MEDICALE.md  (7.5 KB)
 ├── tati.png  (272.2 KB)
 ├── TEMPLATES.md  (9.7 KB)

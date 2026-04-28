@@ -33,6 +33,10 @@ EMBED_PATTERN = re.compile(
     r'(<script type="application/json" id="dashboard-index">)(.*?)(</script>)',
     re.DOTALL,
 )
+DOSAR_EMBEDS_PATTERN = re.compile(
+    r"(<!-- DOSAR_MD_EMBEDS_START -->)(.*?)(<!-- DOSAR_MD_EMBEDS_END -->)",
+    re.DOTALL,
+)
 
 THEMATIC_INDEX = [
     ("biopsie", ["Dosar_Medical/documente_sursa/12_biopsie_2026/", "TODO.md", "Documente_Informative/EXPLICATIE_CONSULT_ONCOLOG_SCENARII.md"]),
@@ -182,6 +186,70 @@ def sync_dashboard_embed():
     return True
 
 
+def sync_dosar_md_embeds():
+    """Sincronizează embed-urile MD pentru tab Dosar medical.
+
+    Citește toate *_extragere.md din Dosar_Medical/documente_sursa/ și le inserează ca
+    <script type="text/markdown" id="md-doc-{slug}"> între markerii DOSAR_MD_EMBEDS_START/END.
+    Permite expandCard() să facă fallback la embed când fetch eșuează (file:// CORS sau offline).
+
+    Returns True dacă s-a făcut modificare, False altfel.
+    """
+    if not DASHBOARD_HTML.exists():
+        print("  [embed-dosar] DASHBOARD.html lipsă — skip")
+        return False
+    dash_text = DASHBOARD_HTML.read_text(encoding="utf-8")
+    if not DOSAR_EMBEDS_PATTERN.search(dash_text):
+        print("  [embed-dosar] Markeri DOSAR_MD_EMBEDS_START/END nu există în DASHBOARD.html — skip")
+        return False
+
+    documente_dir = ROOT / "Dosar_Medical" / "documente_sursa"
+    if not documente_dir.exists():
+        print("  [embed-dosar] Dosar_Medical/documente_sursa/ lipsă — skip")
+        return False
+
+    md_files = sorted(documente_dir.rglob("*_extragere.md"))
+    if not md_files:
+        print("  [embed-dosar] Niciun *_extragere.md găsit — skip")
+        return False
+
+    embed_blocks = [
+        "<!-- DOSAR_MD_EMBEDS_START -->",
+        "      <!-- Embed-uri MD pentru fallback offline / file:// (sincronizate automat).",
+        "           Conținut integral al fiecărui *_extragere.md ca <script type=\"text/markdown\" id=\"md-doc-{slug}\">.",
+        "           expandCard() încearcă fetch live întâi; dacă eșuează (CORS file:// sau offline), folosește acest embed. -->",
+    ]
+    total_chars = 0
+    skipped = 0
+    for md_file in md_files:
+        slug = md_file.stem.replace("_extragere", "")
+        try:
+            content = md_file.read_text(encoding="utf-8")
+        except (OSError, UnicodeDecodeError):
+            skipped += 1
+            continue
+        if "</script" in content.lower():
+            print(f"  [embed-dosar] WARN: {md_file.name} conține </script — skip pentru siguranță")
+            skipped += 1
+            continue
+        embed_blocks.append(
+            f'      <script type="text/markdown" id="md-doc-{slug}">\n{content}\n      </script>'
+        )
+        total_chars += len(content)
+
+    embed_blocks.append("      <!-- DOSAR_MD_EMBEDS_END -->")
+    new_content = "\n".join(embed_blocks)
+
+    new_dash = DOSAR_EMBEDS_PATTERN.sub(lambda _m: new_content, dash_text)
+    if new_dash == dash_text:
+        print("  [embed-dosar] Embed-uri deja sincronizate (no-op)")
+        return False
+    DASHBOARD_HTML.write_text(new_dash, encoding="utf-8")
+    embedded = len(md_files) - skipped
+    print(f"  [embed-dosar] {embedded}/{len(md_files)} MD-uri embed-uite ({round(total_chars / 1024, 1)} KB conținut MD)")
+    return True
+
+
 def main():
     if not TARGET.exists():
         print(f"ERROR: {TARGET} nu există", file=sys.stderr)
@@ -206,6 +274,7 @@ def main():
     print(f"  Section size: ~{len(new_section)} chars")
 
     sync_dashboard_embed()
+    sync_dosar_md_embeds()
     return 0
 
 
