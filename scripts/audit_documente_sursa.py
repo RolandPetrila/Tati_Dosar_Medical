@@ -179,7 +179,11 @@ def main():
         return 1
     report = render_report(issues)
     OUTPUT.write_text(report, encoding="utf-8")
-    print(f"Raport scris: {OUTPUT.relative_to(ROOT)}")
+    try:
+        display_path = OUTPUT.relative_to(ROOT)
+    except ValueError:
+        display_path = OUTPUT
+    print(f"Raport scris: {display_path}")
     print(f"  Empty folders > 30d: {len(issues['empty_folders_long'])}")
     print(f"  Missing .meta.json: {len(issues['missing_meta_json'])}")
     print(f"  Intermediate artifacts (acoperire R14 indirectă): {issues['stats']['intermediate_artifacts']}")

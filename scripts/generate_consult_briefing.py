@@ -209,8 +209,14 @@ def main():
     meta_path = output_path.with_suffix(".docx.meta.json")
     meta_path.write_text(json.dumps(meta, ensure_ascii=False, indent=2), encoding="utf-8")
 
-    print(f"DOCX briefing generat: {output_path.relative_to(ROOT)}")
-    print(f"Meta companion: {meta_path.relative_to(ROOT)}")
+    try:
+        docx_display = output_path.relative_to(ROOT)
+        meta_display = meta_path.relative_to(ROOT)
+    except ValueError:
+        docx_display = output_path
+        meta_display = meta_path
+    print(f"DOCX briefing generat: {docx_display}")
+    print(f"Meta companion: {meta_display}")
     print(f"  Tip consult: {args.consult}")
     print(f"  Data: {args.data}")
     print(f"  Medic: {args.medic}")
