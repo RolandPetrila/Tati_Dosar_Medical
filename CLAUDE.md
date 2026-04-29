@@ -1,6 +1,6 @@
 # CLAUDE.md — Proiect `.Tati` (auto-loader minimalist)
 
-**Versiune:** 12.5 (adăugare R30: sistem sync Claude Projects pentru chat web/mobil) | **Data:** 2026-04-27
+**Versiune:** 12.6 (adăugare R31: sync permanent `_projects_sync/` cu auto-detect documente noi + bundle JSON canonice + index corespondență) | **Data:** 2026-04-30
 
 > **Fișier auto-încărcat de Claude Code la pornirea în `G:\My Drive\Roly\.Tati`.**
 > Scop: loader minimalist care direcționează spre reguli și context.
@@ -37,34 +37,35 @@ Citești în această ordine, înainte de orice răspuns substanțial:
 
 ## Harta regulilor (unde găsești ce)
 
-| Regulă | Subiect                                                                     | Fișier care o conține                                                                      |
-| ------ | --------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------ |
-| 1-10   | Reguli fundamentale medicale                                                | `REGULAMENT.md`                                                                            |
-| 6      | Confirmare fișiere la final de mesaj                                        | `REGULI_CLAUDE_CODE.md`                                                                    |
-| 7      | AskUserQuestion pe decizii medicale                                         | `REGULI_CLAUDE_CODE.md`                                                                    |
-| 8      | Protecție anti-halucinație OCR                                              | `Dosar_Medical/CLAUDE.md`                                                                  |
-| 9      | Coordonare Claude ↔ Gemini                                                  | `Dosar_Medical/CLAUDE.md`                                                                  |
-| 10     | Backup înainte de modificări majore                                         | `Dosar_Medical/CLAUDE.md`                                                                  |
-| 11     | Marcaj valabilitate clinică temporală                                       | `Dosar_Medical/CLAUDE.md`                                                                  |
-| 12     | Procedură conflict surse autoritare                                         | `REGULI_CLAUDE_CODE.md`                                                                    |
-| 13     | Transcriere documente manuscrise                                            | `Dosar_Medical/CLAUDE.md`                                                                  |
-| 14     | Chain of custody documente sursă                                            | `Dosar_Medical/CLAUDE.md`                                                                  |
-| 15     | Log cercetări web                                                           | `Dosar_Medical/CLAUDE.md`                                                                  |
-| 16     | Git auto-commit + push la final                                             | `REGULI_CLAUDE_CODE.md` (+ protocol extins în `Documentatie_Initiala/REGULI_DETALIATE.md`) |
-| 17     | Marcaje certitudine `[CERT]`/`[PROBABIL]`/`[INCERT]`/`[NEGASIT]`            | `REGULI_CLAUDE_CODE.md` (+ exemple în `REGULI_DETALIATE.md`)                               |
-| 18     | Sincronizare `DASHBOARD.html` la actualizări medicale                       | `REGULI_CLAUDE_CODE.md` (+ protocol în `REGULI_DETALIATE.md`)                              |
-| 19     | Documente informative în `Documente_Informative/`                           | `Documente_Informative/CLAUDE.md`                                                          |
-| 20     | Mod de lucru: cercetare → status → AskUserQuestion → confirmare → execuție  | `REGULI_CLAUDE_CODE.md`                                                                    |
-| 21     | Curățenie fluidă folder, zero ciorne                                        | `REGULI_CLAUDE_CODE.md`                                                                    |
-| 22     | Verificare proactivă + eliminare info neverificate                          | `REGULI_CLAUDE_CODE.md` (+ protocol în `REGULI_DETALIATE.md`)                              |
-| 23     | Extragere integrală din documente medicale sursă (zero omisiuni JSON)       | `Dosar_Medical/CLAUDE.md`                                                                  |
-| 24     | Propagare integrală JSON → `CONTEXT_MEDICAL.md` (regula de paritate)        | `REGULI_CLAUDE_CODE.md`                                                                    |
-| 25     | Prioritate claritate > completitudine la surse indescifrabile               | `Dosar_Medical/CLAUDE.md` (+ tracking `Dosar_Medical/EXTRAGERI_INCOMPLETE.md`)             |
-| 26     | Consistență structură foldere documente sursă + semnalare devieri           | `Dosar_Medical/CLAUDE.md`                                                                  |
-| 27     | Ingest Gmail pentru context dosar medical (comenzi + auto-scan + propagare) | `REGULI_CLAUDE_CODE.md`                                                                    |
-| 28     | System Health Monitor (limite native Claude Code)                           | `REGULI_CLAUDE_CODE.md`                                                                    |
-| 29     | Plan-Audit cross-terminal pentru task-uri complexe                          | `REGULI_CLAUDE_CODE.md`                                                                    |
-| 30     | Sistem sync Claude Projects (chat web/mobil) — `_projects_sync/` + hook     | `REGULI_CLAUDE_CODE.md`                                                                    |
+| Regulă | Subiect                                                                                                    | Fișier care o conține                                                                      |
+| ------ | ---------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------ |
+| 1-10   | Reguli fundamentale medicale                                                                               | `REGULAMENT.md`                                                                            |
+| 6      | Confirmare fișiere la final de mesaj                                                                       | `REGULI_CLAUDE_CODE.md`                                                                    |
+| 7      | AskUserQuestion pe decizii medicale                                                                        | `REGULI_CLAUDE_CODE.md`                                                                    |
+| 8      | Protecție anti-halucinație OCR                                                                             | `Dosar_Medical/CLAUDE.md`                                                                  |
+| 9      | Coordonare Claude ↔ Gemini                                                                                 | `Dosar_Medical/CLAUDE.md`                                                                  |
+| 10     | Backup înainte de modificări majore                                                                        | `Dosar_Medical/CLAUDE.md`                                                                  |
+| 11     | Marcaj valabilitate clinică temporală                                                                      | `Dosar_Medical/CLAUDE.md`                                                                  |
+| 12     | Procedură conflict surse autoritare                                                                        | `REGULI_CLAUDE_CODE.md`                                                                    |
+| 13     | Transcriere documente manuscrise                                                                           | `Dosar_Medical/CLAUDE.md`                                                                  |
+| 14     | Chain of custody documente sursă                                                                           | `Dosar_Medical/CLAUDE.md`                                                                  |
+| 15     | Log cercetări web                                                                                          | `Dosar_Medical/CLAUDE.md`                                                                  |
+| 16     | Git auto-commit + push la final                                                                            | `REGULI_CLAUDE_CODE.md` (+ protocol extins în `Documentatie_Initiala/REGULI_DETALIATE.md`) |
+| 17     | Marcaje certitudine `[CERT]`/`[PROBABIL]`/`[INCERT]`/`[NEGASIT]`                                           | `REGULI_CLAUDE_CODE.md` (+ exemple în `REGULI_DETALIATE.md`)                               |
+| 18     | Sincronizare `DASHBOARD.html` la actualizări medicale                                                      | `REGULI_CLAUDE_CODE.md` (+ protocol în `REGULI_DETALIATE.md`)                              |
+| 19     | Documente informative în `Documente_Informative/`                                                          | `Documente_Informative/CLAUDE.md`                                                          |
+| 20     | Mod de lucru: cercetare → status → AskUserQuestion → confirmare → execuție                                 | `REGULI_CLAUDE_CODE.md`                                                                    |
+| 21     | Curățenie fluidă folder, zero ciorne                                                                       | `REGULI_CLAUDE_CODE.md`                                                                    |
+| 22     | Verificare proactivă + eliminare info neverificate                                                         | `REGULI_CLAUDE_CODE.md` (+ protocol în `REGULI_DETALIATE.md`)                              |
+| 23     | Extragere integrală din documente medicale sursă (zero omisiuni JSON)                                      | `Dosar_Medical/CLAUDE.md`                                                                  |
+| 24     | Propagare integrală JSON → `CONTEXT_MEDICAL.md` (regula de paritate)                                       | `REGULI_CLAUDE_CODE.md`                                                                    |
+| 25     | Prioritate claritate > completitudine la surse indescifrabile                                              | `Dosar_Medical/CLAUDE.md` (+ tracking `Dosar_Medical/EXTRAGERI_INCOMPLETE.md`)             |
+| 26     | Consistență structură foldere documente sursă + semnalare devieri                                          | `Dosar_Medical/CLAUDE.md`                                                                  |
+| 27     | Ingest Gmail pentru context dosar medical (comenzi + auto-scan + propagare)                                | `REGULI_CLAUDE_CODE.md`                                                                    |
+| 28     | System Health Monitor (limite native Claude Code)                                                          | `REGULI_CLAUDE_CODE.md`                                                                    |
+| 29     | Plan-Audit cross-terminal pentru task-uri complexe                                                         | `REGULI_CLAUDE_CODE.md`                                                                    |
+| 30     | Sistem sync Claude Projects (chat web/mobil) — `_projects_sync/` + hook                                    | `REGULI_CLAUDE_CODE.md`                                                                    |
+| 31     | Sync permanent `_projects_sync/` cu auto-detect documente noi + bundle JSON canonice + index corespondență | `REGULI_CLAUDE_CODE.md`                                                                    |
 
 **Notă overlap R6/R7:** Regulile 6 și 7 apar în două locuri cu versiuni diferite:
 

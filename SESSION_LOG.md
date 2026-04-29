@@ -6,6 +6,24 @@
 
 ---
 
+## 2026-04-30 01:12 — [Claude_Opus_4.7_1M] r31-sync-permanent-projects-sync-cu-auto-detect-documente-noi (R31 + R30 + R16)
+
+**Scop:** infrastructură nouă pentru status LIVE garantat în mirror Claude Projects + auto-detect documente noi + consemnare obligatorie.
+
+**Operații:**
+
+- 2 scripturi noi: `scripts/build_dosar_bundle.py` + `scripts/build_corespondenta_index.py`
+- Update `scripts/regen_projects_sync.py` (apelează cele 2 scripts noi intern)
+- Update `.git/hooks/pre-commit` (2 trigger-uri noi: `Dosar_Medical/*.json` + `Dosar_Medical/corespondenta/*.md` + ALIMENTATIE.md)
+- R31 nouă în `REGULI_CLAUDE_CODE.md` v12.6 (~110 linii)
+- Update `CLAUDE.md` v12.6 (tabel reguli)
+
+**Rezultat:** mirror `_projects_sync/` extins de la 8 la 10 fișiere (487 KB total). Auto-detect garantat: orice JSON canonic medical adăugat în `Dosar_Medical/` e inclus în bundle la următorul commit, fără configurare manuală.
+
+**Garanție LIVE:** pre-commit hook (atomic la commit) + Drive sync (continuu) + drag&drop manual (la modificare medicală majoră).
+
+---
+
 ## 2026-04-29 19:24 — [Claude_Opus_4.7_1M] reprogramare-consult-oncolog-30-04-mate-endre-inlocuieste-4-05-anater (R10 + R18 + R20)
 
 **Scop:** schimbare planificare medicală majoră — consult oncolog primary 4.05 (Dr. Anater) ANULAT, înlocuit de consultul 30.04 ora 12:00 (Dr. Mate Endre) care va prelua dosarul medical.

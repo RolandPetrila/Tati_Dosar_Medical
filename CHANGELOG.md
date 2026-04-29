@@ -4,6 +4,59 @@
 
 ---
 
+## 2026-04-30 01:12 — Regula 31: sync permanent `_projects_sync/` cu auto-detect documente noi (10 fișiere, status LIVE garantat)
+
+**Tip:** infrastructură proiect (R31 nouă) + sistem auto-update mirror Claude Projects mobil
+
+### Context
+
+User a observat 30.04 că `_projects_sync/` avea listă FIXĂ de 6 fișiere și omitea buletinul nou 29.04 (markeri tumorali + HbA1c) ingerat în repo. Cerere: mecanism de actualizare permanentă cu status LIVE + auto-detect documente noi + consemnare obligatorie.
+
+### Modificări
+
+**1. Scripturi noi:**
+
+- `scripts/build_dosar_bundle.py` — concatenează 19 JSON canonice medicale în `_projects_sync/DOSAR_DATE_BRUTE.md` (137 KB). Auto-detect via `glob("Dosar_Medical/*.json")` — orice JSON nou e inclus automat.
+- `scripts/build_corespondenta_index.py` — sinteză 6 threaduri Gmail în `_projects_sync/CORESPONDENTA_INDEX.md` (19 KB).
+
+**2. Update `scripts/regen_projects_sync.py`:**
+
+- Apel intern către cele 2 scripturi noi (subprocess) după copiere și generare STATUS_SNAPSHOT.
+
+**3. Update `.git/hooks/pre-commit`:**
+
+- 2 trigger-uri noi: `Dosar_Medical/*.json` (exclus meta/MANIFEST/SYSTEM_HEALTH) + `Dosar_Medical/corespondenta/*.md`.
+- Adăugat `ALIMENTATIE.md` în lista SOURCE_FILES.
+
+**4. R31 nouă în `REGULI_CLAUDE_CODE.md` v12.6** (~110 linii):
+
+- Tabel cu cele 10 fișiere mirror permanent.
+- Mecanism auto-update + 3 mecanisme paralele status LIVE (pre-commit hook, Drive sync, drag&drop manual).
+- Verificare versiune curentă mobil prin `STATUS_SNAPSHOT.md` git_hash.
+- Convenție Claude: avertizează `🔔 reupload mirror la mobil` la regenerări medicale majore.
+
+**5. Update `CLAUDE.md` v12.6:** tabel reguli + versiune.
+
+### Rezultat verificare end-to-end
+
+```
+🔄 Sync sursă → _projects_sync/
+  ✅ Copiat: CONTEXT_MEDICAL.md (82.2 KB)
+  ✅ Copiat: TODO.md (46.9 KB)
+  ✅ Copiat: REGULAMENT.md (11.9 KB)
+  ✅ Copiat: INDEX.json (59.1 KB)
+  ✅ Copiat: CONTACTE_MEDICALE.md (20.2 KB)
+  ✅ Copiat: EXPLICATIE_CONSULT_ONCOLOG_SCENARII.md (74.5 KB)
+  ✅ Generat: STATUS_SNAPSHOT.md (27.7 KB)
+  ✅ Generat: DOSAR_DATE_BRUTE.md (137.4 KB, 19 JSON-uri canonice)
+  ✅ Generat: CORESPONDENTA_INDEX.md (18.9 KB, 6 threaduri)
+  ✅ Prezent: PROJECTS_PRIMER.md (8.3 KB)
+
+📊 Total _projects_sync/: 487.1 KB · 10 fișiere
+```
+
+---
+
 ## 2026-04-29 19:24 — REPROGRAMARE consult oncolog 4.05 → 30.04 ora 12:00 (Dr. Mate Endre înlocuiește Dr. Anater)
 
 **Tip:** schimbare planificare medicală majoră — consult oncolog primary mutat de la 4.05 (Dr. Anater) la 30.04 ora 12:00 (Dr. Mate Endre)

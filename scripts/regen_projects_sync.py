@@ -220,6 +220,24 @@ def main():
     size_kb = snapshot_path.stat().st_size / 1024
     print(f"  ✅ Generat: STATUS_SNAPSHOT.md ({size_kb:.1f} KB)")
 
+    # 2b. Generează DOSAR_DATE_BRUTE.md (R31 — bundle JSON canonice)
+    try:
+        subprocess.run(
+            [sys.executable, str(ROOT / "scripts" / "build_dosar_bundle.py")],
+            cwd=ROOT, check=True, encoding="utf-8",
+        )
+    except subprocess.CalledProcessError as e:
+        print(f"  ⚠️  build_dosar_bundle.py a eșuat: {e}")
+
+    # 2c. Generează CORESPONDENTA_INDEX.md (R31 — sinteză threaduri Gmail)
+    try:
+        subprocess.run(
+            [sys.executable, str(ROOT / "scripts" / "build_corespondenta_index.py")],
+            cwd=ROOT, check=True, encoding="utf-8",
+        )
+    except subprocess.CalledProcessError as e:
+        print(f"  ⚠️  build_corespondenta_index.py a eșuat: {e}")
+
     # 3. Verificare PROJECTS_PRIMER.md (manual; NU regenerat de script)
     primer = SYNC_DIR / "PROJECTS_PRIMER.md"
     if not primer.exists():
@@ -230,8 +248,9 @@ def main():
 
     # 4. Sumar
     total_kb = sum(f.stat().st_size for f in SYNC_DIR.glob("*")) / 1024
-    print(f"\n📊 Total {SYNC_DIR.name}/: {total_kb:.1f} KB")
-    print(f"   Mirror-uite: {copied} | Lipsă: {missing} | Generat: 1 (STATUS_SNAPSHOT)")
+    files_count = sum(1 for _ in SYNC_DIR.glob("*"))
+    print(f"\n📊 Total {SYNC_DIR.name}/: {total_kb:.1f} KB · {files_count} fișiere")
+    print(f"   Mirror-uite: {copied} | Lipsă: {missing} | Auto-generate: 3 (STATUS_SNAPSHOT, DOSAR_DATE_BRUTE, CORESPONDENTA_INDEX)")
     print(
         "\n✅ Sync complet. Următor pas: commit + push → Drive Connector re-index automat în Projects."
     )

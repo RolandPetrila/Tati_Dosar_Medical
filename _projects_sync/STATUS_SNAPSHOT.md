@@ -1,8 +1,8 @@
 # STATUS SNAPSHOT — Petrilă Viorel-Mihai
 
-**Generat automat:** 2026-04-29 23:55
-**Ultim commit git:** `b78d145` (2026-04-29 19:36:27 +0300)
-**Mesaj commit:** [REPROGRAMARE 2026-04-29] Consult oncolog: 4.05 Anater → 30.04 ora 12:00 Mate Endre
+**Generat automat:** 2026-04-30 01:12
+**Ultim commit git:** `53aa43a` (2026-04-29 23:55:20 +0300)
+**Mesaj commit:** [FIX 2026-04-29] Cleanup 6 referințe LIVE rămase la 4.05 / Anater post-reprogramare
 **Sursă de adevăr:** fișierele originale din proiect `.Tati`. Acest snapshot e mirror sintetic generat de `scripts/regen_projects_sync.py` pentru chat Claude Projects (web/mobil).
 
 > **Ordine consultare în chat:** STATUS_SNAPSHOT.md (aici) → CONTEXT_MEDICAL.md (detaliu clinic) → TODO.md (calendar) → CONTACTE_MEDICALE.md (medici) → REGULAMENT.md (reguli) → INDEX.json (index documente) → EXPLICATIE_CONSULT_ONCOLOG_SCENARII.md (glosar + scenarii prognostice).

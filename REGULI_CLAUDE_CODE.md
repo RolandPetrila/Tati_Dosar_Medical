@@ -1,6 +1,6 @@
-# REGULI_CLAUDE_CODE.md — Reguli specifice Claude Code (6-30)
+# REGULI_CLAUDE_CODE.md — Reguli specifice Claude Code (6-31)
 
-**Versiune:** 12.5 (adăugare R30 sistem sync Claude Projects pentru chat web/mobil) | **Data:** 2026-04-27
+**Versiune:** 12.6 (adăugare R31 sync permanent \_projects_sync cu auto-detect documente noi + bundle JSON canonice + index corespondență) | **Data:** 2026-04-30
 
 > **Citire obligatorie la prima interacțiune** — după `REGULAMENT.md` (reguli medicale fundamentale 1-10), înainte de `CONTEXT_MEDICAL.md`.
 >
@@ -491,6 +491,86 @@ Roland editează fișier sursă local
 - La modificare medicală majoră anticipată să fie consultată mobil → user re-uploadează cele 8 fișiere în Project knowledge după push
 - La conflict raportat de user între chat Projects și fișier original → instruiește verificare data din `STATUS_SNAPSHOT.md` antet + reupload manual
 - NU edita direct fișiere în `_projects_sync/` — sunt mirror, suprascrise la următorul commit cu fișier sursă; modificările se fac în originalele
+
+---
+
+## Regula 31 — Sync permanent `_projects_sync/` cu status LIVE garantat
+
+**Context:** R30 a stabilit folderul `_projects_sync/` ca mirror static pentru Claude Projects (chat web/mobil), cu workflow drag&drop manual. R31 extinde mecanismul: **orice modificare medicală (fișier sursă, JSON canonic nou, thread Gmail nou) se reflectă AUTOMAT în mirror la următorul commit**, fără intervenție manuală.
+
+**Cele 10 fișiere mirror permanent în `_projects_sync/`:**
+
+| #   | Fișier                                   | Tip           | Sursă                                              |
+| --- | ---------------------------------------- | ------------- | -------------------------------------------------- |
+| 1   | `CONTEXT_MEDICAL.md`                     | direct mirror | `CONTEXT_MEDICAL.md`                               |
+| 2   | `TODO.md`                                | direct mirror | `TODO.md`                                          |
+| 3   | `REGULAMENT.md`                          | direct mirror | `REGULAMENT.md`                                    |
+| 4   | `INDEX.json`                             | direct mirror | `INDEX.json` (auto-generat)                        |
+| 5   | `CONTACTE_MEDICALE.md`                   | direct mirror | `Dosar_Medical/CONTACTE_MEDICALE.md`               |
+| 6   | `EXPLICATIE_CONSULT_ONCOLOG_SCENARII.md` | direct mirror | `Documente_Informative/...`                        |
+| 7   | `STATUS_SNAPSHOT.md`                     | auto-generat  | `regen_projects_sync.py` (sumar one-page)          |
+| 8   | `PROJECTS_PRIMER.md`                     | manual        | (instrucțiuni Claude Projects)                     |
+| 9   | **`DOSAR_DATE_BRUTE.md`** ← R31 NOU      | auto-generat  | `build_dosar_bundle.py` din 19 JSON canonice       |
+| 10  | **`CORESPONDENTA_INDEX.md`** ← R31 NOU   | auto-generat  | `build_corespondenta_index.py` din threaduri Gmail |
+
+**Mecanism auto-update (pre-commit hook):**
+
+1. La orice `git commit`, hook-ul detectează staged changes:
+   - Fișiere root: `CONTEXT_MEDICAL.md`, `TODO.md`, `REGULAMENT.md`, `ALIMENTATIE.md`, `INDEX.json`
+   - `Dosar_Medical/CONTACTE_MEDICALE.md`
+   - `Documente_Informative/EXPLICATIE_CONSULT_ONCOLOG_SCENARII.md`
+   - **R31 trigger nou — orice JSON canonic** în `Dosar_Medical/*.json` (exclus `.meta.json`, `MANIFEST.json`, `SYSTEM_HEALTH.json`)
+   - **R31 trigger nou — orice thread Gmail** în `Dosar_Medical/corespondenta/*.md`
+
+2. La trigger → rulează automat `scripts/regen_projects_sync.py` care:
+   - Copiază cele 6 fișiere sursă în `_projects_sync/`
+   - Generează `STATUS_SNAPSHOT.md` cu git hash + timestamp
+   - **Apelează `scripts/build_dosar_bundle.py`** → regenerează `DOSAR_DATE_BRUTE.md` (concatenare JSON canonice)
+   - **Apelează `scripts/build_corespondenta_index.py`** → regenerează `CORESPONDENTA_INDEX.md` (sinteză threaduri)
+
+3. `git add _projects_sync/` automat → commit-ul include atomic mirror updatat
+4. `git push` → GitHub + Drive sync → mirror disponibil mobil
+
+**Detect documente noi (auto):**
+
+Bundle-urile folosesc `glob("Dosar_Medical/*.json")` și `glob("Dosar_Medical/corespondenta/*.md")` → **orice JSON canonic nou adăugat e inclus AUTOMAT** în `DOSAR_DATE_BRUTE.md` la următorul commit. Nu e nevoie de configurare manuală listă fișiere.
+
+**Consemnare obligatorie (R16 + R20 + R31):**
+
+Orice modificare medicală majoră → log obligatoriu în:
+
+- `CHANGELOG.md` (intrare cronologică cu Tip + Context + Modificări)
+- `SESSION_LOG.md` (R9 — coordonare Claude/Gemini)
+- Commit message descriptiv (R16 — prima linie ≤72 char + corp bullet-uri)
+
+**Status LIVE garantat — 3 mecanisme paralele:**
+
+| Mecanism         | Cine actualizează           | Frecvență                       | Garanție                          |
+| ---------------- | --------------------------- | ------------------------------- | --------------------------------- |
+| Pre-commit hook  | git automat                 | la fiecare commit cu trigger    | mirror = ultimul commit (atomic)  |
+| Drive sync       | Google Drive client desktop | continuu (delay câteva secunde) | `_projects_sync/` pe Drive = live |
+| Drag&drop manual | user                        | la modificare medicală majoră   | Claude Projects = ultim upload    |
+
+**Verificare versiune curentă în Projects mobil:**
+
+`STATUS_SNAPSHOT.md` antet conține `git_hash` + `timestamp`. User întreabă în chat: „Ce git hash are STATUS_SNAPSHOT-ul?" → compară cu HEAD git → decide dacă re-upload necesar.
+
+**Trigger reupload manual la mobil (user-decided):**
+
+- 🔴 **Reupload necesar:** modificare clinică majoră (consult efectuat, rezultat IHC, schimbare medicație, document medical nou)
+- 🟢 **Reupload OPȚIONAL:** modificări minore (typo, audit, log, refactor) — conținutul medical efectiv neschimbat
+
+Claude (în chat desktop) avertizează explicit: `🔔 reupload mirror la mobil — modificare X` la finalul răspunsului care a declanșat o regenerare medicală majoră.
+
+**Why:** consult oncolog 30.04.2026 OncoHelp Timișoara apropiat; deciziile critice se iau în week-end / deplasări fără laptop. Mirror-ul live garantat elimină riscul de a folosi date stale la mobil. Auto-detect documente noi previne uitarea de a include JSON-uri noi în bundle (cum s-a întâmplat 29.04 cu buletinul markeri tumorali — ingerat în repo dar inițial omis în mirror).
+
+**How to apply:**
+
+- La adăugare JSON canonic nou în `Dosar_Medical/` → **NU e nevoie de configurare** — bundle-ul îl detectează auto la `git add` + commit
+- La adăugare fișier root nou (ex: `BIOPSIE_FOLLOWUP.md`) → update lista `SOURCE_FILES` în `.git/hooks/pre-commit` + `FILES_TO_COPY` în `regen_projects_sync.py`
+- La modificare schemă JSON canonic (câmpuri noi) → update `render_section()` în `build_dosar_bundle.py` cu noile chei
+- La eroare în pre-commit hook → investighează imediat (NU folosi `--no-verify` decât dacă e blocaj real); script-urile au logging clar pentru debug
+- La consult medical major efectuat → notifică user cu marcaj `🔔 reupload mirror la mobil`
 
 ---
 
