@@ -1,6 +1,6 @@
 # AUDIT documente_sursa/ — Raport automat
 
-**Generat:** 2026-04-28 14:22
+**Generat:** 2026-04-29 17:50
 **Script:** `scripts/audit_documente_sursa.py` (R14 chain of custody + R26 consistență structură)
 
 ## Stats

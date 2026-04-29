@@ -4,6 +4,77 @@
 
 ---
 
+## 2026-04-29 18:38 — Ingest buletin Bioclinica 29.04 (markeri tumorali + HbA1c) + folder R26 nr. 16
+
+**Tip:** integrare document medical sursă (R23 + R24 + R26 + R14) + propagare DASHBOARD (R18) + update fișiere referință
+
+### Context
+
+User a depus PDF-ul `Bioclinica_Analize_Markeri_Sange.pdf` (143 KB) la `Dosar_Medical/documente_sursa/` (rădăcină — non-canonic R26). Buletinul **26429A0020 din 29.04.2026** Bioclinica Nădlac, recoltat 07:22 à jeun, conține 4 analize:
+
+- **CEA** = 0,87 ng/mL [<3,80 nefumători] — NORMAL
+- **CA 19-9** = 27,00 U/mL [<27,00] — BORDERLINE (exact pe limită)
+- **HbA1c** = 7,5% [4,0-5,6, țintă ADA <7,0%] — DIABET CONFIRMAT, control suboptimal
+- **CA 72-4ˢ** = 18,59 U/mL [<6,90] — ELEVAT ~2,7x (subcontractat Bioclinica Timișoara, marker specific gastric, **adăugat la recoltare ca extra** față de lista TODO)
+
+Validator buletin: Dr. Luminița Statnic (A08064). Medici raportori: Dr. Vorindan Anca Laura (A07744) — HbA1c · Dr. Gaiță Pîrvan Corina (D15815) — CA 72-4 subcontractat.
+
+### Operații efectuate
+
+**1. Backup R10 pre-modificare** (`Dosar_Medical/arhiva/context_medical_versiuni/`):
+
+- `CONTEXT_MEDICAL_pre-buletin-markeri-29-04_2026-04-29_1838.md`
+- `INDEX_pre-buletin-markeri-29-04_2026-04-29_1838.json`
+- `DASHBOARD_pre-buletin-markeri-29-04_2026-04-29_1838.html`
+- `TODO_pre-buletin-markeri-29-04_2026-04-29_1838.md`
+
+**2. Folder nou R26 nr. 16** — `Dosar_Medical/documente_sursa/16_analize_markeri_2026_04/` creat conform convenției.
+
+**3. PDF redenumit + mutat:**
+
+- Sursă: `documente_sursa/Bioclinica_Analize_Markeri_Sange.pdf` (non-canonic)
+- Destinație: `documente_sursa/16_analize_markeri_2026_04/2026-04-29_buletin_bioclinica_markeri_tumorali_hba1c.pdf`
+- Trasabilitate: câmp `source_document_renamed_from` în `.meta.json`
+
+**4. Fișiere noi create:**
+
+- `Dosar_Medical/2026-04-29_buletin_bioclinica_markeri_tumorali_hba1c.json` — JSON canonic schema v2.0 (R23 — extragere integrală 100% coverage)
+- `documente_sursa/16_analize_markeri_2026_04/2026-04-29_buletin_bioclinica_markeri_tumorali_hba1c.pdf.meta.json` — chain of custody R14
+- `documente_sursa/16_analize_markeri_2026_04/2026-04-29_buletin_bioclinica_markeri_tumorali_hba1c_extragere.md` — extragere strict-extractivă R23
+
+**5. Propagare R24 + update fișiere referință:**
+
+- `CONTEXT_MEDICAL.md` — secțiune nouă **§7.6** (Markeri tumorali + HbA1c, 29.04.2026) cu tabel rezultate + interpretare clinică sintetizată + observație pre-tratament (HbA1c suboptimal afectează vindecare anastomotică)
+- `CONTEXT_MEDICAL.md §4` (medicație) — notă HbA1c 7,5% pe linia Jamesi
+- `Dosar_Medical/CLAUDE.md` — tabel R26 (15 → 16 foldere; 13 → 14 populate)
+- `STRUCTURA_PROIECT.md` — tabel structură foldere (15 → 16)
+- `TODO.md` — calendar 29.04 ✅ EFECTUAT + checklist analize (CEA + CA 19-9 + HbA1c) bifate + intrare nouă CA 72-4 + nou task „Printare buletin pentru dosar fizic"
+- `DASHBOARD.html` — banner countdown actualizat (29.04 efectuate, focalizare pe 30.04 + 4.05) + 4 rânduri noi tabel analize (cronologic descrescător) + alert update detaliat 29.04 + timeline calendar bifat
+
+**6. Regenerare auto:**
+
+- `INDEX.json` — `documente_canonice` 21 → 22; `total_files_indexed` 156 → 159
+- `_projects_sync/` — regenerat (auto-mirror Claude Projects mobil) — 330.3 KB total
+
+### Implicații clinice (rezumate — interpretare R17)
+
+- **Pattern marker tumorali** (CEA normal + CA 19-9 limită + CA 72-4 elevat): `[PROBABIL]` compatibil cu adenocarcinom gastric/joncțional cu producție selectivă de mucină — întărește suspiciunea clinico-imagistică (CT 20.04 + biopsie 17.04 inconcluzivă), NU înlocuiește diagnosticul histologic; interpretare finală la consultul Dr. Anater 4.05.
+- **HbA1c 7,5%** `[CERT]`: diabet zaharat confirmat (≥6,5% per ADA), control suboptimal vs țintă <7,0% pentru pacient >20 ani; relevant pre-FLOT/chirurgie esofagiană (vindecare anastomotică + risc complicații).
+- **CA 72-4** este analiză suplimentară față de lista TODO inițială (CEA + CA 19-9 + HbA1c) — extragere R23 reflectă `[CERT]` valoarea + faptul subcontractării.
+
+### Cross-refs
+
+- §7.6 referă §7.4 (biopsie inconcluzivă) + §4 (medicație) + §8.1 (consult oncolog 4.05)
+- TODO.md task P0 #3 „Pregătire dosar fizic" — markeri + HbA1c bifate; rămâne printare
+
+### Surse citate
+
+- Buletin Bioclinica 26429A0020 (PDF nativ portal Bioclinica) — sursă primară
+- ADA Standards of Care 2024 (referință HbA1c) — citat indirect prin laborator
+- Marker tumoral CA 72-4 — specificitate adenocarcinom gastric (literatura standard) — citat în interpretare cu marcaj `[PROBABIL]`
+
+---
+
 ## 2026-04-28 15:00 — Revize STIL_EXPLICATII v1.0 → v2.0 + workflow AskUserQuestion obligatoriu (lecție din exemplu user)
 
 **Tip:** rafinare ghid stil + workflow nou pre-execuție

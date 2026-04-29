@@ -6,6 +6,31 @@
 
 ---
 
+## 2026-04-29 18:38 — [Claude_Opus_4.7_1M] ingest-buletin-bioclinica-29-04-markeri-tumorali-hba1c (R23 + R24 + R26 + R14 + R10 + R18)
+
+**Scop:** ingest buletin Bioclinica 26429A0020 (29.04.2026) cu 4 analize (CEA + CA 19-9 + CA 72-4 + HbA1c) — pregătire dosar fizic pentru consult oncolog 4.05 OncoHelp Timișoara.
+
+**Operații:**
+
+- Backup R10 pre-modificare: 4 fișiere (CONTEXT_MEDICAL, INDEX, DASHBOARD, TODO) → `Dosar_Medical/arhiva/context_medical_versiuni/`
+- Folder R26 nou: `documente_sursa/16_analize_markeri_2026_04/` (15 → 16 foldere; 13 → 14 populate)
+- PDF redenumit R26: `Bioclinica_Analize_Markeri_Sange.pdf` → `2026-04-29_buletin_bioclinica_markeri_tumorali_hba1c.pdf`
+- Fișiere noi: JSON canonic + .meta.json (R14 chain of custody) + MD strict-extractive (R23, coverage 100%)
+- Propagare R24: §7.6 nou în CONTEXT_MEDICAL.md + notă HbA1c 7,5% pe linia Jamesi §4
+- Update R18: DASHBOARD.html (banner countdown + tabel analize + alert update + timeline calendar)
+- Update R26: tabel folder Dosar_Medical/CLAUDE.md + STRUCTURA_PROIECT.md
+- Update TODO.md: calendar 29.04 ✅ + checklist task P0 dosar fizic (markeri + HbA1c bifate; rămâne printare)
+- Regenerare INDEX.json: 21 → 22 documente_canonice; 156 → 159 fișiere indexate
+- Regenerare \_projects_sync (330.3 KB total)
+
+**Findings critice:**
+
+- **CA 72-4 ELEVAT 2,7x** (18,59 vs <6,90) — marker specific adenocarcinom gastric/eso-gastric, relevant Siewert II suspect; analiză adăugată la recoltare ca extra (NU era pe lista TODO inițială: CEA + CA 19-9 + HbA1c)
+- **HbA1c 7,5%** — diabet suboptimal vs țintă ADA <7,0% pacient >20 ani → relevant pre-tratament oncologic (vindecare anastomotică)
+- CA 19-9 borderline + CEA normal → pattern compatibil adenocarcinom mucinos `[PROBABIL]`
+
+---
+
 ## 2026-04-28 15:00 — [Claude_Opus_4.7_1M] revize-stil-v2 + workflow-askuserquestion-obligatoriu (R10 + R17 + R20)
 
 **Scop:** rafinare ghid stil pentru documente educaționale familie după user a furnizat `2026-04-22_explicatie_consult_oncolog_scenarii.docx` (65 KB, 476 paragrafe, 12 tabele) ca exemplu reprezentativ.

@@ -1,0 +1,28 @@
+{
+  "source_document": "2026-04-29_buletin_bioclinica_markeri_tumorali_hba1c.pdf",
+  "source_document_renamed_from": "Bioclinica_Analize_Markeri_Sange.pdf",
+  "renamed_date": "2026-04-29",
+  "rename_reason": "R26 — convenție YYYY-MM-DD_descriere_scurta.ext la mutare în folder dedicat 16_analize_markeri_2026_04/",
+  "naming_note": "Numele original neconcordant cu R26; fișierul a fost depus de user în rădăcina documente_sursa/ și mutat + redenumit la procesare.",
+  "received_date": "2026-04-29",
+  "received_from": "pacient (Petrilă Viorel-Mihai) / familia Petrilă",
+  "digitized_by": "PDF generat de portal Bioclinica (descărcare directă)",
+  "digitized_date": "2026-04-29",
+  "transcriber": "Claude_Opus_4.7",
+  "transcription_date": "2026-04-29",
+  "ocr_quality": "good",
+  "content_type": "buletin_analize_medicale_Bioclinica_markeri_tumorali_HbA1c",
+  "json_extras": "2026-04-29_buletin_bioclinica_markeri_tumorali_hba1c.json",
+  "completeness_verified": "2026-04-29",
+  "coverage": "100%",
+  "validator": "claude-opus-4-7",
+  "chain_notes": "Buletin emis de Bioclinica SRL Arad (punct recoltare 00036 Bioclinica Nădlac), recoltat 29.04.2026 ora 07:22, generat în aceeași zi ora 18:08. Conține 4 analize: 3 markeri tumorali (CEA, CA 19-9, CA 72-4) + HbA1c. Marker CA 72-4 este SUBCONTRACTAT (marcaj 's') la Bioclinica Timișoara (cod 26429T2632, BLD Cetății 53B) — analiză NU acoperită de acreditarea RENAR pentru subcontractor (per nota explicativă pagina 1). Validator final buletin: Dr. Luminița Statnic, medic primar medicină de laborator (cod A08064). Medici primari raportori per analiză: Dr. Vorindan Anca Laura (A07744) pentru HbA1c, Dr. Gaiță Pîrvan Corina (D15815) pentru CA 72-4 subcontractat.",
+  "privacy_level": "SENSIBIL — conține CNP, adresă, date medicale",
+  "related_files": [
+    "2026-04-29_buletin_bioclinica_markeri_tumorali_hba1c.json",
+    "2026-04-29_buletin_bioclinica_markeri_tumorali_hba1c_extragere.md",
+    "2026-04-17_buletin_bioclinica_uree_creatinina.json"
+  ],
+  "numar_buletin": "26429A0020",
+  "context_clinic": "Buletin solicitat în pregătire consult oncolog 4.05.2026 OncoHelp Timișoara cu Dr. Anater Angelo-Christian. Analize cerute prin bilet trimitere medic familie Dr. Orbán Ecaterina-Maria. CA 72-4 este analiză suplimentară față de lista inițială (CEA + CA 19-9 + HbA1c) — adăugat la recoltare ca marker tumoral specific pentru adenocarcinom gastric / eso-gastric (relevant context Siewert II)."
+}

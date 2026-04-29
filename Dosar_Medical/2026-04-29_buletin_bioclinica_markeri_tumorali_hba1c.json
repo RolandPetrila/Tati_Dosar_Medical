@@ -1,0 +1,147 @@
+{
+  "_metadata": {
+    "schema_version": "2.0",
+    "nume_fisier": "2026-04-29_buletin_bioclinica_markeri_tumorali_hba1c.json",
+    "tip_document": "buletin_analize_laborator_markeri_tumorali_HbA1c",
+    "specialitate": "Laborator Clinic / Medicină de Laborator",
+    "data_document": "2026-04-29",
+    "data_recoltare": "2026-04-29T07:22:00",
+    "data_generare_buletin": "2026-04-29T18:08:00",
+    "numar_buletin": "26429A0020",
+    "sursa_pdf": "2026-04-29_buletin_bioclinica_markeri_tumorali_hba1c.pdf",
+    "sursa_locatie": "documente_sursa/16_analize_markeri_2026_04/",
+    "procesat_de": "Claude_Opus_4.7",
+    "data_procesare": "2026-04-29",
+    "ocr_quality": "good",
+    "confidence_overall": "high",
+    "completeness_verified": "2026-04-29",
+    "coverage": "100%",
+    "validator": "claude-opus-4-7",
+    "flags": [
+      "pre_consult_oncolog_4_05_2026",
+      "CA_72_4_elevat_2_7x_limita",
+      "HbA1c_diabet_control_suboptimal",
+      "CA_19_9_borderline_la_limita",
+      "CEA_normal",
+      "CA_72_4_subcontractat_Timisoara"
+    ],
+    "notes": "Buletin emis de Bioclinica SRL Arad, punct recoltare 00036 Bioclinica Nădlac. Recoltare matinală à jeun (07:22), generare buletin aceeași zi 18:08. Patru analize: 3 markeri tumorali serici (CEA, CA 19-9, CA 72-4) + HbA1c (control glicemic). CA 72-4 SUBCONTRACTAT la Bioclinica Timișoara (cod laborator 26429T2632) — marker NU acoperit RENAR pentru subcontractor. Validator final: Dr. Luminița Statnic (cod A08064). Solicitate prin bilet trimitere Dr. Orbán Ecaterina-Maria (medic familie Nădlac) în pregătire consult oncolog 4.05.2026 OncoHelp Timișoara cu Dr. Anater. CA 72-4 a fost adăugat la recoltare ca marker suplimentar specific adenocarcinom gastric/eso-gastric (relevant Siewert II)."
+  },
+  "pacient": {
+    "nume": "PETRILĂ",
+    "prenume": "VIOREL-MIHAI",
+    "cnp": "1590518024486",
+    "data_nasterii": "1959-05-18",
+    "varsta_la_data_document": 66,
+    "sex": "M",
+    "adresa": "STR Vasile Goldiș 42, Nădlac, Arad",
+    "confidence_identificare": "high"
+  },
+  "diagnostic": [],
+  "analize_laborator": [
+    {
+      "nume": "Antigen carcino embrionar (CEA)",
+      "nume_original": "Antigen carcino embrionar (CEA)",
+      "categorie": "marker_tumoral",
+      "valoare_numerica": 0.87,
+      "valoare_text": "0,87",
+      "unitate": "ng/mL",
+      "interval_referinta_min": null,
+      "interval_referinta_max": 3.8,
+      "interval_referinta_text": "< 3,80",
+      "interval_referinta_secundar": "Nefumători < 3,80 ng/mL; Fumători < 5,50 ng/mL",
+      "metoda": "ser, ECLIA",
+      "flag": "normal",
+      "confidence_ocr": "high",
+      "note": "Valoare în limita normală pentru nefumători (pacient fost fumător 1977-2012, 14 ani de abstinență — se aplică intervalul nefumători). CEA = marker tumoral nespecific (epitelial), util în monitorizarea evolutivă a cancerului colorectal, gastric, esofagian, pancreatic, pulmonar."
+    },
+    {
+      "nume": "CA 19-9",
+      "nume_original": "CA 19-9",
+      "categorie": "marker_tumoral",
+      "valoare_numerica": 27.0,
+      "valoare_text": "27,00",
+      "unitate": "U/mL",
+      "interval_referinta_min": null,
+      "interval_referinta_max": 27.0,
+      "interval_referinta_text": "< 27,00",
+      "metoda": "ser, ECLIA",
+      "flag": "borderline",
+      "confidence_ocr": "high",
+      "note": "Valoare exact pe limita superioară a intervalului normal. CA 19-9 = marker tumoral asociat cu adenocarcinom pancreatic, biliar, gastric, esofagian. Sensibilitate moderată; valori la limită necesită monitorizare evolutivă."
+    },
+    {
+      "nume": "Hemoglobină glicozilată (HbA1c)",
+      "nume_original": "Hemoglobină glicozilată (dozare de HbA1c)",
+      "categorie": "control_glicemic",
+      "valoare_numerica": 7.5,
+      "valoare_text": "7,5",
+      "unitate": "%",
+      "interval_referinta_min": 4.0,
+      "interval_referinta_max": 5.6,
+      "interval_referinta_text": "4,0 - 5,6",
+      "interval_referinta_secundar": "ADA: Normal ≤5,6%; Risc crescut diabet 5,7-6,4%; Diabet zaharat ≥6,5%. Țintă terapeutică >20 ani: <7,0%",
+      "metoda": "sânge integral EDTA, Ion-exchange HPLC",
+      "flag": "peste_limita",
+      "confidence_ocr": "high",
+      "medic_raportor": "Dr. Vorindan Anca Laura (A07744)",
+      "note": "Valoare 7,5% — confirmă diabet zaharat tip 2 (≥6,5% per ADA). Depășește ținta terapeutică recomandată ADA pentru pacient >20 ani (<7,0%) → control glicemic suboptimal cu schema actuală (Jamesi 50/1000 mg, 1-0-1). Reflectă glicemia medie pe ultimele 2-3 luni (~169 mg/dL estimat). Notă document: schimbare valori biologice de referință începând cu 18.05.2024."
+    },
+    {
+      "nume": "CA 72-4",
+      "nume_original": "CA 72-4ˢ",
+      "categorie": "marker_tumoral",
+      "valoare_numerica": 18.59,
+      "valoare_text": "18,59",
+      "unitate": "U/mL",
+      "interval_referinta_min": null,
+      "interval_referinta_max": 6.9,
+      "interval_referinta_text": "< 6,90",
+      "metoda": "ser, ECLIA",
+      "flag": "peste_limita",
+      "confidence_ocr": "high",
+      "subcontractat": true,
+      "laborator_subcontractor": "Bioclinica Timișoara (26429T2632)",
+      "adresa_subcontractor": "BLD Cetății 53B, Timișoara",
+      "medic_raportor": "Dr. Gaiță Pîrvan Corina (D15815)",
+      "acreditare_renar": false,
+      "acreditare_note": "Analiză subcontractată — NU acoperită de acreditarea RENAR pentru subcontractor (per notă explicativă buletin: 'Analizele și punctele de recoltare marcate (*) NU sunt acoperite de acreditarea RENAR'; respectiv 'Analizele marcate (s) sunt subcontractate').",
+      "note": "Valoare 18,59 U/mL — depășește limita superioară (<6,90) de aproximativ 2,7 ori. CA 72-4 = marker tumoral cu specificitate ridicată pentru adenocarcinom gastric, gastro-esofagian și ovarian. Sensibilitate ~30-50%, dar specificitate superioară CA 19-9 pentru patologia gastrică. Analiza a fost adăugată la recoltare ca marker suplimentar față de lista inițială (CEA + CA 19-9 + HbA1c) în context Siewert II suspect (CT 20.04.2026)."
+    }
+  ],
+  "tratament": [],
+  "recomandari": [],
+  "medici_unitati": {
+    "medic_validator_buletin": "Dr. Luminița Statnic",
+    "cod_medic_validator": "A08064",
+    "specialitate_validator": "medic primar medicină de laborator",
+    "unitate": "Bioclinica SRL Arad",
+    "sectie": "Laborator medical",
+    "punct_recoltare": "00036 Bioclinica Nădlac",
+    "adresa_laborator": "STR Dreptății 23, ap. 17, Arad",
+    "acreditare": "RENAR, SR EN ISO 15189:2023, certificat LM 207",
+    "subcontractor": {
+      "denumire": "Bioclinica Timișoara",
+      "cod_laborator": "26429T2632",
+      "adresa": "BLD Cetății 53B, Timișoara",
+      "operator_juridic": "Bioclinica SA",
+      "analize_subcontractate": ["CA 72-4"]
+    }
+  },
+  "analize_in_curs": [],
+  "numere_referinta": {
+    "numar_buletin": "26429A0020",
+    "cod_punct_recoltare": "00036",
+    "cod_laborator_subcontractor": "26429T2632"
+  },
+  "context_clinic": {
+    "scop_recoltare": "pregătire consult oncolog 4.05.2026 OncoHelp Timișoara (Dr. Anater Angelo-Christian)",
+    "bilet_trimitere": "Dr. Orbán Ecaterina-Maria, medic familie, Cabinet Medical Individual Nădlac",
+    "data_bilet_trimitere": "2026-04-27 sau 2026-04-28 (per task TODO P0)",
+    "documente_corelate": [
+      "2026-04-17_buletin_bioclinica_uree_creatinina.json (funcție renală pre-CT)",
+      "2026-04-17_biopsie_esofagiana_histopatologic.json (biopsie inconcluzivă, sugestiv carcinom)",
+      "2026-04-20_ct_torace_abdomen_pelvis.json (Siewert II probabil, T3-T4 N0-N1 M0)"
+    ]
+  }
+}

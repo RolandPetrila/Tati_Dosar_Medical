@@ -331,12 +331,12 @@ Confirmat prin tratament antihipertensiv triplu:
 
 Schema datată **10 noiembrie 2025**. Medic prescriptor **IDENTIFICAT (2026-04-24): Dr. LAZA CRISTINA** (medic primar cardiolog, cod parafă **C07842**) — cross-reference cu ecografia transtoracică efectuată în aceeași zi (sursă tipărită, cod parafă clar vizibil). Consult pre-chirurgie hernie.
 
-| Medicament                                                     | Indicație                                                | Doză                  | Ritm                  | Note                                                                      |
-| -------------------------------------------------------------- | -------------------------------------------------------- | --------------------- | --------------------- | ------------------------------------------------------------------------- |
-| **Jamesi** (sitagliptin + clorhidrat de metformin)             | Diabet zaharat tip 2                                     | 50 mg / 1000 mg       | 1-0-1 (dim. și seara) | **CRITIC**: componenta metformin se oprește 48h înainte de CT cu contrast |
-| **Aspenter** (acid acetilsalicilic)                            | Antiagregant post-stent coronarian 2012                  | 75 mg                 | 0-1-0 (prânz)         | NU se oprește pentru CT                                                   |
-| **Concor** (fumarat de bisoprolol)                             | Beta-blocant (cardioprotecție + HTA + control frecvență) | 5 mg                  | 1-0-0 (dimineața)     | Nu se oprește pentru CT                                                   |
-| **Triplixam** (perindopril arginine + indapamidă + amlodipină) | Antihipertensiv combinație triplă                        | 10 mg / 2.5 mg / 5 mg | 1-0-0 (dimineața)     | Nu se oprește pentru CT                                                   |
+| Medicament                                                     | Indicație                                                | Doză                  | Ritm                  | Note                                                                                                                                                       |
+| -------------------------------------------------------------- | -------------------------------------------------------- | --------------------- | --------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Jamesi** (sitagliptin + clorhidrat de metformin)             | Diabet zaharat tip 2                                     | 50 mg / 1000 mg       | 1-0-1 (dim. și seara) | **CRITIC**: componenta metformin se oprește 48h înainte de CT cu contrast. **HbA1c 7,5% (29.04.2026) → control suboptimal** vs țintă ADA <7,0% (vezi §7.6) |
+| **Aspenter** (acid acetilsalicilic)                            | Antiagregant post-stent coronarian 2012                  | 75 mg                 | 0-1-0 (prânz)         | NU se oprește pentru CT                                                                                                                                    |
+| **Concor** (fumarat de bisoprolol)                             | Beta-blocant (cardioprotecție + HTA + control frecvență) | 5 mg                  | 1-0-0 (dimineața)     | Nu se oprește pentru CT                                                                                                                                    |
+| **Triplixam** (perindopril arginine + indapamidă + amlodipină) | Antihipertensiv combinație triplă                        | 10 mg / 2.5 mg / 5 mg | 1-0-0 (dimineața)     | Nu se oprește pentru CT                                                                                                                                    |
 
 **Notă:** manuscrisul conținea o a 5-a recomandare tăiată cu marker albastru (anulată).
 
@@ -528,6 +528,52 @@ Efectuată concomitent cu endoscopia la Genesis Medical Clinic Arad (Dr. Noufal 
 **A declanșat:** CT efectuat 20.04.2026 la Genesis Medical Clinic Micălaca (vezi §2).
 
 **Sursă:** `documente_sursa/11_CT_stadializare_2026/2026-04-17_bilet_trimitere_CT_BCTAP_0631727.jpeg` + `Dosar_Medical/2026-04-17_bilet_trimitere_CT.json`.
+
+### 7.6 Markeri tumorali + HbA1c (29 aprilie 2026, Bioclinica Nădlac) — pre-consult oncolog 4.05
+
+**Status:** ✅ **EFECTUAT 29.04.2026** — recoltare matinală à jeun (07:22), buletin generat aceeași zi 18:08.
+
+**Buletin:** Bioclinica SRL Arad, nr. **26429A0020**, punct recoltare 00036 Bioclinica Nădlac.
+**Validator final:** Dr. Luminița Statnic (medic primar medicină de laborator, cod **A08064**).
+**Trimitere:** Dr. Orbán Ecaterina-Maria (medic familie Nădlac).
+**Scop:** pregătire consult oncolog 4.05.2026 OncoHelp Timișoara cu Dr. Anater Angelo-Christian.
+
+#### Rezultate
+
+| Analiză                                | Rezultat       | Interval normal             | Flag         | Metodă                            | Acreditare   |
+| -------------------------------------- | -------------- | --------------------------- | ------------ | --------------------------------- | ------------ |
+| **Antigen carcino embrionar (CEA)**    | **0,87 ng/mL** | < 3,80 (nefumători)         | normal       | ser, ECLIA                        | RENAR        |
+| **CA 19-9**                            | **27,00 U/mL** | < 27,00                     | borderline   | ser, ECLIA                        | RENAR        |
+| **Hemoglobină glicozilată (HbA1c)**    | **7,5 %**      | 4,0 - 5,6 (țintă ADA <7,0%) | peste limită | sânge integral EDTA, Ion-ex. HPLC | RENAR        |
+| **CA 72-4ˢ** (subcontractat Timișoara) | **18,59 U/mL** | < 6,90                      | peste limită | ser, ECLIA                        | NU subcontr. |
+
+**Subcontractor CA 72-4:** Bioclinica Timișoara (cod laborator **26429T2632**, BLD Cetății 53B, Bioclinica SA), medic raportor Dr. Gaiță Pîrvan Corina (cod parafă **D15815**). Per nota explicativă a buletinului: analizele subcontractate (marcaj `s`) NU sunt acoperite de acreditarea RENAR pentru subcontractor.
+
+**Medic raportor HbA1c:** Dr. Vorindan Anca Laura (cod parafă **A07744**).
+
+#### Interpretare clinică sintetizată
+
+| Element                                                                     | Verdict                                                                                                                                                                                                                                                                                                                                                        |
+| --------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| CEA — pattern cancer eso-gastric                                            | **Normal** `[CERT]` — sub limita nefumători (pacient cu 14 ani de abstinență tabagică). CEA poate fi normal în adenocarcinoame gastrice până la 30-50% din cazuri, mai ales în stadii localizate; nu exclude diagnosticul.                                                                                                                                     |
+| CA 19-9                                                                     | **La limita superioară** `[CERT]` — exact la 27,00 U/mL. CA 19-9 = marker asociat cu adenocarcinom pancreatic, biliar, gastric, esofagian; valori la limită necesită monitorizare evolutivă comparativă.                                                                                                                                                       |
+| **CA 72-4 — marker specific gastric**                                       | **Elevat ~2,7x limită** `[CERT]` (18,59 vs <6,90). CA 72-4 are specificitate ridicată pentru adenocarcinom gastric / gastro-esofagian (ovarian secundar). Sensibilitate 30-50%, **specificitate superioară CA 19-9** pentru patologia gastrică. Adăugat la recoltare ca marker suplimentar specific Siewert II suspect (CT 20.04.2026).                        |
+| Implicații clinice combinate (CEA normal + CA 19-9 limită + CA 72-4 elevat) | **Pattern compatibil cu adenocarcinom gastric / joncțional cu producție selectivă de mucină** `[PROBABIL]`. Markerii nu confirmă diagnosticul (rezervat IHC/biopsie), dar **întăresc suspiciunea clinico-imagistică** a CT-ului 20.04 + biopsiei 17.04. **NU înlocuiesc consultul medical** — interpretarea finală aparține Dr. Anater (4.05).                 |
+| HbA1c — control glicemic                                                    | **Diabet zaharat confirmat** `[CERT]` (≥6,5% per ADA). **Control suboptimal** `[CERT]` cu schema actuală — depășește ținta ADA <7,0% pentru pacient >20 ani. Glicemia medie estimată ultimele 2-3 luni: ~169 mg/dL. **Implicații pre-tratament oncologic:** controlul glicemic suboptimal afectează vindecare anastomotică și risc complicații post-chirurgie. |
+
+#### Markeri tumorali — **NU se folosesc pentru diagnostic primar**
+
+Markerii tumorali serici sunt instrumente complementare, NU substitut pentru diagnosticul histologic. Rolul lor principal:
+
+1. **Baseline pre-tratament** — referință pentru monitorizarea evoluției sub chimioterapie / post-chirurgie.
+2. **Monitorizare răspuns terapeutic** — scădere = răspuns probabil; creștere persistentă = progresie/recidivă.
+3. **Sugestie suplimentară** la datele clinico-imagistice deja prezente.
+
+**Decizie finală conduită terapeutică:** la consultul Dr. Anater 4.05 + comisia oncologică, după rezultatele IHC pe blocul T26H06044 sau rebiopsie țintită (vezi §7.4).
+
+#### Sursă document
+
+`Dosar_Medical/2026-04-29_buletin_bioclinica_markeri_tumorali_hba1c.json` + `documente_sursa/16_analize_markeri_2026_04/2026-04-29_buletin_bioclinica_markeri_tumorali_hba1c.{pdf,pdf.meta.json}` + extragere strict-extractivă `2026-04-29_buletin_bioclinica_markeri_tumorali_hba1c_extragere.md`.
 
 ---
 

@@ -8,26 +8,26 @@
 
 ## Calendar — date cheie
 
-| Data                                | Eveniment                                                                                                      | Status                                                                                                                                              |
-| ----------------------------------- | -------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------- |
-| 17.04.2026                          | Endoscopie + colonoscopie efectuate                                                                            | ✅ Finalizat                                                                                                                                        |
-| 17.04.2026                          | Bilet trimitere CT emis                                                                                        | ✅ Finalizat                                                                                                                                        |
-| **18.04.2026**                      | **STOP Jamesi (H-48 pre-CT)**                                                                                  | ✅ Finalizat                                                                                                                                        |
-| ~~19.04.2026 — analize creatinină~~ | ~~de efectuat~~ → ✅ ACOPERIT (buletin Bioclinica 17.04.2026)                                                  | ✅ Finalizat                                                                                                                                        |
-| 19.04.2026                          | Hidratare activă (plan confirmat de familie)                                                                   | ✅ Finalizat                                                                                                                                        |
-| **20.04.2026 17:00**                | **CT torace + abdomen + pelvis cu contrast (Genesis Micălaca)**                                                | ✅ **Finalizat** — raport integrat 22.04.2026                                                                                                       |
-| **22.04.2026**                      | Reluare Jamesi (H+48 post-CT, creatinină pre-CT normală)                                                       | ✅ **Finalizat** — reluat seara 22.04, fără complicații                                                                                             |
-| **25.04.2026 18:00**                | Mail trimis Dr. Anater (programare 30.04 + 5 întrebări organizatorice)                                         | ✅ Trimis                                                                                                                                           |
-| **26.04.2026 10:28**                | Răspuns Dr. Anater — reprogramare 30.04 → 4 mai + clarificări complete                                         | ✅ Primit · ingest 26.04 19:06                                                                                                                      |
-| **27.04.2026**                      | 3 telefoane programări                                                                                         | ✅ Finalizat — cardiolog 30.04 · analize 29.04 · bilete trimitere obținute                                                                          |
-| **28.04.2026** ✅                   | **Rezultat biopsie esofagiană PRIMIT** (Bioclinica SA Timișoara — buletin 26417A0362 / cod T26H06044)          | ✅ **Primit — INCONCLUZIV** („țesut granulație + ulcerație cronică, doar SUGESTIV carcinom"); monitor ntfy.sh oprit                                 |
-| **29.04.2026** ✅                   | Analize sânge — Bioclinica Nădlac (CEA + CA 19-9 + CA 72-4 + HbA1c)                                            | ✅ **EFECTUAT** — buletin 26429A0020; CEA 0,87 normal · CA 19-9 27,00 borderline · **CA 72-4 18,59 ELEVAT 2,7x** · **HbA1c 7,5% diabet suboptimal** |
-| **30.04.2026 ora 08:30**            | Consult cardiologic — ambulator Arad                                                                           | 🟢 **PROGRAMAT** [confirmat 27.04, ora exactă confirmată user 28.04]                                                                                |
-| **30.04.2026 ora 12:00** 🆕         | **Consult inițial OncoHelp Timișoara cu Dr. Mate Endre** (înregistrare pacient + pași suplimentari diagnostic) | 🔴 **PROGRAMAT NOU** [obținut telefonic 28.04 prin Dr. Vornicu] — fără tata e OK, doar Roland + Maria + dosarul                                     |
-| **28-30.04.2026**                   | Pregătire dosar fizic POST-biopsie pentru consult oncolog                                                      | 🔴 P0 — vezi secțiune dedicată mai jos                                                                                                              |
-| ~~30.04.2026~~                      | ~~Consult oncolog digestiv — OncoHelp Timișoara~~                                                              | ❌ ANULAT 26.04 (motivat: aglomerație 1 mai)                                                                                                        |
-| **4.05.2026 (luni)** 🔴             | **Consult oncolog digestiv — OncoHelp Timișoara** (REPROGRAMAT)                                                | 🔴 **PROGRAMAT** [per mail Anater 26.04]                                                                                                            |
-| Post-consult oncolog                | Evaluare endocrinologică (glandă suprarenală stângă)                                                           | 🟡 De programat                                                                                                                                     |
+| Data                                | Eveniment                                                                                                      | Status                                                                                                              |
+| ----------------------------------- | -------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- |
+| 17.04.2026                          | Endoscopie + colonoscopie efectuate                                                                            | ✅ Finalizat                                                                                                        |
+| 17.04.2026                          | Bilet trimitere CT emis                                                                                        | ✅ Finalizat                                                                                                        |
+| **18.04.2026**                      | **STOP Jamesi (H-48 pre-CT)**                                                                                  | ✅ Finalizat                                                                                                        |
+| ~~19.04.2026 — analize creatinină~~ | ~~de efectuat~~ → ✅ ACOPERIT (buletin Bioclinica 17.04.2026)                                                  | ✅ Finalizat                                                                                                        |
+| 19.04.2026                          | Hidratare activă (plan confirmat de familie)                                                                   | ✅ Finalizat                                                                                                        |
+| **20.04.2026 17:00**                | **CT torace + abdomen + pelvis cu contrast (Genesis Micălaca)**                                                | ✅ **Finalizat** — raport integrat 22.04.2026                                                                       |
+| **22.04.2026**                      | Reluare Jamesi (H+48 post-CT, creatinină pre-CT normală)                                                       | ✅ **Finalizat** — reluat seara 22.04, fără complicații                                                             |
+| **25.04.2026 18:00**                | Mail trimis Dr. Anater (programare 30.04 + 5 întrebări organizatorice)                                         | ✅ Trimis                                                                                                           |
+| **26.04.2026 10:28**                | Răspuns Dr. Anater — reprogramare 30.04 → 4 mai + clarificări complete                                         | ✅ Primit · ingest 26.04 19:06                                                                                      |
+| **27.04.2026**                      | 3 telefoane programări                                                                                         | ✅ Finalizat — cardiolog 30.04 · analize 29.04 · bilete trimitere obținute                                          |
+| **28.04.2026** ✅                   | **Rezultat biopsie esofagiană PRIMIT** (Bioclinica SA Timișoara — buletin 26417A0362 / cod T26H06044)          | ✅ **Primit — INCONCLUZIV** („țesut granulație + ulcerație cronică, doar SUGESTIV carcinom"); monitor ntfy.sh oprit |
+| **29.04.2026**                      | Analize sânge — Bioclinica Arad                                                                                | 🟢 **PROGRAMAT** [confirmat 27.04]                                                                                  |
+| **30.04.2026 ora 08:30**            | Consult cardiologic — ambulator Arad                                                                           | 🟢 **PROGRAMAT** [confirmat 27.04, ora exactă confirmată user 28.04]                                                |
+| **30.04.2026 ora 12:00** 🆕         | **Consult inițial OncoHelp Timișoara cu Dr. Mate Endre** (înregistrare pacient + pași suplimentari diagnostic) | 🔴 **PROGRAMAT NOU** [obținut telefonic 28.04 prin Dr. Vornicu] — fără tata e OK, doar Roland + Maria + dosarul     |
+| **28-30.04.2026**                   | Pregătire dosar fizic POST-biopsie pentru consult oncolog                                                      | 🔴 P0 — vezi secțiune dedicată mai jos                                                                              |
+| ~~30.04.2026~~                      | ~~Consult oncolog digestiv — OncoHelp Timișoara~~                                                              | ❌ ANULAT 26.04 (motivat: aglomerație 1 mai)                                                                        |
+| **4.05.2026 (luni)** 🔴             | **Consult oncolog digestiv — OncoHelp Timișoara** (REPROGRAMAT)                                                | 🔴 **PROGRAMAT** [per mail Anater 26.04]                                                                            |
+| Post-consult oncolog                | Evaluare endocrinologică (glandă suprarenală stângă)                                                           | 🟡 De programat                                                                                                     |
 
 ---
 
@@ -69,11 +69,10 @@
 
 **3. Analize sânge — Bioclinica Arad:**
 
-- [x] ✅ **EFECTUAT — 29.04.2026** · recoltare à jeun 07:22 Bioclinica Nădlac · buletin 26429A0020
-- [x] ✅ **CEA** (antigen carcinoembrionar) — **0,87 ng/mL NORMAL** (<3,80 nefumători)
-- [x] ✅ **CA 19-9** — **27,00 U/mL BORDERLINE** (exact pe limita superioară <27,00)
-- [x] ✅ **HbA1c** — **7,5% PESTE LIMITĂ** (țintă ADA <7,0% pacient >20 ani; control glicemic suboptimal cu Jamesi)
-- [x] ✅ **CA 72-4** (marker tumoral specific gastric, adăugat la recoltare ca extra) — **18,59 U/mL ELEVAT ~2,7x** limita (<6,90); subcontractat Bioclinica Timișoara · medic raportor Dr. Gaiță Pîrvan Corina (D15815)
+- [x] ✅ **PROGRAMAT — 29.04.2026** · recoltare a jeun, dimineața
+- [x] ✅ **CEA** (antigen carcinoembrionar) — inclus [confirmat 28.04]
+- [x] ✅ **CA 19-9** (antigen carbohidrat 19-9) — inclus [confirmat 28.04]
+- [x] ✅ **HbA1c** (hemoglobina glicozilată A1c) — adăugat [28.04] · arată controlul glicemic pe 2-3 luni · relevant pre-chimio/chirurgie
 
 **Acțiune Roland:** după telefoane, revine cu statusul (programare confirmată / alternativă propusă) — actualizare task corespunzător.
 
@@ -128,10 +127,8 @@
 - [x] ✅ **CD DICOM** de la CT 20.04.2026 (Genesis) — la dosar [confirmat 28.04]
 - [ ] **Raport CT 20.04.2026** (printare)
 - [x] ✅ **Rezultat biopsie histopatologic** — primit 28.04.2026 (Bioclinica 26417A0362 / T26H06044). **De printat** atât buletinul Bioclinica cât și interpretarea sintetizată (`CONTEXT_MEDICAL.md §7.4`) + documentul `.docx` pentru familie generat 28.04
-- [x] ✅ **Markeri tumorali CEA + CA 19-9** — efectuat 29.04 (CEA 0,87 normal · CA 19-9 27,00 borderline)
-- [x] ✅ **HbA1c (hemoglobina glicozilată A1c)** — efectuat 29.04 (7,5% — diabet suboptimal vs țintă ADA <7,0%)
-- [x] ✅ **CA 72-4** (marker tumoral specific adenocarcinom gastric/eso-gastric) — efectuat 29.04 (18,59 U/mL ELEVAT ~2,7x; relevant Siewert II) [adăugat la recoltare ca extra-marker]
-- [ ] **Printare buletin analize 29.04** + adăugare în dosarul fizic pentru consult 4.05
+- [x] ✅ **Markeri tumorali CEA + CA 19-9** — confirmat în analizele Bioclinica 29.04 [confirmat 28.04]
+- [x] ✅ **HbA1c (hemoglobina glicozilată A1c)** — adăugat în analizele Bioclinica 29.04 [28.04] — arată controlul glicemic pe 2-3 luni; relevant pre-chimio/chirurgie
 - [ ] **Consult cardiologic** — 🟢 PROGRAMAT 30.04.2026 → de adus scrisoare medicală + ECG + ECO fizic la 04.05
 - [ ] Listă medicație curentă (4 confirmate: Aspenter, Concor, Triplixam, Jamesi) + alergii (fără)
 - [ ] **Scrisori medicale + bilete ieșire spital pentru ALTE patologii / intervenții / proceduri** [per mail Anater 26.04 — pentru evaluare comorbidități]:

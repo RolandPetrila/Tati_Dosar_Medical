@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="ro">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Schemă medicamente</title>
+    <style>
+      @page {
+        size: A4 portrait;
+        margin: 2cm;
+      }
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        font-family: "Times New Roman", Georgia, serif;
+        font-size: 14pt;
+        color: #000;
+        padding: 1.5cm;
+      }
+      table {
+        border-collapse: collapse;
+        width: 100%;
+        table-layout: fixed;
+      }
+      th,
+      td {
+        border: 1.5px solid #000;
+        padding: 14px 10px;
+        vertical-align: middle;
+      }
+      th {
+        background: #ececec;
+        text-align: center;
+        font-weight: bold;
+        font-size: 14pt;
+      }
+      td.med {
+        font-weight: bold;
+        font-size: 14pt;
+        padding-left: 14px;
+      }
+      td.dose {
+        text-align: center;
+        font-size: 18pt;
+        font-weight: bold;
+      }
+      col.col-med {
+        width: 38%;
+      }
+      col.col-dim {
+        width: 13%;
+      }
+      col.col-pranz {
+        width: 13%;
+      }
+      col.col-seara {
+        width: 13%;
+      }
+      col.col-obs {
+        width: 23%;
+      }
+      @media print {
+        body {
+          padding: 0;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <table>
+      <colgroup>
+        <col class="col-med" />
+        <col class="col-dim" />
+        <col class="col-pranz" />
+        <col class="col-seara" />
+        <col class="col-obs" />
+      </colgroup>
+      <thead>
+        <tr>
+          <th>Recomandare</th>
+          <th>Dim.</th>
+          <th>Prânz</th>
+          <th>Seara</th>
+          <th>Observații</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="med">ASPENTER 75 mg</td>
+          <td class="dose"></td>
+          <td class="dose">1</td>
+          <td class="dose"></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="med">CONCOR 5 mg</td>
+          <td class="dose">1</td>
+          <td class="dose"></td>
+          <td class="dose"></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="med">TRIPLIXAM 10/2,5/5 mg</td>
+          <td class="dose">1</td>
+          <td class="dose"></td>
+          <td class="dose"></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="med">JAMESI 50/1000 mg</td>
+          <td class="dose">1</td>
+          <td class="dose"></td>
+          <td class="dose">1</td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>

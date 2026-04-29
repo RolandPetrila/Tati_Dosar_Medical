@@ -1,12 +1,12 @@
 {
-  "generated_at": "2026-04-28T15:17:18",
+  "generated_at": "2026-04-29T18:46:40",
   "version": "1.1",
   "stats": {
-    "total_files_indexed": 155,
+    "total_files_indexed": 159,
     "medici_oncohelp": 3,
     "threaduri_gmail": 6,
-    "documente_canonice": 21,
-    "documente_pentru_dashboard": 18,
+    "documente_canonice": 22,
+    "documente_pentru_dashboard": 19,
     "atasamente_listate": 0
   },
   "medici_oncohelp": [
@@ -384,9 +384,26 @@
     {
       "id": "2026-04-17_biopsie_esofagiana_histopatologic",
       "file": "Dosar_Medical/2026-04-17_biopsie_esofagiana_histopatologic.json"
+    },
+    {
+      "id": "2026-04-29_buletin_bioclinica_markeri_tumorali_hba1c",
+      "file": "Dosar_Medical/2026-04-29_buletin_bioclinica_markeri_tumorali_hba1c.json"
     }
   ],
   "documente_pentru_dashboard": [
+    {
+      "id": "2026-04-29_buletin_bioclinica_markeri_tumorali_hba1c",
+      "titlu": "Buletin bioclinica markeri tumorali hba1c (29.04.2026)",
+      "data": "2026-04-29",
+      "categorie_id": "16_analize_markeri_2026_04",
+      "categorie_label": "16_analize_markeri_2026_04",
+      "md_path": "Dosar_Medical/documente_sursa/16_analize_markeri_2026_04/2026-04-29_buletin_bioclinica_markeri_tumorali_hba1c_extragere.md",
+      "size_kb": 8.1,
+      "preview": "1. METADATE DOCUMENT · • Fișier sursă: 2026-04-29_buletin_bioclinica_markeri_tumorali_hba1c.pdf (redenumit din Bioclinica_Analize_Markeri_Sange.pdf — R26) • Tip document: Buletin de analize medicale (3 markeri tumorali…",
+      "json_paths": [
+        "Dosar_Medical/2026-04-29_buletin_bioclinica_markeri_tumorali_hba1c.json"
+      ]
+    },
     {
       "id": "2026-04-28_opis_consult_initial_oncohelp",
       "titlu": "Documentele necesare la primul consult la Oncologie (per OPIS oficial)",
@@ -671,6 +688,7 @@
     ],
     "Mate": [
       "SESSION_LOG.md",
+      "STRUCTURA_PROIECT.md",
       "TODO.md",
       "CONTEXT_MEDICAL.md",
       "CHANGELOG.md",
@@ -688,8 +706,7 @@
       "Dosar_Medical/documente_sursa/02_cardiologie_2012/2012-02-17_cardiologie_vichy_stent_extragere.md",
       "Dosar_Medical/documente_sursa/15_consult_initial_oncologie_2026/2026-04-28_opis_consult_initial_oncohelp_extragere.md",
       "INDEX.json",
-      "_projects_sync/INDEX.json",
-      "Dosar_Medical/rapoarte_generate/2026-04-19_ghid_cancer_esofagian_complet.meta.json"
+      "_projects_sync/INDEX.json"
     ],
     "Vornicu": [
       "SESSION_LOG.md",
@@ -722,8 +739,8 @@
     },
     "SESSION_LOG.md": {
       "type": "md",
-      "size_kb": 111.7,
-      "last_modified": "2026-04-28T14:43:15"
+      "size_kb": 113.1,
+      "last_modified": "2026-04-28T15:34:29"
     },
     "WEB_QUERIES.md": {
       "type": "md",
@@ -752,8 +769,8 @@
     },
     "STRUCTURA_PROIECT.md": {
       "type": "md",
-      "size_kb": 25.9,
-      "last_modified": "2026-04-28T14:20:21"
+      "size_kb": 27.8,
+      "last_modified": "2026-04-29T18:43:59"
     },
     "BAZA_CUNOSTINTE.md": {
       "type": "md",
@@ -777,18 +794,18 @@
     },
     "TODO.md": {
       "type": "md",
-      "size_kb": 46.0,
-      "last_modified": "2026-04-28T13:37:40"
+      "size_kb": 47.1,
+      "last_modified": "2026-04-29T18:44:19"
     },
     "CONTEXT_MEDICAL.md": {
       "type": "md",
-      "size_kb": 75.0,
-      "last_modified": "2026-04-28T15:12:20"
+      "size_kb": 81.4,
+      "last_modified": "2026-04-29T18:43:17"
     },
     "CHANGELOG.md": {
       "type": "md",
-      "size_kb": 172.6,
-      "last_modified": "2026-04-28T14:42:57"
+      "size_kb": 176.3,
+      "last_modified": "2026-04-28T15:34:20"
     },
     "ALIMENTATIE.md": {
       "type": "md",
@@ -797,8 +814,8 @@
     },
     "REGULI_CLAUDE_CODE.md": {
       "type": "md",
-      "size_kb": 34.2,
-      "last_modified": "2026-04-28T14:40:35"
+      "size_kb": 35.0,
+      "last_modified": "2026-04-28T15:33:52"
     },
     "PLAN_IMPLEMENTARE_2026-04-25.md": {
       "type": "md",
@@ -827,8 +844,8 @@
     },
     "Dosar_Medical/CLAUDE.md": {
       "type": "md",
-      "size_kb": 24.5,
-      "last_modified": "2026-04-28T13:38:01"
+      "size_kb": 25.6,
+      "last_modified": "2026-04-29T18:43:37"
     },
     "Dosar_Medical/EXTRAGERI_INCOMPLETE.md": {
       "type": "md",
@@ -843,7 +860,7 @@
     "Dosar_Medical/AUDIT_DOCUMENTE_SURSA.md": {
       "type": "md",
       "size_kb": 1.5,
-      "last_modified": "2026-04-28T14:22:12"
+      "last_modified": "2026-04-29T17:50:03"
     },
     "Documentatie_Initiala/README.md": {
       "type": "md",
@@ -972,8 +989,8 @@
     },
     "Documente_Informative/STIL_EXPLICATII_FAMILIE.md": {
       "type": "md",
-      "size_kb": 9.5,
-      "last_modified": "2026-04-28T14:40:27"
+      "size_kb": 14.7,
+      "last_modified": "2026-04-28T15:32:26"
     },
     "_projects_sync/PROJECTS_PRIMER.md": {
       "type": "md",
@@ -983,7 +1000,7 @@
     "_projects_sync/CONTEXT_MEDICAL.md": {
       "type": "md",
       "size_kb": 75.0,
-      "last_modified": "2026-04-28T12:28:51"
+      "last_modified": "2026-04-28T15:12:20"
     },
     "_projects_sync/TODO.md": {
       "type": "md",
@@ -1008,7 +1025,7 @@
     "_projects_sync/STATUS_SNAPSHOT.md": {
       "type": "md",
       "size_kb": 26.2,
-      "last_modified": "2026-04-28T14:36:24"
+      "last_modified": "2026-04-29T02:49:45"
     },
     "Dosar_Medical/cercetari/SINTEZA_CLINICI_ONCOLOGIE.md": {
       "type": "md",
@@ -1145,10 +1162,15 @@
       "size_kb": 7.0,
       "last_modified": "2026-04-28T12:03:11"
     },
+    "Dosar_Medical/documente_sursa/16_analize_markeri_2026_04/2026-04-29_buletin_bioclinica_markeri_tumorali_hba1c_extragere.md": {
+      "type": "md",
+      "size_kb": 8.1,
+      "last_modified": "2026-04-29T18:41:35"
+    },
     "INDEX.json": {
       "type": "json",
       "size_kb": 57.4,
-      "last_modified": "2026-04-28T15:16:31"
+      "last_modified": "2026-04-29T02:49:23"
     },
     "Dosar_Medical/2012-02-17_cardiologie_vichy_stent.json": {
       "type": "json",
@@ -1347,13 +1369,18 @@
     },
     "Dosar_Medical/SYSTEM_HEALTH.json": {
       "type": "json",
-      "size_kb": 3.5,
-      "last_modified": "2026-04-28T14:21:48"
+      "size_kb": 3.7,
+      "last_modified": "2026-04-29T17:41:41"
     },
     "Dosar_Medical/2026-04-17_biopsie_esofagiana_histopatologic.json": {
       "type": "json",
       "size_kb": 10.6,
       "last_modified": "2026-04-28T12:38:46"
+    },
+    "Dosar_Medical/2026-04-29_buletin_bioclinica_markeri_tumorali_hba1c.json": {
+      "type": "json",
+      "size_kb": 7.5,
+      "last_modified": "2026-04-29T18:40:47"
     },
     ".claude/settings.local.json": {
       "type": "json",
@@ -1362,8 +1389,8 @@
     },
     "_projects_sync/INDEX.json": {
       "type": "json",
-      "size_kb": 42.4,
-      "last_modified": "2026-04-28T14:22:11"
+      "size_kb": 57.4,
+      "last_modified": "2026-04-29T02:49:23"
     },
     "schemas/dosar_medical_v2.json": {
       "type": "json",
@@ -1480,15 +1507,25 @@
       "size_kb": 2.9,
       "last_modified": "2026-04-28T12:02:12"
     },
+    "Dosar_Medical/documente_sursa/16_analize_markeri_2026_04/2026-04-29_buletin_bioclinica_markeri_tumorali_hba1c.pdf.meta.json": {
+      "type": "json",
+      "size_kb": 2.4,
+      "last_modified": "2026-04-29T18:39:41"
+    },
     "DASHBOARD.html": {
       "type": "html",
-      "size_kb": 199.9,
-      "last_modified": "2026-04-28T15:12:43"
+      "size_kb": 391.6,
+      "last_modified": "2026-04-29T18:46:07"
     },
     "index.html": {
       "type": "html",
       "size_kb": 0.3,
       "last_modified": "2026-04-18T21:06:26"
+    },
+    "Documente_Informative/SCHEMA_MEDICAMENTE_PRINT.html": {
+      "type": "html",
+      "size_kb": 2.5,
+      "last_modified": "2026-04-29T18:09:07"
     }
   }
 }

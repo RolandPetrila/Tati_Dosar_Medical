@@ -21,9 +21,9 @@ dosar_medical_petrila/
 ├── TODO.md                           Acțiuni curente
 ├── CHANGELOG.md                      Istoricul modificărilor
 │
-├── documente_sursa/                  Scanurile și fișierele originale (structură v2026-04-24 — 14 foldere, 99_altele ELIMINAT)
+├── documente_sursa/                  Scanurile și fișierele originale (structură v2026-04-29 — 16 foldere, 99_altele ELIMINAT)
 │   ├── 01_identitate/                Carte identitate, pașaport
-│   ├── 02_cardiologie_2012/          Stent Vichy 2012 (🟡 PDF de obținut)
+│   ├── 02_cardiologie_2012/          Stent Vichy 2012 (BMS confirmat)
 │   ├── 03_hernie_anterior/           Prima operație de hernie (🟡 dată necunoscută)
 │   ├── 04_helicobacter_2024/         Serologie H. pylori iunie + septembrie 2024
 │   ├── 05_analize_laborator/         Buletine analize sânge / urină (cronologic)
@@ -33,11 +33,13 @@ dosar_medical_petrila/
 │   ├── 09_endoscopie_2026_04/        Gastroscopie + colonoscopie 17.04.2026 (Dr. Noufal)
 │   ├── 10_administrativ_pensie/      Talon pensie, dovezi asigurare CASS
 │   ├── 11_CT_stadializare_2026/      Bilet trimitere CT + raport CT 20.04.2026 (Dr. Buie + Dr. Candea)
-│   ├── 12_biopsie_2026/              Rezultat biopsie (🟡 așteptare Bioclinica)
+│   ├── 12_biopsie_2026/              Rezultat biopsie 17.04.2026 (Bioclinica, INCONCLUZIV — Dr. Glăja)
 │   ├── 13_cardiologie_ambulator_2025/  Consult cardiologie + ECO 10.11.2025 (Dr. LAZA CRISTINA)
-│   └── 14_UPU_2024_05_30/            Episod UPU Arad 30.05.2024 (Dr. Post + Dr. Grada + Dr. Pop)
+│   ├── 14_UPU_2024_05_30/            Episod UPU Arad 30.05.2024 (Dr. Post + Dr. Grada + Dr. Pop)
+│   ├── 15_consult_initial_oncologie_2026/  OPIS consult inițial OncoHelp 30.04.2026 (Dr. Mate Endre)
+│   └── 16_analize_markeri_2026_04/   Markeri tumorali CEA + CA 19-9 + CA 72-4 + HbA1c 29.04.2026 (Bioclinica Nădlac)
 │
-│   [Convenție R26: NN_categorie_data/ unde NN crește continuu; 99_altele/ eliminat 2026-04-24 — documente noi se plasează în folder tematic sau se creează 15_... conform convenției]
+│   [Convenție R26: NN_categorie_data/ unde NN crește continuu; 99_altele/ eliminat 2026-04-24 — documente noi se plasează în folder tematic sau se creează 17_... conform convenției]
 │
 ├── interpretari/                     Sintezele / interpretările documentelor
 │   ├── 2026-04-14_ecografie.md
@@ -273,32 +275,32 @@ Structura descrisă în acest fișier **nu se modifică decât cu acordul explic
 
 ## 🗺 Hartă completă auto-generată
 
-> ⚙️ **Generat automat:** 2026-04-28T16:34:46 de `scripts/regenerate_structura.py`. NU edita manual această secțiune — modificările se pierd la următoarea regenerare. Pentru cuprinsul fix vezi secțiunile non-auto de mai sus.
+> ⚙️ **Generat automat:** 2026-04-29T02:49:26 de `scripts/regenerate_structura.py`. NU edita manual această secțiune — modificările se pierd la următoarea regenerare. Pentru cuprinsul fix vezi secțiunile non-auto de mai sus.
 
 ### 📊 Statistici live
 
-- **Total fișiere proiect (excl. .git):** 294
+- **Total fișiere proiect (excl. .git):** 304
 - **Markdown (.md):** 126
 - **JSON (.json):** 76
 - **HTML (.html):** 13
-- **Total size:** 65989.6 KB
+- **Total size:** 66507.8 KB
 
 ### 🧭 Index thematic (caut...)
 
-| Caut...                                        | Mergi la                                                                 |
-| ---------------------------------------------- | ------------------------------------------------------------------------ |
-| biopsie  | `Dosar_Medical/documente_sursa/12_biopsie_2026/` · `TODO.md` · `Documente_Informative/EXPLICATIE_CONSULT_ONCOLOG_SCENARII.md` |
-| medic / oncolog / programare  | `Dosar_Medical/CONTACTE_MEDICALE.md` · `CONTEXT_MEDICAL.md (§9 Echipă medicală)` · `TODO.md (Calendar + P0)` |
-| corespondență email medici  | `Dosar_Medical/corespondenta/INDEX.md` · `Dosar_Medical/corespondenta/2026-04-*.md` |
-| dietă / alimentație  | `ALIMENTATIE.md` · `DASHBOARD.html (tab Alimentație)` |
-| CT 20.04.2026  | `Dosar_Medical/2026-04-20_ct_torace_abdomen_pelvis.json` · `Dosar_Medical/documente_sursa/11_CT_stadializare_2026/` · `CONTEXT_MEDICAL.md §2` |
-| endoscopie / colonoscopie 17.04.2026  | `Dosar_Medical/2026-04-17_examen_gastroscopic.json` · `Dosar_Medical/2026-04-17_examen_colonoscopic.json` · `Dosar_Medical/documente_sursa/09_endoscopie_2026_04/` |
-| medicație + interacțiuni  | `CONTEXT_MEDICAL.md §4` · `Dosar_Medical/2025-11-10_schema_medicamente.json` · `Dosar_Medical/rapoarte_generate/2026-04-18_raport_reactii_adverse_jamesi_triplixam.docx` |
-| monitor automat biopsie ntfy.sh  | `TODO.md (secțiunea Monitor automat)` · `C:\Users\ALIENWARE\Desktop\Roly\Sistem_Notificari_Telefon\ (repo extern)` |
-| DASHBOARD live (familie)  | `DASHBOARD.html` · `https://rolandpetrila.github.io/Tati_Dosar_Medical/` |
-| reguli + protocol  | `CLAUDE.md (loader)` · `REGULAMENT.md (R1-10 medicale)` · `REGULI_CLAUDE_CODE.md (R6-29 specifice)` |
-| system health monitor R28  | `Dosar_Medical/SYSTEM_HEALTH.json` · `scripts/system_health_check.py` |
-| plan execuție curent  | `PLAN_IMPLEMENTARE_2026-04-25.md (status în frontmatter)` |
+| Caut...                              | Mergi la                                                                                                                                                                 |
+| ------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| biopsie                              | `Dosar_Medical/documente_sursa/12_biopsie_2026/` · `TODO.md` · `Documente_Informative/EXPLICATIE_CONSULT_ONCOLOG_SCENARII.md`                                            |
+| medic / oncolog / programare         | `Dosar_Medical/CONTACTE_MEDICALE.md` · `CONTEXT_MEDICAL.md (§9 Echipă medicală)` · `TODO.md (Calendar + P0)`                                                             |
+| corespondență email medici           | `Dosar_Medical/corespondenta/INDEX.md` · `Dosar_Medical/corespondenta/2026-04-*.md`                                                                                      |
+| dietă / alimentație                  | `ALIMENTATIE.md` · `DASHBOARD.html (tab Alimentație)`                                                                                                                    |
+| CT 20.04.2026                        | `Dosar_Medical/2026-04-20_ct_torace_abdomen_pelvis.json` · `Dosar_Medical/documente_sursa/11_CT_stadializare_2026/` · `CONTEXT_MEDICAL.md §2`                            |
+| endoscopie / colonoscopie 17.04.2026 | `Dosar_Medical/2026-04-17_examen_gastroscopic.json` · `Dosar_Medical/2026-04-17_examen_colonoscopic.json` · `Dosar_Medical/documente_sursa/09_endoscopie_2026_04/`       |
+| medicație + interacțiuni             | `CONTEXT_MEDICAL.md §4` · `Dosar_Medical/2025-11-10_schema_medicamente.json` · `Dosar_Medical/rapoarte_generate/2026-04-18_raport_reactii_adverse_jamesi_triplixam.docx` |
+| monitor automat biopsie ntfy.sh      | `TODO.md (secțiunea Monitor automat)` · `C:\Users\ALIENWARE\Desktop\Roly\Sistem_Notificari_Telefon\ (repo extern)`                                                       |
+| DASHBOARD live (familie)             | `DASHBOARD.html` · `https://rolandpetrila.github.io/Tati_Dosar_Medical/`                                                                                                 |
+| reguli + protocol                    | `CLAUDE.md (loader)` · `REGULAMENT.md (R1-10 medicale)` · `REGULI_CLAUDE_CODE.md (R6-29 specifice)`                                                                      |
+| system health monitor R28            | `Dosar_Medical/SYSTEM_HEALTH.json` · `scripts/system_health_check.py`                                                                                                    |
+| plan execuție curent                 | `PLAN_IMPLEMENTARE_2026-04-25.md (status în frontmatter)`                                                                                                                |
 
 ### 🌳 Arbore folder (depth 3)
 
@@ -307,10 +309,12 @@ Structura descrisă în acest fișier **nu se modifică decât cu acordul explic
 ├── .claude/  (2 fișiere)
 │   ├── scheduled_tasks.lock  (0.1 KB)
 │   ├── settings.local.json  (2.2 KB)
-├── .playwright-mcp/  (13 fișiere)
+├── .playwright-mcp/  (23 fișiere)
 │   ├── console-2026-04-28T11-14-56-816Z.log  (0.0 KB)
 │   ├── console-2026-04-28T11-17-17-170Z.log  (0.0 KB)
 │   ├── console-2026-04-28T13-11-48-313Z.log  (0.1 KB)
+│   ├── console-2026-04-28T13-37-36-742Z.log  (0.2 KB)
+│   ├── console-2026-04-28T23-46-55-822Z.log  (0.1 KB)
 │   ├── page-2026-04-28T11-14-59-250Z.yml  (54.3 KB)
 │   ├── page-2026-04-28T11-17-17-989Z.yml  (54.3 KB)
 │   ├── page-2026-04-28T11-17-40-051Z.yml  (54.5 KB)
@@ -321,6 +325,14 @@ Structura descrisă în acest fișier **nu se modifică decât cu acordul explic
 │   ├── page-2026-04-28T12-21-11-371Z.yml  (59.4 KB)
 │   ├── page-2026-04-28T12-22-15-965Z.yml  (59.6 KB)
 │   ├── page-2026-04-28T13-11-50-409Z.yml  (59.6 KB)
+│   ├── page-2026-04-28T13-35-15-995Z.yml  (59.6 KB)
+│   ├── page-2026-04-28T13-37-38-810Z.yml  (59.6 KB)
+│   ├── page-2026-04-28T13-40-14-485Z.yml  (59.4 KB)
+│   ├── page-2026-04-28T23-47-06-722Z.yml  (59.4 KB)
+│   ├── page-2026-04-28T23-47-20-896Z.yml  (11.4 KB)
+│   ├── page-2026-04-28T23-47-31-762Z.yml  (17.4 KB)
+│   ├── page-2026-04-28T23-47-39-253Z.yml  (10.8 KB)
+│   ├── page-2026-04-28T23-47-47-347Z.yml  (81.1 KB)
 ├── .ruff_cache/  (4 fișiere)
 │   ├── 0.14.2/  (2 fișiere)
 │   │   ├── 11311870640459399777  (0.1 KB)
@@ -487,7 +499,7 @@ Structura descrisă în acest fișier **nu se modifică decât cu acordul explic
 ├── CHANGELOG.md  (176.3 KB)
 ├── CLAUDE.md  (9.6 KB)
 ├── CONTEXT_MEDICAL.md  (75.0 KB)
-├── DASHBOARD.html  (229.9 KB)
+├── DASHBOARD.html  (388.9 KB)
 ├── EXECUTOR_AUDIT_LOG_2026-04-28.md  (59.4 KB)
 ├── GLOSAR.md  (10.6 KB)
 ├── index.html  (0.3 KB)
@@ -501,7 +513,7 @@ Structura descrisă în acest fișier **nu se modifică decât cu acordul explic
 ├── REGULI_CLAUDE_CODE.md  (35.0 KB)
 ├── SESSION_LOG.md  (113.1 KB)
 ├── START.md  (3.8 KB)
-├── STRUCTURA_PROIECT.md  (26.1 KB)
+├── STRUCTURA_PROIECT.md  (26.4 KB)
 ├── SURSE_MEDICALE.md  (7.5 KB)
 ├── tati.png  (272.2 KB)
 ├── TEMPLATES.md  (9.7 KB)
