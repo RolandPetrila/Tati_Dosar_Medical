@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-29T19:35:36",
+  "generated_at": "2026-04-29T18:46:40",
   "version": "1.1",
   "stats": {
     "total_files_indexed": 159,
@@ -739,8 +739,8 @@
     },
     "SESSION_LOG.md": {
       "type": "md",
-      "size_kb": 114.9,
-      "last_modified": "2026-04-29T18:49:36"
+      "size_kb": 113.1,
+      "last_modified": "2026-04-28T15:34:29"
     },
     "WEB_QUERIES.md": {
       "type": "md",
@@ -794,18 +794,18 @@
     },
     "TODO.md": {
       "type": "md",
-      "size_kb": 46.9,
-      "last_modified": "2026-04-29T19:31:13"
+      "size_kb": 47.1,
+      "last_modified": "2026-04-29T18:44:19"
     },
     "CONTEXT_MEDICAL.md": {
       "type": "md",
-      "size_kb": 82.2,
-      "last_modified": "2026-04-29T19:28:39"
+      "size_kb": 81.4,
+      "last_modified": "2026-04-29T18:43:17"
     },
     "CHANGELOG.md": {
       "type": "md",
-      "size_kb": 185.2,
-      "last_modified": "2026-04-29T19:35:05"
+      "size_kb": 176.3,
+      "last_modified": "2026-04-28T15:34:20"
     },
     "ALIMENTATIE.md": {
       "type": "md",
@@ -999,13 +999,13 @@
     },
     "_projects_sync/CONTEXT_MEDICAL.md": {
       "type": "md",
-      "size_kb": 81.4,
-      "last_modified": "2026-04-29T18:43:17"
+      "size_kb": 75.0,
+      "last_modified": "2026-04-28T15:12:20"
     },
     "_projects_sync/TODO.md": {
       "type": "md",
-      "size_kb": 47.1,
-      "last_modified": "2026-04-29T18:44:19"
+      "size_kb": 46.0,
+      "last_modified": "2026-04-28T13:37:40"
     },
     "_projects_sync/REGULAMENT.md": {
       "type": "md",
@@ -1024,8 +1024,8 @@
     },
     "_projects_sync/STATUS_SNAPSHOT.md": {
       "type": "md",
-      "size_kb": 27.7,
-      "last_modified": "2026-04-29T18:50:18"
+      "size_kb": 26.2,
+      "last_modified": "2026-04-29T02:49:45"
     },
     "Dosar_Medical/cercetari/SINTEZA_CLINICI_ONCOLOGIE.md": {
       "type": "md",
@@ -1169,8 +1169,8 @@
     },
     "INDEX.json": {
       "type": "json",
-      "size_kb": 59.1,
-      "last_modified": "2026-04-29T18:46:40"
+      "size_kb": 57.4,
+      "last_modified": "2026-04-29T02:49:23"
     },
     "Dosar_Medical/2012-02-17_cardiologie_vichy_stent.json": {
       "type": "json",
@@ -1389,8 +1389,8 @@
     },
     "_projects_sync/INDEX.json": {
       "type": "json",
-      "size_kb": 59.1,
-      "last_modified": "2026-04-29T18:46:40"
+      "size_kb": 57.4,
+      "last_modified": "2026-04-29T02:49:23"
     },
     "schemas/dosar_medical_v2.json": {
       "type": "json",
@@ -1515,7 +1515,7 @@
     "DASHBOARD.html": {
       "type": "html",
       "size_kb": 391.6,
-      "last_modified": "2026-04-29T19:34:08"
+      "last_modified": "2026-04-29T18:46:07"
     },
     "index.html": {
       "type": "html",

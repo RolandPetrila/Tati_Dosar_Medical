@@ -4,6 +4,76 @@
 
 ---
 
+## 2026-04-29 19:24 — REPROGRAMARE consult oncolog 4.05 → 30.04 ora 12:00 (Dr. Mate Endre înlocuiește Dr. Anater)
+
+**Tip:** schimbare planificare medicală majoră — consult oncolog primary mutat de la 4.05 (Dr. Anater) la 30.04 ora 12:00 (Dr. Mate Endre)
+
+### Context
+
+User a comunicat 29.04.2026 că **luarea în evidență la OncoHelp se va face pe 30.04.2026 ora 12:00 cu Dr. Mate Endre** care va prelua dosarul medical și va începe discuția în prima fază. **Consultul programat anterior pentru 4.05.2026 cu Dr. Anater Angelo-Christian este ANULAT** — 30.04 cu Dr. Mate Endre devine consultul oncolog primary.
+
+### Modificări fișiere referință
+
+**1. Backup R10 pre-modificare** (`Dosar_Medical/arhiva/context_medical_versiuni/`):
+
+- `CONTEXT_MEDICAL_pre-reprogramare-30-04_2026-04-29_1850.md`
+- `TODO_pre-reprogramare-30-04_2026-04-29_1850.md`
+- `DASHBOARD_pre-reprogramare-30-04_2026-04-29_1850.html`
+- `INDEX_pre-reprogramare-30-04_2026-04-29_1850.json`
+
+**2. CONTEXT_MEDICAL.md:**
+
+- §8.1 (Consult oncolog) — REWRITE complet pentru 30.04 ora 12:00 cu Dr. Mate Endre, cu marcaj explicit „ÎNLOCUIEȘTE consultul 4.05 cu Dr. Anater" + cronologie 30.04 (cardiolog 08:30 → consult oncolog 12:00) + componente dosar actualizate (analize 29.04 incluse, deadline 28-29.04 pentru asamblare)
+- §7.4 (biopsie) — decident schimbat: Dr. Mate Endre 30.04 ora 12:00
+- §7.6 (markeri 29.04) — pre-consult 30.04 (nu 4.05); decizie finală conduită terapeutică = Dr. Mate Endre + comisia OncoHelp (pași ulteriori TBD)
+- §4 (medicație) — observație statină schimbată: de discutat la consultul 30.04
+- §3 (stent BMS) — implicație clinică pentru consult 30.04 + planificare chirurg eso ulterior
+- §2 (sumar clinic) — bullet-uri actualizate: consultul 30.04 ora 12:00 cu Dr. Mate Endre = consult primary (nu doar înregistrare)
+- §9 (echipă medicală) — rândul oncologie digestivă: Dr. Mate Endre principal (consult 30.04), Anater istoric (consult anulat 29.04)
+- §10 (evaluare preliminară) — referințele la 4.05 redirectate la 30.04
+- Header „Ultima actualizare" — actualizat 29.04.2026 19:24
+
+**3. TODO.md:**
+
+- Calendar — row 4.05.2026 marcat ANULAT (înlocuit); row 30.04.2026 ora 12:00 marcat consult primary cu Dr. Mate Endre
+- P0 „Consult oncolog digestiv" — REWRITE pentru 30.04 cu Mate Endre
+- P0 „Pregătire dosar fizic" — deadline 28-29.04 (consult e 30.04 ora 12:00); cronologie revizuită (analize 29.04 efectuate, dosar finalizat 29.04 seara)
+- P0 „Decizie IHC" — decident schimbat la Dr. Mate Endre 30.04
+- Monitor ntfy — referință post-consult schimbată la 30.04
+- Header „Ultima actualizare" — actualizat 29.04.2026 19:24
+
+**4. DASHBOARD.html:**
+
+- Header card titlu — schimbat „4 mai 2026" cu „30.04.2026 ora 12:00 cu Dr. Mate Endre"
+- Banner countdown — secvență 30.04 cardiolog 08:30 + OncoHelp 12:00 cu Mate Endre (consult primary, înlocuiește 4.05)
+- Card biopsie dropdown — decident IHC vs rebiopsie schimbat
+- Card consult oncolog — badge schimbat la 30.04 ora 12:00, Mate Endre, „înlocuiește 4.05 cu Anater"
+- Tabel „Lipsesc" + alert update markeri — Dr. Mate Endre 30.04 (nu Dr. Anater 4.05)
+- Tabel echipă medicală — Dr. Mate Endre principal pentru oncologie digestivă (anularea Anater notată)
+- Calendar timeline — row 4.05 ANULAT 29.04 (înlocuit de 30.04 cu Mate Endre)
+- Acțiuni deschise P0 — primary item schimbat la consult 30.04 ora 12:00 Mate Endre
+- Title antecedente — schimbat „pentru consult oncolog 30.04"
+
+**5. Note istorice păstrate (NU șterse):**
+
+- Mailul trimis Dr. Anater 28.04 09:37 cu PDF biopsia rămâne în log (`Dosar_Medical/corespondenta/2026-04-24_re-solicitare-consult-anater.md`)
+- Mențiunile la mail Anater 26.04 (reprogramare 30.04 → 4.05) păstrate ca istoric
+- DOCX briefing 4.05 Anater (38.7 KB) generat 28.04 rămâne ca artifact istoric (nu șters)
+
+### Cronologie 30.04.2026 (validată)
+
+1. **Ora 08:30** — consult cardiologic ambulator Arad (FEVS + ECG + ECO + aviz perioperator)
+2. **Deplasare** Arad → Timișoara (~50 km, ~1h cu mașina)
+3. **Ora 12:00** — consult OncoHelp Timișoara cu Dr. Mate Endre (preluare dosar + discuție inițială + decizie pași diagnostici)
+
+### Cross-refs
+
+- Backup R10 disponibil pentru rollback dacă reprogramarea s-ar inversa
+- INDEX.json regenerat
+- \_projects_sync regenerat (pre-commit hook)
+
+---
+
 ## 2026-04-29 18:38 — Ingest buletin Bioclinica 29.04 (markeri tumorali + HbA1c) + folder R26 nr. 16
 
 **Tip:** integrare document medical sursă (R23 + R24 + R26 + R14) + propagare DASHBOARD (R18) + update fișiere referință

@@ -6,6 +6,27 @@
 
 ---
 
+## 2026-04-29 19:24 — [Claude_Opus_4.7_1M] reprogramare-consult-oncolog-30-04-mate-endre-inlocuieste-4-05-anater (R10 + R18 + R20)
+
+**Scop:** schimbare planificare medicală majoră — consult oncolog primary 4.05 (Dr. Anater) ANULAT, înlocuit de consultul 30.04 ora 12:00 (Dr. Mate Endre) care va prelua dosarul medical.
+
+**Operații:**
+
+- Backup R10 pre-modificare: 4 fișiere (CONTEXT_MEDICAL, TODO, DASHBOARD, INDEX) → `Dosar_Medical/arhiva/context_medical_versiuni/`
+- Update CONTEXT_MEDICAL.md: §8.1 REWRITE + §7.4 + §7.6 + §4 + §3 + §2 + §9 + §10 + header
+- Update TODO.md: calendar (4.05 ANULAT) + P0 consult REWRITE + P0 dosar deadline 28-29.04 + P0 decizie IHC + monitor ntfy + header
+- Update DASHBOARD.html: header card + banner countdown + card biopsie + card consult + alert markeri + tabel echipă + calendar timeline + acțiuni P0 + title antecedente
+- Note istorice PĂSTRATE: mailuri Anater 26.04 + 28.04 (corespondență read-only) + DOCX briefing 4.05 Anater (artifact istoric)
+- Regenerare INDEX.json + _projects_sync (pre-commit hook)
+
+**Cronologie 30.04.2026 validată:**
+
+- 08:30 — consult cardiologic ambulator Arad (FEVS + ECG + ECO + aviz perioperator)
+- ~10:00 — deplasare Arad → Timișoara (~1h)
+- 12:00 — consult OncoHelp Timișoara cu Dr. Mate Endre (preluare dosar + discuție inițială + decizie pași diagnostici post-biopsie inconcluzivă)
+
+---
+
 ## 2026-04-29 18:38 — [Claude_Opus_4.7_1M] ingest-buletin-bioclinica-29-04-markeri-tumorali-hba1c (R23 + R24 + R26 + R14 + R10 + R18)
 
 **Scop:** ingest buletin Bioclinica 26429A0020 (29.04.2026) cu 4 analize (CEA + CA 19-9 + CA 72-4 + HbA1c) — pregătire dosar fizic pentru consult oncolog 4.05 OncoHelp Timișoara.
