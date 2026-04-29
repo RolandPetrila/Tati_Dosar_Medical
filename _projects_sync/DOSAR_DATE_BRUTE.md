@@ -1,6 +1,6 @@
 # DOSAR_DATE_BRUTE — Bundle JSON canonice medicale
 
-**Generat automat:** 2026-04-30 01:12 · **Sursă:** `Dosar_Medical/*.json` (excluse: meta.json, MANIFEST, SYSTEM_HEALTH, carte_identitate, talon_pensie) · **Total documente:** 19
+**Generat automat:** 2026-04-30 01:40 · **Sursă:** `Dosar_Medical/*.json` (excluse: meta.json, MANIFEST, SYSTEM_HEALTH, carte_identitate, talon_pensie) · **Total documente:** 19
 
 > **Scop:** retrieval direct în Claude Projects pentru date medicale brute (analize, imagistică, biopsie, medicație, scrisori medicale, intervenții). Sursa primară rămâne JSON-urile canonice individuale; acest bundle e mirror narativ pentru parcurs RAG eficient.
 >
@@ -10,7 +10,7 @@
 
 ## 📚 Cuprins
 
-- [????-??-?? — raport spitalizare angioplastie complet](#2012-02-17-cardiologie-vichy-stent)
+- [2012-02-17 — raport spitalizare angioplastie complet](#2012-02-17-cardiologie-vichy-stent)
 - [2024-05-30 — buletin analize laborator hematologie biochimie](#2024-05-30-analize-upu-sange-1517243)
 - [2024-05-30 — buletin analize urina sumar sediment](#2024-05-30-analize-upu-urina-1517290)
 - [2024-05-30 — consult upu compus gastro cardio ekg scrisoare](#2024-05-30-upu-consult-gastro-cardio)
@@ -23,7 +23,7 @@
 - [2025-11-10 — scrisoare medicala consult cardiologie](#2025-11-10-scrisoare-medicala-cardiologie)
 - [2025-11-28 — externare spital cura chirurgicala](#2025-11-28-externare-chirurgie-hernie)
 - [2026-04-17 — bilet trimitere investigatii paraclinice](#2026-04-17-bilet-trimitere-CT)
-- [????-??-?? — buletin examen histopatologic biopsie](#2026-04-17-biopsie-esofagiana-histopatologic)
+- [2026-04-17 — buletin examen histopatologic biopsie](#2026-04-17-biopsie-esofagiana-histopatologic)
 - [2026-04-17 — buletin analize laborator functie renala](#2026-04-17-buletin-bioclinica-uree-creatinina)
 - [2026-04-17 — buletin examen colonoscopic](#2026-04-17-examen-colonoscopic)
 - [2026-04-17 — buletin examen gastroscopic](#2026-04-17-examen-gastroscopic)
@@ -31,7 +31,7 @@
 - [2026-04-29 — buletin analize laborator markeri tumorali HbA1c](#2026-04-29-buletin-bioclinica-markeri-tumorali-hba1c)
 ---
 
-## <a name="2012-02-17-cardiologie-vichy-stent"></a> ????-??-?? — Raport Spitalizare Angioplastie Complet (Cardiologie Intervențională)
+## <a name="2012-02-17-cardiologie-vichy-stent"></a> 2012-02-17 — Raport Spitalizare Angioplastie Complet (Cardiologie Intervențională)
 **Sursă:** `Dosar_Medical/2012-02-17_cardiologie_vichy_stent.json` · **Confidence:** high · **Flags:** pdf_complet_obtinut_2026-04-28, stent_bms_confirmat, anomalie_inaltime_168_vs_178
 
 > Documentul original franceză + traducere autorizată în română. Stent confirmat ca BMS (Bare Metal Stent — «stent gol») RX VISION 3.5 x 28 mm Abbott Nr. 1110341 — important clinic pentru deciziile pre-chirurgie esofagiană (DAPT scurt, risc tromboză in-stent foarte scăzut la 14 ani vechime). Discrepanță transcriere: în coronarografie 178 cm, în angioplastie 168 cm — probabilă eroare de transcriere; greutatea 85 kg + diagnostic «Obezitate» sugerează 168 cm e mai probabil corect (IMC 30.1 vs 26.8); de clarificat cu user.
@@ -1272,7 +1272,7 @@
 
 ---
 
-## <a name="2026-04-17-biopsie-esofagiana-histopatologic"></a> ????-??-?? — Buletin Examen Histopatologic Biopsie (Anatomopatologie)
+## <a name="2026-04-17-biopsie-esofagiana-histopatologic"></a> 2026-04-17 — Buletin Examen Histopatologic Biopsie (Anatomopatologie)
 **Sursă:** `Dosar_Medical/2026-04-17_biopsie_esofagiana_histopatologic.json` · **Confidence:** high · **Flags:** key_clinical_event, rezultat_inconcluziv_sugestiv_carcinom, necesita_imunohistochimie_sau_rebiopsie, trigger_dashboard_regen, trigger_context_medical_update
 
 > REZULTAT INTERMEDIAR — NU diagnostic definitiv de cancer. Concluzie: țesut de granulație pe fond de ulcerație cronică, doar SUGESTIV pentru infiltrat carcinomatos. Limitare explicită: număr mic celule epiteliale atipice surprinse. Recomandare laborator: evaluare imunohistochimică pentru diagnostic de certitudine. Pas următor: consult oncolog 4.05.2026 OncoHelp (Dr. Anater) — decizie IHC pe blocul T26H06044 / rebiopsie țintită / EUS.

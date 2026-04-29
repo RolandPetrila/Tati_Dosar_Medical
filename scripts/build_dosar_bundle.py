@@ -13,6 +13,7 @@ Trigger: orice modificare la Dosar_Medical/*.json (auto via pre-commit hook).
 """
 
 import json
+import re
 import sys
 from datetime import datetime
 from pathlib import Path
@@ -49,6 +50,15 @@ def collect_canonical_jsons():
         files.append(f)
     files.sort(key=lambda p: p.name)
     return files
+
+
+def get_data_doc(meta, json_path):
+    """Returnează data_document; fallback la pattern YYYY-MM-DD din nume fișier."""
+    val = meta.get("data_document")
+    if val:
+        return val
+    m = re.match(r"(\d{4}-\d{2}-\d{2})", json_path.stem)
+    return m.group(1) if m else "????-??-??"
 
 
 def render_value(val, depth=0):
@@ -114,7 +124,7 @@ def render_section(json_path):
         return f"\n## ❌ {json_path.name} — eroare parsing\n\n```\n{e}\n```\n"
 
     meta = data.get("_metadata", {})
-    data_doc = meta.get("data_document", "????-??-??")
+    data_doc = get_data_doc(meta, json_path)
     tip = meta.get("tip_document", "necunoscut")
     specialitate = meta.get("specialitate", "")
     nume_fisier = meta.get("nume_fisier", json_path.name)
@@ -197,7 +207,7 @@ def build_bundle():
         try:
             data = json.loads(f.read_text(encoding="utf-8"))
             meta = data.get("_metadata", {})
-            data_doc = meta.get("data_document", "????-??-??")
+            data_doc = get_data_doc(meta, f)
             tip = meta.get("tip_document", "necunoscut").replace("_", " ")
             slug = f.stem.replace("_", "-")
             lines.append(f"\n- [{data_doc} — {tip}](#{slug})")
