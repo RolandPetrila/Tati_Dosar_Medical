@@ -4,7 +4,7 @@
 >
 > Nu este document medical — este o listă de gătit. La consult cu oncologul / medicul curant se ajustează după caz.
 
-**Ultima actualizare:** 26 aprilie 2026 (v2.2 — actualizare data consult oncolog: REPROGRAMAT 30.04 → 4 mai 2026 OncoHelp Timișoara per mail Dr. Anater 26.04, motiv aglomerație 1 mai; restul conținutului v2.1 nemodificat).
+**Ultima actualizare:** 29 aprilie 2026 (v2.3 — actualizare data consult oncolog: 4 mai 2026 cu Dr. Anater ANULAT; consult primary devine 30.04.2026 ora 12:00 OncoHelp Timișoara cu Dr. Mate Endre — preluare dosar medical + discuție inițială [decizie user 29.04]; restul conținutului v2.1 nemodificat).
 
 ---
 
@@ -440,7 +440,7 @@ Strategie ESMO/ESPEN: crește densitatea nutritivă fără să crească volumul.
 
 ### Interacțiuni cu chimioterapia FLOT (dacă se decide protocolul) — strict de evitat
 
-> **Notă:** decizia FLOT vs. alt protocol vs. tratament paliativ se ia la consult oncolog 4.05.2026 OncoHelp Timișoara, după rezultatul biopsiei. Lista de mai jos e relevantă **doar dacă se confirmă FLOT**.
+> **Notă:** decizia FLOT vs. alt protocol vs. tratament paliativ se ia la consult oncolog 30.04.2026 ora 12:00 OncoHelp Timișoara cu Dr. Mate Endre. Lista de mai jos e relevantă **doar dacă se confirmă FLOT**.
 
 | Element                                                             | De ce e periculos                                                                                   |
 | ------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- |
@@ -730,4 +730,4 @@ Dacă oncologul (4.05 OncoHelp) recomandă chirurgie + chemoterapie perioperator
 
 ---
 
-**Disclaimer:** acest document este un ghid de inspirație pentru gătit + orientare nutrițională, **NU** plan medical individualizat. Recomandările finale pentru cantități exacte ONS, suplimente, integrare cu protocolul FLOT, jejunostomă etc. se stabilesc de **echipa multidisciplinară** (oncolog, chirurg, nutriționist clinic, cardiolog post-stent, farmacist clinic) la consultul din 4.05.2026 OncoHelp Timișoara.
+**Disclaimer:** acest document este un ghid de inspirație pentru gătit + orientare nutrițională, **NU** plan medical individualizat. Recomandările finale pentru cantități exacte ONS, suplimente, integrare cu protocolul FLOT, jejunostomă etc. se stabilesc de **echipa multidisciplinară** (oncolog, chirurg, nutriționist clinic, cardiolog post-stent, farmacist clinic) la consultul din 30.04.2026 ora 12:00 OncoHelp Timișoara cu Dr. Mate Endre.

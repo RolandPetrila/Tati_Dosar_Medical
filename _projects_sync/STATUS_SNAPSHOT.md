@@ -1,8 +1,8 @@
 # STATUS SNAPSHOT — Petrilă Viorel-Mihai
 
-**Generat automat:** 2026-04-29 19:36
-**Ultim commit git:** `06c5e9f` (2026-04-29 18:50:16 +0300)
-**Mesaj commit:** [INGEST 2026-04-29] Buletin Bioclinica markeri tumorali + HbA1c → folder R26 nr.16
+**Generat automat:** 2026-04-29 23:55
+**Ultim commit git:** `b78d145` (2026-04-29 19:36:27 +0300)
+**Mesaj commit:** [REPROGRAMARE 2026-04-29] Consult oncolog: 4.05 Anater → 30.04 ora 12:00 Mate Endre
 **Sursă de adevăr:** fișierele originale din proiect `.Tati`. Acest snapshot e mirror sintetic generat de `scripts/regen_projects_sync.py` pentru chat Claude Projects (web/mobil).
 
 > **Ordine consultare în chat:** STATUS_SNAPSHOT.md (aici) → CONTEXT_MEDICAL.md (detaliu clinic) → TODO.md (calendar) → CONTACTE_MEDICALE.md (medici) → REGULAMENT.md (reguli) → INDEX.json (index documente) → EXPLICATIE_CONSULT_ONCOLOG_SCENARII.md (glosar + scenarii prognostice).
@@ -199,7 +199,7 @@ Schema datată **10 noiembrie 2025**. Medic prescriptor **IDENTIFICAT (2026-04-2
 - [x] ✅ **Markeri tumorali CEA + CA 19-9** — efectuat 29.04 (CEA 0,87 normal · CA 19-9 27,00 borderline)
 - [x] ✅ **HbA1c (hemoglobina glicozilată A1c)** — efectuat 29.04 (7,5% — diabet suboptimal vs țintă ADA <7,0%)
 - [x] ✅ **CA 72-4** (marker tumoral specific adenocarcinom gastric/eso-gastric) — efectuat 29.04 (18,59 U/mL ELEVAT ~2,7x; relevant Siewert II) [adăugat la recoltare ca extra-marker]
-- [ ] **Printare buletin analize 29.04** + adăugare în dosarul fizic pentru consult 4.05
+- [ ] **Printare buletin analize 29.04** + adăugare în dosarul fizic pentru consult 30.04 ora 12:00
 - [ ] **Consult cardiologic** — 🟢 PROGRAMAT 30.04.2026 ora 08:30 → de adus scrisoare medicală + ECG + ECO fizic la consultul oncolog 30.04 ora 12:00
 - [ ] Listă medicație curentă (4 confirmate: Aspenter, Concor, Triplixam, Jamesi) + alergii (fără)
 - [ ] **Scrisori medicale + bilete ieșire spital pentru ALTE patologii / intervenții / proceduri** [per mail Anater 26.04 — pentru evaluare comorbidități]:

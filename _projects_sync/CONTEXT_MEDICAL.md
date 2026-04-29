@@ -719,7 +719,7 @@ Componente prevăzute:
 
 **Decizia finală se bazează EXCLUSIV pe:**
 
-- **Rezultatul histopatologic al biopsiei — primit 28.04.2026, INCONCLUZIV** `[CERT]` (vezi §7.4): ține pasul „diagnostic de certitudine" deschis până la **IHC pe blocul T26H06044** sau **rebiopsie țintită** (decizie consult 4.05). Fără diagnostic histologic ferm, alegerea protocolului (FLOT / CROSS / paliativ) **NU poate fi finalizată**.
+- **Rezultatul histopatologic al biopsiei — primit 28.04.2026, INCONCLUZIV** `[CERT]` (vezi §7.4): ține pasul „diagnostic de certitudine" deschis până la **IHC pe blocul T26H06044** sau **rebiopsie țintită** (decizie consult 30.04 ora 12:00 cu Dr. Mate Endre). Fără diagnostic histologic ferm, alegerea protocolului (FLOT / CROSS / paliativ) **NU poate fi finalizată**.
 - Clarificarea etiologiei ascitei (reactivă vs. carcinomatoză — poate necesita paracenteză + citologie sau laparoscopie)
 - Evaluarea de către medicul oncolog digestiv
 - Eventual PET-CT pentru activitate metabolică și confirmare M0 cu sensibilitate superioară CT-ului

@@ -17,7 +17,7 @@
 - Update TODO.md: calendar (4.05 ANULAT) + P0 consult REWRITE + P0 dosar deadline 28-29.04 + P0 decizie IHC + monitor ntfy + header
 - Update DASHBOARD.html: header card + banner countdown + card biopsie + card consult + alert markeri + tabel echipă + calendar timeline + acțiuni P0 + title antecedente
 - Note istorice PĂSTRATE: mailuri Anater 26.04 + 28.04 (corespondență read-only) + DOCX briefing 4.05 Anater (artifact istoric)
-- Regenerare INDEX.json + _projects_sync (pre-commit hook)
+- Regenerare INDEX.json + \_projects_sync (pre-commit hook)
 
 **Cronologie 30.04.2026 validată:**
 
